@@ -2,7 +2,7 @@
 
 import json
 import logging
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Optional
 
@@ -50,6 +50,43 @@ def _now_hkt() -> str:
     return datetime.now(hkt).strftime("%Y-%m-%d %H:%M HKT")
 
 
+def _parse_iso(s: str) -> Optional[datetime]:
+    """宽松的 ISO8601/RFC2822 解析"""
+    if not s:
+        return None
+    s_clean = s.strip().replace("Z", "+00:00")
+    for fmt in [
+        "%Y-%m-%dT%H:%M:%S%z",
+        "%Y-%m-%dT%H:%M:%S.%f%z",
+        "%Y-%m-%dT%H:%M:%S",
+        "%Y-%m-%d %H:%M:%S%z",
+        "%Y-%m-%d %H:%M:%S",
+        "%a, %d %b %Y %H:%M:%S %z",
+        "%a, %d %b %Y %H:%M:%S %Z",
+    ]:
+        try:
+            return datetime.strptime(s_clean, fmt)
+        except ValueError:
+            continue
+    try:
+        return datetime.strptime(s_clean[:10], "%Y-%m-%d").replace(tzinfo=timezone.utc)
+    except ValueError:
+        pass
+    return None
+
+
+def _filter_recent(items: list[Item], window_hours: int = 8) -> list[Item]:
+    """只保留最近 window_hours 内发布/处理的条目"""
+    cutoff = datetime.now(timezone.utc) - timedelta(hours=window_hours)
+    result = []
+    for it in items:
+        # 优先用 published_at，其次 processed_at，再次 fetched_at
+        dt = _parse_iso(it.published_at) or _parse_iso(it.processed_at) or _parse_iso(it.fetched_at)
+        if dt is None or dt >= cutoff:
+            result.append(it)
+    return result
+
+
 # ================================================================
 # RSS Feed
 # ================================================================
@@ -68,13 +105,16 @@ def render_rss(
     )
 
 
-def write_rss(items: list[Item], site_url: str = "", max_items: int = 50) -> Path:
-    """生成并写入 pages/feed.xml"""
+def write_rss(
+    items: list[Item], site_url: str = "", max_items: int = 50, window_hours: int = 8
+) -> Path:
+    """生成并写入 pages/feed.xml，仅包含时间窗口内的条目"""
     _ensure_pages_dir()
-    xml = render_rss(items, site_url, max_items)
+    recent = _filter_recent(items, window_hours)
+    xml = render_rss(recent, site_url, max_items)
     path = _PAGES_DIR / "feed.xml"
     path.write_text(xml, encoding="utf-8")
-    logger.info(f"RSS feed written to {path} ({len(items[:max_items])} items)")
+    logger.info(f"RSS feed written to {path} ({len(recent[:max_items])} recent items)")
     return path
 
 
@@ -113,13 +153,15 @@ def write_dashboard(
     events: list[Event],
     situation: Optional[Situation],
     site_url: str = "",
+    window_hours: int = 8,
 ) -> Path:
-    """生成并写入 pages/index.html"""
+    """生成并写入 pages/index.html，仅展示时间窗口内的内容"""
     _ensure_pages_dir()
-    html = render_dashboard(items, events, situation, site_url)
+    recent = _filter_recent(items, window_hours)
+    html = render_dashboard(recent, events, situation, site_url)
     path = _PAGES_DIR / "index.html"
     path.write_text(html, encoding="utf-8")
-    logger.info(f"Dashboard written to {path}")
+    logger.info(f"Dashboard written to {path} ({len(recent)} recent items)")
     return path
 
 
@@ -131,15 +173,17 @@ def write_ticker_pages(
     items: list[Item],
     events: list[Event],
     site_url: str = "",
+    window_hours: int = 8,
 ) -> None:
-    """为每个标的生成独立页面"""
+    """为每个标的生成独立页面（仅展示时间窗口内的条目）"""
     _ensure_pages_dir()
     template = _env.get_template("ticker.html.j2")
+    recent = _filter_recent(items, window_hours)
 
     # 按 ticker name 分组
     ticker_items: dict[str, list[Item]] = {}
     ticker_events: dict[str, list[Event]] = {}
-    for it in items:
+    for it in recent:
         for tk in it.tickers or []:
             ticker_items.setdefault(tk, []).append(it)
     for ev in events:
@@ -234,11 +278,13 @@ def write_daily_brief(
     items: list[Item],
     synthesis: str,
     site_url: str = "",
+    window_hours: int = 24,
 ) -> Path:
-    """生成并写入当日日报 Markdown"""
+    """生成并写入当日日报 Markdown（日报窗口更长，覆盖全天）"""
     _PAGES_DIR.mkdir(parents=True, exist_ok=True)
-    md = render_daily_brief(items, synthesis, site_url)
+    recent = _filter_recent(items, window_hours)
+    md = render_daily_brief(recent, synthesis, site_url)
     path = _PAGES_DIR / f"brief-{today_str()}.md"
     path.write_text(md, encoding="utf-8")
-    logger.info(f"Daily brief written to {path}")
+    logger.info(f"Daily brief written to {path} ({len(recent)} recent items)")
     return path

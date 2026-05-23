@@ -1,16 +1,15 @@
 """MiniMax Coding Plan 联网搜索采集器 —— 替代 DDG HTML 抓取
 
 调用 MiniMax POST /v1/coding_plan/search REST API，底层为 Google 级搜索。
-相比 DuckDuckGo 的优势：
-  - Google 级搜索质量，结果更相关更及时
-  - 无 403 限速问题
-  - 消耗 MiniMax Token Plan 的网络搜索 MCP 配额（150次/天）
+配额：150 次/5h。策略：每轮轮换 15 个标（共 32 标），每标每 2 轮搜索一次。
 """
 
 import asyncio
 import hashlib
 import logging
+import random
 import re
+import time
 from urllib.parse import urlparse
 
 from radar.collectors.base import Collector
@@ -21,7 +20,10 @@ from radar.minimax_client import MinimaxClient
 logger = logging.getLogger(__name__)
 
 _MAX_RAW_SUMMARY = 800
-_SEARCH_DELAY = 0.3  # 搜索间隔(秒)，MiniMax API 较宽松
+_SEARCH_DELAY = 0.3
+# 每轮搜索的标的上限（控制在配额 150 次/5h 以内）
+# 10 轮/5h × PER_RUN_STOCKS + 备用 DDG 搜索 ≈ 150 次
+_PER_RUN_STOCKS = 15
 
 
 def _make_id(url: str) -> str:
@@ -48,13 +50,25 @@ class MinimaxSearchCollector(Collector):
             logger.warning("[minimax_search] No coverage stocks configured, skipping")
             return []
 
+        # —— 轮换策略：每轮只搜索 PER_RUN_STOCKS 个标的，控制配额 ——
+        # 使用当前时间片（每 30 分钟一个 slot）做确定性轮换
+        slot = int(time.time() / 1800)  # 30 分钟窗口
+        start_idx = (slot * _PER_RUN_STOCKS) % len(stocks)
+        selected = []
+        for i in range(min(_PER_RUN_STOCKS, len(stocks))):
+            selected.append(stocks[(start_idx + i) % len(stocks)])
+        logger.info(
+            f"[{source_id}] Slot {slot}: searching {len(selected)}/{len(stocks)} stocks "
+            f"(indices {start_idx}-{(start_idx + len(selected) - 1) % len(stocks)})"
+        )
+
         client = MinimaxClient()
         try:
             items: list[Item] = []
             fetched_at = utcnow_iso()
             seen_urls: set[str] = set()
 
-            for stock in stocks:
+            for stock in selected:
                 name = stock.get("name", "")
                 if not name:
                     continue
@@ -104,7 +118,7 @@ class MinimaxSearchCollector(Collector):
                     items.append(item)
 
             logger.info(
-                f"[{source_id}] MiniMax Search: {len(items)} results for {len(stocks)} stocks"
+                f"[{source_id}] MiniMax Search: {len(items)} results for {len(selected)} stocks"
             )
             return items
 

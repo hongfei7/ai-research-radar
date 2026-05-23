@@ -294,8 +294,9 @@ async def run_full(cfg: dict) -> None:
         )
         active_events = [e for e in all_events_list if e.is_active]
 
-        write_rss(today_items, site_url, cfg["channels"]["rss"].get("max_items", 50))
-        write_dashboard(today_items, active_events, sit, site_url)
+        w = cfg["runtime"].get("rolling_window_hours", 8)
+        write_rss(today_items, site_url, cfg["channels"]["rss"].get("max_items", 50), window_hours=w)
+        write_dashboard(today_items, active_events, sit, site_url, window_hours=w)
         return
 
     # ================================================================
@@ -388,15 +389,16 @@ async def run_full(cfg: dict) -> None:
         # Stage 7: 渲染
         # ================================================================
         rss_config = cfg["channels"]["rss"]
-        write_rss(clustered_items, site_url, rss_config.get("max_items", 50))
+        w = cfg["runtime"].get("rolling_window_hours", 8)
+        write_rss(clustered_items, site_url, rss_config.get("max_items", 50), window_hours=w)
 
         all_events_sorted = sorted(
             updated_events.values(), key=lambda e: e.significance, reverse=True
         )
         active_events = [e for e in all_events_sorted if e.is_active]
 
-        write_dashboard(clustered_items, active_events, sit, site_url)
-        write_ticker_pages(clustered_items, active_events, site_url)
+        write_dashboard(clustered_items, active_events, sit, site_url, window_hours=w)
+        write_ticker_pages(clustered_items, active_events, site_url, window_hours=w)
 
         # ================================================================
         # Stage 8: 分发
@@ -416,6 +418,7 @@ async def run_full(cfg: dict) -> None:
                 if abs(hkt_now.hour - schedule_hour) <= 1 and hkt_now.minute < 30:
                     synthesis = sit.text if sit else ""
                     brief_md = render_daily_brief(clustered_items, synthesis, site_url)
+                    # 日报用更长的窗口（24h）
                     issue_url = await create_daily_issue(
                         brief_md, issue_cfg.get("label", "晨报")
                     )
