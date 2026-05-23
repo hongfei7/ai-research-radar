@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-23T19:27:04Z",
+  "updated_at": "2026-05-23T20:34:27Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -214,28 +214,34 @@
     },
     "evt_eb7c295d02aa": {
       "event_id": "evt_eb7c295d02aa",
-      "title": "科技巨头AI芯片军备竞赛：从云端到终端的算力平台密集升级",
-      "summary": "近期科技巨头密集发布AI芯片与硬件：微软提前推出自研AI推理加速器Maia 200强化Azure云端推理能力；苹果发布M5芯片提升MacBook/iPad端侧AI性能；戴尔推出搭载Copilot+的AI PC加速消费级落地。标志着从云端到终端的全栈AI硬件竞争升级，芯片厂商面临自研芯片挑战，同时带动台积电代工需求增长。",
+      "title": "AI芯片军备竞赛升级：谷歌领跑端侧AI生态",
+      "summary": "AI芯片军备竞赛从云端向终端全面升级。微软自研Maia 200强化Azure推理，苹果M5/M5 Pro提升Mac端侧性能，谷歌I/O大会推出Gemini 4.0轻量化模型及AI眼镜，低功耗模型降低算力门槛，AI眼镜成新型交互终端。开源推理框架llama.cpp新增FP4精度与MTP加速，降低本地AI部署门槛。终端AI从概念验证进入全民普及阶段，驱动端侧AI芯片需求爆发，芯片厂商面临自研与代工双重变局。",
       "tickers": [
-        "Marvell",
-        "英伟达",
-        "AMD",
-        "博通",
         "戴尔",
-        "台积电",
-        "高通",
-        "苹果",
         "微软",
-        "OpenAI",
+        "联发科",
+        "台积电",
+        "AMD",
+        "苹果",
+        "谷歌",
+        "亚马逊",
         "美光",
-        "ARM"
+        "中芯国际",
+        "博通",
+        "Meta",
+        "英伟达",
+        "OpenAI",
+        "ARM",
+        "小米",
+        "高通",
+        "Marvell"
       ],
       "themes": [
-        "edge_ai",
         "compute_demand",
+        "chip_supply",
         "ai_monetization",
-        "model_capability",
-        "chip_supply"
+        "edge_ai",
+        "model_capability"
       ],
       "direction": {
         "OpenAI": "positive",
@@ -249,7 +255,11 @@
         "Marvell": "neutral",
         "苹果": "positive",
         "ARM": "positive",
-        "美光": "positive"
+        "美光": "positive",
+        "谷歌": "positive",
+        "小米": "positive",
+        "亚马逊": "positive",
+        "Meta": "positive"
       },
       "item_ids": [
         "f30105165153783f52c1624ef4abde7eb8b9f474",
@@ -262,11 +272,13 @@
         "e830b77678488661e12a64e7a26be4853adcc803",
         "601274093c4f1916453c22ea69e810300b211303",
         "f646de7bdc7aaf247918dc36818393f3d38c80a2",
-        "5563b8edd26edaeb28c7adeb8d14daf08ea7387a"
+        "5563b8edd26edaeb28c7adeb8d14daf08ea7387a",
+        "16156b9a72a6f46a60f2fcad4eab1005823a20bd",
+        "99ace2ee3538710810835f1bf10d3010edd3d48f"
       ],
-      "source_count": 11,
+      "source_count": 13,
       "first_seen_at": "2026-05-23T15:20:24Z",
-      "last_updated_at": "2026-05-23T17:40:08Z",
+      "last_updated_at": "2026-05-23T20:32:45Z",
       "is_active": true,
       "significance": 9,
       "status": "developing"
@@ -436,29 +448,30 @@
     },
     "evt_0293be8a9747": {
       "event_id": "evt_0293be8a9747",
-      "title": "国产AI芯片三强争霸：从设计到商业化的全链条突破",
-      "summary": "国产AI芯片产业进入三强争霸阶段。寒武纪聚焦云端推理与训练芯片，华为昇腾910性能接近国际先进水平并规模化商用，海光DCU在GPU市场快速放量。中科曙光与海光打造完整闭环，阿里平头哥升级含光800。国内外云厂商加速自研芯片布局，国产算力链正从替代走向引领，对英伟达等海外厂商形成挑战。",
+      "title": "美国强化AI芯片出口管制与国产替代加速并进",
+      "summary": "超微电脑联合创始人遭美国司法部指控违反出口管制，涉嫌向中国走私搭载英伟达高端芯片的AI服务器，凸显美国对华AI算力硬件出口管制执法升级。在此背景下，中芯国际逆势加码先进制程产能扩张，国产AI芯片设计厂商（寒武纪、海光信息等）有望受益。国产算力链正从替代走向引领，对英伟达等海外厂商形成挑战。",
       "tickers": [
+        "寒武纪",
         "阿里巴巴",
+        "工业富联",
         "台积电",
+        "AMD",
+        "亚马逊",
+        "ASML",
+        "博通",
         "超微电脑",
         "英伟达",
         "海光信息",
-        "寒武纪",
-        "博通",
+        "中科曙光",
         "景嘉微",
-        "AMD",
         "长电科技",
-        "中芯国际",
-        "亚马逊",
-        "工业富联",
-        "中科曙光"
+        "中芯国际"
       ],
       "themes": [
+        "policy_export",
         "domestic_substitution",
         "compute_demand",
-        "chip_supply",
-        "policy_export"
+        "chip_supply"
       ],
       "direction": {
         "中科曙光": "positive",
@@ -474,43 +487,48 @@
         "阿里巴巴": "positive",
         "博通": "neutral",
         "工业富联": "neutral",
-        "长电科技": "neutral"
+        "长电科技": "neutral",
+        "ASML": "neutral"
       },
       "item_ids": [
         "63433cba96d1eb2c2bd2075fbf76f08ce8534507",
         "69b26b69d6618d47533e9a72a0b0b8718e88d324",
         "7bf099be2d18f74ac3f4a33669062b87494e7341",
         "3c0c492de859fea54b71a10ea09b5d16853aa45f",
-        "d46219a59641eec77755c215ef8b85704c8233e1"
+        "d46219a59641eec77755c215ef8b85704c8233e1",
+        "db5042dea3744e6105c262fec1f3c45f4ec63456",
+        "51a45eed86384a9f0f4916fb6aa5f9d034c495f9"
       ],
-      "source_count": 5,
+      "source_count": 7,
       "first_seen_at": "2026-05-23T17:40:08Z",
-      "last_updated_at": "2026-05-23T19:25:47Z",
+      "last_updated_at": "2026-05-23T20:32:45Z",
       "is_active": true,
       "significance": 9,
       "status": "developing"
     },
     "evt_4f56f50f552d": {
       "event_id": "evt_4f56f50f552d",
-      "title": "AI芯片定制化浪潮：博通/OpenAI/Marvell/Arm重塑算力竞争格局",
-      "summary": "AI芯片定制化趋势加速。OpenAI与博通合作计划明年量产自研芯片，削弱英伟达依赖；Arm正式进军自研芯片领域，Meta、OpenAI等已为首批客户；Marvell作为定制芯片黑马2026财年营收创纪录达82亿美元。定制AI芯片赛道正获价值重估，台积电作为代工伙伴有望受益，而英伟达、AMD等传统GPU厂商面临竞争格局演变压力。",
+      "title": "博通获百亿美元定制芯片订单，AI算力定制化浪潮加速演进",
+      "summary": "博通在最新财报电话会上宣布斩获新晋大客户超百亿美元AI芯片定制订单，并大幅上调2026年增长预期。叠加此前OpenAI与博通合作自研芯片、Arm正式进军自研芯片领域、Marvell 2026财年营收指引82亿美元等动态，AI芯片定制化趋势正加速重塑算力竞争格局。台积电作为代工伙伴有望持续受益，而英伟达、AMD等传统GPU厂商面临替代压力。云厂商capex向AI芯片倾斜的态势进一步确认。",
       "tickers": [
-        "Marvell",
-        "英伟达",
-        "AMD",
-        "OpenAI",
+        "微软",
+        "Arm",
         "台积电",
         "谷歌",
+        "AMD",
         "亚马逊",
-        "微软",
         "博通",
+        "Meta",
+        "英伟达",
+        "OpenAI",
         "ARM",
-        "Meta"
+        "Marvell"
       ],
       "themes": [
-        "edge_ai",
+        "advanced_packaging",
         "compute_demand",
-        "chip_supply"
+        "chip_supply",
+        "edge_ai"
       ],
       "direction": {
         "博通": "positive",
@@ -528,33 +546,41 @@
       "item_ids": [
         "edacc405da76fd6b954b828392f0cb0b7cb04eb1",
         "e0c6e9a1a18828917fc916d4471806ae7bf190cc",
-        "af435f94c593e82362ad7ed5178002043d3cf562"
+        "af435f94c593e82362ad7ed5178002043d3cf562",
+        "445555aa943a13010e8a0dfc27e5019cfa1afe00"
       ],
-      "source_count": 3,
+      "source_count": 4,
       "first_seen_at": "2026-05-23T17:40:08Z",
-      "last_updated_at": "2026-05-23T17:40:08Z",
+      "last_updated_at": "2026-05-23T20:32:45Z",
       "is_active": true,
       "significance": 9,
       "status": "developing"
     },
     "evt_67b4f1aedf77": {
       "event_id": "evt_67b4f1aedf77",
-      "title": "AI芯片军备赛升级，存储超级周期信号浮现",
-      "summary": "AI基础设施扩张推动芯片需求激增，多家头部厂商加码AI加速器研发。超微发布MI400芯片挑战英伟达，OpenAI确认采用超微最新芯片。存储芯片短缺预计延续至2027年，SK海力士、美光等加速HBM产能扩张，AI服务器对存储容量和带宽需求远超传统服务器，存储超级周期信号浮现，行业竞争格局加剧。",
+      "title": "AI芯片军备赛全面升级，多元竞争格局加速演进",
+      "summary": "AI基础设施扩张推动芯片需求激增，军备赛从训练侧向推理侧延伸。高通宣布进军AI数据中心芯片市场，将推出AI200（2026年）和AI250（2027年）两款芯片，主打大容量内存与液冷服务器方案，正式向英伟达、AMD盘踞的AI训练/推理市场发起挑战。超微发布MI400芯片，OpenAI确认采用超微最新芯片。存储芯片短缺预计延续至2027年，SK海力士、美光等加速HBM产能扩张，先进封装与HBM需求料将持续增长。芯片供给侧竞争加剧，行业竞争格局持续演变。",
       "tickers": [
-        "美光",
+        "戴尔",
+        "工业富联",
         "台积电",
-        "英伟达",
-        "超微电脑",
-        "OpenAI",
-        "博通",
         "AMD",
-        "ASML"
+        "美光",
+        "ASML",
+        "博通",
+        "超微电脑",
+        "英伟达",
+        "SK海力士",
+        "浪潮信息",
+        "OpenAI",
+        "中科曙光",
+        "高通"
       ],
       "themes": [
-        "advanced_packaging",
-        "chip_supply",
         "compute_demand",
+        "chip_supply",
+        "edge_ai",
+        "advanced_packaging",
         "datacenter_power"
       ],
       "direction": {
@@ -565,18 +591,24 @@
         "OpenAI": "neutral",
         "美光": "positive",
         "博通": "neutral",
-        "ASML": "positive"
+        "ASML": "positive",
+        "高通": "neutral",
+        "戴尔": "positive",
+        "工业富联": "positive",
+        "中科曙光": "positive",
+        "浪潮信息": "positive"
       },
       "item_ids": [
         "a20b75edc7291b8f7bc7d4f85edd6e81a7c69665",
         "652b65f2d0925c6c3d15f7dfcd030a28255f3242",
-        "98b2e95cbe333b5debd7aa1a1ca4af5720ae8abf"
+        "98b2e95cbe333b5debd7aa1a1ca4af5720ae8abf",
+        "621bf2050b19e0d9d9c4e0b1d41816ee6c3f54b0"
       ],
-      "source_count": 3,
+      "source_count": 4,
       "first_seen_at": "2026-05-23T17:40:08Z",
-      "last_updated_at": "2026-05-23T19:25:47Z",
+      "last_updated_at": "2026-05-23T20:32:45Z",
       "is_active": true,
-      "significance": 8,
+      "significance": 9,
       "status": "developing"
     },
     "evt_7b94c35f9400": {
@@ -693,52 +725,57 @@
     },
     "evt_a72edc8d6f32": {
       "event_id": "evt_a72edc8d6f32",
-      "title": "Meta推出自研MTIA AI芯片加速布局",
-      "summary": "Meta推出新一代自研AI芯片MTIA系列，距与英伟达、AMD达成大规模采购协议仅数周。此举旨在支持Meta大规模数据中心扩张，提升AI基础设施自主可控能力。MTIA由Meta与博通合作开发，预计由台积电代工生产。此举标志着头部云厂商持续推进芯片自研战略，对传统芯片供应商长期需求形成结构性挑战，同时凸显大厂降低对英伟达等供应商依赖趋势。",
+      "title": "Meta联手Arm推进AI芯片自研，头部厂商多元化布局挑战传统供应链",
+      "summary": "Meta在数周内与英伟达、AMD达成大规模采购协议后，同步推进自研AI芯片战略：一方面推出新一代MTIA芯片，由博通合作开发、台积电代工；另一方面成为Arm首款自研AI推理芯片AGI CPU的首发客户，标志着Arm从IP授权向芯片自研转型。两大动态显示超大规模云厂商正通过多元化芯片布局降低对单一供应商依赖，对英伟达、AMD、博通等传统AI芯片厂商形成结构性竞争压力，台积电则受益于新增AI芯片代工订单。",
       "tickers": [
         "台积电",
-        "英伟达",
+        "AMD",
         "Meta",
         "博通",
-        "AMD"
+        "英伟达",
+        "ARM"
       ],
       "themes": [
-        "chip_supply",
         "compute_demand",
+        "chip_supply",
+        "edge_ai",
         "model_capability",
-        "datacenter_power",
-        "edge_ai"
+        "datacenter_power"
       ],
       "direction": {
         "Meta": "positive",
         "博通": "positive",
         "英伟达": "neutral",
         "台积电": "positive",
-        "AMD": "negative"
+        "AMD": "negative",
+        "ARM": "positive"
       },
       "item_ids": [
         "8851fe738e7638c88cebf8e165e2cdc0d591e85d",
-        "87f9328bf0f6055b5f3f4b98e7f00f3dc9231b7c"
+        "87f9328bf0f6055b5f3f4b98e7f00f3dc9231b7c",
+        "5fd54de4464adf347bacf2b670888a025cb930db"
       ],
-      "source_count": 2,
+      "source_count": 3,
       "first_seen_at": "2026-05-23T17:40:08Z",
-      "last_updated_at": "2026-05-23T19:25:47Z",
+      "last_updated_at": "2026-05-23T20:32:45Z",
       "is_active": true,
       "significance": 8,
       "status": "developing"
     },
     "evt_becb450907e9": {
       "event_id": "evt_becb450907e9",
-      "title": "中国AI芯片产业加速突破：百度寒武纪软硬兼施挑战国际巨头",
-      "summary": "中国AI芯片产业迎来新一波突破。百度在11月13日百度世界大会上发布昆仑芯AI芯片迭代路线图，计划2026年推出M100专注推理场景，2027年推出M300面向超大规模AI负载。同时，寒武纪于5月发布AI软件新生态，剑指英伟达CUDA垄断地位，旨在构建中国本土AI软件体系。这是中国头部云厂商和芯片企业协同推进AI芯片自主可控的重要信号，硬件迭代与软件生态双管齐下，可能重塑全球AI芯片竞争格局。需跟踪百度昆仑芯量产节奏及寒武纪软件生态开发者拓展情况。",
+      "title": "中国AI芯片产业多线突破：百度、阿里、寒武纪协同挑战英伟达",
+      "summary": "中国AI芯片产业迎来多线突破。百度发布昆仑芯迭代路线图，计划2026年推出M100、2027年推出M300；寒武纪发布AI软件新生态剑指英伟达CUDA垄断；阿里平头哥发布新款AI芯片（继含光800后），面向大模型训练与推理场景。中国头部云厂商和芯片企业正通过硬件迭代与软件生态双管齐下，加速AI芯片自主可控进程，对英伟达等海外芯片的替代进程在加速。",
       "tickers": [
-        "英伟达",
-        "AMD",
-        "海光信息",
-        "台积电",
         "寒武纪",
         "百度",
-        "博通"
+        "阿里巴巴",
+        "工业富联",
+        "台积电",
+        "AMD",
+        "博通",
+        "英伟达",
+        "海光信息"
       ],
       "themes": [
         "domestic_substitution",
@@ -751,17 +788,20 @@
         "英伟达": "negative",
         "AMD": "neutral",
         "博通": "neutral",
-        "台积电": "neutral"
+        "台积电": "neutral",
+        "阿里巴巴": "positive",
+        "工业富联": "neutral"
       },
       "item_ids": [
         "7f40896a647bd52e5ad991e070127889b83cec70",
-        "8020aa7bcca1fbb83389e65880890a6793bc18b5"
+        "8020aa7bcca1fbb83389e65880890a6793bc18b5",
+        "9689b58d3dd0146024555af026be93b4fbb69750"
       ],
-      "source_count": 2,
+      "source_count": 3,
       "first_seen_at": "2026-05-23T17:40:08Z",
-      "last_updated_at": "2026-05-23T17:40:08Z",
+      "last_updated_at": "2026-05-23T20:32:45Z",
       "is_active": true,
-      "significance": 8,
+      "significance": 9,
       "status": "developing"
     },
     "evt_23e01e1f8f84": {
@@ -789,17 +829,21 @@
     },
     "evt_15a2fdfb1af3": {
       "event_id": "evt_15a2fdfb1af3",
-      "title": "AMD Unleashes Ryzen AI 400 Series: 60 TOPS of AI Power Hits ... - PCMag",
-      "summary": "AMD发布Ryzen AI 400系列处理器，集成Zen 5 CPU、RDNA 3.5 GPU和XDNA 2 NPU，AI算力达60 TOPS，覆盖办公、游戏及内容创作场景。该系列定位AI PC市场，是AMD针对Intel Lunar Lake及Qualcomm Snapdragon X系列的有力竞争产品，XDNA 2 NPU架构专为此类低功耗边缘AI推理任务优化。此次发布标志着AMD在终端AI芯片领域的战略深化，进一步推动PC端侧AI能力普及。",
+      "title": "AMD Intel竞逐AI PC市场",
+      "summary": "AMD发布Ryzen AI 400系列，集成Zen 5 CPU、RDNA 3.5 GPU和XDNA 2 NPU，AI算力达60 TOPS；Intel同步敦促OEM厂商加速采用Intel 4/3制程新芯片，支持本地AI推理。两大芯片巨头在AI PC赛道展开正面竞争，将推动PC端侧AI能力普及和换机潮验证。",
       "tickers": [
+        "戴尔",
+        "微软",
+        "苹果",
         "AMD",
         "Intel",
-        "高通",
         "英伟达",
-        "微软"
+        "小米",
+        "高通"
       ],
       "themes": [
         "edge_ai",
+        "compute_demand",
         "chip_supply"
       ],
       "direction": {
@@ -807,16 +851,20 @@
         "Intel": "negative",
         "高通": "negative",
         "英伟达": "neutral",
-        "微软": "positive"
+        "微软": "positive",
+        "戴尔": "positive",
+        "苹果": "neutral",
+        "小米": "neutral"
       },
       "item_ids": [
-        "46bc9044c58b8cf61152816ce2d8d657ed23c807"
+        "46bc9044c58b8cf61152816ce2d8d657ed23c807",
+        "3b3b83a0ae253c0a8457a36adbc6f9962df523b4"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "first_seen_at": "2026-05-23T17:40:08Z",
-      "last_updated_at": "2026-05-23T17:40:08Z",
+      "last_updated_at": "2026-05-23T20:32:45Z",
       "is_active": true,
-      "significance": 6,
+      "significance": 8,
       "status": "developing"
     },
     "evt_d63331c527a5": {
@@ -1043,24 +1091,31 @@
     },
     "evt_891f8e2fddba": {
       "event_id": "evt_891f8e2fddba",
-      "title": "中国AI芯片深度对比与百度自研芯片发布",
-      "summary": "券商研究院发布中国AI芯片深度对比报告，覆盖寒武纪、海光信息、沐曦、摩尔线程、景嘉微五家公司。核心结论：海光信息净利润最高、DCU出货量最大，为首选标的；寒武纪产品力最强，2025年有望扭亏为盈。同期百度发布昆仑芯M100（2026年上市）和M300（2027年上市），强化自研可控。国产AI芯片替代加速，量产进度及生态竞争成为核心跟踪变量。",
+      "title": "国产AI芯片生态加速整合：百度自研路线图与浪潮合作",
+      "summary": "券商研究院发布中国AI芯片深度对比报告，覆盖寒武纪、海光信息、沐曦、摩尔线程、景嘉微五家公司。核心结论：海光信息净利润最高、DCU出货量最大，为首选标的；寒武纪产品力最强，2025年有望扭亏为盈。同期百度发布昆仑芯M100（2026年）和M300（2027年），明确未来5年迭代路线图。浪潮信息涨停，与20余家国产AI芯片厂商合作，AIStation平台兼容30余款国产AI芯片，并推进OAM、OCM、液冷等开放标准。该合作模式有助于降低下游客户对单一芯片的依赖，提升供应链韧性，推动国产AI芯片生态整合。国产AI芯片替代加速，量产进度及生态竞争成为核心跟踪变量。",
       "tickers": [
-        "英伟达",
-        "中科曙光",
-        "寒武纪",
-        "沐曦",
-        "浪潮信息",
-        "百度",
-        "AMD",
-        "景嘉微",
         "摩尔线程",
-        "海光信息"
+        "寒武纪",
+        "百度",
+        "工业富联",
+        "台积电",
+        "AMD",
+        "中芯国际",
+        "博通",
+        "沐曦",
+        "英伟达",
+        "超微电脑",
+        "浪潮信息",
+        "海光信息",
+        "中科曙光",
+        "景嘉微",
+        "腾讯"
       ],
       "themes": [
         "domestic_substitution",
-        "chip_supply",
-        "compute_demand"
+        "advanced_packaging",
+        "compute_demand",
+        "chip_supply"
       ],
       "direction": {
         "海光信息": "neutral",
@@ -1070,15 +1125,23 @@
         "浪潮信息": "neutral",
         "百度": "positive",
         "英伟达": "negative",
-        "AMD": "negative"
+        "AMD": "negative",
+        "工业富联": "positive",
+        "中芯国际": "positive",
+        "腾讯": "neutral",
+        "博通": "neutral",
+        "台积电": "neutral",
+        "超微电脑": "neutral"
       },
       "item_ids": [
         "3da2f7855d7b7742ed399215df6d3e87c12c4fdc",
-        "a8fe455f577203b7e8c57547e578bdcbf7537505"
+        "a8fe455f577203b7e8c57547e578bdcbf7537505",
+        "d752c1a9a97518f059be106335ef5e606f3527b2",
+        "c7941f3d787e6df776c763cdaad36d957fd20138"
       ],
-      "source_count": 2,
+      "source_count": 4,
       "first_seen_at": "2026-05-23T19:25:47Z",
-      "last_updated_at": "2026-05-23T19:25:47Z",
+      "last_updated_at": "2026-05-23T20:32:45Z",
       "is_active": true,
       "significance": 8,
       "status": "developing"
@@ -1103,9 +1166,214 @@
       "source_count": 1,
       "first_seen_at": "2026-05-23T19:25:47Z",
       "last_updated_at": "2026-05-23T19:25:47Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 5,
+      "status": "resolved"
+    },
+    "evt_85d2d1a5f179": {
+      "event_id": "evt_85d2d1a5f179",
+      "title": "微软放缓AI芯片自研，扩大外部采购",
+      "summary": "微软正对其AI芯片自研计划进行重大战略调整，2028年前将采取稳健策略，放缓自研脚步。此前报道称微软正利用英特尔18A制程代工AI芯片，疑似第二代Maia系列。该调整意味着微软可能增加对英伟达、AMD等外部供应商的依赖，打破台积电在AI芯片代工垄断格局的同时，也可能影响台积电先进制程产能利用率。",
+      "tickers": [
+        "微软",
+        "台积电",
+        "AMD",
+        "Intel",
+        "英特尔",
+        "英伟达"
+      ],
+      "themes": [
+        "advanced_packaging",
+        "compute_demand",
+        "chip_supply"
+      ],
+      "direction": {
+        "微软": "positive",
+        "Intel": "positive",
+        "英伟达": "neutral",
+        "AMD": "neutral",
+        "台积电": "negative"
+      },
+      "item_ids": [
+        "a70eae637c7b881d4eddced564015df4ea382b76",
+        "faebb45dc0f863a29da69f5d3dbd0c22d6b9c11f"
+      ],
+      "source_count": 2,
+      "first_seen_at": "2026-05-23T20:32:45Z",
+      "last_updated_at": "2026-05-23T20:32:45Z",
+      "is_active": true,
+      "significance": 8,
       "status": "developing"
+    },
+    "evt_9a155252aec5": {
+      "event_id": "evt_9a155252aec5",
+      "title": "阿里巴巴自研ai芯片挑战英伟达 3800亿投ai相关收入连续八季高增|阿里巴巴_新浪财经_新浪网",
+      "summary": "阿里巴巴宣布其自研AI芯片取得进展，对标英伟达主导地位。公司已投入3800亿元用于AI相关业务，AI收入连续八个季度保持高速增长。此举标志着中国科技巨头加速推进AI芯片国产化，以应对可能的出口管制风险。阿里自研芯片若实现规模化商用，将对全球AI芯片竞争格局产生深远影响。",
+      "tickers": [
+        "微软",
+        "寒武纪",
+        "百度",
+        "阿里巴巴",
+        "台积电",
+        "AMD",
+        "谷歌",
+        "亚马逊",
+        "博通",
+        "英伟达",
+        "中芯国际"
+      ],
+      "themes": [
+        "ai_monetization",
+        "domestic_substitution",
+        "compute_demand",
+        "chip_supply"
+      ],
+      "direction": {
+        "阿里巴巴": "positive",
+        "英伟达": "negative",
+        "AMD": "negative",
+        "博通": "neutral",
+        "台积电": "neutral",
+        "寒武纪": "negative",
+        "中芯国际": "positive",
+        "微软": "neutral",
+        "谷歌": "neutral",
+        "亚马逊": "neutral",
+        "百度": "neutral"
+      },
+      "item_ids": [
+        "68f1b1f8957f696a3ce33eee44f96195d48f2722"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-05-23T20:32:45Z",
+      "last_updated_at": "2026-05-23T20:32:45Z",
+      "is_active": true,
+      "significance": 8,
+      "status": "developing"
+    },
+    "evt_bd5109249a2a": {
+      "event_id": "evt_bd5109249a2a",
+      "title": "寒武纪深度研究报告：国产 Ai 芯片龙头的崛起与挑战 - 知乎",
+      "summary": "寒武纪（688256.SH）发布深度研究报告，作为国内AI芯片领军企业，2025年上半年业绩爆发式增长，营收同比暴增4347.82%至28.81亿元，归母净利润10.38亿元，成功扭亏为盈，标志着国产AI芯片龙头正式进入收获期。报告同时分析其面临的竞争格局与供应链挑战。",
+      "tickers": [
+        "寒武纪"
+      ],
+      "themes": [
+        "domestic_substitution",
+        "compute_demand",
+        "chip_supply"
+      ],
+      "direction": {
+        "寒武纪": "positive"
+      },
+      "item_ids": [
+        "a7e9b876730a9009d906cc4acdaec260d07895fb"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-05-23T20:32:45Z",
+      "last_updated_at": "2026-05-23T20:32:45Z",
+      "is_active": true,
+      "significance": 6,
+      "status": "developing"
+    },
+    "evt_1202f33796ed": {
+      "event_id": "evt_1202f33796ed",
+      "title": "长电科技（600584）深度分析报告 - 知乎",
+      "summary": "长电科技深度分析报告指出其具备国产替代优势，正承接本土AI芯片厂商订单，华为昇腾、寒武纪、海光信息等国产AI芯片市场份额预计2026年超50%。长电全球布局江阴、滁州、宿迁、新加坡、韩国五地，领先通富微电7个生产基地（日月光15个）。报告同时分析其盈利能力。作为大陆封测龙头，长电有望受益于国产AI芯片崛起带来的先进封装需求增长。",
+      "tickers": [
+        "海光信息",
+        "寒武纪",
+        "长电科技"
+      ],
+      "themes": [
+        "domestic_substitution",
+        "advanced_packaging",
+        "chip_supply"
+      ],
+      "direction": {
+        "长电科技": "neutral",
+        "寒武纪": "positive",
+        "海光信息": "positive"
+      },
+      "item_ids": [
+        "4ec220f71d2638dd8220af2972ffffbcdcdb8b96"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-05-23T20:32:45Z",
+      "last_updated_at": "2026-05-23T20:32:45Z",
+      "is_active": true,
+      "significance": 6,
+      "status": "developing"
+    },
+    "evt_52a6cd4cea43": {
+      "event_id": "evt_52a6cd4cea43",
+      "title": "Embeddings for NVIDIA's Nemotron Personas",
+      "summary": "有开发者提取了NVIDIA Nemotron-Personas数据集的嵌入向量。该数据集包含数百万个合成人物角色（附带姓名、年龄、职业、爱好等详细背景信息），规模庞大但难以直接检索。开发者采用轻量级Qwen 0.6B模型计算嵌入向量，实现语义搜索和K近邻聚类功能，现已发布韩国、日本、法国、美国的预计算向量。数据集托管于Hugging Face，提供网页演示。",
+      "tickers": [
+        "英伟达"
+      ],
+      "themes": [
+        "ai_monetization",
+        "model_capability"
+      ],
+      "direction": {
+        "英伟达": "neutral"
+      },
+      "item_ids": [
+        "636ffa7a278e19eb700c3aec7972dd3622f0ad7e"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-05-23T20:32:45Z",
+      "last_updated_at": "2026-05-23T20:32:45Z",
+      "is_active": false,
+      "significance": 5,
+      "status": "resolved"
+    },
+    "evt_e4581130cbb1": {
+      "event_id": "evt_e4581130cbb1",
+      "title": "科大讯飞发布新大模型，推动国产ai芯片技术革新 - 搜狐",
+      "summary": "科大讯飞发布星火X1大模型，展示其在国产AI芯片与大模型技术融合上的最新进展。该模型针对国产硬件优化，推动国产算力链技术迭代，凸显中国AI在实际应用场景中的差异化优势。这标志着国内AI厂商在自主技术路线上的持续突破，对国产算力生态建设具有积极意义。",
+      "tickers": [
+        "寒武纪",
+        "百度",
+        "阿里巴巴",
+        "天数智芯",
+        "腾讯",
+        "海光信息",
+        "中科曙光",
+        "商汤",
+        "景嘉微",
+        "长电科技",
+        "科大讯飞"
+      ],
+      "themes": [
+        "ai_monetization",
+        "domestic_substitution",
+        "model_capability",
+        "chip_supply"
+      ],
+      "direction": {
+        "科大讯飞": "positive",
+        "寒武纪": "positive",
+        "海光信息": "positive",
+        "中科曙光": "positive",
+        "景嘉微": "positive",
+        "长电科技": "positive",
+        "天数智芯": "positive",
+        "百度": "neutral",
+        "腾讯": "neutral",
+        "阿里巴巴": "neutral",
+        "商汤": "neutral"
+      },
+      "item_ids": [
+        "f0544fb6eed85e4fc63737be705ac7b2d4133e22"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-05-23T20:32:45Z",
+      "last_updated_at": "2026-05-23T20:32:45Z",
+      "is_active": false,
+      "significance": 5,
+      "status": "resolved"
     }
   }
 }
