@@ -128,6 +128,7 @@ class MinimaxSearchCollector(Collector):
                         fetched_at=fetched_at,
                         raw_summary=_truncate(snippet),
                         credibility=_source_cred(source_id),
+                        image_url="",
                     )
                     items.append(item)
 

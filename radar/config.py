@@ -54,6 +54,10 @@ def _validate(cfg: dict) -> None:
     if "model" not in cfg["minimax"]:
         raise ValueError("minimax must have 'model'")
 
+    # trending_topics 校验（可选字段）
+    if "trending_topics" in cfg and not isinstance(cfg["trending_topics"], list):
+        raise ValueError("trending_topics must be a list of strings")
+
 
 def get_coverage_names(cfg: dict) -> list[str]:
     """返回覆盖标的 name 列表"""

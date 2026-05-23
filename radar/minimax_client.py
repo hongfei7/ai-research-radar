@@ -3,6 +3,7 @@
 import os
 import json
 import logging
+import re
 import asyncio
 from typing import Optional, Any
 
@@ -435,8 +436,6 @@ class MinimaxClient:
 
 def _extract_json_block(text: str) -> str | None:
     """尝试从文本中提取 ```json ... ``` 代码块或 { ... } / [ ... ]"""
-    import re
-
     # 1. ```json ... ```
     m = re.search(r"```(?:json)?\s*([\s\S]*?)```", text)
     if m:

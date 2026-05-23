@@ -68,15 +68,10 @@ class ClusterEngine:
         if not items:
             return items, existing_events
 
-        # Step 1: 尝试获取 embeddings，失败则降级为关键词匹配
-        texts = [it.cn_summary or it.title for it in items]
-        embeddings = await self.client.embedding_batch(texts)
-        use_embeddings = bool(embeddings and any(len(e) > 0 for e in embeddings))
-
-        if use_embeddings:
-            logger.info("Clustering: using embedding-based similarity")
-        else:
-            logger.warning("Embeddings unavailable, falling back to keyword-based clustering")
+        # Step 1: 关键词匹配聚类（MiniMax M2.7 不含 Embeddings API）
+        # embedding 方案留待后续套餐升级后启用
+        use_embeddings = False
+        embeddings: list[list[float]] = [[] for _ in items]
 
         # Step 2: 对每条新条目做匹配
         events = dict(existing_events)  # 复制，避免修改原始

@@ -10,7 +10,7 @@
 ### {{ theme.name }}
 {% for it in theme.items %}
 - **{{ it.title }}** — {{ it.cn_summary }}
-  〔方向: {{ it.direction_str }}〕· 来源: {{ it.source }} {% if it.credibility %}{{ cred_emoji(it.credibility) }}{% endif %}{% if not it.is_primary_source %} ⛓️转载{% endif %} · [原文]({{ it.url }})
+  〔方向: {{ it.direction|direction_str }}〕· 来源: {{ it.source }} {% if it.credibility %}{{ cred_emoji(it.credibility) }}{% endif %}{% if not it.is_primary_source %} ⛓️转载{% endif %} · [原文]({{ it.url }})
   - So what: {{ it.so_what }}
 {% endfor %}
 {% endfor %}

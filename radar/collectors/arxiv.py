@@ -1,6 +1,7 @@
 """arXiv 采集器 —— export.arxiv.org Atom API"""
 
 import logging
+import re
 from urllib.parse import urlencode
 
 import httpx
@@ -34,7 +35,6 @@ def _parse_arxiv_date(entry) -> str:
 
 def _extract_arxiv_summary(entry) -> str:
     """从 arXiv entry 提取摘要，去 HTML 标签"""
-    import re
     candidates = []
     if hasattr(entry, "summary"):
         candidates.append(entry.summary)
@@ -141,6 +141,7 @@ class ArxivCollector(Collector):
                     fetched_at=fetched_at,
                     raw_summary=summary,
                     credibility=_source_cred(f"{source_id}:{cat}"),
+                    image_url="",
                 )
                 items.append(item)
             except Exception as e:

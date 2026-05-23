@@ -106,6 +106,7 @@ class HackerNewsCollector(Collector):
                             fetched_at=fetched_at,
                             raw_summary=raw_summary,
                             credibility=_source_cred(source_id),
+                            image_url="",
                         )
                     except Exception as e:
                         logger.debug(f"[{source_id}] Failed to fetch item {story_id}: {e}")

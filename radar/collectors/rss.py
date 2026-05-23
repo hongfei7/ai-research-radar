@@ -2,6 +2,7 @@
 
 import hashlib
 import logging
+import re
 from urllib.parse import urlparse, urlunparse, parse_qs, urlencode
 from datetime import datetime, timezone
 
@@ -79,7 +80,6 @@ def _extract_summary(entry) -> str:
     for text in candidates:
         if text:
             # 去除 HTML 标签（简单处理）
-            import re
             clean = re.sub(r"<[^>]+>", "", text)
             clean = " ".join(clean.split())  # 压缩空白
             if len(clean) > 20:  # 有效内容至少 20 字符
@@ -127,7 +127,6 @@ def _extract_image(entry) -> str:
     if not content and hasattr(entry, "summary"):
         content = entry.summary
     if content:
-        import re
         m = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', content, re.I)
         if m:
             return m.group(1)

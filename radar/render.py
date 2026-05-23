@@ -8,7 +8,7 @@ from typing import Optional
 
 from jinja2 import Environment, FileSystemLoader
 
-from radar.models import Item, Event, Situation, today_str
+from radar.models import Item, Event, Situation, today_str, parse_iso
 from radar.config import get_coverage_by_ticker
 from radar.credibility import CREDIBILITY_EMOJI, CREDIBILITY_LABEL
 
@@ -24,6 +24,15 @@ _env = Environment(
 )
 _env.globals["cred_emoji"] = CREDIBILITY_EMOJI.get
 _env.globals["cred_label"] = CREDIBILITY_LABEL.get
+
+
+def _format_direction(direction: dict) -> str:
+    if not direction or not isinstance(direction, dict):
+        return ""
+    return ", ".join(f"{tk}→{d}" for tk, d in direction.items())
+
+
+_env.filters["direction_str"] = _format_direction
 
 
 def _ensure_pages_dir() -> None:
@@ -50,45 +59,13 @@ def _now_hkt() -> str:
     return datetime.now(hkt).strftime("%Y-%m-%d %H:%M HKT")
 
 
-def _parse_iso(s: str) -> Optional[datetime]:
-    """宽松的 ISO8601/RFC2822 解析，始终返回带时区的 datetime"""
-    if not s:
-        return None
-    s_clean = s.strip().replace("Z", "+00:00")
-    for fmt in [
-        "%Y-%m-%dT%H:%M:%S%z",
-        "%Y-%m-%dT%H:%M:%S.%f%z",
-        "%Y-%m-%d %H:%M:%S%z",
-        "%a, %d %b %Y %H:%M:%S %z",
-    ]:
-        try:
-            return datetime.strptime(s_clean, fmt)
-        except ValueError:
-            continue
-    for fmt in [
-        "%Y-%m-%dT%H:%M:%S",
-        "%Y-%m-%d %H:%M:%S",
-        "%a, %d %b %Y %H:%M:%S %Z",
-    ]:
-        try:
-            dt = datetime.strptime(s_clean, fmt)
-            return dt.replace(tzinfo=timezone.utc)
-        except ValueError:
-            continue
-    try:
-        return datetime.strptime(s_clean[:10], "%Y-%m-%d").replace(tzinfo=timezone.utc)
-    except ValueError:
-        pass
-    return None
-
-
 def _filter_recent(items: list[Item], window_hours: int = 8) -> list[Item]:
     """只保留最近 window_hours 内发布/处理的条目"""
     cutoff = datetime.now(timezone.utc) - timedelta(hours=window_hours)
     result = []
     for it in items:
         # 优先用 published_at，其次 processed_at，再次 fetched_at
-        dt = _parse_iso(it.published_at) or _parse_iso(it.processed_at) or _parse_iso(it.fetched_at)
+        dt = parse_iso(it.published_at) or parse_iso(it.processed_at) or parse_iso(it.fetched_at)
         if dt is None or dt >= cutoff:
             result.append(it)
     return result
@@ -250,15 +227,6 @@ def render_daily_brief(
             "ticker": "",
             "items": tk_items[:15],
         })
-
-    # 为每个 item 准备 direction_str
-    for it in items:
-        if it.direction:
-            it.direction_str = ", ".join(
-                f"{tk}→{d}" for tk, d in it.direction.items()
-            )
-        else:
-            it.direction_str = ""
 
     return template.render(
         date=today,

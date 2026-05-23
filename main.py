@@ -18,7 +18,7 @@ import sys
 from pathlib import Path
 
 from radar.config import load_config
-from radar.models import Item, today_str
+from radar.models import Item, today_str, parse_iso
 from radar.collectors.rss import RSSCollector
 from radar.collectors.arxiv import ArxivCollector
 from radar.collectors.hackernews import HackerNewsCollector
@@ -70,7 +70,6 @@ def setup_logging(verbose: bool = False) -> None:
 
 async def collect_all(cfg: dict) -> list[Item]:
     """采集全部信源，返回去重后的新条目列表"""
-    import re
     from datetime import datetime, timezone, timedelta
 
     dedup = DedupStore()
@@ -128,43 +127,11 @@ async def collect_all(cfg: dict) -> list[Item]:
     stale_count = 0
     no_date_count = 0
 
-    def _parse_iso(s: str):
-        """尽量宽松的 ISO8601 解析，始终返回带时区的 datetime"""
-        if not s:
-            return None
-        s_clean = s.strip().replace("Z", "+00:00")
-        for fmt in [
-            "%Y-%m-%dT%H:%M:%S%z",
-            "%Y-%m-%dT%H:%M:%S.%f%z",
-            "%Y-%m-%d %H:%M:%S%z",
-            "%a, %d %b %Y %H:%M:%S %z",     # RFC 2822
-        ]:
-            try:
-                return datetime.strptime(s_clean, fmt)
-            except ValueError:
-                continue
-        for fmt in [
-            "%Y-%m-%dT%H:%M:%S",
-            "%Y-%m-%d %H:%M:%S",
-            "%a, %d %b %Y %H:%M:%S %Z",
-        ]:
-            try:
-                dt = datetime.strptime(s_clean, fmt)
-                return dt.replace(tzinfo=timezone.utc)
-            except ValueError:
-                continue
-        # 纯日期格式
-        try:
-            return datetime.strptime(s_clean[:10], "%Y-%m-%d").replace(tzinfo=timezone.utc)
-        except ValueError:
-            pass
-        return None
-
     for it in all_items:
-        pub_dt = _parse_iso(it.published_at)
+        pub_dt = parse_iso(it.published_at)
         if pub_dt is None:
             # 无日期信息：用 fetched_at 替代（搜索类源都是这种）
-            pub_dt = _parse_iso(it.fetched_at)
+            pub_dt = parse_iso(it.fetched_at)
             if pub_dt is None:
                 no_date_count += 1
                 filtered_items.append(it)  # 无法解析则保留

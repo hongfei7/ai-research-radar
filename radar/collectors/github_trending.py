@@ -129,6 +129,7 @@ class GithubTrendingCollector(Collector):
                     fetched_at=fetched_at,
                     raw_summary=raw_summary,
                     credibility=_source_cred(source_id),
+                    image_url="",
                 )
                 items.append(item)
             except Exception as e:

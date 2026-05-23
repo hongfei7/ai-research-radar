@@ -31,5 +31,9 @@ jobs:
           git config user.email "radar-bot@users.noreply.github.com"
           git add archive/ state/ pages/ README.md
           git commit -m "radar: $(date -u +%Y-%m-%dT%H:%M)" || echo "nothing to commit"
-          git pull --rebase origin main
-          git push
+          # 三重试：防止 rebase 与 push 之间的竞态条件
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && break
+            echo "push failed (attempt $i), retrying after 3s..."
+            sleep 3
+          done
