@@ -4,6 +4,6 @@ __pycache__/
 *.pyo
 .env
 .ignore
-state/seen.db
+# state/seen.db -- 需要 git 追踪，保证 Actions 增量运行
 *.log
 .DS_Store
