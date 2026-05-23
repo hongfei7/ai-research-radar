@@ -93,30 +93,20 @@ sources:
     - { id: "rss:zdnet",        type: "rss", params: { url: "https://www.zdnet.com/news/rss.xml" } }
     # CNBC Tech RSS 403 限制，暂时禁用
     # - { id: "rss:cnbc-tech",    type: "rss", params: { url: "https://www.cnbc.com/id/100003114/device/rss/rss.html" } }
-    - { id: "rss:importai",     type: "rss", params: { url: "https://importai.net/feed/" } }
+    - { id: "rss:importai",     type: "rss", params: { url: "https://jack-clark.net/feed/" } }
     - { id: "rss:eetimes",      type: "rss", params: { url: "https://www.eetimes.com/feed/" } }
     - { id: "rss:infoq",        type: "rss", params: { url: "https://www.infoq.com/feed/" } }
     # ---- 中文科技媒体(视可用性启用) ----
     # 机器之心 RSS 需要登录 session，暂时禁用
     # - { id: "rss:jiqizhixin",  type: "rss", params: { url: "https://www.jiqizhixin.com/rss" } }
-    # ---- X/Twitter（通过 Nitter RSS，追踪 AI 关键账号） ----
-    - { id: "twitter:openai",      type: "rss", params: { url: "https://nitter.poast.org/OpenAI/rss" } }
-    - { id: "twitter:deepseek",    type: "rss", params: { url: "https://nitter.poast.org/deepseek_ai/rss" } }
-    - { id: "twitter:demishassabis", type: "rss", params: { url: "https://nitter.poast.org/demishassabis/rss" } }
-    - { id: "twitter:gdb",         type: "rss", params: { url: "https://nitter.poast.org/gdb/rss" } }
-    - { id: "twitter:sama",        type: "rss", params: { url: "https://nitter.poast.org/sama/rss" } }
-    - { id: "twitter:karpathy",    type: "rss", params: { url: "https://nitter.poast.org/karpathy/rss" } }
-    - { id: "twitter:ylecun",      type: "rss", params: { url: "https://nitter.poast.org/ylecun/rss" } }
-    - { id: "twitter:grok",        type: "rss", params: { url: "https://nitter.poast.org/grok/rss" } }
-    - { id: "twitter:jeffdean",    type: "rss", params: { url: "https://nitter.poast.org/JeffDean/rss" } }
-    - { id: "twitter:a16z",        type: "rss", params: { url: "https://nitter.poast.org/a16z/rss" } }
-    - { id: "twitter:perplexity_ai", type: "rss", params: { url: "https://nitter.poast.org/perplexity_ai/rss" } }
+    # ---- X/Twitter（Nitter RSS 全线 403，暂时禁用。待 X API 方案） ----
+    # Nitter 实例已全部失效，X/Twitter 内容暂由 minimax_search 搜索覆盖
     # ---- Reddit AI 社区（RSS feed） ----
     - { id: "reddit:ml",           type: "rss", params: { url: "https://www.reddit.com/r/MachineLearning/.rss" } }
     - { id: "reddit:localllama",   type: "rss", params: { url: "https://www.reddit.com/r/LocalLLaMA/.rss" } }
     - { id: "reddit:singularity",  type: "rss", params: { url: "https://www.reddit.com/r/singularity/.rss" } }
-    # ---- HuggingFace Daily Papers ----
-    - { id: "huggingface:papers",  type: "rss", params: { url: "https://huggingface.co/papers/feed.rss" } }
+    # ---- HuggingFace Daily Papers（JSON API，公开可用） ----
+    - { id: "huggingface:papers",  type: "huggingface_papers", params: { max: 20 } }
     # ---- MiniMax 联网搜索（Google 级搜索，替代 DDG） ----
     - { id: "minimax_search",  type: "minimax_search", params: { max_per_stock: 3 } }
     # ---- DuckDuckGo 搜索（备用，MiniMax 搜索失败时补充） ----

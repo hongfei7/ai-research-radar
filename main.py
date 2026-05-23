@@ -26,6 +26,7 @@ from radar.collectors.github_trending import GithubTrendingCollector
 from radar.collectors.sec_edgar import SECEdgarCollector
 from radar.collectors.web_search import WebSearchCollector
 from radar.collectors.minimax_search import MinimaxSearchCollector
+from radar.collectors.huggingface_papers import HuggingFacePapersCollector
 from radar.dedup import DedupStore
 from radar.minimax_client import MinimaxClient
 from radar.processor import Processor
@@ -51,6 +52,7 @@ COLLECTOR_MAP = {
     "sec_edgar": SECEdgarCollector(),
     "web_search": WebSearchCollector(),
     "minimax_search": MinimaxSearchCollector(),
+    "huggingface_papers": HuggingFacePapersCollector(),
 }
 
 # 全局运行计数器（用于态势更新间隔）

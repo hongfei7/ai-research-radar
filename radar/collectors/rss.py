@@ -101,7 +101,11 @@ class RSSCollector(Collector):
         fetched_at = utcnow_iso()
 
         try:
-            async with httpx.AsyncClient(timeout=_TIMEOUT) as client:
+            headers = {
+                "User-Agent": "Mozilla/5.0 (compatible; ai-research-radar/1.0; +https://github.com/USER/ai-research-radar)",
+                "Accept": "application/rss+xml, application/atom+xml, application/xml, text/xml, */*",
+            }
+            async with httpx.AsyncClient(timeout=_TIMEOUT, headers=headers) as client:
                 resp = await client.get(url, follow_redirects=True)
                 resp.raise_for_status()
                 content = resp.text

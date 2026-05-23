@@ -309,25 +309,6 @@ class MinimaxClient:
             logger.error(f"Embedding batch request failed: {e}")
             return [[] for _ in texts]
 
-
-def _extract_json_block(text: str) -> str | None:
-    """尝试从文本中提取 ```json ... ``` 代码块或 { ... } / [ ... ]"""
-    import re
-
-    # 1. ```json ... ```
-    m = re.search(r"```(?:json)?\s*([\s\S]*?)```", text)
-    if m:
-        return m.group(1).strip()
-
-    # 2. 直接找 JSON 对象或数组
-    for pattern in [r"\{[\s\S]*\}", r"\[[\s\S]*\]"]:
-        m = re.search(pattern, text)
-        if m:
-            return m.group(0).strip()
-
-    return None
-
-
     # ================================================================
     # Coding Plan: Web Search (联网搜索)
     # ================================================================
@@ -450,6 +431,24 @@ def _extract_json_block(text: str) -> str | None:
         except Exception as e:
             logger.error(f"Image understanding request failed: {e}")
             return ""
+
+
+def _extract_json_block(text: str) -> str | None:
+    """尝试从文本中提取 ```json ... ``` 代码块或 { ... } / [ ... ]"""
+    import re
+
+    # 1. ```json ... ```
+    m = re.search(r"```(?:json)?\s*([\s\S]*?)```", text)
+    if m:
+        return m.group(1).strip()
+
+    # 2. 直接找 JSON 对象或数组
+    for pattern in [r"\{[\s\S]*\}", r"\[[\s\S]*\]"]:
+        m = re.search(pattern, text)
+        if m:
+            return m.group(0).strip()
+
+    return None
 
 
 def cosine_similarity(a: list[float], b: list[float]) -> float:

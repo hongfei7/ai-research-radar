@@ -8,6 +8,7 @@ from radar.collectors.github_trending import GithubTrendingCollector
 from radar.collectors.sec_edgar import SECEdgarCollector
 from radar.collectors.web_search import WebSearchCollector
 from radar.collectors.minimax_search import MinimaxSearchCollector
+from radar.collectors.huggingface_papers import HuggingFacePapersCollector
 
 __all__ = [
     "Collector",
@@ -18,4 +19,5 @@ __all__ = [
     "SECEdgarCollector",
     "WebSearchCollector",
     "MinimaxSearchCollector",
+    "HuggingFacePapersCollector",
 ]
