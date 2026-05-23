@@ -81,20 +81,32 @@ async def collect_all(cfg: dict) -> list[Item]:
         for src in cfg["sources"].get(src_type, []):
             all_sources.append((src["id"], src["type"], src.get("params", {})))
 
-    logger.info(f"Collecting from {len(all_sources)} sources...")
+    logger.info(f"Collecting from {len(all_sources)} sources (parallel)...")
 
-    all_items = []
-    for src_id, src_type, params in all_sources:
+    # 并发采集所有信源
+    async def _fetch_one(src_id, src_type, params):
         collector = COLLECTOR_MAP.get(src_type)
         if collector is None:
             logger.warning(f"No collector for type '{src_type}' (source: {src_id}), skipping")
-            continue
+            return []
         try:
-            items = await collector.fetch(src_id, params)
-            all_items.extend(items)
+            return await collector.fetch(src_id, params)
         except Exception as e:
-            logger.error(f"[{src_id}] Collector failed: {e}", exc_info=True)
-            continue
+            logger.error(f"[{src_id}] Collector failed: {e}")
+            return []
+
+    results = await asyncio.gather(
+        *[_fetch_one(src_id, src_type, params) for src_id, src_type, params in all_sources],
+        return_exceptions=True,
+    )
+
+    all_items = []
+    for i, result in enumerate(results):
+        if isinstance(result, Exception):
+            src_id = all_sources[i][0]
+            logger.error(f"[{src_id}] Collector exception: {result}")
+        elif isinstance(result, list):
+            all_items.extend(result)
 
     logger.info(f"Collected {len(all_items)} raw items total")
 

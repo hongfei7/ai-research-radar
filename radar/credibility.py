@@ -43,6 +43,12 @@ CREDIBILITY_RULES = {
     "hackernews":         "low",
     "github_trending":    "low",
     "rss:lobsters":       "low",
+    # —— X/Twitter 通过 Nitter RSS（第三方镜像，需交叉验证） ——
+    "twitter:openai":       "low",
+    "twitter:deepseek":     "low",
+    "twitter:demishassabis":"low",
+    "twitter:gdb":          "low",
+
     # —— 搜索引擎聚合（需 MiniMax 交叉验证） ——
     "web_search":         "low",
 }
