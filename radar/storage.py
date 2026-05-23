@@ -5,7 +5,7 @@ import logging
 from pathlib import Path
 from typing import Optional
 
-from radar.models import Item, Event, Situation, today_str
+from radar.models import Item, Event, Situation, today_str, utcnow_iso
 
 logger = logging.getLogger(__name__)
 
@@ -75,7 +75,7 @@ def save_events(events: dict[str, Event]) -> Path:
     _ensure_dirs()
     path = _STATE_DIR / "events.json"
     data = {
-        "updated_at": _now_iso(),
+        "updated_at": utcnow_iso(),
         "events": {eid: ev.to_dict() for eid, ev in events.items()},
     }
     with open(path, "w", encoding="utf-8") as f:
@@ -123,7 +123,3 @@ def load_situation() -> Optional[Situation]:
         logger.warning(f"Failed to load situation: {e}")
         return None
 
-
-def _now_iso() -> str:
-    from datetime import datetime, timezone
-    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")

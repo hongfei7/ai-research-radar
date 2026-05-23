@@ -170,6 +170,9 @@ class SituationGenerator:
 
         if prev_situation:
             sit.last_telegram_digest_at = prev_situation.last_telegram_digest_at
+            sit.morning_brief_date = prev_situation.morning_brief_date
+            sit.cross_analysis = prev_situation.cross_analysis
+            sit.trend_spotting = prev_situation.trend_spotting
 
         logger.info(
             f"Situation generated: {len(active_events)} active events, "

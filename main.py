@@ -301,7 +301,7 @@ async def run_full(cfg: dict) -> None:
         active_events = [e for e in all_events_list if e.is_active]
 
         w = cfg["runtime"].get("rolling_window_hours", 8)
-        write_rss(today_items, site_url, cfg["channels"]["rss"].get("max_items", 50), window_hours=w)
+        write_rss(today_items, site_url, cfg.get("channels", {}).get("rss", {}).get("max_items", 50), window_hours=w)
         write_dashboard(today_items, active_events, sit, site_url, window_hours=w)
         return
 
@@ -323,7 +323,7 @@ async def run_full(cfg: dict) -> None:
             )
             active_events = [e for e in all_events_sorted if e.is_active]
             w = cfg["runtime"].get("rolling_window_hours", 8)
-            write_rss([], site_url, cfg["channels"]["rss"].get("max_items", 50), window_hours=w)
+            write_rss([], site_url, cfg.get("channels", {}).get("rss", {}).get("max_items", 50), window_hours=w)
             write_dashboard([], active_events, sit, site_url, window_hours=w)
             logger.info("No items passed triage — rendered existing state")
             return
@@ -406,7 +406,7 @@ async def run_full(cfg: dict) -> None:
         # ================================================================
         # Stage 7: 渲染
         # ================================================================
-        rss_config = cfg["channels"]["rss"]
+        rss_config = cfg.get("channels", {}).get("rss", {})
         w = cfg["runtime"].get("rolling_window_hours", 8)
         write_rss(clustered_items, site_url, rss_config.get("max_items", 50), window_hours=w)
 

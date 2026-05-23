@@ -210,17 +210,6 @@ def write_ticker_pages(
         logger.info(f"Ticker page written: {path}")
 
 
-def write_theme_pages(
-    items: list[Item],
-    events: list[Event],
-    site_url: str = "",
-) -> None:
-    """为每条投资主线生成独立页面（简化版）"""
-    _ensure_pages_dir()
-    # 类似 ticker 页面，这里简化处理
-    pass
-
-
 # ================================================================
 # 日报 Markdown
 # ================================================================
