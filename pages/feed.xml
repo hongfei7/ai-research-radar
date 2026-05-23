@@ -5,407 +5,807 @@
     <link>https://USER.github.io/ai-research-radar</link>
     <description>AI/科技/半导体板块的持续投研情报 feed — 由 MiniMax 策展</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 23 May 2026 12:24:13 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 23 May 2026 15:22:07 GMT</lastBuildDate>
     <atom:link href="https://USER.github.io/ai-research-radar/feed.xml" rel="self" type="application/rss+xml"/>
     
     <item>
-      <title>[8分] Gemini 3.5: frontier intelligence with action</title>
-      <link>https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5</link>
-      <guid isPermaLink="false">037aba4678d338b51a3949cd62bdb9eefa3b5c5b</guid>
-      <pubDate>2026-05-19T17:45:00Z</pubDate>
+      <title>[9分] Scaling AI for everyone</title>
+      <link>https://openai.com/index/scaling-ai-for-everyone</link>
+      <guid isPermaLink="false">794d4515e72219ef16782793f8cab7d3c3c82f4a</guid>
+      <pubDate>2026-02-27T05:30:00Z</pubDate>
       <description><![CDATA[
-        <p>Google发布Gemini 3.5，定位为前沿智能行动模型。摘要仅显示产品图标信息，未披露具体技术参数、性能基准或发布时间等细节。鉴于Gemini系列为Google核心AI产品，其更新迭代料将影响大模型竞争格局及云端算力需求。</p>
-        <p>标的: 谷歌</p>
-        <p>主线: model_capability, compute_demand</p>
-        <p>方向: 谷歌→positive </p>
-        <p><em>追踪Gemini 3.5完整技术白皮书与性能基准披露，评估对微软Copilot、OpenAI GPT系列的竞争压力</em></p>
-        <p>来源: rss:googleai 🟢 高可信 [转载自 未知来源]</p>
+        <p>OpenAI宣布获得1100亿美元新投资，投前估值达7300亿美元，投资方包括软银(300亿)、英伟达(300亿)、亚马逊(500亿)。英伟达作为AI芯片核心供应商参与投资，亚马逊作为云计算巨头入局，标志着AI基础设施军备竞赛升级，头部玩家资源集中度进一步提升。</p>
+        <p>标的: 英伟达, 亚马逊, 微软, 台积电, ASML, 博通, 超微电脑</p>
+        <p>主线: compute_demand, chip_supply, advanced_packaging, ai_monetization</p>
+        <p>方向: 英伟达→positive 亚马逊→positive 微软→positive 台积电→positive ASML→positive 博通→positive 超微电脑→positive </p>
+        <p><em>关注英伟达GB200/Blackwell芯片订单指引及台积电CoWoS产能扩张进度</em></p>
+        <p>来源: rss:openai 🟢 高可信</p>
       ]]></description>
-      
+      <category>evt_4bd355e83e08</category>
     </item>
     
     <item>
-      <title>[8分] 谷歌掀桌，一口气甩出16个AI王炸</title>
-      <link>https://www.leiphone.com/category/ai/k2qs0VRU74Ub6CCw.html</link>
-      <guid isPermaLink="false">9ce06c1b0ab076b4ef00ade11a472f294d8a701f</guid>
-      <pubDate>2026-05-22T03:41:00Z</pubDate>
+      <title>[8分] Introducing GPT-5.4</title>
+      <link>https://openai.com/index/introducing-gpt-5-4</link>
+      <guid isPermaLink="false">778534f656319cb0aa1ade0e6890a31d1e29883e</guid>
+      <pubDate>2026-03-05T10:00:00Z</pubDate>
       <description><![CDATA[
-        <p>Google I/O 2026发布16款AI产品，包括Gemini 3.5 Flash（速度4倍、成本减半）、搜索AI Mode（25年来最大升级）、跨平台购物车Universal Cart等。Gemini日处理token从5000亿增至3万亿以上，全球部署超100万颗第八代TPU。CEO Pichai表示前沿Agent仅触达0.1%用户，目标将其规模化交付给30亿用户。</p>
-        <p>标的: 谷歌, 台积电, ASML, 美光, 高通, ARM, 博通, 英伟达, AMD, 微软, 亚马逊, Meta, 苹果, 中芯国际, 寒武纪, 海光信息, 工业富联, 中科曙光, 浪潮信息, 景嘉微, 金山办公, 商汤, 科大讯飞, OpenAI, Anthropic, DeepSeek, xAI, 百度, 戴尔, 超微电脑, Marvell, Intel</p>
-        <p>主线: compute_demand, chip_supply, model_capability, ai_monetization, edge_ai, advanced_packaging, datacenter_power, domestic_substitution</p>
-        <p>方向: 谷歌→positive 台积电→positive ASML→positive 美光→positive 高通→positive ARM→positive 博通→positive 英伟达→negative AMD→negative 微软→neutral 亚马逊→neutral Meta→neutral 苹果→neutral 中芯国际→positive 寒武纪→positive 海光信息→positive 工业富联→positive 中科曙光→positive 浪潮信息→positive 景嘉微→positive 金山办公→neutral 商汤→negative 科大讯飞→negative OpenAI→negative Anthropic→negative DeepSeek→negative xAI→negative 百度→negative 戴尔→positive 超微电脑→positive Marvell→positive Intel→negative </p>
-        <p><em>密切关注Google TPU大规模部署对NVIDIA H100/H200需求的替代效应，以及搜索AI Mode对百度等搜索引擎的市场冲击</em></p>
-        <p>来源: rss:leiphone 🟡 中可信 [转载自 https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-collection/]</p>
+        <p>OpenAI发布GPT-5.4，定位为最具能力与效率的前沿模型，专为专业工作设计。该模型具备最先进的编码能力、计算机操作、工具搜索及100万token上下文处理能力。100万token上下文窗口将显著扩展长文档处理、多步骤推理等应用场景，对算力基础设施提出更高要求。</p>
+        <p>标的: 英伟达, AMD, 博通, 台积电, ASML, 美光, 微软, 谷歌, 亚马逊</p>
+        <p>主线: model_capability, compute_demand, chip_supply, ai_monetization</p>
+        <p>方向: 英伟达→positive AMD→positive 博通→positive 台积电→positive ASML→positive 美光→positive 微软→positive 谷歌→neutral 亚马逊→neutral </p>
+        <p><em>关注各云厂商后续capex指引调整情况，以及1M上下文窗口对长文本处理、多智能体协作等场景的商业化落地进展。</em></p>
+        <p>来源: rss:openai 🟢 高可信</p>
       ]]></description>
-      
+      <category>evt_4bd355e83e08</category>
     </item>
     
     <item>
-      <title>[8分] OpenAI放弃的事，为什么阿里可能做得成</title>
-      <link>https://www.leiphone.com/category/industrynews/KHSMwS0aTqX2ip1W.html</link>
-      <guid isPermaLink="false">2a4816860ba8c1ba2a4871dd02a7429d6c080bd8</guid>
-      <pubDate>2026-05-21T07:59:00Z</pubDate>
+      <title>[8分] OpenAI and Amazon announce strategic partnership</title>
+      <link>https://openai.com/index/amazon-partnership</link>
+      <guid isPermaLink="false">11f28611545f156e7a04eb79fb447a69ad3e3abe</guid>
+      <pubDate>2026-02-27T05:30:00Z</pubDate>
       <description><![CDATA[
-        <p>OpenAI放弃Instant Checkout后，阿里千问与淘宝于5月11日全面打通，完成AI购物闭环。全球AI购物呈现两条路径：大模型厂商接入外部电商（OpenAI+Shopify、Google+沃尔玛）面临跨公司协作阻力；电商平台自研AI（亚马逊自研Rufus）受制于模型能力。阿里凭借同时拥有开源大模型千问和超大规模电商平台淘宝的结构性优势，实现深度融合，无需跨公司协作。</p>
-        <p>标的: 阿里巴巴, 微软, 谷歌, 亚马逊, 英伟达, 百度, 腾讯, AMD, 高通</p>
-        <p>主线: ai_monetization, model_capability, compute_demand</p>
-        <p>方向: 阿里巴巴→positive 微软→neutral 谷歌→neutral 亚马逊→neutral 英伟达→positive 百度→neutral 腾讯→neutral AMD→positive 高通→positive </p>
-        <p><em>持续跟踪千问+淘宝AI购物的用户渗透率、转化率及商业化数据，验证阿里模式的可复制性</em></p>
-        <p>来源: rss:leiphone 🟡 中可信 [转载自 未知来源]</p>
+        <p>OpenAI与亚马逊AWS达成战略合作，将OpenAI前沿模型平台引入AWS云服务，扩大AI基础设施、定制模型及企业AI代理业务。此举将增强AWS的AI竞争力，同时可能影响OpenAI与其他云厂商的合作关系，并推动算力需求增长。</p>
+        <p>标的: 亚马逊, 英伟达, 微软, 博通, 台积电</p>
+        <p>主线: compute_demand, ai_monetization, model_capability</p>
+        <p>方向: 亚马逊→positive 英伟达→positive 微软→neutral 博通→positive 台积电→positive </p>
+        <p><em>关注AWS后续AI产品发布及对其他云厂商竞争格局的影响。</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
       ]]></description>
-      
+      <category>evt_4bd355e83e08</category>
     </item>
     
     <item>
-      <title>[8分] Analyst says Nvidia poised to capture two-thirds of the x86 server CPU market from Intel and AMD with expected $20 billion in revenue — 'Nvidia is already on track'to deliver 4 million Vera CPUs in FY2027</title>
-      <link>https://www.tomshardware.com/pc-components/cpus/analyst-says-nvidia-poised-to-capture-two-thirds-of-the-x86-server-cpu-market-from-intel-and-amd-with-expected-usd20-billion-in-revenue-nvidia-is-already-on-track-to-deliver-4-million-vera-cpus-in-fy2027</link>
-      <guid isPermaLink="false">ad8ad49bf4efb72d395196328cbcbedc41fbd2d6</guid>
-      <pubDate>2026-05-22T14:30:00Z</pubDate>
+      <title>[8分] Samsung and SK join OpenAI’s Stargate initiative to advance global AI infrastructure</title>
+      <link>https://openai.com/index/samsung-and-sk-join-stargate</link>
+      <guid isPermaLink="false">f2bc43a6d7e74461051fa65a28414055a908f4b6</guid>
+      <pubDate>2025-10-01T03:00:00Z</pubDate>
       <description><![CDATA[
-        <p>分析师指出，英伟达正凭借Vera CPU在x86服务器处理器市场抢占英特尔和AMD的份额，目标拿下三分之二市场，预计2027财年实现200亿美元营收，出货量达400万台。英伟达已从AI加速器供应商延伸至CPU领域，有望成为处理器市场的领先供应商。</p>
-        <p>标的: 英伟达, AMD, Intel</p>
-        <p>主线: compute_demand, chip_supply</p>
-        <p>方向: 英伟达→positive AMD→negative Intel→negative </p>
-        <p><em>关注Vera CPU量产爬坡节奏及对服务器CPU市场份额的实际冲击程度。</em></p>
-        <p>来源: rss:tomshardware 🟡 中可信 [转载自 未知来源]</p>
+        <p>三星与SK海力士宣布加入OpenAI的Stargate计划，参与全球AI基础设施建设。合作重点包括扩大先进存储芯片产能及在韩国投建下一代数据中心。此举旨在支撑OpenAI在全球范围内部署大规模AI算力基础设施的计划，预计将加速HBM等高带宽存储的需求增长。</p>
+        <p>标的: 英伟达, 博通, 台积电, ASML, 超微电脑, 微软, 谷歌, 亚马逊, 戴尔, 美光</p>
+        <p>主线: compute_demand, chip_supply, advanced_packaging, datacenter_power</p>
+        <p>方向: 英伟达→positive 博通→positive 台积电→positive ASML→positive 超微电脑→positive 微软→positive 谷歌→positive 亚马逊→positive 戴尔→positive 美光→neutral </p>
+        <p><em>关注Stargate计划在韩国的具体落地时间表，以及对HBM存储芯片供需格局的影响</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
       ]]></description>
-      
+      <category>evt_4bd355e83e08</category>
     </item>
     
     <item>
-      <title>[8分] Nvidia's memory costs soar 485%, latest AI systems now cost $7.8 million to build — memory now comprises 25% of the total cost, Rubin GPUs a mere $50,000 apiece</title>
-      <link>https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidias-memory-costs-soar-485-percent-latest-ai-systems-now-cost-usd7-8-million-to-build-memory-now-comprises-25-percent-of-the-total-cost-rubin-gpus-a-mere-usd50-000-apiece</link>
-      <guid isPermaLink="false">734a52722ecde748f325601f01dfcee6a6f93006</guid>
-      <pubDate>2026-05-21T15:41:01Z</pubDate>
+      <title>[8分] Stargate advances with 4.5 GW partnership with Oracle</title>
+      <link>https://openai.com/index/stargate-advances-with-partnership-with-oracle</link>
+      <guid isPermaLink="false">1f499c60214af59e5d231ea3d5fe37d805a9e317</guid>
+      <pubDate>2025-07-22T00:00:00Z</pubDate>
       <description><![CDATA[
-        <p>Nvidia最新AI系统建造成本达780万美元，其中内存成本占比25%，相比Rubin平台早期版本飙升485%。单个Rubin GPU仅5万美元，成本上涨主要源于机架级内存容量增加。此数据揭示AI基础设施成本结构正在重塑，内存正成为制约AI系统经济性的关键瓶颈。</p>
-        <p>标的: 英伟达, 美光, 超微电脑, 博通, 台积电</p>
-        <p>主线: chip_supply, advanced_packaging, compute_demand</p>
-        <p>方向: 英伟达→neutral 美光→positive 超微电脑→negative 博通→neutral 台积电→neutral </p>
-        <p><em>关注HBM内存供需缺口是否进一步推升美光等内存厂商定价权，以及下游AI服务器厂商应对成本压力的策略。</em></p>
-        <p>来源: rss:tomshardware 🟡 中可信 [转载自 未知来源]</p>
+        <p>Oracle与OpenAI达成合作协议，在美国开发4.5吉瓦额外Stargate数据中心容量。该投资旨在创造就业、加速美国再工业化并巩固美国AI领导地位。作为OpenAI的AI基础设施平台，Stargate此次扩容标志着其长期愿景的重要里程碑，将显著提升AI训练与推理的算力支撑能力。</p>
+        <p>标的: 英伟达, AMD, 博通, 台积电, 超微电脑, 戴尔, 微软, 亚马逊, 谷歌, Meta, ASML, 美光</p>
+        <p>主线: compute_demand, datacenter_power, chip_supply</p>
+        <p>方向: 英伟达→positive AMD→positive 博通→positive 台积电→positive 超微电脑→positive 戴尔→positive 微软→positive 亚马逊→positive 谷歌→positive Meta→positive ASML→positive 美光→positive </p>
+        <p><em>关注Stargate项目推进节奏及对电力供给商的潜在需求，评估算力芯片订单景气度变化。</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
       ]]></description>
-      
+      <category>evt_4bd355e83e08</category>
     </item>
     
     <item>
-      <title>[8分] The custom AI ASIC state of play (May 2026) — Broadcom deals, Google TPUs, Meta MTIA & beyond</title>
-      <link>https://www.tomshardware.com/tech-industry/semiconductors/custom-ai-asics-examined-from-broadcom-to-mtia</link>
-      <guid isPermaLink="false">61cf67a0f03e40588cf0c9bbe0d3bb0335789b04</guid>
-      <pubDate>2026-05-21T12:43:38Z</pubDate>
+      <title>[8分] New models and developer products announced at DevDay</title>
+      <link>https://openai.com/index/new-models-and-developer-products-announced-at-devday</link>
+      <guid isPermaLink="false">315ac762616efcf26e7f465bbd362139c6d4bedd</guid>
+      <pubDate>2023-11-06T08:00:00Z</pubDate>
       <description><![CDATA[
-        <p>2026年定制AI ASIC出货量预计同比增长44.6%，ASIC-based AI服务器出货量占整体市场份额将升至27.8%，创2021年以来新高。文章覆盖博通、谷歌TPU、Meta MTIA等主要定制芯片项目进展，反映头部云厂商加速自研芯片趋势。</p>
-        <p>标的: 博通, 台积电, ASML, 谷歌, Meta, 英伟达, AMD, Marvell, 高通, ARM, 超微电脑</p>
-        <p>主线: chip_supply, compute_demand, advanced_packaging</p>
-        <p>方向: 博通→positive 台积电→positive ASML→positive 谷歌→positive Meta→positive 英伟达→neutral AMD→neutral Marvell→positive 高通→neutral ARM→neutral 超微电脑→neutral </p>
-        <p><em>持续跟踪CSP自研芯片对英伟达GPU需求的替代程度，以及台积电CoWoS先进封装产能分配变化</em></p>
-        <p>来源: rss:tomshardware 🟡 中可信 [转载自 未知来源]</p>
-      ]]></description>
-      
-    </item>
-    
-    <item>
-      <title>[8分] AMD begins production ramp of 256-core EPYC Venice — first 2nm HPC chip claims 70% performance leap</title>
-      <link>https://www.tomshardware.com/tech-industry/semiconductors/amd-begins-production-ramp-of-256-core-epyc-venice-on-tsmcs-2nm-node</link>
-      <guid isPermaLink="false">bec33ad036d934152d6e5fc3e49c1c8d0ee8cf67</guid>
-      <pubDate>2026-05-21T12:12:15Z</pubDate>
-      <description><![CDATA[
-        <p>AMD第6代EPYC处理器Venice进入台积电N2制程量产爬坡，作为业界首款2nm HPC芯片，256核心设计宣称的性能提升达70%。Venice主要面向高性能计算和数据中心市场，将与英特尔、Arm等竞品展开正面竞争。</p>
-        <p>标的: AMD, 台积电</p>
-        <p>主线: chip_supply, compute_demand</p>
-        <p>方向: AMD→positive 台积电→positive </p>
-        <p><em>关注AMD Venice的订单放量节奏及其对数据中心市场份额的影响</em></p>
-        <p>来源: rss:tomshardware 🟡 中可信 [转载自 https://www.tomshardware.com/amd-processors/amd-begins-production-ramp-of-256-core-epyc-venice-first-2nm-hpc-chip-claims-70-performance-leap]</p>
-      ]]></description>
-      
-    </item>
-    
-    <item>
-      <title>[8分] AMD Plans $10B Investment in Taiwan to Boost AI Infrastructure</title>
-      <link>https://www.eetimes.com/amd-plans-10b-investment-in-taiwan-to-boost-ai-infrastructure</link>
-      <guid isPermaLink="false">ffd6478cac6e9542aff0ef8c3e34f59cce705235</guid>
-      <pubDate>2026-05-21T16:34:18Z</pubDate>
-      <description><![CDATA[
-        <p>AMD宣布将在台湾投资逾100亿美元建设AI基础设施生态，依托台积电2nm工艺扩大HPC芯片产能。此举旨在应对当前AI算力需求激增，提升先进芯片供应能力，呼应英伟达、微软等大厂的AI军备竞赛。</p>
-        <p>标的: AMD, 台积电, 英伟达, 博通, 微软, 谷歌, 亚马逊, Meta</p>
-        <p>主线: chip_supply, compute_demand</p>
-        <p>方向: AMD→positive 台积电→positive 英伟达→neutral 博通→neutral 微软→positive 谷歌→positive 亚马逊→positive Meta→positive </p>
-        <p><em>持续跟踪AMD 2nm芯片量产时间表及台积电产能规划，评估对AI算力市场的供给增量影响</em></p>
-        <p>来源: rss:eetimes 🟡 中可信 [转载自 未知来源]</p>
-      ]]></description>
-      
-    </item>
-    
-    <item>
-      <title>[7分] DeepSeek makes the V4 Pro price discount permanent</title>
-      <link>https://api-docs.deepseek.com/quick_start/pricing</link>
-      <guid isPermaLink="false">bb9241e9781ff882aab9c8d22dd32575e2eb15e6</guid>
-      <pubDate>2026-05-22T15:59:26Z</pubDate>
-      <description><![CDATA[
-        <p>DeepSeek宣布V4 Pro API价格折扣永久化，促销期结束后（2026年5月31日）定价将调整为原价的1/4，降幅达75%。此举标志着AI推理成本进一步下探，可能加剧大模型价格战，对云厂商AI服务定价及算力需求产生深远影响。</p>
-        <p>标的: 英伟达, AMD, 博通, 台积电, 微软, 谷歌, 亚马逊, Meta, 阿里巴巴, 腾讯, 百度, ARM</p>
-        <p>主线: model_capability, ai_monetization, compute_demand, chip_supply</p>
-        <p>方向: 英伟达→neutral AMD→neutral 博通→neutral 台积电→neutral 微软→positive 谷歌→positive 亚马逊→positive Meta→positive 阿里巴巴→positive 腾讯→positive 百度→positive ARM→neutral </p>
-        <p><em>关注其他大模型厂商是否跟进降价及其对云厂商AI服务毛利率的影响</em></p>
-        <p>来源: hackernews 🔴 低可信 [转载自 https://x.com/deepseek_ai/status/2057854261699195173]</p>
-      ]]></description>
-      
-    </item>
-    
-    <item>
-      <title>[7分] I/O 2026: Welcome to the agentic Gemini era</title>
-      <link>https://blog.google/innovation-and-ai/sundar-pichai-io-2026</link>
-      <guid isPermaLink="false">b10a3315fabbf48ce3d9c296c6abdd0d5fd3ab11</guid>
-      <pubDate>2026-05-19T17:45:00Z</pubDate>
-      <description><![CDATA[
-        <p>谷歌在I/O 2026大会上宣布进入“代理型Gemini时代”，Gemini模型在自主代理能力上实现突破，可独立完成复杂多步骤任务。代理型AI对底层算力需求更高，将拉动数据中心GPU/CPU需求，同时考验芯片厂商的推理效率。</p>
-        <p>标的: 谷歌, 英伟达, AMD, 微软, 台积电</p>
+        <p>OpenAI在DevDay上发布多款新产品：GPT-4 Turbo支持128K上下文并大幅降价、新Assistants API、GPT-4 Turbo Vision、DALL·E 3 API等。降价举措旨在降低开发者使用门槛，扩大API调用量。为什么值得关注：价格下调可能重塑AI服务定价格局，加剧与谷歌、亚马逊等竞争对手的模型即服务竞争。</p>
+        <p>标的: 微软, 谷歌, 亚马逊, 英伟达, 台积电, OpenAI</p>
         <p>主线: model_capability, compute_demand, ai_monetization</p>
-        <p>方向: 谷歌→positive 英伟达→positive AMD→positive 微软→positive 台积电→positive </p>
-        <p><em>关注代理型Gemini的实际商业落地节奏及对算力订单的传导时点</em></p>
-        <p>来源: rss:googleai 🟢 高可信</p>
+        <p>方向: 微软→positive 谷歌→negative 亚马逊→negative 英伟达→positive 台积电→positive OpenAI→positive </p>
+        <p><em>关注各云厂商对GPT-4 Turbo降价的应对策略，以及API调用量增长对算力产业链的传导效应</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 https://openai.com/blog/new-models-and-developer-products-announced-at-devday]</p>
       ]]></description>
-      
+      <category>evt_4bd355e83e08</category>
     </item>
     
     <item>
-      <title>[7分] NVIDIA and Google Cloud Empower the Next Wave of AI Builders</title>
-      <link>https://blogs.nvidia.com/blog/google-cloud-developer-community-ai-builders</link>
-      <guid isPermaLink="false">e0c940492aa690972682ba388396e88bf713f969</guid>
-      <pubDate>2026-05-19T20:30:09Z</pubDate>
+      <title>[8分] ChatGPT can now see, hear, and speak</title>
+      <link>https://openai.com/index/chatgpt-can-now-see-hear-and-speak</link>
+      <guid isPermaLink="false">460e2ee8d489e723e9a55f0ddf26775770cb59b4</guid>
+      <pubDate>2023-09-25T07:00:00Z</pubDate>
       <description><![CDATA[
-        <p>在Google I/O大会上，NVIDIA与Google Cloud宣布深化合作，通过联合开发者社区加速超10万名开发者在Google Cloud上构建应用。该社区提供精选学习路径、实践实验室及活动，基于NVIDIA全栈AI平台。合作始于去年Google I/O，标志着双方在AI开发生态建设上的持续投入。</p>
-        <p>标的: 英伟达, 谷歌</p>
-        <p>主线: compute_demand, ai_monetization</p>
-        <p>方向: 英伟达→positive 谷歌→positive </p>
-        <p><em>关注该社区开发者转化率及基于NVIDIA平台的应用商业化进展</em></p>
-        <p>来源: rss:nvidia-blog 🟢 高可信</p>
+        <p>OpenAI宣布ChatGPT新增多模态能力，用户现在可以与AI进行语音对话并分享图像，标志人机交互进入新阶段。实时对话和视觉理解对底层算力要求更高，将显著增加推理侧算力消耗。云厂商和芯片供应商将持续受益于AI功能升级带来的算力需求增长。</p>
+        <p>标的: 英伟达, AMD, 微软, 谷歌, 亚马逊, 苹果, 台积电, 高通</p>
+        <p>主线: compute_demand, chip_supply, model_capability</p>
+        <p>方向: 英伟达→positive AMD→positive 微软→positive 谷歌→negative 亚马逊→neutral 苹果→negative 台积电→positive 高通→positive </p>
+        <p><em>评估多模态AI对推理算力需求的增量规模，以及云厂商capex计划调整。</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
       ]]></description>
-      
+      <category>evt_4bd355e83e08</category>
     </item>
     
     <item>
-      <title>[7分] NVIDIA, Ineffable Intelligence Team Up to Build the Future of Reinforcement Learning Infrastructure</title>
-      <link>https://blogs.nvidia.com/blog/ineffable-intelligence-reinforcement-learning-infrastructure</link>
-      <guid isPermaLink="false">7ab0b833afaebb5c391e3095207e4c9f4095a7fe</guid>
-      <pubDate>2026-05-13T13:00:57Z</pubDate>
+      <title>[8分] OpenAI and Microsoft extend partnership</title>
+      <link>https://openai.com/index/openai-and-microsoft-extend-partnership</link>
+      <guid isPermaLink="false">729ff4fec05f6312bb3e608a2ce2ad1b4f669e1d</guid>
+      <pubDate>2023-01-23T08:00:00Z</pubDate>
       <description><![CDATA[
-        <p>英伟达与伦敦AI实验室Ineffable Intelligence达成工程级合作，共同开发强化学习基础设施。Ineffable由AlphaGo架构师David Silver创立，上周刚结束隐匿状态。该合作聚焦于强化学习智能体的研发，即通过试错学习的AI系统，将算力转化为新知识。此举意味着英伟达在AI基础设施领域的布局进一步深化，强化学习有望成为下一代AI能力的关键方向。</p>
-        <p>标的: 英伟达</p>
-        <p>主线: compute_demand, model_capability, ai_monetization</p>
-        <p>方向: 英伟达→positive </p>
-        <p><em>关注强化学习在推理能力提升上的突破及其对英伟达算力需求的拉动效应</em></p>
-        <p>来源: rss:nvidia-blog 🟢 高可信</p>
+        <p>OpenAI与微软正式宣布延续合作伙伴关系，继续在AI领域深化协同合作。微软Azure云平台为OpenAI提供核心算力基础设施，双方在模型训练及商业化应用方面保持深度绑定。此番续约进一步巩固微软在全球AI云服务市场的领先地位，并有望持续拉动对高性能AI芯片及数据中心的需求。</p>
+        <p>标的: 微软, 英伟达, 台积电, AMD</p>
+        <p>主线: compute_demand, ai_monetization, chip_supply</p>
+        <p>方向: 微软→positive 英伟达→positive 台积电→positive AMD→neutral </p>
+        <p><em>关注微软Azure收入增速及OpenAI商业化变现进展，以评估算力需求增量的持续性</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
       ]]></description>
-      
+      <category>evt_a5e1c68e90d9</category>
     </item>
     
     <item>
-      <title>[7分] Open-Source Software Is Starting to Help Robots Think</title>
-      <link>https://spectrum.ieee.org/open-source-robot-ai-platforms</link>
-      <guid isPermaLink="false">751e0ee3c47001333546b96c958d9ac58c27f660</guid>
-      <pubDate>2026-05-21T14:00:02Z</pubDate>
+      <title>[8分] OpenAI licenses GPT-3 technology to Microsoft</title>
+      <link>https://openai.com/index/openai-licenses-gpt-3-technology-to-microsoft</link>
+      <guid isPermaLink="false">55c35eefcb2145eebd1547eec07a69e7ab394b12</guid>
+      <pubDate>2020-09-22T07:00:00Z</pubDate>
       <description><![CDATA[
-        <p>Hugging Face、Nvidia、阿里巴巴等公司在过去两年押注开源机器人领域，发布推理决策工具和模型。开源运动正从软件层面赋能机器人“思考”能力，若成功将大幅降低高性能机器人开发门槛。ROS在2007年成为事实标准，为当前开源机器人生态奠定基础。</p>
-        <p>标的: 英伟达, 阿里巴巴</p>
-        <p>主线: model_capability, edge_ai, compute_demand</p>
-        <p>方向: 英伟达→positive 阿里巴巴→positive </p>
-        <p><em>关注开源机器人模型对GPU算力需求的影响及阿里在该领域的商业化进展</em></p>
-        <p>来源: rss:ieee-spectrum-ai 🟢 高可信 [转载自 未知来源]</p>
-      ]]></description>
-      
-    </item>
-    
-    <item>
-      <title>[7分] 我们不看阿里财报</title>
-      <link>https://www.leiphone.com/category/CorporateServices/1AzJzkmgKK8oLiQW.html</link>
-      <guid isPermaLink="false">b56f82abe09e21887e03c314ec4959ca321cc724</guid>
-      <pubDate>2026-05-22T02:50:00Z</pubDate>
-      <description><![CDATA[
-        <p>阿里5月13日财报后股价剧烈波动，盘前跌超3%后盘中拉涨超8%。市场分歧核心在于Tokens收入：阿里内部军令状要求日均Token收入较4月初涨5倍，目标已提前达成。机构关注点从AI云收入增速转向Tokens收入，因算力租赁利润率不到10%，而MaaS（模型即服务）毛利率更高，且能带动数据库、存储等全套云服务消费。疑虑在于阿里多模态能力不如字节，Seedance 2.0在视频生成上领先。</p>
-        <p>标的: 阿里巴巴, 英伟达, AMD, 博通, 台积电, ASML, 美光</p>
-        <p>主线: compute_demand, ai_monetization, chip_supply, model_capability, advanced_packaging</p>
-        <p>方向: 阿里巴巴→positive 英伟达→positive AMD→positive 博通→positive 台积电→positive ASML→positive 美光→positive </p>
-        <p><em>持续追踪阿里MaaS收入占比及千问模型多模态能力追赶进展。</em></p>
-        <p>来源: rss:leiphone 🟡 中可信 [转载自 未知来源]</p>
-      ]]></description>
-      
-    </item>
-    
-    <item>
-      <title>[7分] 阿里云为什么「重构自己」？</title>
-      <link>https://www.leiphone.com/category/ai/nQVZmFcBopMuwsCZ.html</link>
-      <guid isPermaLink="false">2834ece6a2576e29327a6eb36d7e5ce7100765ab</guid>
-      <pubDate>2026-05-21T08:01:00Z</pubDate>
-      <description><![CDATA[
-        <p>阿里云在峰会上宣布全面重构云基础设施迎接Agent时代，发布自研芯片真武M890、旗舰模型Qwen3.7-Max，升级百炼推理平台，推出100+云产品Skill。财报显示阿里AI收入连续11季度三位数增长，百炼平台ARR突破80亿元。云服务对象正从百万级开发者转向数十亿级永不停歇的Agent，云厂商需从“人机交互系统”转型为“机器执行系统”。</p>
-        <p>标的: 阿里巴巴</p>
-        <p>主线: ai_monetization, model_capability, compute_demand</p>
-        <p>方向: 阿里巴巴→positive </p>
-        <p><em>关注阿里云Agent化战略的商业化落地节奏及百炼平台ARR增长持续性</em></p>
-        <p>来源: rss:leiphone 🟡 中可信</p>
-      ]]></description>
-      
-    </item>
-    
-    <item>
-      <title>[7分] 阿里国际接近盈利背后，速卖通品牌化与AI提效双线并进</title>
-      <link>https://www.leiphone.com/category/industrynews/g6NLstG8StqeQc8p.html</link>
-      <guid isPermaLink="false">4e05fc99d5ff69e1be22ecbafbc0d8634015d6ef</guid>
-      <pubDate>2026-05-21T07:54:00Z</pubDate>
-      <description><![CDATA[
-        <p>阿里国际本季EBITA亏损收窄至1.38亿元接近盈亏平衡，主要得益于速卖通物流效率提升及品牌化转型。速卖通“Brand+”计划渗透率超30%，品牌GMV同比增长40%+，剑指亚马逊品牌卖家市场。同时阿里推出企业级AI Agent产品Accio Work，覆盖店铺运营全流程，月活用户达1000万，带动商家token调用量翻倍。</p>
-        <p>标的: 阿里巴巴, 亚马逊, 微软</p>
+        <p>OpenAI已同意将GPT-3技术授权给微软，用于其自有产品和服务。这一技术授权标志着AI模型商业化迈出重要一步，微软将能够在Azure云平台及企业产品中集成GPT-3能力。</p>
+        <p>标的: 微软</p>
         <p>主线: ai_monetization</p>
-        <p>方向: 阿里巴巴→positive 亚马逊→neutral 微软→neutral </p>
-        <p><em>关注Accio Work的变现进展及速卖通品牌化对亚马逊卖家迁移的影响</em></p>
-        <p>来源: rss:leiphone 🟡 中可信 [转载自 未知来源]</p>
+        <p>方向: 微软→positive </p>
+        <p><em>关注微软Azure AI服务更新及企业客户采用情况</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
       ]]></description>
-      
+      <category>evt_d60fc5d532da</category>
     </item>
     
     <item>
-      <title>[7分] Sources: WH approved a $9B request to acquire advanced AI chips for spy agencies; Anthropic is finalizing a classified contract for NSA to keep using its tools (New York Times)</title>
-      <link>https://www.techmeme.com/260522/p26#a260522p26</link>
-      <guid isPermaLink="false">16867af30991db58b7af7894d4f55a80516a2c69</guid>
-      <pubDate>2026-05-22T21:55:01Z</pubDate>
+      <title>[8分] Microsoft invests in and partners with OpenAI to support us building beneficial AGI</title>
+      <link>https://openai.com/index/microsoft-invests-in-and-partners-with-openai</link>
+      <guid isPermaLink="false">5aaeda8c927afa02106c500e5975f9b2393c921c</guid>
+      <pubDate>2019-07-22T07:00:00Z</pubDate>
       <description><![CDATA[
-        <p>白宫批准90亿美元为情报机构采购先进AI芯片，CIA和NSA因尖端芯片短缺无法在机密系统部署最新AI模型。Anthropic正与NSA敲定机密合同以继续提供AI工具服务。此举反映美国情报系统正加速AI能力建设，凸显算力供给瓶颈。</p>
-        <p>标的: 英伟达, AMD, Anthropic, 台积电, 博通</p>
-        <p>主线: compute_demand, chip_supply, policy_export</p>
-        <p>方向: 英伟达→positive AMD→positive Anthropic→positive 台积电→positive 博通→positive </p>
-        <p><em>关注情报机构AI芯片采购具体供应商分配及Anthropic合同落地进展</em></p>
-        <p>来源: rss:techmeme 🔴 低可信 [转载自 未知来源]</p>
+        <p>微软向OpenAI投资10亿美元，双方达成合作伙伴关系，共同在Azure云平台上开发可扩展至AGI的硬件和软件平台，并联合研发新型Azure AI超级计算技术。微软将成为OpenAI的独家云服务商。</p>
+        <p>标的: 微软, 英伟达, AMD, 博通, 台积电, ASML, 美光, 超微电脑</p>
+        <p>主线: compute_demand, chip_supply, advanced_packaging, ai_monetization, datacenter_power</p>
+        <p>方向: 微软→positive 英伟达→positive AMD→positive 博通→positive 台积电→positive ASML→positive 美光→positive 超微电脑→positive </p>
+        <p><em>关注微软与OpenAI合作后Azure算力扩容节奏，以及对英伟达GPU和超微服务器的需求拉动</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
       ]]></description>
-      
+      <category>evt_4bd355e83e08</category>
     </item>
     
     <item>
-      <title>[7分] 英伟达 (NVDA) files 8-K — 2026-05-20</title>
-      <link>https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051/nvda-20260520.htm</link>
-      <guid isPermaLink="false">3221c2a11b48cdb2dbe406e512ad27e84c1acff1</guid>
-      <pubDate>2026-05-20T00:00:00Z</pubDate>
+      <title>[7分] The next phase of the Microsoft OpenAI partnership</title>
+      <link>https://openai.com/index/next-phase-of-microsoft-partnership</link>
+      <guid isPermaLink="false">ce52abc8a3f020a53a6fd30bb07d8bf1d345e4b7</guid>
+      <pubDate>2026-04-27T06:00:00Z</pubDate>
       <description><![CDATA[
-        <p>英伟达于2026年5月20日向SEC提交8-K表格（编号0001045810-26-000051），为标准重大事件披露流程。鉴于8-K通常涉及经营业绩、并购、高管变动等重大事项，建议关注具体披露内容以评估影响。</p>
-        <p>标的: 英伟达</p>
-        
-        <p>方向: 英伟达→neutral </p>
-        <p><em>查阅8-K具体内容，判断此次披露是否涉及经营业绩、重大合同或战略调整等核心事项。</em></p>
-        <p>来源: sec_edgar:8-K 🟢 高可信 [转载自 https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051/nvda-20260520.htm]</p>
+        <p>OpenAI与微软宣布修订合作协议，旨在简化合作关系、增强长期确定性，并支持大规模AI持续创新。此举标志着双方合作进入新阶段，为AI领域关键伙伴关系提供更清晰的框架。</p>
+        <p>标的: 微软, 英伟达, AMD, 台积电, 博通, 谷歌, 亚马逊, Meta</p>
+        <p>主线: compute_demand, ai_monetization, model_capability</p>
+        <p>方向: 微软→positive 英伟达→positive AMD→positive 台积电→positive 博通→positive 谷歌→neutral 亚马逊→neutral Meta→neutral </p>
+        <p><em>关注微软Azure在AI领域的能力升级及算力需求变化，同时评估对云厂商竞争格局的影响</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
       ]]></description>
-      
+      <category>evt_4bd355e83e08</category>
     </item>
     
     <item>
-      <title>[7分] 超微电脑 (SMCI) files 8-K — 2026-05-18</title>
-      <link>https://www.sec.gov/Archives/edgar/data/1375365/000137536526000015/smci-20260512.htm</link>
-      <guid isPermaLink="false">2e92718b47c7925246d95df3fcd2e981924eecf9</guid>
-      <pubDate>2026-05-18T00:00:00Z</pubDate>
+      <title>[7分] OpenAI and SoftBank Group partner with SB Energy</title>
+      <link>https://openai.com/index/stargate-sb-energy-partnership</link>
+      <guid isPermaLink="false">1d2d99cb07efa9d61c922c529a843dfa09477683</guid>
+      <pubDate>2026-01-09T11:00:00Z</pubDate>
       <description><![CDATA[
-        <p>超微电脑（SMCI）于2026年5月18日向SEC提交8-K表格，登记号0001375365-26-000015，具体披露事项尚未明确，市场需关注后续文件内容以评估影响。</p>
-        <p>标的: 超微电脑</p>
-        
-        <p>方向: 超微电脑→neutral </p>
-        <p><em>关注SMCI 8-K后续披露的具体内容及业务影响。</em></p>
-        <p>来源: sec_edgar:8-K 🟢 高可信 [转载自 https://www.sec.gov/Archives/edgar/data/1375365/000137536526000015/smci-20260512.htm]</p>
+        <p>OpenAI与软银集团达成战略合作，联合SB Energy共同开发多吉瓦级AI数据中心园区，其中德克萨斯州设施规划容量达1.2吉瓦，用于支撑Stargate项目。此举将大幅提升AI算力基础设施规模，对上游芯片、服务器、存储及电力供应产业链形成直接拉动。</p>
+        <p>标的: 英伟达, AMD, 博通, 台积电, ASML, 美光, Marvell, 超微电脑, 微软, Meta, ARM, Intel, 戴尔</p>
+        <p>主线: compute_demand, datacenter_power, chip_supply, advanced_packaging</p>
+        <p>方向: 英伟达→positive AMD→positive 博通→positive 台积电→positive ASML→positive 美光→positive Marvell→positive 超微电脑→positive 微软→positive Meta→positive ARM→positive Intel→positive 戴尔→positive </p>
+        <p><em>关注Stargate项目最新进展及德州数据中心建设的招标节奏。</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
       ]]></description>
-      
+      <category>evt_4bd355e83e08</category>
     </item>
     
     <item>
-      <title>[7分] 谷歌 (GOOGL) files 8-K — 2026-05-21</title>
-      <link>https://www.sec.gov/Archives/edgar/data/1652044/000119312526234488/d144566d8k.htm</link>
-      <guid isPermaLink="false">d612f3ed3f47582480806a4f825665e72db0fd70</guid>
-      <pubDate>2026-05-21T00:00:00Z</pubDate>
+      <title>[7分] Expanding Stargate to Michigan</title>
+      <link>https://openai.com/index/expanding-stargate-to-michigan</link>
+      <guid isPermaLink="false">4dc8c1bc29aac82146f9914242963a03439aa7a6</guid>
+      <pubDate>2025-10-30T13:30:00Z</pubDate>
       <description><![CDATA[
-        <p>谷歌(GOOGL)于2026年5月21日向SEC提交8-K表格（编号0001193125-26-234488），属于重大事项披露文件，但摘要未提供具体事项内容。通常8-K可能涉及财报发布、并购、管理层变动、重大合同或AI相关战略合作等，需查阅完整文件了解详情及对AI算力链的影响。</p>
-        <p>标的: 谷歌</p>
-        
-        <p>方向: 谷歌→neutral </p>
-        <p><em>查阅谷歌8-K完整文件，确认具体重大事项类型及其对AI产业链的潜在影响。</em></p>
-        <p>来源: sec_edgar:8-K 🟢 高可信 [转载自 https://www.sec.gov/Archives/edgar/data/1652044/000119312526234488/d144566d8k.htm]</p>
+        <p>OpenAI宣布将Stargate项目扩展至密歇根州，计划建设1吉瓦数据中心园区，以强化美国AI基础设施。该项目预计将为中西部地区带来就业增长和投资拉动效应。作为美国AI基础设施建设的重大投资，数据中心扩张将直接拉动对算力芯片、服务器、内存等关键硬件的需求。</p>
+        <p>标的: 英伟达, AMD, 博通, 台积电, ASML, 美光, 超微电脑, 戴尔, 微软, 工业富联</p>
+        <p>主线: compute_demand, datacenter_power, chip_supply</p>
+        <p>方向: 英伟达→positive AMD→positive 博通→positive 台积电→positive ASML→positive 美光→positive 超微电脑→positive 戴尔→positive 微软→positive 工业富联→positive </p>
+        <p><em>持续跟踪Stargate项目招标进度，关注算力硬件供应商的订单公告和业绩指引变化。</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
       ]]></description>
-      
+      <category>evt_4bd355e83e08</category>
     </item>
     
     <item>
-      <title>[7分] 亚马逊 (AMZN) files 8-K — 2026-05-22</title>
-      <link>https://www.sec.gov/Archives/edgar/data/1018724/000110465926065717/tm2614288d1_8k.htm</link>
-      <guid isPermaLink="false">a0461f484c8a0ea1eee7f18cd14866568c711e42</guid>
-      <pubDate>2026-05-22T00:00:00Z</pubDate>
+      <title>[7分] GPT-5 and the new era of work</title>
+      <link>https://openai.com/index/gpt-5-new-era-of-work</link>
+      <guid isPermaLink="false">d7893b67b5b0b07251690b76001c296f3086eaad</guid>
+      <pubDate>2025-08-07T10:00:00Z</pubDate>
       <description><![CDATA[
-        <p>亚马逊于2026年5月22日向SEC提交Form 8-K文件（编号0001104659-26-065717），但资讯摘要未披露具体内容细节。8-K通常用于披露重大公司事件，具体性质待查阅原始文件。</p>
-        
-        
-        
-        <p><em>查阅AMZN 8-K原始文件，确认具体披露事项及其对AI算力需求、芯片供给等投资主线的影响</em></p>
-        <p>来源: sec_edgar:8-K 🟢 高可信</p>
+        <p>OpenAI发布GPT-5，定位为最先进模型，正在重塑企业AI应用、自动化及工作生产率，标志着智能工作时代全面到来。GPT-5的能力跃升将显著提升推理效率与任务完成度，加速AI在企业场景的规模化部署。</p>
+        <p>标的: 英伟达, AMD, 台积电, ASML, 微软, 谷歌, 亚马逊, Meta, OpenAI</p>
+        <p>主线: compute_demand, model_capability, chip_supply, ai_monetization</p>
+        <p>方向: 英伟达→positive AMD→positive 台积电→positive ASML→positive 微软→positive 谷歌→neutral 亚马逊→neutral Meta→neutral OpenAI→positive </p>
+        <p><em>密切跟踪GPT-5商业化进展及企业采纳节奏，评估算力需求增量对硬件产业链的传导效应</em></p>
+        <p>来源: rss:openai 🟢 高可信</p>
       ]]></description>
-      
+      <category>evt_a5e1c68e90d9</category>
     </item>
     
     <item>
-      <title>[6分] A new era for AI Search</title>
-      <link>https://blog.google/products-and-platforms/products/search/search-io-2026</link>
-      <guid isPermaLink="false">38285294e2e45ef9f0ac8ff8300d852d2deb6220</guid>
-      <pubDate>2026-05-19T17:45:00Z</pubDate>
+      <title>[7分] Introducing GPT-5</title>
+      <link>https://openai.com/index/introducing-gpt-5</link>
+      <guid isPermaLink="false">190945e74c30c5d807d5a10075b414d3d04d4af9</guid>
+      <pubDate>2025-08-07T00:00:00Z</pubDate>
       <description><![CDATA[
-        <p>Google AI发布“A new era for AI Search”主题内容，宣称将融合搜索引擎与AI的最佳能力，开启AI搜索新时代，但未披露具体产品或功能细节。此动向预示搜索引擎赛道AI化竞争加剧，但当前信息有限，后续需关注具体产品落地情况。</p>
-        
-        
-        
-        <p><em>关注Google后续具体AI搜索产品发布及竞争对手反应。</em></p>
-        <p>来源: rss:googleai 🟢 高可信</p>
+        <p>OpenAI发布GPT-5，号称是其迄今为止最强大的AI系统，在编程、数学、写作、医疗、视觉感知等多个领域达到最先进水平。这是GPT-4发布以来的重大代际跃升，意味着AI模型能力曲线继续陡峭上行，将显著拉动算力需求增长。</p>
+        <p>标的: 英伟达, AMD, 博通, 台积电, ASML, 微软, 谷歌, 亚马逊, Meta, 苹果</p>
+        <p>主线: compute_demand, chip_supply, model_capability, ai_monetization</p>
+        <p>方向: 英伟达→positive AMD→positive 博通→positive 台积电→positive ASML→positive 微软→positive 谷歌→positive 亚马逊→positive Meta→positive 苹果→positive </p>
+        <p><em>关注GPT-5的算力需求规模预测及对GPU供应链的订单拉动效应</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
       ]]></description>
-      
+      <category>evt_a5e1c68e90d9</category>
     </item>
     
     <item>
-      <title>[6分] Reduce friction and latency for long-running jobs with Webhooks in Gemini API</title>
-      <link>https://blog.google/innovation-and-ai/technology/developers-tools/event-driven-webhooks</link>
-      <guid isPermaLink="false">472f81f15ea1ffeac1ed48b7754731d374230d64</guid>
-      <pubDate>2026-05-04T15:30:00Z</pubDate>
+      <title>[7分] Introducing OpenAI o3 and o4-mini</title>
+      <link>https://openai.com/index/introducing-o3-and-o4-mini</link>
+      <guid isPermaLink="false">4ca3a7340a2c479500a0f59c640341dae3688e32</guid>
+      <pubDate>2025-04-16T10:00:00Z</pubDate>
       <description><![CDATA[
-        <p>谷歌在Gemini API中引入事件驱动Webhooks，以推送式通知替代传统轮询，降低长时间运行的AI作业的延迟与资源消耗，提升开发者调用体验。该功能强化了Gemini模型的易用性，有助于吸引更多应用集成并加速商业化变现。</p>
-        <p>标的: 谷歌</p>
+        <p>OpenAI发布o3和o4-mini两款新模型，号称迄今最智能、能力最强的模型系列，并首次实现完整工具访问功能。该模型能力提升或将进一步拉动算力需求，对算力产业链（芯片、服务器、云服务）形成催化。</p>
+        <p>标的: 英伟达, AMD, 博通, 台积电, 超微电脑, 微软, 谷歌, 亚马逊, 工业富联, 中科曙光, 浪潮信息</p>
+        <p>主线: model_capability, compute_demand, chip_supply, ai_monetization</p>
+        <p>方向: 英伟达→positive AMD→neutral 博通→positive 台积电→positive 超微电脑→positive 微软→positive 谷歌→positive 亚马逊→positive 工业富联→positive 中科曙光→positive 浪潮信息→positive </p>
+        <p><em>关注算力产业链Q2业绩指引是否上调，以及新模型的实际部署时间表</em></p>
+        <p>来源: rss:openai 🟢 高可信</p>
+      ]]></description>
+      <category>evt_a5e1c68e90d9</category>
+    </item>
+    
+    <item>
+      <title>[7分] OpenAI o3-mini</title>
+      <link>https://openai.com/index/openai-o3-mini</link>
+      <guid isPermaLink="false">f30105165153783f52c1624ef4abde7eb8b9f474</guid>
+      <pubDate>2025-01-31T11:00:00Z</pubDate>
+      <description><![CDATA[
+        <p>标题为OpenAI o3-mini，但原始内容摘要为空，无法获取具体信息。需补充完整资讯内容后方可进行投研分析。</p>
+        <p>标的: OpenAI</p>
+        
+        
+        <p><em>等待获取OpenAI o3-mini的完整资讯内容后再进行标的和主题关联分析。</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_eb7c295d02aa</category>
+    </item>
+    
+    <item>
+      <title>[7分] Introducing Operator</title>
+      <link>https://openai.com/index/introducing-operator</link>
+      <guid isPermaLink="false">0e052780eb1188cab6bf8e5216e485e9ba57c22d</guid>
+      <pubDate>2025-01-23T10:00:00Z</pubDate>
+      <description><![CDATA[
+        <p>OpenAI推出新工具Operator，旨在扩展AI功能与变现路径，具体细节待披露，值得关注。</p>
+        <p>标的: 微软, 谷歌, 亚马逊</p>
+        <p>主线: ai_monetization, model_capability</p>
+        <p>方向: 微软→positive 谷歌→neutral 亚马逊→neutral </p>
+        <p><em>关注Operator的功能细节、定价策略以及对合作伙伴生态的影响</em></p>
+        <p>来源: rss:openai 🟢 高可信</p>
+      ]]></description>
+      <category>evt_d60fc5d532da</category>
+    </item>
+    
+    <item>
+      <title>[7分] Computer-Using Agent</title>
+      <link>https://openai.com/index/computer-using-agent</link>
+      <guid isPermaLink="false">aeaf6fe7b0a641f996628c3ce6a46623548dffc6</guid>
+      <pubDate>2025-01-23T10:00:00Z</pubDate>
+      <description><![CDATA[
+        <p>OpenAI发布Computer-Using Agent（计算机使用代理）相关研究，标题暗示其AI代理能力取得新进展，能够自主操作计算机界面完成复杂任务。该进展若实现将显著提升AI实用性与应用范围。</p>
+        <p>标的: OpenAI</p>
         <p>主线: model_capability, ai_monetization</p>
-        <p>方向: 谷歌→positive </p>
-        <p><em>关注Gemini API的采纳规模及对谷歌云收入的具体贡献。</em></p>
-        <p>来源: rss:googleai 🟢 高可信</p>
+        <p>方向: OpenAI→positive </p>
+        <p><em>关注该代理在真实场景中的任务完成率及OpenAI产品化时间表</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
       ]]></description>
-      
+      <category>evt_eb7c295d02aa</category>
     </item>
     
     <item>
-      <title>[6分] We tried Google’s AI glasses and they’re almost there</title>
-      <link>https://techcrunch.com/2026/05/22/we-tried-googles-ai-glasses-and-theyre-almost-there</link>
-      <guid isPermaLink="false">3aa7264d88ebba3f61bbf986bdffc676941be3c6</guid>
-      <pubDate>2026-05-22T15:37:15Z</pubDate>
+      <title>[7分] OpenAI and Apple announce partnership</title>
+      <link>https://openai.com/index/openai-and-apple-announce-partnership</link>
+      <guid isPermaLink="false">d58b2f8740dbc6b9f1f26fa65c68a8020e9b1e04</guid>
+      <pubDate>2024-06-10T11:55:00Z</pubDate>
       <description><![CDATA[
-        <p>Google展示了运行Android XR系统的原型智能眼镜，可通过Gemini实现实时翻译、导航等功能，直接叠加显示在用户视野中。体验者评价产品已接近成熟但仍需完善。该产品体现了Google在AI终端化方向的探索，可能对AR眼镜赛道竞争格局产生影响。</p>
-        <p>标的: 谷歌, 高通, Meta, 苹果</p>
-        <p>主线: edge_ai, ai_monetization</p>
-        <p>方向: 谷歌→positive 高通→positive Meta→neutral 苹果→neutral </p>
-        <p><em>关注Google AR眼镜的量产时间表及芯片供应商选择，高通/ARM相关芯片订单变化。</em></p>
-        <p>来源: rss:techcrunch-ai 🟡 中可信</p>
+        <p>OpenAI与苹果宣布战略合作，将ChatGPT深度整合至苹果iOS、macOS等系统生态。此举将使苹果设备用户直接获得ChatGPT的生成式AI能力，包括Siri增强、智能写作、图像生成等功能，预计将加速AI在消费电子终端的规模化落地。</p>
+        <p>标的: 苹果, 微软, 英伟达, 谷歌</p>
+        <p>主线: ai_monetization, edge_ai, compute_demand, model_capability</p>
+        <p>方向: 苹果→positive 微软→neutral 英伟达→positive 谷歌→negative </p>
+        <p><em>关注苹果如何平衡ChatGPT整合与现有Siri、Google搜索的合作关系，以及对iPhone换机周期的影响。</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
       ]]></description>
-      
+      <category>evt_d60fc5d532da</category>
     </item>
     
     <item>
-      <title>[6分] Google I/O showed how the path for AI-driven science is shifting</title>
-      <link>https://www.technologyreview.com/2026/05/22/1137813/google-i-o-showed-how-the-path-for-ai-science-is-shifting</link>
-      <guid isPermaLink="false">2eecbe5212769f35cc3a27272c7c068a1c694d36</guid>
-      <pubDate>2026-05-22T10:00:00Z</pubDate>
+      <title>[7分] Introducing GPTs</title>
+      <link>https://openai.com/index/introducing-gpts</link>
+      <guid isPermaLink="false">fe4a46faff4bc61574d90a649f2f8009090a68d7</guid>
+      <pubDate>2023-11-06T08:00:00Z</pubDate>
       <description><![CDATA[
-        <p>在 Google I/O 主题演讲中，Google DeepMind CEO Demis Hassabis 表示我们正站在“AI 奇点的山麓”，强调 AI 驱动科学的发展路径正在发生转变。这一声明突显了 Google 在前沿 AI 研究领域的雄心，可能预示着其在 AI 科学应用上的新动向，值得关注其对 AI 行业竞争格局的潜在影响。</p>
-        <p>标的: 谷歌</p>
-        <p>主线: model_capability</p>
-        <p>方向: 谷歌→positive </p>
-        <p><em>关注 Google 在 AI 科学领域的最新模型发布及商业化进展。</em></p>
-        <p>来源: rss:mit-tr 🟡 中可信 [转载自 未知来源]</p>
+        <p>OpenAI推出GPTs，允许用户无需编程即可创建自定义ChatGPT版本，整合特定指令、额外知识和多项技能。GPTs支持GPT Builder工具，并配套推出GPT Store，为AI应用生态提供分发渠道。这是OpenAI推动AI普惠化和商业化的重要举措，将加速AI应用在各行业的落地。</p>
+        <p>标的: 微软, 谷歌, 英伟达, Meta, 百度, 阿里巴巴, 腾讯</p>
+        <p>主线: ai_monetization, model_capability, edge_ai, compute_demand</p>
+        <p>方向: 微软→positive 谷歌→negative 英伟达→neutral Meta→neutral 百度→negative 阿里巴巴→neutral 腾讯→neutral </p>
+        <p><em>关注GPT Store生态发展节奏及企业级GPTs渗透速度，评估对微软Copilot商业化路径的影响。</em></p>
+        <p>来源: rss:openai 🟢 高可信</p>
       ]]></description>
-      
+      <category>evt_d60fc5d532da</category>
+    </item>
+    
+    <item>
+      <title>[7分] DALL·E 3 is now available in ChatGPT Plus and Enterprise</title>
+      <link>https://openai.com/index/dall-e-3-is-now-available-in-chatgpt-plus-and-enterprise</link>
+      <guid isPermaLink="false">ad3af7127c29373c86843fbc83aa6502151ea55a</guid>
+      <pubDate>2023-10-19T07:00:00Z</pubDate>
+      <description><![CDATA[
+        <p>OpenAI宣布DALL·E 3图像生成模型现已向ChatGPT Plus和Enterprise用户开放。公司同步披露了为该模型开发的安全缓解技术栈及溯源研究进展。此举标志着AI图像生成能力正式进入规模化商业应用阶段，将加速AIGC在企业级场景的渗透。</p>
+        <p>标的: 微软, 英伟达, 谷歌, Meta, 台积电</p>
+        <p>主线: model_capability, ai_monetization, compute_demand</p>
+        <p>方向: 微软→positive 英伟达→positive 谷歌→negative Meta→negative 台积电→positive </p>
+        <p><em>关注DALL·E 3用户增长数据及企业采用率，以评估AI图像商业化实际落地节奏。</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_d60fc5d532da</category>
+    </item>
+    
+    <item>
+      <title>[7分] Introducing ChatGPT Enterprise</title>
+      <link>https://openai.com/index/introducing-chatgpt-enterprise</link>
+      <guid isPermaLink="false">cbe5ba39988b0fd43c79bde87ee1896313781cb6</guid>
+      <pubDate>2023-08-28T07:00:00Z</pubDate>
+      <description><![CDATA[
+        <p>OpenAI推出ChatGPT Enterprise企业版，主打企业级安全与隐私保护，并号称这是“迄今最强大的ChatGPT版本”。企业版相比个人版在数据处理、访问控制和管理功能上有显著升级。此举标志着OpenAI商业化进程加速，B2B市场正式开启。</p>
+        <p>标的: 微软, 英伟达, OpenAI</p>
+        <p>主线: ai_monetization, compute_demand, model_capability</p>
+        <p>方向: 微软→positive 英伟达→positive OpenAI→positive </p>
+        <p><em>跟踪企业版定价策略、付费企业客户数量增长及对Azure AI服务收入的增量贡献。</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_eb7c295d02aa</category>
+    </item>
+    
+    <item>
+      <title>[7分] Micron's Virginia fab begins producing America's most advanced DRAM memory — fab expansion to quadruple output, easing DDR4 shortage for automotive and defense sectors</title>
+      <link>https://www.tomshardware.com/tech-industry/micron-begins-producing-americas-most-advanced-dram-at-its-virginia-fab</link>
+      <guid isPermaLink="false">5c7ddd103304afed599c076968856b1b988b9fd6</guid>
+      <pubDate>2026-05-23T12:00:00Z</pubDate>
+      <description><![CDATA[
+        <p>美光位于弗吉尼亚的工厂开始生产美国最先进DRAM内存，扩产完成后产能将提升两倍。此举旨在缓解汽车和国防等领域DDR4内存供应紧张问题。当前DDR4成熟制程内存供需失衡，美光扩产有望改善市场供给格局。</p>
+        <p>标的: 美光</p>
+        <p>主线: chip_supply</p>
+        <p>方向: 美光→positive </p>
+        <p><em>关注美光DDR4扩产进度及对毛利率的改善效果，评估成熟制程内存市场供需拐点</em></p>
+        <p>来源: rss:tomshardware 🟡 中可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_b49259b38281</category>
+    </item>
+    
+    <item>
+      <title>[6分] The memory shortage is causing a repricing of consumer electronics</title>
+      <link>https://davidoks.blog/p/ai-is-killing-the-cheap-smartphone</link>
+      <guid isPermaLink="false">078100ec211ef89daa0e58776a9a0185b7e9852c</guid>
+      <pubDate>2026-05-21T21:55:56Z</pubDate>
+      <description><![CDATA[
+        <p>HBM需求激增导致传统DDR内存产能被排挤，内存原厂将产能转向高价值量的HBM，消费电子用DRAM供应趋紧、成本上升，终端产品面临重新定价压力。这一结构性短缺在AI服务器需求挤压下持续，短期内存价格预计维持强势。</p>
+        <p>标的: 美光, 苹果, 小米, 英伟达, AMD</p>
+        <p>主线: chip_supply, advanced_packaging</p>
+        <p>方向: 美光→positive 苹果→negative 小米→negative 英伟达→neutral AMD→neutral </p>
+        <p><em>关注消费电子品牌Q2毛利率变化及内存现货价格走势。</em></p>
+        <p>来源: hackernews 🔴 低可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_c837fb3679f4</category>
+    </item>
+    
+    <item>
+      <title>[6分] OpenAI and Dell partner to bring Codex to hybrid and on-premise enterprise environments</title>
+      <link>https://openai.com/index/dell-codex-enterprise-partnership</link>
+      <guid isPermaLink="false">210c7a7c782649817dd4aeca264d17520b72e965</guid>
+      <pubDate>2026-05-18T10:00:00Z</pubDate>
+      <description><![CDATA[
+        <p>OpenAI与戴尔达成合作，将AI编程工具Codex引入混合云和本地企业环境，支持企业在自有基础设施上安全部署AI编码代理，实现数据合规和工作流整合。</p>
+        <p>标的: 戴尔, 微软, 英伟达</p>
+        <p>主线: ai_monetization, edge_ai</p>
+        <p>方向: 戴尔→positive 微软→positive 英伟达→neutral </p>
+        <p><em>关注戴尔企业客户采用Codex的进展及对微软Azure OpenAI服务的影响。</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_eb7c295d02aa</category>
+    </item>
+    
+    <item>
+      <title>[6分] GPT-5.5 Instant: smarter, clearer, and more personalized</title>
+      <link>https://openai.com/index/gpt-5-5-instant</link>
+      <guid isPermaLink="false">e9800213f3cd4b8c53085a7563088040de425f03</guid>
+      <pubDate>2026-05-05T10:00:00Z</pubDate>
+      <description><![CDATA[
+        <p>OpenAI推出GPT-5.5 Instant，升级ChatGPT默认模型，实现更智能准确的回答、减少幻觉、增强个性化控制能力。模型能力的持续提升将推动用户增长和付费转化，同时加剧算力竞争，对AI算力产业链形成正向拉动。</p>
+        <p>标的: OpenAI, 微软, 英伟达, 台积电</p>
+        <p>主线: model_capability, compute_demand, ai_monetization</p>
+        <p>方向: OpenAI→positive 微软→positive 英伟达→positive 台积电→positive </p>
+        <p><em>关注GPT-5.5用户增长数据及对Azure Copilot订阅转化的推动作用</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_eb7c295d02aa</category>
+    </item>
+    
+    <item>
+      <title>[6分] Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)</title>
+      <link>https://openai.com/index/mrc-supercomputer-networking</link>
+      <guid isPermaLink="false">a654fb66813e953f32851b23e9f12ddc2c5915d9</guid>
+      <pubDate>2026-05-05T10:00:00Z</pubDate>
+      <description><![CDATA[
+        <p>OpenAI发布MRC（多路径可靠连接）网络协议，通过OCP开放计算项目向行业开源，旨在提升大规模AI训练集群的网络韧性和训练效率。该协议针对超算互联场景优化，可降低大规模分布式训练中的通信瓶颈和故障中断风险。</p>
+        <p>标的: 英伟达, AMD, 博通, 超微电脑, 戴尔, 微软, 谷歌, 亚马逊, Meta</p>
+        <p>主线: compute_demand, datacenter_power</p>
+        <p>方向: 英伟达→neutral AMD→neutral 博通→positive 超微电脑→neutral 戴尔→neutral 微软→positive 谷歌→neutral 亚马逊→neutral Meta→neutral </p>
+        <p><em>关注博通及网络设备厂商对MRC协议的商业化适配进展，以及该协议对AI超算网络架构标准的潜在影响</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_4bd355e83e08</category>
+    </item>
+    
+    <item>
+      <title>[6分] OpenAI models, Codex, and Managed Agents come to AWS</title>
+      <link>https://openai.com/index/openai-on-aws</link>
+      <guid isPermaLink="false">368128e6f28129236fd9abbf48e30f1750e61ffb</guid>
+      <pubDate>2026-04-28T00:00:00Z</pubDate>
+      <description><![CDATA[
+        <p>OpenAI宣布其GPT模型、Codex编码助手及Managed Agents现已在亚马逊AWS云平台上线，企业客户可直接在AWS环境中调用OpenAI模型服务构建AI应用，无需通过OpenAI官方API中转。此举将扩大OpenAI的分发渠道，同时增强AWS的AI服务竞争力。</p>
+        <p>标的: 亚马逊, 微软, 谷歌, 英伟达</p>
+        <p>主线: ai_monetization, compute_demand, model_capability</p>
+        <p>方向: 亚马逊→positive 微软→neutral 谷歌→neutral 英伟达→positive </p>
+        <p><em>关注AWS与OpenAI合作的具体定价模式及企业采用情况，以及对Azure、Google Cloud竞争格局的影响。</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_d60fc5d532da</category>
+    </item>
+    
+    <item>
+      <title>[6分] Introducing GPT-5.5</title>
+      <link>https://openai.com/index/introducing-gpt-5-5</link>
+      <guid isPermaLink="false">6e6cdaf0d6010b4433a5ebfd8f1dfdee21499ead</guid>
+      <pubDate>2026-04-23T11:00:00Z</pubDate>
+      <description><![CDATA[
+        <p>OpenAI发布GPT-5.5，号称其“最智能的模型”，在速度、能力上有所提升，专为编码、研究和跨工具数据分析等复杂任务设计。这是OpenAI在GPT-4之后的重要模型迭代，将进一步推动AI能力边界，对算力基础设施需求形成持续拉动。</p>
+        <p>标的: 英伟达, 台积电, AMD, 微软, 谷歌, Meta, 亚马逊, 苹果, OpenAI</p>
+        <p>主线: model_capability, compute_demand, ai_monetization</p>
+        <p>方向: 英伟达→positive 台积电→positive AMD→positive 微软→positive 谷歌→positive Meta→positive 亚马逊→positive 苹果→positive OpenAI→positive </p>
+        <p><em>持续跟踪GPT-5.5的实际性能评测数据及企业客户采用情况，评估其对算力产业链的实质拉动程度</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_a5e1c68e90d9</category>
+    </item>
+    
+    <item>
+      <title>[6分] Scaling Codex to enterprises worldwide</title>
+      <link>https://openai.com/index/scaling-codex-to-enterprises-worldwide</link>
+      <guid isPermaLink="false">d9639e2fcb88555e6c2fb070aa4d80cb2375f4ce</guid>
+      <pubDate>2026-04-21T00:00:00Z</pubDate>
+      <description><![CDATA[
+        <p>OpenAI推出Codex Labs企业服务，与Accenture、PwC、Infosys等合作，帮助企业在软件开发生命周期中部署Codex。关键数据：Codex周活跃用户达400万。为什么值得关注：企业级AI编程工具规模化落地，标志着AI辅助软件开发从试点进入大规模商业化阶段。</p>
+        <p>标的: 英伟达, AMD, 微软, 台积电, 博通, 高通</p>
+        <p>主线: compute_demand, ai_monetization, model_capability</p>
+        <p>方向: 英伟达→positive AMD→positive 微软→positive 台积电→positive 博通→positive 高通→neutral </p>
+        <p><em>关注企业Codex采用率增长对底层芯片需求及微软Azure云服务收入的拉动效果</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 https://openai.com/news]</p>
+      ]]></description>
+      <category>evt_eb7c295d02aa</category>
+    </item>
+    
+    <item>
+      <title>[6分] Joint Statement from OpenAI and Microsoft</title>
+      <link>https://openai.com/index/continuing-microsoft-partnership</link>
+      <guid isPermaLink="false">8c87fa05a78ceb8fb88bba6bd98c98ed0abe986e</guid>
+      <pubDate>2026-02-27T05:30:00Z</pubDate>
+      <description><![CDATA[
+        <p>微软与OpenAI发布联合声明，确认双方在研究、工程与产品开发方面继续深化合作，基于多年深度协作与共同成功。声明属于常规性合作确认，无重大新内容披露，但明确了双方关系稳固。</p>
+        <p>标的: 微软</p>
+        <p>主线: ai_monetization, model_capability</p>
+        <p>方向: 微软→positive </p>
+        <p><em>关注双方后续产品发布及Azure算力合作进展。</em></p>
+        <p>来源: rss:openai 🟢 高可信</p>
+      ]]></description>
+      <category>evt_ed14029ca679</category>
+    </item>
+    
+    <item>
+      <title>[6分] Inside GPT-5 for Work: How Businesses Use GPT-5</title>
+      <link>https://openai.com/business/guides-and-resources/chatgpt-usage-and-adoption-patterns-at-work</link>
+      <guid isPermaLink="false">a3ce7a8e25fd480e43656e2367e4fe5817ab9f78</guid>
+      <pubDate>2026-01-22T00:00:00Z</pubDate>
+      <description><![CDATA[
+        <p>OpenAI发布GPT-5工作场景应用数据报告，揭示各行业工作者使用ChatGPT的采用趋势、热门任务类型及部门分布模式。报告涵盖AI在工作场所的渗透率、用户行为数据及未来AI部署展望。该报告为AI商业化落地提供实证参考，显示企业端AI应用正在从试点走向规模化部署阶段。</p>
+        <p>标的: OpenAI, 微软, 英伟达</p>
+        <p>主线: ai_monetization, compute_demand, model_capability</p>
+        <p>方向: OpenAI→positive 微软→positive 英伟达→positive </p>
+        <p><em>关注企业AI采用率变化及GPT-5对算力需求的实际拉动效果</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_eb7c295d02aa</category>
+    </item>
+    
+    <item>
+      <title>[6分] Our approach to advertising and expanding access to ChatGPT</title>
+      <link>https://openai.com/index/our-approach-to-advertising-and-expanding-access</link>
+      <guid isPermaLink="false">61959f22e780056a6dc88eee9a61332af9a318ef</guid>
+      <pubDate>2026-01-16T00:00:00Z</pubDate>
+      <description><![CDATA[
+        <p>OpenAI宣布将在美国市场测试对ChatGPT免费版及Go订阅版引入广告，以全球扩展可负担AI访问为目标，同时强调保护隐私、建立信任及维持回答质量。该举措标志着OpenAI从纯订阅模式向广告驱动增长的转型，可能重塑AI产品的商业化路径。</p>
+        <p>标的: 微软, 谷歌, 亚马逊, Meta, 苹果, 英伟达, 台积电, AMD, 博通, ASML, 高通, ARM</p>
+        <p>主线: ai_monetization, compute_demand</p>
+        <p>方向: 微软→positive 谷歌→positive 亚马逊→positive Meta→positive 苹果→positive 英伟达→positive 台积电→positive AMD→positive 博通→positive ASML→positive 高通→positive ARM→positive </p>
+        <p><em>关注广告模式对ChatGPT用户留存率及ARPU影响，以及对算力需求增量的量化测算</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_a5e1c68e90d9</category>
+    </item>
+    
+    <item>
+      <title>[6分] Introducing ChatGPT Go, now available worldwide</title>
+      <link>https://openai.com/index/introducing-chatgpt-go</link>
+      <guid isPermaLink="false">0f1e6ca37d64d8732ee25787b00797f7488eff8c</guid>
+      <pubDate>2026-01-16T00:00:00Z</pubDate>
+      <description><![CDATA[
+        <p>OpenAI推出ChatGPT Go全球版，接入GPT-5.2 Instant，提供更高使用限额和更长记忆功能，使先进AI更可负担。此举料将扩大AI用户基数并提升算力消耗。</p>
+        <p>标的: 英伟达, AMD, 台积电, 微软, 谷歌, 亚马逊</p>
+        <p>主线: compute_demand, model_capability, ai_monetization</p>
+        <p>方向: 英伟达→positive AMD→positive 台积电→positive 微软→positive 谷歌→negative 亚马逊→negative </p>
+        <p><em>关注ChatGPT Go用户增长及对算力芯片需求、竞争格局的影响。</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_d60fc5d532da</category>
+    </item>
+    
+    <item>
+      <title>[6分] OpenAI partners with Cerebras</title>
+      <link>https://openai.com/index/cerebras-partnership</link>
+      <guid isPermaLink="false">8566227622a63b43ccf3164cbd5d0b8054f12766</guid>
+      <pubDate>2026-01-14T14:00:00Z</pubDate>
+      <description><![CDATA[
+        <p>OpenAI宣布与Cerebras达成合作，将新增750MW高速AI算力，旨在降低推理延迟并提升ChatGPT在实时AI工作负载下的响应速度。该合作将为OpenAI提供专用的大规模并行计算资源，强化其在生成式AI领域的基础设施竞争力。</p>
+        <p>标的: 微软, 英伟达, 台积电, 超微电脑, AMD</p>
+        <p>主线: compute_demand, datacenter_power, chip_supply</p>
+        <p>方向: 微软→positive 英伟达→neutral 台积电→positive 超微电脑→positive AMD→neutral </p>
+        <p><em>关注OpenAI后续是否会披露Cerebras芯片的具体应用场景，以及微软Azure如何整合这批新增算力</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_78a306cd53a4</category>
+    </item>
+    
+    <item>
+      <title>[6分] Datadog uses Codex for system-level code review</title>
+      <link>https://openai.com/index/datadog</link>
+      <guid isPermaLink="false">09944dd5bab1dbae812174a26266e33e45740d57</guid>
+      <pubDate>2026-01-09T00:00:00Z</pubDate>
+      <description><![CDATA[
+        <p>Datadog宣布采用OpenAI的Codex进行系统级代码审查业务。该工具可自动分析代码库并生成审查意见，提升软件质量管控效率。此举表明AI编程辅助工具正加速向企业级DevOps工作流渗透，为AI商业化提供新场景。</p>
+        <p>标的: 微软</p>
+        <p>主线: ai_monetization</p>
+        <p>方向: 微软→positive </p>
+        <p><em>关注企业级AI编程工具的渗透率提升及其对Azure/OpenAI生态的商业收入贡献</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_ed14029ca679</category>
+    </item>
+    
+    <item>
+      <title>[6分] One in a million: celebrating the customers shaping AI’s future</title>
+      <link>https://openai.com/index/one-in-a-million-customers</link>
+      <guid isPermaLink="false">5eaa0a6872844b5a588b90818a24681c94f18512</guid>
+      <pubDate>2025-12-22T00:00:00Z</pubDate>
+      <description><![CDATA[
+        <p>OpenAI官方博客宣布其全球付费客户数已突破100万家，并展示了PayPal、Virgin Atlantic、BBVA、Cisco、Moderna、Canva等企业客户利用AI赋能团队、挖掘新机遇的案例。该里程碑反映了企业AI采纳率的快速提升，验证了生成式AI从概念验证走向规模化商用的进程，对AI产业商业化前景具有参考意义。</p>
+        <p>标的: 微软</p>
+        <p>主线: ai_monetization, compute_demand, model_capability</p>
+        <p>方向: 微软→positive </p>
+        <p><em>关注微软/Azure从OpenAI企业客户增长中获得的收入贡献占比变化。</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 https://openai.com/blog/million-customers]</p>
+      ]]></description>
+      <category>evt_ed14029ca679</category>
+    </item>
+    
+    <item>
+      <title>[6分] Introducing GPT-5.2-Codex</title>
+      <link>https://openai.com/index/introducing-gpt-5-2-codex</link>
+      <guid isPermaLink="false">aa0a7b7f208fb951b90dffa74dc0ad7a562bc3ee</guid>
+      <pubDate>2025-12-18T00:00:00Z</pubDate>
+      <description><![CDATA[
+        <p>OpenAI发布最新编程模型GPT-5.2-Codex，具备长时推理、大规模代码转换和增强的网络安全能力。作为OpenAI目前最先进的编码模型，其发布将进一步推动AI辅助编程在企业级场景的落地，预计带动算力需求增长。</p>
+        <p>标的: 英伟达, 微软, 台积电, AMD, 博通, ASML</p>
+        <p>主线: model_capability, compute_demand, chip_supply, ai_monetization</p>
+        <p>方向: 英伟达→positive 微软→positive 台积电→positive AMD→positive 博通→positive ASML→positive </p>
+        <p><em>持续关注云厂商capex指引变化及英伟达GPU需求走势。</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_a5e1c68e90d9</category>
+    </item>
+    
+    <item>
+      <title>[6分] Developers can now submit apps to ChatGPT</title>
+      <link>https://openai.com/index/developers-can-now-submit-apps-to-chatgpt</link>
+      <guid isPermaLink="false">732bcc4ce70d2d74720964b2500f3710ffe57fbe</guid>
+      <pubDate>2025-12-17T00:00:00Z</pubDate>
+      <description><![CDATA[
+        <p>OpenAI宣布开发者现可向ChatGPT提交应用审核，获批应用将进入产品内新目录。该更新包括工具、指南及Apps SDK，旨在帮助开发者构建聊天原生体验并引入真实世界操作。此举标志着ChatGPT从对话工具向AI平台生态的关键转型，有望加速AI应用变现进程。</p>
+        <p>标的: 英伟达, AMD, 博通, 台积电, ASML, 美光, Marvell, 高通, ARM, 超微电脑, 戴尔, 微软, 谷歌, 亚马逊, Meta, 苹果, 中芯国际, 中科曙光, 浪潮信息</p>
+        <p>主线: ai_monetization, compute_demand, model_capability</p>
+        <p>方向: 英伟达→positive AMD→positive 博通→positive 台积电→positive ASML→positive 美光→positive Marvell→positive 高通→positive ARM→positive 超微电脑→positive 戴尔→positive 微软→positive 谷歌→neutral 亚马逊→neutral Meta→neutral 苹果→neutral 中芯国际→positive 中科曙光→positive 浪潮信息→positive </p>
+        <p><em>持续追踪ChatGPT应用生态扩张节奏及其对底层算力基础设施的需求拉动效应</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_a5e1c68e90d9</category>
+    </item>
+    
+    <item>
+      <title>[6分] Advancing science and math with GPT-5.2</title>
+      <link>https://openai.com/index/gpt-5-2-for-science-and-math</link>
+      <guid isPermaLink="false">b219e69539472b90c1a2c65917cd955981119295</guid>
+      <pubDate>2025-12-11T10:00:00Z</pubDate>
+      <description><![CDATA[
+        <p>OpenAI发布GPT-5.2，在GPQA Diamond和FrontierMath等基准测试创下新纪录，成为其数学和科学领域最强模型，并已实现解决开放理论问题、生成可靠数学证明等真实研究进展。模型能力显著提升将驱动更高的算力需求，对AI芯片、云基础设施及算力产业链形成直接利好。</p>
+        <p>标的: OpenAI, 微软, 英伟达, 台积电, AMD, 谷歌, 亚马逊, Meta, 苹果, 博通, 高通, ARM</p>
+        <p>主线: model_capability, compute_demand, chip_supply, ai_monetization, datacenter_power</p>
+        <p>方向: OpenAI→positive 微软→positive 英伟达→positive 台积电→positive AMD→positive 谷歌→neutral 亚马逊→neutral Meta→neutral 苹果→neutral 博通→neutral 高通→neutral ARM→neutral </p>
+        <p><em>关注GPT-5.2的实际应用落地情况及算力产业链的订单能见度变化</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_4bd355e83e08</category>
+    </item>
+    
+    <item>
+      <title>[6分] OpenAI and Target team up on new AI-powered experiences</title>
+      <link>https://openai.com/index/target-partnership</link>
+      <guid isPermaLink="false">f0c0dfba45ade14dfd063d23f8fc11ba9604ca3d</guid>
+      <pubDate>2025-11-19T06:00:00Z</pubDate>
+      <description><![CDATA[
+        <p>OpenAI与Target达成合作，将在ChatGPT平台推出Target购物应用，提供个性化购物体验和快速结账功能。Target同时计划扩大ChatGPT Enterprise的使用范围以提升运营效率和客户体验。此举标志着AI在零售领域的商业化应用进一步深化。</p>
+        <p>标的: OpenAI, 微软</p>
+        <p>主线: ai_monetization, compute_demand</p>
+        <p>方向: OpenAI→positive 微软→positive </p>
+        <p><em>关注AI在零售垂直领域商业化落地进展及对企业云服务需求的拉动效应</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_ed14029ca679</category>
+    </item>
+    
+    <item>
+      <title>[6分] Intuit and OpenAI join forces on new AI-powered experiences</title>
+      <link>https://openai.com/index/intuit-partnership</link>
+      <guid isPermaLink="false">814d82eb231bd3176e3a329a580d977b929ac2df</guid>
+      <pubDate>2025-11-18T05:00:00Z</pubDate>
+      <description><![CDATA[
+        <p>OpenAI与Intuit达成超1亿美元多年期合作，将在ChatGPT中推出Intuit应用体验，并扩展Intuit使用OpenAI前沿模型驱动个性化金融工具。此合作标志着AI助手平台与企业SaaS的深度整合加速，AI商业化落地再获验证。</p>
+        <p>标的: OpenAI, 微软, 英伟达</p>
+        <p>主线: ai_monetization, compute_demand, model_capability</p>
+        <p>方向: OpenAI→positive 微软→positive 英伟达→positive </p>
+        <p><em>关注此类企业级AI合作对Azure算力需求的实际拉动及AI在金融领域商业化的进展。</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_ed14029ca679</category>
+    </item>
+    
+    <item>
+      <title>[6分] 1 million business customers putting AI to work</title>
+      <link>https://openai.com/index/1-million-businesses-putting-ai-to-work</link>
+      <guid isPermaLink="false">6f9bafaa17ff11ac7140d3019660b1c61c9f7c7f</guid>
+      <pubDate>2025-11-05T05:00:00Z</pubDate>
+      <description><![CDATA[
+        <p>OpenAI宣布其企业客户数量已突破100万，覆盖医疗、生命科学、金融等多个行业。ChatGPT及API正在推动企业级AI应用规模化落地，标志着AI商业化进程加速，将持续拉动对算力芯片和云服务的需求。</p>
+        <p>标的: 英伟达, AMD, 台积电, 微软, 谷歌, 亚马逊, 百度, 阿里巴巴</p>
+        <p>主线: compute_demand, ai_monetization</p>
+        <p>方向: 英伟达→positive AMD→positive 台积电→positive 微软→positive 谷歌→positive 亚马逊→positive 百度→positive 阿里巴巴→positive </p>
+        <p><em>关注百万企业客户的付费转化率及对算力芯片的实际需求拉动。</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_d60fc5d532da</category>
+    </item>
+    
+    <item>
+      <title>[6分] Seizing the AI opportunity</title>
+      <link>https://openai.com/global-affairs/seizing-the-ai-opportunity</link>
+      <guid isPermaLink="false">e3c64905aace8cf0409a0a318a27a59ee12b0f17</guid>
+      <pubDate>2025-10-27T12:00:00Z</pubDate>
+      <description><![CDATA[
+        <p>OpenAI向白宫提交政策建议，阐述智能时代对能源和基础设施的战略投资需求，强调扩大算力产能和培养AI人才对维持美国AI领导力及经济增长的重要性，呼吁联邦政府在能源、芯片和劳动力方面给予政策支持。</p>
+        <p>标的: 英伟达, AMD, 博通, 台积电, ASML, 微软, 谷歌, 亚马逊, Meta</p>
+        <p>主线: datacenter_power, compute_demand, chip_supply, policy_export</p>
+        <p>方向: 英伟达→positive AMD→positive 博通→positive 台积电→positive ASML→positive 微软→positive 谷歌→positive 亚马逊→positive Meta→positive </p>
+        <p><em>关注美国政府后续对AI基础设施的政策回应及芯片和能源领域的具体支持措施。</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_78a306cd53a4</category>
+    </item>
+    
+    <item>
+      <title>[6分] Scaling accounting capacity with OpenAI</title>
+      <link>https://openai.com/index/basis</link>
+      <guid isPermaLink="false">fd78855f062f561cf8e3ad9b4899af52d9896ffa</guid>
+      <pubDate>2025-08-12T00:00:00Z</pubDate>
+      <description><![CDATA[
+        <p>AI初创公司Basis推出基于OpenAI o3、o3-Pro、GPT-4.1及GPT-5的会计AI代理产品，可帮助会计事务所节省30%工作时间，并释放产能用于咨询与业务增长等高价值活动。标志着前沿大模型在垂直专业服务领域的商业化落地加速。</p>
+        <p>标的: 微软, 谷歌, Meta</p>
+        <p>主线: ai_monetization, model_capability, compute_demand</p>
+        <p>方向: 微软→positive 谷歌→positive Meta→positive </p>
+        <p><em>持续跟踪AI代理在更多垂直行业（法律、医疗、金融）的商业化渗透速度与客户付费转化率。</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_ed14029ca679</category>
+    </item>
+    
+    <item>
+      <title>[6分] Introducing GPT-5 for developers</title>
+      <link>https://openai.com/index/introducing-gpt-5-for-developers</link>
+      <guid isPermaLink="false">9db0abdca95b09e47d4561494718fb3205165cc9</guid>
+      <pubDate>2025-08-07T10:00:00Z</pubDate>
+      <description><![CDATA[
+        <p>OpenAI在API平台正式推出GPT-5，提供高推理性能、新的开发者控制功能，并在实际编码任务中达到顶级水平。GPT-5的发布标志着前沿模型能力再上新台阶，将进一步推动AI应用开发和商业化进程。</p>
+        <p>标的: 英伟达, AMD, 微软, 谷歌, 亚马逊, Meta</p>
+        <p>主线: compute_demand, model_capability, ai_monetization</p>
+        <p>方向: 英伟达→positive AMD→positive 微软→positive 谷歌→positive 亚马逊→positive Meta→positive </p>
+        <p><em>关注GPT-5上线后的API调用量增长及各大云厂商capex变化</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_ed14029ca679</category>
+    </item>
+    
+    <item>
+      <title>[6分] GPT-5 System Card</title>
+      <link>https://openai.com/index/gpt-5-system-card</link>
+      <guid isPermaLink="false">e830b77678488661e12a64e7a26be4853adcc803</guid>
+      <pubDate>2025-08-07T00:00:00Z</pubDate>
+      <description><![CDATA[
+        <p>OpenAI发布GPT-5系统说明文档，揭示其统一模型路由系统架构。该系统根据任务复杂度动态调用gpt-5-main、gpt-5-thinking及轻量级nano版本，实现推理效率与响应质量的平衡。此分层设计旨在优化计算资源分配，降低推理成本，对云端AI部署成本结构具有参考意义。</p>
+        <p>标的: OpenAI, 微软, 英伟达, 台积电, AMD, 博通</p>
+        <p>主线: model_capability, compute_demand, chip_supply</p>
+        <p>方向: OpenAI→positive 微软→positive 英伟达→positive 台积电→neutral AMD→neutral 博通→neutral </p>
+        <p><em>关注GPT-5的模型路由策略是否成为行业标准，以及对算力需求与芯片配置的影响评估</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_eb7c295d02aa</category>
+    </item>
+    
+    <item>
+      <title>[6分] Introducing Stargate Norway</title>
+      <link>https://openai.com/index/introducing-stargate-norway</link>
+      <guid isPermaLink="false">7de88997de0e1c4cbc940639136854308a65640b</guid>
+      <pubDate>2025-07-31T00:00:00Z</pubDate>
+      <description><![CDATA[
+        <p>OpenAI宣布推出"Stargate Norway"项目，这是其在欧洲的首个AI数据中心 Initiative，隶属于"OpenAI for Countries"计划。Stargate作为OpenAI的核心基础设施平台，旨在将其AI能力普惠全球。该项目标志着OpenAI欧洲布局的正式开始，预计将大幅提升欧洲地区AI算力供给能力。</p>
+        <p>标的: 英伟达, AMD, 博通, 台积电, 微软, 谷歌, 亚马逊, 超微电脑, 戴尔</p>
+        <p>主线: compute_demand, datacenter_power, chip_supply</p>
+        <p>方向: 英伟达→positive AMD→positive 博通→positive 台积电→positive 微软→positive 谷歌→positive 亚马逊→positive 超微电脑→positive 戴尔→positive </p>
+        <p><em>关注芯片供应商的欧洲订单变化及数据中心建设带来的电力需求缺口</em></p>
+        <p>来源: rss:openai 🟢 高可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_78a306cd53a4</category>
+    </item>
+    
+    <item>
+      <title>[6分] OpenAI o3 and o4-mini System Card</title>
+      <link>https://openai.com/index/o3-o4-mini-system-card</link>
+      <guid isPermaLink="false">d2a0e963a651b8383db4f8d2960e2eaefdf3c82d</guid>
+      <pubDate>2025-04-16T10:00:00Z</pubDate>
+      <description><![CDATA[
+        <p>OpenAI发布o3和o4-mini模型System Card，两款模型将前沿推理能力与完整工具调用功能整合，支持网页浏览、Python执行、图像分析、图像生成、画布、自动化、文件搜索和记忆等能力，强化了AI Agent功能性。</p>
+        <p>标的: 英伟达, 微软, 台积电, 谷歌, AMD, 高通</p>
+        <p>主线: model_capability, compute_demand</p>
+        <p>方向: 英伟达→positive 微软→positive 台积电→positive 谷歌→neutral AMD→neutral 高通→neutral </p>
+        <p><em>关注o3/o4-mini的实际应用场景落地进度及其对算力需求和云厂商capex的影响。</em></p>
+        <p>来源: rss:openai 🟢 高可信</p>
+      ]]></description>
+      <category>evt_ed14029ca679</category>
     </item>
     
   </channel>

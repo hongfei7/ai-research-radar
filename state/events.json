@@ -1,4 +1,406 @@
 {
-  "updated_at": "2026-05-23T12:24:13Z",
-  "events": {}
+  "updated_at": "2026-05-23T15:22:07Z",
+  "events": {
+    "evt_4bd355e83e08": {
+      "event_id": "evt_4bd355e83e08",
+      "title": "OpenAI全球AI基础设施扩张与模型能力升级",
+      "summary": "OpenAI获软银、英伟达、亚马逊1100亿美元投资，发布GPT-5.4/5.2等新模型，并推进Stargate计划在全球投建多个吉瓦级数据中心。与微软、亚马逊AWS、三星、SK海力士、Oracle等建立战略合作，显著提升算力基础设施规模。AI基础设施军备竞赛加速，头部玩家资源集中度进一步提升。",
+      "tickers": [
+        "ASML",
+        "戴尔",
+        "美光",
+        "超微电脑",
+        "AMD",
+        "工业富联",
+        "高通",
+        "OpenAI",
+        "Intel",
+        "台积电",
+        "Marvell",
+        "Meta",
+        "英伟达",
+        "亚马逊",
+        "ARM",
+        "博通",
+        "微软",
+        "苹果",
+        "谷歌"
+      ],
+      "themes": [
+        "datacenter_power",
+        "advanced_packaging",
+        "chip_supply",
+        "compute_demand",
+        "ai_monetization",
+        "model_capability"
+      ],
+      "direction": {
+        "英伟达": "positive",
+        "亚马逊": "positive",
+        "微软": "positive",
+        "台积电": "positive",
+        "ASML": "positive",
+        "博通": "positive",
+        "超微电脑": "positive",
+        "AMD": "positive",
+        "美光": "positive",
+        "谷歌": "neutral",
+        "戴尔": "positive",
+        "Meta": "positive",
+        "OpenAI": "positive",
+        "苹果": "negative",
+        "高通": "positive",
+        "Marvell": "positive",
+        "ARM": "positive",
+        "Intel": "positive",
+        "工业富联": "positive"
+      },
+      "item_ids": [
+        "794d4515e72219ef16782793f8cab7d3c3c82f4a",
+        "778534f656319cb0aa1ade0e6890a31d1e29883e",
+        "11f28611545f156e7a04eb79fb447a69ad3e3abe",
+        "f2bc43a6d7e74461051fa65a28414055a908f4b6",
+        "1f499c60214af59e5d231ea3d5fe37d805a9e317",
+        "315ac762616efcf26e7f465bbd362139c6d4bedd",
+        "460e2ee8d489e723e9a55f0ddf26775770cb59b4",
+        "5aaeda8c927afa02106c500e5975f9b2393c921c",
+        "ce52abc8a3f020a53a6fd30bb07d8bf1d345e4b7",
+        "1d2d99cb07efa9d61c922c529a843dfa09477683",
+        "4dc8c1bc29aac82146f9914242963a03439aa7a6",
+        "a654fb66813e953f32851b23e9f12ddc2c5915d9",
+        "b219e69539472b90c1a2c65917cd955981119295"
+      ],
+      "source_count": 13,
+      "first_seen_at": "2026-05-23T15:20:24Z",
+      "last_updated_at": "2026-05-23T15:20:24Z",
+      "is_active": true,
+      "significance": 10,
+      "status": "developing"
+    },
+    "evt_a5e1c68e90d9": {
+      "event_id": "evt_a5e1c68e90d9",
+      "title": "OpenAI密集发布新模型并深化商业化布局",
+      "summary": "OpenAI近期密集发布GPT-5、o3/o4-mini、GPT-5.5及GPT-5.2-Codex等多款新模型，实现重大代际跃升，涵盖编程、数学、医疗等多领域最先进水平，显著提升推理效率与任务完成度。与此同时，OpenAI宣布在美国市场测试ChatGPT广告并开放应用提交平台，加速从订阅向广告驱动增长及平台生态转型。此外，OpenAI与微软正式延续合作伙伴关系，继续以Azure云平台提供算力基础设施。系列举措将持续拉动算力需求增长，对AI芯片、服务器、云服务产业链形成系统性催化。",
+      "tickers": [
+        "苹果",
+        "ASML",
+        "美光",
+        "超微电脑",
+        "AMD",
+        "工业富联",
+        "中芯国际",
+        "高通",
+        "OpenAI",
+        "台积电",
+        "Marvell",
+        "Meta",
+        "英伟达",
+        "亚马逊",
+        "中科曙光",
+        "ARM",
+        "浪潮信息",
+        "博通",
+        "微软",
+        "戴尔",
+        "谷歌"
+      ],
+      "themes": [
+        "compute_demand",
+        "ai_monetization",
+        "chip_supply",
+        "model_capability"
+      ],
+      "direction": {
+        "微软": "positive",
+        "英伟达": "positive",
+        "台积电": "positive",
+        "AMD": "neutral",
+        "ASML": "positive",
+        "谷歌": "neutral",
+        "亚马逊": "neutral",
+        "Meta": "neutral",
+        "OpenAI": "positive",
+        "博通": "positive",
+        "苹果": "positive",
+        "超微电脑": "positive",
+        "工业富联": "positive",
+        "中科曙光": "positive",
+        "浪潮信息": "positive",
+        "高通": "positive",
+        "ARM": "positive",
+        "美光": "positive",
+        "Marvell": "positive",
+        "戴尔": "positive",
+        "中芯国际": "positive"
+      },
+      "item_ids": [
+        "729ff4fec05f6312bb3e608a2ce2ad1b4f669e1d",
+        "d7893b67b5b0b07251690b76001c296f3086eaad",
+        "190945e74c30c5d807d5a10075b414d3d04d4af9",
+        "4ca3a7340a2c479500a0f59c640341dae3688e32",
+        "6e6cdaf0d6010b4433a5ebfd8f1dfdee21499ead",
+        "61959f22e780056a6dc88eee9a61332af9a318ef",
+        "aa0a7b7f208fb951b90dffa74dc0ad7a562bc3ee",
+        "732bcc4ce70d2d74720964b2500f3710ffe57fbe"
+      ],
+      "source_count": 8,
+      "first_seen_at": "2026-05-23T15:20:24Z",
+      "last_updated_at": "2026-05-23T15:20:24Z",
+      "is_active": true,
+      "significance": 9,
+      "status": "developing"
+    },
+    "evt_d60fc5d532da": {
+      "event_id": "evt_d60fc5d532da",
+      "title": "OpenAI加速AI商业化：多产品发布与生态合作",
+      "summary": "OpenAI近期密集推进AI商业化：与苹果达成战略合作将ChatGPT深度整合至iOS/macOS系统，推出自定义GPTs及GPT Store分发渠道，DALL·E 3向Plus/Enterprise用户开放，Operator工具拓展变现路径，ChatGPT Go全球版扩大用户覆盖。此外OpenAI模型正式登陆AWS云平台，企业客户突破100万。微软此前已获GPT-3技术授权。AI商业化进程显著加速，将持续拉动算力芯片和云服务需求。",
+      "tickers": [
+        "Meta",
+        "英伟达",
+        "AMD",
+        "百度",
+        "亚马逊",
+        "阿里巴巴",
+        "微软",
+        "腾讯",
+        "苹果",
+        "台积电",
+        "谷歌"
+      ],
+      "themes": [
+        "edge_ai",
+        "compute_demand",
+        "ai_monetization",
+        "model_capability"
+      ],
+      "direction": {
+        "微软": "positive",
+        "谷歌": "neutral",
+        "亚马逊": "neutral",
+        "苹果": "positive",
+        "英伟达": "positive",
+        "Meta": "neutral",
+        "百度": "negative",
+        "阿里巴巴": "neutral",
+        "腾讯": "neutral",
+        "台积电": "positive",
+        "AMD": "positive"
+      },
+      "item_ids": [
+        "55c35eefcb2145eebd1547eec07a69e7ab394b12",
+        "0e052780eb1188cab6bf8e5216e485e9ba57c22d",
+        "d58b2f8740dbc6b9f1f26fa65c68a8020e9b1e04",
+        "fe4a46faff4bc61574d90a649f2f8009090a68d7",
+        "ad3af7127c29373c86843fbc83aa6502151ea55a",
+        "368128e6f28129236fd9abbf48e30f1750e61ffb",
+        "0f1e6ca37d64d8732ee25787b00797f7488eff8c",
+        "6f9bafaa17ff11ac7140d3019660b1c61c9f7c7f"
+      ],
+      "source_count": 8,
+      "first_seen_at": "2026-05-23T15:20:24Z",
+      "last_updated_at": "2026-05-23T15:20:24Z",
+      "is_active": true,
+      "significance": 9,
+      "status": "developing"
+    },
+    "evt_eb7c295d02aa": {
+      "event_id": "evt_eb7c295d02aa",
+      "title": "OpenAI全产品线升级与商业化加速",
+      "summary": "OpenAI密集发布多项重大更新：推出Computer-Using Agent实现AI自主操作计算机界面；发布GPT-5.5 Instant升级默认模型能力；推出ChatGPT Enterprise企业版主打安全隐私；Codex企业服务规模化落地，周活跃用户达400万；与戴尔合作拓展混合云部署。GPT-5系统揭示统一模型路由架构，动态调度不同版本优化推理效率。工作场景应用数据报告证实企业AI采用正从试点走向规模化。",
+      "tickers": [
+        "英伟达",
+        "AMD",
+        "博通",
+        "高通",
+        "微软",
+        "OpenAI",
+        "戴尔",
+        "台积电"
+      ],
+      "themes": [
+        "chip_supply",
+        "edge_ai",
+        "compute_demand",
+        "ai_monetization",
+        "model_capability"
+      ],
+      "direction": {
+        "OpenAI": "positive",
+        "微软": "positive",
+        "英伟达": "positive",
+        "戴尔": "positive",
+        "台积电": "positive",
+        "AMD": "positive",
+        "博通": "positive",
+        "高通": "neutral"
+      },
+      "item_ids": [
+        "f30105165153783f52c1624ef4abde7eb8b9f474",
+        "aeaf6fe7b0a641f996628c3ce6a46623548dffc6",
+        "cbe5ba39988b0fd43c79bde87ee1896313781cb6",
+        "210c7a7c782649817dd4aeca264d17520b72e965",
+        "e9800213f3cd4b8c53085a7563088040de425f03",
+        "d9639e2fcb88555e6c2fb070aa4d80cb2375f4ce",
+        "a3ce7a8e25fd480e43656e2367e4fe5817ab9f78",
+        "e830b77678488661e12a64e7a26be4853adcc803"
+      ],
+      "source_count": 8,
+      "first_seen_at": "2026-05-23T15:20:24Z",
+      "last_updated_at": "2026-05-23T15:20:24Z",
+      "is_active": true,
+      "significance": 9,
+      "status": "developing"
+    },
+    "evt_b49259b38281": {
+      "event_id": "evt_b49259b38281",
+      "title": "Micron's Virginia fab begins producing America's most advanced DRAM memory — fab expansion to quadruple output, easing DDR4 shortage for automotive and defense sectors",
+      "summary": "美光位于弗吉尼亚的工厂开始生产美国最先进DRAM内存，扩产完成后产能将提升两倍。此举旨在缓解汽车和国防等领域DDR4内存供应紧张问题。当前DDR4成熟制程内存供需失衡，美光扩产有望改善市场供给格局。",
+      "tickers": [
+        "美光"
+      ],
+      "themes": [
+        "chip_supply"
+      ],
+      "direction": {
+        "美光": "positive"
+      },
+      "item_ids": [
+        "5c7ddd103304afed599c076968856b1b988b9fd6"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-05-23T15:20:24Z",
+      "last_updated_at": "2026-05-23T15:20:24Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing"
+    },
+    "evt_c837fb3679f4": {
+      "event_id": "evt_c837fb3679f4",
+      "title": "The memory shortage is causing a repricing of consumer electronics",
+      "summary": "HBM需求激增导致传统DDR内存产能被排挤，内存原厂将产能转向高价值量的HBM，消费电子用DRAM供应趋紧、成本上升，终端产品面临重新定价压力。这一结构性短缺在AI服务器需求挤压下持续，短期内存价格预计维持强势。",
+      "tickers": [
+        "美光",
+        "苹果",
+        "小米",
+        "英伟达",
+        "AMD"
+      ],
+      "themes": [
+        "chip_supply",
+        "advanced_packaging"
+      ],
+      "direction": {
+        "美光": "positive",
+        "苹果": "negative",
+        "小米": "negative",
+        "英伟达": "neutral",
+        "AMD": "neutral"
+      },
+      "item_ids": [
+        "078100ec211ef89daa0e58776a9a0185b7e9852c"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-05-23T15:20:24Z",
+      "last_updated_at": "2026-05-23T15:20:24Z",
+      "is_active": true,
+      "significance": 6,
+      "status": "developing"
+    },
+    "evt_ed14029ca679": {
+      "event_id": "evt_ed14029ca679",
+      "title": "OpenAI与微软深化合作，商业化加速落地",
+      "summary": "微软与OpenAI合作稳固，近期多项商业化进展密集落地：付费客户突破100万家，Intuit达成超1亿美元合作，Target零售合作深化，Basis会计AI代理节省30%工时；GPT-5正式发布，o3/o4-mini强化Agent能力。企业级AI编程工具Codex渗透加速。OpenAI商业化从概念验证迈向规模化放量，AI应用场景持续拓宽，对微软Azure算力需求和AI生态商业收入形成积极支撑。",
+      "tickers": [
+        "Meta",
+        "英伟达",
+        "AMD",
+        "亚马逊",
+        "高通",
+        "微软",
+        "OpenAI",
+        "台积电",
+        "谷歌"
+      ],
+      "themes": [
+        "compute_demand",
+        "ai_monetization",
+        "model_capability"
+      ],
+      "direction": {
+        "微软": "positive",
+        "OpenAI": "positive",
+        "英伟达": "positive",
+        "谷歌": "positive",
+        "Meta": "positive",
+        "AMD": "positive",
+        "亚马逊": "positive",
+        "台积电": "positive",
+        "高通": "neutral"
+      },
+      "item_ids": [
+        "8c87fa05a78ceb8fb88bba6bd98c98ed0abe986e",
+        "09944dd5bab1dbae812174a26266e33e45740d57",
+        "5eaa0a6872844b5a588b90818a24681c94f18512",
+        "f0c0dfba45ade14dfd063d23f8fc11ba9604ca3d",
+        "814d82eb231bd3176e3a329a580d977b929ac2df",
+        "fd78855f062f561cf8e3ad9b4899af52d9896ffa",
+        "9db0abdca95b09e47d4561494718fb3205165cc9",
+        "d2a0e963a651b8383db4f8d2960e2eaefdf3c82d"
+      ],
+      "source_count": 8,
+      "first_seen_at": "2026-05-23T15:20:24Z",
+      "last_updated_at": "2026-05-23T15:20:24Z",
+      "is_active": true,
+      "significance": 9,
+      "status": "developing"
+    },
+    "evt_78a306cd53a4": {
+      "event_id": "evt_78a306cd53a4",
+      "title": "OpenAI算力扩张三连：合作Cerebras、吁请政策、布局欧洲",
+      "summary": "OpenAI近期密集布局AI基础设施：宣布与Cerebras合作新增750MW高速算力以降低推理延迟；同时向白宫提交政策建议，呼吁联邦政府在能源、芯片和劳动力方面支持AI发展；此外推出欧洲首个数据中心项目\"Stargate Norway\"，标志着其全球普惠AI计划启动。这些动作旨在强化生成式AI基础设施竞争力，应对算力需求激增，并推动政策支持。",
+      "tickers": [
+        "Meta",
+        "英伟达",
+        "AMD",
+        "ASML",
+        "亚马逊",
+        "博通",
+        "超微电脑",
+        "微软",
+        "戴尔",
+        "台积电",
+        "谷歌"
+      ],
+      "themes": [
+        "compute_demand",
+        "chip_supply",
+        "datacenter_power",
+        "policy_export"
+      ],
+      "direction": {
+        "微软": "positive",
+        "英伟达": "neutral",
+        "台积电": "positive",
+        "超微电脑": "positive",
+        "AMD": "neutral",
+        "博通": "positive",
+        "ASML": "positive",
+        "谷歌": "positive",
+        "亚马逊": "positive",
+        "Meta": "positive",
+        "戴尔": "positive"
+      },
+      "item_ids": [
+        "8566227622a63b43ccf3164cbd5d0b8054f12766",
+        "e3c64905aace8cf0409a0a318a27a59ee12b0f17",
+        "7de88997de0e1c4cbc940639136854308a65640b"
+      ],
+      "source_count": 3,
+      "first_seen_at": "2026-05-23T15:20:24Z",
+      "last_updated_at": "2026-05-23T15:20:24Z",
+      "is_active": true,
+      "significance": 9,
+      "status": "developing"
+    }
+  }
 }
