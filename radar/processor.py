@@ -326,6 +326,58 @@ class Processor:
             return ""
 
     # ================================================================
+    # Stage 2.5: 视觉富化 —— 对高分条目做图片理解
+    # ================================================================
+
+    async def visual_enrich(self, items: list[Item], max_images: int = 5) -> None:
+        """
+        对高相关性条目（score >= 7 且有配图）调用图片理解 API，
+        提取图表、产品图、架构图中的关键信息。
+
+        Args:
+            items:        已处理的 Item 列表
+            max_images:   每轮最多分析的图片数（控制配额）
+        """
+        candidates = [
+            it for it in items
+            if it.image_url and it.relevance_score >= 7 and not it.visual_analysis
+        ]
+        if not candidates:
+            return
+
+        candidates.sort(key=lambda x: x.relevance_score, reverse=True)
+        batch = candidates[:max_images]
+
+        logger.info(
+            f"Visual enrich: analyzing {len(batch)} images "
+            f"(from {len(candidates)} candidates, quota limit {max_images})"
+        )
+
+        prompt = (
+            "你是一位专业的科技/投资研究助手。请分析这张图片的内容，重点关注："
+            "1. 是否有图表/数据可视化？如有，概述其核心发现"
+            "2. 是否有产品图/硬件图？描述关键特征"
+            "3. 是否有架构图/流程图？概括其核心思想"
+            "4. 图片传达了什么文字之外的信息？"
+            "用中文回答，≤100字，只输出分析结果，不要客套话。"
+        )
+
+        for item in batch:
+            try:
+                result = await self.client.understand_image(
+                    prompt=prompt,
+                    image_url=item.image_url,
+                )
+                if result:
+                    item.visual_analysis = result.strip()
+                    logger.info(
+                        f"Visual enrich: {item.id[:12]} score={item.relevance_score} "
+                        f"→ {len(result)} chars"
+                    )
+            except Exception as e:
+                logger.error(f"Visual enrich failed for {item.id[:12]}: {e}")
+
+    # ================================================================
     # 组合: triage + extract
     # ================================================================
 

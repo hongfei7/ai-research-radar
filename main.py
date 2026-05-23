@@ -85,6 +85,7 @@ async def collect_all(cfg: dict) -> list[Item]:
     ms_collector = COLLECTOR_MAP.get("minimax_search")
     if isinstance(ms_collector, MinimaxSearchCollector):
         ms_collector.coverage = cfg.get("coverage", [])
+        ms_collector.trending_topics = cfg.get("trending_topics", [])
 
     all_sources = []
     for src_type in ["tech", "market"]:
@@ -344,6 +345,13 @@ async def run_full(cfg: dict) -> None:
             logger.info(f"Trend spotting complete: {len(trend_text)} chars")
         else:
             logger.warning("Trend spotting returned empty")
+
+        # Stage 2.7: 视觉富化 —— 高分条目配图分析（图片理解 API）
+        logger.info("Running visual enrichment on high-score items...")
+        await processor.visual_enrich(processed, max_images=5)
+        visual_count = sum(1 for it in processed if it.visual_analysis)
+        if visual_count:
+            logger.info(f"Visual enrich complete: {visual_count} items enriched")
 
         existing_events = load_events()
         cluster_engine = ClusterEngine(client, cfg)

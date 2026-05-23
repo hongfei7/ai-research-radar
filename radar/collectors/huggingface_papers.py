@@ -74,10 +74,10 @@ class HuggingFacePapersCollector(Collector):
                 except Exception:
                     pub_date = fetched_at
 
+                # 提取缩略图 URL（论文关键图）
+                thumbnail = p.get("thumbnail", "") or paper.get("thumbnail", "")
                 # 提取 GitHub repo 链接
                 gh_repo = paper.get("githubRepo", "")
-                gh_stars = paper.get("githubStars", 0)
-                upvotes = p.get("upvotes", paper.get("upvotes", 0))
 
                 item = Item(
                     id=_make_id(paper_id),
@@ -89,6 +89,7 @@ class HuggingFacePapersCollector(Collector):
                     fetched_at=fetched_at,
                     raw_summary=raw,
                     credibility=_source_cred(source_id),
+                    image_url=thumbnail,
                 )
                 items.append(item)
             except Exception as e:

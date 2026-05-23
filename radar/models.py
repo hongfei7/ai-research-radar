@@ -37,6 +37,10 @@ class Item:
     is_primary_source: bool = True       # 是否一手报道（false = 转载/聚合）
     original_source_url: str = ""        # 如为转载，标注原始出处 URL
 
+    # —— 视觉分析 ——
+    image_url: str = ""                  # 文章配图/缩略图 URL
+    visual_analysis: str = ""            # MiniMax 图片理解结果
+
     # —— 聚类阶段 ——
     event_id: Optional[str] = None       # 所属事件 cluster ID
     is_new_event: bool = False           # 本条目是否触发了新事件
@@ -62,6 +66,8 @@ class Item:
             "credibility": "",
             "is_primary_source": True,
             "original_source_url": "",
+            "image_url": "",
+            "visual_analysis": "",
             "event_id": None,
             "is_new_event": False,
             "is_event_update": False,
@@ -74,6 +80,7 @@ class Item:
             "relevance_score", "relevance_reason", "tickers", "themes",
             "direction", "cn_summary", "so_what", "processed_at",
             "credibility", "is_primary_source", "original_source_url",
+            "image_url", "visual_analysis",
             "event_id", "is_new_event", "is_event_update",
         ]})
 

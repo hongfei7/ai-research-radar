@@ -115,6 +115,22 @@ sources:
     - { id: "sec_edgar",       type: "sec_edgar", params: { forms: ["8-K"] } }
 
 # ============================================================
+# 趋势话题搜索 —— 追踪 AI 关键人物和话题（替代 X/Twitter）
+# 通过 MiniMax 搜索 API 发现被新闻媒体覆盖的 X 级实时动态
+# ============================================================
+trending_topics:
+  - "OpenAI latest news"
+  - "Elon Musk AI"
+  - "DeepSeek latest"
+  - "Sam Altman announcement"
+  - "Anthropic Claude release"
+  - "马斯克 OpenAI 诉讼"
+  - "Google DeepMind breakthrough"
+  - "NVIDIA Jensen Huang announcement"
+  - "xAI Grok latest"
+  - "AI regulation policy latest"
+
+# ============================================================
 # 运行参数
 # ============================================================
 runtime:

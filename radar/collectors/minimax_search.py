@@ -21,9 +21,10 @@ logger = logging.getLogger(__name__)
 
 _MAX_RAW_SUMMARY = 800
 _SEARCH_DELAY = 0.3
-# 每轮搜索的标的上限（控制在配额 150 次/5h 以内）
-# 10 轮/5h × PER_RUN_STOCKS + 备用 DDG 搜索 ≈ 150 次
-_PER_RUN_STOCKS = 15
+# 每轮搜索配额分配: 10 标的 + 5 趋势话题 = 15 次
+# 10 轮/5h × 15 次 = 150 次（刚好在配额内）
+_PER_RUN_STOCKS = 10
+_PER_RUN_TRENDING = 5
 
 
 def _make_id(url: str) -> str:
@@ -38,28 +39,36 @@ def _truncate(text: str, max_len: int = _MAX_RAW_SUMMARY) -> str:
 
 
 class MinimaxSearchCollector(Collector):
-    """用 MiniMax Coding Plan 联网搜索 API 发现 RSS 盲区新闻"""
+    """用 MiniMax Coding Plan 联网搜索 API 发现 RSS 盲区新闻
+    同时追踪标的 + 趋势话题（替代已失效的 X/Twitter 信源）"""
 
     def __init__(self, coverage: list[dict] | None = None):
         self.coverage = coverage or []
+        self.trending_topics: list[str] = []
 
     async def fetch(self, source_id: str, params: dict) -> list[Item]:
         max_per_stock = params.get("max_per_stock", 3)
         stocks = [s for s in (self.coverage or []) if s.get("ticker")]  # 跳过 PRIVATE
-        if not stocks:
-            logger.warning("[minimax_search] No coverage stocks configured, skipping")
-            return []
+        topics = self.trending_topics or []
 
-        # —— 轮换策略：每轮只搜索 PER_RUN_STOCKS 个标的，控制配额 ——
-        # 使用当前时间片（每 30 分钟一个 slot）做确定性轮换
+        # —— 轮换策略：时间片轮换标的 + 趋势话题 ——
         slot = int(time.time() / 1800)  # 30 分钟窗口
-        start_idx = (slot * _PER_RUN_STOCKS) % len(stocks)
-        selected = []
+
+        # 标的轮换
+        stock_start_idx = (slot * _PER_RUN_STOCKS) % max(len(stocks), 1)
+        selected_stocks = []
         for i in range(min(_PER_RUN_STOCKS, len(stocks))):
-            selected.append(stocks[(start_idx + i) % len(stocks)])
+            selected_stocks.append(stocks[(stock_start_idx + i) % len(stocks)])
+
+        # 趋势话题轮换
+        topic_start_idx = (slot * _PER_RUN_TRENDING) % max(len(topics), 1)
+        selected_topics = []
+        for i in range(min(_PER_RUN_TRENDING, len(topics))):
+            selected_topics.append(topics[(topic_start_idx + i) % len(topics)])
+
         logger.info(
-            f"[{source_id}] Slot {slot}: searching {len(selected)}/{len(stocks)} stocks "
-            f"(indices {start_idx}-{(start_idx + len(selected) - 1) % len(stocks)})"
+            f"[{source_id}] Slot {slot}: searching {len(selected_stocks)} stocks + "
+            f"{len(selected_topics)} trending topics (total {len(selected_stocks) + len(selected_topics)} queries)"
         )
 
         client = MinimaxClient()
@@ -67,23 +76,28 @@ class MinimaxSearchCollector(Collector):
             items: list[Item] = []
             fetched_at = utcnow_iso()
             seen_urls: set[str] = set()
+            queries: list[tuple[str, str]] = []  # (query, label)
 
-            for stock in selected:
+            # 构造标的搜索查询
+            for stock in selected_stocks:
                 name = stock.get("name", "")
                 if not name:
                     continue
-
-                # 构造搜索查询
                 if any("\u4e00" <= c <= "\u9fff" for c in name):
-                    query = f"{name} AI 芯片 最新"
+                    queries.append((f"{name} AI 芯片 最新", name))
                 else:
-                    query = f"{name} AI chip semiconductor latest news"
+                    queries.append((f"{name} AI chip semiconductor latest news", name))
 
+            # 趋势话题直接用
+            for t in selected_topics:
+                queries.append((t, t))
+
+            for query, label in queries:
                 try:
                     results = await client.search(query)
                     await asyncio.sleep(_SEARCH_DELAY)
                 except Exception as e:
-                    logger.error(f"[minimax_search] Search failed for '{name}': {e}")
+                    logger.error(f"[minimax_search] Search failed for '{label}': {e}")
                     continue
 
                 for r in results[:max_per_stock]:
@@ -118,7 +132,8 @@ class MinimaxSearchCollector(Collector):
                     items.append(item)
 
             logger.info(
-                f"[{source_id}] MiniMax Search: {len(items)} results for {len(selected)} stocks"
+                f"[{source_id}] MiniMax Search: {len(items)} results "
+                f"({len(queries)} queries: {len(selected_stocks)} stocks + {len(selected_topics)} topics)"
             )
             return items
 

@@ -88,6 +88,52 @@ def _extract_summary(entry) -> str:
     return ""
 
 
+def _extract_image(entry) -> str:
+    """从 feedparser entry 中提取第一张图片 URL"""
+    # 1. media_content (Media RSS)
+    media_content = getattr(entry, "media_content", None)
+    if media_content:
+        for mc in media_content:
+            url = mc.get("url", "")
+            mtype = mc.get("type", "")
+            if url and mtype.startswith("image/"):
+                return url
+            if url and not mtype:  # 无 type 也尝试
+                return url
+    # 2. enclosures
+    enclosures = getattr(entry, "enclosures", None)
+    if enclosures:
+        for enc in enclosures:
+            href = enc.get("href", "")
+            mtype = enc.get("type", "")
+            if href and mtype.startswith("image/"):
+                return href
+    # 3. media_thumbnail
+    thumb = getattr(entry, "media_thumbnail", None)
+    if thumb:
+        for t in thumb:
+            url = t.get("url", "")
+            if url:
+                return url
+    # 4. links with rel="enclosure" and image type
+    links = getattr(entry, "links", [])
+    for link in links:
+        if link.get("rel") == "enclosure" and link.get("type", "").startswith("image/"):
+            return link.get("href", "")
+    # 5. 从 summary/content 中提取第一个 <img> src
+    content = ""
+    if hasattr(entry, "content") and entry.content:
+        content = entry.content[0].get("value", "")
+    if not content and hasattr(entry, "summary"):
+        content = entry.summary
+    if content:
+        import re
+        m = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', content, re.I)
+        if m:
+            return m.group(1)
+    return ""
+
+
 class RSSCollector(Collector):
     """通用 RSS/Atom 采集器，供所有 RSS 信源复用"""
 
@@ -139,6 +185,7 @@ class RSSCollector(Collector):
                     fetched_at=fetched_at,
                     raw_summary=_extract_summary(entry),
                     credibility=_source_cred(source_id),
+                    image_url=_extract_image(entry),
                 )
                 items.append(item)
             except Exception as e:
