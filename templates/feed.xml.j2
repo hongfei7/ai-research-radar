@@ -12,7 +12,7 @@
       <title>[{{ item.relevance_score }}分] {{ item.title }}</title>
       <link>{{ item.url }}</link>
       <guid isPermaLink="false">{{ item.id }}</guid>
-      <pubDate>{{ item.published_at }}</pubDate>
+      <pubDate>{{ item.published_at|rfc2822 }}</pubDate>
       <description><![CDATA[
         <p>{{ item.cn_summary }}</p>
         {% if item.tickers %}<p>标的: {{ item.tickers | join(", ") }}</p>{% endif %}

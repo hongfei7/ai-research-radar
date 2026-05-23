@@ -75,7 +75,7 @@ def get_coverage_by_name(cfg: dict, name: str) -> dict | None:
 def get_coverage_by_ticker(cfg: dict, ticker: str) -> dict | None:
     """按 ticker 查找覆盖标的"""
     for c in cfg["coverage"]:
-        if c["ticker"].upper() == ticker.upper():
+        if c.get("ticker", "").upper() == ticker.upper():
             return c
     return None
 
@@ -98,7 +98,7 @@ def format_coverage_for_prompt(cfg: dict) -> str:
     lines = []
     for c in cfg["coverage"]:
         aliases_str = f"（别名: {', '.join(c['aliases'])}）" if c.get("aliases") else ""
-        ticker_str = f" [{c['ticker']}]" if c["ticker"] else " [未上市]"
+        ticker_str = f" [{c.get('ticker', '')}]" if c.get("ticker") else " [未上市]"
         lines.append(f"- {c['name']}{ticker_str} {aliases_str}")
     return "\n".join(lines)
 
@@ -107,5 +107,5 @@ def format_themes_for_prompt(cfg: dict) -> str:
     """生成注入 prompt 的投资主线清单文本"""
     lines = []
     for t in cfg["themes"]:
-        lines.append(f"- {t['key']}: {t['name']}（{t['desc']}）")
+        lines.append(f"- {t['key']}: {t['name']}（{t.get('desc', '')}）")
     return "\n".join(lines)

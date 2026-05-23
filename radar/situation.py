@@ -43,7 +43,7 @@ class SituationGenerator:
         if prev is None or not prev.generated_at:
             return True
 
-        if run_count % self.update_interval == 0:
+        if run_count % max(self.update_interval, 1) == 0:
             return True
 
         if new_event_count >= self.trigger_new_events:

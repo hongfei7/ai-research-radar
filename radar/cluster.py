@@ -200,15 +200,19 @@ class ClusterEngine:
             ev_themes = set(event.themes or [])
             ev_words = set((event.summary or event.title).lower().split())
 
-            # Ticker 必须至少有一个重叠
-            if not (item_tickers & ev_tickers):
-                continue
+            # Ticker 重叠检查：双方都有 ticker 时强制要求交集，否则跳过
+            if item_tickers and ev_tickers:
+                if not (item_tickers & ev_tickers):
+                    continue
+                ticker_overlap = len(item_tickers & ev_tickers) / max(len(item_tickers | ev_tickers), 1)
+            else:
+                # 至少一方没有 ticker，不强制要求但无 ticker 加分
+                ticker_overlap = 0.0
 
-            ticker_overlap = len(item_tickers & ev_tickers) / max(len(item_tickers | ev_tickers), 1)
             theme_overlap = len(item_themes & ev_themes) / max(len(item_themes | ev_themes), 1)
             word_overlap = len(item_words & ev_words) / max(len(item_words | ev_words), 1)
 
-            # 加权的 ticker + 必须的 theme/word 双重验证
+            # ticker 无交集时提高 theme + word 权重，降低阈值门槛
             score = ticker_overlap * 0.4 + theme_overlap * 0.35 + word_overlap * 0.25
 
             if score > best_score:
@@ -263,8 +267,8 @@ class ClusterEngine:
                 event.tickers = list(set(event.tickers + (result.get("tickers", []) or [])))
                 event.themes = list(set(event.themes + (result.get("themes", []) or [])))
                 event.significance = max(
-                    event.significance,
-                    _safe_int(result.get("significance", event.significance), event.significance),
+                    _safe_int(event.significance, 0),
+                    _safe_int(result.get("significance", 0), 0),
                 )
                 event.status = result.get("status", event.status)
         except Exception as e:
@@ -281,9 +285,11 @@ class ClusterEngine:
             if not event.is_active:
                 continue
             try:
-                updated = datetime.fromisoformat(
-                    event.last_updated_at.replace("Z", "+00:00")
-                )
+                # 如果没有 last_updated_at，回退到 first_seen_at
+                ts = event.last_updated_at or event.first_seen_at
+                if not ts:
+                    continue
+                updated = datetime.fromisoformat(ts.replace("Z", "+00:00"))
                 hours_since = (now_dt - updated).total_seconds() / 3600
                 if hours_since >= self.event_ttl_hours:
                     event.is_active = False

@@ -21,7 +21,7 @@ _TELEGRAM_MAX_LENGTH = 4096
 # GitHub Issue
 # ================================================================
 
-def _get_github_env() -> tuple[str, str]:
+def _get_github_env() -> tuple[str, str, str]:
     """从 GitHub Actions 环境获取 repo 信息"""
     repo = os.environ.get("GITHUB_REPOSITORY", "")
     token = os.environ.get("GITHUB_TOKEN", "")
@@ -104,9 +104,18 @@ async def send_telegram(
         logger.warning("TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID not set, skipping")
         return False
 
-    # 截断过长消息
+    # 兜底截断：优先在段落/句子边界处断，保护可读性
     if len(text) > _TELEGRAM_MAX_LENGTH:
-        text = text[:_TELEGRAM_MAX_LENGTH - 100] + "\n\n[...消息过长已截断]"
+        budget = _TELEGRAM_MAX_LENGTH - 50
+        last_break = text.rfind("\n\n", 0, budget)
+        if last_break > budget * 0.5:
+            text = text[:last_break] + "\n\n[...完整版见实时看板]"
+        else:
+            cut = text[:budget].rfind("。")
+            if cut > budget * 0.5:
+                text = text[:cut + 1] + "\n\n[...完整版见实时看板]"
+            else:
+                text = text[:budget] + "\u2026\n\n[...完整版见实时看板]"
 
     url = f"https://api.telegram.org/bot{token}/sendMessage"
     payload = {
@@ -132,14 +141,67 @@ async def send_telegram(
         return False
 
 
+# —— 格式化辅助函数 ——
+
+def _clip(text: str, max_len: int) -> str:
+    """截断文本，优先在句号处断句"""
+    if not text:
+        return ""
+    text = text.strip()
+    if len(text) <= max_len:
+        return text
+    for sep in ("。", "\n", "；", "，"):
+        cut = text[:max_len].rfind(sep)
+        if cut > max_len * 0.5:
+            return text[:cut + 1]
+    return text[:max_len - 1] + "\u2026"
+
+
+def _fmt_tickers(tickers: list[str], max_display: int = 4) -> str:
+    """紧凑标的展示，超过上限显示 +N"""
+    if not tickers:
+        return ""
+    display = tickers[:max_display]
+    s = ", ".join(display)
+    if len(tickers) > max_display:
+        s += f" +{len(tickers) - max_display}"
+    return f" [{s}]"
+
+
+def _extract_headline(text: str, max_len: int = 200) -> str:
+    """从长文本中提取 1-2 句作为标题式概述"""
+    if not text:
+        return ""
+    text = text.strip()
+    if len(text) <= max_len:
+        return text
+    first_period = text.find("。")
+    if first_period == -1 or first_period > max_len:
+        return _clip(text, max_len)
+    second_period = text.find("。", first_period + 1)
+    if second_period != -1 and second_period < max_len:
+        return text[:second_period + 1]
+    return text[:first_period + 1]
+
+
+# —— 主格式化函数 ——
+
 def format_telegram_alert(
     new_events: list[Event],
     updated_events: list[Event],
     all_active_events: list[Event],
     new_items: list[Item],
     situation: Optional[Situation],
+    site_url: str = "",
 ) -> str:
-    """格式化 Telegram 推送 —— 只展示本轮新增和更新的事件"""
+    """格式化 Telegram 推送 —— 言简意赅，保留必要的判断依据
+
+    设计原则:
+    - 高频推送，每 30min 一次，用户会自行延伸研究重要内容
+    - 每个事件必须保留: 标题 + 关键标的 + 摘要 + 重要性评分 + 来源数
+    - 不硬截断: 优先牺牲低优先级内容（趋势 → 态势 → 更新事件 → 新增事件）
+    - 事件去重: 同时出现在 new/updated 中仅展示一次
+    """
     from datetime import datetime
     from zoneinfo import ZoneInfo
     try:
@@ -148,53 +210,58 @@ def format_telegram_alert(
         hkt = None
     now_str = datetime.now(hkt).strftime("%m-%d %H:%M HKT") if hkt else ""
 
-    lines = [f"*AI 投研雷达 · {now_str}*\n"]
+    MAX_TOTAL = 3900
 
-    # —— 态势概述 ——
+    # (label, text, priority): 0=required, 1=high, 2=medium, 3=low
+    parts: list[tuple[str, str, int]] = []
+
+    # —— 1. 标题行 (priority 0) ——
+    parts.append(("header", f"*AI 投研雷达 \u00b7 {now_str}*\n", 0))
+
+    # —— 2. 态势概要 (priority 2) ——
     if situation and situation.text:
-        lines.append(f"_{situation.text}_\n")
+        headline = _extract_headline(situation.text, 200)
+        if headline:
+            parts.append(("situation", f"_{headline}_\n\n", 2))
 
-    # —— 趋势信号（优先展示） ——
-    if situation and situation.trend_spotting:
-        lines.append(f"*趋势:*\n{situation.trend_spotting}\n")
-
-    # —— 本轮新事件 ——
-    if new_events:
-        lines.append(f"*本轮新增事件 ({len(new_events)}):*")
-        for ev in sorted(new_events, key=lambda e: e.significance, reverse=True)[:5]:
-            cred = "🟢" if ev.significance >= 8 else "🟡" if ev.significance >= 6 else "🔴"
-            tickers_str = f" [{', '.join(ev.tickers)}]" if ev.tickers else ""
-            lines.append(
-                f"\n{cred} *{ev.title}*{tickers_str}"
-                f"\n  {ev.summary[:120]}{'...' if len(ev.summary) > 120 else ''}"
-                f"\n  重要: {ev.significance}/10 | 来源: {ev.source_count}"
+    # —— 3. 本轮新事件 (priority 0, top 6 → trim to 3) ——
+    updated_ids = {ev.event_id for ev in updated_events}
+    deduped_new = [ev for ev in new_events if ev.event_id not in updated_ids]
+    if deduped_new:
+        sorted_new = sorted(deduped_new, key=lambda e: e.significance, reverse=True)
+        new_section = f"*\U0001f525 新增 ({len(deduped_new)}):*\n"
+        for ev in sorted_new[:6]:
+            flag = "\U0001f7e2" if ev.significance >= 8 else "\U0001f7e1" if ev.significance >= 6 else "\U0001f534"
+            tickers_str = _fmt_tickers(ev.tickers, max_display=5)
+            summary = _clip(ev.summary or "", 90)
+            new_section += (
+                f"{flag} *{_clip(ev.title or '', 42)}*{tickers_str}\n"
+                f"  {summary} | {ev.significance}/10 | {ev.source_count}\u6e90\n"
             )
+        parts.append(("new_events", new_section + "\n", 0))
 
-    # —— 本轮更新的已有事件 ——
-    if updated_events:
-        lines.append(f"\n*本轮更新事件 ({len(updated_events)}):*")
-        for ev in sorted(updated_events, key=lambda e: e.significance, reverse=True)[:5]:
-            tickers_str = f" [{', '.join(ev.tickers)}]" if ev.tickers else ""
-            lines.append(
-                f"\n• *{ev.title}*{tickers_str}"
-                f"\n  {ev.summary[:100]}{'...' if len(ev.summary) > 100 else ''}"
+    # —— 4. 重要更新 (priority 1, top 4 → trim to 2) ——
+    new_ids = {ev.event_id for ev in new_events}
+    deduped_upd = [ev for ev in updated_events if ev.event_id not in new_ids]
+    if deduped_upd:
+        sorted_upd = sorted(deduped_upd, key=lambda e: e.significance, reverse=True)
+        upd_section = f"*\U0001f4cc 更新 ({len(deduped_upd)}):*\n"
+        for ev in sorted_upd[:4]:
+            tickers_str = _fmt_tickers(ev.tickers, max_display=4)
+            summary = _clip(ev.summary or "", 70)
+            upd_section += (
+                f"\u2022 *{_clip(ev.title or '', 42)}*{tickers_str}\n"
+                f"  {summary} | {ev.significance}/10\n"
             )
+        parts.append(("updated_events", upd_section + "\n", 1))
 
-    # —— 本轮精选条目（新增条目中的高价值内容） ——
-    if new_items:
-        top_items = sorted(new_items, key=lambda it: it.relevance_score, reverse=True)[:8]
-        if top_items:
-            lines.append(f"\n*本轮精选 ({len(top_items)}):*")
-            for item in top_items:
-                cred_emoji = {"high": "🟢", "medium": "🟡", "low": "🔴"}.get(item.credibility, "⚪")
-                tickers_str = f" [{', '.join(item.tickers)}]" if item.tickers else ""
-                lines.append(
-                    f"\n{cred_emoji} {item.title}"
-                    f"{tickers_str} · {item.relevance_score}分"
-                    f"\n  {item.cn_summary[:100]}{'...' if len(item.cn_summary) > 100 else ''}"
-                )
+    # —— 5. 趋势信号 (priority 3 — trimmed first) ——
+    if situation and situation.trend_spotting and (deduped_new or deduped_upd):
+        trend = _clip(situation.trend_spotting.strip(), 350)
+        if trend:
+            parts.append(("trend", f"*\U0001f4e1 趋势:*\n{trend}\n\n", 3))
 
-    # —— 统计栏 ——
+    # —— 6. 统计栏 + 链接 (priority 0) ——
     active_count = len([e for e in all_active_events if e.is_active])
     developing = len([e for e in all_active_events if e.is_active and e.status == "developing"])
     top_tickers: dict[str, int] = {}
@@ -202,13 +269,81 @@ def format_telegram_alert(
         for tk in ev.tickers or []:
             top_tickers[tk] = top_tickers.get(tk, 0) + 1
     hot = sorted(top_tickers.items(), key=lambda x: x[1], reverse=True)[:5]
-    hot_str = ", ".join(f"{tk}({n})" for tk, n in hot) if hot else "—"
+    hot_str = ", ".join(f"{tk}({n})" for tk, n in hot) if hot else "\u2014"
 
-    lines.append(
-        f"\n———\n活跃事件: {active_count} | 演进中: {developing} | 最热标的: {hot_str}"
-    )
+    footer = f"\u2014\u2014\u2014\n\u6d3b\u8dc3 {active_count} | \u6f14\u8fdb {developing} | \u70ed\u6807 {hot_str}"
+    if site_url:
+        footer += f"\n[\u5b9e\u65f6\u770b\u677f]({site_url})"
+    parts.append(("footer", footer, 0))
 
-    return "\n".join(lines)
+    # —— 组装 + 软性空间控制 ——
+    def _assemble(pts: list[tuple[str, str, int]]) -> str:
+        return "".join(p[1] for p in pts)
+
+    full_text = _assemble(parts)
+    if len(full_text) <= MAX_TOTAL:
+        return full_text.rstrip()
+
+    # Step 1: 压缩趋势 (priority 3) — 350 → 200 chars
+    for i, (label, text, pri) in enumerate(parts):
+        if pri == 3 and situation and situation.trend_spotting:
+            short_trend = _clip(situation.trend_spotting.strip(), 200)
+            parts[i] = (label, f"*\U0001f4e1 趋势:*\n{short_trend}\n\n", 3)
+            if len(_assemble(parts)) <= MAX_TOTAL:
+                return _assemble(parts).rstrip()
+
+    # Step 2: 压缩态势 (priority 2) — 200 → 120 chars
+    for i, (label, text, pri) in enumerate(parts):
+        if pri == 2 and situation and situation.text:
+            shorter = _extract_headline(situation.text, 120)
+            parts[i] = (label, f"_{shorter}_\n\n" if shorter else "", 2)
+            if len(_assemble(parts)) <= MAX_TOTAL:
+                return _assemble(parts).rstrip()
+
+    # Step 3: 减少更新事件 (priority 1) — 4 → 2
+    for i, (label, text, pri) in enumerate(parts):
+        if pri == 1 and deduped_upd:
+            sorted_upd = sorted(deduped_upd, key=lambda e: e.significance, reverse=True)
+            reduced = f"*\U0001f4cc 更新 ({len(deduped_upd)}):*\n"
+            for ev in sorted_upd[:2]:
+                tickers_str = _fmt_tickers(ev.tickers, max_display=3)
+                summary = _clip(ev.summary or "", 60)
+                reduced += (
+                    f"\u2022 *{_clip(ev.title or '', 40)}*{tickers_str}\n"
+                    f"  {summary}\n"
+                )
+            parts[i] = (label, reduced + "\n", 1)
+            if len(_assemble(parts)) <= MAX_TOTAL:
+                return _assemble(parts).rstrip()
+
+    # Step 4: 减少新事件 (priority 0) — 6 → 3
+    for i, (label, text, pri) in enumerate(parts):
+        if pri == 0 and label == "new_events" and deduped_new:
+            sorted_new = sorted(deduped_new, key=lambda e: e.significance, reverse=True)
+            reduced = f"*\U0001f525 新增 ({len(deduped_new)}):*\n"
+            for ev in sorted_new[:3]:
+                flag = "\U0001f7e2" if ev.significance >= 8 else "\U0001f7e1" if ev.significance >= 6 else "\U0001f534"
+                tickers_str = _fmt_tickers(ev.tickers, max_display=4)
+                summary = _clip(ev.summary or "", 80)
+                reduced += (
+                    f"{flag} *{_clip(ev.title or '', 40)}*{tickers_str}\n"
+                    f"  {summary} | {ev.significance}/10\n"
+                )
+            parts[i] = (label, reduced + "\n", 0)
+            if len(_assemble(parts)) <= MAX_TOTAL:
+                return _assemble(parts).rstrip()
+
+    # Step 5: 最终兜底 — header + new events (3) + footer
+    result_parts = []
+    for label, text, pri in parts:
+        if pri == 0 and label in ("header", "footer"):
+            result_parts.append(text)
+        elif pri == 0 and label == "new_events":
+            result_parts.append(text)
+    result = "".join(result_parts)
+    if len(result) > MAX_TOTAL:
+        result = result[:MAX_TOTAL - 30] + "\u2026\n[...\u5b8c\u6574\u7248\u89c1\u5b9e\u65f6\u770b\u677f]"
+    return result.rstrip()
 
 
 # ================================================================
@@ -222,7 +357,7 @@ def update_readme(issue_url: Optional[str] = None, site_url: str = "") -> None:
 
     header = f"""# AI 投研雷达
 
-> AI/科技/半导体板块 · 滚动情报库 · 由 MiniMax 驱动策展
+> AI/科技/半导体板块 \u00b7 滚动情报库 \u00b7 由 MiniMax 驱动策展
 > 仅作为研究输入素材，不构成投资建议
 
 ## 最新日报
@@ -236,7 +371,6 @@ def update_readme(issue_url: Optional[str] = None, site_url: str = "") -> None:
 """
     if readme_path.exists():
         existing = readme_path.read_text(encoding="utf-8")
-        # 保留 --- 之后的内容
         parts = existing.split("---", 1)
         if len(parts) > 1:
             header += "---" + parts[1]
@@ -258,25 +392,22 @@ def should_telegram_alert(
     """
     判断是否需要推送 Telegram：
     - 新事件 significance >= threshold
-    - 已有事件 direction 翻转
-    - 距上次兜底推送 ≥ digest_interval_hours
+    - 已有事件重要更新
+    - 距上次兜底推送 >= digest_interval_hours
     """
     telegram_cfg = cfg.get("channels", {}).get("telegram", {})
 
-    # 新事件重要性高
     threshold = telegram_cfg.get("notify_new_event_threshold", 7)
     for ev in new_events:
         if ev.significance >= threshold:
             return True
 
-    # 方向翻转
-    if telegram_cfg.get("notify_direction_flip", True):
+    notify_update = telegram_cfg.get("notify_direction_flip", True)
+    if notify_update:
         for ev in updated_events:
-            # 这里简化：有更新的活跃事件 default 推送
-            if ev.significance >= 6:
+            if ev.significance >= threshold:
                 return True
 
-    # 兜底推送间隔
     if situation and situation.last_telegram_digest_at:
         try:
             from datetime import datetime, timezone
@@ -284,7 +415,7 @@ def should_telegram_alert(
                 situation.last_telegram_digest_at.replace("Z", "+00:00")
             )
             now = datetime.now(timezone.utc)
-            interval = telegram_cfg.get("digest_interval_hours", 6)
+            interval = telegram_cfg.get("digest_interval_hours", 1)
             if (now - last).total_seconds() >= interval * 3600:
                 return True
         except Exception:

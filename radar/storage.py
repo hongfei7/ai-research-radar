@@ -34,8 +34,9 @@ def save_items(items: list[Item], date_str: str | None = None) -> Path:
                 if line:
                     try:
                         obj = json.loads(line)
-                        existing[obj["id"]] = obj
-                    except json.JSONDecodeError:
+                        if isinstance(obj, dict) and "id" in obj:
+                            existing[obj["id"]] = obj
+                    except (json.JSONDecodeError, KeyError):
                         continue
 
     for item in items:

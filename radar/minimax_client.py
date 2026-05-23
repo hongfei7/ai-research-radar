@@ -122,13 +122,13 @@ class MinimaxClient:
                 choices = data.get("choices", [])
                 if choices:
                     content = choices[0].get("message", {}).get("content", "")
-                    return content
+                    return content if content is not None else ""
 
                 # 兼容其他返回格式
                 if "reply" in data:
-                    return data["reply"]
+                    return data["reply"] if data["reply"] is not None else ""
                 if "data" in data and "reply" in data["data"]:
-                    return data["data"]["reply"]
+                    return data["data"]["reply"] if data["data"]["reply"] is not None else ""
 
                 logger.warning(f"Unexpected chat response format: {json.dumps(data, ensure_ascii=False)[:500]}")
                 return ""

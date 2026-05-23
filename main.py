@@ -192,9 +192,11 @@ async def run_process(cfg: dict) -> None:
 
     if processed:
         save_items(processed)
-        dedup = DedupStore()
-        dedup.mark_seen_batch([(it.id, it.title) for it in processed])
-        dedup.close()
+
+    # 将所有抓取的条目标记为已见（即使未通过筛选），避免重复 LLM 调用
+    dedup = DedupStore()
+    dedup.mark_seen_batch([(it.id, it.title) for it in new_items])
+    dedup.close()
 
     logger.info(
         f"M2 process stage done: {len(new_items)} new → "
@@ -229,8 +231,9 @@ async def run_cluster(cfg: dict) -> tuple[list[Item], dict]:
         save_items(clustered_items)
         save_events(updated_events)
 
+        # 将所有抓取的条目标记为已见（即使未通过筛选）
         dedup = DedupStore()
-        dedup.mark_seen_batch([(it.id, it.title) for it in clustered_items])
+        dedup.mark_seen_batch([(it.id, it.title) for it in new_items])
         dedup.close()
 
         logger.info(
@@ -296,7 +299,6 @@ async def run_full(cfg: dict) -> None:
             return
 
         # Stage 2.5: 交叉综合分析 —— 上帝视角元分析（每轮必跑）
-        cross_analysis_text = ""
         logger.info("Running cross-analysis on processed items...")
         cross_analysis_text = await processor.cross_analyze(processed)
         if cross_analysis_text:
@@ -305,7 +307,6 @@ async def run_full(cfg: dict) -> None:
             logger.warning("Cross-analysis returned empty")
 
         # Stage 2.6: 趋势发现 —— 识别新兴趋势与早期信号（每轮必跑）
-        trend_text = ""
         logger.info("Running trend spotting on processed items...")
         trend_text = await processor.trend_spotting(processed)
         if trend_text:
@@ -357,6 +358,8 @@ async def run_full(cfg: dict) -> None:
             if trend_text and sit:
                 sit.trend_spotting = trend_text
             if cross_analysis_text or trend_text:
+                from radar.models import utcnow_iso as _now
+                sit.generated_at = _now()
                 save_situation(sit)
             logger.info("Skipping situation update (not due yet)")
 
@@ -366,8 +369,9 @@ async def run_full(cfg: dict) -> None:
         save_items(clustered_items)
         save_events(updated_events)
 
+        # 将所有抓取的条目标记为已见（即使未通过筛选）
         dedup = DedupStore()
-        dedup.mark_seen_batch([(it.id, it.title) for it in clustered_items])
+        dedup.mark_seen_batch([(it.id, it.title) for it in new_items])
         dedup.close()
 
         # ================================================================
@@ -441,15 +445,14 @@ async def run_full(cfg: dict) -> None:
                         all_active_events=all_events_list,
                         new_items=new_items_this_run,
                         situation=sit,
+                        site_url=site_url,
                     )
-                    # 加链接
-                    alert_text += f"\n\n[实时看板]({site_url})"
-                    await send_telegram(alert_text)
-                    # 更新兜底推送时间
-                    if sit:
-                        from radar.models import utcnow_iso
-                        sit.last_telegram_digest_at = utcnow_iso()
-                        save_situation(sit)
+                    if await send_telegram(alert_text):
+                        # 仅推送成功才更新兜底推送时间
+                        if sit:
+                            from radar.models import utcnow_iso
+                            sit.last_telegram_digest_at = utcnow_iso()
+                            save_situation(sit)
             except Exception as e:
                 logger.error(f"Telegram push failed: {e}")
 

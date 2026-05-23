@@ -8,7 +8,7 @@
 ## 二、按投资主线
 {% for theme in themes_with_items %}
 ### {{ theme.name }}
-{% for it in theme.items %}
+{% for it in theme.entries %}
 - **{{ it.title }}** — {{ it.cn_summary }}
   〔方向: {{ it.direction|direction_str }}〕· 来源: {{ it.source }} {% if it.credibility %}{{ cred_emoji(it.credibility) }}{% endif %}{% if not it.is_primary_source %} ⛓️转载{% endif %} · [原文]({{ it.url }})
   - So what: {{ it.so_what }}
@@ -18,7 +18,7 @@
 ## 三、个股动态
 {% for tk in tickers_with_items %}
 ### {{ tk.name }}（{{ tk.ticker }}）
-{% for it in tk.items %}
+{% for it in tk.entries %}
 - {{ it.cn_summary }} · [原文]({{ it.url }})
 {% endfor %}
 {% endfor %}

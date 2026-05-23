@@ -37,6 +37,7 @@ coverage:
   - { name: "金山办公",   ticker: "688111", market: "CN",      aliases: ["Kingsoft"] }
   - { name: "商汤",       ticker: "0020",   market: "HK",      aliases: ["SenseTime"] }
   - { name: "科大讯飞",   ticker: "002230", market: "CN",      aliases: ["iFlytek"] }
+  - { name: "天数智芯",   ticker: "",        market: "PRIVATE", aliases: ["Iluvatar CoreX", "Tianshu Zhixin"] }
   # 未上市但需跟踪的
   - { name: "OpenAI",    ticker: "",        market: "PRIVATE", aliases: [] }
   - { name: "Anthropic", ticker: "",        market: "PRIVATE", aliases: [] }

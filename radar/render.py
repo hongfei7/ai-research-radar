@@ -9,7 +9,7 @@ from typing import Optional
 from jinja2 import Environment, FileSystemLoader
 
 from radar.models import Item, Event, Situation, today_str, parse_iso
-from radar.config import get_coverage_by_ticker
+from radar.config import get_coverage_by_ticker, load_config, get_theme_by_key
 from radar.credibility import CREDIBILITY_EMOJI, CREDIBILITY_LABEL
 
 logger = logging.getLogger(__name__)
@@ -35,12 +35,6 @@ def _format_direction(direction: dict) -> str:
 _env.filters["direction_str"] = _format_direction
 
 
-def _ensure_pages_dir() -> None:
-    _PAGES_DIR.mkdir(parents=True, exist_ok=True)
-    (_PAGES_DIR / "tickers").mkdir(exist_ok=True)
-    (_PAGES_DIR / "themes").mkdir(exist_ok=True)
-
-
 def _rfc2822(iso_str: str) -> str:
     """ISO8601 → RFC 2822 格式（用于 RSS pubDate）"""
     try:
@@ -48,6 +42,15 @@ def _rfc2822(iso_str: str) -> str:
         return dt.strftime("%a, %d %b %Y %H:%M:%S GMT")
     except Exception:
         return iso_str
+
+
+_env.filters["rfc2822"] = _rfc2822
+
+
+def _ensure_pages_dir() -> None:
+    _PAGES_DIR.mkdir(parents=True, exist_ok=True)
+    (_PAGES_DIR / "tickers").mkdir(exist_ok=True)
+    (_PAGES_DIR / "themes").mkdir(exist_ok=True)
 
 
 def _now_hkt() -> str:
@@ -206,12 +209,14 @@ def render_daily_brief(
         for th in it.themes or []:
             themes_map.setdefault(th, []).append(it)
 
+    cfg = load_config()
     themes_with_items = []
     for th_key, th_items in themes_map.items():
-        # 找主线名称
+        theme_info = get_theme_by_key(cfg, th_key)
+        display_name = theme_info["name"] if theme_info else th_key
         themes_with_items.append({
-            "name": th_key,
-            "items": th_items[:10],
+            "name": display_name,
+            "entries": th_items[:10],
         })
 
     # 按标的分组
@@ -225,7 +230,7 @@ def render_daily_brief(
         tickers_with_items.append({
             "name": tk_name,
             "ticker": "",
-            "items": tk_items[:15],
+            "entries": tk_items[:15],
         })
 
     return template.render(

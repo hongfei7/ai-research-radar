@@ -35,28 +35,45 @@ class Processor:
         self.max_items = cfg["scoring"].get("max_items_in_brief", 25)
         # 预计算合法值集合，用于校验 LLM 输出
         self._valid_tickers = {c["name"] for c in cfg["coverage"]}
+        # 别名 → 标准名 映射（LLM 可能用中文别名）
+        self._alias_to_name: dict[str, str] = {}
+        for c in cfg["coverage"]:
+            for alias in c.get("aliases", []) or []:
+                self._alias_to_name[alias] = c["name"]
         self._valid_themes = {t["key"] for t in cfg["themes"]}
 
     # ================================================================
     # 后处理校验：过滤 LLM 幻觉的 ticker/theme
     # ================================================================
 
+    def _resolve_ticker(self, name: str) -> str | None:
+        """将 LLM 返回的名称（可能是别名）解析为标准名，无法匹配则返回 None"""
+        if name in self._valid_tickers:
+            return name
+        return self._alias_to_name.get(name)  # None 表示真正的幻觉
+
     def _validate_item(self, item: Item, stage: str = "triage") -> Item:
-        """校验并清洗 LLM 输出的 tickers 和 themes，移除不在 config 中的值"""
-        if item.tickers:
-            orig = set(item.tickers)
-            valid_tickers = [t for t in item.tickers if t in self._valid_tickers]
-            hallucinated = orig - set(valid_tickers)
-            if hallucinated:
-                logger.warning(
-                    f"[{stage}] Hallucinated tickers stripped for {item.id}: {hallucinated}"
-                )
-            item.tickers = valid_tickers
+        """校验并清洗 LLM 输出的 tickers 和 themes，别名自动映射为标准名"""
+        if item.tickers and isinstance(item.tickers, list):
+            clean: list[str] = []
+            for t in item.tickers:
+                resolved = self._resolve_ticker(t)
+                if resolved:
+                    clean.append(resolved)
+                else:
+                    logger.warning(
+                        f"[{stage}] Unknown ticker stripped for {item.id}: {t}"
+                    )
+            item.tickers = clean
+        elif item.tickers and not isinstance(item.tickers, list):
+            logger.warning(
+                f"[{stage}] Non-list tickers stripped for {item.id}: {type(item.tickers)}"
+            )
+            item.tickers = []
 
         if item.themes:
-            orig = set(item.themes)
             valid_themes = [t for t in item.themes if t in self._valid_themes]
-            hallucinated = orig - set(valid_themes)
+            hallucinated = set(item.themes) - set(valid_themes)
             if hallucinated:
                 logger.warning(
                     f"[{stage}] Hallucinated themes stripped for {item.id}: {hallucinated}"
@@ -67,14 +84,17 @@ class Processor:
         if item.direction and isinstance(item.direction, dict):
             clean_direction = {}
             for tk, d in item.direction.items():
-                if tk in self._valid_tickers:
-                    clean_direction[tk] = d
+                resolved = self._resolve_ticker(tk)
+                if resolved:
+                    # 别名可能和原 key 不同，合并同标的 direction
+                    if resolved not in clean_direction:
+                        clean_direction[resolved] = d
                 else:
                     logger.warning(
-                        f"[{stage}] Hallucinated direction ticker stripped for {item.id}: {tk}"
+                        f"[{stage}] Unknown direction ticker stripped for {item.id}: {tk}"
                     )
             item.direction = clean_direction
-        elif item.direction and not isinstance(item.direction, dict):
+        elif not isinstance(item.direction, dict):
             logger.warning(
                 f"[{stage}] Non-dict direction value stripped for {item.id}: {type(item.direction)}"
             )
@@ -143,7 +163,11 @@ class Processor:
             if s is None:
                 logger.warning(f"Triage: item {item.id} not in LLM response, silently dropped")
                 continue
-            score = int(s.get("score", 0))
+            try:
+                score = int(s.get("score", 0))
+            except (ValueError, TypeError):
+                logger.warning(f"Triage: non-numeric score for {item.id}: {s.get('score')}")
+                continue
             if score < self.min_score:
                 continue
             item.relevance_score = score
@@ -203,8 +227,13 @@ class Processor:
                 )
                 if isinstance(result, dict):
                     item.cn_summary = result.get("cn_summary", "") or ""
-                    item.tickers = result.get("tickers", []) or []
-                    item.themes = result.get("themes", []) or []
+                    # 合并而非覆盖：extract 新增 tickers/themes，不丢弃 triage 已有的
+                    ext_tickers = result.get("tickers", []) or []
+                    if isinstance(ext_tickers, list):
+                        item.tickers = list(set((item.tickers or []) + ext_tickers))
+                    ext_themes = result.get("themes", []) or []
+                    if isinstance(ext_themes, list):
+                        item.themes = list(set((item.themes or []) + ext_themes))
                     item.direction = result.get("direction", {}) or {}
                     item.so_what = result.get("so_what", "") or ""
                     item.is_primary_source = result.get("is_primary_source", True)
