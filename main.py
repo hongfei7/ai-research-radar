@@ -99,6 +99,9 @@ async def collect_all(cfg: dict) -> list[Item]:
         new_ids = dedup.filter_new(all_ids)
         id_set = set(new_ids)
         new_items = [it for it in all_items if it.id in id_set]
+        # 立即标记所有采集到的条目为 seen，防止管道中途崩溃导致下次重复处理
+        if all_items:
+            dedup.mark_seen_batch([(it.id, it.title) for it in all_items])
         logger.info(f"Dedup: {len(all_items)} raw → {len(new_items)} new")
     else:
         new_items = []
@@ -292,15 +295,16 @@ async def run_full(cfg: dict) -> None:
         # ================================================================
         channels = cfg.get("channels", {})
 
-        # GitHub Issue (仅日报时间)
+        # GitHub Issue + 晨报 Telegram 推送（仅日报时间）
         issue_cfg = channels.get("github_issue", {})
+        tg_cfg = channels.get("telegram", {})
         if issue_cfg.get("enabled", False):
             try:
                 from datetime import datetime
                 from zoneinfo import ZoneInfo
                 hkt_now = datetime.now(ZoneInfo("Asia/Hong_Kong"))
                 schedule_hour = issue_cfg.get("schedule_hour_hkt", 7)
-                # 在目标小时 ±15 分钟内创建 Issue
+                # 在目标小时 ±1h 且前半小时内触发
                 if abs(hkt_now.hour - schedule_hour) <= 1 and hkt_now.minute < 30:
                     synthesis = sit.text if sit else ""
                     brief_md = render_daily_brief(clustered_items, synthesis, site_url)
@@ -308,6 +312,18 @@ async def run_full(cfg: dict) -> None:
                         brief_md, issue_cfg.get("label", "晨报")
                     )
                     update_readme(issue_url, site_url)
+
+                    # 同时推送晨报全文到 Telegram（每天只推一次）
+                    today_str_hkt = hkt_now.strftime("%Y-%m-%d")
+                    if sit and sit.morning_brief_date != today_str_hkt:
+                        from radar.publish import send_telegram as _send_tg
+                        tg_brief = f"*AI 投研雷达 · 晨报 · {today_str_hkt}*\n\n{brief_md}"
+                        # Telegram Markdown 对某些字符敏感，用 MarkdownV2 或截断处理
+                        if len(tg_brief) > 4000:
+                            tg_brief = tg_brief[:3950] + "\n\n[...完整版见 Issue]"
+                        await _send_tg(tg_brief, parse_mode="Markdown")
+                        sit.morning_brief_date = today_str_hkt
+                        save_situation(sit)
             except Exception as e:
                 logger.error(f"Daily brief / issue failed: {e}")
 

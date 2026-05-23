@@ -215,7 +215,7 @@ class MinimaxClient:
             model: embedding 模型名，默认 embo-01
 
         Returns:
-            embedding 向量 (float 列表)
+            embedding 向量 (float 列表)，失败返回空列表
         """
         client = await self._get_client()
         url = f"{self.base_url}/embeddings"
@@ -230,6 +230,14 @@ class MinimaxClient:
             resp = await client.post(url, json=payload)
             resp.raise_for_status()
             data = resp.json()
+
+            # 检查 API 业务错误
+            base_resp = data.get("base_resp", {})
+            if base_resp.get("status_code", 0) != 0:
+                err_msg = base_resp.get("status_msg", "unknown error")
+                err_code = base_resp.get("status_code", -1)
+                logger.error(f"Embedding API error [{err_code}]: {err_msg}")
+                return []
 
             # 标准返回格式: data.vectors[0]
             vectors = data.get("vectors", [])
@@ -278,6 +286,14 @@ class MinimaxClient:
             resp = await client.post(url, json=payload)
             resp.raise_for_status()
             data = resp.json()
+
+            # 检查 API 业务错误
+            base_resp = data.get("base_resp", {})
+            if base_resp.get("status_code", 0) != 0:
+                err_msg = base_resp.get("status_msg", "unknown error")
+                err_code = base_resp.get("status_code", -1)
+                logger.error(f"Embedding batch API error [{err_code}]: {err_msg}")
+                return [[] for _ in texts]
 
             vectors = data.get("vectors", [])
             if vectors:

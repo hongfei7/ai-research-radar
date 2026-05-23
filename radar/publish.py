@@ -143,18 +143,47 @@ def format_telegram_alert(
     if situation and situation.text:
         lines.append(f"_{situation.text}_\n")
 
+    # 统计
+    active = [ev for ev in events if ev.is_active]
+    developing = [ev for ev in active if ev.status == "developing"]
+    stable = [ev for ev in active if ev.status == "stable"]
+    total_sources = sum(ev.source_count for ev in active)
+    top_tickers: dict[str, int] = {}
+    for ev in active:
+        for tk in ev.tickers or []:
+            top_tickers[tk] = top_tickers.get(tk, 0) + 1
+    hot_tickers = sorted(top_tickers.items(), key=lambda x: x[1], reverse=True)[:5]
+
+    # 统计摘要行
+    lines.append(
+        f"活跃事件: {len(active)} | 演进中: {len(developing)} | "
+        f"稳定: {len(stable)} | 覆盖来源: {total_sources}"
+    )
+    if hot_tickers:
+        lines.append(f"热点标的: {', '.join(f'{tk}({n})' for tk, n in hot_tickers)}")
+    lines.append("")
+
     if new_event_count > 0:
-        lines.append(f"\n*新事件 ({new_event_count}):*")
-        new_events = [
-            ev for ev in events
-            if ev.is_active and ev.status == "developing"
-        ]
-        for ev in new_events[:5]:
+        lines.append(f"*新事件 ({new_event_count}):*")
+        new_events = [ev for ev in developing][:5]
+        for ev in new_events:
             lines.append(f"\n• *{ev.title}*")
             lines.append(f"  {ev.summary}")
             if ev.tickers:
                 lines.append(f"  标的: {', '.join(ev.tickers)}")
-            lines.append(f"  重要性: {ev.significance}/10")
+            lines.append(f"  重要性: {ev.significance}/10 | 来源: {ev.source_count}")
+    else:
+        # 无新事件时展示最近活跃事件列表
+        lines.append("*最近活跃事件:*")
+        sorted_events = sorted(active, key=lambda e: e.significance, reverse=True)[:8]
+        for i, ev in enumerate(sorted_events, 1):
+            status_emoji = "🔄" if ev.status == "developing" else "✅"
+            tickers_str = f" [{', '.join(ev.tickers)}]" if ev.tickers else ""
+            lines.append(
+                f"\n{i}. {status_emoji} *{ev.title}*{tickers_str}"
+                f"\n   {ev.summary[:100]}{'...' if len(ev.summary) > 100 else ''}"
+                f"\n   重要性: {ev.significance}/10 | 来源: {ev.source_count}"
+            )
 
     return "\n".join(lines)
 

@@ -22,13 +22,11 @@
 8. original_source_url: 如果是转载或聚合，尝试从原文中找到原始来源 URL（如引用的链接、提到的来源），无法找到则留空字符串 ""
 
 要求(全部基于所给标题与文本，不得编造；信息不足时如实说明):
-1. cn_summary: 中文摘要，≤120字，包含三要素——发生了什么 / 关键数据或细节 / 为什么值得关注。如果原文为英文，请翻译并提炼为地道的中文
-2. tickers: 受影响的覆盖标的(用清单中的 name)
-3. themes: 涉及的投资主线(用清单中的 key)
+1. cn_summary: 中文摘要，≤180字，必须包含四要素——发生了什么 / 关键数据或细节 / 涉及的具体公司或技术 / 为什么值得关注。如果原文为英文，请翻译并提炼为地道的中文。力求信息密度高，不要泛泛而谈
+2. tickers: 受影响的覆盖标的(用清单中的 name)，仔细检查是否遗漏
+3. themes: 涉及的投资主线(用清单中的 key)，尽量覆盖所有相关主线
 4. direction: 对每个受影响标的的方向性判读 {{标的name: "positive|negative|neutral"}}
-5. so_what: 一句话(≤50字)，作为分析师下一步该关注什么
-6. is_primary_source: true 或 false
-7. original_source_url: "" 或原始来源 URL
+5. so_what: 分析师行动建议，≤80字，包含：需跟踪的关键变量 / 可能的二阶效应 / 与其他标的或主线的联动
 
 仅输出 JSON:
 {{"id":"...","cn_summary":"...","tickers":[...],"themes":[...],"direction":{{...}},"so_what":"...","is_primary_source":true,"original_source_url":""}}

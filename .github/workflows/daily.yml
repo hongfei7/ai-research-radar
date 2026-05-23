@@ -12,7 +12,7 @@ permissions:
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 60            # 首跑 40min+，增量跑 3-5min
+    timeout-minutes: 120           # 首跑 60-80min，增量跑 3-5min
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

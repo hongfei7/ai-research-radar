@@ -68,13 +68,15 @@ class ClusterEngine:
         if not items:
             return items, existing_events
 
-        # Step 1: 批量获取 embeddings（用 cn_summary）
+        # Step 1: 尝试获取 embeddings，失败则降级为关键词匹配
         texts = [it.cn_summary or it.title for it in items]
         embeddings = await self.client.embedding_batch(texts)
+        use_embeddings = bool(embeddings and any(len(e) > 0 for e in embeddings))
 
-        if not embeddings or all(len(e) == 0 for e in embeddings):
-            logger.warning("Failed to get embeddings, skipping clustering")
-            return items, existing_events
+        if use_embeddings:
+            logger.info("Clustering: using embedding-based similarity")
+        else:
+            logger.warning("Embeddings unavailable, falling back to keyword-based clustering")
 
         # Step 2: 对每条新条目做匹配
         events = dict(existing_events)  # 复制，避免修改原始
@@ -82,11 +84,13 @@ class ClusterEngine:
         updated_event_ids: set[str] = set()  # 收集被更新的事件
 
         for i, item in enumerate(items):
-            emb = embeddings[i] if i < len(embeddings) else []
-            if not emb:
-                continue
+            emb = embeddings[i] if use_embeddings and i < len(embeddings) else []
 
-            matched = self._find_match(emb, events)
+            if use_embeddings and emb:
+                matched = self._find_match_embedding(emb, events)
+            else:
+                matched = self._find_match_keyword(item, events)
+
             if matched:
                 # 合并到已有事件
                 event_id = matched
@@ -107,7 +111,7 @@ class ClusterEngine:
                 item.is_event_update = True
 
                 # 更新代表 embedding（取平均）
-                if event.embedding and emb:
+                if use_embeddings and event.embedding and emb:
                     event.embedding = [
                         (a + b) / 2 for a, b in zip(event.embedding, emb)
                     ]
@@ -131,7 +135,7 @@ class ClusterEngine:
                     is_active=True,
                     significance=item.relevance_score,
                     status="developing",
-                    embedding=list(emb),
+                    embedding=list(emb) if emb else None,
                 )
                 events[event_id] = event
                 item.event_id = event_id
@@ -163,8 +167,8 @@ class ClusterEngine:
 
         return items, events
 
-    def _find_match(self, emb: list[float], events: dict[str, Event]) -> Optional[str]:
-        """寻找与 emb 最相似且超过阈值的活跃事件"""
+    def _find_match_embedding(self, emb: list[float], events: dict[str, Event]) -> Optional[str]:
+        """基于 embedding 余弦相似度寻找匹配事件"""
         best_id = None
         best_score = 0.0
 
@@ -179,6 +183,41 @@ class ClusterEngine:
                 best_id = eid
 
         if best_score >= self.similarity_threshold:
+            return best_id
+        return None
+
+    def _find_match_keyword(self, item: Item, events: dict[str, Event]) -> Optional[str]:
+        """降级方案：基于 ticker/theme/标题关键词重叠匹配事件"""
+        item_tickers = set(item.tickers or [])
+        item_themes = set(item.themes or [])
+        item_words = set((item.cn_summary or item.title).lower().split())
+
+        best_id = None
+        best_score = 0.0
+
+        for eid, event in events.items():
+            if not event.is_active:
+                continue
+
+            ev_tickers = set(event.tickers or [])
+            ev_themes = set(event.themes or [])
+            ev_words = set((event.summary or event.title).lower().split())
+
+            # 计算重合度
+            ticker_overlap = len(item_tickers & ev_tickers) / max(len(item_tickers | ev_tickers), 1)
+            theme_overlap = len(item_themes & ev_themes) / max(len(item_themes | ev_themes), 1)
+            word_overlap = len(item_words & ev_words) / max(len(item_words | ev_words), 1)
+
+            # 加权得分：ticker 最重要，theme 其次，word 补充
+            score = ticker_overlap * 0.5 + theme_overlap * 0.3 + word_overlap * 0.2
+
+            if score > best_score:
+                best_score = score
+                best_id = eid
+
+        # 关键词阈值比 embedding 阈值更高
+        keyword_threshold = 0.30
+        if best_score >= keyword_threshold:
             return best_id
         return None
 

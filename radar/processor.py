@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 _PROMPTS_DIR = Path(__file__).resolve().parent.parent / "prompts"
 
 # 每批最多处理条目数
-_TRIAGE_BATCH_SIZE = 25
+_TRIAGE_BATCH_SIZE = 60
 
 
 def _load_prompt(name: str) -> str:
@@ -113,7 +113,7 @@ class Processor:
                 result = await self.client.chat_json(
                     messages=[{"role": "user", "content": prompt}],
                     temperature=0.2,
-                    max_tokens=4096,
+                    max_tokens=8192,
                 )
                 if isinstance(result, list):
                     all_scored.extend(result)
@@ -193,7 +193,7 @@ class Processor:
                 result = await self.client.chat_json(
                     messages=[{"role": "user", "content": prompt}],
                     temperature=0.3,
-                    max_tokens=2048,
+                    max_tokens=4096,
                 )
                 if isinstance(result, dict):
                     item.cn_summary = result.get("cn_summary", "") or ""

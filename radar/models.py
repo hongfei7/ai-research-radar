@@ -133,6 +133,7 @@ class Situation:
     active_event_count: int = 0
     key_themes: list = field(default_factory=list)
     last_telegram_digest_at: str = ""    # ISO8601，上次 Telegram 兜底推送时间
+    morning_brief_date: str = ""         # 上次晨报推送日期，用于 Telegram 每日去重
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -146,6 +147,7 @@ class Situation:
             "active_event_count": 0,
             "key_themes": [],
             "last_telegram_digest_at": "",
+            "morning_brief_date": "",
         }
         for k, v in defaults.items():
             d.setdefault(k, v)
