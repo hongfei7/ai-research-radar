@@ -187,7 +187,8 @@ class ClusterEngine:
         return None
 
     def _find_match_keyword(self, item: Item, events: dict[str, Event]) -> Optional[str]:
-        """降级方案：基于 ticker/theme/标题关键词重叠匹配事件"""
+        """降级方案：基于 ticker/theme/标题关键词重叠匹配事件。
+        要求：ticker 必须重叠 + theme 或关键词至少一项重叠，防止同标的无关联事件被误合并。"""
         item_tickers = set(item.tickers or [])
         item_themes = set(item.themes or [])
         item_words = set((item.cn_summary or item.title).lower().split())
@@ -203,20 +204,23 @@ class ClusterEngine:
             ev_themes = set(event.themes or [])
             ev_words = set((event.summary or event.title).lower().split())
 
-            # 计算重合度
+            # Ticker 必须至少有一个重叠
+            if not (item_tickers & ev_tickers):
+                continue
+
             ticker_overlap = len(item_tickers & ev_tickers) / max(len(item_tickers | ev_tickers), 1)
             theme_overlap = len(item_themes & ev_themes) / max(len(item_themes | ev_themes), 1)
             word_overlap = len(item_words & ev_words) / max(len(item_words | ev_words), 1)
 
-            # 加权得分：ticker 最重要，theme 其次，word 补充
-            score = ticker_overlap * 0.5 + theme_overlap * 0.3 + word_overlap * 0.2
+            # 加权的 ticker + 必须的 theme/word 双重验证
+            score = ticker_overlap * 0.4 + theme_overlap * 0.35 + word_overlap * 0.25
 
             if score > best_score:
                 best_score = score
                 best_id = eid
 
-        # 关键词阈值比 embedding 阈值更高
-        keyword_threshold = 0.30
+        # 阈值提高：需要 ticker + theme/word 双重命中
+        keyword_threshold = 0.40
         if best_score >= keyword_threshold:
             return best_id
         return None

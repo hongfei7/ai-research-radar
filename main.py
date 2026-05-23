@@ -68,6 +68,9 @@ def setup_logging(verbose: bool = False) -> None:
 
 async def collect_all(cfg: dict) -> list[Item]:
     """采集全部信源，返回去重后的新条目列表"""
+    import re
+    from datetime import datetime, timezone, timedelta
+
     dedup = DedupStore()
 
     # 注入 coverage 到需要标的列表的采集器
@@ -114,6 +117,61 @@ async def collect_all(cfg: dict) -> list[Item]:
             all_items.extend(result)
 
     logger.info(f"Collected {len(all_items)} raw items total")
+
+    # —— 时间窗口过滤：只保留最近 N 小时内发布的内容 ——
+    window_hours = cfg["runtime"].get("rolling_window_hours", 8)
+    cutoff = datetime.now(timezone.utc) - timedelta(hours=window_hours)
+    filtered_items = []
+    stale_count = 0
+    no_date_count = 0
+
+    def _parse_iso(s: str):
+        """尽量宽松的 ISO8601 解析"""
+        if not s:
+            return None
+        # 尝试多种格式
+        s_clean = s.strip().replace("Z", "+00:00")
+        for fmt in [
+            "%Y-%m-%dT%H:%M:%S%z",
+            "%Y-%m-%dT%H:%M:%S.%f%z",
+            "%Y-%m-%dT%H:%M:%S",
+            "%Y-%m-%d %H:%M:%S%z",
+            "%Y-%m-%d %H:%M:%S",
+            "%a, %d %b %Y %H:%M:%S %z",     # RFC 2822
+            "%a, %d %b %Y %H:%M:%S %Z",
+        ]:
+            try:
+                return datetime.strptime(s_clean, fmt)
+            except ValueError:
+                continue
+        # 纯日期格式
+        try:
+            return datetime.strptime(s_clean[:10], "%Y-%m-%d").replace(tzinfo=timezone.utc)
+        except ValueError:
+            pass
+        return None
+
+    for it in all_items:
+        pub_dt = _parse_iso(it.published_at)
+        if pub_dt is None:
+            # 无日期信息：用 fetched_at 替代（搜索类源都是这种）
+            pub_dt = _parse_iso(it.fetched_at)
+            if pub_dt is None:
+                no_date_count += 1
+                filtered_items.append(it)  # 无法解析则保留
+                continue
+
+        if pub_dt >= cutoff:
+            filtered_items.append(it)
+        else:
+            stale_count += 1
+
+    if stale_count > 0:
+        logger.info(
+            f"Time filter: {stale_count} items older than {window_hours}h removed, "
+            f"{no_date_count} without date kept, {len(filtered_items)} remaining"
+        )
+    all_items = filtered_items
 
     new_items: list[Item] = []
     if all_items:
@@ -384,8 +442,18 @@ async def run_full(cfg: dict) -> None:
                 if should_telegram_alert(
                     new_events_list, updated_events_list, sit, cfg
                 ):
+                    # 本轮新增的条目（is_new_event 或 is_event_update）
+                    new_items_this_run = [
+                        it for it in clustered_items
+                        if it.is_new_event or it.is_event_update
+                    ]
+                    all_events_list = list(updated_events.values())
                     alert_text = format_telegram_alert(
-                        list(updated_events.values()), sit, new_event_count
+                        new_events=new_events_list,
+                        updated_events=updated_events_list,
+                        all_active_events=all_events_list,
+                        new_items=new_items_this_run,
+                        situation=sit,
                     )
                     # 加链接
                     alert_text += f"\n\n[实时看板]({site_url})"

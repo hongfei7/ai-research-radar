@@ -133,65 +133,80 @@ async def send_telegram(
 
 
 def format_telegram_alert(
-    events: list[Event],
+    new_events: list[Event],
+    updated_events: list[Event],
+    all_active_events: list[Event],
+    new_items: list[Item],
     situation: Optional[Situation],
-    new_event_count: int,
 ) -> str:
-    """格式化 Telegram 推送内容"""
-    lines = ["*AI 投研雷达 · 实时推送*\n"]
+    """格式化 Telegram 推送 —— 只展示本轮新增和更新的事件"""
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+    try:
+        hkt = ZoneInfo("Asia/Hong_Kong")
+    except Exception:
+        hkt = None
+    now_str = datetime.now(hkt).strftime("%m-%d %H:%M HKT") if hkt else ""
 
+    lines = [f"*AI 投研雷达 · {now_str}*\n"]
+
+    # —— 态势概述 ——
     if situation and situation.text:
         lines.append(f"_{situation.text}_\n")
 
-    # 交叉综合分析（上帝视角）
-    if situation and situation.cross_analysis:
-        lines.append(f"*交叉分析:*\n{situation.cross_analysis}\n")
-
-    # 趋势发现（新兴信号）
+    # —— 趋势信号（优先展示） ——
     if situation and situation.trend_spotting:
-        lines.append(f"*趋势信号:*\n{situation.trend_spotting}\n")
+        lines.append(f"*趋势:*\n{situation.trend_spotting}\n")
 
-    # 统计
-    active = [ev for ev in events if ev.is_active]
-    developing = [ev for ev in active if ev.status == "developing"]
-    stable = [ev for ev in active if ev.status == "stable"]
-    total_sources = sum(ev.source_count for ev in active)
-    top_tickers: dict[str, int] = {}
-    for ev in active:
-        for tk in ev.tickers or []:
-            top_tickers[tk] = top_tickers.get(tk, 0) + 1
-    hot_tickers = sorted(top_tickers.items(), key=lambda x: x[1], reverse=True)[:5]
-
-    # 统计摘要行
-    lines.append(
-        f"活跃事件: {len(active)} | 演进中: {len(developing)} | "
-        f"稳定: {len(stable)} | 覆盖来源: {total_sources}"
-    )
-    if hot_tickers:
-        lines.append(f"热点标的: {', '.join(f'{tk}({n})' for tk, n in hot_tickers)}")
-    lines.append("")
-
-    if new_event_count > 0:
-        lines.append(f"*新事件 ({new_event_count}):*")
-        new_events = [ev for ev in developing][:5]
-        for ev in new_events:
-            lines.append(f"\n• *{ev.title}*")
-            lines.append(f"  {ev.summary}")
-            if ev.tickers:
-                lines.append(f"  标的: {', '.join(ev.tickers)}")
-            lines.append(f"  重要性: {ev.significance}/10 | 来源: {ev.source_count}")
-    else:
-        # 无新事件时展示最近活跃事件列表
-        lines.append("*最近活跃事件:*")
-        sorted_events = sorted(active, key=lambda e: e.significance, reverse=True)[:8]
-        for i, ev in enumerate(sorted_events, 1):
-            status_emoji = "🔄" if ev.status == "developing" else "✅"
+    # —— 本轮新事件 ——
+    if new_events:
+        lines.append(f"*本轮新增事件 ({len(new_events)}):*")
+        for ev in sorted(new_events, key=lambda e: e.significance, reverse=True)[:5]:
+            cred = "🟢" if ev.significance >= 8 else "🟡" if ev.significance >= 6 else "🔴"
             tickers_str = f" [{', '.join(ev.tickers)}]" if ev.tickers else ""
             lines.append(
-                f"\n{i}. {status_emoji} *{ev.title}*{tickers_str}"
-                f"\n   {ev.summary[:100]}{'...' if len(ev.summary) > 100 else ''}"
-                f"\n   重要性: {ev.significance}/10 | 来源: {ev.source_count}"
+                f"\n{cred} *{ev.title}*{tickers_str}"
+                f"\n  {ev.summary[:120]}{'...' if len(ev.summary) > 120 else ''}"
+                f"\n  重要: {ev.significance}/10 | 来源: {ev.source_count}"
             )
+
+    # —— 本轮更新的已有事件 ——
+    if updated_events:
+        lines.append(f"\n*本轮更新事件 ({len(updated_events)}):*")
+        for ev in sorted(updated_events, key=lambda e: e.significance, reverse=True)[:5]:
+            tickers_str = f" [{', '.join(ev.tickers)}]" if ev.tickers else ""
+            lines.append(
+                f"\n• *{ev.title}*{tickers_str}"
+                f"\n  {ev.summary[:100]}{'...' if len(ev.summary) > 100 else ''}"
+            )
+
+    # —— 本轮精选条目（新增条目中的高价值内容） ——
+    if new_items:
+        top_items = sorted(new_items, key=lambda it: it.relevance_score, reverse=True)[:8]
+        if top_items:
+            lines.append(f"\n*本轮精选 ({len(top_items)}):*")
+            for item in top_items:
+                cred_emoji = {"high": "🟢", "medium": "🟡", "low": "🔴"}.get(item.credibility, "⚪")
+                tickers_str = f" [{', '.join(item.tickers)}]" if item.tickers else ""
+                lines.append(
+                    f"\n{cred_emoji} {item.title}"
+                    f"{tickers_str} · {item.relevance_score}分"
+                    f"\n  {item.cn_summary[:100]}{'...' if len(item.cn_summary) > 100 else ''}"
+                )
+
+    # —— 统计栏 ——
+    active_count = len([e for e in all_active_events if e.is_active])
+    developing = len([e for e in all_active_events if e.is_active and e.status == "developing"])
+    top_tickers: dict[str, int] = {}
+    for ev in all_active_events:
+        for tk in ev.tickers or []:
+            top_tickers[tk] = top_tickers.get(tk, 0) + 1
+    hot = sorted(top_tickers.items(), key=lambda x: x[1], reverse=True)[:5]
+    hot_str = ", ".join(f"{tk}({n})" for tk, n in hot) if hot else "—"
+
+    lines.append(
+        f"\n———\n活跃事件: {active_count} | 演进中: {developing} | 最热标的: {hot_str}"
+    )
 
     return "\n".join(lines)
 
