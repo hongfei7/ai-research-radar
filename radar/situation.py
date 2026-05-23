@@ -120,14 +120,37 @@ class SituationGenerator:
             text = await self.client.chat(
                 messages=[{"role": "user", "content": prompt}],
                 temperature=0.4,
-                max_tokens=512,
+                max_tokens=1024,
             )
             text = text.strip()
+            # 空响应重试一次
+            if not text:
+                logger.warning("Situation returned empty, retrying...")
+                text = await self.client.chat(
+                    messages=[{"role": "user", "content": prompt}],
+                    temperature=0.5,
+                    max_tokens=1024,
+                )
+                text = text.strip()
         except Exception as e:
             logger.error(f"Situation generation failed: {e}")
             if prev_situation:
                 return prev_situation
             text = "态势生成失败，请稍后刷新。"
+
+        # 如果 LLM 仍返回空，用事件标题兜底拼接
+        if not text:
+            active_list = sorted(
+                active_events.values(), key=lambda e: e.significance, reverse=True
+            )
+            parts = [f"当前共有 {len(active_list)} 个活跃事件"]
+            top_events = active_list[:5]
+            if top_events:
+                parts.append("要点包括: " + "; ".join(
+                    ev.title for ev in top_events
+                ))
+            text = "。".join(parts) + "。"
+            logger.warning("Using fallback situation text (LLM returned empty)")
 
         # 提取活跃事件的关键主线
         key_themes: list[str] = []

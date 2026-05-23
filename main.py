@@ -230,6 +230,16 @@ async def run_full(cfg: dict) -> None:
             await client.close()
             return
 
+        # Stage 2.5: 交叉综合分析 —— 上帝视角元分析
+        cross_analysis_text = ""
+        if len(processed) >= 3:
+            logger.info("Running cross-analysis on processed items...")
+            cross_analysis_text = await processor.cross_analyze(processed)
+            if cross_analysis_text:
+                logger.info(f"Cross-analysis complete: {len(cross_analysis_text)} chars")
+            else:
+                logger.warning("Cross-analysis returned empty")
+
         existing_events = load_events()
         cluster_engine = ClusterEngine(client, cfg)
         clustered_items, updated_events = await cluster_engine.cluster(
@@ -261,9 +271,14 @@ async def run_full(cfg: dict) -> None:
             sit = await sit_gen.generate(
                 updated_events, clustered_items, prev_sit
             )
+            if cross_analysis_text and sit:
+                sit.cross_analysis = cross_analysis_text
             save_situation(sit)
         else:
             sit = prev_sit
+            if cross_analysis_text and sit:
+                sit.cross_analysis = cross_analysis_text
+                save_situation(sit)  # 即使态势未更新也保存交叉分析
             logger.info("Skipping situation update (not due yet)")
 
         # ================================================================

@@ -143,6 +143,10 @@ def format_telegram_alert(
     if situation and situation.text:
         lines.append(f"_{situation.text}_\n")
 
+    # 交叉综合分析（上帝视角）
+    if situation and situation.cross_analysis:
+        lines.append(f"*交叉分析:*\n{situation.cross_analysis}\n")
+
     # 统计
     active = [ev for ev in events if ev.is_active]
     developing = [ev for ev in active if ev.status == "developing"]

@@ -218,6 +218,58 @@ class Processor:
         return processed
 
     # ================================================================
+    # Stage 3: 交叉综合分析 —— 上帝视角的元分析
+    # ================================================================
+
+    async def cross_analyze(self, items: list[Item]) -> str:
+        """
+        对所有已提取条目做交叉综合分析：矛盾、趋势、盲点、联动。
+        Returns:
+            综合分析文本（≤500字）
+        """
+        if not items or len(items) < 3:
+            return ""
+
+        template = _load_prompt("cross_analysis")
+
+        items_json = json.dumps(
+            [
+                {
+                    "id": it.id,
+                    "title": it.title,
+                    "source": it.source,
+                    "credibility": it.credibility,
+                    "cn_summary": it.cn_summary,
+                    "tickers": it.tickers,
+                    "themes": it.themes,
+                    "direction": it.direction,
+                    "so_what": it.so_what,
+                    "score": it.relevance_score,
+                }
+                for it in items
+            ],
+            ensure_ascii=False,
+        )
+
+        prompt = template.format(all_items_json=items_json)
+
+        try:
+            text = await self.client.chat(
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.4,
+                max_tokens=1024,
+            )
+            text = text.strip()
+            if text:
+                logger.info(f"Cross-analysis generated: {len(text)} chars")
+            else:
+                logger.warning("Cross-analysis returned empty")
+            return text
+        except Exception as e:
+            logger.error(f"Cross-analysis failed: {e}")
+            return ""
+
+    # ================================================================
     # 组合: triage + extract
     # ================================================================
 
