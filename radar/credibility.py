@@ -43,6 +43,8 @@ CREDIBILITY_RULES = {
     "hackernews":         "low",
     "github_trending":    "low",
     "rss:lobsters":       "low",
+    # —— 搜索引擎聚合（需 MiniMax 交叉验证） ——
+    "web_search":         "low",
 }
 
 # 按前缀匹配（RSS 源可能带子 ID）

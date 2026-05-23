@@ -99,6 +99,8 @@ sources:
     # ---- 中文科技媒体(视可用性启用) ----
     # 机器之心 RSS 需要登录 session，暂时禁用
     # - { id: "rss:jiqizhixin",  type: "rss", params: { url: "https://www.jiqizhixin.com/rss" } }
+  # ---- 网络搜索补充（抓取 RSS 盲区） ----
+    - { id: "web_search",      type: "web_search", params: { max_per_stock: 3 } }
   market:
     - { id: "sec_edgar",       type: "sec_edgar", params: { forms: ["8-K"] } }
 

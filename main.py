@@ -24,6 +24,7 @@ from radar.collectors.arxiv import ArxivCollector
 from radar.collectors.hackernews import HackerNewsCollector
 from radar.collectors.github_trending import GithubTrendingCollector
 from radar.collectors.sec_edgar import SECEdgarCollector
+from radar.collectors.web_search import WebSearchCollector
 from radar.dedup import DedupStore
 from radar.minimax_client import MinimaxClient
 from radar.processor import Processor
@@ -47,6 +48,7 @@ COLLECTOR_MAP = {
     "hackernews": HackerNewsCollector(),
     "github_trending": GithubTrendingCollector(),
     "sec_edgar": SECEdgarCollector(),
+    "web_search": WebSearchCollector(),
 }
 
 # 全局运行计数器（用于态势更新间隔）
@@ -66,10 +68,13 @@ async def collect_all(cfg: dict) -> list[Item]:
     """采集全部信源，返回去重后的新条目列表"""
     dedup = DedupStore()
 
-    # 注入 coverage 到 SEC EDGAR 采集器
+    # 注入 coverage 到需要标的列表的采集器
     sec_collector = COLLECTOR_MAP.get("sec_edgar")
     if isinstance(sec_collector, SECEdgarCollector):
         sec_collector.set_coverage(cfg.get("coverage", []))
+    ws_collector = COLLECTOR_MAP.get("web_search")
+    if isinstance(ws_collector, WebSearchCollector):
+        ws_collector.coverage = cfg.get("coverage", [])
 
     all_sources = []
     for src_type in ["tech", "market"]:
