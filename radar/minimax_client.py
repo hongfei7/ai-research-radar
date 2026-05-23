@@ -163,7 +163,7 @@ class MinimaxClient:
             model=model,
             temperature=temperature,
             max_tokens=max_tokens,
-            retries=0,  # 先不重试，JSON 解析失败时在下面处理
+            retries=MAX_RETRIES,  # 网络层重试
         )
 
         for attempt in range(retries + 1):
@@ -190,7 +190,7 @@ class MinimaxClient:
                         model=model,
                         temperature=max(0.1, temperature - 0.1),
                         max_tokens=max_tokens,
-                        retries=0,
+                        retries=1,  # JSON 修正重试时仍保留网络层重试
                     )
                 else:
                     logger.error(f"Failed to parse JSON after {retries + 1} attempts. Raw text: {text[:500]}")

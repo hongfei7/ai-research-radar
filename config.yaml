@@ -91,7 +91,8 @@ sources:
     - { id: "rss:techmeme",     type: "rss", params: { url: "https://techmeme.com/feed.xml" } }
     - { id: "rss:tomshardware", type: "rss", params: { url: "https://www.tomshardware.com/feeds/all" } }
     - { id: "rss:zdnet",        type: "rss", params: { url: "https://www.zdnet.com/news/rss.xml" } }
-    - { id: "rss:cnbc-tech",    type: "rss", params: { url: "https://www.cnbc.com/id/100003114/device/rss/rss.html" } }
+    # CNBC Tech RSS 403 限制，暂时禁用
+    # - { id: "rss:cnbc-tech",    type: "rss", params: { url: "https://www.cnbc.com/id/100003114/device/rss/rss.html" } }
     - { id: "rss:importai",     type: "rss", params: { url: "https://importai.net/feed/" } }
     - { id: "rss:eetimes",      type: "rss", params: { url: "https://www.eetimes.com/feed/" } }
     - { id: "rss:infoq",        type: "rss", params: { url: "https://www.infoq.com/feed/" } }
@@ -105,7 +106,7 @@ sources:
 # 运行参数
 # ============================================================
 runtime:
-  cron_interval_minutes: 20
+  cron_interval_minutes: 30      # 建议 30min，首跑手动触发建立 seen.db 后增量跑仅需 3-5min
   rolling_window_hours: 24
   situation_update_interval: 3      # 态势重写间隔(轮次)
   situation_trigger_new_events: 2   # 触发态势重写的新事件数阈值

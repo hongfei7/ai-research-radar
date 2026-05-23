@@ -1,10 +1,10 @@
 name: radar-scan
 on:
   schedule:
-    - cron: "*/20 * * * *"        # 每 20 分钟
+    - cron: "*/30 * * * *"        # 每 30 分钟（首跑需手动触发建立 seen.db）
   workflow_dispatch:
 concurrency:
-  group: radar-scan               # 防止重叠运行
+  group: radar-scan               # 防止重叠运行，新触发会排队
   cancel-in-progress: false
 permissions:
   contents: write
@@ -12,7 +12,7 @@ permissions:
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60            # 首跑 40min+，增量跑 3-5min
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
