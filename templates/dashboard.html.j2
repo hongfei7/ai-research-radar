@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 投研雷达 · 实时看板</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f5f7fa; color: #1a1a2e; line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+    header { background: linear-gradient(135deg, #1a1a2e, #16213e); color: #fff; padding: 30px 20px; text-align: center; }
+    header h1 { font-size: 1.8em; margin-bottom: 8px; }
+    header p { opacity: 0.8; font-size: 0.95em; }
+    .situation { background: #fff; border-radius: 8px; padding: 20px; margin: 20px 0; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+    .situation h2 { font-size: 1.2em; color: #16213e; margin-bottom: 10px; }
+    .situation .text { color: #444; font-size: 0.95em; }
+    .situation .meta { font-size: 0.8em; color: #888; margin-top: 8px; }
+    .section { margin: 20px 0; }
+    .section h2 { font-size: 1.2em; color: #16213e; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #e94560; }
+    .event-card, .item-row { background: #fff; border-radius: 8px; padding: 16px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+    .event-card h3 { font-size: 1.05em; margin-bottom: 6px; }
+    .event-card h3 a { color: #1a1a2e; text-decoration: none; }
+    .event-card h3 a:hover { color: #e94560; }
+    .event-card .summary { color: #555; font-size: 0.92em; margin-bottom: 8px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .tag { padding: 2px 10px; border-radius: 12px; font-size: 0.78em; font-weight: 500; }
+    .tag-ticker { background: #e8f0fe; color: #1a73e8; }
+    .tag-theme { background: #fce8e6; color: #e94560; }
+    .tag-status { background: #e6f4ea; color: #137333; }
+    .tag-status.resolved { background: #f1f3f4; color: #666; }
+    .direction-positive { color: #137333; font-weight: 600; }
+    .direction-negative { color: #c5221f; font-weight: 600; }
+    .direction-neutral { color: #666; }
+    .item-row .meta { font-size: 0.82em; color: #888; }
+    .item-row .source { color: #999; }
+    nav { margin: 16px 0; }
+    nav a { color: #1a73e8; text-decoration: none; margin-right: 16px; font-size: 0.9em; }
+    nav a:hover { text-decoration: underline; }
+    footer { text-align: center; color: #999; font-size: 0.82em; padding: 20px; }
+    .rss-link { display: inline-block; margin-left: 10px; padding: 2px 10px; background: #f28b20; color: #fff; border-radius: 12px; font-size: 0.78em; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AI 投研雷达 <a href="{{ site_url }}/feed.xml" class="rss-link">RSS</a></h1>
+    <p>AI/科技/半导体板块 · 滚动情报库 · 更新于 {{ updated_at }}</p>
+  </header>
+
+  <div class="container">
+    <nav>
+      <a href="{{ site_url }}/">全部</a>
+      {% for ticker in all_tickers %}
+      <a href="{{ site_url }}/tickers/{{ ticker }}.html">{{ ticker }}</a>
+      {% endfor %}
+    </nav>
+
+    {% if situation and situation.text %}
+    <div class="situation">
+      <h2>当前态势</h2>
+      <div class="text">{{ situation.text }}</div>
+      <div class="meta">覆盖 {{ situation.active_event_count }} 个活跃事件 · 生成于 {{ situation.generated_at }}</div>
+    </div>
+    {% endif %}
+
+    <div class="section">
+      <h2>活跃事件 ({{ events | length }})</h2>
+      {% for evt in events %}
+      <div class="event-card">
+        <h3>{{ evt.title }}</h3>
+        <div class="summary">{{ evt.summary }}</div>
+        <div class="tags">
+          {% for tk in evt.tickers %}
+          <span class="tag tag-ticker">{{ tk }}</span>
+          {% endfor %}
+          {% for th in evt.themes %}
+          <span class="tag tag-theme">{{ th }}</span>
+          {% endfor %}
+          <span class="tag tag-status {{ evt.status }}">{{ evt.status }}</span>
+          <span style="font-size:0.8em;color:#888">{{ evt.source_count }} 来源 · 重要性 {{ evt.significance }}/10</span>
+        </div>
+        {% if evt.direction %}
+        <div style="margin-top:6px;font-size:0.85em;">
+          {% for tk, d in evt.direction.items() %}
+          <span class="direction-{{ d }}">{{ tk }} → {{ d }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="section">
+      <h2>最近条目 ({{ items | length }})</h2>
+      {% for item in items %}
+      <div class="item-row">
+        <strong>[{{ item.relevance_score }}分]</strong>
+        <a href="{{ item.url }}" target="_blank">{{ item.title }}</a>
+        <div>{{ item.cn_summary }}</div>
+        <div class="meta">
+          {{ item.published_at }} · {{ item.source }}
+          {% if item.credibility %}<span title="{{ cred_label(item.credibility) }}">{{ cred_emoji(item.credibility) }}</span>{% endif %}
+          {% if not item.is_primary_source %}<span style="color:#e67e22;font-size:0.8em;" title="转载/聚合，原始来源: {{ item.original_source_url or '未知' }}">⛓️ 转载</span>{% endif %}
+          {% if item.so_what %}<br><em>{{ item.so_what }}</em>{% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <footer>
+    AI 投研雷达 · 由 MiniMax 驱动 · 仅作为研究输入素材，不构成投资建议
+  </footer>
+</body>
+</html>

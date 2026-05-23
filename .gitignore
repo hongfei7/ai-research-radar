@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
+.ignore
+state/seen.db
+*.log
+.DS_Store

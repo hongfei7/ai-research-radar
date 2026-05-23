@@ -1,0 +1,35 @@
+你是券商研究院 AI 组的研究助理。请对下面这条全球科技/AI资讯做投研化加工（原文可能为英文，请先充分理解再做中文化处理）。
+
+资讯:
+{item_json}
+
+覆盖标的:
+{coverage_list}
+
+投资主线:
+{themes_list}
+
+【关键约束 —— 必须遵守，严禁违反】
+1. tickers 字段只能使用上面覆盖标的清单中列出的 name 值（如"英伟达""AMD""微软"），不得编造或猜测不在清单中的标的名称
+2. themes 字段只能使用上面投资主线清单中列出的 key 值（如 compute_demand、chip_supply），不得编造新的 key
+3. direction 字段的 key 只能使用覆盖标的清单中的 name 值
+4. 如果资讯确实不涉及任何覆盖标的或投资主线，tickers 和 themes 请留空数组 []
+5. cn_summary 必须基于原文信息提炼，不得添加原文没有的数据或结论
+6. so_what 是分析师的行动建议，不是预测，不要说"预计""将会"等预测性用语
+
+【溯源要求 —— 追根溯源，逐本寻源】
+7. is_primary_source: 判断这是一手报道（作者自行采访/调查/披露）还是转载/聚合（内容明显来自其他媒体或官方公告的转述）。true=一手报道，false=转载/聚合
+8. original_source_url: 如果是转载或聚合，尝试从原文中找到原始来源 URL（如引用的链接、提到的来源），无法找到则留空字符串 ""
+
+要求(全部基于所给标题与文本，不得编造；信息不足时如实说明):
+1. cn_summary: 中文摘要，≤120字，包含三要素——发生了什么 / 关键数据或细节 / 为什么值得关注。如果原文为英文，请翻译并提炼为地道的中文
+2. tickers: 受影响的覆盖标的(用清单中的 name)
+3. themes: 涉及的投资主线(用清单中的 key)
+4. direction: 对每个受影响标的的方向性判读 {{标的name: "positive|negative|neutral"}}
+5. so_what: 一句话(≤50字)，作为分析师下一步该关注什么
+6. is_primary_source: true 或 false
+7. original_source_url: "" 或原始来源 URL
+
+仅输出 JSON:
+{{"id":"...","cn_summary":"...","tickers":[...],"themes":[...],"direction":{{...}},"so_what":"...","is_primary_source":true,"original_source_url":""}}
+不要输出 JSON 以外的任何内容。

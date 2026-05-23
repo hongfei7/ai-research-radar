@@ -1,0 +1,151 @@
+# AI 投研雷达 — 滚动情报库配置
+# 所有覆盖标的、信源、阈值均由此文件驱动，严禁硬编码
+
+# ============================================================
+# 覆盖标的清单 —— 使用者会自行调整
+# ============================================================
+coverage:
+  - { name: "英伟达",     ticker: "NVDA",   market: "US",      aliases: ["NVIDIA", "Nvidia"] }
+  - { name: "AMD",       ticker: "AMD",    market: "US",      aliases: ["Advanced Micro Devices"] }
+  - { name: "博通",       ticker: "AVGO",   market: "US",      aliases: ["Broadcom"] }
+  - { name: "台积电",     ticker: "TSM",    market: "US",      aliases: ["TSMC", "Taiwan Semiconductor"] }
+  - { name: "ASML",      ticker: "ASML",   market: "US",      aliases: [] }
+  - { name: "美光",       ticker: "MU",     market: "US",      aliases: ["Micron"] }
+  - { name: "Intel",     ticker: "INTC",   market: "US",      aliases: ["英特尔"] }
+  - { name: "Marvell",   ticker: "MRVL",   market: "US",      aliases: [] }
+  - { name: "高通",       ticker: "QCOM",   market: "US",      aliases: ["Qualcomm"] }
+  - { name: "ARM",       ticker: "ARM",    market: "US",      aliases: [] }
+  - { name: "超微电脑",   ticker: "SMCI",   market: "US",      aliases: ["Super Micro Computer"] }
+  - { name: "戴尔",       ticker: "DELL",   market: "US",      aliases: ["Dell"] }
+  - { name: "微软",       ticker: "MSFT",   market: "US",      aliases: ["Microsoft"] }
+  - { name: "谷歌",       ticker: "GOOGL",  market: "US",      aliases: ["Google", "Alphabet", "DeepMind"] }
+  - { name: "亚马逊",     ticker: "AMZN",   market: "US",      aliases: ["Amazon", "AWS"] }
+  - { name: "Meta",      ticker: "META",   market: "US",      aliases: ["Facebook"] }
+  - { name: "苹果",       ticker: "AAPL",   market: "US",      aliases: ["Apple"] }
+  - { name: "中芯国际",   ticker: "0981",   market: "HK",      aliases: ["SMIC"] }
+  - { name: "寒武纪",     ticker: "688256", market: "CN",      aliases: ["Cambricon"] }
+  - { name: "海光信息",   ticker: "688041", market: "CN",      aliases: ["Hygon"] }
+  - { name: "工业富联",   ticker: "601138", market: "CN",      aliases: ["Foxconn Industrial Internet"] }
+  - { name: "中科曙光",   ticker: "603019", market: "CN",      aliases: ["Sugon"] }
+  - { name: "浪潮信息",   ticker: "000977", market: "CN",      aliases: ["Inspur"] }
+  - { name: "景嘉微",     ticker: "300474", market: "CN",      aliases: ["景嘉微电子"] }
+  - { name: "长电科技",   ticker: "600584", market: "CN",      aliases: ["JCET"] }
+  - { name: "阿里巴巴",   ticker: "9988",   market: "HK",      aliases: ["Alibaba", "阿里云"] }
+  - { name: "腾讯",       ticker: "0700",   market: "HK",      aliases: ["Tencent"] }
+  - { name: "百度",       ticker: "9888",   market: "HK",      aliases: ["Baidu"] }
+  - { name: "小米",       ticker: "1810",   market: "HK",      aliases: ["Xiaomi"] }
+  - { name: "金山办公",   ticker: "688111", market: "CN",      aliases: ["Kingsoft"] }
+  - { name: "商汤",       ticker: "0020",   market: "HK",      aliases: ["SenseTime"] }
+  - { name: "科大讯飞",   ticker: "002230", market: "CN",      aliases: ["iFlytek"] }
+  # 未上市但需跟踪的
+  - { name: "OpenAI",    ticker: "",        market: "PRIVATE", aliases: [] }
+  - { name: "Anthropic", ticker: "",        market: "PRIVATE", aliases: [] }
+  - { name: "DeepSeek",  ticker: "",        market: "PRIVATE", aliases: [] }
+  - { name: "xAI",       ticker: "",        market: "PRIVATE", aliases: ["x.AI"] }
+
+# ============================================================
+# 投资主线 —— LLM 给每条信息打标签时从这里选
+# ============================================================
+themes:
+  - { key: "compute_demand",        name: "算力需求",        desc: "云厂capex、token消耗、推理/训练需求" }
+  - { key: "chip_supply",           name: "芯片供给",        desc: "先进制程、晶圆产能、良率" }
+  - { key: "advanced_packaging",    name: "先进封装与HBM",   desc: "CoWoS、HBM产能与定价" }
+  - { key: "model_capability",      name: "模型能力曲线",    desc: "前沿模型能力、效率突破" }
+  - { key: "ai_monetization",       name: "AI应用与变现",    desc: "AI产品收入、商业化进展" }
+  - { key: "edge_ai",               name: "终端AI",          desc: "AI手机/PC/眼镜等终端" }
+  - { key: "datacenter_power",      name: "数据中心与能源",  desc: "数据中心建设、电力供给" }
+  - { key: "policy_export",         name: "政策与出口管制",  desc: "出口管制、补贴、监管" }
+  - { key: "domestic_substitution", name: "国产替代",        desc: "国产算力链替代进程" }
+
+# ============================================================
+# 信源
+# ============================================================
+sources:
+  tech:
+    # ---- 学术 / 开源社区 ----
+    - { id: "arxiv",           type: "arxiv",    params: { categories: ["cs.AI", "cs.CL", "cs.LG"], max: 60 } }
+    - { id: "hackernews",      type: "hackernews", params: { story: "top", max: 50 } }
+    - { id: "github_trending", type: "github_trending", params: { language: "", since: "daily", max: 25 } }
+    # ---- 全球 AI 厂商官方 ----
+    - { id: "rss:openai",      type: "rss", params: { url: "https://openai.com/blog/rss.xml" } }
+    - { id: "rss:googleai",    type: "rss", params: { url: "https://blog.google/technology/ai/rss/" } }
+    # Anthropic 无公开 RSS feed，已禁用
+    # ---- 全球科技媒体(AI 专线) ----
+    - { id: "rss:theverge-ai", type: "rss", params: { url: "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml" } }
+    - { id: "rss:arstechnica", type: "rss", params: { url: "https://feeds.arstechnica.com/arstechnica/index" } }
+    - { id: "rss:techcrunch-ai", type: "rss", params: { url: "https://techcrunch.com/category/artificial-intelligence/feed/" } }
+    - { id: "rss:wired",       type: "rss", params: { url: "https://www.wired.com/feed/rss" } }
+    - { id: "rss:mit-tr",      type: "rss", params: { url: "https://www.technologyreview.com/feed/" } }
+    # ---- 厂商技术博客 ----
+    - { id: "rss:nvidia-blog",     type: "rss", params: { url: "https://blogs.nvidia.com/feed/" } }
+    - { id: "rss:msft-research",   type: "rss", params: { url: "https://www.microsoft.com/en-us/research/feed/" } }
+    # ---- 技术社区 ----
+    - { id: "rss:lobsters",        type: "rss", params: { url: "https://lobste.rs/rss" } }
+    # ---- 科技媒体扩展 ----
+    - { id: "rss:venturebeat-ai",  type: "rss", params: { url: "https://venturebeat.com/category/ai/feed/" } }
+    - { id: "rss:ieee-spectrum-ai", type: "rss", params: { url: "https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss" } }
+    # ---- 中文科技媒体 ----
+    - { id: "rss:36kr",         type: "rss", params: { url: "https://www.36kr.com/feed" } }
+    - { id: "rss:leiphone",     type: "rss", params: { url: "https://www.leiphone.com/feed" } }
+    # ---- 国际科技媒体扩展 ----
+    - { id: "rss:techmeme",     type: "rss", params: { url: "https://techmeme.com/feed.xml" } }
+    - { id: "rss:tomshardware", type: "rss", params: { url: "https://www.tomshardware.com/feeds/all" } }
+    - { id: "rss:zdnet",        type: "rss", params: { url: "https://www.zdnet.com/news/rss.xml" } }
+    - { id: "rss:cnbc-tech",    type: "rss", params: { url: "https://www.cnbc.com/id/100003114/device/rss/rss.html" } }
+    - { id: "rss:importai",     type: "rss", params: { url: "https://importai.net/feed/" } }
+    - { id: "rss:eetimes",      type: "rss", params: { url: "https://www.eetimes.com/feed/" } }
+    - { id: "rss:infoq",        type: "rss", params: { url: "https://www.infoq.com/feed/" } }
+    # ---- 中文科技媒体(视可用性启用) ----
+    # 机器之心 RSS 需要登录 session，暂时禁用
+    # - { id: "rss:jiqizhixin",  type: "rss", params: { url: "https://www.jiqizhixin.com/rss" } }
+  market:
+    - { id: "sec_edgar",       type: "sec_edgar", params: { forms: ["8-K"] } }
+
+# ============================================================
+# 运行参数
+# ============================================================
+runtime:
+  cron_interval_minutes: 20
+  rolling_window_hours: 24
+  situation_update_interval: 3      # 态势重写间隔(轮次)
+  situation_trigger_new_events: 2   # 触发态势重写的新事件数阈值
+
+# ============================================================
+# 事件聚类参数
+# ============================================================
+clustering:
+  similarity_threshold: 0.85        # embedding 余弦相似度阈值
+  max_active_events: 30             # 最多活跃事件数
+  event_ttl_hours: 24               # 无更新则标记为 resolved
+
+# ============================================================
+# 处理与输出参数
+# ============================================================
+scoring:
+  min_score_to_keep: 6              # 第一段筛选阈值
+  max_items_in_brief: 25            # 晨报最多保留条目数
+
+minimax:
+  model: "MiniMax-M2.7"             # MiniMax M2.7 (Coding Plan)
+
+output:
+  timezone: "Asia/Hong_Kong"
+
+# ============================================================
+# 分发渠道
+# ============================================================
+channels:
+  rss:
+    enabled: true
+    max_items: 50
+  github_pages:
+    enabled: true
+  telegram:
+    enabled: true
+    notify_new_event_threshold: 7
+    notify_direction_flip: true
+    digest_interval_hours: 6
+  github_issue:
+    enabled: true
+    label: "晨报"
+    schedule_hour_hkt: 7

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI 投研雷达 · 滚动情报</title>
+    <link>{{ site_url }}</link>
+    <description>AI/科技/半导体板块的持续投研情报 feed — 由 MiniMax 策展</description>
+    <language>zh-CN</language>
+    <lastBuildDate>{{ build_date }}</lastBuildDate>
+    <atom:link href="{{ site_url }}/feed.xml" rel="self" type="application/rss+xml"/>
+    {% for item in items %}
+    <item>
+      <title>[{{ item.relevance_score }}分] {{ item.title }}</title>
+      <link>{{ item.url }}</link>
+      <guid isPermaLink="false">{{ item.id }}</guid>
+      <pubDate>{{ item.published_at }}</pubDate>
+      <description><![CDATA[
+        <p>{{ item.cn_summary }}</p>
+        {% if item.tickers %}<p>标的: {{ item.tickers | join(", ") }}</p>{% endif %}
+        {% if item.themes %}<p>主线: {{ item.themes | join(", ") }}</p>{% endif %}
+        {% if item.direction %}<p>方向: {% for tk, d in item.direction.items() %}{{ tk }}→{{ d }} {% endfor %}</p>{% endif %}
+        <p><em>{{ item.so_what }}</em></p>
+        <p>来源: {{ item.source }} {% if item.credibility %}{{ cred_emoji(item.credibility) }} {{ cred_label(item.credibility) }}{% endif %}{% if not item.is_primary_source %} [转载自 {{ item.original_source_url or '未知来源' }}]{% endif %}</p>
+      ]]></description>
+      {% if item.event_id %}<category>{{ item.event_id }}</category>{% endif %}
+    </item>
+    {% endfor %}
+  </channel>
+</rss>
