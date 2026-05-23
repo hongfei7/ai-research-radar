@@ -187,9 +187,6 @@ async def collect_all(cfg: dict) -> list[Item]:
         new_ids = dedup.filter_new(all_ids)
         id_set = set(new_ids)
         new_items = [it for it in all_items if it.id in id_set]
-        # 立即标记所有采集到的条目为 seen，防止管道中途崩溃导致下次重复处理
-        if all_items:
-            dedup.mark_seen_batch([(it.id, it.title) for it in all_items])
         logger.info(f"Dedup: {len(all_items)} raw → {len(new_items)} new")
     else:
         new_items = []
@@ -317,6 +314,17 @@ async def run_full(cfg: dict) -> None:
 
         if not processed:
             await client.close()
+            # 即使没有通过筛选的条目，也渲染当前已有状态
+            today_events = load_events()
+            sit = load_situation()
+            all_events_sorted = sorted(
+                today_events.values(), key=lambda e: e.significance, reverse=True
+            )
+            active_events = [e for e in all_events_sorted if e.is_active]
+            w = cfg["runtime"].get("rolling_window_hours", 8)
+            write_rss([], site_url, cfg["channels"]["rss"].get("max_items", 50), window_hours=w)
+            write_dashboard([], active_events, sit, site_url, window_hours=w)
+            logger.info("No items passed triage — rendered existing state")
             return
 
         # Stage 2.5: 交叉综合分析 —— 上帝视角元分析（每轮必跑）
@@ -353,16 +361,10 @@ async def run_full(cfg: dict) -> None:
         sit_gen = SituationGenerator(client, cfg)
         prev_sit = load_situation()
 
-        new_events_list = [
-            updated_events[eid]
-            for eid in updated_events
-            if eid in [it.event_id for it in clustered_items if it.is_new_event]
-        ]
-        updated_events_list = [
-            updated_events[eid]
-            for eid in updated_events
-            if eid in [it.event_id for it in clustered_items if it.is_event_update]
-        ]
+        new_event_ids = {it.event_id for it in clustered_items if it.is_new_event}
+        updated_event_ids_set = {it.event_id for it in clustered_items if it.is_event_update}
+        new_events_list = [updated_events[eid] for eid in new_event_ids if eid in updated_events]
+        updated_events_list = [updated_events[eid] for eid in updated_event_ids_set if eid in updated_events]
 
         if sit_gen.should_update(prev_sit, _run_count, new_event_count):
             sit = await sit_gen.generate(
@@ -447,7 +449,6 @@ async def run_full(cfg: dict) -> None:
                 logger.error(f"Daily brief / issue failed: {e}")
 
         # Telegram 智能推送
-        tg_cfg = channels.get("telegram", {})
         if tg_cfg.get("enabled", False):
             try:
                 if should_telegram_alert(

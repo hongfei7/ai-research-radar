@@ -102,7 +102,8 @@ class ClusterEngine:
                 # 合并 tickers / themes / direction
                 event.tickers = list(set(event.tickers + (item.tickers or [])))
                 event.themes = list(set(event.themes + (item.themes or [])))
-                for tk, d in (item.direction or {}).items():
+                item_dir = item.direction if isinstance(item.direction, dict) else {}
+                for tk, d in item_dir.items():
                     if tk not in event.direction:
                         event.direction[tk] = d
 
@@ -175,7 +176,7 @@ class ClusterEngine:
         for eid, event in events.items():
             if not event.is_active:
                 continue
-            if event.embedding is None:
+            if not event.embedding:  # None 或空列表均跳过
                 continue
             sim = cosine_similarity(emb, event.embedding)
             if sim > best_score:

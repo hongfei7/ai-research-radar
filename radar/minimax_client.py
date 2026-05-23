@@ -457,6 +457,8 @@ def cosine_similarity(a: list[float], b: list[float]) -> float:
         return 0.0
     if len(a) != len(b):
         logger.warning(f"cosine_similarity: vector dimension mismatch ({len(a)} vs {len(b)}), truncating")
+        min_len = min(len(a), len(b))
+        a, b = a[:min_len], b[:min_len]
     dot = sum(x * y for x, y in zip(a, b))
     norm_a = sum(x * x for x in a) ** 0.5
     norm_b = sum(x * x for x in b) ** 0.5

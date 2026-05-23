@@ -50,11 +50,15 @@ class DedupStore:
         if not item_ids:
             return []
         conn = self._get_conn()
-        placeholders = ",".join("?" * len(item_ids))
-        rows = conn.execute(
-            f"SELECT id FROM seen WHERE id IN ({placeholders})", item_ids
-        ).fetchall()
-        seen_set = {r[0] for r in rows}
+        seen_set: set[str] = set()
+        _BATCH = 900  # SQLite 变量数限制默认 999
+        for i in range(0, len(item_ids), _BATCH):
+            batch = item_ids[i : i + _BATCH]
+            placeholders = ",".join("?" * len(batch))
+            rows = conn.execute(
+                f"SELECT id FROM seen WHERE id IN ({placeholders})", batch
+            ).fetchall()
+            seen_set.update(r[0] for r in rows)
         return [iid for iid in item_ids if iid not in seen_set]
 
     def mark_seen(self, item_id: str, title: str = "") -> None:

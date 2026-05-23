@@ -151,6 +151,7 @@ class Situation:
             "last_telegram_digest_at": "",
             "morning_brief_date": "",
             "cross_analysis": "",
+            "trend_spotting": "",
         }
         for k, v in defaults.items():
             d.setdefault(k, v)

@@ -63,8 +63,8 @@ class Processor:
                 )
             item.themes = valid_themes
 
-        # 同样校验 direction 的 key
-        if item.direction:
+        # 同样校验 direction 的 key（确保 direction 是 dict 类型）
+        if item.direction and isinstance(item.direction, dict):
             clean_direction = {}
             for tk, d in item.direction.items():
                 if tk in self._valid_tickers:
@@ -74,6 +74,11 @@ class Processor:
                         f"[{stage}] Hallucinated direction ticker stripped for {item.id}: {tk}"
                     )
             item.direction = clean_direction
+        elif item.direction and not isinstance(item.direction, dict):
+            logger.warning(
+                f"[{stage}] Non-dict direction value stripped for {item.id}: {type(item.direction)}"
+            )
+            item.direction = {}
 
         return item
 
@@ -136,6 +141,7 @@ class Processor:
         for item in items:
             s = scored_map.get(item.id)
             if s is None:
+                logger.warning(f"Triage: item {item.id} not in LLM response, silently dropped")
                 continue
             score = int(s.get("score", 0))
             if score < self.min_score:

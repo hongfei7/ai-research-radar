@@ -9,7 +9,6 @@ CREDIBILITY_RULES = {
     # —— 官方一手来源 ——
     "rss:openai":       "high",
     "rss:googleai":     "high",
-    "rss:anthropic":    "high",
     "rss:nvidia-blog":  "high",
     "rss:msft-research":"high",
     "sec_edgar":        "high",
@@ -27,7 +26,7 @@ CREDIBILITY_RULES = {
     "rss:mit-tr":          "medium",
     "rss:tomshardware":    "medium",
     "rss:zdnet":           "medium",
-    "rss:cnbc-tech":       "medium",
+    # "rss:cnbc-tech" 已禁用
     "rss:eetimes":         "medium",
     "rss:infoq":           "medium",
     "rss:importai":        "medium",
@@ -43,18 +42,7 @@ CREDIBILITY_RULES = {
     "hackernews":         "low",
     "github_trending":    "low",
     "rss:lobsters":       "low",
-    # —— X/Twitter 通过 Nitter RSS（第三方镜像，需交叉验证） ——
-    "twitter:openai":        "low",
-    "twitter:deepseek":      "low",
-    "twitter:demishassabis": "low",
-    "twitter:gdb":           "low",
-    "twitter:sama":          "low",
-    "twitter:karpathy":      "low",
-    "twitter:ylecun":        "low",
-    "twitter:grok":          "low",
-    "twitter:jeffdean":      "low",
-    "twitter:a16z":          "low",
-    "twitter:perplexity_ai": "low",
+    # —— X/Twitter 信源已禁用（Nitter 全线 403），暂时保留以备日后 X API 方案 ——
 
     # —— Reddit AI 社区（众源，需交叉验证） ——
     "reddit:ml":           "low",
