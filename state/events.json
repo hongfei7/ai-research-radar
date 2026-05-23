@@ -1,42 +1,53 @@
 {
-  "updated_at": "2026-05-23T21:35:22Z",
+  "updated_at": "2026-05-23T22:36:57Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
-      "title": "AI算力军备竞赛升级：英伟达Vera Rubin发布与算力投资加速",
-      "summary": "英伟达在GTC2025大会发布VeraRubin超级芯片，性能较9年前DGX-1提升100倍，Blackwell已量产、Rubin预计2026年下半年上市。OpenAI获软银、英伟达、亚马逊1100亿美元投资，并推进Stargate计划在全球建吉瓦级数据中心。与微软、亚马逊AWS、三星、SK海力士、Oracle等建立战略合作。AI基础设施军备竞赛加速，芯片、服务器、数据中心产业链全面受益，头部玩家资源集中度进一步提升。",
+      "title": "AI算力扩张遭遇电力瓶颈：数据中心能耗争议与供应链机遇并存",
+      "summary": "AI算力军备竞赛加速，英伟达Vera Rubin发布性能较9年前DGX-1提升100倍，OpenAI获软银等1100亿美元投资推进Stargate计划。然数据中心能耗已占美国电力6%，亚马逊、微软、谷歌扩建引发环保组织与社区强烈反对，多地审批受阻。能源供给瓶颈渐成算力扩张新约束，将推高选址运营成本，加速液冷散热、可再生能源及电力设备产业链投资需求，芯片、服务器、数据中心产业链持续受益但分化加剧。",
       "tickers": [
-        "工业富联",
-        "Marvell",
-        "海光信息",
-        "台积电",
-        "美光",
-        "浪潮信息",
-        "寒武纪",
-        "苹果",
-        "ARM",
-        "英伟达",
-        "AMD",
-        "戴尔",
-        "ASML",
-        "高通",
-        "OpenAI",
-        "Meta",
-        "超微电脑",
-        "中科曙光",
         "Intel",
+        "浪潮信息",
+        "中科曙光",
+        "Marvell",
+        "Oracle",
+        "工业富联",
+        "SK海力士",
+        "OpenAI",
+        "英伟达",
+        "谷歌",
+        "戴尔",
+        "长电科技",
+        "苹果",
         "博通",
-        "亚马逊",
+        "ARM",
+        "百度",
         "微软",
-        "谷歌"
+        "台积电",
+        "寒武纪",
+        "亚马逊",
+        "高通",
+        "美光",
+        "AMD",
+        "DeepSeek",
+        "海光信息",
+        "ASML",
+        "Meta",
+        "三星",
+        "阿里巴巴",
+        "超微电脑",
+        "腾讯",
+        "Anthropic",
+        "xAI"
       ],
       "themes": [
-        "compute_demand",
-        "advanced_packaging",
+        "model_capability",
+        "chip_supply",
+        "policy_export",
         "ai_monetization",
         "datacenter_power",
-        "model_capability",
-        "chip_supply"
+        "compute_demand",
+        "advanced_packaging"
       ],
       "direction": {
         "英伟达": "positive",
@@ -61,7 +72,14 @@
         "中科曙光": "positive",
         "浪潮信息": "positive",
         "寒武纪": "negative",
-        "海光信息": "negative"
+        "海光信息": "negative",
+        "阿里巴巴": "negative",
+        "腾讯": "negative",
+        "百度": "negative",
+        "长电科技": "neutral",
+        "Anthropic": "negative",
+        "DeepSeek": "negative",
+        "xAI": "negative"
       },
       "item_ids": [
         "794d4515e72219ef16782793f8cab7d3c3c82f4a",
@@ -77,11 +95,12 @@
         "4dc8c1bc29aac82146f9914242963a03439aa7a6",
         "a654fb66813e953f32851b23e9f12ddc2c5915d9",
         "b219e69539472b90c1a2c65917cd955981119295",
-        "f839c982179b198733349e267ea331fe691410a2"
+        "f839c982179b198733349e267ea331fe691410a2",
+        "5d3526c36318849c691f689fad4fe6a4fa17d377"
       ],
-      "source_count": 14,
+      "source_count": 15,
       "first_seen_at": "2026-05-23T15:20:24Z",
-      "last_updated_at": "2026-05-23T17:40:08Z",
+      "last_updated_at": "2026-05-23T22:35:42Z",
       "is_active": true,
       "significance": 10,
       "status": "developing"
@@ -1041,25 +1060,26 @@
     },
     "evt_ddab72f1c77f": {
       "event_id": "evt_ddab72f1c77f",
-      "title": "AI芯片格局演进：高通入局推理市场 Marvell加码定制化",
-      "summary": "AI芯片竞争格局持续演进：1）高通发布AI200/AI250推理芯片（2026/2027年商用），从移动端向数据中心延伸，瞄准年均3000亿美元推理算力市场，与英伟达、谷歌、华为正面竞争；2）Marvell展示定制AI基础设施平台，定位云厂商定制化解决方案提供商，强化DPU/Arm CPU定制业务。两事件反映AI芯片从通用向定制化、端侧向云端延伸的趋势，台积电作为代工方有望受益于新增订单。",
+      "title": "AI芯片定制化浪潮：博通转型、高通入局推理、Marvell加码",
+      "summary": "AI芯片竞争格局持续多元化：博通完成从射频向AI领军转型，聚焦谷歌TPU等定制芯片及网络解决方案；高通发布AI200/AI250推理芯片（2026/2027年商用）从移动端向数据中心延伸；Marvell强化定制AI基础设施平台。三者均聚焦定制化路径，台积电代工订单有望增加。",
       "tickers": [
-        "台积电",
-        "联发科",
+        "Intel",
+        "博通",
         "ARM",
         "英伟达",
+        "台积电",
         "Marvell",
-        "高通",
-        "博通",
-        "Intel",
-        "AMD"
+        "联发科",
+        "AMD",
+        "高通"
       ],
       "themes": [
-        "chip_supply",
-        "compute_demand",
         "custom_silicon",
-        "advanced_packaging",
-        "edge_ai"
+        "edge_ai",
+        "chip_supply",
+        "ai_monetization",
+        "compute_demand",
+        "advanced_packaging"
       ],
       "direction": {
         "英伟达": "neutral",
@@ -1074,14 +1094,15 @@
       "item_ids": [
         "76ca2a06e60017bf47562c01fd50985a789fb70e",
         "0d9e006d080fa206f5e26472e1fc04322e453186",
-        "9cb52861376bdeba3fec46f9c9c0c9f3613e8c7c"
+        "9cb52861376bdeba3fec46f9c9c0c9f3613e8c7c",
+        "c9fbc1f9f831993559745f6815cd3cd5dde3ce45"
       ],
-      "source_count": 3,
+      "source_count": 4,
       "first_seen_at": "2026-05-23T17:40:08Z",
-      "last_updated_at": "2026-05-23T19:25:47Z",
+      "last_updated_at": "2026-05-23T22:35:42Z",
       "is_active": true,
-      "significance": 7,
-      "status": "developing"
+      "significance": 8,
+      "status": "stable"
     },
     "evt_2c2a61134a87": {
       "event_id": "evt_2c2a61134a87",
@@ -1111,32 +1132,33 @@
     },
     "evt_891f8e2fddba": {
       "event_id": "evt_891f8e2fddba",
-      "title": "AI算力生态整合加速：百度超节点路线图+长电先进封装景气验证",
-      "summary": "券商研究院整合AI算力产业链最新动态：1）长电科技Q1净利暴增5倍，AI先进封装景气获验证，XDFOI®技术为核心竞争力，受益HBM封装需求；2）百度发布天池千卡（2028）及昆仑芯N系列4000卡超节点（2029）路线图，继华为后又一国内大厂明确超节点规划；3）浪潮信息涨停，与20余家国产AI芯片厂商合作推进开放标准。国产AI芯片生态加速整合，量产进度及生态竞争为核心跟踪变量。",
+      "title": "国内大厂AI算力生态加速整合：阿里自研芯片+长电封装景气",
+      "summary": "券商研究院整合AI算力产业链最新动态：1）长电科技Q1净利暴增5倍，AI先进封装景气获验证，XDFOI®技术为核心竞争力；2）百度发布天池千卡（2028）及昆仑芯N系列4000卡超节点（2029）路线图；3）阿里平头哥发布新一代AI自研芯片，打通LLM训练与推理全链路，国内大厂技术自主化迈上新台阶；4）浪潮信息涨停，与20余家国产AI芯片厂商合作推进开放标准。国产AI算力生态加速整合，量产进度及生态竞争为核心跟踪变量。",
       "tickers": [
-        "博通",
         "中科曙光",
-        "美光",
-        "摩尔线程",
-        "百度",
         "中芯国际",
-        "浪潮信息",
-        "寒武纪",
         "工业富联",
-        "超微电脑",
-        "长电科技",
         "英伟达",
+        "长电科技",
+        "博通",
         "沐曦",
-        "海光信息",
+        "百度",
         "台积电",
-        "腾讯",
+        "寒武纪",
+        "景嘉微",
+        "美光",
         "AMD",
-        "景嘉微"
+        "摩尔线程",
+        "海光信息",
+        "阿里巴巴",
+        "超微电脑",
+        "腾讯",
+        "浪潮信息"
       ],
       "themes": [
         "advanced_packaging",
-        "chip_supply",
         "domestic_substitution",
+        "chip_supply",
         "compute_demand"
       ],
       "direction": {
@@ -1155,7 +1177,8 @@
         "台积电": "neutral",
         "超微电脑": "neutral",
         "长电科技": "positive",
-        "美光": "positive"
+        "美光": "positive",
+        "阿里巴巴": "positive"
       },
       "item_ids": [
         "3da2f7855d7b7742ed399215df6d3e87c12c4fdc",
@@ -1163,11 +1186,12 @@
         "d752c1a9a97518f059be106335ef5e606f3527b2",
         "c7941f3d787e6df776c763cdaad36d957fd20138",
         "1f78bfa4cd24d023d32eb1213573e0f328be95cd",
-        "e5b199b957f9a4d793e600f43f72617220861b32"
+        "e5b199b957f9a4d793e600f43f72617220861b32",
+        "0cd2b11c48ddbb9eb3f18a1a6c0343f6fd132a88"
       ],
-      "source_count": 6,
+      "source_count": 7,
       "first_seen_at": "2026-05-23T19:25:47Z",
-      "last_updated_at": "2026-05-23T21:33:55Z",
+      "last_updated_at": "2026-05-23T22:35:42Z",
       "is_active": true,
       "significance": 9,
       "status": "developing"
@@ -1198,22 +1222,32 @@
     },
     "evt_85d2d1a5f179": {
       "event_id": "evt_85d2d1a5f179",
-      "title": "科技巨头调整AI芯片战略与存储需求井喷共振",
-      "summary": "微软正对其AI芯片自研计划进行重大战略调整，2028年前将放缓自研脚步，扩大对英伟达、AMD等外部供应商依赖。与此同时，存储芯片巨头美光科技即将发布财报，自3月以来股价已飙升超80%，AI芯片需求井喷带动HBM等高带宽存储器需求爆发。分析师普遍看涨存储行业新一轮机遇，英伟达、AMD等AI芯片厂商有望受益，但需关注三星、SK海力士等竞争格局变化。",
+      "title": "AI芯片军备竞赛升级：自研放缓、封装产能争夺、先进制程突破共振",
+      "summary": "微软放缓自研AI芯片，扩大对英伟达、AMD等外部依赖；英伟达锁定台积电CoWoS约六成产能，云AI芯片市场2026年预计增长40%-50%；AMD突破2nm EPYC制程，与英伟达数据中心竞争加剧；存储芯片需求井喷，美光等受益。台积电先进封装成战略资源，各云厂商和芯片设计巨头围绕封装产能争夺白热化。",
       "tickers": [
-        "美光",
-        "博通",
-        "英特尔",
-        "英伟达",
-        "台积电",
         "Intel",
+        "博通",
+        "ASML",
+        "英特尔",
+        "Meta",
+        "英伟达",
         "微软",
+        "台积电",
+        "亚马逊",
+        "谷歌",
+        "美光",
         "AMD"
       ],
       "themes": [
-        "advanced_packaging",
+        "制程竞争",
+        "算力需求",
+        "model_capability",
+        "先进封装",
         "chip_supply",
-        "compute_demand"
+        "compute_demand",
+        "芯片供应链",
+        "advanced_packaging",
+        "存储需求"
       ],
       "direction": {
         "微软": "positive",
@@ -1222,18 +1256,24 @@
         "AMD": "neutral",
         "台积电": "negative",
         "美光": "positive",
-        "博通": "neutral"
+        "博通": "neutral",
+        "ASML": "neutral",
+        "谷歌": "neutral",
+        "亚马逊": "neutral",
+        "Meta": "neutral"
       },
       "item_ids": [
         "a70eae637c7b881d4eddced564015df4ea382b76",
         "faebb45dc0f863a29da69f5d3dbd0c22d6b9c11f",
-        "e4831f3c6e39159ac06dd10f234eade05e04d44c"
+        "e4831f3c6e39159ac06dd10f234eade05e04d44c",
+        "c7d640539598b8a4968c74be0cc816b7e6ce787a",
+        "183d352944dd66a31ec0fa2c6daba65b9c9cfb44"
       ],
-      "source_count": 3,
+      "source_count": 5,
       "first_seen_at": "2026-05-23T20:32:45Z",
-      "last_updated_at": "2026-05-23T21:33:55Z",
+      "last_updated_at": "2026-05-23T22:35:42Z",
       "is_active": true,
-      "significance": 8,
+      "significance": 9,
       "status": "developing"
     },
     "evt_9a155252aec5": {
@@ -1429,6 +1469,30 @@
       "last_updated_at": "2026-05-23T21:33:55Z",
       "is_active": false,
       "significance": 6,
+      "status": "resolved"
+    },
+    "evt_a62b69c3a599": {
+      "event_id": "evt_a62b69c3a599",
+      "title": "新突破!科大讯飞最新发布 - 澎湃新闻",
+      "summary": "科大讯飞于11月6日在第八届世界声博会暨2025全球1024开发者节上，正式发布深度推理大模型讯飞星火X1.5，实现「更懂你的AI」主题升级。星火X1.5定位为深度推理模型，是讯飞星火大模型系列的最新迭代版本。此次发布展示了国产大模型在深度推理能力上的持续突破，以「更懂你」为差异化方向，强调场景理解与个性化交互能力。",
+      "tickers": [
+        "科大讯飞"
+      ],
+      "themes": [
+        "model_capability",
+        "ai_monetization"
+      ],
+      "direction": {
+        "科大讯飞": "positive"
+      },
+      "item_ids": [
+        "af4cc449998965863148c736fe54dbb6ca1e99b6"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-05-23T22:35:42Z",
+      "last_updated_at": "2026-05-23T22:35:42Z",
+      "is_active": false,
+      "significance": 5,
       "status": "resolved"
     }
   }
