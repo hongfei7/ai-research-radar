@@ -51,21 +51,28 @@ def _now_hkt() -> str:
 
 
 def _parse_iso(s: str) -> Optional[datetime]:
-    """宽松的 ISO8601/RFC2822 解析"""
+    """宽松的 ISO8601/RFC2822 解析，始终返回带时区的 datetime"""
     if not s:
         return None
     s_clean = s.strip().replace("Z", "+00:00")
     for fmt in [
         "%Y-%m-%dT%H:%M:%S%z",
         "%Y-%m-%dT%H:%M:%S.%f%z",
-        "%Y-%m-%dT%H:%M:%S",
         "%Y-%m-%d %H:%M:%S%z",
-        "%Y-%m-%d %H:%M:%S",
         "%a, %d %b %Y %H:%M:%S %z",
-        "%a, %d %b %Y %H:%M:%S %Z",
     ]:
         try:
             return datetime.strptime(s_clean, fmt)
+        except ValueError:
+            continue
+    for fmt in [
+        "%Y-%m-%dT%H:%M:%S",
+        "%Y-%m-%d %H:%M:%S",
+        "%a, %d %b %Y %H:%M:%S %Z",
+    ]:
+        try:
+            dt = datetime.strptime(s_clean, fmt)
+            return dt.replace(tzinfo=timezone.utc)
         except ValueError:
             continue
     try:
