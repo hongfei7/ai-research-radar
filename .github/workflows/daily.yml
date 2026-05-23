@@ -31,4 +31,5 @@ jobs:
           git config user.email "radar-bot@users.noreply.github.com"
           git add archive/ state/ pages/ README.md
           git commit -m "radar: $(date -u +%Y-%m-%dT%H:%M)" || echo "nothing to commit"
+          git pull --rebase origin main
           git push
