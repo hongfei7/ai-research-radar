@@ -135,6 +135,7 @@ class Situation:
     last_telegram_digest_at: str = ""    # ISO8601，上次 Telegram 兜底推送时间
     morning_brief_date: str = ""         # 上次晨报推送日期，用于 Telegram 每日去重
     cross_analysis: str = ""             # 交叉综合分析文本
+    trend_spotting: str = ""             # 趋势发现文本
 
     def to_dict(self) -> dict:
         return asdict(self)

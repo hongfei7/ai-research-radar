@@ -104,8 +104,23 @@ sources:
     - { id: "twitter:deepseek",    type: "rss", params: { url: "https://nitter.poast.org/deepseek_ai/rss" } }
     - { id: "twitter:demishassabis", type: "rss", params: { url: "https://nitter.poast.org/demishassabis/rss" } }
     - { id: "twitter:gdb",         type: "rss", params: { url: "https://nitter.poast.org/gdb/rss" } }
-    # ---- 网络搜索补充（抓取 RSS 盲区） ----
-    - { id: "web_search",      type: "web_search", params: { max_per_stock: 2 } }
+    - { id: "twitter:sama",        type: "rss", params: { url: "https://nitter.poast.org/sama/rss" } }
+    - { id: "twitter:karpathy",    type: "rss", params: { url: "https://nitter.poast.org/karpathy/rss" } }
+    - { id: "twitter:ylecun",      type: "rss", params: { url: "https://nitter.poast.org/ylecun/rss" } }
+    - { id: "twitter:grok",        type: "rss", params: { url: "https://nitter.poast.org/grok/rss" } }
+    - { id: "twitter:jeffdean",    type: "rss", params: { url: "https://nitter.poast.org/JeffDean/rss" } }
+    - { id: "twitter:a16z",        type: "rss", params: { url: "https://nitter.poast.org/a16z/rss" } }
+    - { id: "twitter:perplexity_ai", type: "rss", params: { url: "https://nitter.poast.org/perplexity_ai/rss" } }
+    # ---- Reddit AI 社区（RSS feed） ----
+    - { id: "reddit:ml",           type: "rss", params: { url: "https://www.reddit.com/r/MachineLearning/.rss" } }
+    - { id: "reddit:localllama",   type: "rss", params: { url: "https://www.reddit.com/r/LocalLLaMA/.rss" } }
+    - { id: "reddit:singularity",  type: "rss", params: { url: "https://www.reddit.com/r/singularity/.rss" } }
+    # ---- HuggingFace Daily Papers ----
+    - { id: "huggingface:papers",  type: "rss", params: { url: "https://huggingface.co/papers/feed.rss" } }
+    # ---- MiniMax 联网搜索（Google 级搜索，替代 DDG） ----
+    - { id: "minimax_search",  type: "minimax_search", params: { max_per_stock: 3 } }
+    # ---- DuckDuckGo 搜索（备用，MiniMax 搜索失败时补充） ----
+    - { id: "web_search",      type: "web_search", params: { max_per_stock: 1 } }
   market:
     - { id: "sec_edgar",       type: "sec_edgar", params: { forms: ["8-K"] } }
 
@@ -115,8 +130,8 @@ sources:
 runtime:
   cron_interval_minutes: 30      # 建议 30min，首跑手动触发建立 seen.db 后增量跑仅需 3-5min
   rolling_window_hours: 24
-  situation_update_interval: 3      # 态势重写间隔(轮次)
-  situation_trigger_new_events: 2   # 触发态势重写的新事件数阈值
+  situation_update_interval: 1      # 态势重写间隔(轮次)，每轮更新以最大化MiniMax用量
+  situation_trigger_new_events: 1   # 触发态势重写的新事件数阈值
 
 # ============================================================
 # 事件聚类参数

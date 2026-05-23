@@ -7,6 +7,7 @@ from radar.collectors.hackernews import HackerNewsCollector
 from radar.collectors.github_trending import GithubTrendingCollector
 from radar.collectors.sec_edgar import SECEdgarCollector
 from radar.collectors.web_search import WebSearchCollector
+from radar.collectors.minimax_search import MinimaxSearchCollector
 
 __all__ = [
     "Collector",
@@ -16,4 +17,5 @@ __all__ = [
     "GithubTrendingCollector",
     "SECEdgarCollector",
     "WebSearchCollector",
+    "MinimaxSearchCollector",
 ]

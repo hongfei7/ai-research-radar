@@ -44,13 +44,31 @@ CREDIBILITY_RULES = {
     "github_trending":    "low",
     "rss:lobsters":       "low",
     # —— X/Twitter 通过 Nitter RSS（第三方镜像，需交叉验证） ——
-    "twitter:openai":       "low",
-    "twitter:deepseek":     "low",
-    "twitter:demishassabis":"low",
-    "twitter:gdb":          "low",
+    "twitter:openai":        "low",
+    "twitter:deepseek":      "low",
+    "twitter:demishassabis": "low",
+    "twitter:gdb":           "low",
+    "twitter:sama":          "low",
+    "twitter:karpathy":      "low",
+    "twitter:ylecun":        "low",
+    "twitter:grok":          "low",
+    "twitter:jeffdean":      "low",
+    "twitter:a16z":          "low",
+    "twitter:perplexity_ai": "low",
 
-    # —— 搜索引擎聚合（需 MiniMax 交叉验证） ——
-    "web_search":         "low",
+    # —— Reddit AI 社区（众源，需交叉验证） ——
+    "reddit:ml":           "low",
+    "reddit:localllama":   "low",
+    "reddit:singularity":  "low",
+
+    # —— HuggingFace（学术社区，可信度较高） ——
+    "huggingface:papers":  "medium",
+
+    # —— MiniMax 搜索（Google 级搜索聚合） ——
+    "minimax_search":      "low",
+
+    # —— DuckDuckGo 搜索（备用） ——
+    "web_search":          "low",
 }
 
 # 按前缀匹配（RSS 源可能带子 ID）

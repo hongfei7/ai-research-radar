@@ -16,6 +16,7 @@ ENV_BASE_URL = "MINIMAX_BASE_URL"
 
 # 默认值
 DEFAULT_BASE_URL = "https://api.minimax.chat/v1"
+DEFAULT_PLAN_BASE_URL = "https://api.minimaxi.com"
 DEFAULT_MODEL = "MiniMax-Text-01"
 DEFAULT_EMBEDDING_MODEL = "embo-01"
 
@@ -325,6 +326,130 @@ def _extract_json_block(text: str) -> str | None:
             return m.group(0).strip()
 
     return None
+
+
+    # ================================================================
+    # Coding Plan: Web Search (联网搜索)
+    # ================================================================
+
+    async def search(
+        self,
+        query: str,
+        plan_base_url: str | None = None,
+    ) -> list[dict]:
+        """
+        调用 MiniMax Coding Plan 联网搜索 API。
+
+        端点: POST /v1/coding_plan/search
+        对应 MCP 工具 web_search，底层为 Google 级搜索。
+
+        Args:
+            query:         搜索查询词（3-5 个关键词最佳）
+            plan_base_url: Coding Plan API 主机地址
+
+        Returns:
+            搜索结果列表 [{"title": "", "link": "", "snippet": "", "date": ""}, ...]
+            失败返回空列表
+        """
+        client = await self._get_client()
+        base = (plan_base_url or DEFAULT_PLAN_BASE_URL).rstrip("/")
+        url = f"{base}/v1/coding_plan/search"
+
+        try:
+            resp = await client.post(url, json={"q": query})
+            resp.raise_for_status()
+            data = resp.json()
+
+            base_resp = data.get("base_resp", {})
+            if base_resp.get("status_code", 0) != 0:
+                logger.error(
+                    f"Search API error [{base_resp.get('status_code')}]: {base_resp.get('status_msg')}"
+                )
+                return []
+
+            return data.get("organic", [])
+
+        except Exception as e:
+            logger.error(f"Search request failed for '{query}': {e}")
+            return []
+
+    async def search_batch(
+        self,
+        queries: list[str],
+        plan_base_url: str | None = None,
+        delay: float = 0.5,
+    ) -> dict[str, list[dict]]:
+        """
+        批量搜索，串行执行（带间隔以避免限流）。
+
+        Args:
+            queries:       搜索查询词列表
+            plan_base_url: Coding Plan API 主机地址
+            delay:         每次搜索之间的间隔(秒)
+
+        Returns:
+            {query: [results]}
+        """
+        results: dict[str, list[dict]] = {}
+        for q in queries:
+            results[q] = await self.search(q, plan_base_url=plan_base_url)
+            if delay > 0:
+                await asyncio.sleep(delay)
+        return results
+
+    # ================================================================
+    # Coding Plan: Image Understanding (图片理解)
+    # ================================================================
+
+    async def understand_image(
+        self,
+        prompt: str,
+        image_url: str,
+        plan_base_url: str | None = None,
+    ) -> str:
+        """
+        调用 MiniMax Coding Plan 图片理解 API。
+
+        端点: POST /v1/coding_plan/vlm
+
+        Args:
+            prompt:        对图片的提问或分析要求
+            image_url:     图片 URL (http/https) 或本地路径，或 base64 data URL
+            plan_base_url: Coding Plan API 主机地址
+
+        Returns:
+            模型对图片的分析文本，失败返回空字符串
+        """
+        client = await self._get_client()
+        base = (plan_base_url or DEFAULT_PLAN_BASE_URL).rstrip("/")
+        url = f"{base}/v1/coding_plan/vlm"
+
+        # 如果是本地文件路径，转为 base64
+        processed_url = image_url
+        if not image_url.startswith(("http://", "https://", "data:")):
+            import base64 as _b64
+            try:
+                with open(image_url, "rb") as f:
+                    img_data = f.read()
+                ext = os.path.splitext(image_url)[1].lower()
+                fmt_map = {".jpg": "jpeg", ".jpeg": "jpeg", ".png": "png", ".webp": "webp"}
+                fmt = fmt_map.get(ext, "jpeg")
+                processed_url = f"data:image/{fmt};base64,{_b64.b64encode(img_data).decode('utf-8')}"
+            except Exception as e:
+                logger.error(f"Failed to read image file: {e}")
+                return ""
+
+        payload = {"prompt": prompt, "image_url": processed_url}
+
+        try:
+            resp = await client.post(url, json=payload)
+            resp.raise_for_status()
+            data = resp.json()
+            return data.get("content", "")
+
+        except Exception as e:
+            logger.error(f"Image understanding request failed: {e}")
+            return ""
 
 
 def cosine_similarity(a: list[float], b: list[float]) -> float:

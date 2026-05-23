@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 _PROMPTS_DIR = Path(__file__).resolve().parent.parent / "prompts"
 
 # 每批最多处理条目数
-_TRIAGE_BATCH_SIZE = 60
+_TRIAGE_BATCH_SIZE = 40
 
 
 def _load_prompt(name: str) -> str:
@@ -224,10 +224,11 @@ class Processor:
     async def cross_analyze(self, items: list[Item]) -> str:
         """
         对所有已提取条目做交叉综合分析：矛盾、趋势、盲点、联动。
+        每轮必跑以最大化 MiniMax 用量。
         Returns:
             综合分析文本（≤500字）
         """
-        if not items or len(items) < 3:
+        if not items:
             return ""
 
         template = _load_prompt("cross_analysis")
@@ -267,6 +268,55 @@ class Processor:
             return text
         except Exception as e:
             logger.error(f"Cross-analysis failed: {e}")
+            return ""
+
+    # ================================================================
+    # Stage 4: 趋势发现 —— 识别新兴趋势与早期信号
+    # ================================================================
+
+    async def trend_spotting(self, items: list[Item]) -> str:
+        """
+        从所有已处理条目中识别新兴趋势、早期信号和潜在拐点。
+        视角：72小时内哪些变化最值得关注？什么信号被市场低估？
+
+        Returns:
+            趋势分析文本（≤300字）
+        """
+        if not items:
+            return ""
+
+        template = _load_prompt("trend_spotting")
+
+        items_json = json.dumps(
+            [
+                {
+                    "title": it.title,
+                    "cn_summary": it.cn_summary,
+                    "tickers": it.tickers,
+                    "themes": it.themes,
+                    "direction": it.direction,
+                    "so_what": it.so_what,
+                    "score": it.relevance_score,
+                }
+                for it in items[:30]
+            ],
+            ensure_ascii=False,
+        )
+
+        prompt = template.format(items_json=items_json)
+
+        try:
+            text = await self.client.chat(
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.5,
+                max_tokens=800,
+            )
+            text = text.strip()
+            if text:
+                logger.info(f"Trend spotting generated: {len(text)} chars")
+            return text
+        except Exception as e:
+            logger.error(f"Trend spotting failed: {e}")
             return ""
 
     # ================================================================

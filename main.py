@@ -25,6 +25,7 @@ from radar.collectors.hackernews import HackerNewsCollector
 from radar.collectors.github_trending import GithubTrendingCollector
 from radar.collectors.sec_edgar import SECEdgarCollector
 from radar.collectors.web_search import WebSearchCollector
+from radar.collectors.minimax_search import MinimaxSearchCollector
 from radar.dedup import DedupStore
 from radar.minimax_client import MinimaxClient
 from radar.processor import Processor
@@ -49,6 +50,7 @@ COLLECTOR_MAP = {
     "github_trending": GithubTrendingCollector(),
     "sec_edgar": SECEdgarCollector(),
     "web_search": WebSearchCollector(),
+    "minimax_search": MinimaxSearchCollector(),
 }
 
 # 全局运行计数器（用于态势更新间隔）
@@ -75,6 +77,9 @@ async def collect_all(cfg: dict) -> list[Item]:
     ws_collector = COLLECTOR_MAP.get("web_search")
     if isinstance(ws_collector, WebSearchCollector):
         ws_collector.coverage = cfg.get("coverage", [])
+    ms_collector = COLLECTOR_MAP.get("minimax_search")
+    if isinstance(ms_collector, MinimaxSearchCollector):
+        ms_collector.coverage = cfg.get("coverage", [])
 
     all_sources = []
     for src_type in ["tech", "market"]:
@@ -247,15 +252,23 @@ async def run_full(cfg: dict) -> None:
             await client.close()
             return
 
-        # Stage 2.5: 交叉综合分析 —— 上帝视角元分析
+        # Stage 2.5: 交叉综合分析 —— 上帝视角元分析（每轮必跑）
         cross_analysis_text = ""
-        if len(processed) >= 3:
-            logger.info("Running cross-analysis on processed items...")
-            cross_analysis_text = await processor.cross_analyze(processed)
-            if cross_analysis_text:
-                logger.info(f"Cross-analysis complete: {len(cross_analysis_text)} chars")
-            else:
-                logger.warning("Cross-analysis returned empty")
+        logger.info("Running cross-analysis on processed items...")
+        cross_analysis_text = await processor.cross_analyze(processed)
+        if cross_analysis_text:
+            logger.info(f"Cross-analysis complete: {len(cross_analysis_text)} chars")
+        else:
+            logger.warning("Cross-analysis returned empty")
+
+        # Stage 2.6: 趋势发现 —— 识别新兴趋势与早期信号（每轮必跑）
+        trend_text = ""
+        logger.info("Running trend spotting on processed items...")
+        trend_text = await processor.trend_spotting(processed)
+        if trend_text:
+            logger.info(f"Trend spotting complete: {len(trend_text)} chars")
+        else:
+            logger.warning("Trend spotting returned empty")
 
         existing_events = load_events()
         cluster_engine = ClusterEngine(client, cfg)
@@ -290,12 +303,17 @@ async def run_full(cfg: dict) -> None:
             )
             if cross_analysis_text and sit:
                 sit.cross_analysis = cross_analysis_text
+            if trend_text and sit:
+                sit.trend_spotting = trend_text
             save_situation(sit)
         else:
             sit = prev_sit
             if cross_analysis_text and sit:
                 sit.cross_analysis = cross_analysis_text
-                save_situation(sit)  # 即使态势未更新也保存交叉分析
+            if trend_text and sit:
+                sit.trend_spotting = trend_text
+            if cross_analysis_text or trend_text:
+                save_situation(sit)
             logger.info("Skipping situation update (not due yet)")
 
         # ================================================================
