@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-24T07:58:34Z",
+  "updated_at": "2026-05-24T14:30:22Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -103,7 +103,8 @@
       "last_updated_at": "2026-05-23T22:35:42Z",
       "is_active": false,
       "significance": 10,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_a5e1c68e90d9": {
       "event_id": "evt_a5e1c68e90d9",
@@ -176,7 +177,8 @@
       "last_updated_at": "2026-05-23T15:20:24Z",
       "is_active": false,
       "significance": 9,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_d60fc5d532da": {
       "event_id": "evt_d60fc5d532da",
@@ -229,7 +231,8 @@
       "last_updated_at": "2026-05-23T15:20:24Z",
       "is_active": false,
       "significance": 9,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_eb7c295d02aa": {
       "event_id": "evt_eb7c295d02aa",
@@ -300,7 +303,8 @@
       "last_updated_at": "2026-05-23T20:32:45Z",
       "is_active": false,
       "significance": 9,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_b49259b38281": {
       "event_id": "evt_b49259b38281",
@@ -323,7 +327,8 @@
       "last_updated_at": "2026-05-23T15:20:24Z",
       "is_active": false,
       "significance": 7,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_c837fb3679f4": {
       "event_id": "evt_c837fb3679f4",
@@ -355,7 +360,8 @@
       "last_updated_at": "2026-05-23T15:20:24Z",
       "is_active": false,
       "significance": 6,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_ed14029ca679": {
       "event_id": "evt_ed14029ca679",
@@ -406,7 +412,8 @@
       "last_updated_at": "2026-05-23T17:40:08Z",
       "is_active": false,
       "significance": 9,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_78a306cd53a4": {
       "event_id": "evt_78a306cd53a4",
@@ -468,9 +475,10 @@
       "source_count": 8,
       "first_seen_at": "2026-05-23T15:20:24Z",
       "last_updated_at": "2026-05-24T02:33:40Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 9,
-      "status": "stable"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_0293be8a9747": {
       "event_id": "evt_0293be8a9747",
@@ -535,7 +543,8 @@
       "last_updated_at": "2026-05-23T21:33:55Z",
       "is_active": false,
       "significance": 9,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_4f56f50f552d": {
       "event_id": "evt_4f56f50f552d",
@@ -589,7 +598,8 @@
       "last_updated_at": "2026-05-23T21:33:55Z",
       "is_active": false,
       "significance": 9,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_67b4f1aedf77": {
       "event_id": "evt_67b4f1aedf77",
@@ -653,7 +663,8 @@
       "last_updated_at": "2026-05-23T21:33:55Z",
       "is_active": false,
       "significance": 9,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_7b94c35f9400": {
       "event_id": "evt_7b94c35f9400",
@@ -684,7 +695,8 @@
       "last_updated_at": "2026-05-24T00:05:50Z",
       "is_active": false,
       "significance": 7,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_a183e664b97a": {
       "event_id": "evt_a183e664b97a",
@@ -712,7 +724,8 @@
       "last_updated_at": "2026-05-23T17:40:08Z",
       "is_active": false,
       "significance": 7,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_060e3318e979": {
       "event_id": "evt_060e3318e979",
@@ -771,7 +784,8 @@
       "last_updated_at": "2026-05-24T00:05:50Z",
       "is_active": false,
       "significance": 9,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_a72edc8d6f32": {
       "event_id": "evt_a72edc8d6f32",
@@ -810,7 +824,8 @@
       "last_updated_at": "2026-05-23T20:32:45Z",
       "is_active": false,
       "significance": 8,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_becb450907e9": {
       "event_id": "evt_becb450907e9",
@@ -852,7 +867,8 @@
       "last_updated_at": "2026-05-23T20:32:45Z",
       "is_active": false,
       "significance": 9,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_23e01e1f8f84": {
       "event_id": "evt_23e01e1f8f84",
@@ -875,7 +891,8 @@
       "last_updated_at": "2026-05-23T17:40:08Z",
       "is_active": false,
       "significance": 7,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_15a2fdfb1af3": {
       "event_id": "evt_15a2fdfb1af3",
@@ -917,7 +934,8 @@
       "last_updated_at": "2026-05-23T21:33:55Z",
       "is_active": false,
       "significance": 8,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_d63331c527a5": {
       "event_id": "evt_d63331c527a5",
@@ -944,7 +962,8 @@
       "last_updated_at": "2026-05-23T17:40:08Z",
       "is_active": false,
       "significance": 6,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_45392c36bbaf": {
       "event_id": "evt_45392c36bbaf",
@@ -975,7 +994,8 @@
       "last_updated_at": "2026-05-24T00:05:50Z",
       "is_active": false,
       "significance": 7,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_91481d5c60c2": {
       "event_id": "evt_91481d5c60c2",
@@ -1001,7 +1021,8 @@
       "last_updated_at": "2026-05-23T17:40:08Z",
       "is_active": false,
       "significance": 6,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_4a5983c39c2e": {
       "event_id": "evt_4a5983c39c2e",
@@ -1035,7 +1056,8 @@
       "last_updated_at": "2026-05-23T17:40:08Z",
       "is_active": false,
       "significance": 6,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_f2ac5bea370c": {
       "event_id": "evt_f2ac5bea370c",
@@ -1071,7 +1093,8 @@
       "last_updated_at": "2026-05-23T17:40:08Z",
       "is_active": false,
       "significance": 6,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_ddab72f1c77f": {
       "event_id": "evt_ddab72f1c77f",
@@ -1117,7 +1140,8 @@
       "last_updated_at": "2026-05-23T22:35:42Z",
       "is_active": false,
       "significance": 8,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_2c2a61134a87": {
       "event_id": "evt_2c2a61134a87",
@@ -1143,7 +1167,8 @@
       "last_updated_at": "2026-05-23T19:25:47Z",
       "is_active": false,
       "significance": 8,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_891f8e2fddba": {
       "event_id": "evt_891f8e2fddba",
@@ -1209,7 +1234,8 @@
       "last_updated_at": "2026-05-23T22:35:42Z",
       "is_active": false,
       "significance": 9,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_869851fef89c": {
       "event_id": "evt_869851fef89c",
@@ -1233,7 +1259,8 @@
       "last_updated_at": "2026-05-23T19:25:47Z",
       "is_active": false,
       "significance": 5,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_85d2d1a5f179": {
       "event_id": "evt_85d2d1a5f179",
@@ -1289,7 +1316,8 @@
       "last_updated_at": "2026-05-23T22:35:42Z",
       "is_active": false,
       "significance": 9,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_9a155252aec5": {
       "event_id": "evt_9a155252aec5",
@@ -1335,7 +1363,8 @@
       "last_updated_at": "2026-05-23T20:32:45Z",
       "is_active": false,
       "significance": 8,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_bd5109249a2a": {
       "event_id": "evt_bd5109249a2a",
@@ -1360,7 +1389,8 @@
       "last_updated_at": "2026-05-23T20:32:45Z",
       "is_active": false,
       "significance": 6,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_1202f33796ed": {
       "event_id": "evt_1202f33796ed",
@@ -1389,7 +1419,8 @@
       "last_updated_at": "2026-05-23T20:32:45Z",
       "is_active": false,
       "significance": 6,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_52a6cd4cea43": {
       "event_id": "evt_52a6cd4cea43",
@@ -1413,7 +1444,8 @@
       "last_updated_at": "2026-05-23T20:32:45Z",
       "is_active": false,
       "significance": 5,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_e4581130cbb1": {
       "event_id": "evt_e4581130cbb1",
@@ -1459,7 +1491,8 @@
       "last_updated_at": "2026-05-23T20:32:45Z",
       "is_active": false,
       "significance": 5,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_9405cb162c5b": {
       "event_id": "evt_9405cb162c5b",
@@ -1484,7 +1517,8 @@
       "last_updated_at": "2026-05-23T21:33:55Z",
       "is_active": false,
       "significance": 6,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_a62b69c3a599": {
       "event_id": "evt_a62b69c3a599",
@@ -1508,7 +1542,8 @@
       "last_updated_at": "2026-05-23T22:35:42Z",
       "is_active": false,
       "significance": 5,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_cca274525452": {
       "event_id": "evt_cca274525452",
@@ -1543,7 +1578,8 @@
       "last_updated_at": "2026-05-24T00:05:50Z",
       "is_active": false,
       "significance": 9,
-      "status": "resolved"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_60058f40b2fa": {
       "event_id": "evt_60058f40b2fa",
@@ -1578,9 +1614,10 @@
       "source_count": 1,
       "first_seen_at": "2026-05-24T02:33:40Z",
       "last_updated_at": "2026-05-24T02:33:40Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 8,
-      "status": "developing"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_227c8fb6312b": {
       "event_id": "evt_227c8fb6312b",
@@ -1607,9 +1644,10 @@
       "source_count": 1,
       "first_seen_at": "2026-05-24T02:33:40Z",
       "last_updated_at": "2026-05-24T02:33:40Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 7,
-      "status": "developing"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_202b9b752c88": {
       "event_id": "evt_202b9b752c88",
@@ -1641,9 +1679,10 @@
       "source_count": 1,
       "first_seen_at": "2026-05-24T02:33:40Z",
       "last_updated_at": "2026-05-24T02:33:40Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 6,
-      "status": "developing"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_be927d49b16d": {
       "event_id": "evt_be927d49b16d",
@@ -1701,9 +1740,10 @@
       "source_count": 1,
       "first_seen_at": "2026-05-24T02:33:40Z",
       "last_updated_at": "2026-05-24T02:33:40Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 6,
-      "status": "developing"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_4f6b0c1cdfba": {
       "event_id": "evt_4f6b0c1cdfba",
@@ -1738,9 +1778,10 @@
       "source_count": 1,
       "first_seen_at": "2026-05-24T02:33:40Z",
       "last_updated_at": "2026-05-24T02:33:40Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 6,
-      "status": "developing"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_0a4d5b407abe": {
       "event_id": "evt_0a4d5b407abe",
@@ -1762,9 +1803,10 @@
       "source_count": 1,
       "first_seen_at": "2026-05-24T02:33:40Z",
       "last_updated_at": "2026-05-24T02:33:40Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 6,
-      "status": "developing"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_3656878cd644": {
       "event_id": "evt_3656878cd644",
@@ -1796,9 +1838,10 @@
       "source_count": 1,
       "first_seen_at": "2026-05-24T04:52:26Z",
       "last_updated_at": "2026-05-24T04:52:26Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 7,
-      "status": "developing"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_93d50f942107": {
       "event_id": "evt_93d50f942107",
@@ -1832,9 +1875,10 @@
       "source_count": 1,
       "first_seen_at": "2026-05-24T04:52:26Z",
       "last_updated_at": "2026-05-24T04:52:26Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 7,
-      "status": "developing"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_8565b15e1a35": {
       "event_id": "evt_8565b15e1a35",
@@ -1875,9 +1919,10 @@
       "source_count": 1,
       "first_seen_at": "2026-05-24T04:52:26Z",
       "last_updated_at": "2026-05-24T04:52:26Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 6,
-      "status": "developing"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_e67f2ab9c2f8": {
       "event_id": "evt_e67f2ab9c2f8",
@@ -1940,9 +1985,10 @@
       "source_count": 2,
       "first_seen_at": "2026-05-24T04:52:26Z",
       "last_updated_at": "2026-05-24T07:57:35Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 8,
-      "status": "stable"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_54f99d6202ba": {
       "event_id": "evt_54f99d6202ba",
@@ -1965,33 +2011,37 @@
       "source_count": 1,
       "first_seen_at": "2026-05-24T07:57:35Z",
       "last_updated_at": "2026-05-24T07:57:35Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 8,
-      "status": "developing"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_202e44bf9ed9": {
       "event_id": "evt_202e44bf9ed9",
-      "title": "DeepSeek says it will lower V4 Pro API prices by 75% to $0.435/1M input and $0.87/1M output tokens, making permanent the discount prices set to expire on May 31 (Bloomberg)",
-      "summary": "DeepSeek宣布将V4 Pro API价格永久下调75%，输入token降至$0.435/百万，输出token降至$0.87/百万，将原定于5月31日到期的折扣价格常态化。降价后价格仅为原价的四分之一。此举加剧大模型价格战，刺激下游应用开发需求，同时对其他大模型厂商形成竞争压力。云厂商若自研模型可能面临更大定价压力，若使用DeepSeek则可能分流自研投入。",
+      "title": "DeepSeek发布reasonix推理模型及编码代理，主打低成本高缓存",
+      "summary": "DeepSeek发布reasonix推理模型及原生编码代理产品，主打高缓存命中率和低成本优势。编码代理可自动执行代码编写、测试、部署等开发全流程，降低AI应用开发门槛。低训练/推理成本特性或对算力需求曲线产生影响，同时低成本AI工具普及可能加速AI应用落地节奏，推动AI变现进程。",
       "tickers": [
-        "美光",
-        "ARM",
-        "DeepSeek",
-        "腾讯",
         "百度",
-        "英伟达",
-        "亚马逊",
+        "美光",
+        "DeepSeek",
         "阿里巴巴",
+        "英伟达",
+        "谷歌",
         "微软",
         "AMD",
+        "博通",
+        "ARM",
+        "腾讯",
         "台积电",
-        "谷歌"
+        "OpenAI",
+        "亚马逊"
       ],
       "themes": [
-        "ai_monetization",
-        "model_capability",
         "chip_supply",
-        "compute_demand"
+        "compute_demand",
+        "model_capability",
+        "ai_monetization",
+        "advanced_packaging"
       ],
       "direction": {
         "英伟达": "positive",
@@ -2004,17 +2054,21 @@
         "百度": "negative",
         "台积电": "positive",
         "ARM": "positive",
-        "美光": "positive"
+        "美光": "positive",
+        "博通": "neutral",
+        "OpenAI": "neutral"
       },
       "item_ids": [
-        "ef08bf9906546835739435a98c1492fff843e7bb"
+        "ef08bf9906546835739435a98c1492fff843e7bb",
+        "34878e85a91a80bd058e727860e900d5800ee019"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "first_seen_at": "2026-05-24T07:57:35Z",
-      "last_updated_at": "2026-05-24T07:57:35Z",
+      "last_updated_at": "2026-05-24T14:26:47Z",
       "is_active": true,
       "significance": 7,
-      "status": "developing"
+      "status": "developing",
+      "deep_analysis": ""
     },
     "evt_873f3c92f5f9": {
       "event_id": "evt_873f3c92f5f9",
@@ -2049,9 +2103,10 @@
       "source_count": 1,
       "first_seen_at": "2026-05-24T07:57:35Z",
       "last_updated_at": "2026-05-24T07:57:35Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 7,
-      "status": "developing"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_20cd11fb6992": {
       "event_id": "evt_20cd11fb6992",
@@ -2085,9 +2140,10 @@
       "source_count": 1,
       "first_seen_at": "2026-05-24T07:57:35Z",
       "last_updated_at": "2026-05-24T07:57:35Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 6,
-      "status": "developing"
+      "status": "resolved",
+      "deep_analysis": ""
     },
     "evt_2983b15f0bb6": {
       "event_id": "evt_2983b15f0bb6",
@@ -2110,9 +2166,223 @@
       "source_count": 1,
       "first_seen_at": "2026-05-24T07:57:35Z",
       "last_updated_at": "2026-05-24T07:57:35Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 5,
-      "status": "developing"
+      "status": "resolved",
+      "deep_analysis": ""
+    },
+    "evt_138368009f52": {
+      "event_id": "evt_138368009f52",
+      "title": "细节曝光!涉嫌走私172亿AI服务器!超微电脑联合创始人被捕!A股算力巨头一度跌停，火速澄清：与我们无关!",
+      "summary": "超微电脑（SMCI）联合创始人因涉嫌走私价值172亿元人民币的AI服务器被捕。据悉，超微电脑是全球AI服务器龙头及英伟达重要合作伙伴，2025年11月披露Blackwell Ultra产品线订单超130亿美元。事件引发A股算力板块震荡，多家相关公司澄清与其无业务关联。市场担忧供应链安全及出口管制合规问题。",
+      "tickers": [
+        "英伟达",
+        "浪潮信息",
+        "超微电脑",
+        "工业富联",
+        "中科曙光"
+      ],
+      "themes": [
+        "policy_export",
+        "chip_supply",
+        "compute_demand"
+      ],
+      "direction": {
+        "超微电脑": "negative",
+        "英伟达": "neutral",
+        "工业富联": "neutral",
+        "中科曙光": "neutral",
+        "浪潮信息": "neutral"
+      },
+      "item_ids": [
+        "0be117f5a4285ef753820261e5f7cdccc687ffbc"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-05-24T14:26:47Z",
+      "last_updated_at": "2026-05-24T14:26:47Z",
+      "is_active": true,
+      "significance": 8,
+      "status": "developing",
+      "deep_analysis": "看多逻辑（利好）：\n\n第一，供应链替代效应显著。SMCI作为全球AI服务器龙头被捕，其客户势必转向其他供应商，工业富联、中科曙光、浪潮信息等国内服务器厂商有望获得转单机会，尤其在国产替代政策背景下，国内厂商技术实力已具备承接能力。第二，行业合规化加速头部集中。走私事件将倒逼下游客户加强供应商合规审查，具有完整合规体系和透明股权结构的厂商将获得竞争优势，有利于行业规范化发展和头部厂商市场份额提升。第三，英伟达关联风险可控。SMCI事件属个案走私问题，英伟达作为芯片供应商主要受惠于AI算力需求刚性，只要产品合规销售模式不变，其业绩受影响有限，反而可能因竞争格局优化受益。\n\n看空风险（利空）：\n\n第一，供应链安全担忧蔓延。SMCI是英伟达Blackwell系列重要合作伙伴，订单规模超130亿美元，事件若导致其产能受限或客户流失，可能引发AI服务器交货延迟，影响英伟达GPU出货节奏，整个AI基础设施部署周期或被迫拉长。第二，出口管制政策收紧风险。若走私涉及违规向受限地区出货，可能引发监管层对AI服务器产业链更严厉的审查，包括对中国供应链企业的连带调查，增加行业合规成本和政策不确定性。第三，信任危机与估值承压。超微电脑作为美股明星股若持续承压，可能拖累整个AI基础设施板块情绪，港A股算力概念股短期估值面临下调压力，尤其对与SMCI有直接或间接业务关联的企业冲击更大。\n\n关键驱动因素：\n\n首先，需持续跟踪SMCI创始人案件进展及公司法律应对，若确认仅为个人行为且公司运营不受影响，负面影响有望边际收窄；若涉及系统性合规缺陷，可能引发行业整顿。其次，出口管制政策走向至关重要，事件是否导致美国商务部进一步收紧AI芯片及服务器出口限制，将直接决定产业链中期景气度。\n\n市场影响评估：\n\n短期（1-4周）：A股算力板块维持高波动，相关澄清公告密集发布将提供短期交易机会，但情绪修复需等待法律面明朗。英伟达短期承压但核心逻辑未变，超微电脑股价面临显著回调压力。中期（3-6个月）：若SMCI供应链缺口持续，国内服务器厂商订单增量有望逐步兑现，基本面改善预期支撑估值修复；反之若出口管制全面升级，AI算力产业链整体面临盈利预测下修风险。\n\n时间线推断：\n\n接下来两周内，超微电脑将发布官方声明，市场消化初步法律信息，A股相关个股完成澄清公告；一个月内，美国司法程序进入保释/引渡听证阶段，供应链替代谈判启动；三个月内，案件性质基本明确，行业监管政策导向清晰，替代效应开始体现于订单数据。"
+    },
+    "evt_8ac60e0dabd0": {
+      "event_id": "evt_8ac60e0dabd0",
+      "title": "国产ai芯片崛起：三大门派、瓜分英伟达-36氪",
+      "summary": "2025年中国AI加速卡市场本土厂商份额首破四成。根据IDC数据，中国AI加速卡总出货约400万张，本土厂商合计出货约165万张（占41%），正式告别英伟达一家独大格局，进入华为领跑、多强并起阶段。国产芯片（寒武纪、海光信息等）快速放量，对英伟达中国区业务形成直接冲击。",
+      "tickers": [
+        "英伟达",
+        "寒武纪",
+        "中芯国际",
+        "AMD",
+        "海光信息"
+      ],
+      "themes": [
+        "domestic_substitution",
+        "chip_supply",
+        "compute_demand"
+      ],
+      "direction": {
+        "英伟达": "negative",
+        "AMD": "negative",
+        "寒武纪": "positive",
+        "海光信息": "positive",
+        "中芯国际": "positive"
+      },
+      "item_ids": [
+        "87c00866fe3981467a72c246e37d87c4af26a6e8"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-05-24T14:26:47Z",
+      "last_updated_at": "2026-05-24T14:26:47Z",
+      "is_active": true,
+      "significance": 8,
+      "status": "developing",
+      "deep_analysis": "**看多逻辑**\n\n1. **替代空间广阔**：本土份额首破四成仅是起点，高端训练芯片市场仍以英伟达H100/H200为主，存量替代空间达百万张量级，叠加国内大模型训练需求爆发，国产厂商天花板远未到来。2. **政策与产业链共振**：半导体自主可控已是国家战略级方向，叠加国产大模型企业被迫转向本土供应链，政策红利与市场需求形成双重驱动力，寒武纪、海光等厂商订单可见性强。3. **生态逐步成熟**：华为昇腾生态已吸引超过200家合作伙伴，MindSpore框架兼容性持续改善，国产芯片从“能用”向“好用”过渡，软件生态壁垒正在构建。\n\n**看空风险**\n\n1. **制程工艺代差难弥合**：华为昇腾910受制于7nm产能约束，国产芯片与英伟达Blackwell架构存在至少1-2代性能差距，高端训练任务中国产方案仍难以完全承接。2. **英伟达CUDA生态护城河**：全球80%以上的AI模型基于CUDA开发，迁移成本高昂，国产芯片软件适配仍处早期，下游客户切换意愿有限，英伟达中国区实际营收下滑或滞后于份额下降。3. **中芯国际先进制程产能瓶颈**：7nm产能爬坡速度受设备供给影响，若产能释放不及预期，将直接制约华为等厂商出货上限，国产替代节奏或被动放缓。\n\n**关键驱动因素**\n\n1. 华为昇腾910C产能爬坡进度及良率数据（直接影响2025年高端训练卡供给）；2. 寒武纪下一代产品（思元590）对标英伟达H100的实际性能评测结果。\n\n**市场影响评估**\n\n短期（6个月内）：英伟达中国区营收占比料将加速下滑至15%以下，相关标的股价已部分反映情绪，但实际业绩冲击尚未充分体现；国产芯片厂商订单能见度提升，估值溢价有望维持。中期（12-18个月）：若国产芯片在推理侧率先实现规模化替代，国产份额或突破55%，但训练侧仍需等待更先进制程落地，全球AI芯片格局呈“区域分化”特征。\n\n**时间线推断**\n\n2025年Q2：华为昇腾910C规模出货，国产份额突破45%；2025年Q4：寒武纪590量产，性能对标结果揭晓，决定国产替代深度；2026年：若中芯国际N+2制程顺利量产，国产芯片有望在2026年切入部分高端训练场景。"
+    },
+    "evt_e4a3f341c37a": {
+      "event_id": "evt_e4a3f341c37a",
+      "title": "After $2.5 billion Supermicro smuggling bust, Nvidia CEO urges company to fix export control compliance — Taiwan also begins to crack down on AI GPU chip smuggling to China",
+      "summary": "超微电脑(SMCI)因涉嫌向中国走私价值25亿美元的AI GPU芯片遭打击后，Nvidia CEO黄仁勋在台北松山机场回应称，Nvidia坚持要求合作伙伴遵守美国出口管制法规。台湾当局同步开始严厉打击AI GPU芯片走私至中国大陆的活动。此事件反映出美国对华芯片出口管制的执法力度显著加强，走私渠道正面临系统性封堵。",
+      "tickers": [
+        "台积电",
+        "超微电脑",
+        "英伟达",
+        "AMD"
+      ],
+      "themes": [
+        "policy_export",
+        "domestic_substitution",
+        "chip_supply"
+      ],
+      "direction": {
+        "超微电脑": "negative",
+        "英伟达": "neutral",
+        "台积电": "neutral",
+        "AMD": "negative"
+      },
+      "item_ids": [
+        "ac3be3b2bf84095a93c4b083d247337a8aa57fe3"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-05-24T14:26:47Z",
+      "last_updated_at": "2026-05-24T14:26:47Z",
+      "is_active": true,
+      "significance": 8,
+      "status": "developing",
+      "deep_analysis": "看多逻辑：\n美国出口管制执法系统性升级将持续压缩非合规渠道，短期内中国市场获取高端AI GPU的渠道进一步收窄，倒逼百度、阿里、腾讯等大厂加速采购国产AI芯片（寒武纪、海光信息等），国产替代逻辑强化。合规生态的规范化长期有利于Nvidia等头部厂商巩固品牌信誉，减少监管不确定性对估值折价的压制，台积电作为先进制程核心代工方将持续受益于AI芯片需求的结构性增长。AMD同样面临非合规渠道收窄压力，但在中国市场的白手套路径受限后，或倒逼其加大非受限产品线的市场开拓。\n\n看空风险：\n超微电脑若被进一步认定为系统性违规，可能面临美国BIS更严厉的处罚（包括实体清单列入），其GPU服务器产能将受冲击，供应链断裂风险上升。走私渠道收窄并不意味着需求消失，中国市场对高端AI芯片的需求将通过灰色市场溢价、绕道其他地区等方式部分满足，价格套利空间扩大反而可能刺激更多冒险行为，增加供应链波动性。台积电作为代工方虽短期不受直接冲击，但若超微电脑订单大幅萎缩，其成熟制程和先进封装产能利用率将面临压力。\n\n关键驱动因素：\n美国BIS后续执法行动的广度——是否会扩大至其他OEM/ODM厂商，触发行业性合规整顿浪潮；中国监管层对走私链条的反制措施及国产AI芯片量产节奏，寒武纪、海光信息等产品能否在性能上形成有效替代。\n\n市场影响评估：\n短期（1-3个月）来看，超微电脑股价面临显著下行压力，A股国产替代主题标的可能受到投机资金追捧。台积电、Nvidia股价短期波动加剧但趋势性方向需等待执法边界明晰。中期（3-12个月），若出口管制执法持续高压，全球AI服务器供应链将面临渠道重构成本上升，中国市场高端AI算力供需缺口扩大，国产芯片厂商获得难得的导入窗口期，但实际替代规模仍受制于制程能力。\n\n时间线推断：\n未来1-2个月内，美国司法部或BIS可能对超微电脑案件披露更多细节，不排除提出正式起诉；台湾海关检查升级细则落地，将对过境芯片实施更严格的原产地与终端用户核查；超微电脑合规整改方案出台，决定其能否保留对Nvidia的采购资质。中国方面，寒武纪等国产厂商可能加速产品发布会节奏以承接市场关注。"
+    },
+    "evt_2ca4783ca2c9": {
+      "event_id": "evt_2ca4783ca2c9",
+      "title": "中国芯，芯征程! 景嘉微 及其子公司在gpu和ai芯片领域的布局展现出显著的技术突破和战略规划，结合最新公开信息，可从以下维度解析其进展与 ...",
+      "summary": "景嘉微及其子公司在GPU和AI芯片领域取得技术突破，其锦之源GPGPU产品具备2000T算力（INT8精度），预计年底流片。该产品定位高性能计算，算力指标已接近壁仞科技BR100系列水平。景嘉微作为国内GPU厂商，其技术进展反映了国产AI芯片在高性能计算领域的能力提升，对国产替代主线具有重要意义。",
+      "tickers": [
+        "景嘉微"
+      ],
+      "themes": [
+        "domestic_substitution",
+        "chip_supply",
+        "compute_demand"
+      ],
+      "direction": {
+        "景嘉微": "positive"
+      },
+      "item_ids": [
+        "dd4a425b66951df12810937b92945a1eb63448e1"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-05-24T14:26:47Z",
+      "last_updated_at": "2026-05-24T14:26:47Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "看多逻辑：景嘉微锦之源GPGPU产品2000T算力（INT8）若实现，将接近壁仞BR100水平，标志着国产GPU在高算力领域实现实质性突破，在当前国产替代政策环境下具有重要战略价值；景嘉微作为A股稀缺的GPU标的，技术突破若获验证，将显著提升估值想象空间，吸引主题投资资金关注；国内AI算力需求持续爆发叠加美国芯片出口限制趋严，国产高性能GPU面临明确的市场窗口期，为景嘉微产品提供商业化土壤。\n\n看空风险：该消息可信度评级为low，2000T算力尚未经官方正式确认，存在夸大或误传可能，需警惕预期落空风险；即使流片成功，从设计定型到量产良率爬坡、商业化落地仍需12-18个月以上，期间面临多次不确定性节点；高性能GPU的核心竞争不仅在于算力数字，更在于软件生态（CUDA等）与头部厂商多年积累的护城河，景嘉微在生态建设方面与英伟达、AMD等差距显著。\n\n关键驱动因素：年底流片结果是最直接验证，若按期完成并披露具体参数，将大幅提升市场信心；供应链（晶圆代工、封装测试）能否匹配如此高规格芯片的量产需求，亦是关键变量。\n\n市场影响评估：短期看，若流片消息得到确认或持续发酵，将对股价形成明显催化，适合主题投机资金参与；中期需观察产品性能实测数据、生态适配进度及下游客户验证情况，若商业化进展顺利，估值有望进一步抬升。\n\n时间线推断：年底为第一关键节点（流片）；次年上半年为性能验证与客户送样阶段；下半年至第三年进入小规模量产与商业化爬坡期，建议在关键节点前保持跟踪，警惕预期透支风险。"
+    },
+    "evt_acbf43e16d1a": {
+      "event_id": "evt_acbf43e16d1a",
+      "title": "金山办公：Ai应用全面落地，重塑办公生态，开启千亿级增长新纪元 金山办公 ：Ai应用全面落地，重塑办公生态，开启千亿级增长新纪元一、核心突破 ...",
+      "summary": "金山办公发布WPS AI 4.0及「WPS灵犀」智能体，标志着其AI应用从「功能叠加」升级至「系统重构」阶段。新版本采用「大模型+小模型」混搭架构，实现从工具向生产力平台的质变。此举契合国内办公软件AI化趋势，头部厂商的AI落地将加速行业竞争格局重塑，并为国产AI应用商业化提供范本。金山办公作为国内办公软件龙头，其AI变现路径的探索对整个AI应用赛道具有参照意义。",
+      "tickers": [
+        "金山办公"
+      ],
+      "themes": [
+        "ai_monetization",
+        "edge_ai",
+        "model_capability"
+      ],
+      "direction": {
+        "金山办公": "positive"
+      },
+      "item_ids": [
+        "99b4f50c58a0567f858d445974771f20c3d03f12"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-05-24T14:26:47Z",
+      "last_updated_at": "2026-05-24T14:26:47Z",
+      "is_active": true,
+      "significance": 6,
+      "status": "developing",
+      "deep_analysis": "金山办公发布WPS AI 4.0及「WPS灵犀」智能体，标志着其AI应用从功能叠加升级至系统重构阶段，新版本采用「大模型+小模型」混搭架构，有望提升AI功能响应效率并降低推理成本。作为国内办公软件绝对龙头，金山办公拥有超过5亿活跃用户基础，AI功能若能有效转化为付费订阅，将打开增量变现空间。参考微软Copilot订阅模式，AI赋能办公软件的ARPU提升潜力显著，金山办公或率先在国内市场验证AI变现路径，一旦成功，其估值逻辑将从软件授权向SaaS订阅重构。WPS AI若形成差异化体验，可强化企业客户黏性，提升客户生命周期价值。\n\n然而需注意，事件信息可信度标注为\"low\"，具体功能落地效果及商业化数据尚未经市场验证。国内AI应用商业化环境仍不成熟，用户为AI功能付费意愿存在不确定性，订阅转化率可能低于预期。此外，微软Office仍主导企业级市场，金山办公在AI功能同质化竞争中能否形成持续壁垒存疑。大模型投入成本较高，若付费用户增长不及预期，可能拖累利润率表现。\n\n需密切跟踪金山办公AI订阅转化率及付费用户增长数据，这是验证其变现逻辑的核心指标；同时关注企业客户留存率变化，判断AI功能对企业用户是否形成实质性价值提升。\n\n短期来看，AI新品发布可能刺激股价表现，但若无实质性付费数据支撑，反弹持续性有限。中期维度，若AI订阅收入占比持续提升并改善财务模型，市场将重新定价其成长属性；反之，若转化率低迷，估值面临回调压力。\n\n后续关键节点包括：季度财报披露AI订阅收入及付费用户数、企业客户续约率数据，以及竞争对手微软Office中国区AI功能落地节奏。"
+    },
+    "evt_02f5122e3138": {
+      "event_id": "evt_02f5122e3138",
+      "title": "We tested Advanced Shader Delivery on the RX 9070 XT in six games — up to 95% improvement in load times and 33 percent faster 1% Low FPS",
+      "summary": "Tom's Hardware对AMD的Advanced Shader Delivery（ASD）技术在RX 9070 XT显卡上进行了六款游戏实测。结果显示，ASD可将游戏加载时间最高提升95%，1% Low FPS提升33%。该技术针对着色器资源进行优化分配，减少加载延迟并提升帧率稳定性。作为RDNA4架构的重要特性，ASD有望增强AMD在游戏显卡市场的竞争力。",
+      "tickers": [
+        "台积电",
+        "英伟达",
+        "AMD"
+      ],
+      "themes": [
+        "edge_ai",
+        "chip_supply"
+      ],
+      "direction": {
+        "AMD": "positive",
+        "英伟达": "neutral",
+        "台积电": "neutral"
+      },
+      "item_ids": [
+        "b77eda9c861dbb44a391f5b7f2814409097dcc51"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-05-24T14:26:47Z",
+      "last_updated_at": "2026-05-24T14:26:47Z",
+      "is_active": true,
+      "significance": 4,
+      "status": "developing",
+      "deep_analysis": "看多逻辑（2-3条核心论点）：\n\nASD技术带来实质性性能提升，95%加载时间缩短和33%的1% Low FPS改善直接解决游戏玩家痛点。帧率稳定性提升对用户体验影响显著，尤其在开放世界和沙盒类游戏中。RDNA4架构借此形成差异化竞争力，若量产机型性能验证一致，有望在主流甜点价位段抢夺NVIDIA份额。\n\n台积电作为AMD RDNA4系列代工方，将直接受益于AMD产品力提升带来的订单增量。AMD GPU市占率每提升5%，预计为台积电7nm及更先进制程带来可观增量订单，当前neutral方向有望修正。\n\n英伟达短期难以复制该技术路径。着色器资源动态分配需要硬件架构层面配合，NVIDIA现有Ada Lovelace架构设计重心在AI/计算市场，游戏优化或给AMD留下时间窗口。\n\n看空风险（2-3条潜在风险）：\n\n技术处于“developing”状态，量产时间表未明。RX 9070 XT为工程样品，大规模量产产品性能一致性存疑。供应链验证和良率爬坡通常需要6-12个月，短期难以转化为可观的财务贡献。\n\n适配游戏数量是核心瓶颈。仅有6款游戏测试数据，游戏厂商SDK集成需要谈判周期，短期内ASD可能仅限于少量优化支持游戏。NVIDIA凭借CUDA生态和GameWorks计划建立的开发者关系不易突破。\n\n英伟达反击能力不容低估。其DLSS 3.5超分辨率和帧生成技术已建立生态壁垒，且下一代架构已在规划中。AMD若无法在AI加速单元(Navi 4x RDNA4传闻集成AI引擎)形成对等竞争力，技术优势或被稀释。\n\n关键驱动因素（1-2个未来需跟踪的变量）：\n\nASD技术量产落地时间表及首发适配游戏名单。需关注AMD官方RDNA4发布会是否给出明确的产品上市节奏和合作伙伴列表。\n\n英伟达竞品技术路径。对比NVIDIA在着色器编译优化方面的技术储备，以及下一代GeForce架构是否针对类似痛点进行优化设计。\n\n市场影响评估（短期/中期）：\n\n短期（1-3个月）：AMD股价有望获得事件驱动正向催化，投资者关注RDNA4产品线发布进度。英伟达和台积电短期影响有限，等待产品上市后量价数据验证。\n\n中期（6-12个月）：若RDNA4显卡量产顺利且市场反响正面，AMD GPU市场份额若提升2-4个百分点，将对年度营收产生实质贡献。台积电作为代工方订单能见度改善。当前neutral评级将转为观察正面信号。\n\n时间线推断（后续关键节点）：\n\nRDNA4架构正式发布（预计3-6个月内，CES 2025或Q2产品发布会）。RX 9070 XT量产机型性能验证报告。首发适配游戏名单确认及优化效果第三方测评。首批用户实际体验反馈（发售3个月后）。英伟达下一代GeForce架构路线图更新（预计下半年）。"
+    },
+    "evt_709c444af080": {
+      "event_id": "evt_709c444af080",
+      "title": "AWS MCP Server Reaches GA with Full API Coverage and IAM-Based Governance",
+      "summary": "AWS正式推出托管式MCP Server，进入正式商用阶段。该产品为AI编码代理提供标准化接口，实现对AWS APIs、文档和操作流程的受控访问，支持IAM-based权限治理，使AI Agent无需获取广泛凭证即可安全调用AWS服务。相比传统API集成方式，MCP方案更安全、可审计，为企业级AI应用提供合规保障。AWS借此强化其AI Agent生态的控制力，可能吸引更多开发者基于AWS构建AI应用。",
+      "tickers": [
+        "微软",
+        "英伟达",
+        "亚马逊",
+        "谷歌"
+      ],
+      "themes": [
+        "ai_monetization",
+        "model_capability",
+        "compute_demand"
+      ],
+      "direction": {
+        "亚马逊": "positive",
+        "微软": "neutral",
+        "谷歌": "neutral",
+        "英伟达": "positive"
+      },
+      "item_ids": [
+        "df32a59016e3ece0db35e114703356ab277ee7ee"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-05-24T14:26:47Z",
+      "last_updated_at": "2026-05-24T14:26:47Z",
+      "is_active": true,
+      "significance": 6,
+      "status": "developing",
+      "deep_analysis": "看多逻辑：\n\n第一，AWS通过MCP Server构建了AI Agent生态的标准化入口，IAM权限治理直击企业级AI应用的核心痛点——安全合规。金融、医疗等强监管行业长期受困于AI Agent的凭证管理风险，MCP的受控访问模式有望加速这些高价值客户的云迁移，预计将显著提升AWS在企业AI市场的渗透率。\n\n第二，MCP生态一旦形成规模效应，将产生强大的网络效应。开发者基于AWS MCP开发的应用越多，平台的数据和流程积累越丰富，反过来吸引更多开发者入驻，形成正向循环。这种生态锁定效应有望复制Salesforce当年在SaaS领域的成功路径。\n\n第三，MCP Server的普及将直接拉动云端算力消耗。AI编码代理的安全调用意味着更频繁的API请求和模型推理，对英伟达H100/H200等高性能芯片需求形成持续支撑，英伟达作为算力供应商将间接受益。\n\n看空风险：\n\n第一，MCP协议本身并非AWS独有护城河。微软Azure AI和Google Vertex AI具备快速跟进的技术能力和云基础设施优势，若两者推出兼容性更好或功能更丰富的替代方案，AWS的先发优势可能被稀释，市场份额面临分流风险。\n\n第二，企业采纳率存在结构性阻力。尽管MCP在安全合规上有优势，但企业现有工作流改造、员工培训和组织惯性将延缓大规模部署。短期内MCP对营收的实质贡献可能低于预期，股价估值存在回调压力。\n\n关键驱动因素：\n\n需重点跟踪两个变量：一是MCP Server在金融、医疗等强合规行业的实际签约数量和收入贡献，这将是验证商业化可行性的核心指标；二是竞争对手（M365、Google Cloud）推出类似方案的时间节点和技术差异，这将决定AWS能否持续维持生态领先。\n\n市场影响评估：\n\n短期（1-3个月）来看，事件对亚马逊股价形成正面催化，对英伟达算力需求预期有所提振，但实质性业绩贡献有限，市场更多反映预期而非基本面改善。中期（6-12个月）需观察企业合同落地速度，若采纳率超预期，AWS云业务增长率有望回升，进而带动整体AI板块估值扩张。\n\n时间线推断：\n\n建议关注三个关键节点：Q2财报电话会上AWS管理层披露的MCP商业化进展、微软Build大会是否有类似MCP产品发布、以及下半年金融行业标杆客户的公开案例分享。这些节点将提供验证逻辑的关键信号，决定多空双方的下一轮博弈方向。"
     }
   }
 }
