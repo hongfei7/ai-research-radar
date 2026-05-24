@@ -5,71 +5,119 @@
     <link>https://hongfei7.github.io/ai-research-radar</link>
     <description>AI/科技/半导体板块的持续投研情报 feed — 由 MiniMax 策展</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 24 May 2026 00:06:32 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 24 May 2026 02:34:00 GMT</lastBuildDate>
     <atom:link href="https://hongfei7.github.io/ai-research-radar/feed.xml" rel="self" type="application/rss+xml"/>
     
     <item>
-      <title>[9分] 细节曝光!涉嫌走私172亿AI服务器!超微电脑联合创始人被捕!A股算力巨头一度跌停，火速澄清：与我们无关!_腾讯新闻</title>
-      <link>https://news.qq.com/rain/a/20260322A038L100</link>
-      <guid isPermaLink="false">d43fe51c47d67de2e1f096855eb160eb579cdd90</guid>
-      <pubDate>Sun, 24 May 2026 00:02:04 GMT</pubDate>
+      <title>[8分] AMD宣布下一代EPYC CPU进入量产</title>
+      <link>https://36kr.com/newsflashes/3822607641841801?f=rss</link>
+      <guid isPermaLink="false">7e519215318ae36218f4812e0218938039655dae</guid>
+      <pubDate>Sun, 24 May 2026 01:17:34 GMT</pubDate>
       <description><![CDATA[
-        <p>超微电脑联合创始人因涉嫌走私价值172亿元AI服务器被捕。超微电脑是全球AI服务器龙头及英伟达核心合作伙伴，2025年11月披露Blackwell Ultra订单超130亿美元。该事件引发A股算力板块震动，工业富联、浪潮信息等算力概念股一度跌停，随后火速澄清与己无关。市场担忧走私事件涉及出口管制漏洞，可能加剧AI服务器供应链紧张及对华技术封锁政策收紧。</p>
-        <p>标的: 浪潮信息, 超微电脑, 工业富联, 台积电, 中科曙光, 英伟达</p>
-        <p>主线: policy_export, compute_demand, chip_supply</p>
-        <p>方向: 超微电脑→negative 英伟达→negative 台积电→negative 工业富联→neutral 浪潮信息→neutral 中科曙光→neutral </p>
-        <p><em>跟踪：1）走私案调查进展及是否涉及更多厂商；2）出口管制政策是否进一步收紧；3）国内算力厂商订单是否有扰动。二阶效应：若供应链审查趋严，国产替代主线（寒武纪、海光信息）或受益；NVDA对SMCI依赖度需重新评估。</em></p>
-        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
+        <p>AMD宣布代号“Venice”的第6代EPYC CPU正式进入量产阶段，成为AMD与台积电在2纳米先进制程合作的重要里程碑。该产品将在台积电位于美国亚利桑那州的晶圆厂生产。EPYC系列主要面向数据中心服务器市场，此举标志着AMD在AI服务器芯片领域的竞争力进一步提升，同时验证了台积电2纳米制程的成熟度及美国本土产能的落地进展。</p>
+        <p>标的: Meta, 中科曙光, 浪潮信息, AMD, 微软, 超微电脑, 台积电, 谷歌, 亚马逊, 工业富联, Intel, ASML, 戴尔, 博通, 英伟达</p>
+        <p>主线: datacenter_power, advanced_packaging, compute_demand, chip_supply</p>
+        <p>方向: AMD→positive 台积电→positive ASML→positive Intel→negative 英伟达→neutral 博通→neutral 超微电脑→positive 工业富联→positive 微软→positive 谷歌→positive 亚马逊→positive Meta→positive 戴尔→positive 中科曙光→neutral 浪潮信息→neutral </p>
+        <p><em>2纳米EPYC量产验证AMD制程路线图，云厂商（微软/谷歌/亚马逊/Meta）将获更高效服务器CPU选择。短期跟踪：台积电亚利桑那厂产能爬坡节奏；中期关注：EPYC在AI推理 workloads 的实际性能表现及市场份额变化。Intel数据中心业务承压加剧，其代工业务扭亏进度成关键变量。</em></p>
+        <p>来源: rss:36kr 🟡 中可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_cca274525452</category>
+      <category>evt_78a306cd53a4</category>
     </item>
     
     <item>
-      <title>[6分] Intel's roadmaps examined — 14A, Nova Lake, Diamond Rapids & AI ...</title>
-      <link>https://www.tomshardware.com/tech-industry/semiconductors/intel-chip-roadmap-2026-2028</link>
-      <guid isPermaLink="false">eb593bdb4dc0c4670d45e0647f3f7235a6fd34ef</guid>
-      <pubDate>Sun, 24 May 2026 00:02:04 GMT</pubDate>
+      <title>[8分] A股科技龙头!工业富联透露英伟达AI芯片大消息_天天基金网</title>
+      <link>https://fund.eastmoney.com/a/202508243492712574.html</link>
+      <guid isPermaLink="false">db247c226be2772907d23defd7eddecc238026ed</guid>
+      <pubDate>Sun, 24 May 2026 02:29:24 GMT</pubDate>
       <description><![CDATA[
-        <p>Intel披露未来制程路线图，重点包括Intel 14A、Nova Lake和Diamond Rapids等节点规划。同时Intel已启动AI数据中心芯片Gaudi 3的出货，该芯片自2024年底通过云合作伙伴提供。路线图显示Intel在先进制程上的持续投入，Gaudi 3作为其AI芯片产品有望在数据中心市场形成竞争。</p>
-        <p>标的: 亚马逊, 博通, Marvell, 谷歌, 微软, Intel, Meta, AMD, 英伟达</p>
-        <p>主线: advanced_packaging, chip_supply, compute_demand</p>
-        <p>方向: Intel→neutral 英伟达→neutral AMD→neutral 博通→neutral Marvell→neutral 微软→neutral 谷歌→neutral 亚马逊→neutral Meta→neutral </p>
-        <p><em>跟踪Intel 14A制程的量产时间表和良率改善情况；关注Gaudi 3在云厂商的采用率和实际部署规模；若Gaudi 3性能达标并获得批量订单，可能对英伟达GPU市场份额形成压力，进而影响其数据中心业务增速。</em></p>
+        <p>工业富联在机构调研中透露英伟达AI芯片相关进展：GB200系列正按计划加速生产出货；GB300系列已收到部分大型云服务商客户的明确出货需求，当前已具备量产条件。工业富联作为英伟达AI芯片的先进封装及服务器制造合作方，其产能和出货进度是观察英伟达AI芯片供给能力的重要窗口。</p>
+        <p>标的: 微软, 超微电脑, 台积电, 亚马逊, 工业富联, 谷歌, 英伟达</p>
+        <p>主线: advanced_packaging, compute_demand, chip_supply</p>
+        <p>方向: 工业富联→positive 英伟达→positive 台积电→positive 微软→positive 谷歌→positive 亚马逊→positive 超微电脑→neutral </p>
+        <p><em>跟踪变量：GB200/GB300实际出货量及交付节奏、云厂商capex指引变化。二阶效应：英伟达AI芯片供给加速将利好整个AI算力链（代工、封装、服务器），同时需关注超微电脑等竞争厂商的份额变化。</em></p>
         <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_060e3318e979</category>
+      <category>evt_60058f40b2fa</category>
     </item>
     
     <item>
-      <title>[6分] 景嘉微边端侧AI芯片研发获突破 构建"GPU+AI SoC"双轮驱动格局|景嘉微_新浪财经_新浪网</title>
-      <link>https://finance.sina.com.cn/jjxw/2025-12-16/doc-inhaywrm8107544.shtml</link>
-      <guid isPermaLink="false">232dc1e98585ef12412d4a35d765b87d58c433d6</guid>
-      <pubDate>Sun, 24 May 2026 00:02:04 GMT</pubDate>
+      <title>[7分] 景嘉微:关于控股子公司边端侧AISoC芯片研发进展情况的公告</title>
+      <link>https://data.eastmoney.com/notices/detail/300474/AN202512151800997539.html</link>
+      <guid isPermaLink="false">ce88831f0591b6f729ed7a42aff1d6d738c10639</guid>
+      <pubDate>Sun, 24 May 2026 02:29:24 GMT</pubDate>
       <description><![CDATA[
-        <p>景嘉微公告边端侧AI芯片研发获突破，CH37系列芯片已完成初版性能测试，正在推进功耗优化与全面性能验证。该系列定位GPU+AI SoC双轮驱动战略，覆盖边缘推理场景。公告同时提示芯片尚未进入量产阶段，后续仍存在测试不及预期的风险。景嘉微为国产GPU厂商，此为其在AI芯片领域的最新研发动态。</p>
-        <p>标的: 长电科技, 景嘉微, 中芯国际</p>
-        <p>主线: domestic_substitution, edge_ai, advanced_packaging, chip_supply</p>
-        <p>方向: 景嘉微→positive 长电科技→positive 中芯国际→positive </p>
-        <p><em>跟踪CH37系列芯片性能测试结果与量产时间表；若芯片验证通过并实现量产，将直接利好封装代工需求，同时标志着国产边缘AI芯片技术能力进一步成熟。</em></p>
+        <p>景嘉微（300474）发布关于控股子公司边端侧AI SoC芯片研发进展公告。边端侧AI SoC是针对边缘计算场景的高集成度AI芯片，适用于智能终端、IoT设备、汽车电子等领域。此次研发进展公告表明公司在国产边缘AI芯片领域取得阶段性突破，有助于完善国内AI芯片产品矩阵，降低对海外芯片的依赖。</p>
+        <p>标的: 中芯国际, 寒武纪, 景嘉微</p>
+        <p>主线: edge_ai, domestic_substitution, chip_supply</p>
+        <p>方向: 景嘉微→positive 寒武纪→neutral 中芯国际→neutral </p>
+        <p><em>需跟踪该芯片量产时间表及客户导入情况；若进展顺利，可关注国产边缘AI芯片在智能汽车、机器人等场景的落地节奏，以及与寒武纪等国产AI芯片厂商的竞争格局变化。</em></p>
         <p>来源: web_search 🔴 低可信</p>
       ]]></description>
-      <category>evt_45392c36bbaf</category>
+      <category>evt_227c8fb6312b</category>
     </item>
     
     <item>
-      <title>[5分] AI芯片_AI芯片最新动态_IT之家</title>
-      <link>https://www.ithome.com/tags/AI%E8%8A%AF%E7%89%87/</link>
-      <guid isPermaLink="false">b97a28978509603a6b85097997034a384493315a</guid>
-      <pubDate>Sun, 24 May 2026 00:02:04 GMT</pubDate>
+      <title>[6分] Meta Sam 3: Segment Anything with Text, Clicks and Concepts</title>
+      <link>https://sam3ai.com/</link>
+      <guid isPermaLink="false">5e4e18e89b8d4e3dab6fae30e7ff73fe4339ee96</guid>
+      <pubDate>Sun, 24 May 2026 00:58:40 GMT</pubDate>
       <description><![CDATA[
-        <p>知情人士透露，AI初创公司Anthropic正与微软洽谈租用后者自研AI芯片服务器，以应对自身算力需求增长。若合作达成，将标志着微软自研AI芯片首次获得头部模型厂商的商业化应用，同时意味着微软在AI算力领域对英伟达发起直接挑战。目前谈判仍处早期阶段，存在不确定性。</p>
-        <p>标的: 英伟达, 微软, Anthropic</p>
-        <p>主线: compute_demand, chip_supply</p>
-        <p>方向: 微软→positive 英伟达→negative </p>
-        <p><em>跟踪变量：微软AI芯片性能及商业化进展、Anthropic算力缺口规模、英伟达H100/Blackwell定价策略。二阶效应：若微软芯片获验证，将加速AI芯片多元化竞争格局，对AMD、博通等同样布局AI芯片的厂商形成参考；英伟达市占率面临压力，但短期龙头地位难撼。</em></p>
+        <p>Meta发布Sam 3（Segment Anything Model第三代），新增文本提示、点击交互和概念理解三种分割模式，显著提升图像分割的灵活性和智能化水平。该模型延续Sam系列对视觉AI的探索，进一步降低图像分割任务的应用门槛，可能对计算机视觉在多领域的落地产生推动作用。Meta作为发布方直接受益，模型训练和推理对算力的需求也将间接利好AI芯片和云基础设施环节。</p>
+        <p>标的: 微软, 台积电, 谷歌, Meta, 英伟达</p>
+        <p>主线: model_capability, ai_monetization, compute_demand, chip_supply</p>
+        <p>方向: Meta→positive 英伟达→positive 台积电→positive 微软→positive 谷歌→positive </p>
+        <p><em>跟踪Sam 3的实际应用场景落地情况及用户采用率；关注视觉AI模型对算力消耗的增量需求，以及对其他AI视觉公司（如商汤）的竞争示范效应；留意Meta在AI商业化上的后续动作。</em></p>
+        <p>来源: hackernews 🔴 低可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_202b9b752c88</category>
+    </item>
+    
+    <item>
+      <title>[6分] 华泰证券：看好2026年起交换芯片在AI驱动下开启二次成长</title>
+      <link>https://36kr.com/newsflashes/3822612389941383?f=rss</link>
+      <guid isPermaLink="false">886f43fa2af34fa7ae24383c79fc3f93549e911f</guid>
+      <pubDate>Sun, 24 May 2026 02:00:17 GMT</pubDate>
+      <description><![CDATA[
+        <p>华泰证券研报指出，作为数据中心互联核心组件的交换芯片占交换机成本30%以上，看好2026年起在AI驱动下开启二次成长。驱动因素包括：1）万卡级集群推动Scale out交换芯片向更高容量/速率发展，量价齐升；2）超节点架构或为国产算力追赶海外的破局之道，其交换芯片配比高于传统Scale out架构，将催生大量需求。测算2028年国产交换芯片市场空间达242亿元，2026-2028年CAGR为96%。建议关注海外龙头博通、Marvell及国内寒武纪、海光信息等自研技术领先的芯片商。</p>
+        <p>标的: 中芯国际, Meta, 中科曙光, 浪潮信息, AMD, Marvell, 海光信息, 微软, 台积电, 寒武纪, 阿里巴巴, 亚马逊, 工业富联, 百度, 腾讯, 谷歌, 博通, 英伟达</p>
+        <p>主线: datacenter_power, domestic_substitution, compute_demand, chip_supply</p>
+        <p>方向: 博通→positive Marvell→positive 英伟达→positive AMD→positive 台积电→positive 中芯国际→positive 寒武纪→positive 海光信息→positive 工业富联→positive 中科曙光→positive 浪潮信息→positive 微软→positive 谷歌→positive 亚马逊→positive Meta→positive 阿里巴巴→positive 腾讯→positive 百度→positive </p>
+        <p><em>跟踪变量：万卡集群建设进度、超节点架构采用率、国内交换芯片量产进度；二阶效应：交换芯片需求爆发将带动上游晶圆代工（台积电/中芯国际）和下游交换机/服务器（工业富联/浪潮信息）景气上行；联动主线：与先进封装、国产替代主线共振，建议优先配置交换芯片龙头博通/Marvell及晶圆代工环节。</em></p>
+        <p>来源: rss:36kr 🟡 中可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_be927d49b16d</category>
+    </item>
+    
+    <item>
+      <title>[6分] AMD Expands AI Leadership Across Client, Graphics, and Software with ...</title>
+      <link>https://www.amd.com/en/newsroom/press-releases/2026-1-5-amd-expands-ai-leadership-across-client-graphics-.html</link>
+      <guid isPermaLink="false">1d7678a576abbc6a39d4d47bb46983f8539eff8a</guid>
+      <pubDate>Sun, 24 May 2026 02:29:24 GMT</pubDate>
+      <description><![CDATA[
+        <p>AMD发布新一代Ryzen AI处理器，推动AI PC从早期采用迈向主流应用。新一代产品具备更强端侧算力、更广平台覆盖和更丰富的设备端AI体验，标志着AMD在AI PC领域持续扩大竞争优势。这一更新将对AI PC市场格局产生直接影响。</p>
+        <p>标的: AMD, 微软, 超微电脑, 高通, Intel, 戴尔, 英伟达</p>
+        <p>主线: edge_ai, compute_demand, chip_supply</p>
+        <p>方向: AMD→positive Intel→negative 高通→negative 微软→neutral 英伟达→neutral 戴尔→positive 超微电脑→positive </p>
+        <p><em>跟踪AMD新一代Ryzen AI处理器的实际性能提升幅度和OEM采用率；关注其对英特尔和高通AI PC芯片市场份额的侵蚀程度；评估对PC换机周期的刺激效应，关联关注下游OEM厂商（戴尔、惠普）的订单变化。</em></p>
         <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_7b94c35f9400</category>
+      <category>evt_4f6b0c1cdfba</category>
+    </item>
+    
+    <item>
+      <title>[6分] 紧抓"人工智能+"政策窗口!商汤"1+X"战略穿越周期_腾讯新闻</title>
+      <link>https://news.qq.com/rain/a/20250912A09CUK00</link>
+      <guid isPermaLink="false">542aaf19d30076f3eb4a6de2f7ab384bd9b0ca6d</guid>
+      <pubDate>Sun, 24 May 2026 02:29:24 GMT</pubDate>
+      <description><![CDATA[
+        <p>商汤科技2024年12月启动业务与组织架构分拆，推行「1+X」战略——以生成式AI与视觉AI双引擎为核心「1」，将智能驾驶等垂直业务拆分独立运营。该战略旨在把握「人工智能+」政策窗口期，通过架构重组提升运营效率并加速各业务线商业化落地。此举反映了国内AI公司在政策红利下加速从技术探索向规模化变现转型，市场需关注其分拆业务的独立融资或上市进展。</p>
+        <p>标的: 商汤</p>
+        <p>主线: domestic_substitution, ai_monetization</p>
+        <p>方向: 商汤→positive </p>
+        <p><em>跟踪分拆业务的独立运营进展及融资计划，评估对母公司估值的影响；「1+X」模式若验证成功，可能被阿里云、百度等其他国内AI平台效仿，推动AI商业化加速；关注政策层面对生成式AI与视觉AI的进一步扶持力度。</em></p>
+        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_0a4d5b407abe</category>
     </item>
     
   </channel>

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-24T00:06:32Z",
+  "updated_at": "2026-05-24T02:34:00Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -174,9 +174,9 @@
       "source_count": 8,
       "first_seen_at": "2026-05-23T15:20:24Z",
       "last_updated_at": "2026-05-23T15:20:24Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 9,
-      "status": "developing"
+      "status": "resolved"
     },
     "evt_d60fc5d532da": {
       "event_id": "evt_d60fc5d532da",
@@ -227,9 +227,9 @@
       "source_count": 8,
       "first_seen_at": "2026-05-23T15:20:24Z",
       "last_updated_at": "2026-05-23T15:20:24Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 9,
-      "status": "developing"
+      "status": "resolved"
     },
     "evt_eb7c295d02aa": {
       "event_id": "evt_eb7c295d02aa",
@@ -298,9 +298,9 @@
       "source_count": 13,
       "first_seen_at": "2026-05-23T15:20:24Z",
       "last_updated_at": "2026-05-23T20:32:45Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 9,
-      "status": "developing"
+      "status": "resolved"
     },
     "evt_b49259b38281": {
       "event_id": "evt_b49259b38281",
@@ -321,9 +321,9 @@
       "source_count": 1,
       "first_seen_at": "2026-05-23T15:20:24Z",
       "last_updated_at": "2026-05-23T15:20:24Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 7,
-      "status": "developing"
+      "status": "resolved"
     },
     "evt_c837fb3679f4": {
       "event_id": "evt_c837fb3679f4",
@@ -353,9 +353,9 @@
       "source_count": 1,
       "first_seen_at": "2026-05-23T15:20:24Z",
       "last_updated_at": "2026-05-23T15:20:24Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 6,
-      "status": "developing"
+      "status": "resolved"
     },
     "evt_ed14029ca679": {
       "event_id": "evt_ed14029ca679",
@@ -404,35 +404,38 @@
       "source_count": 9,
       "first_seen_at": "2026-05-23T15:20:24Z",
       "last_updated_at": "2026-05-23T17:40:08Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 9,
-      "status": "developing"
+      "status": "resolved"
     },
     "evt_78a306cd53a4": {
       "event_id": "evt_78a306cd53a4",
-      "title": "AI算力产业链：设备供给趋紧、制造封装升级与代工竞争加剧",
-      "summary": "AI算力基础设施建设加速。上游设备端，ASML CEO确认芯片市场供应紧张将持续，作为光刻机垄断供应商其产能和交付周期成关键指标；台积电发布A13/A12/N2U制程路线图，5.5光罩CoWoS先进封装已量产、良率98%+。中游代工侧，工业富联GB200组装良率Q2显著优化、产能利用率提升，GB300预计H2实现实质出货，单台利润有望超越GB200，英伟达GB300优势或冲击超微电脑份额。下游部署端，OpenAI合作Cerebras新增750MW算力并启动欧洲数据中心项目。云厂商capex持续扩张，北美CSP及主权国家订单推进。产业链共振扩张明确，但供给瓶颈仍是核心约束。",
+      "title": "AMD第6代EPYC CPU量产：2纳米制程落地亚利桑那",
+      "summary": "AMD代号“Venice”的第6代EPYC CPU正式进入量产，采用台积电2纳米制程并在亚利桑那工厂生产，为AMD与台积电在先进制程合作的重要里程碑。标志着AMD在AI服务器芯片领域竞争力提升，同时验证台积电2纳米制程成熟度及美国本土产能落地，对Intel数据中心业务构成压力。",
       "tickers": [
-        "美光",
+        "浪潮信息",
+        "AMD",
+        "微软",
+        "超微电脑",
         "台积电",
         "英伟达",
-        "超微电脑",
+        "ASML",
         "谷歌",
-        "微软",
+        "亚马逊",
+        "美光",
+        "工业富联",
+        "Intel",
         "Meta",
         "戴尔",
         "博通",
-        "AMD",
-        "ASML",
-        "亚马逊",
-        "工业富联"
+        "中科曙光"
       ],
       "themes": [
+        "advanced_packaging",
         "chip_supply",
-        "compute_demand",
         "datacenter_power",
         "policy_export",
-        "advanced_packaging"
+        "compute_demand"
       ],
       "direction": {
         "微软": "positive",
@@ -447,7 +450,10 @@
         "Meta": "positive",
         "戴尔": "positive",
         "工业富联": "positive",
-        "美光": "neutral"
+        "美光": "neutral",
+        "Intel": "negative",
+        "中科曙光": "neutral",
+        "浪潮信息": "neutral"
       },
       "item_ids": [
         "8566227622a63b43ccf3164cbd5d0b8054f12766",
@@ -456,11 +462,12 @@
         "282a8a594e542e6482175c35f7a690d85a79ef3b",
         "2371caaba3ee9418135114e117943a37b4fce33d",
         "9900b376ec881630e06bc3817736c86fc939b7e4",
-        "7b48da35c95cb7833e2fd6a87ef7830a80cb5c76"
+        "7b48da35c95cb7833e2fd6a87ef7830a80cb5c76",
+        "7e519215318ae36218f4812e0218938039655dae"
       ],
-      "source_count": 7,
+      "source_count": 8,
       "first_seen_at": "2026-05-23T15:20:24Z",
-      "last_updated_at": "2026-05-23T19:25:47Z",
+      "last_updated_at": "2026-05-24T02:33:40Z",
       "is_active": true,
       "significance": 9,
       "status": "stable"
@@ -703,9 +710,9 @@
       "source_count": 1,
       "first_seen_at": "2026-05-23T17:40:08Z",
       "last_updated_at": "2026-05-23T17:40:08Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 7,
-      "status": "developing"
+      "status": "resolved"
     },
     "evt_060e3318e979": {
       "event_id": "evt_060e3318e979",
@@ -801,9 +808,9 @@
       "source_count": 3,
       "first_seen_at": "2026-05-23T17:40:08Z",
       "last_updated_at": "2026-05-23T20:32:45Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 8,
-      "status": "developing"
+      "status": "resolved"
     },
     "evt_becb450907e9": {
       "event_id": "evt_becb450907e9",
@@ -843,9 +850,9 @@
       "source_count": 3,
       "first_seen_at": "2026-05-23T17:40:08Z",
       "last_updated_at": "2026-05-23T20:32:45Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 9,
-      "status": "developing"
+      "status": "resolved"
     },
     "evt_23e01e1f8f84": {
       "event_id": "evt_23e01e1f8f84",
@@ -866,9 +873,9 @@
       "source_count": 1,
       "first_seen_at": "2026-05-23T17:40:08Z",
       "last_updated_at": "2026-05-23T17:40:08Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 7,
-      "status": "developing"
+      "status": "resolved"
     },
     "evt_15a2fdfb1af3": {
       "event_id": "evt_15a2fdfb1af3",
@@ -935,9 +942,9 @@
       "source_count": 1,
       "first_seen_at": "2026-05-23T17:40:08Z",
       "last_updated_at": "2026-05-23T17:40:08Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 6,
-      "status": "developing"
+      "status": "resolved"
     },
     "evt_45392c36bbaf": {
       "event_id": "evt_45392c36bbaf",
@@ -992,9 +999,9 @@
       "source_count": 1,
       "first_seen_at": "2026-05-23T17:40:08Z",
       "last_updated_at": "2026-05-23T17:40:08Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 6,
-      "status": "developing"
+      "status": "resolved"
     },
     "evt_4a5983c39c2e": {
       "event_id": "evt_4a5983c39c2e",
@@ -1026,9 +1033,9 @@
       "source_count": 1,
       "first_seen_at": "2026-05-23T17:40:08Z",
       "last_updated_at": "2026-05-23T17:40:08Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 6,
-      "status": "developing"
+      "status": "resolved"
     },
     "evt_f2ac5bea370c": {
       "event_id": "evt_f2ac5bea370c",
@@ -1062,9 +1069,9 @@
       "source_count": 1,
       "first_seen_at": "2026-05-23T17:40:08Z",
       "last_updated_at": "2026-05-23T17:40:08Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 6,
-      "status": "developing"
+      "status": "resolved"
     },
     "evt_ddab72f1c77f": {
       "event_id": "evt_ddab72f1c77f",
@@ -1134,9 +1141,9 @@
       "source_count": 1,
       "first_seen_at": "2026-05-23T19:25:47Z",
       "last_updated_at": "2026-05-23T19:25:47Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 8,
-      "status": "developing"
+      "status": "resolved"
     },
     "evt_891f8e2fddba": {
       "event_id": "evt_891f8e2fddba",
@@ -1326,9 +1333,9 @@
       "source_count": 1,
       "first_seen_at": "2026-05-23T20:32:45Z",
       "last_updated_at": "2026-05-23T20:32:45Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 8,
-      "status": "developing"
+      "status": "resolved"
     },
     "evt_bd5109249a2a": {
       "event_id": "evt_bd5109249a2a",
@@ -1351,9 +1358,9 @@
       "source_count": 1,
       "first_seen_at": "2026-05-23T20:32:45Z",
       "last_updated_at": "2026-05-23T20:32:45Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 6,
-      "status": "developing"
+      "status": "resolved"
     },
     "evt_1202f33796ed": {
       "event_id": "evt_1202f33796ed",
@@ -1536,6 +1543,227 @@
       "last_updated_at": "2026-05-24T00:05:50Z",
       "is_active": true,
       "significance": 9,
+      "status": "developing"
+    },
+    "evt_60058f40b2fa": {
+      "event_id": "evt_60058f40b2fa",
+      "title": "A股科技龙头!工业富联透露英伟达AI芯片大消息_天天基金网",
+      "summary": "工业富联在机构调研中透露英伟达AI芯片相关进展：GB200系列正按计划加速生产出货；GB300系列已收到部分大型云服务商客户的明确出货需求，当前已具备量产条件。工业富联作为英伟达AI芯片的先进封装及服务器制造合作方，其产能和出货进度是观察英伟达AI芯片供给能力的重要窗口。",
+      "tickers": [
+        "微软",
+        "超微电脑",
+        "台积电",
+        "亚马逊",
+        "工业富联",
+        "谷歌",
+        "英伟达"
+      ],
+      "themes": [
+        "advanced_packaging",
+        "compute_demand",
+        "chip_supply"
+      ],
+      "direction": {
+        "工业富联": "positive",
+        "英伟达": "positive",
+        "台积电": "positive",
+        "微软": "positive",
+        "谷歌": "positive",
+        "亚马逊": "positive",
+        "超微电脑": "neutral"
+      },
+      "item_ids": [
+        "db247c226be2772907d23defd7eddecc238026ed"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-05-24T02:33:40Z",
+      "last_updated_at": "2026-05-24T02:33:40Z",
+      "is_active": true,
+      "significance": 8,
+      "status": "developing"
+    },
+    "evt_227c8fb6312b": {
+      "event_id": "evt_227c8fb6312b",
+      "title": "景嘉微:关于控股子公司边端侧AISoC芯片研发进展情况的公告",
+      "summary": "景嘉微（300474）发布关于控股子公司边端侧AI SoC芯片研发进展公告。边端侧AI SoC是针对边缘计算场景的高集成度AI芯片，适用于智能终端、IoT设备、汽车电子等领域。此次研发进展公告表明公司在国产边缘AI芯片领域取得阶段性突破，有助于完善国内AI芯片产品矩阵，降低对海外芯片的依赖。",
+      "tickers": [
+        "中芯国际",
+        "寒武纪",
+        "景嘉微"
+      ],
+      "themes": [
+        "edge_ai",
+        "domestic_substitution",
+        "chip_supply"
+      ],
+      "direction": {
+        "景嘉微": "positive",
+        "寒武纪": "neutral",
+        "中芯国际": "neutral"
+      },
+      "item_ids": [
+        "ce88831f0591b6f729ed7a42aff1d6d738c10639"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-05-24T02:33:40Z",
+      "last_updated_at": "2026-05-24T02:33:40Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing"
+    },
+    "evt_202b9b752c88": {
+      "event_id": "evt_202b9b752c88",
+      "title": "Meta Sam 3: Segment Anything with Text, Clicks and Concepts",
+      "summary": "Meta发布Sam 3（Segment Anything Model第三代），新增文本提示、点击交互和概念理解三种分割模式，显著提升图像分割的灵活性和智能化水平。该模型延续Sam系列对视觉AI的探索，进一步降低图像分割任务的应用门槛，可能对计算机视觉在多领域的落地产生推动作用。Meta作为发布方直接受益，模型训练和推理对算力的需求也将间接利好AI芯片和云基础设施环节。",
+      "tickers": [
+        "微软",
+        "台积电",
+        "谷歌",
+        "Meta",
+        "英伟达"
+      ],
+      "themes": [
+        "model_capability",
+        "ai_monetization",
+        "compute_demand",
+        "chip_supply"
+      ],
+      "direction": {
+        "Meta": "positive",
+        "英伟达": "positive",
+        "台积电": "positive",
+        "微软": "positive",
+        "谷歌": "positive"
+      },
+      "item_ids": [
+        "5e4e18e89b8d4e3dab6fae30e7ff73fe4339ee96"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-05-24T02:33:40Z",
+      "last_updated_at": "2026-05-24T02:33:40Z",
+      "is_active": true,
+      "significance": 6,
+      "status": "developing"
+    },
+    "evt_be927d49b16d": {
+      "event_id": "evt_be927d49b16d",
+      "title": "华泰证券：看好2026年起交换芯片在AI驱动下开启二次成长",
+      "summary": "华泰证券研报指出，作为数据中心互联核心组件的交换芯片占交换机成本30%以上，看好2026年起在AI驱动下开启二次成长。驱动因素包括：1）万卡级集群推动Scale out交换芯片向更高容量/速率发展，量价齐升；2）超节点架构或为国产算力追赶海外的破局之道，其交换芯片配比高于传统Scale out架构，将催生大量需求。测算2028年国产交换芯片市场空间达242亿元，2026-2028年CAGR为96%。建议关注海外龙头博通、Marvell及国内寒武纪、海光信息等自研技术领先的芯片商。",
+      "tickers": [
+        "中芯国际",
+        "Meta",
+        "中科曙光",
+        "浪潮信息",
+        "AMD",
+        "Marvell",
+        "海光信息",
+        "微软",
+        "台积电",
+        "寒武纪",
+        "阿里巴巴",
+        "亚马逊",
+        "工业富联",
+        "百度",
+        "腾讯",
+        "谷歌",
+        "博通",
+        "英伟达"
+      ],
+      "themes": [
+        "datacenter_power",
+        "domestic_substitution",
+        "compute_demand",
+        "chip_supply"
+      ],
+      "direction": {
+        "博通": "positive",
+        "Marvell": "positive",
+        "英伟达": "positive",
+        "AMD": "positive",
+        "台积电": "positive",
+        "中芯国际": "positive",
+        "寒武纪": "positive",
+        "海光信息": "positive",
+        "工业富联": "positive",
+        "中科曙光": "positive",
+        "浪潮信息": "positive",
+        "微软": "positive",
+        "谷歌": "positive",
+        "亚马逊": "positive",
+        "Meta": "positive",
+        "阿里巴巴": "positive",
+        "腾讯": "positive",
+        "百度": "positive"
+      },
+      "item_ids": [
+        "886f43fa2af34fa7ae24383c79fc3f93549e911f"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-05-24T02:33:40Z",
+      "last_updated_at": "2026-05-24T02:33:40Z",
+      "is_active": true,
+      "significance": 6,
+      "status": "developing"
+    },
+    "evt_4f6b0c1cdfba": {
+      "event_id": "evt_4f6b0c1cdfba",
+      "title": "AMD Expands AI Leadership Across Client, Graphics, and Software with ...",
+      "summary": "AMD发布新一代Ryzen AI处理器，推动AI PC从早期采用迈向主流应用。新一代产品具备更强端侧算力、更广平台覆盖和更丰富的设备端AI体验，标志着AMD在AI PC领域持续扩大竞争优势。这一更新将对AI PC市场格局产生直接影响。",
+      "tickers": [
+        "AMD",
+        "微软",
+        "超微电脑",
+        "高通",
+        "Intel",
+        "戴尔",
+        "英伟达"
+      ],
+      "themes": [
+        "edge_ai",
+        "compute_demand",
+        "chip_supply"
+      ],
+      "direction": {
+        "AMD": "positive",
+        "Intel": "negative",
+        "高通": "negative",
+        "微软": "neutral",
+        "英伟达": "neutral",
+        "戴尔": "positive",
+        "超微电脑": "positive"
+      },
+      "item_ids": [
+        "1d7678a576abbc6a39d4d47bb46983f8539eff8a"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-05-24T02:33:40Z",
+      "last_updated_at": "2026-05-24T02:33:40Z",
+      "is_active": true,
+      "significance": 6,
+      "status": "developing"
+    },
+    "evt_0a4d5b407abe": {
+      "event_id": "evt_0a4d5b407abe",
+      "title": "紧抓\"人工智能+\"政策窗口!商汤\"1+X\"战略穿越周期_腾讯新闻",
+      "summary": "商汤科技2024年12月启动业务与组织架构分拆，推行「1+X」战略——以生成式AI与视觉AI双引擎为核心「1」，将智能驾驶等垂直业务拆分独立运营。该战略旨在把握「人工智能+」政策窗口期，通过架构重组提升运营效率并加速各业务线商业化落地。此举反映了国内AI公司在政策红利下加速从技术探索向规模化变现转型，市场需关注其分拆业务的独立融资或上市进展。",
+      "tickers": [
+        "商汤"
+      ],
+      "themes": [
+        "domestic_substitution",
+        "ai_monetization"
+      ],
+      "direction": {
+        "商汤": "positive"
+      },
+      "item_ids": [
+        "542aaf19d30076f3eb4a6de2f7ab384bd9b0ca6d"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-05-24T02:33:40Z",
+      "last_updated_at": "2026-05-24T02:33:40Z",
+      "is_active": true,
+      "significance": 6,
       "status": "developing"
     }
   }
