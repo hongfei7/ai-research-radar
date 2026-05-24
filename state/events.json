@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-24T02:34:00Z",
+  "updated_at": "2026-05-24T04:52:42Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -101,9 +101,9 @@
       "source_count": 15,
       "first_seen_at": "2026-05-23T15:20:24Z",
       "last_updated_at": "2026-05-23T22:35:42Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 10,
-      "status": "developing"
+      "status": "resolved"
     },
     "evt_a5e1c68e90d9": {
       "event_id": "evt_a5e1c68e90d9",
@@ -533,9 +533,9 @@
       "source_count": 8,
       "first_seen_at": "2026-05-23T17:40:08Z",
       "last_updated_at": "2026-05-23T21:33:55Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 9,
-      "status": "developing"
+      "status": "resolved"
     },
     "evt_4f56f50f552d": {
       "event_id": "evt_4f56f50f552d",
@@ -587,9 +587,9 @@
       "source_count": 5,
       "first_seen_at": "2026-05-23T17:40:08Z",
       "last_updated_at": "2026-05-23T21:33:55Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 9,
-      "status": "developing"
+      "status": "resolved"
     },
     "evt_67b4f1aedf77": {
       "event_id": "evt_67b4f1aedf77",
@@ -651,9 +651,9 @@
       "source_count": 5,
       "first_seen_at": "2026-05-23T17:40:08Z",
       "last_updated_at": "2026-05-23T21:33:55Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 9,
-      "status": "developing"
+      "status": "resolved"
     },
     "evt_7b94c35f9400": {
       "event_id": "evt_7b94c35f9400",
@@ -915,9 +915,9 @@
       "source_count": 3,
       "first_seen_at": "2026-05-23T17:40:08Z",
       "last_updated_at": "2026-05-23T21:33:55Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 8,
-      "status": "developing"
+      "status": "resolved"
     },
     "evt_d63331c527a5": {
       "event_id": "evt_d63331c527a5",
@@ -1115,9 +1115,9 @@
       "source_count": 4,
       "first_seen_at": "2026-05-23T17:40:08Z",
       "last_updated_at": "2026-05-23T22:35:42Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 8,
-      "status": "stable"
+      "status": "resolved"
     },
     "evt_2c2a61134a87": {
       "event_id": "evt_2c2a61134a87",
@@ -1207,9 +1207,9 @@
       "source_count": 7,
       "first_seen_at": "2026-05-23T19:25:47Z",
       "last_updated_at": "2026-05-23T22:35:42Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 9,
-      "status": "developing"
+      "status": "resolved"
     },
     "evt_869851fef89c": {
       "event_id": "evt_869851fef89c",
@@ -1287,9 +1287,9 @@
       "source_count": 5,
       "first_seen_at": "2026-05-23T20:32:45Z",
       "last_updated_at": "2026-05-23T22:35:42Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 9,
-      "status": "developing"
+      "status": "resolved"
     },
     "evt_9a155252aec5": {
       "event_id": "evt_9a155252aec5",
@@ -1764,6 +1764,170 @@
       "last_updated_at": "2026-05-24T02:33:40Z",
       "is_active": true,
       "significance": 6,
+      "status": "developing"
+    },
+    "evt_3656878cd644": {
+      "event_id": "evt_3656878cd644",
+      "title": "AMD Gives Consumers and Businesses More AI PC Options with Expanded ...",
+      "summary": "AMD 发布全球首款 Copilot+ 台式机处理器 Ryzen AI 400 系列，该系列面向下一代 AI 应用，支持可扩展性能与智能功能，覆盖专业工作负载场景。此举为消费者和企业用户提供更多 AI PC 选择，强化 AMD 在终端 AI 芯片领域的竞争力，同时利好 OEM 厂商戴尔，高通因 AI PC 竞争加剧面临压力。",
+      "tickers": [
+        "微软",
+        "戴尔",
+        "AMD",
+        "Intel",
+        "高通"
+      ],
+      "themes": [
+        "edge_ai",
+        "chip_supply",
+        "compute_demand",
+        "ai_monetization"
+      ],
+      "direction": {
+        "AMD": "positive",
+        "微软": "positive",
+        "戴尔": "positive",
+        "高通": "negative",
+        "Intel": "negative"
+      },
+      "item_ids": [
+        "e31a6ec36c6b152612ad75e922801a5bb8a65e02"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-05-24T04:52:26Z",
+      "last_updated_at": "2026-05-24T04:52:26Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing"
+    },
+    "evt_93d50f942107": {
+      "event_id": "evt_93d50f942107",
+      "title": "CES 2026 Chip Wars: Intel's 18A Breakthrough, NVIDIA's",
+      "summary": "CES 2026展会期间，芯片巨头展开激烈竞争。Intel正式发布首款18A制程芯片，标志着其先进制程的重要突破；NVIDIA则因HBM等内存部件短缺而面临约40%的产能削减，竞争力受到制约；AMD同步推出Ryzen AI 400系列处理器，在AI PC市场发起反击。三方在先进制程、AI芯片、终端处理器三条战线同时角力，反映出当前AI芯片供应链的复杂博弈格局。",
+      "tickers": [
+        "AMD",
+        "英伟达",
+        "ASML",
+        "Intel",
+        "美光",
+        "台积电"
+      ],
+      "themes": [
+        "compute_demand",
+        "advanced_packaging",
+        "chip_supply",
+        "edge_ai"
+      ],
+      "direction": {
+        "Intel": "positive",
+        "英伟达": "negative",
+        "AMD": "positive",
+        "美光": "neutral",
+        "台积电": "neutral",
+        "ASML": "neutral"
+      },
+      "item_ids": [
+        "e29efe31d0db1e674c82d9f6fffc03da84051272"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-05-24T04:52:26Z",
+      "last_updated_at": "2026-05-24T04:52:26Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing"
+    },
+    "evt_8565b15e1a35": {
+      "event_id": "evt_8565b15e1a35",
+      "title": "长电科技，Ai算力的下半场，在先进封装! - 知乎",
+      "summary": "在AI算力需求爆发式增长背景下，传统制程升级路径面临成本瓶颈。台积电3nm晶圆单价已至2万美元/片，下一代2nm预计再涨50%，单靠制程微缩已难以为继。先进封装成为突破算力瓶颈的新路径，长电科技作为大陆先进封装龙头有望受益。英伟达、AMD等AI芯片厂商对CoWoS等先进封装技术需求激增，台积电CoWoS产能紧张，OSAT（外包封装测试）环节如长电科技获得价值重估机会。",
+      "tickers": [
+        "博通",
+        "超微电脑",
+        "中芯国际",
+        "AMD",
+        "长电科技",
+        "英伟达",
+        "ASML",
+        "Marvell",
+        "美光",
+        "台积电"
+      ],
+      "themes": [
+        "advanced_packaging",
+        "chip_supply",
+        "compute_demand"
+      ],
+      "direction": {
+        "长电科技": "positive",
+        "台积电": "neutral",
+        "英伟达": "neutral",
+        "AMD": "neutral",
+        "博通": "neutral",
+        "ASML": "neutral",
+        "美光": "neutral",
+        "Marvell": "neutral",
+        "超微电脑": "neutral",
+        "中芯国际": "neutral"
+      },
+      "item_ids": [
+        "bd26b17c1018682c7ebe5f9c5b55dd6461a604c0"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-05-24T04:52:26Z",
+      "last_updated_at": "2026-05-24T04:52:26Z",
+      "is_active": true,
+      "significance": 6,
+      "status": "developing"
+    },
+    "evt_e67f2ab9c2f8": {
+      "event_id": "evt_e67f2ab9c2f8",
+      "title": "腾讯出牌：全面开放AI能力，适配国产芯片_腾讯新闻",
+      "summary": "腾讯于9月16日在2025年全球数字生态大会上宣布全面开放AI能力，将AI视为驱动产业效率变革的核心引擎。大会公布多项AI技术并重点推进国产芯片适配，这是继阿里、百度之后又一大云厂商加码AI开放战略。腾讯的AI能力开放将加速AI应用商业化落地，同时推动国产算力链需求增长，与国际芯片厂商形成竞争替代关系。",
+      "tickers": [
+        "博通",
+        "工业富联",
+        "腾讯",
+        "中芯国际",
+        "海光信息",
+        "浪潮信息",
+        "AMD",
+        "寒武纪",
+        "英伟达",
+        "百度",
+        "中科曙光",
+        "阿里巴巴",
+        "台积电"
+      ],
+      "themes": [
+        "model_capability",
+        "domestic_substitution",
+        "ai_monetization",
+        "compute_demand",
+        "chip_supply"
+      ],
+      "direction": {
+        "腾讯": "positive",
+        "阿里巴巴": "neutral",
+        "百度": "neutral",
+        "中芯国际": "positive",
+        "寒武纪": "positive",
+        "海光信息": "positive",
+        "工业富联": "positive",
+        "中科曙光": "positive",
+        "浪潮信息": "positive",
+        "英伟达": "negative",
+        "AMD": "negative",
+        "博通": "negative",
+        "台积电": "neutral"
+      },
+      "item_ids": [
+        "28e65ad261136b4c0c7799428f71e599dabe8d24"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-05-24T04:52:26Z",
+      "last_updated_at": "2026-05-24T04:52:26Z",
+      "is_active": true,
+      "significance": 5,
       "status": "developing"
     }
   }
