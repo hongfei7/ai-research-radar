@@ -137,7 +137,7 @@ trending_topics:
 runtime:
   cron_interval_minutes: 30      # 建议 30min，首跑手动触发建立 seen.db 后增量跑仅需 3-5min
   rolling_window_hours: 8        # 只采集最近 N 小时内发布的内容
-  situation_update_interval: 3       # 态势重写间隔(轮次)，降低频率以减少重复内容
+  situation_update_interval: 1       # 态势重写间隔(轮次)，每轮更新以最大化配额使用
   situation_trigger_new_events: 2    # 触发态势重写的新事件数阈值（真实新事件，非合并）
 
 # ============================================================
@@ -152,8 +152,14 @@ clustering:
 # 处理与输出参数
 # ============================================================
 scoring:
-  min_score_to_keep: 5              # 第一段筛选阈值（降低以扩大覆盖面）
-  max_items_in_brief: 80            # 晨报最多保留条目数
+  min_score_to_keep: 4              # 第一段筛选阈值（降低以扩大覆盖面）
+  max_items_in_brief: 100           # 晨报最多保留条目数
+  visual_enrich:
+    max_images: 15                  # 每轮最多分析图片数
+    min_score: 6                    # 图片分析最低分（降低以扩大覆盖面）
+  time_decay:
+    enabled: true
+    half_life_hours: 4              # 4 小时后有效分数减半
 
 minimax:
   model: "MiniMax-M2.7"             # MiniMax M2.7 (Coding Plan)

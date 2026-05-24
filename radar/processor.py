@@ -1,11 +1,12 @@
 """MiniMax 两段式处理：投资相关性筛选 + 深度信号提取"""
 
+import asyncio
 import json
 import logging
 from pathlib import Path
 from typing import Optional
 
-from radar.models import Item, utcnow_iso
+from radar.models import Item, Event, utcnow_iso, compute_effective_score
 from radar.minimax_client import MinimaxClient
 from radar.config import format_coverage_for_prompt, format_themes_for_prompt
 
@@ -177,8 +178,9 @@ class Processor:
             self._validate_item(item, stage="triage")
             scored_items.append(item)
 
-        # 按分数排序 + 截断
-        scored_items.sort(key=lambda x: x.relevance_score, reverse=True)
+        # 按时间衰减后的有效分数排序 + 截断
+        half_life = self.cfg["scoring"].get("time_decay", {}).get("half_life_hours", 4)
+        scored_items.sort(key=lambda x: compute_effective_score(x, half_life), reverse=True)
         kept = scored_items[: self.max_items]
 
         logger.info(
@@ -191,18 +193,17 @@ class Processor:
     # ================================================================
 
     async def extract(self, items: list[Item]) -> list[Item]:
-        """对幸存条目做深度信号提取，补全 cn_summary / direction / so_what"""
+        """对幸存条目做深度信号提取，补全 cn_summary / direction / so_what（并行化）"""
         if not items:
             return []
 
         coverage_text = format_coverage_for_prompt(self.cfg)
         themes_text = format_themes_for_prompt(self.cfg)
         template = _load_prompt("extract")
-
-        processed: list[Item] = []
         processed_at = utcnow_iso()
+        sem = asyncio.Semaphore(5)
 
-        for item in items:
+        async def _extract_one(item: Item):
             item_json = json.dumps(
                 {
                     "id": item.id,
@@ -219,38 +220,39 @@ class Processor:
                 themes_list=themes_text,
             )
 
-            try:
-                result = await self.client.chat_json(
-                    messages=[{"role": "user", "content": prompt}],
-                    temperature=0.3,
-                    max_tokens=4096,
-                )
-                if isinstance(result, dict):
-                    item.cn_summary = result.get("cn_summary", "") or ""
-                    # 合并而非覆盖：extract 新增 tickers/themes，不丢弃 triage 已有的
-                    ext_tickers = result.get("tickers", []) or []
-                    if isinstance(ext_tickers, list):
-                        item.tickers = list(set((item.tickers or []) + ext_tickers))
-                    ext_themes = result.get("themes", []) or []
-                    if isinstance(ext_themes, list):
-                        item.themes = list(set((item.themes or []) + ext_themes))
-                    item.direction = result.get("direction", {}) or {}
-                    item.so_what = result.get("so_what", "") or ""
-                    item.is_primary_source = result.get("is_primary_source", True)
-                    item.original_source_url = result.get("original_source_url", "") or ""
+            async with sem:
+                try:
+                    result = await self.client.chat_json(
+                        messages=[{"role": "user", "content": prompt}],
+                        temperature=0.3,
+                        max_tokens=4096,
+                    )
+                    if isinstance(result, dict):
+                        item.cn_summary = result.get("cn_summary", "") or ""
+                        # 合并而非覆盖：extract 新增 tickers/themes，不丢弃 triage 已有的
+                        ext_tickers = result.get("tickers", []) or []
+                        if isinstance(ext_tickers, list):
+                            item.tickers = list(set((item.tickers or []) + ext_tickers))
+                        ext_themes = result.get("themes", []) or []
+                        if isinstance(ext_themes, list):
+                            item.themes = list(set((item.themes or []) + ext_themes))
+                        item.direction = result.get("direction", {}) or {}
+                        item.so_what = result.get("so_what", "") or ""
+                        item.is_primary_source = result.get("is_primary_source", True)
+                        item.original_source_url = result.get("original_source_url", "") or ""
+                        item.processed_at = processed_at
+                        self._validate_item(item, stage="extract")
+                    else:
+                        logger.warning(f"Extract returned non-dict for {item.id}: {type(result)}")
+                except Exception as e:
+                    logger.error(f"Extract failed for {item.id}: {e}")
+                    # 即使 extract 失败也保留条目（已有 triage 评分）
                     item.processed_at = processed_at
-                    self._validate_item(item, stage="extract")
-                else:
-                    logger.warning(f"Extract returned non-dict for {item.id}: {type(result)}")
-            except Exception as e:
-                logger.error(f"Extract failed for {item.id}: {e}")
-                # 即使 extract 失败也保留条目（已有 triage 评分）
-                item.processed_at = processed_at
 
-            processed.append(item)
+        await asyncio.gather(*[_extract_one(it) for it in items])
 
-        logger.info(f"Extract: processed {len(processed)} items")
-        return processed
+        logger.info(f"Extract: processed {len(items)} items")
+        return items
 
     # ================================================================
     # Stage 3: 交叉综合分析 —— 上帝视角的元分析
@@ -358,18 +360,23 @@ class Processor:
     # Stage 2.5: 视觉富化 —— 对高分条目做图片理解
     # ================================================================
 
-    async def visual_enrich(self, items: list[Item], max_images: int = 5) -> None:
+    async def visual_enrich(self, items: list[Item], max_images: int | None = None) -> None:
         """
-        对高相关性条目（score >= 7 且有配图）调用图片理解 API，
+        对高相关性条目（score >= min_score 且有配图）调用图片理解 API，
         提取图表、产品图、架构图中的关键信息。
 
         Args:
             items:        已处理的 Item 列表
-            max_images:   每轮最多分析的图片数（控制配额）
+            max_images:   每轮最多分析的图片数（None = 读配置）
         """
+        ve_cfg = self.cfg["scoring"].get("visual_enrich", {})
+        if max_images is None:
+            max_images = ve_cfg.get("max_images", 5)
+        min_score = ve_cfg.get("min_score", 7)
+
         candidates = [
             it for it in items
-            if it.image_url and it.relevance_score >= 7 and not it.visual_analysis
+            if it.image_url and it.relevance_score >= min_score and not it.visual_analysis
         ]
         if not candidates:
             return
@@ -405,6 +412,125 @@ class Processor:
                     )
             except Exception as e:
                 logger.error(f"Visual enrich failed for {item.id[:12]}: {e}")
+
+    # ================================================================
+    # Stage 5: 事件深度分析
+    # ================================================================
+
+    async def event_deep_dive(self, event: Event, event_items: list[Item]) -> str:
+        """
+        对事件进行深度分析：看多逻辑、看空风险、关键驱动因素、市场影响、时间线推断。
+
+        Args:
+            event:       事件对象
+            event_items: 该事件下的条目列表
+
+        Returns:
+            深度分析文本（≤600字中文），失败返回空字符串
+        """
+        if not event_items:
+            return ""
+
+        template = _load_prompt("event_deep_dive")
+
+        event_json = json.dumps(
+            {
+                "title": event.title,
+                "summary": event.summary,
+                "tickers": event.tickers,
+                "themes": event.themes,
+                "significance": event.significance,
+                "status": event.status,
+            },
+            ensure_ascii=False,
+        )
+
+        # 取 top 10 高分条目
+        top_items = sorted(event_items, key=lambda x: x.relevance_score, reverse=True)[:10]
+        items_json = json.dumps(
+            [
+                {
+                    "title": it.title,
+                    "cn_summary": it.cn_summary,
+                    "so_what": it.so_what,
+                    "tickers": it.tickers,
+                    "themes": it.themes,
+                    "direction": it.direction,
+                    "credibility": it.credibility,
+                    "score": it.relevance_score,
+                }
+                for it in top_items
+            ],
+            ensure_ascii=False,
+        )
+
+        prompt = template.format(event_json=event_json, items_json=items_json)
+
+        try:
+            text = await self.client.chat(
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.4,
+                max_tokens=1024,
+            )
+            text = text.strip()
+            if text:
+                logger.info(f"Event deep dive for {event.event_id}: {len(text)} chars")
+            return text
+        except Exception as e:
+            logger.error(f"Event deep dive failed for {event.event_id}: {e}")
+            return ""
+
+    # ================================================================
+    # Stage 6: 反向观点分析
+    # ================================================================
+
+    async def second_opinion(self, items: list[Item]) -> None:
+        """
+        对高分条目（score >= 7 且已有 cn_summary）生成反向观点，
+        提供替代解读或指出遗漏点。
+
+        Args:
+            items: 已处理的 Item 列表（原地修改 second_opinion 字段）
+        """
+        candidates = [
+            it for it in items
+            if it.relevance_score >= 7 and it.cn_summary and not it.second_opinion
+        ]
+        if not candidates:
+            return
+
+        template = _load_prompt("second_opinion")
+        sem = asyncio.Semaphore(5)
+
+        async def _analyze_one(item: Item):
+            items_json = json.dumps(
+                {
+                    "title": item.title,
+                    "cn_summary": item.cn_summary,
+                    "so_what": item.so_what,
+                    "tickers": item.tickers,
+                    "themes": item.themes,
+                },
+                ensure_ascii=False,
+            )
+
+            prompt = template.format(items_json=items_json)
+
+            async with sem:
+                try:
+                    text = await self.client.chat(
+                        messages=[{"role": "user", "content": prompt}],
+                        temperature=0.4,
+                        max_tokens=512,
+                    )
+                    if text:
+                        item.second_opinion = text.strip()
+                except Exception as e:
+                    logger.error(f"Second opinion failed for {item.id[:12]}: {e}")
+
+        await asyncio.gather(*[_analyze_one(it) for it in candidates])
+        count = sum(1 for it in candidates if it.second_opinion)
+        logger.info(f"Second opinion: {count}/{len(candidates)} items analyzed")
 
     # ================================================================
     # 组合: triage + extract

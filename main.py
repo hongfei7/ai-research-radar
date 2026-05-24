@@ -18,7 +18,7 @@ import sys
 from pathlib import Path
 
 from radar.config import load_config
-from radar.models import Item, today_str, parse_iso
+from radar.models import Item, today_str, parse_iso, get_effective_date
 from radar.collectors.rss import RSSCollector
 from radar.collectors.arxiv import ArxivCollector
 from radar.collectors.hackernews import HackerNewsCollector
@@ -128,14 +128,12 @@ async def collect_all(cfg: dict) -> list[Item]:
     no_date_count = 0
 
     for it in all_items:
-        pub_dt = parse_iso(it.published_at)
+        pub_dt = get_effective_date(it)
         if pub_dt is None:
-            # 无日期信息：用 fetched_at 替代（搜索类源都是这种）
-            pub_dt = parse_iso(it.fetched_at)
-            if pub_dt is None:
-                no_date_count += 1
-                filtered_items.append(it)  # 无法解析则保留
-                continue
+            # published_at 不可解析：保留但标记（不 fallback 到 fetched_at）
+            no_date_count += 1
+            filtered_items.append(it)
+            continue
 
         if pub_dt >= cutoff:
             filtered_items.append(it)
@@ -266,7 +264,9 @@ async def run_full(cfg: dict) -> None:
         sit = load_situation()
 
         all_events_list = sorted(
-            today_events.values(), key=lambda e: e.significance, reverse=True
+            today_events.values(),
+            key=lambda e: (e.last_updated_at or "", e.significance),
+            reverse=True,
         )
         active_events = [e for e in all_events_list if e.is_active]
 
@@ -289,7 +289,9 @@ async def run_full(cfg: dict) -> None:
             today_events = load_events()
             sit = load_situation()
             all_events_sorted = sorted(
-                today_events.values(), key=lambda e: e.significance, reverse=True
+                today_events.values(),
+                key=lambda e: (e.last_updated_at or "", e.significance),
+                reverse=True,
             )
             active_events = [e for e in all_events_sorted if e.is_active]
             w = cfg["runtime"].get("rolling_window_hours", 8)
@@ -298,43 +300,53 @@ async def run_full(cfg: dict) -> None:
             logger.info("No items passed triage — rendered existing state")
             return
 
-        # Stage 2.5: 交叉综合分析 —— 仅在有足够高分条目时运行
-        high_score_items = [it for it in processed if it.relevance_score >= 7]
-        if len(high_score_items) >= 3 or len(processed) >= 15:
-            logger.info(f"Running cross-analysis on {len(processed)} items...")
-            cross_analysis_text = await processor.cross_analyze(processed)
-            if cross_analysis_text:
-                logger.info(f"Cross-analysis complete: {len(cross_analysis_text)} chars")
-            else:
-                logger.warning("Cross-analysis returned empty")
+        # Stage 2.5: 交叉综合分析 —— 每轮必跑以最大化配额使用
+        logger.info(f"Running cross-analysis on {len(processed)} items...")
+        cross_analysis_text = await processor.cross_analyze(processed)
+        if cross_analysis_text:
+            logger.info(f"Cross-analysis complete: {len(cross_analysis_text)} chars")
         else:
-            cross_analysis_text = ""
-            logger.info(f"Skipping cross-analysis (only {len(high_score_items)} high-score items)")
+            logger.warning("Cross-analysis returned empty")
 
-        # Stage 2.6: 趋势发现 —— 仅在有足够新高分条目时运行
-        if len(high_score_items) >= 3:
-            logger.info("Running trend spotting on processed items...")
-            trend_text = await processor.trend_spotting(processed)
-            if trend_text:
-                logger.info(f"Trend spotting complete: {len(trend_text)} chars")
-            else:
-                logger.warning("Trend spotting returned empty")
+        # Stage 2.6: 趋势发现 —— 每轮必跑以最大化配额使用
+        logger.info("Running trend spotting on processed items...")
+        trend_text = await processor.trend_spotting(processed)
+        if trend_text:
+            logger.info(f"Trend spotting complete: {len(trend_text)} chars")
         else:
-            trend_text = ""
-            logger.info(f"Skipping trend spotting (only {len(high_score_items)} high-score items)")
+            logger.warning("Trend spotting returned empty")
 
-        # Stage 2.7: 视觉富化 —— 高分条目配图分析（图片理解 API）
+        # Stage 2.7: 视觉富化 —— 高分条目配图分析（图片理解 API，配额由 config 控制）
         logger.info("Running visual enrichment on high-score items...")
-        await processor.visual_enrich(processed, max_images=5)
+        await processor.visual_enrich(processed)
         visual_count = sum(1 for it in processed if it.visual_analysis)
         if visual_count:
             logger.info(f"Visual enrich complete: {visual_count} items enriched")
+
+        # Stage 2.8: 反向观点分析 —— 对高分条目提供替代解读
+        logger.info("Running second opinion analysis...")
+        await processor.second_opinion(processed)
 
         existing_events = load_events()
         cluster_engine = ClusterEngine(client, cfg)
         clustered_items, updated_events = await cluster_engine.cluster(
             processed, existing_events
         )
+
+        # Stage 2.9: 事件深度分析 —— 对新事件做多空逻辑、驱动因素分析
+        deep_dive_eids = {it.event_id for it in clustered_items if it.is_new_event}
+        if deep_dive_eids:
+            logger.info(f"Running event deep dive for {len(deep_dive_eids)} new events...")
+            for eid in deep_dive_eids:
+                event = updated_events.get(eid)
+                if not event:
+                    continue
+                event_items = [it for it in clustered_items if it.event_id == eid]
+                analysis = await processor.event_deep_dive(event, event_items)
+                if analysis:
+                    event.deep_analysis = analysis
+            deep_dive_count = sum(1 for e in updated_events.values() if e.deep_analysis)
+            logger.info(f"Event deep dive complete: {deep_dive_count} events analyzed")
 
         # 统计新事件
         new_event_count = sum(1 for it in clustered_items if it.is_new_event)
@@ -391,7 +403,9 @@ async def run_full(cfg: dict) -> None:
         write_rss(clustered_items, site_url, rss_config.get("max_items", 50), window_hours=w)
 
         all_events_sorted = sorted(
-            updated_events.values(), key=lambda e: e.significance, reverse=True
+            updated_events.values(),
+            key=lambda e: (e.last_updated_at or "", e.significance),
+            reverse=True,
         )
         active_events = [e for e in all_events_sorted if e.is_active]
 

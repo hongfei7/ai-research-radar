@@ -41,6 +41,9 @@ class Item:
     image_url: str = ""                  # 文章配图/缩略图 URL
     visual_analysis: str = ""            # MiniMax 图片理解结果
 
+    # —— 反向观点 ——
+    second_opinion: str = ""             # 对已有分析的替代解读或遗漏点
+
     # —— 聚类阶段 ——
     event_id: Optional[str] = None       # 所属事件 cluster ID
     is_new_event: bool = False           # 本条目是否触发了新事件
@@ -68,6 +71,7 @@ class Item:
             "original_source_url": "",
             "image_url": "",
             "visual_analysis": "",
+            "second_opinion": "",
             "event_id": None,
             "is_new_event": False,
             "is_event_update": False,
@@ -80,7 +84,7 @@ class Item:
             "relevance_score", "relevance_reason", "tickers", "themes",
             "direction", "cn_summary", "so_what", "processed_at",
             "credibility", "is_primary_source", "original_source_url",
-            "image_url", "visual_analysis",
+            "image_url", "visual_analysis", "second_opinion",
             "event_id", "is_new_event", "is_event_update",
         ]})
 
@@ -102,6 +106,7 @@ class Event:
     is_active: bool = True               # 是否仍在活跃
     significance: int = 0                # 重要性 0-10
     status: str = "developing"           # "developing" | "stable" | "resolved"
+    deep_analysis: str = ""              # 事件深度分析（多空逻辑/驱动因素/市场影响）
     # 代表向量(用于相似度比较)，不序列化到 JSON
     embedding: Optional[list] = field(default=None, repr=False)
 
@@ -124,6 +129,7 @@ class Event:
             "is_active": True,
             "significance": 0,
             "status": "developing",
+            "deep_analysis": "",
         }
         for k, v in defaults.items():
             d.setdefault(k, v)
@@ -210,3 +216,47 @@ def today_str(tz: str = "Asia/Hong_Kong") -> str:
     except Exception:
         tz_obj = timezone.utc
     return datetime.now(tz_obj).strftime("%Y-%m-%d")
+
+
+def get_effective_date(item) -> datetime | None:
+    """只根据 published_at 判断有效日期，失败返回 None（不 fallback 到 fetched_at/processed_at）"""
+    return parse_iso(item.published_at)
+
+
+def compute_effective_score(item, half_life_hours: float = 4) -> float:
+    """时间衰减后的有效分数: score / (1 + hours_old / half_life)
+
+    日期未知的条目不衰减（hours_old = 0），避免搜索类源被过度惩罚。
+    """
+    score = float(item.relevance_score)
+    dt = get_effective_date(item)
+    if dt is None:
+        return score
+    hours_old = (datetime.now(timezone.utc) - dt).total_seconds() / 3600.0
+    if hours_old < 0:
+        hours_old = 0
+    return score / (1.0 + hours_old / half_life_hours)
+
+
+def format_relative_time(iso_str: str) -> str:
+    """将 ISO8601 时间戳转为相对时间描述（"X分钟前" / "X小时前" / "X天前"）"""
+    dt = parse_iso(iso_str)
+    if dt is None:
+        return "时间未知"
+    now_dt = datetime.now(timezone.utc)
+    diff = now_dt - dt
+    if diff.total_seconds() < 0:
+        return "刚刚"
+    minutes = int(diff.total_seconds() / 60)
+    if minutes < 1:
+        return "刚刚"
+    if minutes < 60:
+        return f"{minutes}分钟前"
+    hours = minutes // 60
+    if hours < 24:
+        return f"{hours}小时前"
+    days = hours // 24
+    if days < 30:
+        return f"{days}天前"
+    months = days // 30
+    return f"{months}个月前"

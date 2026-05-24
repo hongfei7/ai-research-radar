@@ -8,7 +8,11 @@ from typing import Optional
 
 from jinja2 import Environment, FileSystemLoader
 
-from radar.models import Item, Event, Situation, today_str, parse_iso
+from radar.models import (
+    Item, Event, Situation,
+    today_str, parse_iso,
+    get_effective_date, compute_effective_score, format_relative_time,
+)
 from radar.config import get_coverage_by_ticker, load_config, get_theme_by_key
 from radar.credibility import CREDIBILITY_EMOJI, CREDIBILITY_LABEL
 
@@ -33,6 +37,7 @@ def _format_direction(direction: dict) -> str:
 
 
 _env.filters["direction_str"] = _format_direction
+_env.filters["relative_time"] = format_relative_time
 
 
 def _rfc2822(iso_str: str) -> str:
@@ -63,12 +68,15 @@ def _now_hkt() -> str:
 
 
 def _filter_recent(items: list[Item], window_hours: int = 8) -> list[Item]:
-    """只保留最近 window_hours 内发布/处理的条目"""
+    """只保留最近 window_hours 内发布的条目
+
+    published_at 不可解析的条目保留（标记为未知日期），不再 fallback
+    到 fetched_at/processed_at，因为这两个字段永远是「现在」时间。
+    """
     cutoff = datetime.now(timezone.utc) - timedelta(hours=window_hours)
     result = []
     for it in items:
-        # 优先用 published_at，其次 processed_at，再次 fetched_at
-        dt = parse_iso(it.published_at) or parse_iso(it.processed_at) or parse_iso(it.fetched_at)
+        dt = get_effective_date(it)
         if dt is None or dt >= cutoff:
             result.append(it)
     return result
@@ -114,8 +122,9 @@ def render_dashboard(
     events: list[Event],
     situation: Optional[Situation],
     site_url: str = "",
+    half_life_hours: float = 4,
 ) -> str:
-    """生成首页看板 HTML"""
+    """生成首页看板 HTML（条目按时间衰减后的有效分数排序）"""
     template = _env.get_template("dashboard.html.j2")
 
     # 收集所有 ticker
@@ -125,8 +134,13 @@ def render_dashboard(
         tk for it in items for tk in (it.tickers or [])
     ))
 
+    # 按时间衰减后的有效分数排序，新+高分排前面
+    sorted_items = sorted(
+        items, key=lambda x: compute_effective_score(x, half_life_hours), reverse=True
+    )
+
     return template.render(
-        items=items[:60],
+        items=sorted_items[:60],
         events=events[:30],
         situation=situation,
         site_url=site_url,
@@ -145,7 +159,9 @@ def write_dashboard(
     """生成并写入 pages/index.html，仅展示时间窗口内的内容"""
     _ensure_pages_dir()
     recent = _filter_recent(items, window_hours)
-    html = render_dashboard(recent, events, situation, site_url)
+    cfg = load_config()
+    half_life = cfg["scoring"].get("time_decay", {}).get("half_life_hours", 4)
+    html = render_dashboard(recent, events, situation, site_url, half_life_hours=half_life)
     path = _PAGES_DIR / "index.html"
     path.write_text(html, encoding="utf-8")
     logger.info(f"Dashboard written to {path} ({len(recent)} recent items)")
