@@ -391,23 +391,27 @@ def should_telegram_alert(
 ) -> bool:
     """
     判断是否需要推送 Telegram：
-    - 新事件 significance >= threshold
-    - 已有事件重要更新
-    - 距上次兜底推送 >= digest_interval_hours
+    - 有真正的新事件（本轮创建，非合并到旧事件）
+    - 已有事件方向发生翻转或重要性显著提升
+    - 距上次兜底推送 ≥ digest_interval_hours
     """
     telegram_cfg = cfg.get("channels", {}).get("telegram", {})
 
+    # 真正的新事件：本轮创建、且重要性达标
     threshold = telegram_cfg.get("notify_new_event_threshold", 7)
     for ev in new_events:
-        if ev.significance >= threshold:
+        if ev.significance >= threshold and ev.source_count <= 3:
+            # source_count 小 = 新事件，而非累积了很多来源的老事件
             return True
 
+    # 已有事件重要更新：source_count 增长（说明有实质性的新信息加入）
     notify_update = telegram_cfg.get("notify_direction_flip", True)
-    if notify_update:
+    if notify_update and updated_events:
         for ev in updated_events:
             if ev.significance >= threshold:
                 return True
 
+    # 兜底推送间隔（确保不会完全沉默）
     if situation and situation.last_telegram_digest_at:
         try:
             from datetime import datetime, timezone
@@ -415,7 +419,7 @@ def should_telegram_alert(
                 situation.last_telegram_digest_at.replace("Z", "+00:00")
             )
             now = datetime.now(timezone.utc)
-            interval = telegram_cfg.get("digest_interval_hours", 1)
+            interval = telegram_cfg.get("digest_interval_hours", 2)
             if (now - last).total_seconds() >= interval * 3600:
                 return True
         except Exception:

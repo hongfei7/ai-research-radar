@@ -298,21 +298,30 @@ async def run_full(cfg: dict) -> None:
             logger.info("No items passed triage — rendered existing state")
             return
 
-        # Stage 2.5: 交叉综合分析 —— 上帝视角元分析（每轮必跑）
-        logger.info("Running cross-analysis on processed items...")
-        cross_analysis_text = await processor.cross_analyze(processed)
-        if cross_analysis_text:
-            logger.info(f"Cross-analysis complete: {len(cross_analysis_text)} chars")
+        # Stage 2.5: 交叉综合分析 —— 仅在有足够高分条目时运行
+        high_score_items = [it for it in processed if it.relevance_score >= 7]
+        if len(high_score_items) >= 3 or len(processed) >= 15:
+            logger.info(f"Running cross-analysis on {len(processed)} items...")
+            cross_analysis_text = await processor.cross_analyze(processed)
+            if cross_analysis_text:
+                logger.info(f"Cross-analysis complete: {len(cross_analysis_text)} chars")
+            else:
+                logger.warning("Cross-analysis returned empty")
         else:
-            logger.warning("Cross-analysis returned empty")
+            cross_analysis_text = ""
+            logger.info(f"Skipping cross-analysis (only {len(high_score_items)} high-score items)")
 
-        # Stage 2.6: 趋势发现 —— 识别新兴趋势与早期信号（每轮必跑）
-        logger.info("Running trend spotting on processed items...")
-        trend_text = await processor.trend_spotting(processed)
-        if trend_text:
-            logger.info(f"Trend spotting complete: {len(trend_text)} chars")
+        # Stage 2.6: 趋势发现 —— 仅在有足够新高分条目时运行
+        if len(high_score_items) >= 3:
+            logger.info("Running trend spotting on processed items...")
+            trend_text = await processor.trend_spotting(processed)
+            if trend_text:
+                logger.info(f"Trend spotting complete: {len(trend_text)} chars")
+            else:
+                logger.warning("Trend spotting returned empty")
         else:
-            logger.warning("Trend spotting returned empty")
+            trend_text = ""
+            logger.info(f"Skipping trend spotting (only {len(high_score_items)} high-score items)")
 
         # Stage 2.7: 视觉富化 —— 高分条目配图分析（图片理解 API）
         logger.info("Running visual enrichment on high-score items...")

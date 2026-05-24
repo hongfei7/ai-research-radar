@@ -136,9 +136,9 @@ trending_topics:
 # ============================================================
 runtime:
   cron_interval_minutes: 30      # 建议 30min，首跑手动触发建立 seen.db 后增量跑仅需 3-5min
-  rolling_window_hours: 8       # 只采集最近 N 小时内发布的内容
-  situation_update_interval: 1      # 态势重写间隔(轮次)，每轮更新以最大化MiniMax用量
-  situation_trigger_new_events: 1   # 触发态势重写的新事件数阈值
+  rolling_window_hours: 8        # 只采集最近 N 小时内发布的内容
+  situation_update_interval: 3       # 态势重写间隔(轮次)，降低频率以减少重复内容
+  situation_trigger_new_events: 2    # 触发态势重写的新事件数阈值（真实新事件，非合并）
 
 # ============================================================
 # 事件聚类参数
@@ -146,7 +146,7 @@ runtime:
 clustering:
   similarity_threshold: 0.85        # embedding 余弦相似度阈值
   max_active_events: 30             # 最多活跃事件数
-  event_ttl_hours: 12               # 无更新则标记为 resolved（缩短以保持新鲜度）
+  event_ttl_hours: 6                # 无更新则标记为 resolved（缩短以保持新鲜度）
 
 # ============================================================
 # 处理与输出参数

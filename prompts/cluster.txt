@@ -7,12 +7,15 @@
 {new_item_json}
 
 要求:
-1. event_title: 更新后的事件标题(≤30字)，准确概括事件核心
-2. event_summary: 更新后的事件摘要(≤150字)，涵盖关键信息
-3. tickers: 所有受影响的覆盖标的
-4. themes: 涉及的投资主线
-5. significance: 重要性 0-10，综合信息量、来源数和市场潜在影响
-6. status: "developing"(仍在演进中)|"stable"(信息已充分)|"resolved"(事件已明确)
+1. event_title: 事件标题(≤25字)，必须是具体的新闻标题而非宽泛的主题概括。
+   - 好: "英伟达发布Vera Rubin超级芯片，性能提升100倍"
+   - 坏: "AI芯片需求井喷 存储封装产业链景气共振"
+   标题应反映最近一条新增条目的核心事件，而非对所有条目的平均总结。
+2. event_summary: 事件摘要(≤120字)，突出最新进展和关键变化，而非泛泛的行业背景。
+3. tickers: 仅列出新条目中直接受影响的覆盖标的（不是所有被提及的标的）。
+4. themes: 涉及的投资主线 key。
+5. significance: 重要性 0-10，仅基于新增条目的信息量和市场潜在影响，不要因为历史积累而虚高。
+6. status: "developing"(仍有新信息持续出现)|"stable"(信息已充分，无重大新进展)|"resolved"(事件已完结)。
 
 仅输出 JSON:
 {{"event_title":"...","event_summary":"...","tickers":[...],"themes":[...],"significance":0,"status":"..."}}

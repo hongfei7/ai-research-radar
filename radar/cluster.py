@@ -183,8 +183,13 @@ class ClusterEngine:
         return None
 
     def _find_match_keyword(self, item: Item, events: dict[str, Event]) -> Optional[str]:
-        """降级方案：基于 ticker/theme/标题关键词重叠匹配事件。
-        要求：ticker 必须重叠 + theme 或关键词至少一项重叠，防止同标的无关联事件被误合并。"""
+        """基于 ticker/theme/标题关键词重叠匹配事件。
+
+        设计要点:
+        - ticker 权重最高（0.5），同一标的的新闻才可能同事件
+        - theme + 关键词权重各 0.25，辅助区分同标的不同事件
+        - 阈值 0.55：防止宽泛主题（如 compute_demand）导致误合并
+        """
         item_tickers = set(item.tickers or [])
         item_themes = set(item.themes or [])
         item_words = set((item.cn_summary or item.title).lower().split())
@@ -200,27 +205,26 @@ class ClusterEngine:
             ev_themes = set(event.themes or [])
             ev_words = set((event.summary or event.title).lower().split())
 
-            # Ticker 重叠检查：双方都有 ticker 时强制要求交集，否则跳过
+            # Ticker 重叠检查：双方都有 ticker 时强制要求交集
             if item_tickers and ev_tickers:
                 if not (item_tickers & ev_tickers):
                     continue
                 ticker_overlap = len(item_tickers & ev_tickers) / max(len(item_tickers | ev_tickers), 1)
             else:
-                # 至少一方没有 ticker，不强制要求但无 ticker 加分
+                # 至少一方没有 ticker（如 OpenAI/DeepSeek），不强制但无加分
                 ticker_overlap = 0.0
 
             theme_overlap = len(item_themes & ev_themes) / max(len(item_themes | ev_themes), 1)
             word_overlap = len(item_words & ev_words) / max(len(item_words | ev_words), 1)
 
-            # ticker 无交集时提高 theme + word 权重，降低阈值门槛
-            score = ticker_overlap * 0.4 + theme_overlap * 0.35 + word_overlap * 0.25
+            # ticker 权重最高 → 同标的才可能同事件
+            score = ticker_overlap * 0.5 + theme_overlap * 0.25 + word_overlap * 0.25
 
             if score > best_score:
                 best_score = score
                 best_id = eid
 
-        # 阈值提高：需要 ticker + theme/word 双重命中
-        keyword_threshold = 0.40
+        keyword_threshold = 0.55  # 需要较强的信号重叠
         if best_score >= keyword_threshold:
             return best_id
         return None
