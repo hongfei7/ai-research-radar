@@ -5,23 +5,87 @@
     <link>https://hongfei7.github.io/ai-research-radar</link>
     <description>AI/科技/半导体板块的持续投研情报 feed — 由 MiniMax 策展</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 24 May 2026 16:37:14 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 24 May 2026 18:07:11 GMT</lastBuildDate>
     <atom:link href="https://hongfei7.github.io/ai-research-radar/feed.xml" rel="self" type="application/rss+xml"/>
     
     <item>
-      <title>[4分] A deep dive into Apple Watch and Health efforts; sources: iOS 27 to get a revamped AirPods control panel and default support for AirPlay rivals like Google Cast (Mark Gurman/Bloomberg)</title>
-      <link>https://www.techmeme.com/260524/p8#a260524p8</link>
-      <guid isPermaLink="false">7ede7bdc299f0bc93198df765ed38c65dd153fbc</guid>
-      <pubDate>Sun, 24 May 2026 15:15:01 GMT</pubDate>
+      <title>[8分] ASML looks beyond EUV, plans new tools for larger chips and 3D ...</title>
+      <link>https://www.techspot.com/news/111543-asml-looks-beyond-euv-plans-new-tools-larger.html</link>
+      <guid isPermaLink="false">54a39541f0210769a000a6dea0834bbd156b51f1</guid>
+      <pubDate>Sun, 24 May 2026 18:01:37 GMT</pubDate>
       <description><![CDATA[
-        <p>Bloomberg记者Mark Gurman深度报道Apple Watch及健康业务现状。报道指出，Apple Watch已发布超十年，正面临健康与健身可穿戴设备市场的关键转型节点，需进行重大革新。同时据知情人士透露，iOS 27将推出重新设计的AirPods控制面板，并默认支持Google Cast等AirPlay竞品。此举意味着苹果在智能穿戴生态中寻求差异化突破，通过健康功能深化和开放互联策略应对市场竞争。</p>
-        <p>标的: 苹果, 谷歌</p>
-        <p>主线: edge_ai, ai_monetization</p>
-        <p>方向: 苹果→positive 谷歌→neutral </p>
-        <p><em>关注苹果WWDC对Watch健康功能的详细披露节奏；AirPods控制面板改版可能带动交互体验升级需求；默认支持Google Cast显示苹果生态走向适度开放，需跟踪对AirPlay市场份额的潜在影响。</em></p>
-        <p>来源: rss:techmeme 🔴 低可信</p>
+        <p>ASML宣布战略转型，计划超越核心EUV光刻业务，进军先进芯片封装设备领域，并探索生产更大尺寸硅芯片的技术。此举标志着ASML从单一的EUV光刻机供应商向综合性半导体设备制造商转型。ASML将开发用于3D堆叠等先进封装工艺的新工具，目标是支撑芯片在封装层面的性能提升而非仅依赖制程微缩。这一战略反映了后摩尔时代行业思路的转变，对台积电、英特尔等晶圆厂而言意味着新的封装解决方案，对整个芯片制造产业链具有深远影响。</p>
+        <p>标的: 英伟达, AMD, Intel, ASML, 台积电</p>
+        <p>主线: chip_supply, advanced_packaging</p>
+        <p>方向: ASML→positive 台积电→positive Intel→positive </p>
+        <p><em>需跟踪ASML封装设备的具体进展和时间表；关注台积电CoWoS等封装产能是否会采用ASML新工具；封装技术突破可能重塑芯片制造竞争格局，对长电科技等封装厂形成长期影响。</em></p>
+        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_973e0fd29485</category>
+      <category>evt_4d52973a20b0</category>
+    </item>
+    
+    <item>
+      <title>[8分] Marvell to Acquire Celestial AI, Accelerating Scale-up Connectivity for ...</title>
+      <link>https://investor.marvell.com/news-events/press-releases/detail/1000/marvell-to-acquire-celestial-ai-accelerating-scale-up-connectivity-for-next-generation-data-centers</link>
+      <guid isPermaLink="false">60d7b49ced051c13ed7022bf3c7efa081ae7054c</guid>
+      <pubDate>Sun, 24 May 2026 18:01:37 GMT</pubDate>
+      <description><![CDATA[
+        <p>Marvell宣布收购Celestial AI，获得其Photonics Fabric™光学I/O技术平台。该技术可实现封装级、系统级和机架级的高速光互联，专为下一代数据中心基础设施设计。光学I/O可显著提升AI加速器间带宽并降低延迟，是突破算力瓶颈的关键技术方向。此举将强化Marvell在数据中心互联领域的技术布局，对现有连接芯片厂商如博通、AMD构成竞争，同时上游台积电先进封装和下游超微电脑、戴尔等服务器厂商均有望受益。</p>
+        <p>标的: 苹果, 戴尔, 英伟达, AMD, 谷歌, Meta, 微软, Marvell, 博通, ASML, 超微电脑, 台积电, 亚马逊</p>
+        <p>主线: datacenter_power, compute_demand, chip_supply, advanced_packaging</p>
+        <p>方向: Marvell→positive 英伟达→neutral AMD→neutral 博通→neutral 台积电→positive ASML→positive 超微电脑→positive 戴尔→positive 微软→positive 谷歌→positive 亚马逊→positive Meta→positive 苹果→positive </p>
+        <p><em>需跟踪Marvell整合Celestial AI的时间表及光互联方案落地进度；可能加速行业对光学I/O的采用，利好上游硅光/光模块供应链；与博通在数据中心互联芯片的竞争将更激烈，需关注博通的应对策略。</em></p>
+        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_e3173a900b71</category>
+    </item>
+    
+    <item>
+      <title>[8分] 商汤新布局，融资10亿 - 36氪</title>
+      <link>https://www.36kr.com/p/3388396789619077</link>
+      <guid isPermaLink="false">3f27cd5f8316becd65efe45bcec3cdcaa8cfdf61</guid>
+      <pubDate>Sun, 24 May 2026 18:01:37 GMT</pubDate>
+      <description><![CDATA[
+        <p>商汤联合创始人徐冰于今年6月发起成立了一家GPU芯片公司曦望，并获得10亿元融资。近期商汤2025年股东大会上，徐冰正式辞任商汤相关职务，标志着其从商汤全面转向新公司。曦望定位为GPU芯片公司，聚焦AI算力赛道，商汤大芯片项目重新出发。此举反映了国内AI算力领域的创业活跃度提升，创始团队从大厂分拆独立运营芯片业务趋势持续。</p>
+        <p>标的: 商汤</p>
+        <p>主线: compute_demand, chip_supply, domestic_substitution</p>
+        <p>方向: 商汤→neutral </p>
+        <p><em>跟踪曦望GPU芯片公司后续融资进展及产品落地时间表，关注其与商汤的协同关系；国内AI芯片创业公司独立化趋势若持续，可能重塑算力供给格局，对寒武纪、海光信息等已上市标的形成竞争参照。</em></p>
+        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_b52e527ee9b6</category>
+    </item>
+    
+    <item>
+      <title>[7分] Memory has grown to nearly two-thirds of AI chip component costs</title>
+      <link>https://epoch.ai/data-insights/ai-chip-component-cost-shares</link>
+      <guid isPermaLink="false">7ce1eed22e7cf2c891545be965836f6e723718cc</guid>
+      <pubDate>Sun, 24 May 2026 16:31:29 GMT</pubDate>
+      <description><![CDATA[
+        <p>AI芯片成本结构发生重大变化，内存已占据组件总成本的近三分之二。这一趋势反映出HBM（高带宽内存）在AI算力芯片中的重要性持续上升，HBM的溢价能力和供应紧张度正在重塑整个AI半导体价值链。这一变化对英伟达、AMD等AI芯片设计商的毛利率构成压力，同时为美光等内存厂商提供了更强的议价能力和利润弹性空间。</p>
+        <p>标的: 英伟达, AMD, Intel, 美光, 博通, Marvell, 台积电</p>
+        <p>主线: compute_demand, chip_supply, advanced_packaging, ai_monetization</p>
+        <p>方向: 英伟达→neutral AMD→neutral 博通→neutral 台积电→neutral 美光→positive Intel→neutral Marvell→neutral </p>
+        <p><em>HBM成本占比提升意味着内存供应商议价能力增强，需持续跟踪HBM价格走势和美光/三星/海力士的产能分配策略。芯片设计商需通过制程升级和良率改善对冲内存成本压力，关注台积电CoWoS封装产能是否能缓解HBM供给瓶颈。</em></p>
+        <p>来源: hackernews 🔴 低可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_5e642cebbc8e</category>
+    </item>
+    
+    <item>
+      <title>[5分] Google Introduces Middleware Architecture for Genkit Applications</title>
+      <link>https://www.infoq.com/news/2026/05/google-genkit-middleware</link>
+      <guid isPermaLink="false">ef2e332dda2c213b114453cbebfb45f76fceda49</guid>
+      <pubDate>Sun, 24 May 2026 17:55:00 GMT</pubDate>
+      <description><![CDATA[
+        <p>Google为开源框架Genkit推出Middleware架构，新增可编程拦截层，涵盖模型调用、工具执行和生成循环三个环节。该中间件使开发者能更精细地控制生产级AI系统的可靠性保障、安全过滤和任务编排。此举旨在降低AI应用开发门槛，加速商业化落地，对Google的AI开发生态布局具有战略意义。</p>
+        <p>标的: 谷歌</p>
+        <p>主线: model_capability, ai_monetization</p>
+        <p>方向: 谷歌→positive </p>
+        <p><em>跟踪Genkit中间件的开发者采用率和企业落地案例；中间件层的标准化可能成为AI应用开发的新范式，短期对Google云服务拉新有限，中期有望提升Google在AI开发工具链的竞争壁垒。</em></p>
+        <p>来源: rss:infoq 🟡 中可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_3a4618c72633</category>
     </item>
     
   </channel>
