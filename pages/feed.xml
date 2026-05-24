@@ -5,135 +5,103 @@
     <link>https://hongfei7.github.io/ai-research-radar</link>
     <description>AI/科技/半导体板块的持续投研情报 feed — 由 MiniMax 策展</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 24 May 2026 14:30:22 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 24 May 2026 15:15:37 GMT</lastBuildDate>
     <atom:link href="https://hongfei7.github.io/ai-research-radar/feed.xml" rel="self" type="application/rss+xml"/>
     
     <item>
-      <title>[8分] 细节曝光!涉嫌走私172亿AI服务器!超微电脑联合创始人被捕!A股算力巨头一度跌停，火速澄清：与我们无关!</title>
-      <link>https://finance.sina.com.cn/wm/2026-03-22/doc-inhrwist4844280.shtml</link>
-      <guid isPermaLink="false">0be117f5a4285ef753820261e5f7cdccc687ffbc</guid>
-      <pubDate>Sun, 24 May 2026 14:21:37 GMT</pubDate>
+      <title>[7分] AMD and its Partners Share their Vision for "AI Everywhere, for ...</title>
+      <link>https://www.amd.com/en/newsroom/press-releases/2026-1-5-amd-and-its-partners-share-their-vision-for-ai-ev.html</link>
+      <guid isPermaLink="false">0e261d698827709bb660ebd9e9a8fa9d48a35c62</guid>
+      <pubDate>Sun, 24 May 2026 15:09:34 GMT</pubDate>
       <description><![CDATA[
-        <p>超微电脑（SMCI）联合创始人因涉嫌走私价值172亿元人民币的AI服务器被捕。据悉，超微电脑是全球AI服务器龙头及英伟达重要合作伙伴，2025年11月披露Blackwell Ultra产品线订单超130亿美元。事件引发A股算力板块震荡，多家相关公司澄清与其无业务关联。市场担忧供应链安全及出口管制合规问题。</p>
-        <p>标的: 英伟达, 浪潮信息, 超微电脑, 工业富联, 中科曙光</p>
-        <p>主线: policy_export, chip_supply, compute_demand</p>
-        <p>方向: 超微电脑→negative 英伟达→neutral 工业富联→neutral 中科曙光→neutral 浪潮信息→neutral </p>
-        <p><em>短期关注SMCI法律进展及供应链替代方案；英伟达合作风险可控但需跟踪；事件或加速国产AI服务器替代进程，利好工业富联、中科曙光、浪潮信息等国内服务器厂商；持续关注出口管制政策收紧对AI算力产业链的影响。</em></p>
+        <p>AMD与合作伙伴共同展示“AI无处不在“愿景。AMD性能实验室披露Instinct MI500系列GPU的峰值理论精度性能预测，对比现款MI300X平台。Ryzen处理器TOPS数据同步公布。AMD持续推进数据中心AI加速器产品迭代，MI500系列有望进一步提升其在AI训练/推理市场的竞争力。该资讯为产品路线图披露，非重大技术突破或订单公告。</p>
+        <p>标的: 英伟达, 台积电, AMD</p>
+        <p>主线: chip_supply, edge_ai, compute_demand</p>
+        <p>方向: AMD→neutral 英伟达→neutral 台积电→neutral </p>
+        <p><em>AMD产品线更新需跟踪：1）MI500实际性能提升幅度与定价；2）客户验证进展与订单可见性；3）与英伟达H100/H200的性价比对比。由于原文为工程预测而非正式发布，建议关注AMD后续产品发布会获取更多细节。</em></p>
         <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
-      ]]></description>
-      <category>evt_138368009f52</category>
-    </item>
-    
-    <item>
-      <title>[8分] 国产ai芯片崛起：三大门派、瓜分英伟达-36氪</title>
-      <link>https://m.36kr.com/p/3767894822925058</link>
-      <guid isPermaLink="false">87c00866fe3981467a72c246e37d87c4af26a6e8</guid>
-      <pubDate>Sun, 24 May 2026 14:21:37 GMT</pubDate>
-      <description><![CDATA[
-        <p>2025年中国AI加速卡市场本土厂商份额首破四成。根据IDC数据，中国AI加速卡总出货约400万张，本土厂商合计出货约165万张（占41%），正式告别英伟达一家独大格局，进入华为领跑、多强并起阶段。国产芯片（寒武纪、海光信息等）快速放量，对英伟达中国区业务形成直接冲击。</p>
-        <p>标的: 英伟达, 寒武纪, 中芯国际, AMD, 海光信息</p>
-        <p>主线: domestic_substitution, chip_supply, compute_demand</p>
-        <p>方向: 英伟达→negative AMD→negative 寒武纪→positive 海光信息→positive 中芯国际→positive </p>
-        <p><em>跟踪华为昇腾芯片产能爬坡节奏及寒武纪、海光新产品迭代；国产份额突破四成后，需关注英伟达在中国区营收占比变化及是否有进一步客户流失，评估对全球AI芯片竞争格局的重塑程度。</em></p>
-        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
-      ]]></description>
-      <category>evt_8ac60e0dabd0</category>
-    </item>
-    
-    <item>
-      <title>[8分] After $2.5 billion Supermicro smuggling bust, Nvidia CEO urges company to fix export control compliance — Taiwan also begins to crack down on AI GPU chip smuggling to China</title>
-      <link>https://www.tomshardware.com/tech-industry/jensen-huang-urges-super-micro-to-tighten-compliance</link>
-      <guid isPermaLink="false">ac3be3b2bf84095a93c4b083d247337a8aa57fe3</guid>
-      <pubDate>Sun, 24 May 2026 14:20:29 GMT</pubDate>
-      <description><![CDATA[
-        <p>超微电脑(SMCI)因涉嫌向中国走私价值25亿美元的AI GPU芯片遭打击后，Nvidia CEO黄仁勋在台北松山机场回应称，Nvidia坚持要求合作伙伴遵守美国出口管制法规。台湾当局同步开始严厉打击AI GPU芯片走私至中国大陆的活动。此事件反映出美国对华芯片出口管制的执法力度显著加强，走私渠道正面临系统性封堵。</p>
-        <p>标的: 台积电, 超微电脑, 英伟达, AMD</p>
-        <p>主线: policy_export, domestic_substitution, chip_supply</p>
-        <p>方向: 超微电脑→negative 英伟达→neutral 台积电→neutral AMD→negative </p>
-        <p><em>需跟踪美国BIS执法行动的持续性与范围，以及台湾海关对芯片过境的检查升级。超微电脑面临的合规整改压力可能影响其GPU服务器产能；走私渠道收窄或加速中国市场对国产AI芯片的采购需求，建议关注寒武纪、海光信息等国产替代标的。</em></p>
-        <p>来源: rss:tomshardware 🟡 中可信 [转载自 未知来源]</p>
-      ]]></description>
-      <category>evt_e4a3f341c37a</category>
-    </item>
-    
-    <item>
-      <title>[7分] 中国芯，芯征程! 景嘉微 及其子公司在gpu和ai芯片领域的布局展现出显著的技术突破和战略规划，结合最新公开信息，可从以下维度解析其进展与 ...</title>
-      <link>https://xueqiu.com/8873559650/348615990</link>
-      <guid isPermaLink="false">dd4a425b66951df12810937b92945a1eb63448e1</guid>
-      <pubDate>Sun, 24 May 2026 14:21:37 GMT</pubDate>
-      <description><![CDATA[
-        <p>景嘉微及其子公司在GPU和AI芯片领域取得技术突破，其锦之源GPGPU产品具备2000T算力（INT8精度），预计年底流片。该产品定位高性能计算，算力指标已接近壁仞科技BR100系列水平。景嘉微作为国内GPU厂商，其技术进展反映了国产AI芯片在高性能计算领域的能力提升，对国产替代主线具有重要意义。</p>
-        <p>标的: 景嘉微</p>
-        <p>主线: domestic_substitution, chip_supply, compute_demand</p>
-        <p>方向: 景嘉微→positive </p>
-        <p><em>需跟踪年底流片进展及实际性能验证结果；关注国产高性能GPU与头部厂商的生态兼容情况；其供应链（晶圆代工、封装测试）合作方或带来二阶机会；与寒武纪、海光信息等同属国产算力链，具备联动研究价值。</em></p>
-        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
-      ]]></description>
-      <category>evt_2ca4783ca2c9</category>
-    </item>
-    
-    <item>
-      <title>[6分] 金山办公：Ai应用全面落地，重塑办公生态，开启千亿级增长新纪元 金山办公 ：Ai应用全面落地，重塑办公生态，开启千亿级增长新纪元一、核心突破 ...</title>
-      <link>https://xueqiu.com/5227278600/379298085</link>
-      <guid isPermaLink="false">99b4f50c58a0567f858d445974771f20c3d03f12</guid>
-      <pubDate>Sun, 24 May 2026 14:21:37 GMT</pubDate>
-      <description><![CDATA[
-        <p>金山办公发布WPS AI 4.0及「WPS灵犀」智能体，标志着其AI应用从「功能叠加」升级至「系统重构」阶段。新版本采用「大模型+小模型」混搭架构，实现从工具向生产力平台的质变。此举契合国内办公软件AI化趋势，头部厂商的AI落地将加速行业竞争格局重塑，并为国产AI应用商业化提供范本。金山办公作为国内办公软件龙头，其AI变现路径的探索对整个AI应用赛道具有参照意义。</p>
-        <p>标的: 金山办公</p>
-        <p>主线: ai_monetization, edge_ai, model_capability</p>
-        <p>方向: 金山办公→positive </p>
-        <p><em>跟踪金山办公AI订阅转化率及付费用户增长；关注其AI功能对企业客户留存率的影响；WPS AI的变现模式若验证成功，将为其他AI应用厂商（如科大讯飞、商汤）提供商业化参考，同时可能倒逼微软Office加快中国区AI功能落地节奏。</em></p>
-        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
-      ]]></description>
-      <category>evt_acbf43e16d1a</category>
-    </item>
-    
-    <item>
-      <title>[7分] DeepSeek reasonix, DeepSeek native coding agent with high caching and low cost</title>
-      <link>https://esengine.github.io/DeepSeek-Reasonix</link>
-      <guid isPermaLink="false">34878e85a91a80bd058e727860e900d5800ee019</guid>
-      <pubDate>Sun, 24 May 2026 13:02:06 GMT</pubDate>
-      <description><![CDATA[
-        <p>DeepSeek发布reasonix推理模型及原生编码代理产品，主打高缓存命中率和低成本优势。编码代理（coding agent）可自动执行代码编写、测试、部署等开发全流程，降低AI应用开发门槛。该产品的低训练/推理成本特性或对算力需求曲线产生影响，对依赖算力消耗的商业模式形成压力；同时低成本AI工具普及可能加速AI应用落地节奏，推动AI变现进程。</p>
-        <p>标的: 百度, DeepSeek, 阿里巴巴, 英伟达, 谷歌, 微软, AMD, 博通, 腾讯, 台积电, OpenAI, 亚马逊</p>
-        <p>主线: chip_supply, compute_demand, model_capability, ai_monetization, advanced_packaging</p>
-        <p>方向: 英伟达→neutral AMD→neutral 博通→neutral 台积电→neutral 微软→positive 谷歌→neutral 亚马逊→positive 阿里巴巴→positive 腾讯→positive 百度→neutral OpenAI→neutral </p>
-        <p><em>跟踪DeepSeek新模型的商用落地节奏（API调用量、企业采用率）；低cost模型若规模放量，可能压缩算力侧议价空间，但利好云厂商AI服务收入增长；同时需关注国产大模型跟进节奏。</em></p>
-        <p>来源: hackernews 🔴 低可信 [转载自 未知来源]</p>
-      ]]></description>
-      <category>evt_202e44bf9ed9</category>
-    </item>
-    
-    <item>
-      <title>[4分] We tested Advanced Shader Delivery on the RX 9070 XT in six games — up to 95% improvement in load times and 33 percent faster 1% Low FPS</title>
-      <link>https://www.tomshardware.com/pc-components/gpus/we-tested-advanced-shader-delivery-on-the-rx-9070-xt</link>
-      <guid isPermaLink="false">b77eda9c861dbb44a391f5b7f2814409097dcc51</guid>
-      <pubDate>Sun, 24 May 2026 12:58:10 GMT</pubDate>
-      <description><![CDATA[
-        <p>Tom's Hardware对AMD的Advanced Shader Delivery（ASD）技术在RX 9070 XT显卡上进行了六款游戏实测。结果显示，ASD可将游戏加载时间最高提升95%，1% Low FPS提升33%。该技术针对着色器资源进行优化分配，减少加载延迟并提升帧率稳定性。作为RDNA4架构的重要特性，ASD有望增强AMD在游戏显卡市场的竞争力。</p>
-        <p>标的: 台积电, 英伟达, AMD</p>
-        <p>主线: edge_ai, chip_supply</p>
-        <p>方向: AMD→positive 英伟达→neutral 台积电→neutral </p>
-        <p><em>ASD若量产落地将提升AMD GPU产品力，需跟踪该技术量产时间及适配游戏数量。竞品NVIDIA的对应方案值得对比关注。</em></p>
-        <p>来源: rss:tomshardware 🟡 中可信 [转载自 https://www.tomshardware.com/pc-components/gpus/amd-advanced-shader-delivery-rx-9070-xt]</p>
       ]]></description>
       <category>evt_02f5122e3138</category>
     </item>
     
     <item>
-      <title>[6分] AWS MCP Server Reaches GA with Full API Coverage and IAM-Based Governance</title>
-      <link>https://www.infoq.com/news/2026/05/aws-mcp-ga</link>
-      <guid isPermaLink="false">df32a59016e3ece0db35e114703356ab277ee7ee</guid>
-      <pubDate>Sun, 24 May 2026 08:53:00 GMT</pubDate>
+      <title>[7分] 中芯国际ai芯片步履维艰 - 知乎专栏</title>
+      <link>https://zhuanlan.zhihu.com/p/1949828005821124889</link>
+      <guid isPermaLink="false">0d0c392b427ab3d430f65490d00588482219ce57</guid>
+      <pubDate>Sun, 24 May 2026 15:09:34 GMT</pubDate>
       <description><![CDATA[
-        <p>AWS正式推出托管式MCP Server，进入正式商用阶段。该产品为AI编码代理提供标准化接口，实现对AWS APIs、文档和操作流程的受控访问，支持IAM-based权限治理，使AI Agent无需获取广泛凭证即可安全调用AWS服务。相比传统API集成方式，MCP方案更安全、可审计，为企业级AI应用提供合规保障。AWS借此强化其AI Agent生态的控制力，可能吸引更多开发者基于AWS构建AI应用。</p>
-        <p>标的: 微软, 英伟达, 亚马逊, 谷歌</p>
-        <p>主线: ai_monetization, model_capability, compute_demand</p>
-        <p>方向: 亚马逊→positive 微软→neutral 谷歌→neutral 英伟达→positive </p>
-        <p><em>关注MCP Server的企业采纳率（尤其是金融、医疗等强合规行业），以及竞争对手（Azure AI、Google Vertex AI）是否会推出类似标准化方案。AWS借此绑定AI Agent开发者，可能提升云服务粘性和IaaS消耗，对英伟达H100/H200算力需求形成间接支撑。</em></p>
-        <p>来源: rss:infoq 🟡 中可信 [转载自 未知来源]</p>
+        <p>中芯国际在DUV极限优化7nm工艺（N+2 DUV）取得进展，工艺参数如光刻对准、掩膜缺陷修正、蚀刻均匀性预计在2025-2027年持续代工华为AI芯片过程中逐步优化。该工艺已在麒麟9000S等芯片上验证技术可行性，为国产AI芯片制造提供替代路径，但DUV设备获取受限、良率爬坡及规模量产仍是主要挑战。</p>
+        <p>标的: 台积电, ASML, 中芯国际</p>
+        <p>主线: domestic_substitution, policy_export, chip_supply</p>
+        <p>方向: 中芯国际→neutral 台积电→neutral ASML→neutral </p>
+        <p><em>跟踪变量：中芯国际N+2工艺良率爬坡进度、华为AI芯片订单规模、美国出口管制政策变化。二阶效应：若DUV7nm量产成熟，可能削弱台积电成熟制程竞争力；ASML浸没式DUV供应不确定性持续存在。建议关注国产设备材料链（未在覆盖标的）配套进展。</em></p>
+        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_709c444af080</category>
+      <category>evt_1d669a71ce8b</category>
+    </item>
+    
+    <item>
+      <title>[8分] DeepSeek to Make Permanent 75% Discount on Flagship AI Model</title>
+      <link>https://www.bloomberg.com/news/articles/2026-05-23/deepseek-to-make-permanent-75-discount-on-flagship-ai-model</link>
+      <guid isPermaLink="false">7a17cc2c29e8c7440facfbe9fdfd42661f5ef882</guid>
+      <pubDate>Sun, 24 May 2026 14:09:33 GMT</pubDate>
+      <description><![CDATA[
+        <p>DeepSeek宣布将其旗舰AI模型DeepSeek-V3的API价格永久降低75%，从每百万token 0.1元降至约0.027元。此次降价旨在通过低价策略扩大市场份额，对标OpenAI、Anthropic等竞争对手。低成本AI模型将降低应用开发门槛，加速AI商业化进程，但可能引发行业价格战，压缩中小AI厂商的生存空间。</p>
+        <p>标的: 英伟达, 阿里巴巴, OpenAI, 亚马逊, 博通, 谷歌, AMD, DeepSeek, 寒武纪, 微软, 台积电, Anthropic, 百度</p>
+        <p>主线: ai_monetization, domestic_substitution, model_capability, compute_demand, chip_supply</p>
+        <p>方向: 微软→neutral 谷歌→neutral 亚马逊→neutral 阿里巴巴→neutral 百度→negative 英伟达→positive AMD→positive 台积电→positive 博通→positive 寒武纪→positive </p>
+        <p><em>持续跟踪：1）其他AI厂商是否跟进降价及幅度；2）API调用量变化反映的需求弹性；3）云厂商定价策略调整。二阶效应：价格战加速行业洗牌，利好有成本优势的云厂商和算力提供商；国产模型性价比优势凸显，利好寒武纪等适配国产芯片。</em></p>
+        <p>来源: hackernews 🔴 低可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_e4f9cfbe8a9a</category>
+    </item>
+    
+    <item>
+      <title>[6分] How the AI boom is transforming global M&A, now dominated by the AI-driven race to control the world's energy, fiber networks, and computing capacity (Financial Times)</title>
+      <link>https://www.techmeme.com/260524/p7#a260524p7</link>
+      <guid isPermaLink="false">20416feab2aaaff4eaae46ccb03754f744d0bd8d</guid>
+      <pubDate>Sun, 24 May 2026 14:40:03 GMT</pubDate>
+      <description><![CDATA[
+        <p>AI热潮正在重塑全球并购格局，能源、光纤网络和计算能力成为AI驱动竞赛的核心资产争夺目标。并购交易额已创历史新高，曾经不受市场青睐的公司因AI价值而重获关注，私募股权基金也发现了新的投资金矿。文章聚焦NextEra Energy等能源公司在这场AI基础设施竞赛中的角色。英伟达、AMD、博通等AI芯片厂商因算力需求爆发持续受益，台积电、ASML的先进制程订单预期继续饱满，数据中心建设扩张同时带动能源基础设施投资。</p>
+        <p>标的: 戴尔, 英伟达, 亚马逊, 博通, ASML, 微软, AMD, 美光, 台积电, 谷歌, Meta, 超微电脑</p>
+        <p>主线: chip_supply, advanced_packaging, datacenter_power, compute_demand</p>
+        <p>方向: 英伟达→positive AMD→positive 博通→positive 台积电→positive ASML→positive 美光→positive 微软→positive 谷歌→positive 亚马逊→positive Meta→positive 戴尔→positive 超微电脑→positive </p>
+        <p><em>跟踪变量：超大规模云厂商capex指引、能源基础设施获批进度、并购交易公告；可能的二阶效应：能源公司估值重估、光纤网络投资加速、AI基础设施REITs化趋势；联动：与国产替代主线形成资金分流对比，数据中心电力短缺可能制约算力扩张节奏。</em></p>
+        <p>来源: rss:techmeme 🔴 低可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_e3173a900b71</category>
+    </item>
+    
+    <item>
+      <title>[5分] I tried Amazon’s Bee wearable and am both intrigued and slightly creeped out</title>
+      <link>https://techcrunch.com/2026/05/24/i-tried-amazons-bee-wearable-and-am-both-intrigued-and-slightly-creeped-out</link>
+      <guid isPermaLink="false">df43f1a209d6082d0febe1f321d57ca70c03c23f</guid>
+      <pubDate>Sun, 24 May 2026 15:00:00 GMT</pubDate>
+      <description><![CDATA[
+        <p>亚马逊推出名为"Bee"的AI可穿戴设备，用户体验反馈呈现便利性与隐私焦虑的矛盾。该设备与其他AI可穿戴产品类似，在提供便捷AI交互的同时引发对数据安全的担忧。TechCrunch编辑实测后形容"既好奇又略感不安"，凸显当前AI终端设备普遍面临的用户接受度挑战。亚马逊正通过自研硬件探索AI变现新路径，但隐私问题或成规模化推广的关键障碍。</p>
+        <p>标的: 亚马逊</p>
+        <p>主线: edge_ai, ai_monetization</p>
+        <p>方向: 亚马逊→neutral </p>
+        <p><em>需跟踪Bee的用户留存率与复购数据，隐私负面反馈若扩大可能影响亚马逊AI硬件战略推进；同时关注苹果、Meta等竞品的类似产品动态，评估可穿戴AI市场的用户接受度趋势。</em></p>
+        <p>来源: rss:techcrunch-ai 🟡 中可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_80fb6891797c</category>
+    </item>
+    
+    <item>
+      <title>[4分] 超微电脑推出革命性AI芯片，助力未来智能设备发展</title>
+      <link>https://www.sohu.com/a/804472750_121924584</link>
+      <guid isPermaLink="false">2db47878d6314e0c3f54609a3da7e0c1c43827bd</guid>
+      <pubDate>Sun, 24 May 2026 15:09:34 GMT</pubDate>
+      <description><![CDATA[
+        <p>AMD推出MI300系列AI专用芯片，核心优势在于高效处理深度学习任务。该产品被视为AMD在AI计算领域的重要突破，定位与英伟达H100/H200系列竞争。MI300采用先进封装并集成HBM高带宽内存，预计面向数据中心推理及训练场景。此举将重塑AI芯片竞争格局，对英伟达市场份额构成压力，同时台积电作为代工方将直接受益。</p>
+        <p>标的: 英伟达, 亚马逊, AMD, 微软, 台积电, 谷歌</p>
+        <p>主线: chip_supply, advanced_packaging, compute_demand</p>
+        <p>方向: AMD→positive 英伟达→negative 台积电→positive 微软→neutral 谷歌→neutral 亚马逊→neutral </p>
+        <p><em>跟踪MI300量产进度及大客户导入情况；若性能追齐英伟达且价格有优势，数据中心AI芯片竞争格局或向双寡头演变；台积电CoWoS产能分配权重需重新评估；关注英伟达下一代Blackwell定价策略调整。</em></p>
+        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_6a0b0c57bdc8</category>
     </item>
     
   </channel>
