@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-23T22:36:57Z",
+  "updated_at": "2026-05-24T00:06:32Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -650,26 +650,31 @@
     },
     "evt_7b94c35f9400": {
       "event_id": "evt_7b94c35f9400",
-      "title": "Dell says it has 5,000 clients for its AI Factory, a product line of servers with Nvidia chips, software, and services, including 1,000 new clients last quarter (Dina Bass/Bloomberg)",
-      "summary": "戴尔科技表示，其搭载英伟达芯片的AI Factory产品线客户总数已达5000家，上季度新增1000家新客户。AI Factory是包含服务器、软件及服务的综合解决方案，此次客户扩张反映企业级AI基础设施需求持续攀升。戴尔作为系统集成商的角色强化，同时利好上游英伟达GPU需求。",
+      "title": "AI算力竞争升级：微软芯片谋商业化",
+      "summary": "AI基础设施需求持续攀升，Dell AI Factory客户达5000家，上季新增千家。同时，Anthropic正与微软洽谈租用后者自研AI芯片服务器，若达成将标志着微软芯片首次获头部模型厂商商业化应用。微软此举意在挑战英伟达在AI算力领域的垄断地位，但谈判仍处早期阶段，存在不确定性。英伟达短期龙头地位难撼，但多元化竞争格局加速演进。",
       "tickers": [
         "戴尔",
-        "英伟达"
+        "英伟达",
+        "微软",
+        "Anthropic"
       ],
       "themes": [
+        "ai_infrastructure",
         "compute_demand",
         "chip_supply"
       ],
       "direction": {
         "戴尔": "positive",
-        "英伟达": "positive"
+        "英伟达": "positive",
+        "微软": "positive"
       },
       "item_ids": [
-        "13409e4cde5f9354d212f16a39fdc361b973e5ae"
+        "13409e4cde5f9354d212f16a39fdc361b973e5ae",
+        "b97a28978509603a6b85097997034a384493315a"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "first_seen_at": "2026-05-23T17:40:08Z",
-      "last_updated_at": "2026-05-23T17:40:08Z",
+      "last_updated_at": "2026-05-24T00:05:50Z",
       "is_active": true,
       "significance": 7,
       "status": "developing"
@@ -704,31 +709,31 @@
     },
     "evt_060e3318e979": {
       "event_id": "evt_060e3318e979",
-      "title": "亚马逊Trainium3发布 云厂商自研AI芯片加速替代",
-      "summary": "亚马逊技术大会发布Trainium 3 AI芯片，采用3nm工艺，推理能效提升4倍，成本降低50%，单芯片算力达2.52 PFLOPs。Trainium 4支持NVLink Fusion实现与NVIDIA GPU混合互联。云厂商自研芯片正从训练向推理全栈覆盖，对定制ASIC市场格局产生深远影响。AI算力需求激增推动半导体产业链全面升级，存储端HBM需求爆发，封装端2.5D/3D封装成关键方向，英伟达、AMD、台积电、ASML等持续受益。",
+      "title": "AI芯片竞争升级：云厂商自研与IDM路线并行",
+      "summary": "亚马逊Trainium3采用3nm工艺推理能效提升4倍，云厂商自研芯片从训练向推理全栈覆盖。Intel同步披露14A制程路线图并启动Gaudi3出货，数据中心AI芯片竞争加剧。英伟达、AMD面临定制ASIC替代压力，HBM需求爆发，2.5D/3D封装成关键方向，台积电、ASML等半导体产业链持续受益。",
       "tickers": [
-        "美光",
-        "台积电",
         "ARM",
-        "英伟达",
+        "亚马逊",
+        "博通",
         "超微电脑",
+        "ASML",
+        "Marvell",
         "谷歌",
         "微软",
-        "Marvell",
-        "Meta",
-        "高通",
-        "博通",
+        "台积电",
         "Intel",
+        "Meta",
         "AMD",
-        "ASML",
-        "亚马逊"
+        "高通",
+        "美光",
+        "英伟达"
       ],
       "themes": [
-        "chip_supply",
         "compute_demand",
         "ai_monetization",
         "model_capability",
-        "advanced_packaging"
+        "advanced_packaging",
+        "chip_supply"
       ],
       "direction": {
         "美光": "positive",
@@ -751,11 +756,12 @@
         "c5ebf28f4d2153bb3f8c63359eccaaa0f768196d",
         "226a8fc2f823ac9dbcde15786fd1106ac5a86c11",
         "6a035c2baabe003553b74f3f2089141c229dc21f",
-        "b3e829a8dca201cad1c66147c3972b42653e77b3"
+        "b3e829a8dca201cad1c66147c3972b42653e77b3",
+        "eb593bdb4dc0c4670d45e0647f3f7235a6fd34ef"
       ],
-      "source_count": 4,
+      "source_count": 5,
       "first_seen_at": "2026-05-23T17:40:08Z",
-      "last_updated_at": "2026-05-23T19:25:47Z",
+      "last_updated_at": "2026-05-24T00:05:50Z",
       "is_active": true,
       "significance": 9,
       "status": "developing"
@@ -935,16 +941,17 @@
     },
     "evt_45392c36bbaf": {
       "event_id": "evt_45392c36bbaf",
-      "title": "布局边端侧ai芯片，景嘉微2.2亿增资诚恒微_腾讯新闻",
-      "summary": "景嘉微（300474）宣布对诚恒微增资2.2亿元，布局边端侧AI芯片领域。景嘉微为国内GPU芯片设计厂商，已自主研发JM5400、JM7200、JM9系列及JM11系列等具有自主知识产权的GPU产品。此次增资标志着国产GPU厂商从传统图形处理向AI终端领域的延伸，诚恒微专注于边端侧AI芯片技术，两者在业务上形成协同。若成功整合资源，有望加速国产AI芯片在边缘推理、终端设备等场景的商业化落地，对完善国产AI算力生态具有积极意义。",
+      "title": "景嘉微CH37系列边端侧AI芯片获突破",
+      "summary": "景嘉微边端侧AI芯片研发获突破，CH37系列芯片完成初版性能测试，推进功耗优化与全面验证。叠加此前2.2亿元增资诚恒微布局边端侧AI芯片，公司\"GPU+AI SoC\"双轮驱动战略加速。芯片尚未量产，存在测试不及预期风险。若验证通过并量产，将利好封装代工需求，标志着国产边缘AI芯片技术能力进一步成熟，完善国产AI算力生态。",
       "tickers": [
+        "长电科技",
         "景嘉微",
-        "中芯国际",
-        "长电科技"
+        "中芯国际"
       ],
       "themes": [
-        "edge_ai",
         "domestic_substitution",
+        "edge_ai",
+        "advanced_packaging",
         "chip_supply"
       ],
       "direction": {
@@ -953,13 +960,14 @@
         "长电科技": "neutral"
       },
       "item_ids": [
-        "54a69c92e645765aeab5054d6adac2c5339f67f4"
+        "54a69c92e645765aeab5054d6adac2c5339f67f4",
+        "232dc1e98585ef12412d4a35d765b87d58c433d6"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "first_seen_at": "2026-05-23T17:40:08Z",
-      "last_updated_at": "2026-05-23T17:40:08Z",
+      "last_updated_at": "2026-05-24T00:05:50Z",
       "is_active": true,
-      "significance": 6,
+      "significance": 7,
       "status": "developing"
     },
     "evt_91481d5c60c2": {
@@ -1372,9 +1380,9 @@
       "source_count": 1,
       "first_seen_at": "2026-05-23T20:32:45Z",
       "last_updated_at": "2026-05-23T20:32:45Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 6,
-      "status": "developing"
+      "status": "resolved"
     },
     "evt_52a6cd4cea43": {
       "event_id": "evt_52a6cd4cea43",
@@ -1494,6 +1502,41 @@
       "is_active": false,
       "significance": 5,
       "status": "resolved"
+    },
+    "evt_cca274525452": {
+      "event_id": "evt_cca274525452",
+      "title": "细节曝光!涉嫌走私172亿AI服务器!超微电脑联合创始人被捕!A股算力巨头一度跌停，火速澄清：与我们无关!_腾讯新闻",
+      "summary": "超微电脑联合创始人因涉嫌走私价值172亿元AI服务器被捕。超微电脑是全球AI服务器龙头及英伟达核心合作伙伴，2025年11月披露Blackwell Ultra订单超130亿美元。该事件引发A股算力板块震动，工业富联、浪潮信息等算力概念股一度跌停，随后火速澄清与己无关。市场担忧走私事件涉及出口管制漏洞，可能加剧AI服务器供应链紧张及对华技术封锁政策收紧。",
+      "tickers": [
+        "浪潮信息",
+        "超微电脑",
+        "工业富联",
+        "台积电",
+        "中科曙光",
+        "英伟达"
+      ],
+      "themes": [
+        "policy_export",
+        "compute_demand",
+        "chip_supply"
+      ],
+      "direction": {
+        "超微电脑": "negative",
+        "英伟达": "negative",
+        "台积电": "negative",
+        "工业富联": "neutral",
+        "浪潮信息": "neutral",
+        "中科曙光": "neutral"
+      },
+      "item_ids": [
+        "d43fe51c47d67de2e1f096855eb160eb579cdd90"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-05-24T00:05:50Z",
+      "last_updated_at": "2026-05-24T00:05:50Z",
+      "is_active": true,
+      "significance": 9,
+      "status": "developing"
     }
   }
 }

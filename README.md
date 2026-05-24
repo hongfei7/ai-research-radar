@@ -1,17 +1,15 @@
-<div align="center">
-
-<img src="https://img.shields.io/badge/AI_Research_Radar-000000?style=for-the-badge&logo=robot&logoColor=white" alt="AI Research Radar"/>
-
 # AI 投研雷达
 
-### 基于 LLM 的近实时 AI/半导体投研情报系统
+> AI/科技/半导体板块 · 滚动情报库 · 由 MiniMax 驱动策展
+> 仅作为研究输入素材，不构成投资建议
 
-[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
-[![MiniMax](https://img.shields.io/badge/LLM-MiniMax_M2.7-6C5CE7?style=flat-square&logo=openai&logoColor=white)](https://www.minimaxi.com/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-Active-success?style=flat-square)](#)
+## 最新日报
 
-</div>
+- [2026-05-24 晨报](https://github.com/hongfei7/ai-research-radar/issues/1)
+- [实时看板](https://hongfei7.github.io/ai-research-radar)
+- [RSS 订阅](https://hongfei7.github.io/ai-research-radar/feed.xml)
+
+---
 
 ---
 
