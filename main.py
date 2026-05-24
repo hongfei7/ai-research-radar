@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""AI 投研雷达 — 管道入口
+"""AI 投研雷达 — 管道入口 - hongfei
 
 六阶段管道: 采集 → 去重 → MiniMax筛选 → MiniMax提取 → 事件聚类 → 态势更新 → 存储 → 分发
 
