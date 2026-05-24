@@ -5,103 +5,23 @@
     <link>https://hongfei7.github.io/ai-research-radar</link>
     <description>AI/科技/半导体板块的持续投研情报 feed — 由 MiniMax 策展</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 24 May 2026 15:15:37 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 24 May 2026 16:37:14 GMT</lastBuildDate>
     <atom:link href="https://hongfei7.github.io/ai-research-radar/feed.xml" rel="self" type="application/rss+xml"/>
     
     <item>
-      <title>[7分] AMD and its Partners Share their Vision for "AI Everywhere, for ...</title>
-      <link>https://www.amd.com/en/newsroom/press-releases/2026-1-5-amd-and-its-partners-share-their-vision-for-ai-ev.html</link>
-      <guid isPermaLink="false">0e261d698827709bb660ebd9e9a8fa9d48a35c62</guid>
-      <pubDate>Sun, 24 May 2026 15:09:34 GMT</pubDate>
+      <title>[4分] A deep dive into Apple Watch and Health efforts; sources: iOS 27 to get a revamped AirPods control panel and default support for AirPlay rivals like Google Cast (Mark Gurman/Bloomberg)</title>
+      <link>https://www.techmeme.com/260524/p8#a260524p8</link>
+      <guid isPermaLink="false">7ede7bdc299f0bc93198df765ed38c65dd153fbc</guid>
+      <pubDate>Sun, 24 May 2026 15:15:01 GMT</pubDate>
       <description><![CDATA[
-        <p>AMD与合作伙伴共同展示“AI无处不在“愿景。AMD性能实验室披露Instinct MI500系列GPU的峰值理论精度性能预测，对比现款MI300X平台。Ryzen处理器TOPS数据同步公布。AMD持续推进数据中心AI加速器产品迭代，MI500系列有望进一步提升其在AI训练/推理市场的竞争力。该资讯为产品路线图披露，非重大技术突破或订单公告。</p>
-        <p>标的: 英伟达, 台积电, AMD</p>
-        <p>主线: chip_supply, edge_ai, compute_demand</p>
-        <p>方向: AMD→neutral 英伟达→neutral 台积电→neutral </p>
-        <p><em>AMD产品线更新需跟踪：1）MI500实际性能提升幅度与定价；2）客户验证进展与订单可见性；3）与英伟达H100/H200的性价比对比。由于原文为工程预测而非正式发布，建议关注AMD后续产品发布会获取更多细节。</em></p>
-        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
-      ]]></description>
-      <category>evt_02f5122e3138</category>
-    </item>
-    
-    <item>
-      <title>[7分] 中芯国际ai芯片步履维艰 - 知乎专栏</title>
-      <link>https://zhuanlan.zhihu.com/p/1949828005821124889</link>
-      <guid isPermaLink="false">0d0c392b427ab3d430f65490d00588482219ce57</guid>
-      <pubDate>Sun, 24 May 2026 15:09:34 GMT</pubDate>
-      <description><![CDATA[
-        <p>中芯国际在DUV极限优化7nm工艺（N+2 DUV）取得进展，工艺参数如光刻对准、掩膜缺陷修正、蚀刻均匀性预计在2025-2027年持续代工华为AI芯片过程中逐步优化。该工艺已在麒麟9000S等芯片上验证技术可行性，为国产AI芯片制造提供替代路径，但DUV设备获取受限、良率爬坡及规模量产仍是主要挑战。</p>
-        <p>标的: 台积电, ASML, 中芯国际</p>
-        <p>主线: domestic_substitution, policy_export, chip_supply</p>
-        <p>方向: 中芯国际→neutral 台积电→neutral ASML→neutral </p>
-        <p><em>跟踪变量：中芯国际N+2工艺良率爬坡进度、华为AI芯片订单规模、美国出口管制政策变化。二阶效应：若DUV7nm量产成熟，可能削弱台积电成熟制程竞争力；ASML浸没式DUV供应不确定性持续存在。建议关注国产设备材料链（未在覆盖标的）配套进展。</em></p>
-        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
-      ]]></description>
-      <category>evt_1d669a71ce8b</category>
-    </item>
-    
-    <item>
-      <title>[8分] DeepSeek to Make Permanent 75% Discount on Flagship AI Model</title>
-      <link>https://www.bloomberg.com/news/articles/2026-05-23/deepseek-to-make-permanent-75-discount-on-flagship-ai-model</link>
-      <guid isPermaLink="false">7a17cc2c29e8c7440facfbe9fdfd42661f5ef882</guid>
-      <pubDate>Sun, 24 May 2026 14:09:33 GMT</pubDate>
-      <description><![CDATA[
-        <p>DeepSeek宣布将其旗舰AI模型DeepSeek-V3的API价格永久降低75%，从每百万token 0.1元降至约0.027元。此次降价旨在通过低价策略扩大市场份额，对标OpenAI、Anthropic等竞争对手。低成本AI模型将降低应用开发门槛，加速AI商业化进程，但可能引发行业价格战，压缩中小AI厂商的生存空间。</p>
-        <p>标的: 英伟达, 阿里巴巴, OpenAI, 亚马逊, 博通, 谷歌, AMD, DeepSeek, 寒武纪, 微软, 台积电, Anthropic, 百度</p>
-        <p>主线: ai_monetization, domestic_substitution, model_capability, compute_demand, chip_supply</p>
-        <p>方向: 微软→neutral 谷歌→neutral 亚马逊→neutral 阿里巴巴→neutral 百度→negative 英伟达→positive AMD→positive 台积电→positive 博通→positive 寒武纪→positive </p>
-        <p><em>持续跟踪：1）其他AI厂商是否跟进降价及幅度；2）API调用量变化反映的需求弹性；3）云厂商定价策略调整。二阶效应：价格战加速行业洗牌，利好有成本优势的云厂商和算力提供商；国产模型性价比优势凸显，利好寒武纪等适配国产芯片。</em></p>
-        <p>来源: hackernews 🔴 低可信 [转载自 未知来源]</p>
-      ]]></description>
-      <category>evt_e4f9cfbe8a9a</category>
-    </item>
-    
-    <item>
-      <title>[6分] How the AI boom is transforming global M&A, now dominated by the AI-driven race to control the world's energy, fiber networks, and computing capacity (Financial Times)</title>
-      <link>https://www.techmeme.com/260524/p7#a260524p7</link>
-      <guid isPermaLink="false">20416feab2aaaff4eaae46ccb03754f744d0bd8d</guid>
-      <pubDate>Sun, 24 May 2026 14:40:03 GMT</pubDate>
-      <description><![CDATA[
-        <p>AI热潮正在重塑全球并购格局，能源、光纤网络和计算能力成为AI驱动竞赛的核心资产争夺目标。并购交易额已创历史新高，曾经不受市场青睐的公司因AI价值而重获关注，私募股权基金也发现了新的投资金矿。文章聚焦NextEra Energy等能源公司在这场AI基础设施竞赛中的角色。英伟达、AMD、博通等AI芯片厂商因算力需求爆发持续受益，台积电、ASML的先进制程订单预期继续饱满，数据中心建设扩张同时带动能源基础设施投资。</p>
-        <p>标的: 戴尔, 英伟达, 亚马逊, 博通, ASML, 微软, AMD, 美光, 台积电, 谷歌, Meta, 超微电脑</p>
-        <p>主线: chip_supply, advanced_packaging, datacenter_power, compute_demand</p>
-        <p>方向: 英伟达→positive AMD→positive 博通→positive 台积电→positive ASML→positive 美光→positive 微软→positive 谷歌→positive 亚马逊→positive Meta→positive 戴尔→positive 超微电脑→positive </p>
-        <p><em>跟踪变量：超大规模云厂商capex指引、能源基础设施获批进度、并购交易公告；可能的二阶效应：能源公司估值重估、光纤网络投资加速、AI基础设施REITs化趋势；联动：与国产替代主线形成资金分流对比，数据中心电力短缺可能制约算力扩张节奏。</em></p>
-        <p>来源: rss:techmeme 🔴 低可信 [转载自 未知来源]</p>
-      ]]></description>
-      <category>evt_e3173a900b71</category>
-    </item>
-    
-    <item>
-      <title>[5分] I tried Amazon’s Bee wearable and am both intrigued and slightly creeped out</title>
-      <link>https://techcrunch.com/2026/05/24/i-tried-amazons-bee-wearable-and-am-both-intrigued-and-slightly-creeped-out</link>
-      <guid isPermaLink="false">df43f1a209d6082d0febe1f321d57ca70c03c23f</guid>
-      <pubDate>Sun, 24 May 2026 15:00:00 GMT</pubDate>
-      <description><![CDATA[
-        <p>亚马逊推出名为"Bee"的AI可穿戴设备，用户体验反馈呈现便利性与隐私焦虑的矛盾。该设备与其他AI可穿戴产品类似，在提供便捷AI交互的同时引发对数据安全的担忧。TechCrunch编辑实测后形容"既好奇又略感不安"，凸显当前AI终端设备普遍面临的用户接受度挑战。亚马逊正通过自研硬件探索AI变现新路径，但隐私问题或成规模化推广的关键障碍。</p>
-        <p>标的: 亚马逊</p>
+        <p>Bloomberg记者Mark Gurman深度报道Apple Watch及健康业务现状。报道指出，Apple Watch已发布超十年，正面临健康与健身可穿戴设备市场的关键转型节点，需进行重大革新。同时据知情人士透露，iOS 27将推出重新设计的AirPods控制面板，并默认支持Google Cast等AirPlay竞品。此举意味着苹果在智能穿戴生态中寻求差异化突破，通过健康功能深化和开放互联策略应对市场竞争。</p>
+        <p>标的: 苹果, 谷歌</p>
         <p>主线: edge_ai, ai_monetization</p>
-        <p>方向: 亚马逊→neutral </p>
-        <p><em>需跟踪Bee的用户留存率与复购数据，隐私负面反馈若扩大可能影响亚马逊AI硬件战略推进；同时关注苹果、Meta等竞品的类似产品动态，评估可穿戴AI市场的用户接受度趋势。</em></p>
-        <p>来源: rss:techcrunch-ai 🟡 中可信 [转载自 未知来源]</p>
+        <p>方向: 苹果→positive 谷歌→neutral </p>
+        <p><em>关注苹果WWDC对Watch健康功能的详细披露节奏；AirPods控制面板改版可能带动交互体验升级需求；默认支持Google Cast显示苹果生态走向适度开放，需跟踪对AirPlay市场份额的潜在影响。</em></p>
+        <p>来源: rss:techmeme 🔴 低可信</p>
       ]]></description>
-      <category>evt_80fb6891797c</category>
-    </item>
-    
-    <item>
-      <title>[4分] 超微电脑推出革命性AI芯片，助力未来智能设备发展</title>
-      <link>https://www.sohu.com/a/804472750_121924584</link>
-      <guid isPermaLink="false">2db47878d6314e0c3f54609a3da7e0c1c43827bd</guid>
-      <pubDate>Sun, 24 May 2026 15:09:34 GMT</pubDate>
-      <description><![CDATA[
-        <p>AMD推出MI300系列AI专用芯片，核心优势在于高效处理深度学习任务。该产品被视为AMD在AI计算领域的重要突破，定位与英伟达H100/H200系列竞争。MI300采用先进封装并集成HBM高带宽内存，预计面向数据中心推理及训练场景。此举将重塑AI芯片竞争格局，对英伟达市场份额构成压力，同时台积电作为代工方将直接受益。</p>
-        <p>标的: 英伟达, 亚马逊, AMD, 微软, 台积电, 谷歌</p>
-        <p>主线: chip_supply, advanced_packaging, compute_demand</p>
-        <p>方向: AMD→positive 英伟达→negative 台积电→positive 微软→neutral 谷歌→neutral 亚马逊→neutral </p>
-        <p><em>跟踪MI300量产进度及大客户导入情况；若性能追齐英伟达且价格有优势，数据中心AI芯片竞争格局或向双寡头演变；台积电CoWoS产能分配权重需重新评估；关注英伟达下一代Blackwell定价策略调整。</em></p>
-        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
-      ]]></description>
-      <category>evt_6a0b0c57bdc8</category>
+      <category>evt_973e0fd29485</category>
     </item>
     
   </channel>
