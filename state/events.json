@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-24T04:52:42Z",
+  "updated_at": "2026-05-24T07:58:34Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -682,9 +682,9 @@
       "source_count": 2,
       "first_seen_at": "2026-05-23T17:40:08Z",
       "last_updated_at": "2026-05-24T00:05:50Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 7,
-      "status": "developing"
+      "status": "resolved"
     },
     "evt_a183e664b97a": {
       "event_id": "evt_a183e664b97a",
@@ -769,9 +769,9 @@
       "source_count": 5,
       "first_seen_at": "2026-05-23T17:40:08Z",
       "last_updated_at": "2026-05-24T00:05:50Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 9,
-      "status": "developing"
+      "status": "resolved"
     },
     "evt_a72edc8d6f32": {
       "event_id": "evt_a72edc8d6f32",
@@ -973,9 +973,9 @@
       "source_count": 2,
       "first_seen_at": "2026-05-23T17:40:08Z",
       "last_updated_at": "2026-05-24T00:05:50Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 7,
-      "status": "developing"
+      "status": "resolved"
     },
     "evt_91481d5c60c2": {
       "event_id": "evt_91481d5c60c2",
@@ -1541,9 +1541,9 @@
       "source_count": 1,
       "first_seen_at": "2026-05-24T00:05:50Z",
       "last_updated_at": "2026-05-24T00:05:50Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 9,
-      "status": "developing"
+      "status": "resolved"
     },
     "evt_60058f40b2fa": {
       "event_id": "evt_60058f40b2fa",
@@ -1881,29 +1881,36 @@
     },
     "evt_e67f2ab9c2f8": {
       "event_id": "evt_e67f2ab9c2f8",
-      "title": "腾讯出牌：全面开放AI能力，适配国产芯片_腾讯新闻",
-      "summary": "腾讯于9月16日在2025年全球数字生态大会上宣布全面开放AI能力，将AI视为驱动产业效率变革的核心引擎。大会公布多项AI技术并重点推进国产芯片适配，这是继阿里、百度之后又一大云厂商加码AI开放战略。腾讯的AI能力开放将加速AI应用商业化落地，同时推动国产算力链需求增长，与国际芯片厂商形成竞争替代关系。",
+      "title": "一季度AI融资超1100亿元同比激增185%",
+      "summary": "2025年一季度AI领域融资近600起总额超1100亿元，同比激增185.4%。月之暗面、阶跃星辰等国产大模型获超300亿元融资，具身智能维他动力、鹿明机器人亦获数亿元融资。资金主要投向研发（头部大模型数十亿）、算力（GPU采购和云服务租赁占30-50%）、顶尖人才三大方向。中国大模型迭代周期已缩至3个月内，推理成本大幅下降，商业化进程加速。",
       "tickers": [
-        "博通",
-        "工业富联",
-        "腾讯",
         "中芯国际",
-        "海光信息",
-        "浪潮信息",
-        "AMD",
-        "寒武纪",
-        "英伟达",
+        "长电科技",
         "百度",
-        "中科曙光",
+        "浪潮信息",
         "阿里巴巴",
-        "台积电"
+        "中科曙光",
+        "英伟达",
+        "商汤",
+        "工业富联",
+        "美光",
+        "腾讯",
+        "ASML",
+        "博通",
+        "小米",
+        "AMD",
+        "台积电",
+        "科大讯飞",
+        "海光信息",
+        "寒武纪"
       ],
       "themes": [
-        "model_capability",
-        "domestic_substitution",
         "ai_monetization",
+        "advanced_packaging",
         "compute_demand",
-        "chip_supply"
+        "chip_supply",
+        "domestic_substitution",
+        "model_capability"
       ],
       "direction": {
         "腾讯": "positive",
@@ -1918,14 +1925,191 @@
         "英伟达": "negative",
         "AMD": "negative",
         "博通": "negative",
-        "台积电": "neutral"
+        "台积电": "neutral",
+        "ASML": "positive",
+        "美光": "positive",
+        "长电科技": "positive",
+        "小米": "positive",
+        "商汤": "positive",
+        "科大讯飞": "positive"
       },
       "item_ids": [
-        "28e65ad261136b4c0c7799428f71e599dabe8d24"
+        "28e65ad261136b4c0c7799428f71e599dabe8d24",
+        "f1b44643cca93f3f4e4a94d36fb5a36c0a6b858f"
+      ],
+      "source_count": 2,
+      "first_seen_at": "2026-05-24T04:52:26Z",
+      "last_updated_at": "2026-05-24T07:57:35Z",
+      "is_active": true,
+      "significance": 8,
+      "status": "stable"
+    },
+    "evt_54f99d6202ba": {
+      "event_id": "evt_54f99d6202ba",
+      "title": "【AI+9988】阿里巴巴平頭哥真武M890AI芯片亮相、內置144GB顯存 阿里雲已全棧就緒進入Agentic時代",
+      "summary": "阿里巴巴平头哥在2026阿里云峰会上正式发布AI芯片“真武M890”，该芯片集训练与推理功能于一体，内置144GB显存。阿里云智能集团资深副总裁刘伟光表示，阿里云已实现全栈就绪，正式进入Agentic（智能代理）时代。此举标志着阿里巴巴在自研AI芯片领域取得重要进展，为其云计算和AI业务提供更自主的算力支撑。",
+      "tickers": [
+        "阿里巴巴"
+      ],
+      "themes": [
+        "domestic_substitution",
+        "compute_demand",
+        "chip_supply"
+      ],
+      "direction": {
+        "阿里巴巴": "positive"
+      },
+      "item_ids": [
+        "809d366b7b644ca55ffdf1523ed99f779c71ad6c"
       ],
       "source_count": 1,
-      "first_seen_at": "2026-05-24T04:52:26Z",
-      "last_updated_at": "2026-05-24T04:52:26Z",
+      "first_seen_at": "2026-05-24T07:57:35Z",
+      "last_updated_at": "2026-05-24T07:57:35Z",
+      "is_active": true,
+      "significance": 8,
+      "status": "developing"
+    },
+    "evt_202e44bf9ed9": {
+      "event_id": "evt_202e44bf9ed9",
+      "title": "DeepSeek says it will lower V4 Pro API prices by 75% to $0.435/1M input and $0.87/1M output tokens, making permanent the discount prices set to expire on May 31 (Bloomberg)",
+      "summary": "DeepSeek宣布将V4 Pro API价格永久下调75%，输入token降至$0.435/百万，输出token降至$0.87/百万，将原定于5月31日到期的折扣价格常态化。降价后价格仅为原价的四分之一。此举加剧大模型价格战，刺激下游应用开发需求，同时对其他大模型厂商形成竞争压力。云厂商若自研模型可能面临更大定价压力，若使用DeepSeek则可能分流自研投入。",
+      "tickers": [
+        "美光",
+        "ARM",
+        "DeepSeek",
+        "腾讯",
+        "百度",
+        "英伟达",
+        "亚马逊",
+        "阿里巴巴",
+        "微软",
+        "AMD",
+        "台积电",
+        "谷歌"
+      ],
+      "themes": [
+        "ai_monetization",
+        "model_capability",
+        "chip_supply",
+        "compute_demand"
+      ],
+      "direction": {
+        "英伟达": "positive",
+        "AMD": "positive",
+        "微软": "neutral",
+        "谷歌": "neutral",
+        "亚马逊": "neutral",
+        "阿里巴巴": "negative",
+        "腾讯": "negative",
+        "百度": "negative",
+        "台积电": "positive",
+        "ARM": "positive",
+        "美光": "positive"
+      },
+      "item_ids": [
+        "ef08bf9906546835739435a98c1492fff843e7bb"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-05-24T07:57:35Z",
+      "last_updated_at": "2026-05-24T07:57:35Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing"
+    },
+    "evt_873f3c92f5f9": {
+      "event_id": "evt_873f3c92f5f9",
+      "title": "上调寒武纪、下调浪潮信息，高盛预言了\"国产AI芯片的崛起\"场景",
+      "summary": "高盛于5月4日同日发布两份研报，对中国AI算力产业链两家代表企业给出截然不同的评级：上调寒武纪（688256）至买入，下调浪潮信息（000977）至卖出。高盛认为在国产AI芯片崛起的大趋势下，寒武纪作为设计环节厂商将受益于算力自主可控政策，而浪潮信息作为服务器组装环节可能面临供应链成本压力和竞争格局变化。这一评级分化反映国际机构对中国AI算力替代路径的结构性判断。",
+      "tickers": [
+        "中芯国际",
+        "中科曙光",
+        "海光信息",
+        "浪潮信息",
+        "景嘉微",
+        "工业富联",
+        "寒武纪"
+      ],
+      "themes": [
+        "domestic_substitution",
+        "compute_demand",
+        "chip_supply"
+      ],
+      "direction": {
+        "寒武纪": "positive",
+        "浪潮信息": "negative",
+        "中芯国际": "neutral",
+        "工业富联": "neutral",
+        "中科曙光": "neutral",
+        "景嘉微": "neutral",
+        "海光信息": "neutral"
+      },
+      "item_ids": [
+        "08341611c91a0dc1f3421e43c0aea2779e83383f"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-05-24T07:57:35Z",
+      "last_updated_at": "2026-05-24T07:57:35Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing"
+    },
+    "evt_20cd11fb6992": {
+      "event_id": "evt_20cd11fb6992",
+      "title": "微软欲借Anthropic突围AI芯片战：据称双方正洽谈Maia供应合作",
+      "summary": "微软正与AI初创公司Anthropic洽谈，拟向其提供自研AI训练芯片Maia。分析认为，此举意在加深与Anthropic的战略绑定，同时利用Anthropic模型能力提升Maia芯片的生态话语权。若协议落地，Anthropic可获得低成本算力支持，减少对英伟达GPU的依赖；微软则可借此展示自研芯片的可行性，对抗谷歌TPU、亚马逊Trainium等云厂商自研芯片的竞争。",
+      "tickers": [
+        "英伟达",
+        "博通",
+        "微软",
+        "AMD",
+        "Anthropic",
+        "台积电"
+      ],
+      "themes": [
+        "compute_demand",
+        "ai_monetization",
+        "model_capability",
+        "chip_supply"
+      ],
+      "direction": {
+        "微软": "positive",
+        "英伟达": "negative",
+        "AMD": "neutral",
+        "博通": "neutral",
+        "台积电": "neutral",
+        "Anthropic": "positive"
+      },
+      "item_ids": [
+        "4a739277182f19cd9195a71c190af5a19e1081a3"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-05-24T07:57:35Z",
+      "last_updated_at": "2026-05-24T07:57:35Z",
+      "is_active": true,
+      "significance": 6,
+      "status": "developing"
+    },
+    "evt_2983b15f0bb6": {
+      "event_id": "evt_2983b15f0bb6",
+      "title": "WPS全面升级!金山办公推出AI驱动的企业知识库解决方案",
+      "summary": "金山办公正式发布AI协同办公产品系列，包括WPS数字员工2.0、WPS AIPPT、WPS智能文档库、WPS智能搜索和WPS团队空间等产品，全面覆盖企业办公各环节。金山办公副总裁王冬主持发布。该解决方案标志着WPS在企业知识管理领域的重大进展，将AI能力深度嵌入办公场景。",
+      "tickers": [
+        "金山办公",
+        "微软"
+      ],
+      "themes": [
+        "ai_monetization"
+      ],
+      "direction": {
+        "金山办公": "neutral",
+        "微软": "neutral"
+      },
+      "item_ids": [
+        "a61be1bbfc29eebff6591e0cae3132c0d2a529d1"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-05-24T07:57:35Z",
+      "last_updated_at": "2026-05-24T07:57:35Z",
       "is_active": true,
       "significance": 5,
       "status": "developing"
