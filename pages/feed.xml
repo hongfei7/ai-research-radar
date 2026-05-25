@@ -5,135 +5,215 @@
     <link>https://hongfei7.github.io/ai-research-radar</link>
     <description>AI/科技/半导体板块的持续投研情报 feed — 由 MiniMax 策展</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 25 May 2026 00:10:51 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 05:07:04 GMT</lastBuildDate>
     <atom:link href="https://hongfei7.github.io/ai-research-radar/feed.xml" rel="self" type="application/rss+xml"/>
     
     <item>
-      <title>[8分] 寒武纪、景嘉微等掀"热浪"，国内AI芯片厂商再度发力</title>
-      <link>https://www.dramx.com/News/AI/20250820-38981.html</link>
-      <guid isPermaLink="false">af13b95452e26c3d5728d0a3b9ceebd03e03c580</guid>
-      <pubDate>Mon, 25 May 2026 00:05:11 GMT</pubDate>
+      <title>[9分] OpenAI 携手博通打造首款自研 AI 芯片：算力达 10 吉瓦级，2026 年下半年开始推进研发 - IT之家</title>
+      <link>https://www.ithome.com/0/889/159.htm</link>
+      <guid isPermaLink="false">03fc320c618bd149d462e4674e73dd8b904bd18d</guid>
+      <pubDate>Mon, 25 May 2026 04:56:58 GMT</pubDate>
       <description><![CDATA[
-        <p>寒武纪近40亿元定增方案获上交所通过，资金主要用于云端AI芯片项目；景嘉微、天数智芯、摩尔线程近期亦传新动态。在AI大模型驱动算力需求爆发的背景下，国内AI芯片厂商加速崛起，掀起新一轮资本与产品攻势。定增获批标志着寒武纪在国产高端AI芯片领域的融资渠道畅通，为后续研发和产能扩张提供资金保障；景嘉微等厂商的跟进显示国内AI芯片竞争格局正在深化，国产替代进程持续推进。</p>
-        <p>标的: 英伟达, 中科曙光, 海光信息, 天数智芯, AMD, 寒武纪, 景嘉微, 工业富联, 中芯国际, 台积电</p>
-        <p>主线: domestic_substitution, chip_supply, compute_demand, policy_export</p>
-        <p>方向: 寒武纪→positive 景嘉微→positive 中芯国际→positive 台积电→neutral 英伟达→neutral AMD→neutral 海光信息→positive 中科曙光→positive 工业富联→positive </p>
-        <p><em>跟踪定增资金投向及项目落地进度；关注国内AI芯片厂商产品迭代与性能突破；警惕美国对华芯片出口管制升级对国内厂商的机会与供应链风险；算力需求持续增长背景下，国产芯片渗透率提升节奏为核心变量。</em></p>
+        <p>OpenAI宣布与博通合作开发10吉瓦级AI芯片，计划2026年下半年开始部署。OpenAI将主导芯片设计，博通提供以太网互联解决方案。此次合作标志着OpenAI从单纯的大模型研发向底层硬件垂直整合延伸，旨在降低对英伟达GPU的依赖并掌控AI基础设施自主权。10吉瓦级算力对应大规模AI训练与推理需求，将对全球AI芯片竞争格局产生深远影响。</p>
+        <p>标的: AMD, 美光, 寒武纪, 超微电脑, 高通, 天数智芯, ARM, 戴尔, 工业富联, 英伟达, ASML, 博通, Marvell, 微软, 中科曙光, 长电科技, 海光信息, 台积电, 中芯国际, 景嘉微</p>
+        <p>主线: compute_demand, datacenter_power, chip_supply, advanced_packaging, ai_monetization, model_capability</p>
+        <p>方向: 博通→positive 英伟达→negative AMD→negative 台积电→positive ASML→positive 超微电脑→positive 戴尔→positive 微软→positive ARM→positive Marvell→positive 美光→positive 高通→neutral 工业富联→positive 中科曙光→positive 景嘉微→positive 长电科技→positive 中芯国际→neutral 海光信息→neutral 寒武纪→neutral 天数智芯→neutral </p>
+        <p><em>需跟踪：1）博通与OpenAI合作进展及芯片规格；2）台积电是否为该芯片的代工方；3）2026年部署节奏。对英伟达/AMD而言，若OpenAI自研芯片成功量产将削弱其AI GPU需求；对博通、台积电、ASML则形成新增订单；对国内AI芯片厂商需观察是否加速替代进程。</em></p>
         <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_4b7150d3f109</category>
+      <category>evt_bf92802fd69e</category>
     </item>
     
     <item>
-      <title>[7分] 亚马逊推出最新AI芯片，梳理核心受益公司（名单）</title>
-      <link>https://www.toutiao.com/article/7579527049170256427/</link>
-      <guid isPermaLink="false">dbad2e3813fbef5fbb639045cbcf5f231d8bce34</guid>
-      <pubDate>Mon, 25 May 2026 00:05:11 GMT</pubDate>
+      <title>[7分] AI芯片国产五强深度解析：出货量、技术路线与商业前景</title>
+      <link>https://finance.sina.com.cn/roll/2026-05-14/doc-inhxvihv4081907.shtml</link>
+      <guid isPermaLink="false">f03ffd5c9bb52aea33feb73585bfdc8fc88c9cba</guid>
+      <pubDate>Mon, 25 May 2026 04:56:58 GMT</pubDate>
       <description><![CDATA[
-        <p>亚马逊推出最新Trainium AI芯片，重点梳理核心受益公司。博通与Marvell并列ASIC全球第一，为AWS提供高速交换芯片，支撑超大规模网络架构，并深化AI推理芯片合作；新思科技为Trainium芯片提供设计工具，集成英伟达CUDA生态，是亚马逊芯片研发流程关键环节。亚马逊自研芯片加速对数据中心基础设施的投资，影响整个AI算力供应链格局。</p>
-        <p>标的: 博通, 英伟达, Marvell, 亚马逊</p>
-        <p>主线: datacenter_power, chip_supply, compute_demand</p>
-        <p>方向: 亚马逊→positive 博通→positive Marvell→positive 英伟达→neutral </p>
-        <p><em>跟踪AWS Trainium芯片量产节奏与订单释放进度；关注博通/Marvell在AWS供应链份额变化；新思科技作为设计工具链核心，订单能见度较高；英伟达GPU需求或面临替代压力但CUDA生态黏性仍强。</em></p>
+        <p>IDC 2025报告显示，中国AI加速卡市场总出货约400万张，本土厂商出货165万张，份额首次突破40%达41%，标志着国产AI芯片集体爆发。本土五强（寒武纪、海光信息等）在技术路线与商业化上持续突破，对英伟达等国际厂商形成竞争压力。国产替代加速对中芯国际等代工链、台积电先进封装需求产生结构性影响。</p>
+        <p>标的: AMD, 海光信息, 英伟达, 台积电, 寒武纪, 中芯国际</p>
+        <p>主线: compute_demand, advanced_packaging, domestic_substitution, chip_supply</p>
+        <p>方向: 英伟达→negative AMD→negative 寒武纪→positive 海光信息→positive 中芯国际→positive 台积电→neutral </p>
+        <p><em>跟踪国产五强量产进度与下游云厂采购比例；警惕英伟达中国区营收下滑风险；关注国产芯片对HBM和CoWoS封装需求的边际变化。</em></p>
         <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_03b3677dd9b4</category>
+      <category>evt_0367941da0d8</category>
     </item>
     
     <item>
-      <title>[6分] 内外资机构密集调研，瞄准A股景气赛道</title>
-      <link>https://36kr.com/newsflashes/3823926520435075?f=rss</link>
-      <guid isPermaLink="false">f8b93514ac197f88cd8a0bffce7e75b0b0e284ad</guid>
-      <pubDate>Sun, 24 May 2026 23:39:12 GMT</pubDate>
+      <title>[7分] 浪潮信息涨停与20余家国产ai 芯片厂商合作_财富号_东方财富网</title>
+      <link>https://caifuhao.eastmoney.com/news/20250925115709621436300</link>
+      <guid isPermaLink="false">2db6a4f1de9a5c56eb37d9aa472ee0aaf196124e</guid>
+      <pubDate>Mon, 25 May 2026 04:56:58 GMT</pubDate>
       <description><![CDATA[
-        <p>二季度以来内外资机构密集调研A股景气赛道。截至5月22日，公募基金调研频次超1.2万次，外资机构超1400次，重点聚焦AI算力硬件、半导体设备及高端医疗装备领域。机构认为AI正从训练阶段向大规模推理应用演进，叠加国产自主可控逻辑强化，产业链龙头有望迎来结构性投资机遇。</p>
-        <p>标的: 中科曙光, 英伟达, 海光信息, 寒武纪, 景嘉微, 浪潮信息, 工业富联, 长电科技, 中芯国际, 台积电</p>
-        <p>主线: domestic_substitution, chip_supply, compute_demand</p>
-        <p>方向: 寒武纪→positive 海光信息→positive 工业富联→positive 中科曙光→positive 浪潮信息→positive 景嘉微→positive 长电科技→positive 中芯国际→positive </p>
-        <p><em>跟踪变量：调研频次是否持续攀升、机构持仓变化。机构密集调研后通常伴随配置窗口，需关注公募基金季报披露的加仓标的，以及外资实际流入节奏。AI推理需求释放将带动封测和先进封装需求，长电科技等封测龙头联动效应值得关注。</em></p>
-        <p>来源: rss:36kr 🟡 中可信 [转载自 未知来源]</p>
+        <p>浪潮信息涨停，公司已与20余家国产AI芯片厂商建立合作，AIStation软件平台实现30余款国产AI芯片兼容纳管，并持续推进OAM、OCM、液冷整机柜等开放计算标准，加速国产智算生态构建。液冷服务器板块今日集体走强。</p>
+        <p>标的: 中科曙光, 浪潮信息, 工业富联, 海光信息, 寒武纪, 景嘉微</p>
+        <p>主线: advanced_packaging, domestic_substitution, datacenter_power, chip_supply</p>
+        <p>方向: 浪潮信息→positive 寒武纪→positive 海光信息→positive 景嘉微→positive 中科曙光→positive 工业富联→positive </p>
+        <p><em>需跟踪国产AI芯片在AIStation平台的实际适配数量增长、液冷服务器订单落地情况，以及开放计算标准推广对生态玩家的利好程度；液冷板块强势或向服务器整机、散热方案提供商扩散。</em></p>
+        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_4b7150d3f109</category>
+      <category>evt_1b2ae4734a3b</category>
     </item>
     
     <item>
-      <title>[5分] AI数据中心电力需求催热A股电力设备板块</title>
-      <link>https://36kr.com/newsflashes/3823942860951682?f=rss</link>
-      <guid isPermaLink="false">cd1ba0e052be10be41f4436a92333474c1b69bbc</guid>
-      <pubDate>Sun, 24 May 2026 23:55:50 GMT</pubDate>
+      <title>[7分] A look at DeepSeek's model optimization to reduce HBM use, potentially enabling domestic memory, ASIC, and CPU makers to create a Chinese AI hardware ecosystem (@bookwormengr)</title>
+      <link>https://www.techmeme.com/260525/p2#a260525p2</link>
+      <guid isPermaLink="false">41695e5b6267e50292a9e6964130d9e60edee7f4</guid>
+      <pubDate>Mon, 25 May 2026 04:50:01 GMT</pubDate>
       <description><![CDATA[
-        <p>5月以来A股电力设备板块持续获机构密集调研，截至24日已有42家公司接待机构调研，涵盖储能、变压器、充电桩、电源设备、电网设备等细分领域。机构聚焦两大主线：一是AI数据中心（AIDC）带来的变压器、电源设备等新型电力基础设施需求；二是电力设备“出海”机会。AIDC相关电力基础设施成为当前机构关注度最高的话题，反映AI算力建设对电力供给侧的巨大拉动效应。</p>
-        <p>标的: 浪潮信息, 工业富联, 中科曙光</p>
-        <p>主线: domestic_substitution, datacenter_power, compute_demand</p>
-        <p>方向: 工业富联→positive 中科曙光→positive 浪潮信息→positive </p>
-        <p><em>AIDC电力基础设施需求高景气，电力设备企业订单/产能利用率为核心跟踪变量；服务器厂商（工业富联/中科曙光/浪潮信息）望间接受益，需关注其AIDC客户的订单释放节奏。</em></p>
-        <p>来源: rss:36kr 🟡 中可信 [转载自 未知来源]</p>
+        <p>DeepSeek通过模型架构优化显著降低HBM使用量，绕过了对高端内存的依赖。这一突破为国产内存、ASIC和CPU厂商提供了构建中国AI硬件生态系统的机会。技术路径可能包括更高效的稀疏计算、混合精度训练和显存优化。对于美光等HBM供应商意味着需求压力加大，而寒武纪、海光信息、中芯国际等国产算力链企业则获得发展空间。</p>
+        <p>标的: 美光, 中科曙光, 浪潮信息, 长电科技, 海光信息, DeepSeek, 英伟达, 台积电, 寒武纪, 中芯国际, 景嘉微</p>
+        <p>主线: advanced_packaging, model_capability, domestic_substitution, chip_supply</p>
+        <p>方向: 美光→negative 寒武纪→positive 海光信息→positive 中芯国际→positive 英伟达→neutral 台积电→neutral 长电科技→positive 景嘉微→positive 中科曙光→positive 浪潮信息→positive </p>
+        <p><em>跟踪DeepSeek模型优化的HBM节省比例和实际部署效果；关注国产HBM（如长鑫存储）和ASIC进展；美光需重新评估中国区HBM需求指引；国产算力链订单能见度若提升将形成板块性机会。</em></p>
+        <p>来源: rss:techmeme 🔴 低可信 [转载自 https://x.com/bookwormengr/status/1906988264041713792]</p>
       ]]></description>
-      <category>evt_49a3010e13af</category>
+      <category>evt_e30e2ceef5fc</category>
     </item>
     
     <item>
-      <title>[4分] 河南“十五五”规划纲要：培育壮大人工智能、商业航天等特色产业</title>
-      <link>https://36kr.com/newsflashes/3823935406707077?f=rss</link>
-      <guid isPermaLink="false">3b5654a928453c17edccd7fcc3dd0c29158a31ff</guid>
-      <pubDate>Sun, 24 May 2026 23:48:15 GMT</pubDate>
+      <title>[8分] 摩根士丹利：2030年全球半导体产业市场规模或达1.5万亿美元，人工智能相关半导体产品占半壁江山</title>
+      <link>https://36kr.com/newsflashes/3824126045933704?f=rss</link>
+      <guid isPermaLink="false">e4f06016f89923033728b3a9e068f7a75b119265</guid>
+      <pubDate>Mon, 25 May 2026 03:02:10 GMT</pubDate>
       <description><![CDATA[
-        <p>河南省发布“十五五“规划纲要，提出培育壮大人工智能、商业航天等特色产业。纲要明确推进郑州国家新一代人工智能创新发展试验区建设，建设国家人工智能应用中试基地，重点攻关人形机器人“大小脑“技术及关键零部件。同时布局数据标注、数据应用等专业园区，推动数据采集、加工、流通全产业链发展，打造卫星制造与应用服务基地。政策覆盖AI全产业链，从底层算力到应用场景，为国产AI产业链提供系统性政策支撑。</p>
-        <p>标的: 腾讯, 中科曙光, 海光信息, 商汤, 科大讯飞, 寒武纪, 景嘉微, 浪潮信息, 长电科技, 工业富联, 阿里巴巴, 中芯国际, 百度</p>
-        <p>主线: compute_demand, domestic_substitution, model_capability, chip_supply, edge_ai, ai_monetization</p>
-        <p>方向: 中芯国际→positive 寒武纪→positive 海光信息→positive 中科曙光→positive 浪潮信息→positive 景嘉微→positive 长电科技→positive 工业富联→positive 科大讯飞→positive 商汤→positive 百度→positive 阿里巴巴→positive 腾讯→positive </p>
-        <p><em>跟踪河南省AI项目招标节奏及试验区建设进展。政策利好国产算力链（芯片-服务器-封装）全环节，人形机器人赛道可关注零部件国产化进度，数据要素政策或带动数据标注需求增长，与阿里云、腾讯云等平台型企业形成共振。</em></p>
+        <p>摩根士丹利报告预测2030年全球半导体市场规模或达1.5万亿美元，其中AI半导体占比约50%。主要云服务商云capex强劲，预计2026年接近8110亿美元。报告指出代理式AI产生CPU应用机遇，AI从推理转向执行时GPU计算强度提升。将编排CPU市场总规模（orchestration CPU TAM）上调至790亿美元，CPU编排技术市场附加价值预测达2380亿美元。</p>
+        <p>标的: AMD, 美光, 亚马逊, 腾讯, 百度, 超微电脑, 高通, 苹果, 阿里巴巴, ARM, Intel, 浪潮信息, 工业富联, 英伟达, ASML, 博通, Marvell, 微软, 中科曙光, 长电科技, Meta, 台积电, 谷歌, 中芯国际</p>
+        <p>主线: compute_demand, ai_monetization, advanced_packaging, chip_supply</p>
+        <p>方向: 英伟达→positive AMD→positive 博通→positive 台积电→positive ASML→positive 美光→positive Intel→positive Marvell→positive 高通→positive ARM→positive 超微电脑→positive 微软→positive 谷歌→positive 亚马逊→positive Meta→positive 苹果→positive 中芯国际→positive 工业富联→positive 中科曙光→positive 浪潮信息→positive 长电科技→positive 阿里巴巴→positive 腾讯→positive 百度→positive </p>
+        <p><em>1. 跟踪云厂商capex节奏与实际需求兑现情况；2. 关注国产替代在AI算力链的渗透进展；3. 算力需求主线与先进封装、存储主线联动，可关注HBM供应链；4. 警惕AI投资周期后段供给过剩风险。</em></p>
         <p>来源: rss:36kr 🟡 中可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_94de07a980e8</category>
+      <category>evt_924c1f06434d</category>
     </item>
     
     <item>
-      <title>[4分] 年内公募机构参与A股公司定增获配超282亿元</title>
-      <link>https://36kr.com/newsflashes/3823917589778563?f=rss</link>
-      <guid isPermaLink="false">234ed3db5715977939e886f5b646c26ff517d34f</guid>
-      <pubDate>Sun, 24 May 2026 23:30:07 GMT</pubDate>
+      <title>[5分] 商汤新融资超32亿港元，AI龙头盈利魔咒为何难破？_腾讯新闻</title>
+      <link>https://news.qq.com/rain/a/20260428A08S2U00</link>
+      <guid isPermaLink="false">5168514aa3edee5955e7f28f88fb4c20550a9688</guid>
+      <pubDate>Mon, 25 May 2026 04:56:58 GMT</pubDate>
       <description><![CDATA[
-        <p>年内公募机构参与A股定增热情高涨。截至5月21日，22家公募机构参与55只A股公司定增项目，占同期发行总量67.9%；合计获配13.93亿股，对应金额282.62亿元，平均获配股份占比37.19%。电子行业成为公募机构布局重点。该数据反映机构投资者对A股上市公司融资项目的积极参与度较高。</p>
-        
-        <p>主线: chip_supply</p>
-        
-        <p><em>关注后续定增项目解禁节奏及机构持仓变动；跟踪电子行业定增项目落地情况；该数据可作为观察机构资金流向A股结构性机会的参考指标。</em></p>
-        <p>来源: rss:36kr 🟡 中可信 [转载自 未知来源]</p>
+        <p>商汤科技完成超32亿港元新融资，为2024年6月以来第五次大规模股权融资，密集融资节奏引发市场对其盈利能力的担忧。尽管公司年报显示营收创新高，但至今未实现年度盈利，AI商业化难题持续。作为国内AI算法龙头，商汤的高频融资与持续亏损形成鲜明对比，反映出AI行业普遍面临的变现挑战。</p>
+        <p>标的: 商汤</p>
+        <p>主线: ai_monetization</p>
+        <p>方向: 商汤→negative </p>
+        <p><em>密切跟踪商汤营收增长质量与亏损收窄节奏；若融资频率持续高位，可能稀释现有股东权益并压制股价；AI算法公司盈利路径验证对寒武纪、科大讯飞等同业估值有参考意义。</em></p>
+        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_0109265cb4b7</category>
+      <category>evt_a4e71f661ddc</category>
     </item>
     
     <item>
-      <title>[4分] 险资今年以来调研A股公司5723次，硬科技是主线</title>
-      <link>https://36kr.com/newsflashes/3823916402905481?f=rss</link>
-      <guid isPermaLink="false">c3d62fa4f1898a918ae9411057cfc62cd4f2686f</guid>
-      <pubDate>Sun, 24 May 2026 23:28:55 GMT</pubDate>
+      <title>[6分] 独家解读丨Anthropic每赚100块，为何会被马斯克顺走50？</title>
+      <link>https://www.leiphone.com/category/industrynews/y43AcoPMgWtTOuzg.html</link>
+      <guid isPermaLink="false">8df1f10a830b833dea782b3a23b4f770227c0690</guid>
+      <pubDate>Mon, 25 May 2026 02:44:00 GMT</pubDate>
       <description><![CDATA[
-        <p>保险资金开年以来截至5月24日调研A股上市公司5723次，重点布局电子元件、工业机械、集成电路等硬科技赛道。受访专家指行业将维持哑铃型配置策略，以高股息蓝筹股为底仓，精选高新科技个股博取超额收益。保险资金作为长期价值型资金，其加码硬科技的信号对A股科技产业链具指向意义，反映险资对国产替代和算力链中长期配置价值的认可。</p>
-        <p>标的: 中科曙光, 海光信息, 科大讯飞, 寒武纪, 景嘉微, 浪潮信息, 工业富联, 长电科技, 中芯国际, 金山办公</p>
-        <p>主线: domestic_substitution, chip_supply, compute_demand, advanced_packaging</p>
-        <p>方向: 工业富联→positive 中科曙光→positive 浪潮信息→positive 长电科技→positive 寒武纪→positive 海光信息→positive 景嘉微→positive 金山办公→positive 科大讯飞→positive 中芯国际→positive </p>
-        <p><em>跟踪变量：险资调研频次与持仓变化、硬科技个股仓位占比。二阶效应：若险资持续增配，将提升A股硬科技流动性与估值修复；哑铃策略若扩散至其他险资，可能带动高股息与科技股联动行情。联动关注：台积电、ASML等上游设备商的订单能见度对A股封装测试板块的传导。</em></p>
-        <p>来源: rss:36kr 🟡 中可信 [转载自 未知来源]</p>
+        <p>SpaceX招股书披露与Anthropic签订450亿美元算力合同（每月12.5亿美元，为期三年）。Anthropic年化营收300多亿美元，但年算力总成本高达200-250亿美元，相当于每赚100美元需支付50-80美元给算力厂商。这揭示AI公司正沦为算力“佃农”的残酷现实。xAI 2025年营收仅32亿美元但运营亏损64亿美元、资本支出127亿美元，马斯克被迫出租Colossus 1闲置算力给Anthropic。当前Agent爆发加剧算力消耗，做“算力地主”比做基模更划算。</p>
+        <p>标的: AMD, 美光, 亚马逊, 英伟达, Anthropic, 台积电, 谷歌, ASML, Meta, 微软</p>
+        <p>主线: compute_demand, datacenter_power, chip_supply, ai_monetization, model_capability</p>
+        <p>方向: 英伟达→positive AMD→positive 台积电→positive ASML→positive 美光→positive 微软→positive 谷歌→positive 亚马逊→positive Meta→positive </p>
+        <p><em>算力成本结构是核心跟踪变量：Anthropic每赚100元付50-80元给算力厂商的比例是否可持续，关乎AI商业模式成立性。SpaceX入局算力租赁市场将加剧算力供给竞争，可能压制英伟达/AMD芯片溢价空间。台积电、ASML、美光等上游材料设备商将持续受益于算力扩张capex。中科曙光、浪潮信息等国产算力链替代进程需同步关注。</em></p>
+        <p>来源: rss:leiphone 🟡 中可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_c9a7400b7a8e</category>
+      <category>evt_c04fb855d94f</category>
     </item>
     
     <item>
-      <title>[4分] A股市场波动有所放大，科技主线韧性仍存，机构：建议聚焦盈利兑现和高景气方向</title>
-      <link>https://36kr.com/newsflashes/3823914672181641?f=rss</link>
-      <guid isPermaLink="false">8f00915a5f766b0acf3440ad7c8989ef28575615</guid>
-      <pubDate>Sun, 24 May 2026 23:27:09 GMT</pubDate>
+      <title>[5分] 半日主力资金加仓电子股，抛售电力设备股</title>
+      <link>https://36kr.com/newsflashes/3824166298276224?f=rss</link>
+      <guid isPermaLink="false">ddbe208d743ddf46a185512358fcbce7facf3063</guid>
+      <pubDate>Mon, 25 May 2026 03:43:07 GMT</pubDate>
       <description><![CDATA[
-        <p>上周A股主要指数震荡整固，行业分化加剧。机构认为当前A股处阶段性高位，震荡属正常波动，非趋势性调整；企业盈利、流动性等核心因素未变。科技成长仍是市场最具辨识度主线，但机构提示后续科技主线扩散需聚焦基本面验证，而非单纯主题轮动。（上证报）</p>
-        
-        <p>主线: compute_demand</p>
-        
-        <p><em>当前科技主线高位震荡，建议关注基本面验证而非单纯主题炒作。需跟踪科技板块业绩兑现情况，若基本面得到验证，结构性行情将延续；否则警惕回调风险。保持审慎。</em></p>
+        <p>早间主力资金明显加仓电子板块，净流入电子、公用事业、食品饮料等；同期抛售电力设备、基础化工等板块。具体到AI/半导体相关标的，寒武纪获主力资金净流入22.50亿元，中芯国际获19.14亿元，显示资金对国产AI芯片和晶圆代工龙头的高度关注。</p>
+        <p>标的: 中芯国际, 寒武纪</p>
+        <p>主线: compute_demand, domestic_substitution, chip_supply</p>
+        <p>方向: 寒武纪→positive 中芯国际→positive </p>
+        <p><em>跟踪后续主力资金持续性；关注寒武纪AI芯片产品迭代进展及中芯国际先进制程产能扩张节奏。两者资金共振可能带动国产算力链整体情绪，联动长电科技、工业富联等封测和服务器标的。</em></p>
         <p>来源: rss:36kr 🟡 中可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_a9fc2869fbfe</category>
+      <category>evt_182743366946</category>
+    </item>
+    
+    <item>
+      <title>[6分] 36氪首发 | 商汤国香投了一家消费级空间相机公司，为具身智能采集真实世界数据</title>
+      <link>https://36kr.com/p/3824089662853513?f=rss</link>
+      <guid isPermaLink="false">afff3223fbdf8287b9018549c57effe21a73385d</guid>
+      <pubDate>Mon, 25 May 2026 02:25:26 GMT</pubDate>
+      <description><![CDATA[
+        <p>竹马创新完成数千万天使+轮融资，商汤国香资本领投，鼎晖VGC、峰瑞资本跟投。公司成立于2025年11月，以Camera+AI为核心，首款产品Pebble将3D Gaussian Splatting、多传感器融合与AI原生交互封装进消费级设备，实现“所见即所扫”。公司定位为具身智能时代的真实世界三维数据入口，通过空间相机采集含三维结构、语义信息和物理正确性的photoreal数据，支撑机器人训练与空间世界模型构建。创始人张吉曾任群核科技副总裁，首席科学家过洁为南京大学长聘副教授、3DGS领域顶尖科学家。当前产品仍在研发阶段，尚未量产。</p>
+        <p>标的: 商汤</p>
+        <p>主线: model_capability, edge_ai, ai_monetization</p>
+        <p>方向: 商汤→positive </p>
+        <p><em>关注竹马创新Pebble产品量产节奏及具身智能客户拓展进展；商汤AI算法与空间智能的协同效应需持续跟踪；该投资反映头部AI厂商正加速布局数据采集基础设施层，建议关注具身智能数据赛道的其他投资动态。</em></p>
+        <p>来源: rss:36kr 🟡 中可信</p>
+      ]]></description>
+      <category>evt_a4e71f661ddc</category>
+    </item>
+    
+    <item>
+      <title>[5分] 阿里达摩院玄铁9系列处理器正式适配安卓，RISC-V加速规模化商业落地</title>
+      <link>https://36kr.com/newsflashes/3824113690546567?f=rss</link>
+      <guid isPermaLink="false">1b78655fb2ac07713e4973352ae3df6c15ea8e0b</guid>
+      <pubDate>Mon, 25 May 2026 02:49:36 GMT</pubDate>
+      <description><![CDATA[
+        <p>阿里达摩院宣布玄铁9系列RISC-V处理器完成Android 16适配，系全球首款RVA23兼容RISC-V芯片运行最新版安卓系统。玄铁团队已面向战略客户定向发布玄铁安卓平台，标志着RISC-V在安卓生态从功能移植进入规范兼容与产品化交付阶段，为规模化商业落地奠定技术基础。</p>
+        <p>标的: 台积电, 阿里巴巴, 中芯国际, ARM, 高通</p>
+        <p>主线: chip_supply, domestic_substitution, edge_ai</p>
+        <p>方向: 阿里巴巴→positive ARM→neutral 高通→neutral 台积电→neutral 中芯国际→neutral </p>
+        <p><em>跟踪玄铁RISC-V芯片Android应用生态成熟度与量产节奏；若规模化落地，将对ARM在移动端主导地位形成挑战，需关注其应对策略；RISC-V生态完善为国产芯片设计提供开源选择，利好芯片IP供给多元化。</em></p>
+        <p>来源: rss:36kr 🟡 中可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_e6c6210ad334</category>
+    </item>
+    
+    <item>
+      <title>[4分] At an IEEE conference, Huawei proposed a new chip scaling law and said it aims to design chips with transistor density equivalent to 1.4nm by 2031 (Nikkei Asia)</title>
+      <link>https://www.techmeme.com/260524/p16#a260524p16</link>
+      <guid isPermaLink="false">30c84e409f1e9e519ffc7e83597f659d0699a505</guid>
+      <pubDate>Mon, 25 May 2026 03:45:02 GMT</pubDate>
+      <description><![CDATA[
+        <p>在IEEE会议上，华为提出新的芯片制程缩放定律，目标到2031年实现等效1.4nm晶体管密度。该路线图代表华为在出口管制压力下探索超越传统摩尔定律的路径，寻求通过新架构/材料创新实现性能提升。这一定律的具体技术细节尚待披露，但表明华为正加速国内半导体能力追赶。</p>
+        <p>标的: AMD, 美光, 中科曙光, 浪潮信息, 长电科技, 工业富联, 海光信息, 景嘉微, 台积电, 英伟达, ASML, 博通, 寒武纪, 天数智芯, 中芯国际, ARM, 超微电脑, 高通</p>
+        <p>主线: policy_export, compute_demand, chip_supply, advanced_packaging, domestic_substitution</p>
+        <p>方向: 台积电→neutral ASML→neutral 中芯国际→positive 英伟达→negative AMD→negative 博通→neutral 寒武纪→positive 高通→negative ARM→neutral 美光→neutral 超微电脑→neutral 工业富联→neutral 中科曙光→positive 浪潮信息→positive 景嘉微→positive 长电科技→positive 天数智芯→positive 海光信息→positive </p>
+        <p><em>关注华为新缩放定律技术细节披露进度及国内fab量产可行性；警惕若华为突破将对非美系AI芯片设计公司形成直接竞争；国产替代主线持续催化，封测/设备/材料链跟涨；台积电短期订单不受影响，但长期需评估地缘风险。</em></p>
+        <p>来源: rss:techmeme 🔴 低可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_d6fa4f1a130a</category>
+    </item>
+    
+    <item>
+      <title>[4分] ima Copilot今日全面开放，并发布新能力知识号支持发布Skill</title>
+      <link>https://36kr.com/newsflashes/3824136947437704?f=rss</link>
+      <guid isPermaLink="false">e454db5299a14008e912969ebddda8a6076dcc31</guid>
+      <pubDate>Mon, 25 May 2026 03:13:16 GMT</pubDate>
+      <description><![CDATA[
+        <p>AI知识管理平台ima今日正式开放Copilot功能，此前排队用户超10万；同时推出知识号功能，支持用户发布和发现Skill应用，首批上线微信读书、腾讯招聘等。该产品允许用户调用自身沉淀的知识库进行AI任务执行，降低AI使用门槛，加速知识管理场景的AI落地。</p>
+        <p>标的: 腾讯</p>
+        <p>主线: ai_monetization</p>
+        <p>方向: 腾讯→neutral </p>
+        <p><em>Copilot全面开放是ima产品化的重要里程碑，但初期影响有限。需跟踪：Copilot用户留存率、知识号生态活跃度、能否从个人用户向企业场景拓展。腾讯招聘等B端Skill若形成规模，可能为腾讯带来企业端收入增量。</em></p>
+        <p>来源: rss:36kr 🟡 中可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_79d9110b2443</category>
+    </item>
+    
+    <item>
+      <title>[4分] hipEngine: Fast Native Qwen 3.6 Inference for RDNA3 (Strix Halo, 7900 XTX)</title>
+      <link>https://www.reddit.com/r/LocalLLaMA/comments/1tmq4s6/hipengine_fast_native_qwen_36_inference_for_rdna3</link>
+      <guid isPermaLink="false">9bed502af4fe5de7004bc747685882803b505f3c</guid>
+      <pubDate>Sun, 24 May 2026 22:21:21 GMT</pubDate>
+      <description><![CDATA[
+        <p>hipEngine是一个基于ROCm的本地LLM推理引擎，针对AMD RDNA3架构（7900 XTX）优化，支持Qwen 3.6 MoE模型。测试数据显示，在128K上下文预填充场景下，hipEngine达1055 tok/s，领先llama.cpp HIP后端（710 tok/s）约49%；峰值显存占用21GB左右，优于llama.cpp GGUF Q4_K_S（25GB）。Decode阶段略低于llama.cpp Vulkan。该项目使用HIP/C++编写，调用hipBLASLt、hipGraph、AOTriton等AMD原生库，无PyTorch依赖。</p>
+        <p>标的: AMD, 阿里巴巴</p>
+        <p>主线: compute_demand, model_capability, edge_ai, chip_supply</p>
+        <p>方向: AMD→neutral 阿里巴巴→neutral </p>
+        <p><em>跟踪ROCm生态对AMD GPU在AI推理市场份额的实质影响；关注Qwen模型在AMD硬件上的部署进展，若推理成本降低显著，可能扩大通义千问的开发者覆盖面；与英伟达CUDA生态形成竞争替代效应。</em></p>
+        <p>来源: reddit:localllama 🔴 低可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_676a4e21048d</category>
     </item>
     
   </channel>
