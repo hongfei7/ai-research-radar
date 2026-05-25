@@ -156,7 +156,7 @@ scoring:
   max_items_in_brief: 100           # 晨报最多保留条目数
   visual_enrich:
     max_images: 15                  # 每轮最多分析图片数
-    min_score: 6                    # 图片分析最低分（降低以扩大覆盖面）
+    min_score: 4                    # 图片分析最低分（降低以充分利用 VLM quota）
   time_decay:
     enabled: true
     half_life_hours: 4              # 4 小时后有效分数减半

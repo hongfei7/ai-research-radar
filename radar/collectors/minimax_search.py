@@ -97,6 +97,24 @@ class MinimaxSearchCollector(Collector):
                     if not title:
                         continue
 
+                    # 提取图片 URL：尝试多种常见字段名
+                    image_url = (
+                        r.get("image") or r.get("thumbnail") or
+                        r.get("og_image") or r.get("og:image") or ""
+                    )
+                    # 也尝试从 pagemap 提取（Google 风格搜索结果）
+                    if not image_url:
+                        pagemap = r.get("pagemap", {})
+                        if isinstance(pagemap, dict):
+                            cse = pagemap.get("cse_image") or pagemap.get("cse_thumbnail")
+                            if isinstance(cse, list) and cse:
+                                image_url = cse[0].get("src", "")
+                            if not image_url:
+                                metatags = pagemap.get("metatags")
+                                if isinstance(metatags, list) and metatags:
+                                    image_url = metatags[0].get("og:image", "")
+                    image_url = image_url.strip() if image_url else ""
+
                     # 跳过不相关结果
                     title_lower = title.lower()
                     if any(w in title_lower for w in [
@@ -114,7 +132,7 @@ class MinimaxSearchCollector(Collector):
                         fetched_at=fetched_at,
                         raw_summary=truncate(snippet),
                         credibility=_source_cred(source_id),
-                        image_url="",
+                        image_url=image_url,
                     )
                     items.append(item)
 

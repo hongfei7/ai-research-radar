@@ -388,20 +388,27 @@ class Processor:
             "用中文回答，≤100字，只输出分析结果，不要客套话。"
         )
 
-        for item in batch:
-            try:
-                result = await self.client.understand_image(
-                    prompt=prompt,
-                    image_url=item.image_url,
-                )
-                if result:
-                    item.visual_analysis = result.strip()
-                    logger.info(
-                        f"Visual enrich: {item.id[:12]} score={item.relevance_score} "
-                        f"→ {len(result)} chars"
+        sem = asyncio.Semaphore(5)
+
+        async def _analyze_one(item: Item):
+            async with sem:
+                try:
+                    result = await self.client.understand_image(
+                        prompt=prompt,
+                        image_url=item.image_url,
                     )
-            except Exception as e:
-                logger.error(f"Visual enrich failed for {item.id[:12]}: {e}")
+                    if result:
+                        item.visual_analysis = result.strip()
+                        logger.info(
+                            f"Visual enrich: {item.id[:12]} score={item.relevance_score} "
+                            f"→ {len(result)} chars"
+                        )
+                except Exception as e:
+                    logger.error(f"Visual enrich failed for {item.id[:12]}: {e}")
+
+        await asyncio.gather(*[_analyze_one(it) for it in batch])
+        count = sum(1 for it in batch if it.visual_analysis)
+        logger.info(f"Visual enrich complete: {count}/{len(batch)} images analyzed")
 
     # ================================================================
     # Stage 5: 事件深度分析
