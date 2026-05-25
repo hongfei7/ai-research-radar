@@ -218,6 +218,10 @@ async def run_cluster(cfg: dict) -> tuple[list[Item], dict]:
         processed = await processor.process(new_items)
 
         if not processed:
+            # 条目标记为已见（即使未通过筛选），避免后续轮次重复 LLM 调用
+            dedup = DedupStore()
+            dedup.mark_seen_batch([(it.id, it.title) for it in new_items])
+            dedup.close()
             return [], {}
 
         # Stage 3: 加载已有事件 → 聚类
@@ -367,6 +371,11 @@ async def run_full(cfg: dict) -> None:
                             save_situation(sit)
                 except Exception as e:
                     logger.error(f"WeChat fallback push failed: {e}")
+
+            # 条目标记为已见（即使未通过筛选），避免后续轮次重复 LLM 调用
+            dedup = DedupStore()
+            dedup.mark_seen_batch([(it.id, it.title) for it in new_items])
+            dedup.close()
 
             return
 
@@ -568,6 +577,7 @@ async def run_full(cfg: dict) -> None:
                         all_active_events=all_events_list,
                         situation=sit,
                         site_url=site_url,
+                        items=clustered_items,
                     )
                     if await send_wechat(wx_title, wx_content):
                         if sit:

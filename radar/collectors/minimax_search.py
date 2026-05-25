@@ -19,6 +19,8 @@ logger = logging.getLogger(__name__)
 
 _MAX_RAW_SUMMARY = 800
 _SEARCH_DELAY = 0.3
+_PER_RUN_STOCKS = 10      # 每轮搜索标的数（32 标轮换）
+_PER_RUN_TRENDING = 3     # 每轮搜索趋势话题数（10 话题轮换）
 
 
 class MinimaxSearchCollector(Collector):
