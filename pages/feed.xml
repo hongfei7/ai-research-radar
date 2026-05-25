@@ -5,103 +5,119 @@
     <link>https://hongfei7.github.io/ai-research-radar</link>
     <description>AI/科技/半导体板块的持续投研情报 feed — 由 MiniMax 策展</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 25 May 2026 15:03:27 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 16:02:05 GMT</lastBuildDate>
     <atom:link href="https://hongfei7.github.io/ai-research-radar/feed.xml" rel="self" type="application/rss+xml"/>
     
     <item>
-      <title>[8分] 台积电Q3净利创新高：AI芯片需求旺盛，2纳米制程本季量产</title>
-      <link>https://www.sohu.com/a/944599752_122362510</link>
-      <guid isPermaLink="false">af53d00f91831f4ff69d9e4cc23c5837db488f39</guid>
-      <pubDate>Mon, 25 May 2026 14:55:26 GMT</pubDate>
+      <title>[8分] Exclusive-ASML CEO sees tight supply in booming chip market as AI ...</title>
+      <link>https://finance.yahoo.com/sectors/technology/articles/exclusive-asml-ceo-sees-tight-130313584.html</link>
+      <guid isPermaLink="false">4d3385fa414db7d54c5015917ffff2adae4e7aaf</guid>
+      <pubDate>Mon, 25 May 2026 15:54:54 GMT</pubDate>
       <description><![CDATA[
-        <p>台积电Q3净利创历史新高，受益于AI芯片需求持续旺盛。公司2纳米制程将于本季度正式量产，同时加速推进亚利桑那州工厂扩建，并计划在2纳米基础上发展更先进制程技术。AI技术演进推动芯片性能要求不断提升，台积电的技术领先地位及其先进制程量产进展将成为产业链关注焦点。</p>
-        <p>标的: 超微电脑, 台积电, ASML, 中芯国际, AMD, ARM, 博通, 高通, 英伟达</p>
-        <p>主线: compute_demand, datacenter_power, advanced_packaging, domestic_substitution, edge_ai, policy_export, chip_supply</p>
-        <p>方向: 台积电→positive 英伟达→positive AMD→positive 博通→positive ASML→positive 高通→positive ARM→positive 超微电脑→positive 中芯国际→negative </p>
-        <p><em>核心跟踪变量：2nm制程良率爬坡节奏及产能释放进度；AI芯片厂商（英伟达、AMD等）获得晶圆配额情况。先进制程量产成功将强化台积电竞争壁垒，同时对ASML EUV设备需求形成拉动；超微电脑等AI服务器厂商间接受益。二阶效应关注：若2nm量产顺利，可能加速中芯国际等竞争对手的追赶压力。</em></p>
+        <p>ASML CEO对路透社表示，全球半导体市场在AI、卫星等领域强劲需求推动下将持续面临供应紧张局面，预计这种"紧张"状态短期内难以缓解。ASML作为芯片制造设备垄断供应商，其表态反映先进制程产能供需失衡问题依然严峻。供应瓶颈或将制约AI算力扩张速度，同时强化设备端议价能力。</p>
+        <p>标的: ASML, 台积电, AMD, 英伟达</p>
+        <p>主线: chip_supply, compute_demand</p>
+        <p>方向: ASML→positive 台积电→neutral 英伟达→neutral AMD→neutral </p>
+        <p><em>供应紧张验证算力需求旺盛可持续性。短期跟踪：ASML订单积压量及交付周期、先进制程产能扩张进度。二阶效应：设备交付瓶颈或传导至芯片厂产能释放节奏，影响云厂商capex节奏与AI推理/训练成本。</em></p>
         <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_db5be1b36cb4</category>
+      <category>evt_b7665d098e11</category>
     </item>
     
     <item>
-      <title>[6分] 违规走私AI服务器，超微电脑高管被捕|超微电脑_新浪财经_新浪网</title>
-      <link>https://finance.sina.com.cn/wm/2026-03-20/doc-inhrreqy4115670.shtml</link>
-      <guid isPermaLink="false">72112a9591871f796873adbeb4e39a931224bd81</guid>
-      <pubDate>Mon, 25 May 2026 14:55:26 GMT</pubDate>
+      <title>[8分] 英伟达领涨半导体再创新高：微软解除OpenAI独家合作引发多云端AI投资转向 | TechTrends 科技趨勢 - AlchemyJ</title>
+      <link>https://www.alchemyj.io/zh-cn/techtrends/2026-04-28-nvda-msft-openai-ai-infrastructure-shift</link>
+      <guid isPermaLink="false">7de9beeacf3c3219b52a01091fcd5ff1979ab5bc</guid>
+      <pubDate>Mon, 25 May 2026 15:54:54 GMT</pubDate>
       <description><![CDATA[
-        <p>3月20日，美国AI服务器大厂超微电脑（SMCI）卷入违反出口管制的走私案件，纽约南区联邦检察官已介入。超微电脑是全球AI服务器核心供应商，此次高管被捕事件可能影响其正常生产经营及供应链稳定性。鉴于超微电脑与英伟达、AMD等芯片厂商的深度绑定关系，该案件或波及上游芯片供给，并对市场算力供应预期产生扰动。出口管制执法的持续升级亦反映出美国对AI相关技术管控趋严的的政策导向。</p>
-        <p>标的: 超微电脑, AMD, 英伟达</p>
-        <p>主线: policy_export, compute_demand, chip_supply</p>
-        <p>方向: 超微电脑→negative 英伟达→neutral AMD→neutral </p>
-        <p><em>需跟踪：案件进展及对超微电脑产能影响程度、美国出口管制执法扩大化趋势。可能的二阶效应：若超微供应受限，下游云厂商或转向戴尔等竞争对手；英伟达/AMD GPU订单节奏可能受到扰动。建议关注其他AI服务器厂商的市场份额变化。</em></p>
+        <p>英伟达领涨半导体板块创历史新高，微软与OpenAI解除独家合作协议标志着AI云端竞争格局从独家绑定转向多模型并行。战略重组驱动资本加速流向Agentic AI（代理型AI）基础设施领域，利好提供推理与训练算力的芯片厂商。云厂商为降低单一模型依赖将分散采购AI芯片，英伟达、AMD、博通等算力供应商获直接提振；台积电、ASML等上游设备商同步受益；超微电脑、戴尔等服务器厂商订单预期上调。微软则面临AI合作生态重新布局的短期不确定性。</p>
+        <p>标的: 亚马逊, 谷歌, 博通, 戴尔, ASML, 台积电, 超微电脑, 英伟达, 美光, 微软, AMD</p>
+        <p>主线: datacenter_power, advanced_packaging, ai_monetization, chip_supply, compute_demand</p>
+        <p>方向: 英伟达→positive AMD→positive 博通→positive 台积电→positive ASML→positive 美光→positive 超微电脑→positive 戴尔→positive 微软→neutral 谷歌→positive 亚马逊→positive </p>
+        <p><em>跟踪变量：英伟达H100/H200出货节奏、博通AI网络芯片订单；多云分散采购对先进封装（CoWoS）产能的挤占；微软新AI合作方落地进展。二阶效应：算力需求从训练向推理迁移，利好推理芯片设计商；中小云厂cArm架构芯片渗透率或提升。</em></p>
         <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_3f1c584a1a83</category>
+      <category>evt_7c21e60c8005</category>
     </item>
     
     <item>
-      <title>[5分] 雷军：小米计划再投2000亿元用于研发，覆盖AI、芯片和OS</title>
-      <link>https://news.qq.com/rain/a/20260521A0A6MM00</link>
-      <guid isPermaLink="false">a4e8f4212ca391028888d7283c24e64e6249b265</guid>
-      <pubDate>Mon, 25 May 2026 14:55:26 GMT</pubDate>
+      <title>[7分] 每日收评科创50指数放量涨近6%,芯片产业链卷土重来,AI硬件反复活跃_长电科技_市场_涨停</title>
+      <link>http://www.sohu.com/a/1027402830_222256</link>
+      <guid isPermaLink="false">27add84db93d05062d35daf1e815dbf2998ea4e2</guid>
+      <pubDate>Mon, 25 May 2026 16:50:29 GMT</pubDate>
       <description><![CDATA[
-        <p>小米CEO雷军在5月21日北京昌平科技园发布会上宣布，未来5年将投入2000亿元用于研发，重点覆盖AI、芯片和操作系统三大领域。此次发布会上还推出了YU7 GT新车及新手机产品。2000亿规模的研发投入在国内科技行业处于领先水平，标志着小米加速从消费电子向底层技术能力延伸，芯片自研和OS生态建设有望对国内半导体及AI终端产业链形成拉动效应。</p>
-        <p>标的: 寒武纪, 中芯国际, 海光信息, 小米, ARM, 高通</p>
-        <p>主线: domestic_substitution, edge_ai, chip_supply</p>
-        <p>方向: 小米→positive 高通→neutral ARM→positive 中芯国际→positive 寒武纪→neutral 海光信息→neutral </p>
-        <p><em>关注小米芯片自研进展及OS生态建设节奏。若自研芯片落地，将对国产AI终端芯片链形成示范效应；OS自研可能重塑应用生态格局。建议跟踪其AI手机销量、芯片流片进度及与ARM授权合作变化。</em></p>
+        <p>科创50指数放量涨近6%，半导体板块掀起涨停潮。长电科技、通富微电、雅克科技等封测龙头涨停，中芯国际、拓荆科技等涨超10%。华为正式发布"韬(τ)定律"，构建从器件到系统的多层级协同优化体系，预计2031年高端芯片晶体管密度将达1.4nm制程等效水平。机构指出摩尔定律放缓背景下先进封装成为行业焦点，全球2024年先进封装市场规模约407亿美元，产业链上下游均受益于AI算力需求扩张。</p>
+        <p>标的: 中芯国际, 长电科技</p>
+        <p>主线: chip_supply, advanced_packaging, domestic_substitution, compute_demand</p>
+        <p>方向: 长电科技→positive 中芯国际→positive </p>
+        <p><em>跟踪华为韬定律技术路线落地节奏及下游客户验证进展；先进封装扩产需关注良率与HBM配套；长电科技等封测龙头受益于国产AI芯片订单释放，警惕地缘扰动对设备进口的影响。</em></p>
+        <p>来源: minimax_search 🔴 低可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_b52741da7b0a</category>
+    </item>
+    
+    <item>
+      <title>[7分] 高通技术公司发布AI200和AI250，重新定义AI时代机架级数据中心推理性能</title>
+      <link>https://www.qualcomm.cn/news/releases/2025/10/releases-2025-10-28</link>
+      <guid isPermaLink="false">5a86473472c99c2b030f8addd50f4c0330459577</guid>
+      <pubDate>Mon, 25 May 2026 15:54:54 GMT</pubDate>
+      <description><![CDATA[
+        <p>高通技术公司发布AI200与AI250两款AI芯片，专为机架级数据中心推理设计。公司高级副总裁马德嘉表示将重新定义机架级AI推理的可能性。此举标志着高通正式切入数据中心AI推理市场，与英伟达、AMD等展开竞争。值得关注其性能指标、功耗及生态系统建设，以评估对现有竞争格局的冲击。</p>
+        <p>标的: 高通, 亚马逊, Marvell, 博通, Intel, 戴尔, Meta, 超微电脑, 英伟达, 谷歌, 微软, AMD</p>
+        <p>主线: edge_ai, chip_supply, datacenter_power, compute_demand</p>
+        <p>方向: 高通→positive 英伟达→neutral AMD→neutral 博通→neutral Marvell→neutral Intel→neutral 超微电脑→neutral 戴尔→neutral 微软→neutral 谷歌→neutral 亚马逊→neutral Meta→neutral </p>
+        <p><em>跟踪高通AI200/A250性能参数、功耗及成本；关注云厂商采购动向；评估对英伟达、AMD数据中心推理市场份额的潜在影响。</em></p>
         <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_36111819326c</category>
+      <category>evt_f75e74bae971</category>
     </item>
     
     <item>
-      <title>[6分] Huawei claims sanctions-busting breakthrough with 1.4nm-class chips by 2031, claims 55% higher transistor density — firm claims new LogicFolding chip architecture can bypass EUV restrictions, introduces 'Tau Scaling Law' to replace Moore's Law</title>
-      <link>https://www.tomshardware.com/tech-industry/semiconductors/huawei-claims-sanctions-busting-breakthrough-with-1-4nm-class-chips-by-2031-claims-55-percent-higher-transistor-density-firm-claims-new-logicfolding-chip-architecture-can-bypass-euv-restrictions-introduces-tau-scaling-law-to-replace-moores-law</link>
-      <guid isPermaLink="false">d16304a48e7451ae3e6cb3d4fac88aec9fe48b09</guid>
-      <pubDate>Mon, 25 May 2026 13:10:31 GMT</pubDate>
+      <title>[7分] 寒武纪翻身海光扩张 国产AI芯片大角逐|ai芯片_新浪财经_新浪网</title>
+      <link>https://finance.sina.com.cn/roll/2025-09-05/doc-infpktkq6214809.shtml</link>
+      <guid isPermaLink="false">32fbc413c774bfd83923b0288ec60a08fecaeb10</guid>
+      <pubDate>Mon, 25 May 2026 15:54:54 GMT</pubDate>
       <description><![CDATA[
-        <p>华为发布「LogicFolding」芯片设计框架，基于自研「Tau Scaling Law」缩放定律，声称实现1.4nm级别制程，晶体管密度提升55%，可绕过EUV光刻机限制。目标2031年量产。此举旨在缩小与台积电、英伟达等技术差距，为中国半导体突围提供新路径。技术真实性待验证，但标志着国产高端芯片架构创新进入新阶段，对全球芯片竞争格局具有战略意义。</p>
-        <p>标的: 寒武纪, 台积电, ASML, 中芯国际, Marvell, AMD, ARM, 海光信息, 美光, 博通, Intel, 高通, 英伟达</p>
-        <p>主线: compute_demand, advanced_packaging, domestic_substitution, policy_export, chip_supply</p>
-        <p>方向: 英伟达→negative AMD→negative 台积电→negative ASML→neutral 中芯国际→positive 寒武纪→positive 海光信息→positive Intel→negative 高通→negative 博通→neutral ARM→neutral 美光→neutral Marvell→neutral </p>
-        <p><em>华为技术路径可行性存疑（2031年目标过于激进），但标志着国产芯片架构创新突破。建议：1）跟踪Tau Law技术验证进展；2）关注国产EUV替代方案（上海微电子等）；3）警惕对台积电/英伟达订单影响的情绪扰动；4）若技术验证成功，中芯国际等代工链将显著受益。</em></p>
-        <p>来源: rss:tomshardware 🟡 中可信 [转载自 未知来源]</p>
+        <p>2025年上半年，国产AI芯片在旺盛的AI推理需求支撑下持续热销，头部厂商寒武纪和海光信息业绩高增。寒武纪实现翻身，海光信息加速扩张，两者在国产AI芯片大角逐中占据领先地位。厂商在积累产成品库存的同时，积极储备关键元器件和产能。国内AI推理算力需求成为核心驱动力，国产替代进程加速。</p>
+        <p>标的: 浪潮信息, 海光信息, 景嘉微, 中芯国际, 中科曙光, 寒武纪</p>
+        <p>主线: chip_supply, domestic_substitution, compute_demand</p>
+        <p>方向: 寒武纪→positive 海光信息→positive 中芯国际→neutral 中科曙光→neutral 浪潮信息→neutral 景嘉微→neutral </p>
+        <p><em>持续跟踪头部国产AI芯片厂商产成品库存变化和关键元器件储备情况；关注下游云厂和互联网厂商对国产推理芯片的采购节奏；寒武纪和海光的业绩增长若持续验证，将加速国产算力链对海外芯片的替代进程，需关注中美科技博弈下可能的政策扰动。</em></p>
+        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_c51158ed0138</category>
+      <category>evt_cdcaee2fdc7c</category>
     </item>
     
     <item>
-      <title>[5分] Microsoft pulls plug on plans for 244-acre data center in Caledonia</title>
-      <link>https://www.tmj4.com/news/racine-county/microsoft-pulls-plug-on-plans-for-244-acre-data-center-in-caledonia-after-community-pushback</link>
-      <guid isPermaLink="false">969ea84b180f11595ef328fc94b783546e6be2da</guid>
-      <pubDate>Mon, 25 May 2026 13:09:53 GMT</pubDate>
+      <title>[6分] Imec builds world's first High-NA EUV-fabricated quantum dot qubit device — breakthrough could pull quantum computing onto the same manufacturing roadmap as next-gen AI processors, compressing timelines</title>
+      <link>https://www.tomshardware.com/tech-industry/semiconductors/imec-builds-worlds-first-high-na-euv-fabricated-quantum-dot-qubit-device-breakthrough-could-pull-quantum-computing-onto-the-same-manufacturing-roadmap-as-next-gen-ai-processors-compressing-timelines</link>
+      <guid isPermaLink="false">2b93b32a606f7acf14e0cbadffdcc89b1f70b332</guid>
+      <pubDate>Mon, 25 May 2026 15:27:00 GMT</pubDate>
       <description><![CDATA[
-        <p>微软取消了在Caledonia建设244英亩数据中心的计划，具体原因未在文中说明（可能涉及土地、环境或当地审批问题）。这一决策反映了大型科技公司在数据中心扩张过程中面临的选址和审批挑战，可能对其AI基础设施扩建节奏产生影响。</p>
-        <p>标的: 超微电脑, 微软, AMD, 亚马逊, 工业富联, 谷歌, 英伟达</p>
-        <p>主线: datacenter_power, compute_demand, chip_supply</p>
-        <p>方向: 微软→negative 英伟达→negative AMD→negative 超微电脑→negative 工业富联→negative 亚马逊→neutral 谷歌→neutral </p>
-        <p><em>跟踪变量：其他云厂商（CSP）是否调整数据中心建设计划；电力供给紧张地区的新项目审批进展。二阶效应：若更多项目搁置，可能影响GPU/服务器短期订单；与CSP capex指引调整联动。</em></p>
-        <p>来源: hackernews 🔴 低可信 [转载自 未知来源]</p>
+        <p>比利时微电子研究中心（Imec）宣布完成世界首个采用High-NA EUV光刻技术制造的硅量子点量子比特器件。该突破证明量子计算可复用半导体行业先进制造工艺体系，若成功量产，量子计算与AI处理器将共享同一制造路线图，大幅压缩商业化时间线。目前High-NA EUV光刻机仅ASML可提供，此技术验证为ASML设备打开量子计算新市场，同时为台积电等晶圆代工厂提供新的业务拓展方向。</p>
+        <p>标的: ASML, 台积电</p>
+        <p>主线: chip_supply, advanced_packaging</p>
+        <p>方向: ASML→positive 台积电→neutral </p>
+        <p><em>需跟踪：Imec量子比特良率数据、ASML高NA EUV订单结构变化、量子计算商业化时间表修正。可能的二阶效应：若量子计算与AI共线制造，台积电CoWoS产能可能需要新增量子专用产线；ASML高NA EUV需求将获双重拉动（AI芯片+量子计算）。</em></p>
+        <p>来源: rss:tomshardware 🟡 中可信 [转载自 https://www.tomshardware.com]</p>
       ]]></description>
-      <category>evt_70f36ef7d48f</category>
+      <category>evt_dec1fb52d2e0</category>
     </item>
     
     <item>
-      <title>[4分] SoftBank stock jumped 4.6% to a record high on Monday, spurred by hopes of big returns from the company's stakes in OpenAI and SB Energy Corp if they go public (Bloomberg)</title>
-      <link>https://www.techmeme.com/260525/p14#a260525p14</link>
-      <guid isPermaLink="false">1bb9f2967cefaf145414cbed7e0a83441c15a931</guid>
-      <pubDate>Mon, 25 May 2026 13:50:11 GMT</pubDate>
+      <title>[5分] 科大讯飞独家揭秘：芯片适配优化如何助力星火大模型升级？</title>
+      <link>https://www.sohu.com/a/940010588_122454042</link>
+      <guid isPermaLink="false">f53dc533351587f00bd5d5427e5012b187b151bd</guid>
+      <pubDate>Mon, 25 May 2026 15:54:54 GMT</pubDate>
       <description><![CDATA[
-        <p>软银集团（SoftBank Group）股价周一上涨4.6%至历史新高，主要受市场对其持有的OpenAI和SB Energy Corp股份在潜在IPO时获得高回报的预期推动。软银近年来通过愿景基金积极投资AI领域，OpenAI作为全球领先的AI模型公司，其估值提升直接利好软银投资组合。微软作为OpenAI的最大股东（投资约130亿美元），也将间接受益。分析师建议关注软银持仓的AI公司IPO进程及其对市场情绪的传导。</p>
-        <p>标的: 微软, 台积电, OpenAI, ARM, 英伟达</p>
-        <p>主线: compute_demand, ai_monetization, model_capability</p>
-        <p>方向: 微软→positive ARM→positive 英伟达→neutral 台积电→neutral OpenAI→positive </p>
-        <p><em>跟踪变量：OpenAI及软银系AI公司IPO时间表、软银持仓估值变化；高估值AI资产上市可能强化市场对AI算力需求的信心，带动算力链（英伟达、台积电）情绪；但需警惕估值回调风险，建议关注微软Azure营收增速作为AI变现验证。</em></p>
-        <p>来源: rss:techmeme 🔴 低可信 [转载自 未知来源]</p>
+        <p>科大讯飞董秘回应投资者关于适配下一代国产芯片UE8M0 FP8技术的提问，强调公司在芯片适配优化方面的技术积累与合作伙伴关系。该适配工作直接支撑星火大模型的升级迭代。UE8M0 FP8为国产AI芯片，支持FP8精度计算，在AI推理/训练场景中能实现性能与能效的平衡。此次合作展示了国产AI芯片与国产大模型的深度协同能力，为国内AI算力自主可控提供支撑。</p>
+        <p>标的: 科大讯飞</p>
+        <p>主线: chip_supply, domestic_substitution, model_capability</p>
+        <p>方向: 科大讯飞→positive </p>
+        <p><em>建议跟踪：1）UE8M0 FP8芯片量产进展及产能；2）星火大模型适配后的性能提升数据；3）科大讯飞与国产芯片厂商的合作深度与商业化落地节奏。此事件反映国产AI芯片与大模型的协同验证加速，需关注其他国产算力链标的（寒武纪、海光信息）的跟进情况。</em></p>
+        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_6735e22b3ea3</category>
+      <category>evt_48055bf6bf2e</category>
     </item>
     
   </channel>
