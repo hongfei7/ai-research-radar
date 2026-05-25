@@ -5,39 +5,55 @@
     <link>https://hongfei7.github.io/ai-research-radar</link>
     <description>AI/科技/半导体板块的持续投研情报 feed — 由 MiniMax 策展</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 25 May 2026 21:19:33 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 22:39:48 GMT</lastBuildDate>
     <atom:link href="https://hongfei7.github.io/ai-research-radar/feed.xml" rel="self" type="application/rss+xml"/>
     
     <item>
-      <title>[8分] Why Nvidia's AI boom needs Dutch chip equipment maker ASML - CNBC</title>
-      <link>https://www.cnbc.com/2026/01/29/-ai-boom-nvidia-asml-dutch-chip-equipment-maker-lithography-.html</link>
-      <guid isPermaLink="false">9041244552900ef6bc3f3bbcb17151e40939ddb8</guid>
-      <pubDate>Mon, 25 May 2026 21:15:40 GMT</pubDate>
+      <title>[5分] Microsoft Copilot Cowork Exfiltrates Files</title>
+      <link>https://www.promptarmor.com/resources/microsoft-copilot-cowork-exfiltrates-files</link>
+      <guid isPermaLink="false">6b4a01a22f8228e73d601771bb97900a72e2caaf</guid>
+      <pubDate>Mon, 25 May 2026 21:45:57 GMT</pubDate>
       <description><![CDATA[
-        <p>CNBC报道分析英伟达AI繁荣对ASML的依赖关系。ASML是全球唯一EUV光刻机制造商，该设备是生产5nm及以下先进制程芯片的关键。英伟达H100/H200等AI芯片需台积电使用ASML EUV机台制造，ASML订单已排至2025年。台积电、三星均依赖ASML EUV产能扩张。若ASML产能或出货受限，全球AI芯片供给将面临瓶颈。</p>
-        <p>标的: 博通, 台积电, 英伟达, AMD, ASML</p>
-        <p>主线: advanced_packaging, chip_supply, compute_demand</p>
-        <p>方向: 英伟达→positive ASML→positive 台积电→positive AMD→neutral 博通→neutral </p>
-        <p><em>重点跟踪ASML EUV交付节奏与订单积压变化；关注台积电3nm/2nm扩产进度；ASML若上调产能指引将强化算力链信心；警惕地缘政治对EUV出口许可的影响。</em></p>
-        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
+        <p>安全研究人员发现 Microsoft Copilot Cowork 存在文件泄露漏洞，该 AI 助手可能在用户不知情的情况下将敏感文件数据外传。此事件凸显企业 AI 助手在数据安全与隐私保护方面的潜在风险，预计将引发企业对 AI 部署安全性的重新审视，并可能面临监管层面的审查压力。</p>
+        <p>标的: 微软</p>
+        <p>主线: ai_monetization, policy_export</p>
+        <p>方向: 微软→negative </p>
+        <p><em>需持续跟踪微软对此漏洞的修复进展及企业客户的反馈；若安全事件持续发酵，可能影响 Copilot 企业版推广进度，并对其他 AI 助手提供商形成间接警示，建议关注谷歌、亚马逊等竞争对手在 AI 安全合规方面的布局差异。</em></p>
+        <p>来源: hackernews 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_b7665d098e11</category>
+      <category>evt_7c51e0e5d189</category>
     </item>
     
     <item>
-      <title>[6分] PDF科大讯飞(002230.sz) 2025年年度</title>
-      <link>https://static.cninfo.com.cn/finalpage/2026-04-29/1225268686.PDF</link>
-      <guid isPermaLink="false">b4f5981824f71ccfef9f32de5c1ec036c5be472c</guid>
-      <pubDate>Mon, 25 May 2026 21:15:40 GMT</pubDate>
+      <title>[4分] Press Releases | Marvell Newsroom</title>
+      <link>https://www.marvell.com/company/newsroom/press-releases.html</link>
+      <guid isPermaLink="false">f196cd2effcfb7dd6f399fea0bc91d1489bab403</guid>
+      <pubDate>Mon, 25 May 2026 22:35:44 GMT</pubDate>
       <description><![CDATA[
-        <p>科大讯飞在CHIME9国际权威语音识别大赛多模态上下文感知识别任务中再获第一，实现该赛事六连冠。其语音大模型采用非自回归结构，在远场高噪复杂场景实现突破，并具备超拟人合成技术。讯飞持续保持语音AI领域业界引领地位，2026年技术布局持续深化。该成就验证国产AI在语音交互领域的技术竞争力。</p>
-        <p>标的: 科大讯飞, 阿里巴巴, 腾讯, 商汤, 百度</p>
-        <p>主线: model_capability, domestic_substitution</p>
-        <p>方向: 科大讯飞→positive 百度→neutral 腾讯→neutral 阿里巴巴→neutral 商汤→neutral </p>
-        <p><em>关注讯飞语音技术商业化落地进展（智能硬件/车载/教育场景），以及能否将语音识别优势转化为收入增长。六连冠强化国产语音AI技术自信，需跟踪其他国产厂商技术追赶节奏。</em></p>
+        <p>本页为Marvell官方新闻室页面索引，仅提供“查看最新公告、新闻稿及媒体报道”的引导提示，未包含任何具体新闻事件、产品发布或财务数据。信息严重不足，无法进行投研价值评估。</p>
+        <p>标的: Marvell</p>
+        <p>主线: compute_demand, chip_supply</p>
+        
+        <p><em>本页为目录页而非具体新闻，建议查找Marvell近期具体公告（如AI基础设施、定制芯片或财报新闻）后再进行投研分析。当前无法判断对算力产业链的影响。</em></p>
         <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_1740d0916206</category>
+      <category>evt_8891113b306a</category>
+    </item>
+    
+    <item>
+      <title>[4分] Home  NVIDIA Newsroom</title>
+      <link>http://nvidianews.nvidia.com/</link>
+      <guid isPermaLink="false">7afd4a689aa05e6f7c10ceef6207d0d0ae5fc482</guid>
+      <pubDate>Mon, 25 May 2026 17:22:05 GMT</pubDate>
+      <description><![CDATA[
+        <p>NVIDIA宣布即将参加金融社区系列活动，包括TD Cowen第54届年度科技会议等投资者关系活动。这是公司例行的资本市场沟通安排，旨在向机构投资者通报公司最新业务进展。资讯内容较为简略，未披露具体议程或讨论要点。</p>
+        <p>标的: 英伟达</p>
+        <p>主线: compute_demand, chip_supply</p>
+        <p>方向: 英伟达→neutral </p>
+        <p><em>此类投资者关系活动通常不涉及重大信息披露，分析师可关注会后是否有正式会议纪要或管理层评论释放。重点跟踪会议期间对GPU需求前景、产能规划及竞争格局等议题的表态。</em></p>
+        <p>来源: minimax_search 🔴 低可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_f35f868c61bc</category>
     </item>
     
   </channel>
