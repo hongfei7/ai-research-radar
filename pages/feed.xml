@@ -5,103 +5,39 @@
     <link>https://hongfei7.github.io/ai-research-radar</link>
     <description>AI/科技/半导体板块的持续投研情报 feed — 由 MiniMax 策展</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 25 May 2026 09:01:46 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 09:17:13 GMT</lastBuildDate>
     <atom:link href="https://hongfei7.github.io/ai-research-radar/feed.xml" rel="self" type="application/rss+xml"/>
     
     <item>
-      <title>[6分] 中科曙光抢再融资新政首单拟募80亿 加码ai算力近六年累投64亿研发|中科曙光_新浪财经_新浪网</title>
-      <link>https://finance.sina.com.cn/roll/2026-02-11/doc-inhmkyvn3913676.shtml</link>
-      <guid isPermaLink="false">49f6d19442c001733a3ec67f8fd976b5dd3f9b55</guid>
-      <pubDate>Mon, 25 May 2026 08:55:13 GMT</pubDate>
+      <title>[8分] 微软迈亚200芯片发布：推理成本优于英伟达，AI硬件自主化迈出关键步伐</title>
+      <link>https://www.tmtpost.com/agent/ai-article/16512</link>
+      <guid isPermaLink="false">afd87307f03f8203143d387fd790869c69427422</guid>
+      <pubDate>Mon, 25 May 2026 09:12:59 GMT</pubDate>
       <description><![CDATA[
-        <p>中科曙光拟再融资80亿用于AI算力，近六年累计研发投入64亿。2025年8月公司联合20余家产业链企业推出国内首个AI计算开放架构，采用类似"安卓模式"的开放生态路径，目标是突破算力瓶颈。该架构支持多品牌AI加速卡，有望整合国产AI芯片资源，构建开放的算力平台生态。</p>
-        <p>标的: 英伟达, 寒武纪, AMD, 中科曙光, 工业富联, 景嘉微, 浪潮信息, 海光信息, Intel</p>
-        <p>主线: compute_demand, chip_supply, domestic_substitution</p>
-        <p>方向: 中科曙光→positive 浪潮信息→positive 寒武纪→positive 海光信息→positive 景嘉微→positive 工业富联→positive 英伟达→neutral AMD→neutral Intel→neutral </p>
-        <p><em>跟踪开放架构落地进展与生态伙伴扩容速度；若成功整合国产芯片资源，将强化国内AI算力链竞争力，对冲国际芯片管制影响；与寒武纪、海光等国产芯片厂商形成协同效应，同时需观察对国际厂商的态度变化。</em></p>
+        <p>微软于2026年5月21日发布自研AI推理芯片Maia 200，已内部规模化部署，部分推理任务单位算力成本低于英伟达同类GPU。微软计划年内向企业客户开放该芯片，用于降低Azure云AI服务成本，标志着其AI硬件自主化进入新阶段。此举对英伟达在推理芯片市场的地位形成挑战，同时若Maia 200由台积电代工，也将利好其先进制程需求。</p>
+        <p>标的: 微软, 台积电, 英伟达</p>
+        <p>主线: chip_supply, compute_demand</p>
+        <p>方向: 英伟达→negative 微软→positive 台积电→positive </p>
+        <p><em>持续跟踪Maia 200产能爬坡节奏与客户拓展进度；若推理芯片成本优势持续扩大，可能倒逼英伟达降价或加速推出新一代推理GPU，进而影响整体AI芯片定价体系。</em></p>
         <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_6978c8d8f764</category>
+      <category>evt_ee59df1e6a70</category>
     </item>
     
     <item>
-      <title>[6分] 百度ai王牌昆仑芯赴港ipo，国产算力突围迎关键试炼-36氪</title>
-      <link>https://www.36kr.com/p/3582740350253954</link>
-      <guid isPermaLink="false">51806da114c525f6558933e7a12775385ebdca97</guid>
-      <pubDate>Mon, 25 May 2026 08:55:13 GMT</pubDate>
+      <title>[6分] Gemma 4 Multi-Token Prediction Delivers Up to ~3x Faster Token Generation</title>
+      <link>https://www.infoq.com/news/2026/05/gemma4-multi-token-prediction</link>
+      <guid isPermaLink="false">d4c34558f234da5f4d775c46355d46eade3b8675</guid>
+      <pubDate>Mon, 25 May 2026 09:00:00 GMT</pubDate>
       <description><![CDATA[
-        <p>百度旗下AI芯片公司昆仑芯筹备港股IPO，12月5日由路透社等外媒率先披露。昆仑芯作为百度AI战略核心资产，此次IPO是国产算力企业首次登陆公开资本市场的重要尝试。若成功上市，将为国内AI芯片企业提供估值锚点，同时检验资本市场对国产高端AI芯片的认可度，标志着国产算力突围进入关键验证阶段。</p>
-        <p>标的: 百度</p>
-        <p>主线: compute_demand, chip_supply, domestic_substitution</p>
-        <p>方向: 百度→positive </p>
-        <p><em>跟踪变量：IPO聆讯进度、融资规模、估值区间。关注对A股/港股AI算力链的联动效应，若昆仑芯获高估值，或带动寒武纪、海光信息等国产AI芯片标的估值重估；同时关注百度核心业务与芯片业务估值分拆逻辑。</em></p>
-        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
+        <p>Google发布Gemma 4模型，引入多token预测(MTP)技术配合投机解码(speculative decoding)机制。该技术允许模型并行生成多个候选token并一次性验证，可实现高达3倍的推理加速且不损失输出质量。此突破对推理效率影响显著，可能重塑未来AI模型部署的算力需求结构。</p>
+        <p>标的: 微软, Meta, 阿里巴巴, 高通, ARM, 百度, 英伟达, 腾讯, AMD, 谷歌</p>
+        <p>主线: edge_ai, model_capability, compute_demand, chip_supply</p>
+        <p>方向: 谷歌→positive 英伟达→neutral AMD→neutral 高通→neutral ARM→neutral 微软→positive Meta→positive 阿里巴巴→positive 腾讯→positive 百度→positive </p>
+        <p><em>MTP投机解码正成为推理优化新范式。建议跟踪：1)Gemma 4开源社区采用情况；2)其他大模型跟进速度；3)推理效率提升对云厂商推理芯片采购结构的影响；4)端侧AI部署的可行性提升。高效推理可能压缩云端算力需求，但利好推理芯片能效比领先厂商。</em></p>
+        <p>来源: rss:infoq 🟡 中可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_c5313c0316e5</category>
-    </item>
-    
-    <item>
-      <title>[5分] 科大讯飞将AI芯片效率与英伟达的差距缩小至95% - edgen.tech</title>
-      <link>https://www.edgen.tech/zh/news/post/iflytek-narrows-ai-chip-gap-with-nvidia-to-95-efficiency</link>
-      <guid isPermaLink="false">7b03d32713780fbcff334b7a174323a6e1ea85a7</guid>
-      <pubDate>Mon, 25 May 2026 08:55:13 GMT</pubDate>
-      <description><![CDATA[
-        <p>科大讯飞与华为自2023年5月起合作优化国产AI芯片效率，目前在国产硬件上实现MoE训练效率达93%，与英伟达的差距已缩小至95%。双方主要解决大规模国产芯片组网及AI工作负载软件优化难题。技术突破标志着国产AI芯片在复杂架构训练方面取得实质进展，对标英伟达产品竞争力提升。</p>
-        <p>标的: 英伟达, 科大讯飞, 台积电, 中芯国际</p>
-        <p>主线: model_capability, advanced_packaging, chip_supply, domestic_substitution</p>
-        <p>方向: 科大讯飞→positive 英伟达→negative 台积电→neutral 中芯国际→positive </p>
-        <p><em>跟踪MoE训练效率能否进一步提升至95%+、与英伟达H100/H200的实际性能对比数据；可能加速国产大模型商业化部署，对寒武纪等国产AI芯片形成技术协同；台积电作为晶圆厂需关注国产替代对成熟制程订单的影响。</em></p>
-        <p>来源: web_search 🔴 低可信 [转载自 https://edgen.tech]</p>
-      ]]></description>
-      <category>evt_b1da18307788</category>
-    </item>
-    
-    <item>
-      <title>[6分] A股三大指数集体收涨，中芯国际涨超18%</title>
-      <link>https://36kr.com/newsflashes/3824360889831811?f=rss</link>
-      <guid isPermaLink="false">6c2cfed8ab66d00c5b22580198a5da43e24b3da7</guid>
-      <pubDate>Mon, 25 May 2026 07:01:04 GMT</pubDate>
-      <description><![CDATA[
-        <p>A股三大指数集体收涨，沪指涨0.96%，深成指涨1.66%，创业板指涨2.1%；半导体、电力、通信设备板块领涨，华虹公司涨停，中芯国际涨超18%，新易盛涨超8%，晋控电力涨超5%；能源、燃气、制药板块走弱。中芯国际作为中国半导体龙头涨幅显著，反映市场对国产替代主题的持续关注。</p>
-        <p>标的: 中芯国际</p>
-        <p>主线: domestic_substitution</p>
-        <p>方向: 中芯国际→positive </p>
-        <p><em>需跟踪中芯国际产能利用率及国产替代政策加码力度，同时关注半导体板块情绪能否延续，警惕短期获利盘回吐压力。</em></p>
-        <p>来源: rss:36kr 🟡 中可信 [转载自 未知来源]</p>
-      ]]></description>
-      <category>evt_6fa7f73644cb</category>
-    </item>
-    
-    <item>
-      <title>[4分] If you use NVIDIA Isaac Sim for reinforcement learning, do you use Isaac Lab with it? Just want to get a sense of what the status quo is. [D]</title>
-      <link>https://www.reddit.com/r/machinelearning/comments/1tn1rtk/if_you_use_nvidia_isaac_sim_for_reinforcement</link>
-      <guid isPermaLink="false">357664967549368ac1da8c2ddf505c101db1a092</guid>
-      <pubDate>Mon, 25 May 2026 07:26:30 GMT</pubDate>
-      <description><![CDATA[
-        <p>NVIDIA Isaac Sim/Isaac Lab作为机器人和强化学习仿真平台正被广泛采用，但用户反馈指出其存在明显短板：Isaac Lab虽能优雅处理多Actor系统（如PPO算法下数百个Actor的日志与训练），却在文档完善度上严重不足，导致新环境搭建、自定义动作/奖励/策略及算法接入存在较高学习成本。用户面临两难选择——使用Isaac Lab脚手架需不断踩坑并自行完善文档，或直连Isaac Sim自行编写RL agent接口。</p>
-        <p>标的: 英伟达</p>
-        <p>主线: model_capability, compute_demand</p>
-        <p>方向: 英伟达→neutral </p>
-        <p><em>持续跟踪Isaac Lab文档更新节奏及社区解决方案成熟度；若痛点长期未解决，可能延缓部分研究机构/工业用户对Isaac生态的迁移进度，利好提供第三方封装层或替代仿真方案的竞争者。</em></p>
-        <p>来源: reddit:ml 🔴 低可信 [转载自 https://www.reddit.com/r/ML/comments/357664967549368ac1da8c2ddf505c101db1a092]</p>
-      ]]></description>
-      <category>evt_368c6fa75539</category>
-    </item>
-    
-    <item>
-      <title>[5分] 华为发布AIDC数据基础设施全栈方案，覆盖数据湖至智能体框架五大层级</title>
-      <link>https://www.leiphone.com/category/corporateservices/hztu4i7d1wndwkwt.html</link>
-      <guid isPermaLink="false">0d283c39827d89e50e957969cb8eb8de25ee575b</guid>
-      <pubDate>Mon, 25 May 2026 05:27:00 GMT</pubDate>
-      <description><![CDATA[
-        <p>华为在巴黎发布AIDC数据基础设施全栈方案，覆盖数据湖（OceanStor Pacific、11PB/2U容量密度、千亿向量秒检）、知识与记忆平台（PB级KV Cache、首Token时延降90%）、模型工程（ModelEngine零代码部署）及智能体框架五大层级。全球活跃智能体已超3000万，预计5年达22亿；Token处理量从60亿/分钟增至150亿/分钟。企业需围绕数据湖、算力、模型、Agent框架系统性规划AI基础设施。金融客户200轮推理迭代案例显示KV Cache对降低GPU冗余计算成本的关键作用。</p>
-        <p>标的: 英伟达, 微软, 亚马逊, 谷歌, 台积电</p>
-        <p>主线: model_capability, compute_demand, advanced_packaging, ai_monetization, datacenter_power</p>
-        <p>方向: 英伟达→positive 台积电→positive 微软→positive 谷歌→positive 亚马逊→positive </p>
-        <p><em>Token消耗爆发式增长（150亿/分钟）验证推理算力需求持续性，利好英伟达GPU及台积电先进制程；华为数据湖方案强调存储与推理协同，需跟踪对英伟达GPU亲和度。微软Azure、谷歌GCP、AWS推理集群扩展或加速，企业AI变现路径更清晰。</em></p>
-        <p>来源: rss:leiphone 🟡 中可信 [转载自 未知来源]</p>
-      ]]></description>
-      <category>evt_9b9f5a92e0c5</category>
+      <category>evt_33b3a2cebe80</category>
     </item>
     
   </channel>
