@@ -5,119 +5,87 @@
     <link>https://hongfei7.github.io/ai-research-radar</link>
     <description>AI/科技/半导体板块的持续投研情报 feed — 由 MiniMax 策展</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 25 May 2026 16:02:05 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 17:54:59 GMT</lastBuildDate>
     <atom:link href="https://hongfei7.github.io/ai-research-radar/feed.xml" rel="self" type="application/rss+xml"/>
     
     <item>
-      <title>[8分] Exclusive-ASML CEO sees tight supply in booming chip market as AI ...</title>
-      <link>https://finance.yahoo.com/sectors/technology/articles/exclusive-asml-ceo-sees-tight-130313584.html</link>
-      <guid isPermaLink="false">4d3385fa414db7d54c5015917ffff2adae4e7aaf</guid>
-      <pubDate>Mon, 25 May 2026 15:54:54 GMT</pubDate>
+      <title>[9分] 中芯国际因AI芯片需求强劲上调2026年业绩展望 - edgen.tech</title>
+      <link>https://www.edgen.tech/zh/news/post/smic-boosts-2026-outlook-on-strong-ai-chip-demand</link>
+      <guid isPermaLink="false">3fa6b6166addaf3c5709bed83c8c4dd74fe2c2c6</guid>
+      <pubDate>Mon, 25 May 2026 17:48:21 GMT</pubDate>
       <description><![CDATA[
-        <p>ASML CEO对路透社表示，全球半导体市场在AI、卫星等领域强劲需求推动下将持续面临供应紧张局面，预计这种"紧张"状态短期内难以缓解。ASML作为芯片制造设备垄断供应商，其表态反映先进制程产能供需失衡问题依然严峻。供应瓶颈或将制约AI算力扩张速度，同时强化设备端议价能力。</p>
-        <p>标的: ASML, 台积电, AMD, 英伟达</p>
-        <p>主线: chip_supply, compute_demand</p>
-        <p>方向: ASML→positive 台积电→neutral 英伟达→neutral AMD→neutral </p>
-        <p><em>供应紧张验证算力需求旺盛可持续性。短期跟踪：ASML订单积压量及交付周期、先进制程产能扩张进度。二阶效应：设备交付瓶颈或传导至芯片厂产能释放节奏，影响云厂商capex节奏与AI推理/训练成本。</em></p>
-        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
-      ]]></description>
-      <category>evt_b7665d098e11</category>
-    </item>
-    
-    <item>
-      <title>[8分] 英伟达领涨半导体再创新高：微软解除OpenAI独家合作引发多云端AI投资转向 | TechTrends 科技趨勢 - AlchemyJ</title>
-      <link>https://www.alchemyj.io/zh-cn/techtrends/2026-04-28-nvda-msft-openai-ai-infrastructure-shift</link>
-      <guid isPermaLink="false">7de9beeacf3c3219b52a01091fcd5ff1979ab5bc</guid>
-      <pubDate>Mon, 25 May 2026 15:54:54 GMT</pubDate>
-      <description><![CDATA[
-        <p>英伟达领涨半导体板块创历史新高，微软与OpenAI解除独家合作协议标志着AI云端竞争格局从独家绑定转向多模型并行。战略重组驱动资本加速流向Agentic AI（代理型AI）基础设施领域，利好提供推理与训练算力的芯片厂商。云厂商为降低单一模型依赖将分散采购AI芯片，英伟达、AMD、博通等算力供应商获直接提振；台积电、ASML等上游设备商同步受益；超微电脑、戴尔等服务器厂商订单预期上调。微软则面临AI合作生态重新布局的短期不确定性。</p>
-        <p>标的: 亚马逊, 谷歌, 博通, 戴尔, ASML, 台积电, 超微电脑, 英伟达, 美光, 微软, AMD</p>
-        <p>主线: datacenter_power, advanced_packaging, ai_monetization, chip_supply, compute_demand</p>
-        <p>方向: 英伟达→positive AMD→positive 博通→positive 台积电→positive ASML→positive 美光→positive 超微电脑→positive 戴尔→positive 微软→neutral 谷歌→positive 亚马逊→positive </p>
-        <p><em>跟踪变量：英伟达H100/H200出货节奏、博通AI网络芯片订单；多云分散采购对先进封装（CoWoS）产能的挤占；微软新AI合作方落地进展。二阶效应：算力需求从训练向推理迁移，利好推理芯片设计商；中小云厂cArm架构芯片渗透率或提升。</em></p>
-        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
-      ]]></description>
-      <category>evt_7c21e60c8005</category>
-    </item>
-    
-    <item>
-      <title>[7分] 每日收评科创50指数放量涨近6%,芯片产业链卷土重来,AI硬件反复活跃_长电科技_市场_涨停</title>
-      <link>http://www.sohu.com/a/1027402830_222256</link>
-      <guid isPermaLink="false">27add84db93d05062d35daf1e815dbf2998ea4e2</guid>
-      <pubDate>Mon, 25 May 2026 16:50:29 GMT</pubDate>
-      <description><![CDATA[
-        <p>科创50指数放量涨近6%，半导体板块掀起涨停潮。长电科技、通富微电、雅克科技等封测龙头涨停，中芯国际、拓荆科技等涨超10%。华为正式发布"韬(τ)定律"，构建从器件到系统的多层级协同优化体系，预计2031年高端芯片晶体管密度将达1.4nm制程等效水平。机构指出摩尔定律放缓背景下先进封装成为行业焦点，全球2024年先进封装市场规模约407亿美元，产业链上下游均受益于AI算力需求扩张。</p>
-        <p>标的: 中芯国际, 长电科技</p>
-        <p>主线: chip_supply, advanced_packaging, domestic_substitution, compute_demand</p>
-        <p>方向: 长电科技→positive 中芯国际→positive </p>
-        <p><em>跟踪华为韬定律技术路线落地节奏及下游客户验证进展；先进封装扩产需关注良率与HBM配套；长电科技等封测龙头受益于国产AI芯片订单释放，警惕地缘扰动对设备进口的影响。</em></p>
-        <p>来源: minimax_search 🔴 低可信 [转载自 未知来源]</p>
-      ]]></description>
-      <category>evt_b52741da7b0a</category>
-    </item>
-    
-    <item>
-      <title>[7分] 高通技术公司发布AI200和AI250，重新定义AI时代机架级数据中心推理性能</title>
-      <link>https://www.qualcomm.cn/news/releases/2025/10/releases-2025-10-28</link>
-      <guid isPermaLink="false">5a86473472c99c2b030f8addd50f4c0330459577</guid>
-      <pubDate>Mon, 25 May 2026 15:54:54 GMT</pubDate>
-      <description><![CDATA[
-        <p>高通技术公司发布AI200与AI250两款AI芯片，专为机架级数据中心推理设计。公司高级副总裁马德嘉表示将重新定义机架级AI推理的可能性。此举标志着高通正式切入数据中心AI推理市场，与英伟达、AMD等展开竞争。值得关注其性能指标、功耗及生态系统建设，以评估对现有竞争格局的冲击。</p>
-        <p>标的: 高通, 亚马逊, Marvell, 博通, Intel, 戴尔, Meta, 超微电脑, 英伟达, 谷歌, 微软, AMD</p>
-        <p>主线: edge_ai, chip_supply, datacenter_power, compute_demand</p>
-        <p>方向: 高通→positive 英伟达→neutral AMD→neutral 博通→neutral Marvell→neutral Intel→neutral 超微电脑→neutral 戴尔→neutral 微软→neutral 谷歌→neutral 亚马逊→neutral Meta→neutral </p>
-        <p><em>跟踪高通AI200/A250性能参数、功耗及成本；关注云厂商采购动向；评估对英伟达、AMD数据中心推理市场份额的潜在影响。</em></p>
-        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
-      ]]></description>
-      <category>evt_f75e74bae971</category>
-    </item>
-    
-    <item>
-      <title>[7分] 寒武纪翻身海光扩张 国产AI芯片大角逐|ai芯片_新浪财经_新浪网</title>
-      <link>https://finance.sina.com.cn/roll/2025-09-05/doc-infpktkq6214809.shtml</link>
-      <guid isPermaLink="false">32fbc413c774bfd83923b0288ec60a08fecaeb10</guid>
-      <pubDate>Mon, 25 May 2026 15:54:54 GMT</pubDate>
-      <description><![CDATA[
-        <p>2025年上半年，国产AI芯片在旺盛的AI推理需求支撑下持续热销，头部厂商寒武纪和海光信息业绩高增。寒武纪实现翻身，海光信息加速扩张，两者在国产AI芯片大角逐中占据领先地位。厂商在积累产成品库存的同时，积极储备关键元器件和产能。国内AI推理算力需求成为核心驱动力，国产替代进程加速。</p>
-        <p>标的: 浪潮信息, 海光信息, 景嘉微, 中芯国际, 中科曙光, 寒武纪</p>
+        <p>中芯国际联合CEO赵海军在2026年5月15日Q1业绩说明会上表示，受AI驱动电源管理芯片需求强劲、订单回流中国大陆及国产供应链替代加速三重因素推动，公司对2026年全年运营展望趋于乐观并上调业绩指引。AI应用爆发带动成熟制程电源管理芯片需求显著增长，同时地缘因素推动中国大陆客户订单从海外代工厂向中芯国际回流，国产替代趋势进一步强化公司订单能见度。</p>
+        <p>标的: 寒武纪, AMD, 中芯国际, ASML, 台积电, ARM, 高通, 美光, 海光信息, 英伟达, 博通</p>
         <p>主线: chip_supply, domestic_substitution, compute_demand</p>
-        <p>方向: 寒武纪→positive 海光信息→positive 中芯国际→neutral 中科曙光→neutral 浪潮信息→neutral 景嘉微→neutral </p>
-        <p><em>持续跟踪头部国产AI芯片厂商产成品库存变化和关键元器件储备情况；关注下游云厂和互联网厂商对国产推理芯片的采购节奏；寒武纪和海光的业绩增长若持续验证，将加速国产算力链对海外芯片的替代进程，需关注中美科技博弈下可能的政策扰动。</em></p>
+        <p>方向: 中芯国际→positive 台积电→positive 英伟达→positive AMD→positive 博通→positive ASML→positive 美光→positive 高通→positive ARM→positive 寒武纪→positive 海光信息→positive </p>
+        <p><em>跟踪中芯国际产能利用率及成熟制程涨价趋势；订单回流可能挤压台积电成熟制程份额；电源管理芯片需求强劲或验证AI推理侧加速落地，关注高通/ARM在边缘AI芯片端的机会；国产替代主线持续验证，寒武纪/海光等国产AI芯片公司或间接受益。</em></p>
         <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_cdcaee2fdc7c</category>
+      <category>evt_c51158ed0138</category>
     </item>
     
     <item>
-      <title>[6分] Imec builds world's first High-NA EUV-fabricated quantum dot qubit device — breakthrough could pull quantum computing onto the same manufacturing roadmap as next-gen AI processors, compressing timelines</title>
-      <link>https://www.tomshardware.com/tech-industry/semiconductors/imec-builds-worlds-first-high-na-euv-fabricated-quantum-dot-qubit-device-breakthrough-could-pull-quantum-computing-onto-the-same-manufacturing-roadmap-as-next-gen-ai-processors-compressing-timelines</link>
-      <guid isPermaLink="false">2b93b32a606f7acf14e0cbadffdcc89b1f70b332</guid>
-      <pubDate>Mon, 25 May 2026 15:27:00 GMT</pubDate>
+      <title>[8分] 长电科技：封测龙头拐点已现？先进封装+AI驱动成长!</title>
+      <link>https://www.toutiao.com/article/7582731855573582351/</link>
+      <guid isPermaLink="false">5ce7b78cb2b391fdb075d9d57ff24dee8fbe679a</guid>
+      <pubDate>Mon, 25 May 2026 17:48:21 GMT</pubDate>
       <description><![CDATA[
-        <p>比利时微电子研究中心（Imec）宣布完成世界首个采用High-NA EUV光刻技术制造的硅量子点量子比特器件。该突破证明量子计算可复用半导体行业先进制造工艺体系，若成功量产，量子计算与AI处理器将共享同一制造路线图，大幅压缩商业化时间线。目前High-NA EUV光刻机仅ASML可提供，此技术验证为ASML设备打开量子计算新市场，同时为台积电等晶圆代工厂提供新的业务拓展方向。</p>
-        <p>标的: ASML, 台积电</p>
-        <p>主线: chip_supply, advanced_packaging</p>
-        <p>方向: ASML→positive 台积电→neutral </p>
-        <p><em>需跟踪：Imec量子比特良率数据、ASML高NA EUV订单结构变化、量子计算商业化时间表修正。可能的二阶效应：若量子计算与AI共线制造，台积电CoWoS产能可能需要新增量子专用产线；ASML高NA EUV需求将获双重拉动（AI芯片+量子计算）。</em></p>
-        <p>来源: rss:tomshardware 🟡 中可信 [转载自 https://www.tomshardware.com]</p>
+        <p>长电科技作为国内封测龙头，2025年12月披露的经营数据释出积极信号，叠加先进封装技术突破和AI算力需求爆发，机构判断其业绩拐点已现。公司在2.5D/3D封装等先进封装领域取得进展，有望承接更多AI芯片封装订单，包括HBM、CoWoS相关产能布局。AI算力需求爆发推动先进封装需求，长电科技作为国内稀缺的高端封测标的，受益于国产AI芯片崛起和算力链自主可控逻辑。建议跟踪其订单环比变化、产能利用率及与头部芯片厂的深度合作情况。</p>
+        <p>标的: AMD, 中芯国际, 长电科技, 台积电, 英伟达</p>
+        <p>主线: chip_supply, domestic_substitution, compute_demand, advanced_packaging</p>
+        <p>方向: 长电科技→positive 中芯国际→neutral 台积电→neutral 英伟达→neutral AMD→neutral </p>
+        <p><em>跟踪变量：长电科技先进封装产能释放节奏、订单环比增速；与国产AI芯片厂商（中芯国际等）的合作深度。潜在二阶效应：若先进封装良率提升，有望切入更多HBM/AI芯片封装供应链，带动国产算力链估值重估。</em></p>
+        <p>来源: web_search 🔴 低可信</p>
       ]]></description>
-      <category>evt_dec1fb52d2e0</category>
+      <category>evt_1ee8452f6627</category>
     </item>
     
     <item>
-      <title>[5分] 科大讯飞独家揭秘：芯片适配优化如何助力星火大模型升级？</title>
-      <link>https://www.sohu.com/a/940010588_122454042</link>
-      <guid isPermaLink="false">f53dc533351587f00bd5d5427e5012b187b151bd</guid>
-      <pubDate>Mon, 25 May 2026 15:54:54 GMT</pubDate>
+      <title>[7分] 寒武纪AI芯片深度解析：技术接近英伟达A100，但生态短板明显</title>
+      <link>https://zhuanlan.zhihu.com/p/1913647429456229125</link>
+      <guid isPermaLink="false">b7dbec42882070f8da69f6bfa7371f8e3127beaf</guid>
+      <pubDate>Mon, 25 May 2026 17:48:21 GMT</pubDate>
       <description><![CDATA[
-        <p>科大讯飞董秘回应投资者关于适配下一代国产芯片UE8M0 FP8技术的提问，强调公司在芯片适配优化方面的技术积累与合作伙伴关系。该适配工作直接支撑星火大模型的升级迭代。UE8M0 FP8为国产AI芯片，支持FP8精度计算，在AI推理/训练场景中能实现性能与能效的平衡。此次合作展示了国产AI芯片与国产大模型的深度协同能力，为国内AI算力自主可控提供支撑。</p>
-        <p>标的: 科大讯飞</p>
-        <p>主线: chip_supply, domestic_substitution, model_capability</p>
-        <p>方向: 科大讯飞→positive </p>
-        <p><em>建议跟踪：1）UE8M0 FP8芯片量产进展及产能；2）星火大模型适配后的性能提升数据；3）科大讯飞与国产芯片厂商的合作深度与商业化落地节奏。此事件反映国产AI芯片与大模型的协同验证加速，需关注其他国产算力链标的（寒武纪、海光信息）的跟进情况。</em></p>
+        <p>截至2025年4月，寒武纪作为中国AI芯片代表性企业，其思元590芯片采用7nm专用ASIC架构，针对AI场景深度优化，能效比表现出色，技术水平接近英伟达A100。但在软件生态方面存在明显短板，包括CUDA兼容性问题、开发工具链成熟度不足等，制约商业化落地。</p>
+        <p>标的: 寒武纪, AMD, 中芯国际, 台积电, 英伟达</p>
+        <p>主线: chip_supply, domestic_substitution, compute_demand</p>
+        <p>方向: 寒武纪→positive 英伟达→negative AMD→negative 中芯国际→neutral 台积电→neutral </p>
+        <p><em>跟踪变量：寒武纪生态建设进展（开发者社区、CUDA兼容方案）、下游客户拓展（云厂商、互联网央国企）。二阶效应：若国产芯片生态突破，将加速国内AI算力自主化进程，对英伟达中国区市场份额形成替代压力。</em></p>
         <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_48055bf6bf2e</category>
+      <category>evt_1ee8452f6627</category>
+    </item>
+    
+    <item>
+      <title>[5分] Microsoft Introduces MDASH for Large-Scale AI Vulnerability Research</title>
+      <link>https://www.infoq.com/news/2026/05/microsoft-mdash</link>
+      <guid isPermaLink="false">8733f4e8c42b5838b0f687e296043ef78f222b01</guid>
+      <pubDate>Mon, 25 May 2026 16:30:00 GMT</pubDate>
+      <description><![CDATA[
+        <p>微软发布MDASH多模型代理安全平台，整合100余个专业AI代理实现大规模代码审计自动化。该系统可对Windows及微软其他软件环境进行扫描、验证、辩论和漏洞证明，标志AI在安全测试领域的技术突破。</p>
+        <p>标的: 微软</p>
+        <p>主线: model_capability, ai_monetization</p>
+        <p>方向: 微软→positive </p>
+        <p><em>关注该系统在微软产品安全中的实际防护效果，若验证有效，可能引发其他厂商跟进类似AI驱动安全工具的研发浪潮。</em></p>
+        <p>来源: rss:infoq 🟡 中可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_7c51e0e5d189</category>
+    </item>
+    
+    <item>
+      <title>[4分] Chinese GPU maker sells out over 30,000 gaming GPUs within 48 hours despite lukewarm benchmarks — LX 7G100 proves hype trumps performance</title>
+      <link>https://www.tomshardware.com/pc-components/gpus/chinese-gpu-maker-sells-out-over-30-000-gaming-gpus-within-48-hours-despite-lukewarm-benchmarks-lx-7g100-proves-hype-trumps-performance</link>
+      <guid isPermaLink="false">29668b6af4a65a519b0be43be5c0f01d73730f80</guid>
+      <pubDate>Mon, 25 May 2026 16:45:58 GMT</pubDate>
+      <description><![CDATA[
+        <p>中国GPU厂商丽算科技（Lisuan Tech）游戏显卡LX 7G100在48小时内预售逾3万块，第二批将于6月18日上市。尽管基准测试表现平淡，但强劲的销售数据反映出市场对国产GPU的高度期待与需求。这一现象表明，在美国出口管制背景下，国内终端用户和渠道商对非尖端性能但可获取的GPU产品仍具强烈采购意愿，国产替代叙事正在驱动市场行为。</p>
+        <p>标的: 景嘉微, 寒武纪, AMD, 海光信息, 英伟达</p>
+        <p>主线: chip_supply, domestic_substitution, compute_demand</p>
+        <p>方向: 英伟达→negative AMD→negative 寒武纪→positive 景嘉微→positive 海光信息→positive </p>
+        <p><em>跟踪LX 7G100实际交付量与用户反馈，以及渠道加价幅度——若热销持续，将验证国产GPU在特定场景的替代可行性，冲击非尖端AI训练卡的中端需求；反之若性能不足引发退货潮，则利好英伟达/AMD入门级产品。</em></p>
+        <p>来源: rss:tomshardware 🟡 中可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_d4ea3a7f1c5b</category>
     </item>
     
   </channel>
