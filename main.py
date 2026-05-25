@@ -15,6 +15,7 @@ import asyncio
 import logging
 import os
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 from radar.config import load_config
@@ -40,6 +41,7 @@ from radar.render import (
 from radar.publish import (
     create_daily_issue, send_telegram, format_telegram_alert,
     update_readme, should_telegram_alert,
+    send_wechat, send_wechat_brief, format_wechat_alert, should_wechat_alert,
 )
 
 logger = logging.getLogger("radar")
@@ -244,6 +246,35 @@ async def run_cluster(cfg: dict) -> tuple[list[Item], dict]:
         await client.close()
 
 
+def _reapply_event_ttl(events: dict, ttl_hours: int) -> None:
+    """重新评估事件 TTL，将过期事件标记为 inactive（用于 cold path）
+
+    根据 last_updated_at 与当前时间差判断是否过期，
+    过期则标记 is_active=False、status="resolved"。
+    """
+    now_dt = datetime.now(timezone.utc)
+    changed = 0
+    for event in events.values():
+        if not event.is_active:
+            continue
+        ts = event.last_updated_at or event.first_seen_at
+        if not ts:
+            continue
+        updated = parse_iso(ts)
+        if updated is None:
+            continue
+        hours_since = (now_dt - updated).total_seconds() / 3600
+        if hours_since >= ttl_hours:
+            event.is_active = False
+            event.status = "resolved"
+            changed += 1
+            logger.info(
+                f"Event {event.event_id} resolved (stale {hours_since:.1f}h, cold path)"
+            )
+    if changed:
+        logger.info(f"Cold path TTL cleanup: {changed} events marked resolved")
+
+
 async def run_full(cfg: dict) -> None:
     """M4+: 完整管道 → 采集+处理+聚类+态势+渲染+分发"""
     global _run_count
@@ -261,6 +292,8 @@ async def run_full(cfg: dict) -> None:
         # 即使没有新条目，也渲染当前状态（读已有数据）
         today_items = []
         today_events = load_events()
+        _reapply_event_ttl(today_events, cfg["clustering"]["event_ttl_hours"])
+        save_events(today_events)
         sit = load_situation()
 
         all_events_list = sorted(
@@ -287,6 +320,8 @@ async def run_full(cfg: dict) -> None:
             await client.close()
             # 即使没有通过筛选的条目，也渲染当前已有状态
             today_events = load_events()
+            _reapply_event_ttl(today_events, cfg["clustering"]["event_ttl_hours"])
+            save_events(today_events)
             sit = load_situation()
             all_events_sorted = sorted(
                 today_events.values(),
@@ -445,6 +480,12 @@ async def run_full(cfg: dict) -> None:
                         if len(tg_brief) > 4000:
                             tg_brief = tg_brief[:3950] + "\n\n[...完整版见 Issue]"
                         await _send_tg(tg_brief, parse_mode="Markdown")
+
+                        # 同时推送晨报到微信
+                        if channels.get("wechat", {}).get("enabled", False):
+                            wx_title = f"AI 投研雷达 · 晨报 · {today_str_hkt}"
+                            await send_wechat_brief(wx_title, brief_md, issue_url, site_url)
+
                         sit.morning_brief_date = today_str_hkt
                         save_situation(sit)
             except Exception as e:
@@ -478,6 +519,29 @@ async def run_full(cfg: dict) -> None:
                             save_situation(sit)
             except Exception as e:
                 logger.error(f"Telegram push failed: {e}")
+
+        # 微信智能推送（PushPlus）
+        wx_cfg = channels.get("wechat", {})
+        if wx_cfg.get("enabled", False):
+            try:
+                if should_wechat_alert(
+                    new_events_list, updated_events_list, sit, cfg
+                ):
+                    all_events_list = list(updated_events.values())
+                    wx_title, wx_content = format_wechat_alert(
+                        new_events=new_events_list,
+                        updated_events=updated_events_list,
+                        all_active_events=all_events_list,
+                        situation=sit,
+                        site_url=site_url,
+                    )
+                    if await send_wechat(wx_title, wx_content):
+                        if sit:
+                            from radar.models import utcnow_iso
+                            sit.last_wechat_digest_at = utcnow_iso()
+                            save_situation(sit)
+            except Exception as e:
+                logger.error(f"WeChat push failed: {e}")
 
     finally:
         await client.close()

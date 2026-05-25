@@ -347,6 +347,249 @@ def format_telegram_alert(
 
 
 # ================================================================
+# 微信推送（PushPlus）
+# ================================================================
+
+def _get_wechat_env() -> str:
+    return os.environ.get("WECHAT_PUSH_TOKEN", "")
+
+
+async def send_wechat(
+    title: str,
+    content: str,
+) -> bool:
+    """
+    通过 PushPlus 推送到微信。
+
+    Args:
+        title: 消息标题（必填）
+        content: 消息正文，支持 Markdown
+
+    Returns:
+        True 如果发送成功
+    """
+    import asyncio
+
+    token = _get_wechat_env()
+    if not token:
+        logger.warning("WECHAT_PUSH_TOKEN not set, skipping WeChat push")
+        return False
+
+    url = "https://www.pushplus.plus/send"
+    payload = {
+        "token": token,
+        "title": title,
+        "content": content,
+        "template": "markdown",
+    }
+
+    max_retries = 2
+    for attempt in range(max_retries + 1):
+        try:
+            async with httpx.AsyncClient(timeout=15) as client:
+                resp = await client.post(url, json=payload)
+                resp.raise_for_status()
+                data = resp.json()
+                if data.get("code") == 200:
+                    logger.info("WeChat message sent via PushPlus")
+                    return True
+                else:
+                    logger.error(f"PushPlus API error: {data}")
+                    if attempt < max_retries:
+                        logger.info(f"Retrying WeChat push ({attempt + 1}/{max_retries})...")
+                        await asyncio.sleep(2)
+                        continue
+                    return False
+        except Exception as e:
+            logger.error(f"Failed to send WeChat message (attempt {attempt + 1}): {e}")
+            if attempt < max_retries:
+                logger.info(f"Retrying WeChat push ({attempt + 1}/{max_retries})...")
+                await asyncio.sleep(2)
+            else:
+                return False
+
+    return False
+
+
+def _fmt_tickers_wechat(tickers: list[str], max_display: int = 5) -> str:
+    """微信格式标的展示：紧凑方括号，超出显示 +N"""
+    if not tickers:
+        return ""
+    display = tickers[:max_display]
+    s = ", ".join(display)
+    if len(tickers) > max_display:
+        s += f" +{len(tickers) - max_display}"
+    return f"[{s}]"
+
+
+def format_wechat_alert(
+    new_events: list[Event],
+    updated_events: list[Event],
+    all_active_events: list[Event],
+    situation: Optional[Situation],
+    site_url: str = "",
+) -> tuple[str, str]:
+    """格式化微信推送（WeChat-first），返回 (title, content)
+
+    专为 PushPlus 微信 Markdown 渲染优化：
+    - 使用 ### 三级标题替代粗体段落分隔
+    - 摘要独占一行，评分/来源另起一行（更宽松的排版）
+    - 趋势信号使用 > blockquote 展示
+    - 无 Telegram 硬截断限制，合理精选 top 6/4 事件
+    """
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+    try:
+        hkt = ZoneInfo("Asia/Hong_Kong")
+    except Exception:
+        hkt = None
+    now_str = datetime.now(hkt).strftime("%m-%d %H:%M HKT") if hkt else ""
+
+    title = f"AI 投研雷达 · {now_str}"
+
+    lines: list[str] = []
+
+    # —— 态势概要 ——
+    if situation and situation.text:
+        headline = _extract_headline(situation.text, 200)
+        if headline:
+            lines.append(f"> {headline}")
+            lines.append("")
+
+    # —— 本轮新事件（top 6） ——
+    updated_ids = {ev.event_id for ev in updated_events}
+    deduped_new = [ev for ev in new_events if ev.event_id not in updated_ids]
+    if deduped_new:
+        sorted_new = sorted(deduped_new, key=lambda e: e.significance, reverse=True)
+        lines.append(f"### 🔥 本轮新增（{len(deduped_new)}）")
+        lines.append("")
+        for ev in sorted_new[:6]:
+            flag = "🟢" if ev.significance >= 8 else "🟡" if ev.significance >= 6 else "🔴"
+            tickers_str = _fmt_tickers_wechat(ev.tickers, max_display=5)
+            summary = _clip(ev.summary or "", 150)
+            lines.append(f"{flag} **{_clip(ev.title or '', 60)}**")
+            if tickers_str:
+                lines.append(f"{tickers_str} · {ev.significance}/10 · {ev.source_count} 个来源")
+            else:
+                lines.append(f"{ev.significance}/10 · {ev.source_count} 个来源")
+            if summary:
+                lines.append(f"{summary}")
+            lines.append("")
+        lines.append("")
+
+    # —— 重要更新（top 4） ——
+    new_ids = {ev.event_id for ev in new_events}
+    deduped_upd = [ev for ev in updated_events if ev.event_id not in new_ids]
+    if deduped_upd:
+        sorted_upd = sorted(deduped_upd, key=lambda e: e.significance, reverse=True)
+        lines.append(f"### 📌 重要更新（{len(deduped_upd)}）")
+        lines.append("")
+        for ev in sorted_upd[:4]:
+            tickers_str = _fmt_tickers_wechat(ev.tickers, max_display=5)
+            summary = _clip(ev.summary or "", 150)
+            lines.append(f"**{_clip(ev.title or '', 60)}**")
+            if tickers_str:
+                lines.append(f"{tickers_str} · {ev.significance}/10")
+            else:
+                lines.append(f"{ev.significance}/10")
+            if summary:
+                lines.append(f"{summary}")
+            lines.append("")
+        lines.append("")
+
+    # —— 交叉综合分析 ——
+    if situation and situation.cross_analysis and (deduped_new or deduped_upd):
+        ca = _clip(situation.cross_analysis.strip(), 600)
+        if ca:
+            lines.append("### 🔬 交叉分析")
+            lines.append("")
+            lines.append(f"> {ca}")
+            lines.append("")
+
+    # —— 趋势信号 ——
+    if situation and situation.trend_spotting and (deduped_new or deduped_upd):
+        trend = _clip(situation.trend_spotting.strip(), 600)
+        if trend:
+            lines.append("### 📡 趋势信号")
+            lines.append("")
+            lines.append(f"> {trend}")
+            lines.append("")
+
+    # —— 统计栏 ——
+    active_count = len([e for e in all_active_events if e.is_active])
+    developing = len([e for e in all_active_events if e.is_active and e.status == "developing"])
+    top_tickers: dict[str, int] = {}
+    for ev in all_active_events:
+        for tk in ev.tickers or []:
+            top_tickers[tk] = top_tickers.get(tk, 0) + 1
+    hot = sorted(top_tickers.items(), key=lambda x: x[1], reverse=True)[:5]
+    hot_str = ", ".join(f"{tk}({n})" for tk, n in hot) if hot else "—"
+
+    footer = f"---  \n活跃 {active_count} | 演进 {developing} | 热标 {hot_str}"
+    if site_url:
+        footer += f"  \n[实时看板]({site_url})"
+    lines.append(footer)
+
+    content = "\n".join(lines)
+    return title, content
+
+
+async def send_wechat_brief(
+    title: str,
+    brief_md: str,
+    issue_url: str = "",
+    site_url: str = "",
+) -> bool:
+    """推送晨报到微信
+
+    将晨报 Markdown 包装成适合微信 PushPlus 的格式并发送。
+    """
+    content = f"# {title}\n\n{brief_md}"
+    if issue_url:
+        content += f"\n\n---\n[查看 Issue]({issue_url}) | [实时看板]({site_url})"
+    elif site_url:
+        content += f"\n\n---\n[实时看板]({site_url})"
+    return await send_wechat(title, content)
+
+
+def should_wechat_alert(
+    new_events: list[Event],
+    updated_events: list[Event],
+    situation: Optional[Situation],
+    cfg: dict,
+) -> bool:
+    """判断是否需要推送微信（与 Telegram 相同逻辑，独立状态）"""
+    wechat_cfg = cfg.get("channels", {}).get("wechat", {})
+
+    threshold = wechat_cfg.get("notify_new_event_threshold", 7)
+    for ev in new_events:
+        if ev.significance >= threshold and ev.source_count <= 3:
+            return True
+
+    notify_update = wechat_cfg.get("notify_direction_flip", True)
+    if notify_update and updated_events:
+        for ev in updated_events:
+            if ev.significance >= threshold:
+                return True
+
+    # 兜底推送间隔
+    if situation and situation.last_wechat_digest_at:
+        try:
+            from datetime import datetime, timezone
+            last = datetime.fromisoformat(
+                situation.last_wechat_digest_at.replace("Z", "+00:00")
+            )
+            now = datetime.now(timezone.utc)
+            interval = wechat_cfg.get("digest_interval_hours", 2)
+            if (now - last).total_seconds() >= interval * 3600:
+                return True
+        except Exception:
+            return True
+
+    return False
+
+
+# ================================================================
 # README 更新
 # ================================================================
 
