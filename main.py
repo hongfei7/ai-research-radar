@@ -308,6 +308,24 @@ async def run_full(cfg: dict) -> None:
         write_rss(today_items, site_url, cfg.get("channels", {}).get("rss", {}).get("max_items", 50), window_hours=w)
         write_dashboard(today_items, active_events, sit, site_url, window_hours=w, half_life_hours=half_life)
         write_ticker_pages(today_items, active_events, site_url, window_hours=w)
+
+        # 微信兜底推送（即使没有新条目，也按间隔推送当前态势）
+        wx_cfg = cfg.get("channels", {}).get("wechat", {})
+        if wx_cfg.get("enabled", False) and sit:
+            try:
+                if should_wechat_alert([], [], sit, cfg):
+                    all_ev = list(today_events.values())
+                    wx_title, wx_content = format_wechat_alert(
+                        new_events=[], updated_events=[],
+                        all_active_events=all_ev, situation=sit, site_url=site_url,
+                    )
+                    if await send_wechat(wx_title, wx_content):
+                        from radar.models import utcnow_iso
+                        sit.last_wechat_digest_at = utcnow_iso()
+                        save_situation(sit)
+            except Exception as e:
+                logger.error(f"WeChat fallback push failed: {e}")
+
         return
     # ================================================================
     client = MinimaxClient(model=cfg["minimax"]["model"])
@@ -332,6 +350,24 @@ async def run_full(cfg: dict) -> None:
             write_dashboard([], active_events, sit, site_url, window_hours=w, half_life_hours=half_life)
             write_ticker_pages([], active_events, site_url, window_hours=w)
             logger.info("No items passed triage — rendered existing state")
+
+            # 微信兜底推送（即使没有通过筛选的条目，也按间隔推送当前态势）
+            wx_cfg = cfg.get("channels", {}).get("wechat", {})
+            if wx_cfg.get("enabled", False) and sit:
+                try:
+                    if should_wechat_alert([], [], sit, cfg):
+                        all_ev = list(today_events.values())
+                        wx_title, wx_content = format_wechat_alert(
+                            new_events=[], updated_events=[],
+                            all_active_events=all_ev, situation=sit, site_url=site_url,
+                        )
+                        if await send_wechat(wx_title, wx_content):
+                            from radar.models import utcnow_iso
+                            sit.last_wechat_digest_at = utcnow_iso()
+                            save_situation(sit)
+                except Exception as e:
+                    logger.error(f"WeChat fallback push failed: {e}")
+
             return
 
         # Stage 2.5: 交叉综合分析 —— 每轮必跑以最大化配额使用
