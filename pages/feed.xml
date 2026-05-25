@@ -5,87 +5,71 @@
     <link>https://hongfei7.github.io/ai-research-radar</link>
     <description>AI/科技/半导体板块的持续投研情报 feed — 由 MiniMax 策展</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 25 May 2026 17:54:59 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 19:54:07 GMT</lastBuildDate>
     <atom:link href="https://hongfei7.github.io/ai-research-radar/feed.xml" rel="self" type="application/rss+xml"/>
     
     <item>
-      <title>[9分] 中芯国际因AI芯片需求强劲上调2026年业绩展望 - edgen.tech</title>
-      <link>https://www.edgen.tech/zh/news/post/smic-boosts-2026-outlook-on-strong-ai-chip-demand</link>
-      <guid isPermaLink="false">3fa6b6166addaf3c5709bed83c8c4dd74fe2c2c6</guid>
-      <pubDate>Mon, 25 May 2026 17:48:21 GMT</pubDate>
+      <title>[8分] 中芯国际携手华为DeepSeek，加速AI芯片产能扩张布局</title>
+      <link>https://www.sohu.com/a/929584600_362225</link>
+      <guid isPermaLink="false">a959581ea1ff35aed87615692e14108ae1e60f40</guid>
+      <pubDate>Mon, 25 May 2026 19:48:51 GMT</pubDate>
       <description><![CDATA[
-        <p>中芯国际联合CEO赵海军在2026年5月15日Q1业绩说明会上表示，受AI驱动电源管理芯片需求强劲、订单回流中国大陆及国产供应链替代加速三重因素推动，公司对2026年全年运营展望趋于乐观并上调业绩指引。AI应用爆发带动成熟制程电源管理芯片需求显著增长，同时地缘因素推动中国大陆客户订单从海外代工厂向中芯国际回流，国产替代趋势进一步强化公司订单能见度。</p>
-        <p>标的: 寒武纪, AMD, 中芯国际, ASML, 台积电, ARM, 高通, 美光, 海光信息, 英伟达, 博通</p>
-        <p>主线: chip_supply, domestic_substitution, compute_demand</p>
-        <p>方向: 中芯国际→positive 台积电→positive 英伟达→positive AMD→positive 博通→positive ASML→positive 美光→positive 高通→positive ARM→positive 寒武纪→positive 海光信息→positive </p>
-        <p><em>跟踪中芯国际产能利用率及成熟制程涨价趋势；订单回流可能挤压台积电成熟制程份额；电源管理芯片需求强劲或验证AI推理侧加速落地，关注高通/ARM在边缘AI芯片端的机会；国产替代主线持续验证，寒武纪/海光等国产AI芯片公司或间接受益。</em></p>
+        <p>中芯国际制定明年AI先进芯片扩产计划，合作方包括华为与AI创新企业DeepSeek，目标在全球AI算力市场占据更显赫位置。此次产能扩张若落地，将显著提升国产AI芯片供给能力，加速国产替代进程，同时可能重塑全球晶圆代工竞争格局。中芯国际-华为-D eepSeek的协同模式值得关注。</p>
+        <p>标的: 中芯国际, 寒武纪, 海光信息</p>
+        <p>主线: domestic_substitution, compute_demand, chip_supply</p>
+        <p>方向: 中芯国际→positive 寒武纪→positive 海光信息→positive </p>
+        <p><em>跟踪中芯国际扩产节奏及与华为/DeepSeek订单落地情况；国产AI芯片需求向好，寒武纪、海光信息或受益于算力链协同效应；警惕扩产不及预期或良率问题。</em></p>
         <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_c51158ed0138</category>
+      <category>evt_cdcaee2fdc7c</category>
     </item>
     
     <item>
-      <title>[8分] 长电科技：封测龙头拐点已现？先进封装+AI驱动成长!</title>
-      <link>https://www.toutiao.com/article/7582731855573582351/</link>
-      <guid isPermaLink="false">5ce7b78cb2b391fdb075d9d57ff24dee8fbe679a</guid>
-      <pubDate>Mon, 25 May 2026 17:48:21 GMT</pubDate>
+      <title>[7分] ASML Just Cleared the Way for Next-Gen AI Chip Production — Here's What ...</title>
+      <link>https://techwireasia.com/2026/02/asml-high-na-euv-ai-chip-production-asia/</link>
+      <guid isPermaLink="false">0b6c63819549441475bfff763b0b6ba452020222</guid>
+      <pubDate>Mon, 25 May 2026 19:48:51 GMT</pubDate>
       <description><![CDATA[
-        <p>长电科技作为国内封测龙头，2025年12月披露的经营数据释出积极信号，叠加先进封装技术突破和AI算力需求爆发，机构判断其业绩拐点已现。公司在2.5D/3D封装等先进封装领域取得进展，有望承接更多AI芯片封装订单，包括HBM、CoWoS相关产能布局。AI算力需求爆发推动先进封装需求，长电科技作为国内稀缺的高端封测标的，受益于国产AI芯片崛起和算力链自主可控逻辑。建议跟踪其订单环比变化、产能利用率及与头部芯片厂的深度合作情况。</p>
-        <p>标的: AMD, 中芯国际, 长电科技, 台积电, 英伟达</p>
-        <p>主线: chip_supply, domestic_substitution, compute_demand, advanced_packaging</p>
-        <p>方向: 长电科技→positive 中芯国际→neutral 台积电→neutral 英伟达→neutral AMD→neutral </p>
-        <p><em>跟踪变量：长电科技先进封装产能释放节奏、订单环比增速；与国产AI芯片厂商（中芯国际等）的合作深度。潜在二阶效应：若先进封装良率提升，有望切入更多HBM/AI芯片封装供应链，带动国产算力链估值重估。</em></p>
-        <p>来源: web_search 🔴 低可信</p>
-      ]]></description>
-      <category>evt_1ee8452f6627</category>
-    </item>
-    
-    <item>
-      <title>[7分] 寒武纪AI芯片深度解析：技术接近英伟达A100，但生态短板明显</title>
-      <link>https://zhuanlan.zhihu.com/p/1913647429456229125</link>
-      <guid isPermaLink="false">b7dbec42882070f8da69f6bfa7371f8e3127beaf</guid>
-      <pubDate>Mon, 25 May 2026 17:48:21 GMT</pubDate>
-      <description><![CDATA[
-        <p>截至2025年4月，寒武纪作为中国AI芯片代表性企业，其思元590芯片采用7nm专用ASIC架构，针对AI场景深度优化，能效比表现出色，技术水平接近英伟达A100。但在软件生态方面存在明显短板，包括CUDA兼容性问题、开发工具链成熟度不足等，制约商业化落地。</p>
-        <p>标的: 寒武纪, AMD, 中芯国际, 台积电, 英伟达</p>
-        <p>主线: chip_supply, domestic_substitution, compute_demand</p>
-        <p>方向: 寒武纪→positive 英伟达→negative AMD→negative 中芯国际→neutral 台积电→neutral </p>
-        <p><em>跟踪变量：寒武纪生态建设进展（开发者社区、CUDA兼容方案）、下游客户拓展（云厂商、互联网央国企）。二阶效应：若国产芯片生态突破，将加速国内AI算力自主化进程，对英伟达中国区市场份额形成替代压力。</em></p>
+        <p>ASML宣布新一代EUV光刻技术取得关键突破，为2nm及以下先进制程AI芯片生产铺平道路。当前芯片制造正逼近物理极限，ASML的技术突破意味着下一代AI芯片量产所需的基础设施已具备。亚洲晶圆厂（尤其是台积电、三星）的扩产速度将决定全球半导体市场下一阶段的竞争格局。此进展对依赖先进制程的芯片设计商（英伟达、AMD、博通等）形成直接利好，标志着AI算力供给侧进入新一轮升级周期。</p>
+        <p>标的: 英伟达, 博通, AMD, 台积电, ASML</p>
+        <p>主线: advanced_packaging, compute_demand, chip_supply</p>
+        <p>方向: ASML→positive 台积电→positive 英伟达→positive AMD→positive 博通→positive </p>
+        <p><em>跟踪变量：ASML新一代EUV订单执行情况、晶圆厂资本开支计划、台积电先进制程产能爬坡节奏。二阶效应：若先进制程顺利量产，云厂商capex增速可能进一步上行；关注先进封装（CoWoS）供需矛盾是否同步缓解。联动：台积电业绩指引、ASML季报订单数据、晶圆厂扩产时间表均为重要跟踪节点。</em></p>
         <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_1ee8452f6627</category>
+      <category>evt_b7665d098e11</category>
     </item>
     
     <item>
-      <title>[5分] Microsoft Introduces MDASH for Large-Scale AI Vulnerability Research</title>
-      <link>https://www.infoq.com/news/2026/05/microsoft-mdash</link>
-      <guid isPermaLink="false">8733f4e8c42b5838b0f687e296043ef78f222b01</guid>
-      <pubDate>Mon, 25 May 2026 16:30:00 GMT</pubDate>
+      <title>[6分] Google I/O 2026全景解析：Gemini Omni、TPU v8与Agent智能时代 - Houdao AI</title>
+      <link>https://www.houdao.com/d/11831-Google-I-O-2026-quan-jing-jie-xi-Gemini-Omni-TPU-v8-yu-Agent-zhi-neng-shi-dai</link>
+      <guid isPermaLink="false">497ee24da5545d04245fab678790157053cee310</guid>
+      <pubDate>Mon, 25 May 2026 19:48:51 GMT</pubDate>
       <description><![CDATA[
-        <p>微软发布MDASH多模型代理安全平台，整合100余个专业AI代理实现大规模代码审计自动化。该系统可对Windows及微软其他软件环境进行扫描、验证、辩论和漏洞证明，标志AI在安全测试领域的技术突破。</p>
-        <p>标的: 微软</p>
-        <p>主线: model_capability, ai_monetization</p>
-        <p>方向: 微软→positive </p>
-        <p><em>关注该系统在微软产品安全中的实际防护效果，若验证有效，可能引发其他厂商跟进类似AI驱动安全工具的研发浪潮。</em></p>
-        <p>来源: rss:infoq 🟡 中可信 [转载自 未知来源]</p>
+        <p>Google I/O 2026大会发布Gemini Omni多模态世界模型、Gemini 3.5 Flash高效模型、第八代TPU芯片、个性化AI助理Gemini Spark及Agent开发平台Antigravity 2.0，全面升级谷歌AI产品生态。Gemini Omni实现跨模态理解与生成能力跃升，TPU v8采用3nm工艺提升训练推理效率，Antigravity 2.0降低Agent开发门槛。谷歌自研芯片迭代加速，可能对英伟达GPU形成替代压力，同时台积电3nm制程需求持续增长。</p>
+        <p>标的: 博通, 台积电, ARM, ASML, 寒武纪, 亚马逊, AMD, 长电科技, 谷歌, 超微电脑, 浪潮信息, 中科曙光, 苹果, 美光, Meta, 高通, 微软, 英伟达, 海光信息, 戴尔</p>
+        <p>主线: edge_ai, chip_supply, model_capability, advanced_packaging, compute_demand</p>
+        <p>方向: 谷歌→positive 英伟达→neutral 台积电→positive ASML→positive AMD→neutral 博通→neutral 高通→positive ARM→positive 微软→neutral 亚马逊→neutral Meta→neutral 苹果→neutral 超微电脑→positive 戴尔→positive 中科曙光→neutral 浪潮信息→neutral 美光→positive 长电科技→positive 寒武纪→neutral 海光信息→neutral </p>
+        <p><em>关注TPU v8实际性能对比英伟达H200的benchmark数据、Antigravity 2.0的开发者采用率及Gemini Omni在多模态任务上的商业落地进度。若TPU在成本效率上形成优势，可能加速云厂商自研芯片趋势，利好ASML/台积电先进制程订单，但需警惕谷歌减少对外采GPU比例对英伟达的影响。</em></p>
+        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_7c51e0e5d189</category>
+      <category>evt_be01ef9a1021</category>
     </item>
     
     <item>
-      <title>[4分] Chinese GPU maker sells out over 30,000 gaming GPUs within 48 hours despite lukewarm benchmarks — LX 7G100 proves hype trumps performance</title>
-      <link>https://www.tomshardware.com/pc-components/gpus/chinese-gpu-maker-sells-out-over-30-000-gaming-gpus-within-48-hours-despite-lukewarm-benchmarks-lx-7g100-proves-hype-trumps-performance</link>
-      <guid isPermaLink="false">29668b6af4a65a519b0be43be5c0f01d73730f80</guid>
-      <pubDate>Mon, 25 May 2026 16:45:58 GMT</pubDate>
+      <title>[5分] Report: the EU plans to fine Google a high triple-digit million euro amount as part of a 2025 probe over concerns it favors its own services in search results (Reuters)</title>
+      <link>https://www.techmeme.com/260525/p18#a260525p18</link>
+      <guid isPermaLink="false">3afe82a0a4af172ea6d62257c72914f7b7ce0119</guid>
+      <pubDate>Mon, 25 May 2026 18:25:00 GMT</pubDate>
       <description><![CDATA[
-        <p>中国GPU厂商丽算科技（Lisuan Tech）游戏显卡LX 7G100在48小时内预售逾3万块，第二批将于6月18日上市。尽管基准测试表现平淡，但强劲的销售数据反映出市场对国产GPU的高度期待与需求。这一现象表明，在美国出口管制背景下，国内终端用户和渠道商对非尖端性能但可获取的GPU产品仍具强烈采购意愿，国产替代叙事正在驱动市场行为。</p>
-        <p>标的: 景嘉微, 寒武纪, AMD, 海光信息, 英伟达</p>
-        <p>主线: chip_supply, domestic_substitution, compute_demand</p>
-        <p>方向: 英伟达→negative AMD→negative 寒武纪→positive 景嘉微→positive 海光信息→positive </p>
-        <p><em>跟踪LX 7G100实际交付量与用户反馈，以及渠道加价幅度——若热销持续，将验证国产GPU在特定场景的替代可行性，冲击非尖端AI训练卡的中端需求；反之若性能不足引发退货潮，则利好英伟达/AMD入门级产品。</em></p>
-        <p>来源: rss:tomshardware 🟡 中可信 [转载自 未知来源]</p>
+        <p>欧盟计划对Alphabet旗下谷歌处以数亿欧元高额罚款，作为2025年反垄断调查的一部分。调查聚焦谷歌在搜索结果中偏袒自家服务的垄断行为。此举反映欧盟对科技巨头的监管持续收紧，可能影响谷歌在欧洲市场的竞争策略和广告业务布局。</p>
+        <p>标的: 谷歌</p>
+        <p>主线: policy_export</p>
+        <p>方向: 谷歌→negative </p>
+        <p><em>需跟踪罚款最终金额及欧盟是否扩大调查范围；可能波及其他科技巨头（Meta、苹果）在欧业务；注意美国政府可能的反制回应。</em></p>
+        <p>来源: rss:techmeme 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_d4ea3a7f1c5b</category>
+      <category>evt_9f2972b0d902</category>
     </item>
     
   </channel>
