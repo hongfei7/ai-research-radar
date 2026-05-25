@@ -19,7 +19,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from radar.config import load_config
-from radar.models import Item, today_str, parse_iso, get_effective_date
+from radar.models import Item, parse_iso, get_effective_date
 from radar.collectors.rss import RSSCollector
 from radar.collectors.arxiv import ArxivCollector
 from radar.collectors.hackernews import HackerNewsCollector
@@ -281,6 +281,7 @@ async def run_full(cfg: dict) -> None:
     _run_count += 1
 
     site_url = os.environ.get("SITE_URL", "https://USER.github.io/ai-research-radar")
+    half_life = cfg["scoring"].get("time_decay", {}).get("half_life_hours", 4)
 
     # ================================================================
     # Stage 1-2: 采集 + 去重
@@ -305,11 +306,9 @@ async def run_full(cfg: dict) -> None:
 
         w = cfg["runtime"].get("rolling_window_hours", 8)
         write_rss(today_items, site_url, cfg.get("channels", {}).get("rss", {}).get("max_items", 50), window_hours=w)
-        write_dashboard(today_items, active_events, sit, site_url, window_hours=w)
+        write_dashboard(today_items, active_events, sit, site_url, window_hours=w, half_life_hours=half_life)
+        write_ticker_pages(today_items, active_events, site_url, window_hours=w)
         return
-
-    # ================================================================
-    # Stage 3-4: MiniMax 处理 + 事件聚类
     # ================================================================
     client = MinimaxClient(model=cfg["minimax"]["model"])
     try:
@@ -317,7 +316,6 @@ async def run_full(cfg: dict) -> None:
         processed = await processor.process(new_items)
 
         if not processed:
-            await client.close()
             # 即使没有通过筛选的条目，也渲染当前已有状态
             today_events = load_events()
             _reapply_event_ttl(today_events, cfg["clustering"]["event_ttl_hours"])
@@ -331,7 +329,8 @@ async def run_full(cfg: dict) -> None:
             active_events = [e for e in all_events_sorted if e.is_active]
             w = cfg["runtime"].get("rolling_window_hours", 8)
             write_rss([], site_url, cfg.get("channels", {}).get("rss", {}).get("max_items", 50), window_hours=w)
-            write_dashboard([], active_events, sit, site_url, window_hours=w)
+            write_dashboard([], active_events, sit, site_url, window_hours=w, half_life_hours=half_life)
+            write_ticker_pages([], active_events, site_url, window_hours=w)
             logger.info("No items passed triage — rendered existing state")
             return
 
@@ -444,7 +443,7 @@ async def run_full(cfg: dict) -> None:
         )
         active_events = [e for e in all_events_sorted if e.is_active]
 
-        write_dashboard(clustered_items, active_events, sit, site_url, window_hours=w)
+        write_dashboard(clustered_items, active_events, sit, site_url, window_hours=w, half_life_hours=half_life)
         write_ticker_pages(clustered_items, active_events, site_url, window_hours=w)
 
         # ================================================================
@@ -457,14 +456,13 @@ async def run_full(cfg: dict) -> None:
         tg_cfg = channels.get("telegram", {})
         if issue_cfg.get("enabled", False):
             try:
-                from datetime import datetime
                 from zoneinfo import ZoneInfo
                 hkt_now = datetime.now(ZoneInfo("Asia/Hong_Kong"))
                 schedule_hour = issue_cfg.get("schedule_hour_hkt", 7)
                 # 在目标小时 ±1h 且前半小时内触发
                 if abs(hkt_now.hour - schedule_hour) <= 1 and hkt_now.minute < 30:
                     synthesis = sit.text if sit else ""
-                    brief_md = render_daily_brief(clustered_items, synthesis, site_url)
+                    brief_md = render_daily_brief(clustered_items, synthesis, site_url, cfg=cfg)
                     # 日报用更长的窗口（24h）
                     issue_url = await create_daily_issue(
                         brief_md, issue_cfg.get("label", "晨报")

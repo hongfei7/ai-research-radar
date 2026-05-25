@@ -1,6 +1,5 @@
 """渲染 —— 生成 RSS feed + GitHub Pages HTML + 日报 Markdown"""
 
-import json
 import logging
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
@@ -10,10 +9,11 @@ from jinja2 import Environment, FileSystemLoader
 
 from radar.models import (
     Item, Event, Situation,
-    today_str, parse_iso,
-    get_effective_date, compute_effective_score, format_relative_time,
+    today_str,
+    get_effective_date, get_event_effective_date,
+    compute_effective_score, format_relative_time,
 )
-from radar.config import get_coverage_by_ticker, load_config, get_theme_by_key
+from radar.config import get_theme_by_key
 from radar.credibility import CREDIBILITY_EMOJI, CREDIBILITY_LABEL
 
 logger = logging.getLogger(__name__)
@@ -55,7 +55,6 @@ _env.filters["rfc2822"] = _rfc2822
 def _ensure_pages_dir() -> None:
     _PAGES_DIR.mkdir(parents=True, exist_ok=True)
     (_PAGES_DIR / "tickers").mkdir(exist_ok=True)
-    (_PAGES_DIR / "themes").mkdir(exist_ok=True)
 
 
 def _now_hkt() -> str:
@@ -79,6 +78,20 @@ def _filter_recent(items: list[Item], window_hours: int = 8) -> list[Item]:
         dt = get_effective_date(it)
         if dt is None or dt >= cutoff:
             result.append(it)
+    return result
+
+
+def _filter_recent_events(events: list[Event], window_hours: int = 8) -> list[Event]:
+    """只保留最近 window_hours 内有更新的事件"""
+    cutoff = datetime.now(timezone.utc) - timedelta(hours=window_hours)
+    result = []
+    for ev in events:
+        dt = get_event_effective_date(ev)
+        if dt is None:
+            logger.warning(f"Event {ev.event_id}: no effective date, keeping in result")
+            result.append(ev)
+        elif dt >= cutoff:
+            result.append(ev)
     return result
 
 
@@ -141,7 +154,7 @@ def render_dashboard(
 
     return template.render(
         items=sorted_items[:60],
-        events=events[:30],
+        events=events[:15],
         situation=situation,
         site_url=site_url,
         updated_at=_now_hkt(),
@@ -155,13 +168,13 @@ def write_dashboard(
     situation: Optional[Situation],
     site_url: str = "",
     window_hours: int = 8,
+    half_life_hours: float = 4,
 ) -> Path:
     """生成并写入 pages/index.html，仅展示时间窗口内的内容"""
     _ensure_pages_dir()
     recent = _filter_recent(items, window_hours)
-    cfg = load_config()
-    half_life = cfg["scoring"].get("time_decay", {}).get("half_life_hours", 4)
-    html = render_dashboard(recent, events, situation, site_url, half_life_hours=half_life)
+    recent_events = _filter_recent_events(events, window_hours)
+    html = render_dashboard(recent, recent_events, situation, site_url, half_life_hours=half_life_hours)
     path = _PAGES_DIR / "index.html"
     path.write_text(html, encoding="utf-8")
     logger.info(f"Dashboard written to {path} ({len(recent)} recent items)")
@@ -182,6 +195,7 @@ def write_ticker_pages(
     _ensure_pages_dir()
     template = _env.get_template("ticker.html.j2")
     recent = _filter_recent(items, window_hours)
+    recent_events = _filter_recent_events(events, window_hours)
 
     # 按 ticker name 分组
     ticker_items: dict[str, list[Item]] = {}
@@ -189,7 +203,7 @@ def write_ticker_pages(
     for it in recent:
         for tk in it.tickers or []:
             ticker_items.setdefault(tk, []).append(it)
-    for ev in events:
+    for ev in recent_events:
         for tk in ev.tickers or []:
             ticker_events.setdefault(tk, []).append(ev)
 
@@ -214,6 +228,7 @@ def render_daily_brief(
     items: list[Item],
     synthesis: str,
     site_url: str = "",
+    cfg: dict | None = None,
 ) -> str:
     """生成日报 Markdown"""
     today = today_str()
@@ -225,7 +240,6 @@ def render_daily_brief(
         for th in it.themes or []:
             themes_map.setdefault(th, []).append(it)
 
-    cfg = load_config()
     themes_with_items = []
     for th_key, th_items in themes_map.items():
         theme_info = get_theme_by_key(cfg, th_key)
@@ -264,11 +278,12 @@ def write_daily_brief(
     synthesis: str,
     site_url: str = "",
     window_hours: int = 24,
+    cfg: dict | None = None,
 ) -> Path:
     """生成并写入当日日报 Markdown（日报窗口更长，覆盖全天）"""
     _PAGES_DIR.mkdir(parents=True, exist_ok=True)
     recent = _filter_recent(items, window_hours)
-    md = render_daily_brief(recent, synthesis, site_url)
+    md = render_daily_brief(recent, synthesis, site_url, cfg=cfg)
     path = _PAGES_DIR / f"brief-{today_str()}.md"
     path.write_text(md, encoding="utf-8")
     logger.info(f"Daily brief written to {path} ({len(recent)} recent items)")

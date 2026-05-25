@@ -3,7 +3,6 @@
 from dataclasses import dataclass, field, asdict
 from datetime import datetime, timezone
 from typing import Optional
-import json
 
 
 @dataclass
@@ -147,6 +146,7 @@ class Situation:
     key_themes: list = field(default_factory=list)
     last_telegram_digest_at: str = ""    # ISO8601，上次 Telegram 兜底推送时间
     morning_brief_date: str = ""         # 上次晨报推送日期，用于 Telegram 每日去重
+    last_wechat_digest_at: str = ""      # ISO8601，上次微信兜底推送时间
     cross_analysis: str = ""             # 交叉综合分析文本
     trend_spotting: str = ""             # 趋势发现文本
 
@@ -163,6 +163,7 @@ class Situation:
             "key_themes": [],
             "last_telegram_digest_at": "",
             "morning_brief_date": "",
+            "last_wechat_digest_at": "",
             "cross_analysis": "",
             "trend_spotting": "",
         }
@@ -223,12 +224,20 @@ def get_effective_date(item) -> datetime | None:
     return parse_iso(item.published_at)
 
 
+def get_event_effective_date(event) -> datetime | None:
+    """返回事件的有效日期，优先 last_updated_at，fallback first_seen_at"""
+    return parse_iso(event.last_updated_at) or parse_iso(event.first_seen_at)
+
+
 def compute_effective_score(item, half_life_hours: float = 4) -> float:
     """时间衰减后的有效分数: score / (1 + hours_old / half_life)
 
     日期未知的条目不衰减（hours_old = 0），避免搜索类源被过度惩罚。
     """
-    score = float(item.relevance_score)
+    try:
+        score = float(item.relevance_score or 0)
+    except (TypeError, ValueError):
+        score = 0.0
     dt = get_effective_date(item)
     if dt is None:
         return score

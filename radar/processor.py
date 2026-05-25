@@ -3,27 +3,17 @@
 import asyncio
 import json
 import logging
-from pathlib import Path
 from typing import Optional
 
 from radar.models import Item, Event, utcnow_iso, compute_effective_score
 from radar.minimax_client import MinimaxClient
 from radar.config import format_coverage_for_prompt, format_themes_for_prompt
+from radar.prompts import load_prompt
 
 logger = logging.getLogger(__name__)
 
-_PROMPTS_DIR = Path(__file__).resolve().parent.parent / "prompts"
-
 # 每批最多处理条目数
 _TRIAGE_BATCH_SIZE = 40
-
-
-def _load_prompt(name: str) -> str:
-    """加载 prompt 模板文件"""
-    path = _PROMPTS_DIR / f"{name}.txt"
-    if not path.exists():
-        raise FileNotFoundError(f"Prompt file not found: {path}")
-    return path.read_text(encoding="utf-8")
 
 
 class Processor:
@@ -117,7 +107,7 @@ class Processor:
 
         coverage_text = format_coverage_for_prompt(self.cfg)
         themes_text = format_themes_for_prompt(self.cfg)
-        template = _load_prompt("triage")
+        template = load_prompt("triage")
 
         all_scored: list[dict] = []
 
@@ -199,7 +189,7 @@ class Processor:
 
         coverage_text = format_coverage_for_prompt(self.cfg)
         themes_text = format_themes_for_prompt(self.cfg)
-        template = _load_prompt("extract")
+        template = load_prompt("extract")
         processed_at = utcnow_iso()
         sem = asyncio.Semaphore(5)
 
@@ -268,7 +258,7 @@ class Processor:
         if not items:
             return ""
 
-        template = _load_prompt("cross_analysis")
+        template = load_prompt("cross_analysis")
 
         items_json = json.dumps(
             [
@@ -322,7 +312,7 @@ class Processor:
         if not items:
             return ""
 
-        template = _load_prompt("trend_spotting")
+        template = load_prompt("trend_spotting")
 
         items_json = json.dumps(
             [
@@ -431,7 +421,7 @@ class Processor:
         if not event_items:
             return ""
 
-        template = _load_prompt("event_deep_dive")
+        template = load_prompt("event_deep_dive")
 
         event_json = json.dumps(
             {
@@ -499,7 +489,7 @@ class Processor:
         if not candidates:
             return
 
-        template = _load_prompt("second_opinion")
+        template = load_prompt("second_opinion")
         sem = asyncio.Semaphore(5)
 
         async def _analyze_one(item: Item):

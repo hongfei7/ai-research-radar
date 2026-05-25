@@ -3,21 +3,15 @@
 import hashlib
 import json
 import logging
+import re
 from datetime import datetime, timezone
-from pathlib import Path
 from typing import Optional
 
 from radar.models import Item, Event, utcnow_iso
 from radar.minimax_client import MinimaxClient, cosine_similarity
+from radar.prompts import load_prompt
 
 logger = logging.getLogger(__name__)
-
-_PROMPTS_DIR = Path(__file__).resolve().parent.parent / "prompts"
-
-
-def _load_prompt(name: str) -> str:
-    path = _PROMPTS_DIR / f"{name}.txt"
-    return path.read_text(encoding="utf-8")
 
 
 def _generate_event_id(title: str) -> str:
@@ -32,6 +26,29 @@ def _safe_int(value, default: int = 0) -> int:
         return int(value)
     except (ValueError, TypeError):
         return default
+
+
+def _tokenize_for_matching(text: str) -> set[str]:
+    """将文本拆分为可用于 Jaccard 比较的特征集
+
+    中英混合文本：CJK 字符 bigram + 英文/数字完整单词。
+    """
+    if not text:
+        return set()
+    text = text.lower().strip()
+    features: set[str] = set()
+
+    # CJK 字符 bigram
+    cjk = re.findall(r'[\u4e00-\u9fff\u3400-\u4dbf\uf900-\ufaff]', text)
+    for i in range(len(cjk) - 1):
+        features.add(cjk[i] + cjk[i + 1])
+
+    # 英文/数字单词（≥2 字符，跳过纯数字）
+    for w in re.findall(r'[a-z0-9][a-z0-9.\-]*[a-z0-9]|[a-z0-9]{2,}', text):
+        if not re.fullmatch(r'[\d.\-]+', w):
+            features.add(w)
+
+    return features
 
 
 class ClusterEngine:
@@ -70,21 +87,14 @@ class ClusterEngine:
 
         # Step 1: 关键词匹配聚类（MiniMax M2.7 不含 Embeddings API）
         # embedding 方案留待后续套餐升级后启用
-        use_embeddings = False
-        embeddings: list[list[float]] = [[] for _ in items]
 
         # Step 2: 对每条新条目做匹配
         events = dict(existing_events)  # 复制，避免修改原始
         now = utcnow_iso()
         updated_event_ids: set[str] = set()  # 收集被更新的事件
 
-        for i, item in enumerate(items):
-            emb = embeddings[i] if use_embeddings and i < len(embeddings) else []
-
-            if use_embeddings and emb:
-                matched = self._find_match_embedding(emb, events)
-            else:
-                matched = self._find_match_keyword(item, events)
+        for item in items:
+            matched = self._find_match_keyword(item, events)
 
             if matched:
                 # 合并到已有事件
@@ -106,11 +116,11 @@ class ClusterEngine:
                 item.is_new_event = False
                 item.is_event_update = True
 
-                # 更新代表 embedding（取平均）
-                if use_embeddings and event.embedding and emb:
-                    event.embedding = [
-                        (a + b) / 2 for a, b in zip(event.embedding, emb)
-                    ]
+                # （embedding 更新留待后续套餐升级后启用）
+                # if use_embeddings and event.embedding and emb:
+                #     event.embedding = [
+                #         (a + b) / 2 for a, b in zip(event.embedding, emb)
+                #     ]
 
                 updated_event_ids.add(event_id)
 
@@ -131,7 +141,7 @@ class ClusterEngine:
                     is_active=True,
                     significance=item.relevance_score,
                     status="developing",
-                    embedding=list(emb) if emb else None,
+                    embedding=None,  # 留待后续套餐升级后启用
                 )
                 events[event_id] = event
                 item.event_id = event_id
@@ -164,7 +174,7 @@ class ClusterEngine:
         return items, events
 
     def _find_match_embedding(self, emb: list[float], events: dict[str, Event]) -> Optional[str]:
-        """基于 embedding 余弦相似度寻找匹配事件"""
+        """基于 embedding 余弦相似度寻找匹配事件（预留，当前套餐不含 Embeddings API）"""
         best_id = None
         best_score = 0.0
 
@@ -188,11 +198,11 @@ class ClusterEngine:
         设计要点:
         - ticker 权重最高（0.5），同一标的的新闻才可能同事件
         - theme + 关键词权重各 0.25，辅助区分同标的不同事件
-        - 阈值 0.55：防止宽泛主题（如 compute_demand）导致误合并
+        - 阈值 0.50：防止宽泛主题（如 compute_demand）导致误合并
         """
         item_tickers = set(item.tickers or [])
         item_themes = set(item.themes or [])
-        item_words = set((item.cn_summary or item.title).lower().split())
+        item_words = _tokenize_for_matching(item.cn_summary or item.title)
 
         best_id = None
         best_score = 0.0
@@ -203,7 +213,7 @@ class ClusterEngine:
 
             ev_tickers = set(event.tickers or [])
             ev_themes = set(event.themes or [])
-            ev_words = set((event.summary or event.title).lower().split())
+            ev_words = _tokenize_for_matching(event.summary or event.title)
 
             # Ticker 重叠检查：双方都有 ticker 时强制要求交集
             if item_tickers and ev_tickers:
@@ -224,7 +234,7 @@ class ClusterEngine:
                 best_score = score
                 best_id = eid
 
-        keyword_threshold = 0.55  # 需要较强的信号重叠
+        keyword_threshold = 0.50  # n-gram 对中文 Jaccard 偏低，适度放宽
         if best_score >= keyword_threshold:
             return best_id
         return None
@@ -233,7 +243,7 @@ class ClusterEngine:
         self, event: Event, new_items: list[Item], all_events: dict[str, Event]
     ) -> None:
         """当事件有新条目加入时，用 LLM 重写事件标题和摘要（批量合并所有新条目）"""
-        template = _load_prompt("cluster")
+        template = load_prompt("cluster")
 
         existing_info = json.dumps(
             {"title": event.title, "summary": event.summary},

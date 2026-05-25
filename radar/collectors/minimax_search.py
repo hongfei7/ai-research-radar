@@ -5,37 +5,20 @@
 """
 
 import asyncio
-import hashlib
 import logging
-import random
-import re
 import time
-from urllib.parse import urlparse
 
 from radar.collectors.base import Collector
+from radar.collectors.rss import normalize_url, make_id
 from radar.models import Item, utcnow_iso
 from radar.credibility import get_credibility as _source_cred
 from radar.minimax_client import MinimaxClient
+from radar.utils import truncate
 
 logger = logging.getLogger(__name__)
 
 _MAX_RAW_SUMMARY = 800
 _SEARCH_DELAY = 0.3
-# 每轮搜索配额分配: 10 标的 + 5 趋势话题 = 15 次
-# 10 轮/5h × 15 次 = 150 次（刚好在配额内）
-_PER_RUN_STOCKS = 10
-_PER_RUN_TRENDING = 5
-
-
-def _make_id(url: str) -> str:
-    norm = url.strip().lower().rstrip("/")
-    return hashlib.sha1(norm.encode("utf-8")).hexdigest()
-
-
-def _truncate(text: str, max_len: int = _MAX_RAW_SUMMARY) -> str:
-    text = re.sub(r"<[^>]+>", "", text)
-    text = " ".join(text.split())
-    return text[:max_len]
 
 
 class MinimaxSearchCollector(Collector):
@@ -102,9 +85,12 @@ class MinimaxSearchCollector(Collector):
 
                 for r in results[:max_per_stock]:
                     link = r.get("link", "")
-                    if not link or link in seen_urls:
+                    if not link:
                         continue
-                    seen_urls.add(link)
+                    norm_link = normalize_url(link)
+                    if norm_link in seen_urls:
+                        continue
+                    seen_urls.add(norm_link)
 
                     title = (r.get("title", "") or "").strip()
                     snippet = (r.get("snippet", "") or "").strip()
@@ -119,14 +105,14 @@ class MinimaxSearchCollector(Collector):
                         continue
 
                     item = Item(
-                        id=_make_id(link),
+                        id=make_id(link),
                         title=title,
                         url=link,
                         source=source_id,
                         source_type="tech",
                         published_at=r.get("date", fetched_at) or fetched_at,
                         fetched_at=fetched_at,
-                        raw_summary=_truncate(snippet),
+                        raw_summary=truncate(snippet),
                         credibility=_source_cred(source_id),
                         image_url="",
                     )

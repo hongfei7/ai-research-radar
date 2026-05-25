@@ -1,18 +1,18 @@
 """Web Search 采集器 —— 用 DuckDuckGo 搜索补充 RSS 盲区"""
 
 import asyncio
-import hashlib
 import logging
 import random
-import re
 from urllib.parse import quote, urlparse, parse_qs
 
 import httpx
 from selectolax.parser import HTMLParser
 
 from radar.collectors.base import Collector
+from radar.collectors.rss import normalize_url, make_id
 from radar.models import Item, utcnow_iso
 from radar.credibility import get_credibility as _source_cred
+from radar.utils import truncate
 
 logger = logging.getLogger(__name__)
 
@@ -32,16 +32,6 @@ def _extract_real_url(ddg_url: str) -> str:
     return ddg_url
 
 
-def _make_id(url: str) -> str:
-    real = _extract_real_url(url)
-    norm = real.strip().lower().rstrip("/")
-    return hashlib.sha1(norm.encode("utf-8")).hexdigest()
-
-
-def _truncate(text: str, max_len: int = _MAX_RAW_SUMMARY) -> str:
-    text = re.sub(r"<[^>]+>", "", text)
-    text = " ".join(text.split())
-    return text[:max_len]
 
 
 async def _search_duckduckgo_html(query: str, max_results: int = 5) -> list[dict]:
@@ -121,9 +111,12 @@ class WebSearchCollector(Collector):
             for r in results:
                 raw_url = r.get("url", "")
                 url = _extract_real_url(raw_url)
-                if not url or url in seen_urls:
+                if not url:
                     continue
-                seen_urls.add(url)
+                norm_url = normalize_url(url)
+                if norm_url in seen_urls:
+                    continue
+                seen_urls.add(norm_url)
 
                 title = r.get("title", "").strip()
                 snippet = r.get("snippet", "").strip()
@@ -136,14 +129,14 @@ class WebSearchCollector(Collector):
                     continue
 
                 item = Item(
-                    id=_make_id(url),
+                    id=make_id(url),
                     title=title,
                     url=url,
                     source=source_id,
                     source_type="tech",
                     published_at=fetched_at,
                     fetched_at=fetched_at,
-                    raw_summary=_truncate(snippet),
+                    raw_summary=truncate(snippet),
                     credibility=_source_cred(source_id),
                     image_url="",
                 )

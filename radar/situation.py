@@ -3,20 +3,13 @@
 import json
 import logging
 from datetime import datetime, timezone
-from pathlib import Path
 from typing import Optional
 
 from radar.models import Item, Event, Situation, utcnow_iso
 from radar.minimax_client import MinimaxClient
+from radar.prompts import load_prompt
 
 logger = logging.getLogger(__name__)
-
-_PROMPTS_DIR = Path(__file__).resolve().parent.parent / "prompts"
-
-
-def _load_prompt(name: str) -> str:
-    path = _PROMPTS_DIR / f"{name}.txt"
-    return path.read_text(encoding="utf-8")
 
 
 class SituationGenerator:
@@ -74,7 +67,7 @@ class SituationGenerator:
             recent_items:   本轮新处理的条目
             prev_situation: 上次态势（null = 首次生成）
         """
-        template = _load_prompt("situation")
+        template = load_prompt("situation")
 
         # 活跃事件摘要
         active_events = {eid: ev for eid, ev in events.items() if ev.is_active}
@@ -170,6 +163,7 @@ class SituationGenerator:
 
         if prev_situation:
             sit.last_telegram_digest_at = prev_situation.last_telegram_digest_at
+            sit.last_wechat_digest_at = prev_situation.last_wechat_digest_at
             sit.morning_brief_date = prev_situation.morning_brief_date
             sit.cross_analysis = prev_situation.cross_analysis
             sit.trend_spotting = prev_situation.trend_spotting

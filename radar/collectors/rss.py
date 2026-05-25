@@ -37,12 +37,14 @@ def normalize_url(url: str) -> str:
     # 统一小写
     scheme = parsed.scheme.lower()
     netloc = parsed.netloc.lower()
-    # 去尾部斜杠
-    path = parsed.path.rstrip("/") or "/"
+    # 去尾部斜杠，统一小写（WEB 服务器通常大小写不敏感）
+    path = parsed.path.rstrip("/").lower() or "/"
     # 过滤跟踪参数
     query_params = parse_qs(parsed.query, keep_blank_values=True)
     clean_params = {k: v for k, v in query_params.items() if k not in _TRACKING_PARAMS}
     query = urlencode(clean_params, doseq=True)
+    # 已知 tradeoff：保留 fragment 可能导致同一页面不同锚点产生重复条目，
+    # 但部分站点用 fragment 区分内容页，丢弃会丢失语义。
     return urlunparse((scheme, netloc, path, parsed.params, query, parsed.fragment))
 
 
