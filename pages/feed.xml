@@ -5,39 +5,103 @@
     <link>https://hongfei7.github.io/ai-research-radar</link>
     <description>AI/科技/半导体板块的持续投研情报 feed — 由 MiniMax 策展</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 25 May 2026 09:17:13 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 11:27:22 GMT</lastBuildDate>
     <atom:link href="https://hongfei7.github.io/ai-research-radar/feed.xml" rel="self" type="application/rss+xml"/>
     
     <item>
-      <title>[8分] 微软迈亚200芯片发布：推理成本优于英伟达，AI硬件自主化迈出关键步伐</title>
-      <link>https://www.tmtpost.com/agent/ai-article/16512</link>
-      <guid isPermaLink="false">afd87307f03f8203143d387fd790869c69427422</guid>
-      <pubDate>Mon, 25 May 2026 09:12:59 GMT</pubDate>
+      <title>[10分] 一台手掌大小、300克的AI主机，为什么能跑122B模型？</title>
+      <link>https://www.leiphone.com/category/industrynews/okdjkkdkuhqydaee.html</link>
+      <guid isPermaLink="false">d0069dbe5271e3ea29eecfa732868dfec784bed8</guid>
+      <pubDate>Mon, 25 May 2026 10:41:00 GMT</pubDate>
       <description><![CDATA[
-        <p>微软于2026年5月21日发布自研AI推理芯片Maia 200，已内部规模化部署，部分推理任务单位算力成本低于英伟达同类GPU。微软计划年内向企业客户开放该芯片，用于降低Azure云AI服务成本，标志着其AI硬件自主化进入新阶段。此举对英伟达在推理芯片市场的地位形成挑战，同时若Maia 200由台积电代工，也将利好其先进制程需求。</p>
-        <p>标的: 微软, 台积电, 英伟达</p>
-        <p>主线: chip_supply, compute_demand</p>
-        <p>方向: 英伟达→negative 微软→positive 台积电→positive </p>
-        <p><em>持续跟踪Maia 200产能爬坡节奏与客户拓展进度；若推理芯片成本优势持续扩大，可能倒逼英伟达降价或加速推出新一代推理GPU，进而影响整体AI芯片定价体系。</em></p>
-        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
+        <p>联想发布AI主机P7，仅300克、30W功耗，可本地运行122B参数模型。该设备具备190TOPS异构AI算力（后摩漫界M50 dNPU+此芯P1 SoC），支持80GB RAM和128K上下文，无网环境下推理速度50 Tokens/s，噪音低于35分贝。采用一机双模设计，支持7×24小时连续运行。分析师观点：P7代表了介于AI PC与工作站之间的Agent Computer新品类，其芯片方案（后摩漫界+此芯）值得关注；英伟达DGX Spark、Mac mini的溢价行情显示端侧推理需求旺盛，AMD/Intel等传统PC芯片厂商需跟进；台积电作为芯片代工方持续受益；国产替代主线可关注类似定位的端侧AI设备进展。</p>
+        <p>标的: 寒武纪, AMD, 中芯国际, Intel, 高通, 台积电, ARM</p>
+        <p>主线: compute_demand, edge_ai, model_capability, domestic_substitution, chip_supply</p>
+        <p>方向: AMD→positive Intel→positive 高通→positive ARM→positive 台积电→positive 中芯国际→positive 寒武纪→positive </p>
+        <p><em>需跟踪：1）后摩漫界、此芯等新兴AI芯片厂商的融资与量产进展；2）P7的销量与用户反馈；3）AMD/Intel端侧AI芯片路线图更新。二阶效应：若Agent Computer成为新终端形态，将带动轻量化模型优化需求（利好模型压缩技术公司），并提升对低功耗AI芯片的资本投入。</em></p>
+        <p>来源: rss:leiphone 🟡 中可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_ee59df1e6a70</category>
+      <category>evt_3a6022f3e608</category>
     </item>
     
     <item>
-      <title>[6分] Gemma 4 Multi-Token Prediction Delivers Up to ~3x Faster Token Generation</title>
-      <link>https://www.infoq.com/news/2026/05/gemma4-multi-token-prediction</link>
-      <guid isPermaLink="false">d4c34558f234da5f4d775c46355d46eade3b8675</guid>
-      <pubDate>Mon, 25 May 2026 09:00:00 GMT</pubDate>
+      <title>[5分] 谷歌发布第八代自研AI芯片：性价比大增，拆分训练与推理_10%公司_澎湃新闻-The Paper</title>
+      <link>https://www.thepaper.cn/newsDetail_forward_33029483</link>
+      <guid isPermaLink="false">2eb5b64d68cdd53c9fa1bef9085a2d93c074b608</guid>
+      <pubDate>Mon, 25 May 2026 11:20:03 GMT</pubDate>
       <description><![CDATA[
-        <p>Google发布Gemma 4模型，引入多token预测(MTP)技术配合投机解码(speculative decoding)机制。该技术允许模型并行生成多个候选token并一次性验证，可实现高达3倍的推理加速且不损失输出质量。此突破对推理效率影响显著，可能重塑未来AI模型部署的算力需求结构。</p>
-        <p>标的: 微软, Meta, 阿里巴巴, 高通, ARM, 百度, 英伟达, 腾讯, AMD, 谷歌</p>
-        <p>主线: edge_ai, model_capability, compute_demand, chip_supply</p>
-        <p>方向: 谷歌→positive 英伟达→neutral AMD→neutral 高通→neutral ARM→neutral 微软→positive Meta→positive 阿里巴巴→positive 腾讯→positive 百度→positive </p>
-        <p><em>MTP投机解码正成为推理优化新范式。建议跟踪：1)Gemma 4开源社区采用情况；2)其他大模型跟进速度；3)推理效率提升对云厂商推理芯片采购结构的影响；4)端侧AI部署的可行性提升。高效推理可能压缩云端算力需求，但利好推理芯片能效比领先厂商。</em></p>
-        <p>来源: rss:infoq 🟡 中可信 [转载自 未知来源]</p>
+        <p>谷歌发布第八代自研TPU芯片，实现训练与推理的架构拆分，显著提升性价比。谷歌正积极拓展自研芯片对外销售业务，扩大商业化范围。据DA Davidson估算，谷歌TPU业务与AI部门DeepMind合计估值约9000亿美元。博通于今年4月宣布扩大与谷歌的合作，将为谷歌未来数代AI芯片提供定制化开发与供应服务。此举标志着谷歌在AI基础设施自研化道路上持续深化。</p>
+        <p>标的: 博通, AMD, 英伟达, 台积电, 谷歌</p>
+        <p>主线: model_capability, chip_supply, compute_demand</p>
+        <p>方向: 谷歌→positive 博通→positive 英伟达→negative 台积电→neutral AMD→negative </p>
+        <p><em>需跟踪谷歌TPU对英伟达H100/H200市场份额的侵蚀程度，以及博通AI定制芯片业务增量。谷歌自研芯片规模化可能改变云厂商对商业芯片的依赖度，需关注对英伟达、AMD数据中心业务的连锁影响。</em></p>
+        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_33b3a2cebe80</category>
+      <category>evt_73bb661f2cbe</category>
+    </item>
+    
+    <item>
+      <title>[5分] 阿里平头哥启动上市计划，已布局全栈ai芯片-36氪</title>
+      <link>https://www.36kr.com/p/3650412256731265</link>
+      <guid isPermaLink="false">ca6001175392e84aa98f6f0dcba6e3091e3f2507</guid>
+      <pubDate>Mon, 25 May 2026 11:20:03 GMT</pubDate>
+      <description><![CDATA[
+        <p>阿里巴巴旗下芯片公司平头哥自研PPU已成为中国新增AI算力市场的主力芯片之一。市场消息显示，阿里集团已决定支持平头哥未来独立上市。1月22日接近市场人士披露上述计划。平头哥PPU定位高性能AI处理器，若成功分拆上市，将成为国内首家独立上市的平台型AI芯片公司，与寒武纪、海光信息等国产AI芯片厂商形成直接竞争，同时也对英伟达、AMD等国际厂商在中国推理市场的布局形成替代压力。</p>
+        <p>标的: 寒武纪, 阿里巴巴, AMD, 中芯国际, 英伟达, 台积电, 海光信息</p>
+        <p>主线: chip_supply, compute_demand, ai_monetization, domestic_substitution</p>
+        <p>方向: 阿里巴巴→positive 寒武纪→negative 海光信息→negative 中芯国际→positive 英伟达→negative AMD→negative 台积电→neutral </p>
+        <p><em>跟踪平头哥IPO进度及PPU产能爬坡情况。上市融资若成功将加速其芯片迭代，对国产AI芯片格局产生鲶鱼效应；关注其与寒武纪、海光的产品差异化及客户争夺。中芯国际作为潜在代工合作方值得关注。</em></p>
+        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_0367941da0d8</category>
+    </item>
+    
+    <item>
+      <title>[9分] 把18A塞进主流轻薄本，英特尔「WildCat Lake」想让人人用上AI PC</title>
+      <link>https://www.leiphone.com/category/chips/gajsnsvozgcw55be.html</link>
+      <guid isPermaLink="false">259e6de5b0d871d98981d8f242f341d09435788e</guid>
+      <pubDate>Mon, 25 May 2026 07:54:00 GMT</pubDate>
+      <description><![CDATA[
+        <p>Intel正式发布代号“Wildcat Lake“的第三代主流酷睿处理器，将18A制程技术下放主流价位。该芯片功耗较第一代主流酷睿降低64%，集成40 TOPS AI算力，旨在推动AI PC从“高玩尝鲜“向全民普及。Intel副总裁高嵩表示，希望最大用户群能以最大可能性使用AI PC。超70款“全民AI轻薄本“即将问世，五大典型应用场景包括本地AI辅助教育、内容创作、语音交互等。市场预期2026年AI PC渗透率突破50%，Gartner预测2025年AI PC出货量7780万台。</p>
+        <p>标的: 戴尔, Intel, 微软</p>
+        <p>主线: edge_ai, chip_supply</p>
+        <p>方向: Intel→positive 微软→positive 戴尔→positive </p>
+        <p><em>跟踪Intel 18A制程量产进度及主流价位产品铺货速度；关注AI PC生态成熟度对Windows/Office等软件订阅的拉动；留意AMD、Qualcomm在主流价位AI PC的竞争应对；PC OEM供应链（戴尔、联想等）有望受益于换机周期重启。</em></p>
+        <p>来源: rss:leiphone 🟡 中可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_679afc6b1013</category>
+    </item>
+    
+    <item>
+      <title>[4分] anthropics /claude-cookbooks</title>
+      <link>https://github.com/anthropics/claude-cookbooks</link>
+      <guid isPermaLink="false">d98aa6f2ddad7e229763ac26724097a0f8581177</guid>
+      <pubDate>Mon, 25 May 2026 11:20:02 GMT</pubDate>
+      <description><![CDATA[
+        <p>Anthropic在GitHub上发布了claude-cookbooks项目，收录了一系列Jupyter Notebook形式的教程与示例代码，展示Claude模型的各种使用方法和应用场景。该仓库目前处于GitHub Trending榜单，Star数持续增长。Claude是Anthropic推出的商业化大语言模型产品，cookbooks的流行反映了开发者生态的活跃度。由于该项目不直接涉及算力硬件、芯片制造或云厂商的具体采购或技术进展，对覆盖标的无直接关联。</p>
+        
+        <p>主线: model_capability, ai_monetization</p>
+        
+        <p><em>该资讯属于开发者生态层面的观察，暂不构成交易信号。建议关注：1）Claude开发者社区规模变化（影响Anthropic商业化收入）；2）是否有大型企业或云厂商将cookbooks中的方法论商业化落地。若Claude生态持续扩大，可关注其推理算力需求对算力链的间接拉动。</em></p>
+        <p>来源: github_trending 🔴 低可信</p>
+      ]]></description>
+      <category>evt_5bed6ed9a407</category>
+    </item>
+    
+    <item>
+      <title>[4分] The AI Era Is Creating a Bug Hunting Arms Race</title>
+      <link>https://www.wired.com/story/the-ai-era-is-creating-a-bug-hunting-arms-race</link>
+      <guid isPermaLink="false">db73c55627a907454dc26b82c619d31c79243970</guid>
+      <pubDate>Mon, 25 May 2026 10:30:00 GMT</pubDate>
+      <description><![CDATA[
+        <p>AI时代正在重塑网络安全攻防格局。随着攻击者加速利用AI开发漏洞利用工具（exploit），传统的漏洞挖掘方式面临颠覆。AI不仅能自动发现软件缺陷，还能生成针对性攻击代码，大幅降低黑客攻击门槛。安全研究员也被迫采用AI工具来对抗AI威胁，形成"军备竞赛"。这一趋势对软件厂商的防御能力提出更高要求，同时推动安全芯片、可信执行环境等硬件级安全方案的需求上升。</p>
+        <p>标的: 微软, AMD, 英伟达, 亚马逊, ARM, 谷歌</p>
+        <p>主线: compute_demand, edge_ai, ai_monetization, policy_export, chip_supply</p>
+        <p>方向: 微软→negative 谷歌→negative 亚马逊→negative 英伟达→neutral AMD→neutral ARM→positive </p>
+        <p><em>关注微软/谷歌等软件厂商的AI安全投入力度；跟踪AI漏洞扫描工具的商业化进展；留意安全芯片（TEE、可信执行环境）需求是否向消费级终端渗透；国产安全软件及芯片厂商或迎替代窗口。</em></p>
+        <p>来源: rss:wired 🟡 中可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_df784f51981d</category>
     </item>
     
   </channel>
