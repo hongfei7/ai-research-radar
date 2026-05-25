@@ -5,71 +5,103 @@
     <link>https://hongfei7.github.io/ai-research-radar</link>
     <description>AI/科技/半导体板块的持续投研情报 feed — 由 MiniMax 策展</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 25 May 2026 12:56:12 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 15:03:27 GMT</lastBuildDate>
     <atom:link href="https://hongfei7.github.io/ai-research-radar/feed.xml" rel="self" type="application/rss+xml"/>
     
     <item>
-      <title>[8分] 一文看懂 Google I/O 2026 全程亮点：AI 全面进化，搜索、硬件、智能体迎来大革新</title>
-      <link>https://zhuanlan.zhihu.com/p/2041622071374001147</link>
-      <guid isPermaLink="false">67fe8ae767ed4cec68a097ebf693329c5bcf0c44</guid>
-      <pubDate>Mon, 25 May 2026 12:50:18 GMT</pubDate>
+      <title>[8分] 台积电Q3净利创新高：AI芯片需求旺盛，2纳米制程本季量产</title>
+      <link>https://www.sohu.com/a/944599752_122362510</link>
+      <guid isPermaLink="false">af53d00f91831f4ff69d9e4cc23c5837db488f39</guid>
+      <pubDate>Mon, 25 May 2026 14:55:26 GMT</pubDate>
       <description><![CDATA[
-        <p>谷歌在I/O 2026大会宣布多项AI核心进展：下半年Siri将全面接入Gemini，iPhone用户可直接调用Gemini能力；AI Ultra会员订阅涨价至100美元/月（含算力配额、超大存储、视频会员）；新一代自研TPU芯片落地，算力性能大幅提升同时降低使用成本。谷歌AI生态从模型能力、变现模式、硬件底座三维度实现全面进化，对苹果生态渗透加速，AI商业化闭环进一步完善。</p>
-        <p>标的: 苹果, 谷歌, 英伟达, ARM, 微软, AMD, 高通, 台积电, 亚马逊</p>
-        <p>主线: ai_monetization, chip_supply, edge_ai, model_capability, compute_demand</p>
-        <p>方向: 谷歌→positive 苹果→positive 英伟达→neutral 台积电→positive 高通→positive ARM→positive 微软→neutral 亚马逊→neutral AMD→neutral </p>
-        <p><em>短期跟踪：Gemini+Siri整合进展、iPhone端Gemini调用体验反馈、AI Ultra会员转化率。中期变量：TPU自研对英伟达GPU需求的替代程度、谷歌云竞争力变化、苹果是否跟进自研AI能力。建议关注谷歌AI生态闭环对微软Copilot+亚马逊Alexa的竞争挤压效应，以及TPU规模化对台积电先进封装订单的拉动。</em></p>
+        <p>台积电Q3净利创历史新高，受益于AI芯片需求持续旺盛。公司2纳米制程将于本季度正式量产，同时加速推进亚利桑那州工厂扩建，并计划在2纳米基础上发展更先进制程技术。AI技术演进推动芯片性能要求不断提升，台积电的技术领先地位及其先进制程量产进展将成为产业链关注焦点。</p>
+        <p>标的: 超微电脑, 台积电, ASML, 中芯国际, AMD, ARM, 博通, 高通, 英伟达</p>
+        <p>主线: compute_demand, datacenter_power, advanced_packaging, domestic_substitution, edge_ai, policy_export, chip_supply</p>
+        <p>方向: 台积电→positive 英伟达→positive AMD→positive 博通→positive ASML→positive 高通→positive ARM→positive 超微电脑→positive 中芯国际→negative </p>
+        <p><em>核心跟踪变量：2nm制程良率爬坡节奏及产能释放进度；AI芯片厂商（英伟达、AMD等）获得晶圆配额情况。先进制程量产成功将强化台积电竞争壁垒，同时对ASML EUV设备需求形成拉动；超微电脑等AI服务器厂商间接受益。二阶效应关注：若2nm量产顺利，可能加速中芯国际等竞争对手的追赶压力。</em></p>
         <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_df784f51981d</category>
+      <category>evt_db5be1b36cb4</category>
     </item>
     
     <item>
-      <title>[6分] 2026《"人工智能+"行业发展蓝皮书》发布：金山办公成为ai办公领域唯一入选案例-品玩</title>
-      <link>https://www.pingwest.com/a/313170</link>
-      <guid isPermaLink="false">efc5be5768bddf1b51ee44c19eaf592bc99b932d</guid>
-      <pubDate>Mon, 25 May 2026 12:50:18 GMT</pubDate>
+      <title>[6分] 违规走私AI服务器，超微电脑高管被捕|超微电脑_新浪财经_新浪网</title>
+      <link>https://finance.sina.com.cn/wm/2026-03-20/doc-inhrreqy4115670.shtml</link>
+      <guid isPermaLink="false">72112a9591871f796873adbeb4e39a931224bd81</guid>
+      <pubDate>Mon, 25 May 2026 14:55:26 GMT</pubDate>
       <description><![CDATA[
-        <p>上海交通大学安泰经济与管理学院及行业研究院发布《2026"人工智能+"行业发展蓝皮书》，金山办公凭借38年办公软件研发积淀与WPS AI技术范式跃迁成果，作为AI赋能信息产业唯一办公案例入选此前已登上《2026行业级智能体TOP100》办公领域榜首。金山办公展示了AI在办公场景的落地能力，标志着国产办公软件在AI商业化方面取得实质性突破。</p>
-        <p>标的: 苹果, 谷歌, 小米, 微软, 金山办公, 阿里巴巴, 腾讯, 百度</p>
-        <p>主线: model_capability, edge_ai, ai_monetization</p>
-        <p>方向: 金山办公→positive 微软→neutral 谷歌→neutral 苹果→neutral 阿里巴巴→neutral 腾讯→neutral 百度→neutral 小米→neutral </p>
-        <p><em>建议跟踪金山办公WPS AI的用户增长、付费转化率及与其他办公软件的竞争格局变化；该案例验证了AI办公场景的商业化可行性，可能加速国内办公软件市场的AI功能竞赛，对B端/C端变现模式具有参考意义。</em></p>
+        <p>3月20日，美国AI服务器大厂超微电脑（SMCI）卷入违反出口管制的走私案件，纽约南区联邦检察官已介入。超微电脑是全球AI服务器核心供应商，此次高管被捕事件可能影响其正常生产经营及供应链稳定性。鉴于超微电脑与英伟达、AMD等芯片厂商的深度绑定关系，该案件或波及上游芯片供给，并对市场算力供应预期产生扰动。出口管制执法的持续升级亦反映出美国对AI相关技术管控趋严的的政策导向。</p>
+        <p>标的: 超微电脑, AMD, 英伟达</p>
+        <p>主线: policy_export, compute_demand, chip_supply</p>
+        <p>方向: 超微电脑→negative 英伟达→neutral AMD→neutral </p>
+        <p><em>需跟踪：案件进展及对超微电脑产能影响程度、美国出口管制执法扩大化趋势。可能的二阶效应：若超微供应受限，下游云厂商或转向戴尔等竞争对手；英伟达/AMD GPU订单节奏可能受到扰动。建议关注其他AI服务器厂商的市场份额变化。</em></p>
         <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_4417ac79a597</category>
+      <category>evt_3f1c584a1a83</category>
     </item>
     
     <item>
-      <title>[5分] Anthropic beats OpenAI on business adoption</title>
-      <link>https://www.reddit.com/r/singularity/comments/1tn86lf/anthropic_beats_openai_on_business_adoption</link>
-      <guid isPermaLink="false">d75c341d3f4509eb28326a62210257380384b1a7</guid>
-      <pubDate>Mon, 25 May 2026 12:48:10 GMT</pubDate>
+      <title>[5分] 雷军：小米计划再投2000亿元用于研发，覆盖AI、芯片和OS</title>
+      <link>https://news.qq.com/rain/a/20260521A0A6MM00</link>
+      <guid isPermaLink="false">a4e8f4212ca391028888d7283c24e64e6249b265</guid>
+      <pubDate>Mon, 25 May 2026 14:55:26 GMT</pubDate>
       <description><![CDATA[
-        <p>Reddit帖子标题显示Anthropic在商业采用（business adoption）方面超越了OpenAI。帖子由用户JackFisherBooks提交至singularity社区，但原文本除标题外无实质内容摘要，未披露具体数据、采用率对比细节或商业化进展。该标题暗示Anthropic的Claude模型在企业市场渗透方面取得进展，但缺乏来源支撑和具体信息。</p>
-        <p>标的: Anthropic</p>
-        <p>主线: ai_monetization</p>
-        
-        <p><em>缺乏实质内容，无法形成投资建议。需持续跟踪Anthropic商业化进展及其对其他AI厂商竞争格局的影响，尤其关注Claude在企业市场的份额变化。</em></p>
-        <p>来源: reddit:singularity 🔴 低可信 [转载自 未知来源]</p>
+        <p>小米CEO雷军在5月21日北京昌平科技园发布会上宣布，未来5年将投入2000亿元用于研发，重点覆盖AI、芯片和操作系统三大领域。此次发布会上还推出了YU7 GT新车及新手机产品。2000亿规模的研发投入在国内科技行业处于领先水平，标志着小米加速从消费电子向底层技术能力延伸，芯片自研和OS生态建设有望对国内半导体及AI终端产业链形成拉动效应。</p>
+        <p>标的: 寒武纪, 中芯国际, 海光信息, 小米, ARM, 高通</p>
+        <p>主线: domestic_substitution, edge_ai, chip_supply</p>
+        <p>方向: 小米→positive 高通→neutral ARM→positive 中芯国际→positive 寒武纪→neutral 海光信息→neutral </p>
+        <p><em>关注小米芯片自研进展及OS生态建设节奏。若自研芯片落地，将对国产AI终端芯片链形成示范效应；OS自研可能重塑应用生态格局。建议跟踪其AI手机销量、芯片流片进度及与ARM授权合作变化。</em></p>
+        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_b972348682b6</category>
+      <category>evt_36111819326c</category>
     </item>
     
     <item>
-      <title>[4分] Ranked AI models by what people actually use instead of benchmark scores - the benchmark champion barely makes the top 20</title>
-      <link>https://www.reddit.com/r/singularity/comments/1tn7psn/ranked_ai_models_by_what_people_actually_use</link>
-      <guid isPermaLink="false">cb9d9765ebafe4377c0f7786d44950d05cc453e9</guid>
-      <pubDate>Mon, 25 May 2026 12:28:35 GMT</pubDate>
+      <title>[6分] Huawei claims sanctions-busting breakthrough with 1.4nm-class chips by 2031, claims 55% higher transistor density — firm claims new LogicFolding chip architecture can bypass EUV restrictions, introduces 'Tau Scaling Law' to replace Moore's Law</title>
+      <link>https://www.tomshardware.com/tech-industry/semiconductors/huawei-claims-sanctions-busting-breakthrough-with-1-4nm-class-chips-by-2031-claims-55-percent-higher-transistor-density-firm-claims-new-logicfolding-chip-architecture-can-bypass-euv-restrictions-introduces-tau-scaling-law-to-replace-moores-law</link>
+      <guid isPermaLink="false">d16304a48e7451ae3e6cb3d4fac88aec9fe48b09</guid>
+      <pubDate>Mon, 25 May 2026 13:10:31 GMT</pubDate>
       <description><![CDATA[
-        <p>一位开发者在Reddit上发布基于真实使用量的AI模型排行榜，与基准测试排名差异显著：Gemini 3.1 Pro基准测试第一但实际使用仅排第17；谷歌最常用模型为便宜的Flash Lite而非Pro；GPT-5因使用量和讨论度高居榜首；OpenAI占据前7名中的6个。反映出用户更看重成本与可获取性而非单纯性能，基准测试排名与实际使用存在数周滞后。</p>
-        <p>标的: OpenAI, 谷歌</p>
-        <p>主线: model_capability, ai_monetization, compute_demand</p>
-        <p>方向: 谷歌→neutral OpenAI→positive </p>
-        <p><em>需跟踪真实使用量数据与基准测试差异的持续性；若低价模型持续主导，可能影响高端AI模型的商业化路径和算力需求结构，进而影响算力链公司。</em></p>
-        <p>来源: reddit:singularity 🔴 低可信 [转载自 未知来源]</p>
+        <p>华为发布「LogicFolding」芯片设计框架，基于自研「Tau Scaling Law」缩放定律，声称实现1.4nm级别制程，晶体管密度提升55%，可绕过EUV光刻机限制。目标2031年量产。此举旨在缩小与台积电、英伟达等技术差距，为中国半导体突围提供新路径。技术真实性待验证，但标志着国产高端芯片架构创新进入新阶段，对全球芯片竞争格局具有战略意义。</p>
+        <p>标的: 寒武纪, 台积电, ASML, 中芯国际, Marvell, AMD, ARM, 海光信息, 美光, 博通, Intel, 高通, 英伟达</p>
+        <p>主线: compute_demand, advanced_packaging, domestic_substitution, policy_export, chip_supply</p>
+        <p>方向: 英伟达→negative AMD→negative 台积电→negative ASML→neutral 中芯国际→positive 寒武纪→positive 海光信息→positive Intel→negative 高通→negative 博通→neutral ARM→neutral 美光→neutral Marvell→neutral </p>
+        <p><em>华为技术路径可行性存疑（2031年目标过于激进），但标志着国产芯片架构创新突破。建议：1）跟踪Tau Law技术验证进展；2）关注国产EUV替代方案（上海微电子等）；3）警惕对台积电/英伟达订单影响的情绪扰动；4）若技术验证成功，中芯国际等代工链将显著受益。</em></p>
+        <p>来源: rss:tomshardware 🟡 中可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_49367afcc1ef</category>
+      <category>evt_c51158ed0138</category>
+    </item>
+    
+    <item>
+      <title>[5分] Microsoft pulls plug on plans for 244-acre data center in Caledonia</title>
+      <link>https://www.tmj4.com/news/racine-county/microsoft-pulls-plug-on-plans-for-244-acre-data-center-in-caledonia-after-community-pushback</link>
+      <guid isPermaLink="false">969ea84b180f11595ef328fc94b783546e6be2da</guid>
+      <pubDate>Mon, 25 May 2026 13:09:53 GMT</pubDate>
+      <description><![CDATA[
+        <p>微软取消了在Caledonia建设244英亩数据中心的计划，具体原因未在文中说明（可能涉及土地、环境或当地审批问题）。这一决策反映了大型科技公司在数据中心扩张过程中面临的选址和审批挑战，可能对其AI基础设施扩建节奏产生影响。</p>
+        <p>标的: 超微电脑, 微软, AMD, 亚马逊, 工业富联, 谷歌, 英伟达</p>
+        <p>主线: datacenter_power, compute_demand, chip_supply</p>
+        <p>方向: 微软→negative 英伟达→negative AMD→negative 超微电脑→negative 工业富联→negative 亚马逊→neutral 谷歌→neutral </p>
+        <p><em>跟踪变量：其他云厂商（CSP）是否调整数据中心建设计划；电力供给紧张地区的新项目审批进展。二阶效应：若更多项目搁置，可能影响GPU/服务器短期订单；与CSP capex指引调整联动。</em></p>
+        <p>来源: hackernews 🔴 低可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_70f36ef7d48f</category>
+    </item>
+    
+    <item>
+      <title>[4分] SoftBank stock jumped 4.6% to a record high on Monday, spurred by hopes of big returns from the company's stakes in OpenAI and SB Energy Corp if they go public (Bloomberg)</title>
+      <link>https://www.techmeme.com/260525/p14#a260525p14</link>
+      <guid isPermaLink="false">1bb9f2967cefaf145414cbed7e0a83441c15a931</guid>
+      <pubDate>Mon, 25 May 2026 13:50:11 GMT</pubDate>
+      <description><![CDATA[
+        <p>软银集团（SoftBank Group）股价周一上涨4.6%至历史新高，主要受市场对其持有的OpenAI和SB Energy Corp股份在潜在IPO时获得高回报的预期推动。软银近年来通过愿景基金积极投资AI领域，OpenAI作为全球领先的AI模型公司，其估值提升直接利好软银投资组合。微软作为OpenAI的最大股东（投资约130亿美元），也将间接受益。分析师建议关注软银持仓的AI公司IPO进程及其对市场情绪的传导。</p>
+        <p>标的: 微软, 台积电, OpenAI, ARM, 英伟达</p>
+        <p>主线: compute_demand, ai_monetization, model_capability</p>
+        <p>方向: 微软→positive ARM→positive 英伟达→neutral 台积电→neutral OpenAI→positive </p>
+        <p><em>跟踪变量：OpenAI及软银系AI公司IPO时间表、软银持仓估值变化；高估值AI资产上市可能强化市场对AI算力需求的信心，带动算力链（英伟达、台积电）情绪；但需警惕估值回调风险，建议关注微软Azure营收增速作为AI变现验证。</em></p>
+        <p>来源: rss:techmeme 🔴 低可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_6735e22b3ea3</category>
     </item>
     
   </channel>
