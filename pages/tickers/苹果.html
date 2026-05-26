@@ -39,36 +39,15 @@
       <h2>相关事件 (3)</h2>
       
       <div class="event-card">
-        <h3>[P] Built a portable GPU ISA after reading too many architecture manuals [P]</h3>
-        <div class="summary">开发者通过阅读超5000页NVIDIA PTX、AMD ISA、Intel Xe、Apple GPU等16种微架构文档，发现四大厂商实现相同的11项功能但命名各异。基于此开发了GPU ISA抽象层WAVE，支持一次编写kernel后编译为可移植二进制，通过thin backends转换为Metal、PTX、HIP或SYCL。已在Apple M4 Pro、NVIDIA T4、AMD MI300X完成验证，PyTorch集成后在所有后端获得一致训练结果。该工具降低了跨平台开发门槛，对AI框架生态具有潜在影响。</div>
+        <h3>美光财报超预期 存储超级周期确认延续至2027</h3>
+        <div class="summary">美光科技最新季度财报大幅超越华尔街预期，AI基础设施建设推动存储芯片需求爆发式增长。HBM等AI专用存储需求强劲，数据中心扩建持续加速。公司给出极度乐观的当前季度业绩指引，释放存储行业景气周期延长信号，预计这轮超级周期将延续至2027年。美光估值有望迎来修复。</div>
         <div class="tags">
-          
-          <span class="tag tag-theme">chip_supply</span>
-          
-          <span class="tag tag-theme">compute_demand</span>
-          
-          <span class="tag tag-theme">edge_ai</span>
-          
-          <span class="tag tag-theme">model_capability</span>
-          
-        </div>
-        
-        <div style="margin-top:6px;">
-          方向: <span class="direction-neutral">neutral</span>
-        </div>
-        
-      </div>
-      
-      <div class="event-card">
-        <h3>SK海力士发布iHBM热封装架构 热阻降低30%</h3>
-        <div class="summary">SK海力士发布iHBM新型热封装架构，将冷却元件直接嵌入HBM接口层，实现热阻降低30%，旨在解决AI加速器高密度运算下的过热降频问题。该技术面向下一代HBM5及AI数据中心场景，将强化SK海力士对英伟达、AMD等AI芯片客户的供应地位，并对美光形成技术压力。散热效率提升或推动AI服务器向更高算力密度演进。</div>
-        <div class="tags">
-          
-          <span class="tag tag-theme">datacenter_power</span>
-          
-          <span class="tag tag-theme">chip_supply</span>
           
           <span class="tag tag-theme">advanced_packaging</span>
+          
+          <span class="tag tag-theme">chip_supply</span>
+          
+          <span class="tag tag-theme">datacenter_power</span>
           
           <span class="tag tag-theme">compute_demand</span>
           
@@ -81,15 +60,36 @@
       </div>
       
       <div class="event-card">
-        <h3>美股大型科技股盘前普涨，美光科技涨超8%</h3>
-        <div class="summary">美股大型科技股盘前普遍上涨，芯片股领涨。美光科技涨超8%表现最强，英伟达、英特尔涨超1%，苹果、亚马逊、谷歌、Meta小幅跟涨，仅微软微跌0.09%。市场情绪回暖，半导体板块获得资金关注。</div>
+        <h3>海外开发者实现双RTX3060本地运行Qwen3.6-27B模型</h3>
+        <div class="summary">海外开发者展示使用双RTX3060（24GB总显存）本地运行Qwen3.6-27B大模型的方案，采用GGUF量化格式（Q4_K_S）和llama.cpp自编译版本，推理速度达30-50 t/s。该方案改善了此前7900 XTX配置下300-500 t/s过慢的问题，老旧平台i7-4770k通过PCIe 3.0 x8+x8分频在带宽上与新一代平台持平，验证了中低端消费级GPU在端侧推理场景的可行性。</div>
         <div class="tags">
           
-          <span class="tag tag-theme">ai_monetization</span>
+          <span class="tag tag-theme">edge_ai</span>
+          
+          <span class="tag tag-theme">model_capability</span>
           
           <span class="tag tag-theme">chip_supply</span>
           
           <span class="tag tag-theme">compute_demand</span>
+          
+        </div>
+        
+        <div style="margin-top:6px;">
+          方向: <span class="direction-neutral">neutral</span>
+        </div>
+        
+      </div>
+      
+      <div class="event-card">
+        <h3>We're starting to see some PC makers respond to Apple's MacBook Neo</h3>
+        <div class="summary">PC厂商开始响应苹果的MacBook Neo产品线，瞄准600美元以下的中低端笔记本市场。报道指出低价笔记本虽有多年历史，但品质稳定可靠的产品仍然稀缺。苹果此次推出MacBook Neo预计将采用自研ARM架构芯片，可能对传统Wintel生态形成挑战。PC制造商需要在此价格区间提升产品竞争力，以应对苹果的攻势。</div>
+        <div class="tags">
+          
+          <span class="tag tag-theme">edge_ai</span>
+          
+          <span class="tag tag-theme">chip_supply</span>
+          
+          <span class="tag tag-theme">ai_monetization</span>
           
         </div>
         
@@ -106,9 +106,9 @@
       
       <div class="item-row">
         <strong>[4分]</strong>
-        <a href="https://www.reddit.com/r/machinelearning/comments/1to76tv/p_built_a_portable_gpu_isa_after_reading_too_many" target="_blank">[P] Built a portable GPU ISA after reading too many architecture manuals [P]</a>
-        <div>开发者通过阅读超5000页NVIDIA PTX、AMD ISA、Intel Xe、Apple GPU等16种微架构文档，发现四大厂商实现相同的11项功能但命名各异。基于此开发了GPU ISA抽象层WAVE，支持一次编写kernel后编译为可移植二进制，通过thin backends转换为Metal、PTX、HIP或SYCL。已在Apple M4 Pro、NVIDIA T4、AMD MI300X完成验证，PyTorch集成后在所有后端获得一致训练结果。该工具降低了跨平台开发门槛，对AI框架生态具有潜在影响。</div>
-        <div class="meta">2026-05-26T13:36:10Z · reddit:ml 🔴 ⛓️转载</div>
+        <a href="https://arstechnica.com/gadgets/2026/05/were-starting-to-see-some-pc-makers-respond-to-apples-macbook-neo" target="_blank">We're starting to see some PC makers respond to Apple's MacBook Neo</a>
+        <div>PC厂商开始响应苹果的MacBook Neo产品线，瞄准600美元以下的中低端笔记本市场。报道指出低价笔记本虽有多年历史，但品质稳定可靠的产品仍然稀缺。苹果此次推出MacBook Neo预计将采用自研ARM架构芯片，可能对传统Wintel生态形成挑战。PC制造商需要在此价格区间提升产品竞争力，以应对苹果的攻势。</div>
+        <div class="meta">2026-05-26T20:47:31Z · rss:arstechnica 🟡 ⛓️转载</div>
       </div>
       
     </div>
