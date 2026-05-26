@@ -5,103 +5,71 @@
     <link>https://hongfei7.github.io/ai-research-radar</link>
     <description>AI/科技/半导体板块的持续投研情报 feed — 由 MiniMax 策展</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 26 May 2026 19:09:22 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2026 21:17:54 GMT</lastBuildDate>
     <atom:link href="https://hongfei7.github.io/ai-research-radar/feed.xml" rel="self" type="application/rss+xml"/>
     
     <item>
-      <title>[8分] ASML CEO Warns of Tight Chip Supply Amid AI-Driven Market Boom</title>
-      <link>https://www.globalbankingandfinance.com/exclusive-asml-ceo-sees-tight-supply-booming-chip-market-ai/</link>
-      <guid isPermaLink="false">4cb8f315a24515ed5c72a40f7b94e2c914d9d0e2</guid>
-      <pubDate>Tue, 26 May 2026 19:03:15 GMT</pubDate>
+      <title>[9分] Micron hit a $1T market value for the first time on Tuesday as shares jumped 19%, driven by demand for its memory chips in the AI race (Samantha Subin/CNBC)</title>
+      <link>https://www.techmeme.com/260526/p29#a260526p29</link>
+      <guid isPermaLink="false">30c9fa9a01f58c728edf40b11a6019d0c177f2de</guid>
+      <pubDate>Tue, 26 May 2026 20:30:00 GMT</pubDate>
       <description><![CDATA[
-        <p>ASML CEO警告称AI、卫星、机器人等应用的芯片需求激增，半导体供应紧张局面将持续，并施压全球供应链。ASML作为光刻机龙头，其产能与订单交付节奏直接影响晶圆厂扩产进度。该信号对算力需求旺盛的云厂商（微软、谷歌、亚马逊、Meta）意味着芯片采购成本或维持高位，对先进制程代工厂（台积电）及AI芯片设计商（英伟达、AMD、博通）意味着产能瓶颈短期难以缓解。</p>
-        <p>标的: 超微电脑, 博通, 寒武纪, 谷歌, 长电科技, 美光, 中芯国际, 小米, 戴尔, Marvell, 阿里巴巴, 微软, Meta, 浪潮信息, ASML, Intel, 英伟达, 百度, 工业富联, 中科曙光, AMD, 金山办公, ARM, 台积电, 科大讯飞, 高通, 亚马逊, 景嘉微, 海光信息, 腾讯</p>
-        <p>主线: domestic_substitution, edge_ai, compute_demand, policy_export, datacenter_power, chip_supply, advanced_packaging</p>
-        <p>方向: ASML→positive 台积电→negative 英伟达→negative AMD→negative 博通→negative 微软→neutral 谷歌→neutral 亚马逊→neutral Meta→neutral Intel→negative 美光→negative 高通→negative ARM→negative Marvell→negative 超微电脑→negative 戴尔→neutral 中芯国际→neutral 寒武纪→neutral 海光信息→neutral 工业富联→neutral 中科曙光→neutral 浪潮信息→neutral 景嘉微→neutral 长电科技→negative 阿里巴巴→neutral 腾讯→neutral 百度→neutral 小米→neutral 金山办公→neutral 科大讯飞→neutral </p>
-        <p><em>跟踪ASML EUV订单积压量与交付周期、台积电先进制程产能扩张进度、以及下游云厂商capex指引变化。若供应瓶颈持续，国产算力链（寒武纪、海光信息等）替代逻辑有望强化，先进封装（CoWoS/HBM）供需缺口或扩大，关注长电科技等封装厂受益情况。</em></p>
-        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
-      ]]></description>
-      <category>evt_d641ed420d8c</category>
-    </item>
-    
-    <item>
-      <title>[7分] 阿里发布新一代AI芯片平头哥真武M890和旗舰模型Qwen3.7-Max</title>
-      <link>https://www.caixin.com/2026-05-21/102446170.html</link>
-      <guid isPermaLink="false">585a1a8f09eb59ffd65ad53cc731b4345d253dd8</guid>
-      <pubDate>Tue, 26 May 2026 19:03:15 GMT</pubDate>
-      <description><![CDATA[
-        <p>阿里在2026云峰会上发布自研AI芯片平头哥真武M890（已搭载于超节点服务器），并推出旗舰模型Qwen3.7-Max，同时上线Agent平台"千问云"、优化模型服务平台百炼。真武M890采用先进制程，面向AI训练与推理场景；Qwen3.7-Max定位国产最强基础模型之一，具备多模态与长上下文能力。阿里自研芯片与模型协同迭代，标志着其AI基础设施从"外采芯片+开源模型"向"自研芯片+自研模型"闭环转型，对国内AI算力生态具有标杆意义。</p>
-        <p>标的: 台积电, 英伟达, 工业富联, 中科曙光, AMD, 寒武纪, 阿里巴巴, 浪潮信息, 中芯国际, 海光信息</p>
-        <p>主线: domestic_substitution, model_capability, ai_monetization, compute_demand, chip_supply</p>
-        <p>方向: 阿里巴巴→positive 英伟达→neutral AMD→neutral 台积电→neutral 中芯国际→positive 寒武纪→positive 海光信息→positive 工业富联→positive 中科曙光→positive 浪潮信息→positive </p>
-        <p><em>持续跟踪：1）真武M890性能benchmark数据及规模化部署节奏；2）Qwen3.7-Max商业化收入贡献；二阶效应：阿里自研芯片若规模化替代将重塑算力供应链竞争格局，对国产芯片厂（寒武纪、海光）形成生态协同机会，同时需观察其对英伟达/AMD中国区业务的间接影响。</em></p>
-        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
-      ]]></description>
-      <category>evt_6d5aca1fa5f0</category>
-    </item>
-    
-    <item>
-      <title>[5分] 戴尔采用英伟达新芯片，赋能企业级AI数据平台 - edgen.tech</title>
-      <link>https://www.edgen.tech/zh/news/post/dell-taps-new-nvidia-chips-for-enterprise-ai-data-platform</link>
-      <guid isPermaLink="false">512646f4099efd2e7dbea976a986a44a42f370b4</guid>
-      <pubDate>Tue, 26 May 2026 19:03:15 GMT</pubDate>
-      <description><![CDATA[
-        <p>戴尔科技于2026年3月16日推出企业级AI数据平台，集成英伟达新型Vera CPU，实现50%性能提升。该平台旨在帮助企业高效管理AI应用所需的海量数据。戴尔作为OEM厂商采用英伟达最新处理器，标志双方在企业AI基础设施领域的合作深化。</p>
-        <p>标的: 台积电, 戴尔, 英伟达, 博通, AMD</p>
-        <p>主线: compute_demand, chip_supply</p>
-        <p>方向: 英伟达→positive 戴尔→positive AMD→neutral 博通→neutral 台积电→neutral </p>
-        <p><em>关注戴尔AI平台的企业客户采用率及后续订单拉动；英伟达Vera CPU若反响良好，可能强化其在企业AI市场的垄断地位；AMD/博通需观察是否跟进类似合作以维持竞争力。</em></p>
-        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
+        <p>Micron（美光）于周二首次突破1万亿美元市值，股价飙升19%，主因AI算力竞赛带动HBM等高带宽内存需求激增。美光作为HBM供应商直接受益于英伟达、AMD等AI芯片厂商的产能扩张，同时其传统DRAM业务也受益于数据中心和云厂商的补库需求。这一里程碑标志着内存行业周期反转得到市场确认，与台积电CoWoS先进封装产能紧张形成供需共振。</p>
+        <p>标的: ASML, 英伟达, 台积电, 美光, 博通, AMD</p>
+        <p>主线: advanced_packaging, chip_supply, compute_demand</p>
+        <p>方向: 美光→positive 英伟达→positive AMD→positive 台积电→positive ASML→positive 博通→positive </p>
+        <p><em>跟踪美光HBM产能爬坡节奏与定价走势；若HBM供需持续收紧，SK海力士、三星等竞争对手的跟进动作亦需关注；内存涨价周期若确立，将对AI服务器BOM成本形成压力，需评估下游云厂的capex意愿变化。</em></p>
+        <p>来源: rss:techmeme 🔴 低可信 [转载自 https://www.cnbc.com/2024/]</p>
       ]]></description>
       <category>evt_7312f4aa4939</category>
     </item>
     
     <item>
-      <title>[5分] OpenRouter more than doubles valuation to $1.3B in a year</title>
-      <link>https://techcrunch.com/2026/05/26/openrouter-more-than-doubles-valuation-to-1-3b-in-a-year</link>
-      <guid isPermaLink="false">3eedeecd0c033fdcd44623a1c1c3c8a5cf983968</guid>
-      <pubDate>Tue, 26 May 2026 18:33:01 GMT</pubDate>
+      <title>[5分] Short Story Creative Writing Benchmark. Baidu Ernie 5.1: -0.35, Qwen 3.7 Max: -2.01, Mistral Medium 3.5: -2.13, Grok 4.3: -3.81.</title>
+      <link>https://www.reddit.com/r/singularity/comments/1todw2r/short_story_creative_writing_benchmark_baidu</link>
+      <guid isPermaLink="false">458633cb0c8cf754370bf34857e12926eacaab41</guid>
+      <pubDate>Tue, 26 May 2026 17:28:46 GMT</pubDate>
       <description><![CDATA[
-        <p>AI模型路由平台OpenRouter完成1.13亿美元B轮融资，由Google旗下CapitalG领投，估值在一年内翻倍至13亿美元。平台过去6个月使用量增长5倍，显示多AI模型聚合调用正成为主流趋势。该平台支持用户同时调用GPT、Claude、Gemini等多个大模型，按需选择最优方案。随着多模型使用规模扩大，将持续拉动对底层算力的消耗需求。</p>
-        <p>标的: 英伟达, AMD, 谷歌, 亚马逊, 微软</p>
-        <p>主线: model_capability, compute_demand, ai_monetization</p>
-        <p>方向: 英伟达→positive AMD→positive 微软→positive 谷歌→positive 亚马逊→positive </p>
-        <p><em>跟踪变量：OpenRouter后续ARR增长及付费转化率、CapitalG后续投资动向。二阶效应：多模型聚合平台规模化将加速云厂商AI服务商业变现，利好算力芯片需求。联动：与Anthropic、OpenAI等未上市模型公司的合作进展可作为补充参考。</em></p>
-        <p>来源: rss:techcrunch-ai 🟡 中可信 [转载自 https://techcrunch.com]</p>
+        <p>第三方评测机构发布短篇创意写作基准测试结果，采用600-800字约束性创意写作任务进行模型对比评测。评测采用负分制（越接近0越优），百度文心 Ernie 5.1 以-0.35分表现最佳，阿里通义 Qwen 3.7 Max 为-2.01分，法国 Mistral Medium 3.5 为-2.13分，马斯克 xAI 的 Grok 4.3 以-3.81分表现最弱。该基准测试由独立研究员 Lech Mazur 开发并发布于 GitHub，目前在 Reddit 社区引发关注。</p>
+        <p>标的: xAI, 百度, 阿里巴巴</p>
+        <p>主线: model_capability, ai_monetization</p>
+        <p>方向: 百度→positive 阿里巴巴→neutral xAI→negative </p>
+        <p><em>创意写作能力差距反映模型在长文本生成、叙事结构等维度的分化。建议持续跟踪各模型在细分能力基准上的迭代节奏；百度若在多任务评测中持续领先有望强化其在国内企业端的市场定位；xAI的Grok 4.3在创意写作上的短板或影响其在内容创作场景的商业化竞争力。</em></p>
+        <p>来源: reddit:singularity 🔴 低可信 [转载自 https://github.com/lechmazur/writing/]</p>
       ]]></description>
-      <category>evt_81be28294390</category>
+      <category>evt_3ee587654ed8</category>
     </item>
     
     <item>
-      <title>[6分] 小米18系列放大招!全球首发骁龙8E6独立AI按键 安卓机皇来了_旗舰_nm_Pro</title>
-      <link>http://www.sohu.com/a/1027940028_258768</link>
-      <guid isPermaLink="false">233cc7a033d086af6d1dbbe2aa22c61e26028360</guid>
-      <pubDate>Tue, 26 May 2026 16:34:52 GMT</pubDate>
+      <title>[5分] Uber CEO is incredibly bullish position: AI is creating "employees with superpowers"</title>
+      <link>https://www.reddit.com/r/singularity/comments/1to9i9g/uber_ceo_is_incredibly_bullish_position_ai_is</link>
+      <guid isPermaLink="false">fec058b5ac78256f52d433f047b650ea59a752a9</guid>
+      <pubDate>Tue, 26 May 2026 14:59:06 GMT</pubDate>
       <description><![CDATA[
-        <p>小米18 Pro全球首发高通骁龙8E6旗舰平台，该芯片基于台积电2nm先进工艺，标志着小米正式迈入2nm旗舰性能时代。新机还配备独立AI按键，延续上一代妙享背屏设计并优化显示效果与交互逻辑。骁龙8E6的算力和能效表现将实现跨越式提升，整机辨识度在同档旗舰中较为突出。</p>
-        <p>标的: 台积电, 高通, 小米</p>
-        <p>主线: edge_ai, chip_supply</p>
-        <p>方向: 高通→positive 台积电→positive 小米→positive </p>
-        <p><em>关注小米18系列上市后的销量表现及用户对AI按键的接受度；2nm芯片量产爬坡进度将影响高通高端产品供货能力；台积电2nm产能分配格局值得持续跟踪，先进制程需求旺盛对晶圆代工景气度形成支撑。</em></p>
-        <p>来源: minimax_search 🔴 低可信 [转载自 未知来源]</p>
+        <p>Reddit用户揭露关于AI的误导信息，强调Uber CEO对AI持极度乐观态度。Uber CEO称AI正在创造"拥有超能力的员工"，公司放缓招聘是因为AI已大幅提升员工生产力，而非AI缺乏ROI。Uber坦承在2025年低估了AI发展，token消耗速度超预期源于AI进步比预想更快、应用价值更高。Uber COO关于AI成本昂贵的言论被断章取义。CEO还指出科技公司CEO们在私下认为AI是巨大颠覆者，但不愿公开表态。</p>
+        <p>标的: 微软</p>
+        <p>主线: compute_demand, ai_monetization, model_capability</p>
+        <p>方向: 微软→positive </p>
+        <p><em>需跟踪：1）企业级AI渗透率与员工产出效率提升数据；2）token消耗增速与算力需求拐点；3）更多科技CEO对AI的私下表态是否会被逐步公开。Uber案例强化了AI提升生产力逻辑，利好已深度布局企业AI的微软。</em></p>
+        <p>来源: reddit:singularity 🔴 低可信 [转载自 https://www.youtube.com/watch?v=s52O1JH2tnU]</p>
       ]]></description>
-      <category>evt_7813653bf7af</category>
+      <category>evt_708979f93657</category>
     </item>
     
     <item>
-      <title>[4分] Xiaomi MiMo-v2.5 Series API Permanent Price Reduction Up to 99%</title>
-      <link>https://platform.xiaomimimo.com/docs/en-us/news/v2.5-price-update</link>
-      <guid isPermaLink="false">b492f8ece33f99638407380e65293f5f50c62970</guid>
-      <pubDate>Tue, 26 May 2026 17:24:19 GMT</pubDate>
+      <title>[4分] [P] Built a portable GPU ISA after reading too many architecture manuals [P]</title>
+      <link>https://www.reddit.com/r/machinelearning/comments/1to76tv/p_built_a_portable_gpu_isa_after_reading_too_many</link>
+      <guid isPermaLink="false">ab170ddfaf54e390b32b5097d04ab062c8b628ce</guid>
+      <pubDate>Tue, 26 May 2026 13:36:10 GMT</pubDate>
       <description><![CDATA[
-        <p>小米宣布MiMo-v2.5系列AI模型API实施永久性降价，降幅高达99%。此次大幅降价旨在降低开发者接入门槛，推动其AI模型生态的快速扩张。MiMo系列是小米自研的大语言模型产品，v2.5版本预计在性能上有显著提升。该价格策略可能对国内AI模型市场竞争格局产生直接影响，同时有望刺激基于小米模型的第三方应用开发。</p>
-        <p>标的: 小米</p>
-        <p>主线: compute_demand, ai_monetization, edge_ai</p>
-        <p>方向: 小米→positive </p>
-        <p><em>需跟踪：小米API调用量增长曲线、开发者生态活跃度、其他国产模型（百度、阿里、腾讯）的定价策略应对。99%降幅将显著降低用户使用成本，若调用量未能等比例放大，则对小米AI收入贡献有限；反之将强化其在端侧AI和轻量推理场景的竞争力。</em></p>
-        <p>来源: hackernews 🔴 低可信 [转载自 未知来源]</p>
+        <p>开发者通过阅读超5000页NVIDIA PTX、AMD ISA、Intel Xe、Apple GPU等16种微架构文档，发现四大厂商实现相同的11项功能但命名各异。基于此开发了GPU ISA抽象层WAVE，支持一次编写kernel后编译为可移植二进制，通过thin backends转换为Metal、PTX、HIP或SYCL。已在Apple M4 Pro、NVIDIA T4、AMD MI300X完成验证，PyTorch集成后在所有后端获得一致训练结果。该工具降低了跨平台开发门槛，对AI框架生态具有潜在影响。</p>
+        <p>标的: Intel, 苹果, 英伟达, 微软, AMD</p>
+        <p>主线: chip_supply, compute_demand, edge_ai, model_capability</p>
+        <p>方向: 英伟达→neutral AMD→neutral Intel→neutral 苹果→neutral 微软→neutral </p>
+        <p><em>WAVE作为GPU ISA抽象层，其实际 adoption 和生态建设需跟踪；对芯片厂商影响取决于该工具能否成为主流开发范式；建议关注其与CUDA生态的竞争关系，以及对AI框架厂商的潜在价值。</em></p>
+        <p>来源: reddit:ml 🔴 低可信 [转载自 https://www.reddit.com/r/MachineLearning/comments/1klyp86/p_built_a_portable_gpu_isa_after_reading_too_many/]</p>
       ]]></description>
-      <category>evt_705665ff5242</category>
+      <category>evt_52fca774d036</category>
     </item>
     
   </channel>
