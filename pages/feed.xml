@@ -5,135 +5,247 @@
     <link>https://hongfei7.github.io/ai-research-radar</link>
     <description>AI/科技/半导体板块的持续投研情报 feed — 由 MiniMax 策展</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 26 May 2026 00:17:06 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2026 04:55:01 GMT</lastBuildDate>
     <atom:link href="https://hongfei7.github.io/ai-research-radar/feed.xml" rel="self" type="application/rss+xml"/>
     
     <item>
-      <title>[8分] 阿里巴巴发布新款AI芯片及Qwen3.7-Max模型 - WSJ</title>
-      <link>https://cn.wsj.com/articles/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E5%8F%91%E5%B8%83%E6%96%B0%E6%AC%BEai%E8%8A%AF%E7%89%87%E5%8F%8Aqwen3-7-max%E6%A8%A1%E5%9E%8B-7257e21e</link>
-      <guid isPermaLink="false">37f7066d56d3fcbd2529648ddcb7ef11f33671ab</guid>
-      <pubDate>Tue, 26 May 2026 00:11:07 GMT</pubDate>
+      <title>[9分] 博通"百亿大单"曝光：OpenAI明年生产自研芯片，削弱对英伟达依赖-36氪</title>
+      <link>https://m.36kr.com/p/3453178469930629</link>
+      <guid isPermaLink="false">c812f4c7ab8f0eabb4b2bff8a28a1a45173c6d79</guid>
+      <pubDate>Tue, 26 May 2026 04:45:40 GMT</pubDate>
       <description><![CDATA[
-        <p>阿里巴巴发布新款AI训练芯片"真武"M890及Qwen3.7-Max大模型，志在构建从底层芯片到上层应用的垂直整合AI生态。该芯片定位对标英伟达高端产品线，Qwen3.7-Max则在多模态与推理能力上实现迭代升级。此举标志着中国科技巨头加速AI全栈自主化进程，对全球AI芯片格局产生深远影响。</p>
-        <p>标的: 阿里巴巴, 英伟达, 台积电</p>
-        <p>主线: domestic_substitution, model_capability, chip_supply, compute_demand</p>
-        <p>方向: 阿里巴巴→positive 英伟达→neutral 台积电→neutral </p>
-        <p><em>需跟踪真武M890的实际性能参数与商用时间表；若对台积电先进制程形成替代需求，可能影响其订单结构；国产AI芯片进展将持续扰动市场对英伟达在华业务前景的预期。</em></p>
+        <p>OpenAI被曝与博通达成价值百亿美元的合作协议，计划于2025年量产自研AI芯片XPU，旨在突破算力瓶颈并降低对英伟达的过度依赖。OpenAI将采用无晶圆厂模式，博通负责芯片设计，台积电大概率承担制造。此举标志着头部AI企业在芯片领域从“采购”转向“定制”，对全球AI算力竞争格局影响深远。</p>
+        <p>标的: 英伟达, 台积电, 微软, 博通</p>
+        <p>主线: chip_supply, compute_demand, advanced_packaging</p>
+        <p>方向: 英伟达→negative 博通→positive 台积电→positive 微软→positive </p>
+        <p><em>需持续跟踪该合作的时间表和量产规模。短期对英伟达GPU需求冲击有限（OpenAI仍需其算力），但可能引发其他云厂商效仿自研，对GPU厂商长线竞争格局形成压力。</em></p>
         <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_37c7ae58cb35</category>
+      <category>evt_b7665d098e11</category>
     </item>
     
     <item>
-      <title>[7分] 中科曙光最新在手订单深度分析 - 今日头条</title>
-      <link>https://www.toutiao.com/article/7641005327181152808/</link>
-      <guid isPermaLink="false">03aa85141d16b206da48f01600bb24af1df5ffe1</guid>
-      <pubDate>Tue, 26 May 2026 00:11:07 GMT</pubDate>
+      <title>[8分] 最核心瓶颈依旧是存储和先进制程芯片!财报前夕，英伟黄仁勋、戴尔最新访谈：AI正大规模进入企业!</title>
+      <link>https://finance.sina.com.cn/wm/2026-05-19/doc-inhymcpr7521638.shtml</link>
+      <guid isPermaLink="false">394e32d47d34660d8d836a3661bb8e41a204dcff</guid>
+      <pubDate>Tue, 26 May 2026 04:45:40 GMT</pubDate>
       <description><![CDATA[
-        <p>中科曙光作为国内算力基础设施与HPC领军企业，其最新在手订单情况反映国产算力产业链景气度、国产替代进度及AI算力需求释放力度。分析结合2026年一季度财报、算力产业招标动态、国产替代政策导向及公司公开披露信息，从订单整体规模、结构等维度进行深度拆解。该资讯为今日头条对中科曙光订单数据的二次加工分析，并非原始财报或调研披露。</p>
-        <p>标的: 中科曙光, 寒武纪, 海光信息, 中芯国际, 工业富联, 长电科技, 浪潮信息, 景嘉微</p>
-        <p>主线: chip_supply, domestic_substitution, compute_demand</p>
-        <p>方向: 中科曙光→positive 海光信息→positive 寒武纪→positive 浪潮信息→positive 景嘉微→positive 工业富联→positive 长电科技→positive 中芯国际→positive </p>
-        <p><em>跟踪中科曙光订单环比增速及结构变化（政府/云厂商/AI客户占比），判断国产算力需求真实强度。若订单持续高增，验证国产替代从政策驱动向需求驱动的转变，需关注海光、寒武纪等上游芯片厂的同步放量节奏。</em></p>
+        <p>英伟达CEO黄仁勋与戴尔联合接受访谈，强调AI基础设施建设仍处于「最初期」阶段，未来十年将持续推进。两人共同指出当前最大瓶颈在于存储（内存/HBM）供给告急及先进制程芯片产能受限。戴尔表示AI正大规模进入企业端市场。黄仁勋访谈发布在财报前夕，或为英伟达即将公布的财报表现进行预热。当前HBM产能紧张、先进封装（CoWoS）良率等问题持续制约AI芯片供给侧的扩张节奏。</p>
+        <p>标的: 英伟达, ASML, 台积电, 美光, 戴尔, AMD, 博通</p>
+        <p>主线: chip_supply, compute_demand, advanced_packaging, datacenter_power</p>
+        <p>方向: 英伟达→positive 戴尔→positive 美光→positive 台积电→positive ASML→positive AMD→neutral 博通→neutral </p>
+        <p><em>关注财报季英伟达数据中心业务收入指引及HBM库存水平；内存/先进制程瓶颈延续将持续支撑美光(存储)、台积电(先进制程)景气度；若HBM供给改善节奏超预期，存储环节或出现二阶配置机会。</em></p>
         <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_cdcaee2fdc7c</category>
+      <category>evt_b7665d098e11</category>
     </item>
     
     <item>
-      <title>[5分] 政策与产业共振，算电协同三大细分赛道迎来价值重估</title>
-      <link>https://36kr.com/newsflashes/3825339197690756?f=rss</link>
-      <guid isPermaLink="false">18594ffe6e3ac764ef703ca9345e254be25bfab4</guid>
-      <pubDate>Mon, 25 May 2026 23:47:12 GMT</pubDate>
+      <title>[8分] 阿里巴巴发布新款ai晶片 试图打造替代英伟达的本土产品</title>
+      <link>https://www.zaobao.com.sg/news/china/story20260520-9079585</link>
+      <guid isPermaLink="false">3d8dcc41699d9c8cfe4f49e8bb1a9f001043584c</guid>
+      <pubDate>Tue, 26 May 2026 04:45:40 GMT</pubDate>
       <description><![CDATA[
-        <p>算电协同正成为2026年资本市场核心主线。宁夏中卫首个大规模算电协同示范项目投运，四部门联合印发AI与能源双向赋能行动方案，推动「源网荷储算」协同模式加速落地。Wind数据显示5月以来万得算力主题指数涨超19%，智能电网概念指数涨超6%。绿电运营、算力侧储能系统、电力调度设备三大细分赛道有望率先兑现业绩。</p>
-        <p>标的: 亚马逊, 中科曙光, 腾讯, 台积电, 微软, 谷歌, 浪潮信息, 阿里巴巴, 英伟达, AMD, 工业富联, 百度</p>
-        <p>主线: datacenter_power, advanced_packaging, compute_demand</p>
-        <p>方向: 英伟达→positive AMD→positive 台积电→positive 微软→positive 谷歌→positive 亚马逊→positive 阿里巴巴→positive 腾讯→positive 百度→positive 工业富联→positive 中科曙光→positive </p>
-        <p><em>跟踪政策细则落地节奏及项目招标进展；算电协同将提升数据中心电力供给稳定性，利好具备液冷/储能方案的AI基础设施供应商；绿电与储能环节或率先贡献收入，关注国内电力设备龙头与阿里云、腾讯云等大厂的算电协同合作进展。</em></p>
-        <p>来源: rss:36kr 🟡 中可信 [转载自 未知来源]</p>
+        <p>阿里巴巴旗下平头哥于5月20日在杭州云峰会上发布新款AI芯片，具备训练和推理一体化能力。此举旨在抓住美国芯片出口限制带来的本土替代窗口，剑指英伟达在华市场份额。芯片具体性能参数和量产计划待进一步披露。</p>
+        <p>标的: 英伟达, 阿里巴巴, 寒武纪, 中芯国际, 台积电</p>
+        <p>主线: chip_supply, domestic_substitution, compute_demand, policy_export</p>
+        <p>方向: 阿里巴巴→positive 英伟达→negative 寒武纪→negative 中芯国际→neutral 台积电→neutral </p>
+        <p><em>持续跟踪芯片性能参数、客户端导入节奏及量产时间表。短期对英伟达中国业务冲击有限，长期需观察国产芯片生态完善程度。中芯国际若参与代工将受益。</em></p>
+        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_5dacc09946b7</category>
+      <category>evt_2ed31d93d240</category>
     </item>
     
     <item>
-      <title>[5分] 半导体板块引领A股走强，机构建议关注三条主线</title>
-      <link>https://36kr.com/newsflashes/3825330498474880?f=rss</link>
-      <guid isPermaLink="false">b0e5a3111136a55df43fc196c2042ab0d676e46e</guid>
-      <pubDate>Mon, 25 May 2026 23:35:21 GMT</pubDate>
+      <title>[7分] AI芯片市场群雄逐鹿!亚马逊自研芯片上新，下一代还将支持与英伟达互联_10%公司_澎湃新闻-The Paper</title>
+      <link>https://www.thepaper.cn/newsDetail_forward_32093438</link>
+      <guid isPermaLink="false">2c7c7360cd7598a289e5fc32a4d3c72d57964531</guid>
+      <pubDate>Tue, 26 May 2026 04:45:40 GMT</pubDate>
       <description><![CDATA[
-        <p>5月25日A股三大指数全线上涨，创业板指涨超2%，半导体产业链爆发引领市场，超2100只股票上涨、120余只涨停，成交额3.23万亿元环比放量。电子板块主力资金净流入近100亿元，为资金最大流入板块。分析指市场从预期驱动转向盈利驱动，短期波动不改中期结构性行情。机构建议关注半导体等三条主线。</p>
-        <p>标的: 中科曙光, 寒武纪, 中芯国际, 台积电, 海光信息, 博通, 工业富联, 景嘉微, 英伟达, AMD, 长电科技</p>
-        <p>主线: domestic_substitution, chip_supply, compute_demand</p>
-        <p>方向: 中芯国际→positive 寒武纪→positive 海光信息→positive 长电科技→positive 工业富联→positive 中科曙光→positive 景嘉微→positive </p>
-        <p><em>跟踪电子板块主力资金持续性及成交额变化；若半导体盈利验证持续，国产算力链（寒武纪、海光信息）与先进封装（长电科技）具备联动机会；注意短期波动加大风险。</em></p>
-        <p>来源: rss:36kr 🟡 中可信 [转载自 未知来源]</p>
+        <p>AWS发布新一代Trainium芯片并预告下一代将支持与英伟达互联生态。同期披露的"雷尼尔计划"进展显示，启动一年后已连接超50万颗Trainium2芯片，成为全球最大AI算力集群之一，规模达Anthropic训练上一代模型的5倍。亚马逊正从自研芯片+云端整合路径强化AI基础设施竞争力，Trainium与英伟达的互联计划标志着云厂商芯片生态从封闭走向开放兼容。</p>
+        <p>标的: Anthropic, 英伟达, 亚马逊</p>
+        <p>主线: chip_supply, compute_demand, ai_monetization</p>
+        <p>方向: 亚马逊→positive 英伟达→neutral Anthropic→positive </p>
+        <p><em>关注亚马逊自研芯片的量产节奏及与英伟达互联的技术标准；Anthropic模型迭代速度或因算力扩容加速，利好推理需求；博通/AMD等第三方AI芯片厂商需评估云厂自研芯片的替代风险。</em></p>
+        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_cdcaee2fdc7c</category>
+      <category>evt_bc07d7437e1e</category>
     </item>
     
     <item>
-      <title>[5分] 特斯拉入局，自动驾驶产业链添动能</title>
-      <link>https://36kr.com/newsflashes/3825324735992709?f=rss</link>
-      <guid isPermaLink="false">6496ad5b7f3d064f417de45b13b196838f28673d</guid>
-      <pubDate>Mon, 25 May 2026 23:21:32 GMT</pubDate>
+      <title>[7分] 中国最大AI4S计算集群发布，6万卡规模剑指百亿美元市场_澎湃号·湃客_澎湃新闻-The Paper</title>
+      <link>https://www.thepaper.cn/newsDetail_forward_32991191</link>
+      <guid isPermaLink="false">c7ac3ccd10da6c1fefc3c8940b66d58b4d2fc12e</guid>
+      <pubDate>Tue, 26 May 2026 04:45:40 GMT</pubDate>
       <description><![CDATA[
-        <p>特斯拉中国于5月24日将FSD更名为“特斯拉辅助驾驶”，并于5月21日宣布监督版FSD已在包括中国在内的10个国家或地区开放。在AI赋能下，中国自动驾驶产业关键技术持续突破，L2级以上辅助驾驶渗透率快速提升，加速从示范应用走向规模商业化，华为、禾赛科技等产业链企业迎来发展新动能。特斯拉入局将拉动对自动驾驶芯片、传感器及计算平台的需求，产业链上游英伟达、高通等厂商有望受益。</p>
-        <p>标的: ARM, Marvell, 台积电, 博通, 英伟达, AMD, Intel, 美光, 高通</p>
-        <p>主线: ai_monetization, chip_supply, edge_ai, compute_demand</p>
-        <p>方向: 英伟达→positive AMD→positive 高通→positive 博通→positive 台积电→positive 美光→positive Intel→positive Marvell→positive ARM→positive </p>
-        <p><em>跟踪特斯拉FSD中国落地进度及L2渗透率数据，关注英伟达、高通等芯片厂订单变化，自动驾驶商业化加速或带动算力芯片需求提升。</em></p>
-        <p>来源: rss:36kr 🟡 中可信 [转载自 未知来源]</p>
-      ]]></description>
-      <category>evt_aa77f9698c7b</category>
-    </item>
-    
-    <item>
-      <title>[4分] 多家人工智能企业月内斩获亿元级融资</title>
-      <link>https://36kr.com/newsflashes/3825353629782912?f=rss</link>
-      <guid isPermaLink="false">5a80f4d185f3f98d8a8124e070619379bf83d545</guid>
-      <pubDate>Mon, 25 May 2026 23:58:31 GMT</pubDate>
-      <description><![CDATA[
-        <p>5月国内AI创投市场马太效应加剧，头部大模型企业月之暗面完成约20亿美元（约145亿元人民币）新融资，投后估值突破200亿美元，总融资额超376亿元，创国内大模型创业公司私募融资纪录。具身智能赛道同步升温，飞捷科思、眸深智能、维他动力、鹿明机器人等企业均获亿元级融资。头部企业融资规模屡创新高、具身智能投资密度加大，反映算力需求持续高企、AI模型军备竞赛仍在加速。</p>
-        <p>标的: 寒武纪, 中芯国际, 台积电, 海光信息, 微软, 谷歌, 英伟达, AMD</p>
-        <p>主线: compute_demand, domestic_substitution, chip_supply, ai_monetization, model_capability</p>
-        <p>方向: 英伟达→positive AMD→positive 台积电→positive 微软→positive 谷歌→positive 中芯国际→positive 寒武纪→positive 海光信息→positive </p>
-        <p><em>头部大模型企业单轮融资超145亿元、具身智能企业密集获投，表明算力消耗与模型训练需求仍在高速增长。需跟踪：算力芯片订单指引、晶圆代工产能利用率、大模型商业化收入兑现节奏。台积电先进制程、中芯国际国产产能受益逻辑强化；英伟达/AMD算力芯片需求侧获支撑。</em></p>
-        <p>来源: rss:36kr 🟡 中可信 [转载自 未知来源]</p>
-      ]]></description>
-      <category>evt_e741c0a321ad</category>
-    </item>
-    
-    <item>
-      <title>[4分] 8点1氪丨胖东来投资65亿的“梦之城”开工；“稚晖君”彭志辉正式出任上纬新材董事长；“死了么”App改名“在么在么”</title>
-      <link>https://36kr.com/p/3825357879497346?f=rss</link>
-      <guid isPermaLink="false">682db0b964633dd63c1f0b3c59f643a34c01e633</guid>
-      <pubDate>Mon, 25 May 2026 23:58:09 GMT</pubDate>
-      <description><![CDATA[
-        <p>寒武纪股价今日盘中涨超11%，总市值突破9000亿元创历史新高，成为市场焦点。消息面上，国内AI算力需求持续旺盛，叠加国产替代加速推进，寒武纪作为国产AI芯片龙头获资金持续追捧。需关注后续订单释放节奏及市场竞争格局变化。</p>
-        <p>标的: 寒武纪</p>
+        <p>中科曙光发布中国最大AI4S计算集群，规模达6万卡。集群由中科曙光全栈自研，搭载6款核心芯片全部实现自主可控，同时支持双精度（科学工程计算）与半精度算力（AI大模型训练），解决了传统架构无法兼顾高精度与低精度并行计算的痛点，全面支撑国家超算互联网应用，剑指百亿美元AI for Science市场。</p>
+        <p>标的: 中科曙光</p>
         <p>主线: chip_supply, domestic_substitution, compute_demand</p>
-        <p>方向: 寒武纪→positive </p>
-        <p><em>跟踪：1）寒武纪订单交付与收入确认节奏；2）国产大模型训练/推理对国产芯片的采购量变化；3）与英伟达在中国市场的竞争动态。联动：若AI算力需求持续超预期，中芯国际、海光信息等国产算力链标的亦有望受益。</em></p>
-        <p>来源: rss:36kr 🟡 中可信 [转载自 未知来源]</p>
+        <p>方向: 中科曙光→positive </p>
+        <p><em>跟踪后续商业化落地节奏与政府/企业客户拓展；该集群成功验证国产芯片协同能力，关注寒武纪、海光信息等国产AI芯片在超算体系中的入围机会；可能强化国产算力链投资情绪。</em></p>
+        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_0d5ba4cb3e3b</category>
+      <category>evt_12956f9b26d4</category>
     </item>
     
     <item>
-      <title>[4分] PCB上市公司瞄准高端项目推出扩产计划</title>
-      <link>https://36kr.com/newsflashes/3825327807189895?f=rss</link>
-      <guid isPermaLink="false">3b41a40dfe14d91079ade9861f741dadcd08ebc2</guid>
-      <pubDate>Mon, 25 May 2026 23:30:37 GMT</pubDate>
+      <title>[7分] 深圳“十五五”规划纲要：到2030年，全市实时可用算力规模超150EFlops</title>
+      <link>https://36kr.com/newsflashes/3825629500232326?f=rss</link>
+      <guid isPermaLink="false">fa59177b605e36eaed2a88736c0fab44cd0f3d69</guid>
+      <pubDate>Tue, 26 May 2026 04:31:34 GMT</pubDate>
       <description><![CDATA[
-        <p>2026年以来，多家PCB上市公司披露高端产能扩产计划。扩产聚焦AI服务器、新能源车、先进封装等高景气下游。核心驱动因素包括：AI算力需求爆发带动高端PCB需求放量；国产替代进入窗口期，国内厂商技术能力提升；海外竞争对手高端产能逐步收缩。分析认为PCB高端化是算力产业链的重要环节，高端ABF载板、IC载板等材料国产化进程加速。</p>
-        <p>标的: 戴尔, 工业富联, 博通, 长电科技, 浪潮信息, 英伟达, AMD, 超微电脑</p>
-        <p>主线: domestic_substitution, advanced_packaging, chip_supply, compute_demand</p>
-        <p>方向: 英伟达→positive AMD→positive 博通→positive 超微电脑→positive 工业富联→positive 浪潮信息→positive 长电科技→positive 戴尔→positive </p>
-        <p><em>跟踪标的：PCB厂商扩产进度与产能爬坡节奏、高端ABF载板良率进展。关联主线：算力需求持续→带动高端PCB量价齐升；先进封装扩产→IC载板需求同步增长；国产替代加速→长电科技等封测厂及上游材料商受益。二阶效应需关注：上游覆铜板 CCL 需求变化、铜箔等材料供需格局。</em></p>
+        <p>深圳发布“十五五“规划纲要，提出到2030年全市实时可用算力规模超150EFlops，打造高效易用的人工智能技术底座。规划强调统筹推进智算芯片研发制造、算力设施建设和模型算法发展，重点推动昇腾等国产训练芯片及端侧推理芯片优化迭代应用，促进国产AI算力生态繁荣。同时培育国际领先的国产通用大模型和行业应用模型，以高价值应用场景推动算法落地，目标实现国产芯片部分指标和算力集群达到国际先进水平。</p>
+        <p>标的: 工业富联, 英伟达, 阿里巴巴, 腾讯, 寒武纪, 浪潮信息, 中芯国际, 海光信息, 科大讯飞, 商汤, 中科曙光, 台积电, AMD, 百度</p>
+        <p>主线: compute_demand, advanced_packaging, chip_supply, model_capability, domestic_substitution, ai_monetization</p>
+        <p>方向: 英伟达→negative AMD→negative 台积电→positive 中芯国际→positive 寒武纪→positive 海光信息→positive 工业富联→positive 中科曙光→positive 浪潮信息→positive 阿里巴巴→positive 腾讯→positive 百度→positive 商汤→positive 科大讯飞→positive </p>
+        <p><em>深圳作为粤港澳大湾区核心城市，其150EFlops算力目标具有示范效应。建议跟踪：1）昇腾等国产芯片性能迭代进展；2）国产算力集群建设招标节奏；3）规划落实过程中的补贴与采购政策。国产算力生态壮大将对英伟达、AMD等海外芯片厂商形成替代压力，同时带动服务器、先进封装、云服务等产业链需求。</em></p>
         <p>来源: rss:36kr 🟡 中可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_e21b7d86eeb1</category>
+      <category>evt_c2efa2836439</category>
+    </item>
+    
+    <item>
+      <title>[7分] SK Group chairman says memory chip shortage will last until 2030</title>
+      <link>https://www.tomshardware.com/pc-components/dram/sk-group-chairman-says-memory-chip-shortage-will-last-until-2030</link>
+      <guid isPermaLink="false">015d70e2e4b85f0981b229cb3ae1d610c339e03e</guid>
+      <pubDate>Tue, 26 May 2026 03:11:21 GMT</pubDate>
+      <description><![CDATA[
+        <p>SK集团董事长预计全球内存芯片短缺将延续至2030年，主要受AI算力需求激增推动HBM等高性能内存需求井喷影响。该短缺将加剧AI基础设施供应链紧张，对英伟达、AMD等AI芯片厂商的产能扩张形成制约，同时支撑美光等内存厂商的议价能力。</p>
+        <p>标的: 谷歌, 英伟达, 苹果, 微软, ASML, Meta, 美光, 亚马逊, 台积电, AMD, 超微电脑</p>
+        <p>主线: chip_supply, compute_demand, advanced_packaging</p>
+        <p>方向: 英伟达→negative AMD→negative 美光→positive 台积电→neutral ASML→neutral 超微电脑→negative 微软→negative 谷歌→negative 亚马逊→negative Meta→negative 苹果→negative </p>
+        <p><em>跟踪SK海力士/美光产能扩张节奏及HBM订单可见度；关注内存涨价对AI服务器BOM成本传导；短缺若持续可能加速CoWoS封装产能争夺，台积电/日月光等封测厂受益。</em></p>
+        <p>来源: hackernews 🔴 低可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_0f76029c3e4b</category>
+    </item>
+    
+    <item>
+      <title>[5分] 雷军：小米计划再投2000亿元用于研发，覆盖AI、芯片和OS</title>
+      <link>https://news.qq.com/rain/a/20260521A0A6MM00?adChannelId=tech</link>
+      <guid isPermaLink="false">3bbb74da4ec36fc3c459d9852a1e471e45db9278</guid>
+      <pubDate>Tue, 26 May 2026 04:45:40 GMT</pubDate>
+      <description><![CDATA[
+        <p>小米宣布未来5年将投入2000亿元用于研发，重点覆盖AI、芯片和操作系统三大领域。5月21日小米在北京昌平科技园发布YU7 GT新车及新手机时披露该计划。这是小米史上最大规模研发投资，彰显其在外部压力下加速核心技术自主可控的决心。芯片和OS的投入有望推动国产替代进程，AI能力的强化则契合终端智能化趋势。该投资规模将直接利好小米自身，同时对国内AI和半导体产业链产生积极辐射效应。</p>
+        <p>标的: 小米</p>
+        <p>主线: domestic_substitution, ai_monetization, edge_ai</p>
+        <p>方向: 小米→positive </p>
+        <p><em>跟踪小米芯片自研进展及OS生态建设节奏；2000亿投资若落地，将强化小米在AI手机/汽车终端的竞争力，并对国产AI芯片需求产生拉动；关注后续具体研发项目和合作方的披露。</em></p>
+        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_e14ad0fff74b</category>
+    </item>
+    
+    <item>
+      <title>[5分] 传大砍分红引发员工不满，台积电紧急声明福利将持续增加</title>
+      <link>https://36kr.com/newsflashes/3825594380391304?f=rss</link>
+      <guid isPermaLink="false">061a03f75f714f8d7c30c078ac399ae6f636ea6a</guid>
+      <pubDate>Tue, 26 May 2026 03:55:50 GMT</pubDate>
+      <description><![CDATA[
+        <p>台积电近日被传削减员工福利，引发部分员工不满甚至酝酿效仿三星工人罢工，引发全球半导体行业广泛关注。台积电随后紧急声明澄清，强调员工分红并未减少，并预计今年分红成长比例将超过去年。考虑到台积电在全球半导体制造中的关键地位，一旦爆发大规模劳资冲突，可能对芯片供给和下游AI算力产业造成冲击。</p>
+        <p>标的: 台积电</p>
+        <p>主线: chip_supply, compute_demand</p>
+        <p>方向: 台积电→neutral </p>
+        <p><em>需密切跟踪台积电员工情绪走向及实际分红数据，确认声明兑现情况。若罢工风险实质性升级，可能影响CoWoS先进封装产能，进而扰动英伟达、AMD等AI芯片厂商的供货节奏。</em></p>
+        <p>来源: rss:36kr 🟡 中可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_87a7cc8bd994</category>
+    </item>
+    
+    <item>
+      <title>[5分] 字节跳动申请注册Agent World商标</title>
+      <link>https://36kr.com/newsflashes/3825589862060677?f=rss</link>
+      <guid isPermaLink="false">03293f9134091546594ac520fd59c36361abcf27</guid>
+      <pubDate>Tue, 26 May 2026 03:51:14 GMT</pubDate>
+      <description><![CDATA[
+        <p>字节跳动近日申请注册多枚"AGENT WORLD"商标，国际分类含教育娱乐、科学仪器等。旗下Coze平台于今年4月发布2.5版本，正式推出"Agent World"功能，为AI Agent提供独立云设备、记忆与身份系统，构建开放互动学习社区。该功能标志着字节跳动在AI Agent协作与进化生态领域的布局加速。</p>
+        
+        <p>主线: compute_demand, ai_monetization</p>
+        
+        <p><em>字节跳动AI Agent生态布局若成功落地，将提升AI应用丰富度，可能带动云端推理算力消耗。需跟踪Agent World功能用户采纳情况及商业化进展，评估对算力需求侧的增量贡献。</em></p>
+        <p>来源: rss:36kr 🟡 中可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_11c7029c093b</category>
+    </item>
+    
+    <item>
+      <title>[5分] 半日主力资金加仓有色金属股，抛售电子股</title>
+      <link>https://36kr.com/newsflashes/3825580085941121?f=rss</link>
+      <guid isPermaLink="false">98322e1dd17b63ccb0eb9652b2674937879ee666</guid>
+      <pubDate>Tue, 26 May 2026 03:41:18 GMT</pubDate>
+      <description><![CDATA[
+        <p>主力资金早盘净买入有色金属、公用事业等防御板块，净卖出电子、通信等科技成长板块。个股层面，华天科技、阳光电源、京东方A分获主力净流入68.02亿、32.31亿、30.59亿元；澜起科技、中芯国际、佰维存储分别遭抛售27.3亿、19.38亿、16.09亿元。半导体代工龙头中芯国际遭大额净卖出，显示短期资金风险偏好回落至周期防御风格，科技成长股面临阶段性获利了结压力。</p>
+        <p>标的: 中芯国际</p>
+        <p>主线: chip_supply</p>
+        <p>方向: 中芯国际→negative </p>
+        <p><em>跟踪主力资金流向持续性——若电子/半导体板块连续遭净流出，可能形成阶段性估值压制；反之若只是短期调仓切换，则回调后或现布局机会。同时关注A股科技板块整体情绪与外围半导体景气联动。</em></p>
+        <p>来源: rss:36kr 🟡 中可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_9f8c422d292e</category>
+    </item>
+    
+    <item>
+      <title>[4分] 深圳“十五五”规划纲要：提升具身智能机器人发展能级，打造全球具身智能科技创新和产业发展高地</title>
+      <link>https://36kr.com/newsflashes/3825615213597317?f=rss</link>
+      <guid isPermaLink="false">9ab1dab6a8bc5e58dba34b5d120999759b15f305</guid>
+      <pubDate>Tue, 26 May 2026 04:17:02 GMT</pubDate>
+      <description><![CDATA[
+        <p>深圳市发布“十五五“规划纲要，明确将具身智能机器人列为新兴支柱产业重点发展方向。纲要提出在关键核心零部件、AI与机器人融合、多模态感知、高精度运动控制、灵巧操作等领域实现突破，目标打造全球具身智能科技创新和产业发展高地。同时加快AI手机/电脑、智能家居、智能穿戴等新一代智能终端研发应用，推动全身智能、全车智能、全屋智能规模化应用。该政策为具身智能产业链提供明确发展方向和政策背书。</p>
+        <p>标的: 工业富联, 英伟达, ARM, 寒武纪, 阿里巴巴, 浪潮信息, 微软, 博通, 中芯国际, 海光信息, 小米, 中科曙光, 高通, AMD, 苹果, 百度</p>
+        <p>主线: compute_demand, chip_supply, edge_ai, policy_export, domestic_substitution</p>
+        <p>方向: 英伟达→positive AMD→positive 高通→positive ARM→positive 工业富联→positive 浪潮信息→positive 中科曙光→positive 微软→neutral 阿里巴巴→neutral 百度→positive 小米→positive 苹果→positive 中芯国际→positive 寒武纪→positive 海光信息→positive 博通→positive </p>
+        <p><em>跟踪变量：政策配套细则、具身智能机器人商业化进展、关键零部件国产化率突破节点。二阶效应：若具身智能规模化，利好AI芯片、服务器、传感器及机器人整机全产业链；加速国产算力链渗透节奏，建议关注寒武纪/海光信息等产品迭代进度。</em></p>
+        <p>来源: rss:36kr 🟡 中可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_32081f474efd</category>
+    </item>
+    
+    <item>
+      <title>[4分] 恒指午间休盘涨0.54%，联想集团涨超17%</title>
+      <link>https://36kr.com/newsflashes/3825600189289350?f=rss</link>
+      <guid isPermaLink="false">cb09534ae386187b4ff9183517bcf407f7346f1a</guid>
+      <pubDate>Tue, 26 May 2026 04:01:45 GMT</pubDate>
+      <description><![CDATA[
+        <p>港股午间休盘，恒指涨0.54%至阶段新高，恒生科技指数大涨2.29%。半导体、硬件设备板块领涨，中芯国际涨超8%，反映市场对AI算力链景气度的乐观预期。南向资金净买入21.34亿港元，外资持续流入港股科技板块。</p>
+        <p>标的: 中芯国际</p>
+        <p>主线: chip_supply, domestic_substitution, compute_demand</p>
+        <p>方向: 中芯国际→positive </p>
+        <p><em>半导体板块领涨港股，验证AI算力需求传导逻辑。需跟踪中芯国际产能利用率及国产替代进展，硬件板块联动效应若持续，可关注封装测试环节。</em></p>
+        <p>来源: rss:36kr 🟡 中可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_9f8c422d292e</category>
+    </item>
+    
+    <item>
+      <title>[4分] 阿里云发布全新海外AI产品官网Qwen Cloud</title>
+      <link>https://36kr.com/newsflashes/3825581459395203?f=rss</link>
+      <guid isPermaLink="false">b5ba824947b32db5ae10403180da2d59ec212422</guid>
+      <pubDate>Tue, 26 May 2026 03:42:42 GMT</pubDate>
+      <description><![CDATA[
+        <p>阿里云5月26日在新加坡发布面向海外市场的AI产品矩阵，包括AI云服务平台Qwen Cloud、Agent产品MuleRun、智能体编程平台Qoder及桌面智能体QoderWork，并同步升级面向Agent的云基础设施。此举标志着阿里云正式以Qwen系列为核心构建海外AI商业化体系，Qwen Cloud将直接对标微软Azure AI、AWS Bedrock等国际竞品，Agent产品MuleRun和编程平台Qoder则面向企业级智能体开发需求。阿里云海外AI商业化加速，对国内大模型出海具有标杆意义。</p>
+        <p>标的: 阿里巴巴</p>
+        <p>主线: model_capability, compute_demand, ai_monetization</p>
+        <p>方向: 阿里巴巴→positive </p>
+        <p><em>需跟踪Qwen Cloud海外客户拓展进度及收入贡献时间节点；关注国际云厂商是否会针对Qwen Cloud定价调整；阿里云海外商业化验证成功将强化其作为大模型基础设施提供商的定位，并有望带动国内AI应用生态出口。</em></p>
+        <p>来源: rss:36kr 🟡 中可信 [转载自 https://www.36kr.com]</p>
+      ]]></description>
+      <category>evt_c52c9c7dad32</category>
+    </item>
+    
+    <item>
+      <title>[4分] The Vatican-Anthropic relationship that's reshaping the AI ethics debate</title>
+      <link>https://religionnews.com/2026/05/22/why-anthropic-is-helping-unveil-the-popes-new-encyclical-on-ai</link>
+      <guid isPermaLink="false">0494b58610f5e59e8d06c51bab420b958be79dfa</guid>
+      <pubDate>Mon, 25 May 2026 23:39:39 GMT</pubDate>
+      <description><![CDATA[
+        <p>梵蒂冈与AI安全公司Anthropic的合作正在重塑AI伦理辩论格局。双方联合推动AI安全标准与负责任AI开发框架，试图在全球AI治理中发挥道德引领作用。此合作可能为AI行业树立新的伦理规范，影响未来AI产品的监管走向与商业化路径。值得关注的要点包括：Anthropic作为Claude模型开发商，其与梵蒂冈的深度合作可能为行业树立伦理标杆；微软、谷歌、Meta等主流AI厂商可能面临更高的伦理合规要求；英伟达等算力供应商或间接受益于AI伦理标准提升对行业长期健康发展的推动。</p>
+        <p>标的: 谷歌, 英伟达, OpenAI, Anthropic, 微软, Meta</p>
+        <p>主线: model_capability, policy_export, ai_monetization</p>
+        <p>方向: 微软→neutral 谷歌→neutral Meta→neutral 英伟达→positive OpenAI→neutral Anthropic→positive </p>
+        <p><em>跟踪梵蒂冈-Anthropic伦理框架的落地进展及主流AI厂商的响应态度。关键变量：全球AI监管政策走向、伦理合规成本变化。可能的二阶效应：AI伦理标准成为厂商差异化竞争要素，头部厂商合规优势凸显。</em></p>
+        <p>来源: hackernews 🔴 低可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_e1299aa9f883</category>
     </item>
     
   </channel>
