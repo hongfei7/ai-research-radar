@@ -39,6 +39,61 @@
       <h2>相关事件 (6)</h2>
       
       <div class="event-card">
+        <h3>Nvidia H100(94GB VRAM) - should I run llama.cpp or vllm for 30 users inference?</h3>
+        <div class="summary">某技术用户在工作中借用Nvidia H100 GPU（94GB VRAM），计划搭建支持最多30用户（实际并发10-15人）的推理端点，需大上下文支持（131k-262k tokens），用于Pi、OpenCode等代理编码工具。用户倾向采用Qwen3.6-27B模型，并就llama.cpp与vllm框架的并发处理能力、量化版本选择（Unsloth UD-Q6/8_K_XL或vllm适配量化）寻求建议，同时询问并发用户基准测试工具。此案例反映了企业级推理部署中对高显存GPU、大上下文窗口和高效框架的强烈需求。</div>
+        <div class="tags">
+          
+          <span class="tag tag-theme">compute_demand</span>
+          
+          <span class="tag tag-theme">model_capability</span>
+          
+        </div>
+        
+        <div style="margin-top:6px;">
+          方向: <span class="direction-positive">positive</span>
+        </div>
+        
+      </div>
+      
+      <div class="event-card">
+        <h3>Italy region: +200% tax on datacenters built in green/agricultural areas</h3>
+        <div class="summary">意大利某地区拟对在绿地/农业用地上建设的数据中心征收200%附加税，此举将显著增加数据中心选址成本，抑制在生态敏感区域的数据中心扩张。该政策反映出欧洲对数据中心能耗与土地使用监管趋严，可能倒逼科技巨头加速选址优化与采用更节能的数据中心技术。</div>
+        <div class="tags">
+          
+          <span class="tag tag-theme">policy_export</span>
+          
+          <span class="tag tag-theme">datacenter_power</span>
+          
+        </div>
+        
+        <div style="margin-top:6px;">
+          方向: <span class="direction-negative">negative</span>
+        </div>
+        
+      </div>
+      
+      <div class="event-card">
+        <h3>China is increasingly keeping its best AI talent to itself</h3>
+        <div class="summary">中国AI产业蓬勃发展正培养出世界级顶尖人才，但北京方面越来越不愿放行这些人才流向海外。这一趋势意味着：国内AI企业（百度、腾讯、阿里、科大讯飞、商汤等）及算力链（寒武纪、海光信息、浪潮信息、中科曙光等）将获得更充裕的高端人才供给，加速技术迭代与产品落地；同时，海外AI企业及芯片公司获取中国顶尖AI人才的渠道进一步收窄，面临人才招募困境。这对中国科技产业的自主可控具有战略意义。</div>
+        <div class="tags">
+          
+          <span class="tag tag-theme">chip_supply</span>
+          
+          <span class="tag tag-theme">policy_export</span>
+          
+          <span class="tag tag-theme">domestic_substitution</span>
+          
+          <span class="tag tag-theme">compute_demand</span>
+          
+        </div>
+        
+        <div style="margin-top:6px;">
+          方向: <span class="direction-positive">positive</span>
+        </div>
+        
+      </div>
+      
+      <div class="event-card">
         <h3>氪星晚报 ｜高盛策略师将标普500指数目标点位上调至8000点，受AI和盈利所推动；阿里员工十三薪并入年终奖</h3>
         <div class="summary">高盛策略师将标普500目标上调至8000点，预计今年回报17%，主因AI推动盈利增长。可灵AI（快手）3月ARR近5亿美元，同比增4倍，由B端API调用和P端订阅双轮驱动。台积电CEO魏哲家表示今年全员分红奖金涨幅超30%。阿里宣布自2027财年起将十三薪并入年终奖，改名并肩前行奖。拼多多Q1营收1062亿元，同比增11%，但净利降15%因持续投入千亿扶持计划。</div>
         <div class="tags">
@@ -101,91 +156,30 @@
         
       </div>
       
-      <div class="event-card">
-        <h3>新华三NAVIGATE 2026峰会发布UniPoD S80000超节点</h3>
-        <div class="summary">新华三发布UniPoD S80000全系列超节点，单柜最高128卡、支持1024-16384卡弹性扩展，训练性能提升70%、推理提升3倍。单芯片102.4T交换机实现带宽速率提升100%、时延降低15%；X20000系列存储提供200GB/s带宽、300万IOPS。紫光股份董事长于英涛指出算力行业呈"亢奋与焦虑并存"：DeepSeek V4验证国产算力可行性带来亢奋，但头部客户要求10万片保供底线彰显焦虑。总裁徐润安将当前超节点类比30年前IBM大型机时代，标志AI算力竞争从"卖卡"转向"卖Token产出"的系统级竞争。</div>
-        <div class="tags">
-          
-          <span class="tag tag-theme">compute_demand</span>
-          
-          <span class="tag tag-theme">datacenter_power</span>
-          
-          <span class="tag tag-theme">advanced_packaging</span>
-          
-          <span class="tag tag-theme">domestic_substitution</span>
-          
-          <span class="tag tag-theme">chip_supply</span>
-          
-        </div>
-        
-        <div style="margin-top:6px;">
-          方向: <span class="direction-neutral">neutral</span>
-        </div>
-        
-      </div>
-      
-      <div class="event-card">
-        <h3>Qwen3.6-35B子代理场景失败模式揭示验证层缺失</h3>
-        <div class="summary">Reddit用户研究发现Qwen3.6-35B-A3B在子代理场景下结构正确但内容错误，编排器缺乏验证层导致错误被下游接受。MoE稀疏性使部分任务触发"冷专家"，性能显著下降。该发现揭示当前AI Agent系统输出验证层缺失问题，对推理可靠性设计提出挑战。</div>
-        <div class="tags">
-          
-          <span class="tag tag-theme">compute_demand</span>
-          
-          <span class="tag tag-theme">chip_supply</span>
-          
-          <span class="tag tag-theme">model_capability</span>
-          
-          <span class="tag tag-theme">edge_ai</span>
-          
-        </div>
-        
-        <div style="margin-top:6px;">
-          方向: <span class="direction-neutral">neutral</span>
-        </div>
-        
-      </div>
-      
-      <div class="event-card">
-        <h3>珀乐互动基于Wan2.7打造《羞羞的铁拳》漫剧，制作效率提升超90%</h3>
-        <div class="summary">珀乐互动与开心麻花基于阿里Wan2.7视频大模型打造《羞羞的铁拳》漫剧，播放量超3亿。Wan2.7在2D动画人物一致性和大幅运动表演上表现突出，实现光影流动、微表情、动作调度等高质量视觉效果。“人机协作”模式下单人单日产出约3分钟内容，较传统流程提效超90%。据DesignArena榜单，Wan2.7视频编辑功能以1334Elo评分居首。2025年AI短漫剧赛道已上线超4万部作品，商业化加速验证。</div>
-        <div class="tags">
-          
-          <span class="tag tag-theme">model_capability</span>
-          
-          <span class="tag tag-theme">ai_monetization</span>
-          
-        </div>
-        
-        <div style="margin-top:6px;">
-          方向: <span class="direction-positive">positive</span>
-        </div>
-        
-      </div>
-      
     </div>
 
     <div class="section">
       <h2>最近条目 (3)</h2>
       
       <div class="item-row">
-        <strong>[7分]</strong>
-        <a href="https://36kr.com/p/3827497128465287?f=rss" target="_blank">氪星晚报 ｜高盛策略师将标普500指数目标点位上调至8000点，受AI和盈利所推动；阿里员工十三薪并入年终奖</a>
-        <div>高盛策略师将标普500目标上调至8000点，预计今年回报17%，主因AI推动盈利增长。可灵AI（快手）3月ARR近5亿美元，同比增4倍，由B端API调用和P端订阅双轮驱动。台积电CEO魏哲家表示今年全员分红奖金涨幅超30%。阿里宣布自2027财年起将十三薪并入年终奖，改名并肩前行奖。拼多多Q1营收1062亿元，同比增11%，但净利降15%因持续投入千亿扶持计划。</div>
-        <div class="meta">2026-05-27T12:17:05Z · rss:36kr 🟡 ⛓️转载</div>
-      </div>
-      
-      <div class="item-row">
         <strong>[5分]</strong>
-        <a href="https://36kr.com/newsflashes/3827488082727812?f=rss" target="_blank">程一笑：快手AI漫剧营销消耗同比增长超100倍，3月底单日营销消耗峰值突破2000万元</a>
-        <div>快手科技CEO程一笑在2026Q1业绩电话会披露，AI漫剧营销消耗同比增长超100倍，环比增长150%+，3月底单日营销消耗峰值突破2000万元。AI显著降低漫剧生产成本和创作门槛，推动供给快速扩张，带动用户消费和投流需求释放。这是国内短视频平台AI应用商业化的重要信号，表明AI生成内容（AIGC）在内容平台的变现能力正在验证。</div>
-        <div class="meta">2026-05-27T12:10:10Z · rss:36kr 🟡 ⛓️转载</div>
+        <a href="https://www.reddit.com/r/localllama/comments/1tp7znr/nvidia_h10094gb_vram_should_i_run_llamacpp_or" target="_blank">Nvidia H100(94GB VRAM) - should I run llama.cpp or vllm for 30 users inference?</a>
+        <div>某技术用户在工作中借用Nvidia H100 GPU（94GB VRAM），计划搭建支持最多30用户（实际并发10-15人）的推理端点，需大上下文支持（131k-262k tokens），用于Pi、OpenCode等代理编码工具。用户倾向采用Qwen3.6-27B模型，并就llama.cpp与vllm框架的并发处理能力、量化版本选择（Unsloth UD-Q6/8_K_XL或vllm适配量化）寻求建议，同时询问并发用户基准测试工具。此案例反映了企业级推理部署中对高显存GPU、大上下文窗口和高效框架的强烈需求。</div>
+        <div class="meta">2026-05-27T14:54:45Z · reddit:localllama 🔴 ⛓️转载</div>
       </div>
       
       <div class="item-row">
         <strong>[4分]</strong>
-        <a href="https://36kr.com/newsflashes/3827497462616963?f=rss" target="_blank">快手：预计2026年股东回报率提升至约4%，全年目标保持正向自由现金流</a>
-        <div>快手CFO金秉在2026年Q1业绩电话会上披露：年度分红30亿港币叠加积极回购，预计2026年股东回报率提升至约4%；资本开支指引260亿元人民币且大部分集中上半年，用于算力基础设施；已提前锁定算力采购以应对涨价压力；全年目标维持集团正向自由现金流。快手作为头部视频/AI平台，其算力投入规模对全球AI算力产业链具有指示意义，260亿资本开支若主要流向英伟达/AMD等芯片厂将形成需求支撑。</div>
-        <div class="meta">2026-05-27T12:11:45Z · rss:36kr 🟡 ⛓️转载</div>
+        <a href="https://en.ilsole24ore.com/art/lombardy-introduces-increased-charges-of-up-to-200-per-cent-for-data-centre-construction-in-green-and-agricultural-areas-ai6jp4id" target="_blank">Italy region: +200% tax on datacenters built in green/agricultural areas</a>
+        <div>意大利某地区拟对在绿地/农业用地上建设的数据中心征收200%附加税，此举将显著增加数据中心选址成本，抑制在生态敏感区域的数据中心扩张。该政策反映出欧洲对数据中心能耗与土地使用监管趋严，可能倒逼科技巨头加速选址优化与采用更节能的数据中心技术。</div>
+        <div class="meta">2026-05-27T13:52:48Z · hackernews 🔴 ⛓️转载</div>
+      </div>
+      
+      <div class="item-row">
+        <strong>[4分]</strong>
+        <a href="https://techcrunch.com/2026/05/27/china-is-increasingly-keeping-its-best-ai-talent-to-itself" target="_blank">China is increasingly keeping its best AI talent to itself</a>
+        <div>中国AI产业蓬勃发展正培养出世界级顶尖人才，但北京方面越来越不愿放行这些人才流向海外。这一趋势意味着：国内AI企业（百度、腾讯、阿里、科大讯飞、商汤等）及算力链（寒武纪、海光信息、浪潮信息、中科曙光等）将获得更充裕的高端人才供给，加速技术迭代与产品落地；同时，海外AI企业及芯片公司获取中国顶尖AI人才的渠道进一步收窄，面临人才招募困境。这对中国科技产业的自主可控具有战略意义。</div>
+        <div class="meta">2026-05-27T13:48:41Z · rss:techcrunch-ai 🟡 ⛓️转载</div>
       </div>
       
     </div>
