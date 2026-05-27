@@ -5,167 +5,231 @@
     <link>https://hongfei7.github.io/ai-research-radar</link>
     <description>AI/科技/半导体板块的持续投研情报 feed — 由 MiniMax 策展</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 27 May 2026 18:48:24 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2026 21:13:15 GMT</lastBuildDate>
     <atom:link href="https://hongfei7.github.io/ai-research-radar/feed.xml" rel="self" type="application/rss+xml"/>
     
     <item>
-      <title>[8分] 英伟达迄今最大ai晶片走私案 超微三人被控_联合早报网</title>
-      <link>https://www.yzaobao.com/news/china/202603/2067351.html</link>
-      <guid isPermaLink="false">f700422822a6af442eb6202bebc8860172b7c426</guid>
-      <pubDate>Wed, 27 May 2026 18:39:21 GMT</pubDate>
+      <title>[8分] AI芯片需求太火爆!传台积电3nm制程下半年涨价15%，明年或再上调</title>
+      <link>https://news.qq.com/rain/a/20260527A0AKBX00</link>
+      <guid isPermaLink="false">cb249f731f92ea43dec70ad81fb9d0f4bb47c338</guid>
+      <pubDate>Wed, 27 May 2026 21:04:06 GMT</pubDate>
       <description><![CDATA[
-        <p>美国服务器制造商超微电脑（Supermicro）一名高管及两名相关人员涉嫌将内置英伟达芯片、总价数十亿美元的服务器非法转运至中国，两人在3月19日于美国被捕。该案是2022年美国限制英伟达高端芯片对华出口以来，起诉规模最大的走私案件，涉及金额和人数均创纪录。</p>
-        <p>标的: 英伟达, AMD, 超微电脑, 台积电</p>
-        <p>主线: chip_supply, policy_export, domestic_substitution</p>
-        <p>方向: 英伟达→neutral 超微电脑→negative AMD→neutral 台积电→neutral </p>
-        <p><em>需跟踪：美国司法部后续指控细节、是否涉及更多公司或个人；可能加速美国收紧出口许可审查，并对同类服务器制造商（如戴尔）展开合规调查；事件若持续发酵，可能影响市场对英伟达数据中心业务增长的预期。</em></p>
+        <p>台积电3nm制程下半年将涨价15%，明年可能继续上调。该消息直接利好台积电，但将推升英伟达、AMD等AI芯片厂商的制造成本。英伟达H100/B100/GB200、AMD MI300X等AI芯片均依赖台积电3nm代工，成本压力可能通过更高AI硬件价格向云厂商（微软、谷歌、亚马逊、Meta）传导，进而影响AI算力租赁定价和云服务毛利率。</p>
+        <p>标的: AMD, 亚马逊, 微软, 台积电, 博通, Meta, 苹果, 英伟达, 谷歌, 高通</p>
+        <p>主线: compute_demand, datacenter_power, chip_supply</p>
+        <p>方向: 英伟达→negative AMD→negative 台积电→positive 博通→negative 高通→negative 苹果→negative 微软→negative 谷歌→negative 亚马逊→negative Meta→negative </p>
+        <p><em>短期跟踪台积电涨价执行情况与客户接受度；若成本成功传导，云厂商capex压力增大但算力供给趋紧逻辑成立，关注英伟达/AMD转嫁能力；台积电股价调整可能是配置窗口。</em></p>
         <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_c8cc246ba2eb</category>
+      <category>evt_f89b2f4db0e6</category>
     </item>
     
     <item>
-      <title>[8分] 长电科技投100亿扩产，能否缓解国内AI存储芯片供给缺口</title>
-      <link>https://www.toutiao.com/article/7641819153510236726/</link>
-      <guid isPermaLink="false">95192f18df3f38a20754b9d9b26a925537f3c804</guid>
-      <pubDate>Wed, 27 May 2026 18:39:21 GMT</pubDate>
+      <title>[8分] Ai算力需求爆发 海光信息q1营收同比增68% Dcu全面适配主流大模型</title>
+      <link>https://www.cls.cn/detail/2337024</link>
+      <guid isPermaLink="false">df357b8b9cf94fa0a634e7e3e133b76e69fe0982</guid>
+      <pubDate>Wed, 27 May 2026 21:04:06 GMT</pubDate>
       <description><![CDATA[
-        <p>长电科技将2026年固定资产投资预算上调至100亿元，同比提升近18%，市值突破千亿。此举被视为国内半导体封测行业应对AI算力需求的关键布局，重点投向先进封装与HBM等AI存储芯片相关领域。需持续跟踪其扩产节奏、国产HBM技术突破进度，以及与中芯国际等晶圆厂的下游协同情况。</p>
-        <p>标的: 海光信息, 英伟达, 美光, 台积电, 寒武纪, 长电科技, 中芯国际, AMD</p>
-        <p>主线: advanced_packaging, chip_supply, domestic_substitution</p>
-        <p>方向: 长电科技→positive 中芯国际→neutral 美光→neutral 台积电→neutral 英伟达→neutral AMD→neutral 寒武纪→neutral 海光信息→neutral </p>
-        <p><em>跟踪变量：长电科技扩产节奏、国产HBM良率突破、下游AI芯片客户验证进度。二阶效应：若实现AI存储封装自主可控，将提升国产AI芯片供应链安全性，台积电CoWoS产能瓶颈下国产替代窗口需关注。</em></p>
+        <p>AI算力需求爆发，海光信息Q1营收同比增长68%。公司DCU（深度计算单元）已全面适配主流大模型，面向AI大模型、科学计算、云原生等前沿场景进行布局，计划推出性能更优、功耗更低、生态更开放的CPU及DCU新品，为国内客户提供自主可控、安全可靠的算力底座。该数据验证了国内AI算力需求增长趋势，国产AI芯片在大模型适配方面取得实质性进展。</p>
+        <p>标的: 浪潮信息, 海光信息, 寒武纪, 中科曙光</p>
+        <p>主线: chip_supply, domestic_substitution, compute_demand</p>
+        <p>方向: 海光信息→positive 寒武纪→positive 中科曙光→positive 浪潮信息→positive </p>
+        <p><em>持续跟踪海光DCU生态适配数量及企业客户导入进度；国产大模型部署加速将带动算力需求，利好国产算力链整体；寒武纪、景嘉微等同类厂商可作为估值对标参考。</em></p>
         <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_3eeea0a5365e</category>
+      <category>evt_2fc0a1f1639b</category>
     </item>
     
     <item>
-      <title>[7分] 金山办公2025年上半年营收26.57亿元：推出wps Ai 3.0，Ai月活破2951万</title>
-      <link>http://www1.xinhuanet.com/digital/20250822/81baa04afca24f50906c702c8057c22c/c.html</link>
-      <guid isPermaLink="false">d4e3e83c53a81828089aaea1bc4a0b274e453fb7</guid>
-      <pubDate>Wed, 27 May 2026 18:39:21 GMT</pubDate>
+      <title>[8分] AI costs begin to bite as agents may increase token demand by 24 times, says Goldman Sachs report — Uber and Microsoft among companies feeling the bite of tokenized billing</title>
+      <link>https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-costs-begin-to-bite-as-agents-may-increase-token-demand-by-24-times-says-goldman-sachs-report-uber-and-microsoft-among-companies-feeling-the-bite-of-tokenized-billing</link>
+      <guid isPermaLink="false">34af5c13da0f99c021e38f1bcae72eb03ac8ae9f</guid>
+      <pubDate>Wed, 27 May 2026 20:52:46 GMT</pubDate>
       <description><![CDATA[
-        <p>金山办公发布2025年上半年财报，营收26.57亿元。同期推出WPS AI 3.0，AI月活跃用户突破2951万。WPS灵犀通过"双向改造"模式重新定义AI与办公软件融合，突破传统AI作为附加功能的局限。该业绩表明国内办公软件AI商业化取得实质性进展，AI功能正从增值服务转向核心产品竞争力。</p>
-        <p>标的: 腾讯, 百度, 阿里巴巴, 科大讯飞, 金山办公, 微软</p>
-        <p>主线: ai_monetization, model_capability, domestic_substitution, edge_ai</p>
-        <p>方向: 金山办公→positive 微软→neutral 百度→neutral 科大讯飞→neutral 阿里巴巴→neutral 腾讯→neutral </p>
-        <p><em>跟踪AI月活转化率及付费渗透率变化；关注WPS AI 3.0对B端企业客户付费意愿的拉动；竞品(科大讯飞、百度)同类产品的迭代节奏；国内办公软件AI商业化路径的可复制性验证。</em></p>
-        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
+        <p>高盛报告显示AI智能体可能将token需求暴增24倍，令微软、Uber等企业的AI成本压力骤显。Token化计费模式使大厂AI投入产出比受质疑，多家科技公司正重新审视AI投资策略。AI基础设施成本持续攀升，而商业化回报尚不明朗，行业或面临AI投资回报周期的深度调整。</p>
+        <p>标的: AMD, 亚马逊, 微软, 台积电, Anthropic, 百度, OpenAI, 阿里巴巴, Meta, 苹果, 英伟达, 腾讯, 谷歌, DeepSeek</p>
+        <p>主线: model_capability, ai_monetization, chip_supply, compute_demand</p>
+        <p>方向: 英伟达→neutral AMD→neutral 台积电→neutral 微软→negative 谷歌→negative 亚马逊→negative Meta→negative 苹果→negative 阿里巴巴→negative 腾讯→negative 百度→negative OpenAI→negative Anthropic→negative DeepSeek→negative </p>
+        <p><em>需跟踪：企业AI投入产出比趋势、token定价变化、大厂capex削减节奏。二阶效应：若成本压力持续，云厂商可能向AI模型层压价，或倒逼推理效率技术突破。关注与芯片供给主线联动，需求端变化或影响先进制程订单节奏。</em></p>
+        <p>来源: rss:tomshardware 🟡 中可信 [转载自 https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-costs-begin-to-bite-as-agents-may-increase-token-demand-by-24-times-says-goldman-sachs-report]</p>
       ]]></description>
-      <category>evt_2f1173756cde</category>
+      <category>evt_87bc35b1c74e</category>
     </item>
     
     <item>
-      <title>[6分] Meta rolls out Plus plans for Instagram, Facebook, and WhatsApp globally, will test $7.99/mo. and $19.99/mo. Meta AI plans, a $49.99/mo. creator plan, and more (Sarah Perez/TechCrunch)</title>
-      <link>https://www.techmeme.com/260527/p39#a260527p39</link>
-      <guid isPermaLink="false">25b3f73b74e95d9a05d23125c5b27106d41045fb</guid>
-      <pubDate>Wed, 27 May 2026 18:30:01 GMT</pubDate>
+      <title>[9分] Nvidia bets $150B on Taiwan as Trump's plan to make US an AI hub backfires</title>
+      <link>https://arstechnica.com/tech-policy/2026/05/nvidia-ceo-wants-taiwan-to-be-center-of-ai-revolution-not-us</link>
+      <guid isPermaLink="false">6dc2df9b3d57fb8cbfa12c3f0dd07a6500a6bd21</guid>
+      <pubDate>Wed, 27 May 2026 19:59:40 GMT</pubDate>
       <description><![CDATA[
-        <p>Meta在全球范围内推出Instagram、Facebook、WhatsApp的Plus订阅计划，并测试Meta AI付费订阅（月费7.99美元和19.99美元两档），同时推出49.99美元/月的创作者订阅计划。Meta正在从纯广告模式向订阅+广告混合模式转型，Meta AI作为核心差异化功能首次纳入付费墙，标志着主流社交平台AI变现正式启动。</p>
+        <p>英伟达宣布每年投资1500亿美元，将台湾打造为AI“核心枢纽”。此举正值特朗普政府试图减少美国对亚洲芯片制造依赖、让美国成为AI中心的计划面临挑战之际。该投资将深化英伟达与台积电的代工合作关系，进一步巩固台积电作为全球AI芯片制造中心的地位。英伟达CEO黄仁勋此前已表示，在美国建造先进芯片厂需数年时间且成本高昂，暗示海外产能布局的必要性。此举可能加剧中美科技竞争背景下美国推进芯片国产化的难度。</p>
+        <p>标的: AMD, 台积电, ASML, 美光, Marvell, 工业富联, ARM, 超微电脑, 博通, 英伟达, 高通</p>
+        <p>主线: compute_demand, datacenter_power, advanced_packaging, chip_supply, policy_export, domestic_substitution</p>
+        <p>方向: 英伟达→positive 台积电→positive ASML→positive 超微电脑→positive 工业富联→positive AMD→positive 博通→positive 美光→positive Marvell→positive 高通→positive ARM→positive </p>
+        <p><em>跟踪台积电先进制程产能扩张进度及英伟达订单能见度。此投资强化AI算力链，台湾制造集中度进一步上升。建议关注美国可能的政策反制措施，以及对国产算力链替代进程的影响。</em></p>
+        <p>来源: rss:arstechnica 🟡 中可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_453d6d1d9ff2</category>
+    </item>
+    
+    <item>
+      <title>[7分] Snowflake reports Q1 revenue up 33% YoY to $1.39B, vs. $1.32B est., and commits to spending $6B on AWS over five years; SNOW jumps 29%+ after hours (CNBC)</title>
+      <link>https://www.techmeme.com/260527/p43#a260527p43</link>
+      <guid isPermaLink="false">3f7f7f194bd589403eb615e5e0400faab2499493</guid>
+      <pubDate>Wed, 27 May 2026 20:30:02 GMT</pubDate>
+      <description><![CDATA[
+        <p>Snowflake发布2025财年Q1财报，营收13.9亿美元，同比增长33%，超出市场预期的13.2亿美元。更重要的是，公司宣布未来五年将在AWS云服务上投入60亿美元。财报利好推动Snowflake股价盘后大涨逾29%。该承诺彰显了企业对云端数据基础设施的持续投入意愿，对AWS收入贡献显著。</p>
+        <p>标的: 亚马逊</p>
+        <p>主线: chip_supply, datacenter_power, compute_demand</p>
+        <p>方向: 亚马逊→positive </p>
+        <p><em>关注AWS收入增速是否因大客户承诺加速、AWS vs Azure/GCP市场份额变化；60亿美元承诺或提升AWS capex预期，间接利好上游算力供应链。</em></p>
+        <p>来源: rss:techmeme 🔴 低可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_67eeca562512</category>
+    </item>
+    
+    <item>
+      <title>[6分] 国内首个ai计算开放架构发布 - 36氪</title>
+      <link>https://www.36kr.com/newsflashes/3454856486884999</link>
+      <guid isPermaLink="false">04c321dec1df46a8603644428c30369cc060383e</guid>
+      <pubDate>Wed, 27 May 2026 21:04:06 GMT</pubDate>
+      <description><![CDATA[
+        <p>中科曙光在2025世界智能产业博览会上联合20余家产业链企业发布国内首个AI计算开放架构，并推出AI超集群。该架构旨在打破算力孤岛，实现不同AI芯片和框架的互操作，降低AI部署门槛。开放架构的推出有望加速国产AI生态整合，推动算力资源的标准化供给，对国内AI算力基础设施的自主可控具有战略意义。</p>
+        <p>标的: 中科曙光</p>
+        <p>主线: domestic_substitution, compute_demand</p>
+        <p>方向: 中科曙光→positive </p>
+        <p><em>跟踪开放架构落地进展及生态伙伴扩展情况；关注其对国产算力链整合的示范效应，若规模化部署验证可行，可能带动景嘉微、海光信息等国产芯片厂商协同放量。</em></p>
+        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_48c51bc1bccf</category>
+    </item>
+    
+    <item>
+      <title>[7分] In more good news for Amazon, Snowflake signs $6B deal with AWS for AI CPU chips</title>
+      <link>https://techcrunch.com/2026/05/27/in-more-good-news-for-amazon-snowflake-signs-6b-deal-with-aws-for-ai-cpu-chips</link>
+      <guid isPermaLink="false">667dd5839b7548b5729c003583207a155aee4467</guid>
+      <pubDate>Wed, 27 May 2026 20:10:00 GMT</pubDate>
+      <description><![CDATA[
+        <p>Snowflake 与亚马逊达成一项价值 60 亿美元、期限五年的合作协议，通过 AWS 获取 AI 用 CPU 芯片。此举表明 Snowflake 正积极扩充 AI 算力基础设施，同时对英伟达在 AI 芯片市场的主导地位构成挑战。AWS 作为云服务提供商，将借此深化与 Snowflake 的合作，锁定大客户订单。</p>
+        <p>标的: AMD, 亚马逊, 台积电, 博通, Intel, 英伟达</p>
+        <p>主线: chip_supply, compute_demand</p>
+        <p>方向: 亚马逊→positive 英伟达→negative AMD→positive Intel→positive 台积电→positive 博通→neutral </p>
+        <p><em>关注 Snowflake 后续采购 CPU 的具体供应商（AMD/英特尔），以及 AWS 与 Snowflake 的合作深度。若 CPU 替代部分 GPU 需求，需跟踪英伟达 GPU 订单变化。</em></p>
+        <p>来源: rss:techcrunch-ai 🟡 中可信</p>
+      ]]></description>
+      <category>evt_8b9e98be5fdf</category>
+    </item>
+    
+    <item>
+      <title>[5分] HP reports Q2 revenue up 9% YoY to $14.4B, vs. $14B est., Personal Systems revenue up 13% to $10.2B, and forecasts Q3 adjusted EPS above estimates (Dina Bass/Bloomberg)</title>
+      <link>https://www.techmeme.com/260527/p45#a260527p45</link>
+      <guid isPermaLink="false">1222fdd705b8428f57e7b190ed203a15eb53a431</guid>
+      <pubDate>Wed, 27 May 2026 20:50:01 GMT</pubDate>
+      <description><![CDATA[
+        <p>HP发布Q2财报，营收144亿美元同比增9%超预期，个人系统业务营收102亿美元同比增13%，预计Q3调整后EPS高于预期。HP表示公司正在经受内存芯片价格大幅上涨的考验。PC市场在AI PC换代需求推动下表现强劲，个人系统业务增长超预期，内存成本上升压力正在向下游传导。</p>
+        <p>标的: Intel, AMD, 戴尔, 美光</p>
+        <p>主线: edge_ai, chip_supply</p>
+        <p>方向: 戴尔→positive 美光→neutral Intel→positive AMD→positive </p>
+        <p><em>PC需求持续强劲，关注AI PC换代节奏；内存涨价压力是否进一步传导至消费级产品，以及戴尔/HP等OEM厂商毛利率变化；美光作为内存供应商定价权边际改善，但需观察需求端能否持续承接成本上涨。</em></p>
+        <p>来源: rss:techmeme 🔴 低可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_ce37e8f8a38b</category>
+    </item>
+    
+    <item>
+      <title>[5分] Salesforce reports Q1 revenue up 13% YoY to $11.13B, vs. $11.05B est., Agentforce annual recurring revenue up 205% to $1.2B, and forecasts Q2 revenue below est. (Jordan Novet/CNBC)</title>
+      <link>https://www.techmeme.com/260527/p44#a260527p44</link>
+      <guid isPermaLink="false">8e0b1a2b14abfac03769e1d95d231bde51daae60</guid>
+      <pubDate>Wed, 27 May 2026 20:35:04 GMT</pubDate>
+      <description><![CDATA[
+        <p>Salesforce公布2025财年Q1营收111.3亿美元（同比+13%），高于预期的110.5亿美元；AI agent产品Agentforce年化经常性收入达12亿美元，同比暴增205%，显示企业级AI应用变现能力快速验证。但公司对Q2营收指引低于市场预期，引发对AI投入能否持续驱动收入增长的疑虑。Agentforce的爆发式增长表明AI agent正从概念走向规模化落地，对企业软件赛道竞争格局产生深远影响。</p>
+        <p>标的: 微软, 亚马逊, 谷歌, Meta</p>
+        <p>主线: model_capability, ai_monetization, compute_demand</p>
+        <p>方向: 微软→neutral 谷歌→neutral 亚马逊→neutral Meta→neutral </p>
+        <p><em>Agentforce ARR暴增205%印证企业级AI变现逻辑，但Q2指引低于预期需关注是否影响后续capex扩张节奏。微软（Copilot+Agentforce双线布局）是最大直接受益标的；谷歌、AWS企业AI产品进展同样值得跟踪。</em></p>
+        <p>来源: rss:techmeme 🔴 低可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_f474c7d96795</category>
+    </item>
+    
+    <item>
+      <title>[6分] Amazon MGM Studios announces the GenAI Creators' Fund, greenlights three AI animated series for Prime Video, and launches an AI production platform with AWS (Todd Spangler/Variety)</title>
+      <link>https://www.techmeme.com/260527/p41#a260527p41</link>
+      <guid isPermaLink="false">7a74d0615f286b9db37be9a1a23ead5d5074d500</guid>
+      <pubDate>Wed, 27 May 2026 19:25:01 GMT</pubDate>
+      <description><![CDATA[
+        <p>亚马逊 MGM Studios 宣布推出 GenAI Creators' Fund，并批准三部 AI 动画系列登陆 Prime Video，同时推出基于 AWS 的 AI 内容生产平台。该平台旨在利用生成式 AI 技术辅助创作「电影级」娱乐内容，标志着好莱坞主流制片厂正式将生成式 AI 大规模引入内容生产流程。AI 动画制作对 GPU 算力需求显著，相关投入将提振英伟达、AMD 等芯片厂商；AWS 提供底层云基础设施支撑；Prime Video 内容库扩充则强化亚马逊在流媒体赛道的竞争壁垒。</p>
+        <p>标的: AMD, 亚马逊, 微软, 亚马逊, 英伟达, 谷歌</p>
+        <p>主线: model_capability, ai_monetization, compute_demand</p>
+        <p>方向: 亚马逊→positive 英伟达→positive AMD→positive 微软→neutral 谷歌→neutral </p>
+        <p><em>跟踪 GenAI Creators' Fund 规模、AWS 平台调用量及三部 AI 动画上线后的用户反馈；AI 内容规模化生产将显著拉动云端 GPU 算力消耗，关注英伟达/AMD 数据中心芯片需求增量；好莱坞其他制片厂（迪士尼、华纳）是否跟进类似 AI 创作策略将影响竞争格局演变。</em></p>
+        <p>来源: rss:techmeme 🔴 低可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_f474c7d96795</category>
+    </item>
+    
+    <item>
+      <title>[4分] Facebook launches a 'Plus' subscription that gives you extra features</title>
+      <link>https://www.theverge.com/tech/938500/facebook-whatsapp-instagram-meta-ai-subscriptions</link>
+      <guid isPermaLink="false">6a4dff3a6d343e2b5fe63839a3a8eeba2671e4ed</guid>
+      <pubDate>Wed, 27 May 2026 20:52:36 GMT</pubDate>
+      <description><![CDATA[
+        <p>Meta（原Facebook）在旗下平台推出“Plus”付费订阅服务，为用户提供额外功能。具体订阅价格、功能细节及目标用户群体尚未披露。该订阅服务的推出正值AI驱动社交平台商业模式转型期，可能成为Meta广告收入之外的增量变现渠道。</p>
         <p>标的: Meta</p>
         <p>主线: ai_monetization</p>
         <p>方向: Meta→positive </p>
-        <p><em>需跟踪Meta订阅转化率与ARPU变化；AI付费订阅若成功，将为其他社交平台的AI变现提供参考路径，可能加速行业从纯广告向付费+广告混合模式转型；Meta收入结构变化或影响其对AI基础设施的capex投入力度。</em></p>
-        <p>来源: rss:techmeme 🔴 低可信 [转载自 https://techcrunch.com/2024/xx/xx/meta-plus-plans-instagram-facebook-whatsapp]</p>
+        <p><em>分析师需跟踪Plus订阅的定价策略、转化率及用户付费意愿；订阅收入占比提升情况；是否与Meta的AI功能（如AI助手）捆绑销售，从而形成新的商业模式闭环。</em></p>
+        <p>来源: hackernews 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
       <category>evt_6dd42e673270</category>
     </item>
     
     <item>
-      <title>[6分] Meta launches Instagram, Facebook, and WhatsApp subscriptions, with more to come, including AI plans</title>
-      <link>https://techcrunch.com/2026/05/27/meta-officially-launches-instagram-facebook-and-whatsapp-subscriptions-with-more-to-come-including-ai-plans</link>
-      <guid isPermaLink="false">89459f00affc838f1a70214fea986de244aa9d2e</guid>
-      <pubDate>Wed, 27 May 2026 18:00:00 GMT</pubDate>
+      <title>[4分] Meta launches Instagram, Facebook, and WhatsApp subscriptions</title>
+      <link>https://www.instagram.com/reel/dy2dhcwmzst</link>
+      <guid isPermaLink="false">681be3e759c6cd4a9a73b6fad9234088446568eb</guid>
+      <pubDate>Wed, 27 May 2026 20:24:20 GMT</pubDate>
       <description><![CDATA[
-        <p>Meta在全球范围内推出Instagram、Facebook、WhatsApp付费订阅服务，并推出整合型品牌"Meta One"，同时测试AI功能、创作者工具及商业化产品。Meta此举旨在探索AI时代的多元变现路径，将AI能力与订阅模式结合，为社交平台商业化提供新范式。这标志着头部互联网平台正式进入AI订阅竞争阶段。</p>
-        <p>标的: 谷歌, 英伟达, 亚马逊, Meta, 博通, 微软, AMD</p>
-        <p>主线: ai_monetization, compute_demand, edge_ai</p>
-        <p>方向: Meta→positive 英伟达→positive AMD→positive 博通→positive 微软→neutral 谷歌→neutral 亚马逊→neutral </p>
-        <p><em>关注Meta订阅转化率与ARPU提升节奏；Meta AI订阅模式若跑通，将为其他互联网平台树立标杆，利好AI算力需求；英伟达/AMD作为Meta AI基础设施供应商有望间接受益。</em></p>
-        <p>来源: rss:techcrunch-ai 🟡 中可信 [转载自 未知来源]</p>
-      ]]></description>
-      <category>evt_19bf049853bd</category>
-    </item>
-    
-    <item>
-      <title>[5分] Huawei's ‘Chip Queen’ Throws Down the Gauntlet</title>
-      <link>https://www.wired.com/story/huawei-chip-queen-moores-law-tau</link>
-      <guid isPermaLink="false">8b56b20a965a7fd3a7ce6de61959506c89d47451</guid>
-      <pubDate>Wed, 27 May 2026 18:00:00 GMT</pubDate>
-      <description><![CDATA[
-        <p>Wired报道华为被称作"芯片女王"的负责人正在引领公司适应摩尔定律放缓甚至终结的新时代。华为通过chiplet先进封装、3D堆叠等路径绕过先进制程限制，实现性能提升。该策略若成功，将对美国芯片主导地位构成挑战，同时加速中国半导体自主化进程。报道未披露具体技术细节或财务数据，但指出华为正系统性重塑芯片设计思路，从追求制程微缩转向系统级创新。</p>
-        <p>标的: 高通, 英伟达, 中芯国际, ASML, 博通, 台积电, 寒武纪, AMD</p>
-        <p>主线: advanced_packaging, chip_supply, policy_export, domestic_substitution</p>
-        <p>方向: 中芯国际→positive 寒武纪→positive 英伟达→negative AMD→negative 台积电→neutral ASML→neutral 博通→neutral 高通→neutral </p>
-        <p><em>跟踪华为芯片路线图执行情况及国内客户订单变化。若华为突破成果落地，将强化国产替代逻辑，但同时可能分流部分AI芯片市场给英伟达/AMD带来竞争压力。关注中芯国际7nm及以下制程良率进展、ASML对华出口许可变化。</em></p>
-        <p>来源: rss:wired 🟡 中可信 [转载自 未知来源]</p>
-      ]]></description>
-      <category>evt_e00b859cd1fb</category>
-    </item>
-    
-    <item>
-      <title>[4分] Qwen3.6 huge quality gain from Q4 to Q6 for coding agent</title>
-      <link>https://www.reddit.com/r/localllama/comments/1tpebhw/qwen36_huge_quality_gain_from_q4_to_q6_for_coding</link>
-      <guid isPermaLink="false">8d4047973333399f0e2b663e021e26e1bb375b5d</guid>
-      <pubDate>Wed, 27 May 2026 18:32:18 GMT</pubDate>
-      <description><![CDATA[
-        <p>Reddit用户实测Qwen3.6模型发现，从Q4（4位量化）到Q6（6位量化）的质量提升显著，本地LLM服务器体验已接近付费API水平。关键技术突破在于llama.cpp内置服务器替代Ollama，以及MTP（推测为多 token预测）带来的性能增益。在双RTX 3090显卡（降压、65°C温度墙）配置下，推理速度达20-50 tokens/秒，散热控制良好。社区认为本地AI编码代理已具备实用价值。</p>
-        <p>标的: 英伟达</p>
-        <p>主线: model_capability, compute_demand, edge_ai</p>
-        <p>方向: 英伟达→positive </p>
-        <p><em>需跟踪：开源模型量化技术持续突破→本地推理能力提升→用户从付费API向本地迁移的规模变化；英伟达消费级GPU在AI推理场景的渗透率；Meta开源模型路线图对云端算力需求的影响。</em></p>
-        <p>来源: reddit:localllama 🔴 低可信 [转载自 未知来源]</p>
-      ]]></description>
-      <category>evt_9a12465e137b</category>
-    </item>
-    
-    <item>
-      <title>[4分] Behold! Probably the most ghetto local AI server:</title>
-      <link>https://www.reddit.com/r/localllama/comments/1tpdt5m/behold_probably_the_most_ghetto_local_ai_server</link>
-      <guid isPermaLink="false">25d5e7a037c9299cf7ecc970b76a832b79194d92</guid>
-      <pubDate>Wed, 27 May 2026 18:14:46 GMT</pubDate>
-      <description><![CDATA[
-        <p>Reddit用户/MackThax历时数月成功搭建了一台本地AI服务器，配置为3块Nvidia Tesla V100 32GB（合计96GB VRAM）+ Intel Xeon E5-2680 v4 CPU + Asrock x99主板。值得注意的是，用户使用了笔记本电脑SODIMM内存加适配器的方式，机箱散热风扇仅通过旋钮控制电源直供。帖子标题称其为“乞丐版高端AI服务器”，反映出当前高性能GPU获取成本高企、供应紧张的现状，以及市场对大显存本地推理/微调需求的持续增长。</p>
-        <p>标的: 英伟达, Intel</p>
-        <p>主线: chip_supply, compute_demand</p>
-        <p>方向: 英伟达→positive Intel→neutral </p>
-        <p><em>Tesla系列需求旺盛验证算力饥渴逻辑，跟踪H100/H200产能释放节奏；Tesla V100虽为上代产品但仍是高性价比的大显存方案，关注消费级Blackwell量产对Tesla需求的替代效应。</em></p>
-        <p>来源: reddit:localllama 🔴 低可信</p>
-      ]]></description>
-      <category>evt_346ca9bcaee8</category>
-    </item>
-    
-    <item>
-      <title>[5分] I think Anthropic and OpenAI have found product-market fit</title>
-      <link>https://simonwillison.net/2026/may/27/product-market-fit</link>
-      <guid isPermaLink="false">a5866393e99ef4db28281b4559248d629ad34c3b</guid>
-      <pubDate>Wed, 27 May 2026 16:39:13 GMT</pubDate>
-      <description><![CDATA[
-        <p>Hacker News社区热议Anthropic和OpenAI已找到产品-市场契合点。两家公司通过API调用、企业级解决方案及订阅服务实现规模化收入增长，获得大量开发者与企业客户认可。产品-市场契合意味着其AI产品已跨越商业化关键节点，从早期探索进入规模化扩张阶段。这将进一步拉动算力需求，利好上游芯片和云服务厂商。</p>
-        <p>标的: 谷歌, 阿里巴巴, Anthropic, 英伟达, 亚马逊, 腾讯, ASML, OpenAI, 美光, 博通, 台积电, 微软, AMD</p>
-        <p>主线: ai_monetization, chip_supply, compute_demand</p>
-        <p>方向: 英伟达→positive AMD→positive 博通→positive 台积电→positive ASML→positive 美光→positive 微软→positive 谷歌→positive 亚马逊→positive 阿里巴巴→positive 腾讯→positive OpenAI→positive Anthropic→positive </p>
-        <p><em>分析师需跟踪：1）Anthropic和OpenAI的API调用量、企业客户数及ARR增速；2）算力需求增长对芯片供应商的订单拉动效应；3）商业化验证后是否加速其他AI公司融资与扩张，形成板块联动。</em></p>
+        <p>Meta宣布推出Instagram、Facebook和WhatsApp的订阅服务，这标志着其商业化模式的重要拓展。订阅服务可能为Meta带来新的稳定收入来源，减少对广告收入的依赖。作为全球最大的社交媒体平台之一，Meta此次推出订阅服务反映了社交平台探索多元化变现路径的行业趋势，值得关注订阅服务的定价策略、用户付费转化率及其对广告业务的影响。</p>
+        <p>标的: Meta</p>
+        <p>主线: ai_monetization</p>
+        <p>方向: Meta→positive </p>
+        <p><em>需跟踪订阅服务的具体定价模式、用户付费转化率及付费用户规模；关注其他社交平台是否跟进；订阅收入增长可能改善Meta财务稳健性，但对广告业务替代效应需持续观察。</em></p>
         <p>来源: hackernews 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_0263b587206d</category>
+      <category>evt_6dd42e673270</category>
     </item>
     
     <item>
-      <title>[5分] AI-generated CUDA kernels silently break training and inference [R]</title>
-      <link>https://www.reddit.com/r/machinelearning/comments/1tpaw6x/aigenerated_cuda_kernels_silently_break_training</link>
-      <guid isPermaLink="false">5c89b67107d0cce52978514a13e3c0aa128653a8</guid>
-      <pubDate>Wed, 27 May 2026 16:35:33 GMT</pubDate>
+      <title>[5分] Your SEO strategy is optimized for a search engine that no longer exists.</title>
+      <link>https://techcrunch.com/podcast/your-seo-strategy-is-optimized-for-a-search-engine-that-no-longer-exists</link>
+      <guid isPermaLink="false">243c113887ed734b3b952158a762ec1f8dc0cbc0</guid>
+      <pubDate>Wed, 27 May 2026 18:39:17 GMT</pubDate>
       <description><![CDATA[
-        <p>研究人员发现AI生成的CUDA内核存在隐蔽缺陷：NVIDIA发布的SOL-ExecBench基准测试集（包含235个来自DeepSeek、Qwen、Gemma、Kimi的生产级内核）中，排名靠前的AI生成代码在实际训练中频繁失效。其中融合embedding梯度+RMSNorm反向传播内核在基准测试中通过验证，但在真实训练场景下导致loss持续发散。根本原因在于embedding梯度累积使用了bf16精度而非fp32——真实文本中token分布不均导致部分token累积数千次贡献，bf16无法承载；而统一随机token分布下梯度均匀分散，bf16精度足够。此类bug症状与“想法不work”高度相似，极易误导研究方向。</p>
-        <p>标的: 谷歌, 超微电脑, 阿里巴巴, 海光信息, 浪潮信息, 英伟达, 亚马逊, Meta, 百度, 天数智芯, 中科曙光, 博通, 台积电, 寒武纪, 微软, 中芯国际, AMD</p>
-        <p>主线: chip_supply, model_capability, policy_export, domestic_substitution, datacenter_power, edge_ai, compute_demand, advanced_packaging</p>
-        <p>方向: 英伟达→neutral 台积电→neutral AMD→positive 博通→neutral 微软→negative 谷歌→negative Meta→negative 亚马逊→negative 阿里巴巴→negative 百度→negative 中芯国际→positive 寒武纪→positive 海光信息→positive 天数智芯→positive 超微电脑→neutral 中科曙光→positive 浪潮信息→positive </p>
-        <p><em>此事件揭示AI代码生成质量风险短期对软件/模型公司构成负面，建议回避纯软标的；但利好国产算力链（寒武纪、海光等）——海外模型能力受限为国产替代留出窗口。跟踪变量：SOL-ExecBench覆盖范围扩大进度、NVIDIA对基准测试的后续更新、国产AI芯片实际训练稳定性数据。</em></p>
-        <p>来源: reddit:ml 🔴 低可信 [转载自 未知来源]</p>
+        <p>Google在I/O大会正式将AI生成答案置于搜索核心位置，搜索结果从传统"10条蓝色链接"转向AI摘要优先展示。这意味着用户获取信息的方式根本改变，品牌方难以控制AI对其企业的描述方式。对于依赖传统SEO获取流量的商业模式构成重大挑战，而AI搜索引擎对算力的海量需求（推理计算）将持续拉动数据中心和芯片需求。</p>
+        <p>标的: 亚马逊, 微软, 台积电, Meta, 苹果, 英伟达, 谷歌</p>
+        <p>主线: model_capability, ai_monetization, edge_ai, compute_demand</p>
+        <p>方向: 谷歌→neutral 英伟达→positive 台积电→positive 微软→positive 亚马逊→positive Meta→neutral 苹果→neutral </p>
+        <p><em>1）持续跟踪AI搜索对传统SEO流量的侵蚀程度；2）关注AI搜索对算力消耗的增量需求，对GPU/数据中心链的拉动效应；3）评估各科技公司应对策略的差异，Azure+OpenAI与Google Search的竞争格局变化。</em></p>
+        <p>来源: rss:techcrunch-ai 🟡 中可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_eb0f3c9e35c6</category>
+      <category>evt_f474c7d96795</category>
+    </item>
+    
+    <item>
+      <title>[4分] What Apple and Google are doing to your push notifications</title>
+      <link>https://www.jacquescorbytuech.com/writing/what-apple-and-google-are-doing-your-push-notifications</link>
+      <guid isPermaLink="false">2d397492d10fb4026b01c2430fa09b8e0486767a</guid>
+      <pubDate>Wed, 27 May 2026 19:24:10 GMT</pubDate>
+      <description><![CDATA[
+        <p>Hacker News报道苹果和Google正在对推送通知机制进行改动。报道未披露具体技术细节和改动内容，但涉及两家科技巨头在其移动生态系统中调整通知推送策略。这一变化可能影响依赖推送通知进行用户触达的应用开发者和服务提供商。鉴于推送通知是移动端用户运营和AI驱动的个性化推荐重要渠道，此变化值得持续关注。</p>
+        <p>标的: 谷歌, 苹果</p>
+        <p>主线: ai_monetization, edge_ai</p>
+        <p>方向: 苹果→neutral 谷歌→neutral </p>
+        <p><em>需跟踪改动细节：是否涉及AI驱动的通知优化或隐私收紧。短期对应用开发者影响有限，但若涉及通知优先级算法调整，可能影响依赖推送触达用户的厂商；与edge_ai主线联动在于端侧AI处理通知的可能性。</em></p>
+        <p>来源: hackernews 🔴 低可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_e8f09ceeee3d</category>
     </item>
     
   </channel>
