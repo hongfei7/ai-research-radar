@@ -39,20 +39,30 @@
       <h2>相关事件 (1)</h2>
       
       <div class="event-card">
-        <h3>中科曙光 (603019)深度报告：Ai时代 持续深化国产智算生态</h3>
-        <div class="summary">中科曙光发布深度报告聚焦AI时代国产智算生态布局。核心标的为其联营企业海光信息，后者是国内高端处理器研发领先企业。海光DCU采用GPGPU架构，具备较强并行计算能力和高能效比，并兼容“类CUDA”环境，可较好适配国际主流商业计算软件和AI软件生态。该布局标志着国产AI算力芯片在软硬件生态兼容方面取得实质进展，降低下游应用迁移成本。</div>
+        <h3>AI-generated CUDA kernels silently break training and inference [R]</h3>
+        <div class="summary">研究人员发现AI生成的CUDA内核存在隐蔽缺陷：NVIDIA发布的SOL-ExecBench基准测试集（包含235个来自DeepSeek、Qwen、Gemma、Kimi的生产级内核）中，排名靠前的AI生成代码在实际训练中频繁失效。其中融合embedding梯度+RMSNorm反向传播内核在基准测试中通过验证，但在真实训练场景下导致loss持续发散。根本原因在于embedding梯度累积使用了bf16精度而非fp32——真实文本中token分布不均导致部分token累积数千次贡献，bf16无法承载；而统一随机token分布下梯度均匀分散，bf16精度足够。此类bug症状与“想法不work”高度相似，极易误导研究方向。</div>
         <div class="tags">
           
           <span class="tag tag-theme">chip_supply</span>
           
+          <span class="tag tag-theme">model_capability</span>
+          
+          <span class="tag tag-theme">policy_export</span>
+          
           <span class="tag tag-theme">domestic_substitution</span>
           
+          <span class="tag tag-theme">datacenter_power</span>
+          
+          <span class="tag tag-theme">edge_ai</span>
+          
           <span class="tag tag-theme">compute_demand</span>
+          
+          <span class="tag tag-theme">advanced_packaging</span>
           
         </div>
         
         <div style="margin-top:6px;">
-          方向: <span class="direction-neutral">neutral</span>
+          方向: <span class="direction-positive">positive</span>
         </div>
         
       </div>
@@ -60,7 +70,14 @@
     </div>
 
     <div class="section">
-      <h2>最近条目 (0)</h2>
+      <h2>最近条目 (1)</h2>
+      
+      <div class="item-row">
+        <strong>[5分]</strong>
+        <a href="https://www.reddit.com/r/machinelearning/comments/1tpaw6x/aigenerated_cuda_kernels_silently_break_training" target="_blank">AI-generated CUDA kernels silently break training and inference [R]</a>
+        <div>研究人员发现AI生成的CUDA内核存在隐蔽缺陷：NVIDIA发布的SOL-ExecBench基准测试集（包含235个来自DeepSeek、Qwen、Gemma、Kimi的生产级内核）中，排名靠前的AI生成代码在实际训练中频繁失效。其中融合embedding梯度+RMSNorm反向传播内核在基准测试中通过验证，但在真实训练场景下导致loss持续发散。根本原因在于embedding梯度累积使用了bf16精度而非fp32——真实文本中token分布不均导致部分token累积数千次贡献，bf16无法承载；而统一随机token分布下梯度均匀分散，bf16精度足够。此类bug症状与“想法不work”高度相似，极易误导研究方向。</div>
+        <div class="meta">2026-05-27T16:35:33Z · reddit:ml 🔴 ⛓️转载</div>
+      </div>
       
     </div>
   </div>
