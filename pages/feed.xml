@@ -5,135 +5,71 @@
     <link>https://hongfei7.github.io/ai-research-radar</link>
     <description>AI/科技/半导体板块的持续投研情报 feed — 由 MiniMax 策展</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 26 May 2026 22:55:50 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2026 00:18:15 GMT</lastBuildDate>
     <atom:link href="https://hongfei7.github.io/ai-research-radar/feed.xml" rel="self" type="application/rss+xml"/>
     
     <item>
-      <title>[9分] Ai基建狂潮之下存储需求狂飙 ﻿美光业绩碾压预期! 暗示"超级周期"延伸至2027年</title>
-      <link>https://news.qq.com/rain/a/20251218A01PPM00</link>
-      <guid isPermaLink="false">85859440c259bd273a82c35047dbab79eb3c1f5f</guid>
-      <pubDate>Tue, 26 May 2026 22:50:24 GMT</pubDate>
+      <title>[7分] 美光警告：Ai算力狂飙 内存短缺将延续至2026年后 - 网易</title>
+      <link>https://www.163.com/dy/article/KTROATDH0511CPVM.html</link>
+      <guid isPermaLink="false">b028fa6f93a9b156cda667ac6f0e51db02c13607</guid>
+      <pubDate>Wed, 27 May 2026 00:13:36 GMT</pubDate>
       <description><![CDATA[
-        <p>美光科技公布超预期财报，AI基础设施建设推动存储芯片需求爆发式增长。美光对当前季度给出极度乐观的业绩指引，大幅超越华尔街分析师的预期，释放存储行业“超级周期“信号。高带宽内存（HBM）等AI专用存储需求强劲，数据中心建设持续扩张，预计这轮存储芯片景气周期将延续至2027年。</p>
-        <p>标的: AMD, 微软, ASML, 台积电, 英伟达, 谷歌, Meta, 博通, 美光, 戴尔, 超微电脑, 亚马逊</p>
-        <p>主线: advanced_packaging, chip_supply, compute_demand, datacenter_power</p>
-        <p>方向: 美光→positive 英伟达→neutral AMD→neutral 博通→neutral 台积电→neutral ASML→neutral 超微电脑→neutral 戴尔→neutral 微软→neutral 谷歌→neutral 亚马逊→neutral Meta→neutral </p>
-        <p><em>跟踪变量：存储芯片供需格局与HBM价格走势、产能扩张进度。超级周期确认利好美光估值修复；供应链紧张若持续，可能引发存储芯片涨价并传导至下游服务器/云厂商成本，需关注戴尔、超微电脑等服务器厂商毛利率变化。</em></p>
+        <p>美光发布警告称，AI算力需求激增导致内存短缺将延续至2026年后，HBM等高带宽内存供需紧张持续。工信部推进控制芯片、计算芯片、通信芯片、安全芯片、功率芯片等标准审查报批。同时，海光DCU全系产品入围最新安可（安全可靠）测评名单，国产AI芯片再获政策认可。芯片行业大佬朱一明近期减持超600万股、套现21亿元。</p>
+        <p>标的: 中芯国际, 美光, 海光信息, 英伟达, 台积电, AMD</p>
+        <p>主线: chip_supply, domestic_substitution, advanced_packaging, policy_export</p>
+        <p>方向: 美光→positive 海光信息→positive 英伟达→positive AMD→positive 台积电→positive 中芯国际→neutral </p>
+        <p><em>内存短缺持续至2026年+工信部芯片标准推进+海光DCU入围安可测评，三个信号共振：HBM/先进封装需求持续旺盛，国产算力链政策支持明确。建议跟踪：美光HBM产能释放节奏、海光DCU商业化进展、国产替代名单扩容情况。</em></p>
         <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_0f76029c3e4b</category>
+      <category>evt_0a9e225d2727</category>
     </item>
     
     <item>
-      <title>[8分] 寒武纪翻身海光扩张 国产ai芯片大角逐 _ 东方财富网</title>
-      <link>https://finance.eastmoney.com/a/202509043505115994.html</link>
-      <guid isPermaLink="false">6ff6c2863b2dd975495b23b9eb76872a34fe2a94</guid>
-      <pubDate>Tue, 26 May 2026 22:50:24 GMT</pubDate>
+      <title>[7分] 6万卡ai4s计算集群落地：中科曙光从"硬件商"到"算力运营商"的价值跃迁_业界_科技频道首页_财经网 - Caijing.com.cn</title>
+      <link>https://tech.caijing.com.cn/20260415/5153747.shtml</link>
+      <guid isPermaLink="false">dfccbf6a177234725fcf1d9c592c1f70ad7476db</guid>
+      <pubDate>Wed, 27 May 2026 00:13:36 GMT</pubDate>
       <description><![CDATA[
-        <p>寒武纪与海光信息两大国产AI芯片厂商竞争加剧。财报显示，寒武纪虽总收入规模不及海光信息，但上半年净利润表现与海光信息相当，凸显其盈利能力改善。寒武纪产品覆盖云端推理/训练芯片，海光信息则深耕服务器CPU/DCU领域。两者在国产替代政策支持下，共同争夺国内AI算力市场份额。当前国产AI芯片在制程和生态仍面临挑战，但政策驱动下需求旺盛。建议关注：1）两家公司产品迭代进度；2）国内大模型训练/推理的芯片采购结构变化；3）国际芯片出口管制趋严对国产替代进程的加速效应。</p>
-        <p>标的: 寒武纪, 浪潮信息, 中科曙光, 海光信息, 工业富联, 中芯国际</p>
-        <p>主线: domestic_substitution, chip_supply, compute_demand, policy_export</p>
-        <p>方向: 寒武纪→positive 海光信息→neutral 中芯国际→neutral 工业富联→neutral 中科曙光→neutral 浪潮信息→neutral </p>
-        <p><em>需跟踪寒武纪全年扭亏持续性、海光信息产品放量节奏；关注国产AI芯片在推理侧的成本优势能否转化为份额突破；警惕国际芯片管制放松或国内大厂自研芯片对两者份额的挤压效应。</em></p>
+        <p>中科曙光6万卡AI4S计算集群正式规模化落地，标志着公司从传统硬件供应商向算力运营商战略转型。该集群聚焦先进算力与国产存储领域，将强化中科曙光在国内算力基础设施市场的技术储备与竞争优势。此举反映了国内大模型训练与推理对算力的海量需求持续攀升，国产算力产业链上下游协同发展加速。</p>
+        <p>标的: 景嘉微, 中芯国际, 浪潮信息, 中科曙光, 海光信息, 长电科技, 寒武纪, 工业富联</p>
+        <p>主线: compute_demand, domestic_substitution, advanced_packaging, chip_supply</p>
+        <p>方向: 中科曙光→positive 寒武纪→positive 海光信息→positive 景嘉微→positive 浪潮信息→positive 工业富联→positive 长电科技→positive 中芯国际→positive </p>
+        <p><em>跟踪国产AI芯片实际性能突破进度与算力集群产能利用率。算力运营模式跑通将打开服务器、芯片、封装等全产业链二阶需求；若集群部署节奏超预期，可关注工业富联等服务器厂商订单上调机会。</em></p>
         <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_88835e8ca688</category>
+      <category>evt_68cac29ca9d4</category>
     </item>
     
     <item>
-      <title>[8分] 订单排到2027年!深度拆解长电科技：中国版"台积电"正在崛起？ 在ai算力狂飙的时代，芯片不仅是智能世界的"心脏"，更是大国博弈的"咽喉 ...</title>
-      <link>https://xueqiu.com/2059369648/390860553</link>
-      <guid isPermaLink="false">adb23bc8fcefbe51c5a3d3af71eea28da45e224c</guid>
-      <pubDate>Tue, 26 May 2026 22:50:24 GMT</pubDate>
+      <title>[4分] SK海力士股价飙涨11%，市值突破1万亿美元大关</title>
+      <link>https://36kr.com/newsflashes/3826782895886976?f=rss</link>
+      <guid isPermaLink="false">3dcfa8a962dc68aaa7566e35b4b85c39d6394bac</guid>
+      <pubDate>Wed, 27 May 2026 00:04:51 GMT</pubDate>
       <description><![CDATA[
-        <p>长电科技订单已排至2027年，成功从传统消费电子封测转型为“AI算力+存储芯片”双轮驱动格局。2025年年报及2026年Q1数据显示其业务结构优化、盈利质量显著提升。公司定位为“中国版台积电”，在先进封装领域持续突破，受益于AI算力需求爆发和国产替代趋势。</p>
-        <p>标的: AMD, 长电科技, 寒武纪, 台积电, 英伟达, 海光信息, 中芯国际, 博通</p>
-        <p>主线: advanced_packaging, domestic_substitution, chip_supply, compute_demand</p>
-        <p>方向: 长电科技→positive 台积电→neutral 英伟达→positive AMD→positive 博通→positive 中芯国际→positive 寒武纪→positive 海光信息→positive </p>
-        <p><em>跟踪变量：订单能见度维持情况、先进封装产能扩张进度、客户结构变化。可能的二阶效应：国产封测环节价值重估、带动上游设备材料需求。与算力链标的联动：算力需求→芯片封测→设备材料形成共振。</em></p>
-        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
+        <p>SK海力士股价单日飙升11%，市值突破1万亿韩元，主要受AI驱动的高带宽内存（HBM）需求强劲提振。SK海力士为英伟达H100/H200 GPU的HBM3主要供应商，AI服务器GPU持续供不应求推动其DRAM及HBM产能满载。该涨幅亦反映市场对HBM供给紧张格局延续的预期——SK海力士与三星、美光三家寡占HBM市场，产能扩张速度仍慢于需求增速。SK海力士虽不在我覆盖范围内，但其作为全球AI算力链关键HBM供应商的地位，使其成为观察算力供给与AI基础设施需求的重要先行指标。</p>
+        <p>标的: 谷歌, 中芯国际, 英伟达, 台积电, 戴尔, 腾讯, 小米, 金山办公, 阿里巴巴, 微软, 科大讯飞, 浪潮信息, 超微电脑, 中科曙光, 海光信息, 苹果, AMD, Meta, Intel, 美光, 百度, Marvell, 景嘉微, 博通, ASML, 高通, 长电科技, 亚马逊, 寒武纪, 工业富联</p>
+        <p>主线: edge_ai, domestic_substitution, ai_monetization, datacenter_power, model_capability, chip_supply, compute_demand, advanced_packaging</p>
+        <p>方向: 英伟达→positive AMD→positive 博通→positive 台积电→positive ASML→positive Intel→positive Marvell→positive 高通→positive 超微电脑→positive 戴尔→positive 微软→positive 谷歌→positive 亚马逊→positive Meta→positive 苹果→positive 中芯国际→neutral 阿里巴巴→positive 腾讯→positive 百度→positive 工业富联→positive 中科曙光→positive 浪潮信息→positive 景嘉微→neutral 长电科技→positive 小米→positive 金山办公→positive 科大讯飞→positive 寒武纪→neutral 海光信息→neutral </p>
+        <p><em>SK海力士市值突破万亿韩元是全球AI算力需求持续旺盛的强信号。需跟踪：①HBM产能扩张节奏（三星/美光竞争格局）；②HBM价格走势（涨价则进一步强化算力成本上升逻辑）；③英伟达下一代GPU认证进展。SK海力士强势可能加剧HBM供给集中度担忧，对国产HBM替代进程（寒武纪、海光等）影响偏中性。</em></p>
+        <p>来源: rss:36kr 🟡 中可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_27174c88c63f</category>
+      <category>evt_d641ed420d8c</category>
     </item>
     
     <item>
-      <title>[8分] NVIDIA Vera CPU Is ‘Packing a Heavy-Hitting Punch’ Against Competition</title>
-      <link>https://blogs.nvidia.com/blog/vera-cpu-phoronix</link>
-      <guid isPermaLink="false">ce407f46068a508b1111be3a205208e0a53e8eaa</guid>
-      <pubDate>Tue, 26 May 2026 21:15:15 GMT</pubDate>
+      <title>[4分] 8点1氪丨商品标签陷性暗示争议，盒马致歉并下架整改；段永平谈王宁：商业理解能力比乔布斯还强；海底捞全国门店谢绝顾客携带宠物进店用餐</title>
+      <link>https://36kr.com/p/3826779946930822?f=rss</link>
+      <guid isPermaLink="false">f586d342a65c36438167211bca42f79b2b76dc30</guid>
+      <pubDate>Wed, 27 May 2026 00:04:26 GMT</pubDate>
       <description><![CDATA[
-        <p>Phoronix发布NVIDIA Vera CPU首批公开基准测试结果。代理AI（agentic AI）工作负载催生AI工厂新CPU需求：要求高主频核心、大内存带宽及全核满载时仍能维持高性能。测试结果表明Vera CPU在上述指标上表现强劲，相比竞争对手具有显著性能优势。NVIDIA借此补全AI基础设施芯片矩阵，向数据中心CPU市场全面渗透。</p>
-        <p>标的: Intel, AMD, ARM, 台积电, 英伟达</p>
-        <p>主线: chip_supply, compute_demand</p>
-        <p>方向: 英伟达→positive AMD→negative Intel→negative ARM→neutral 台积电→positive </p>
-        <p><em>持续跟踪Vera CPU量产节奏及大客户导入情况；关注对AMD EPYC和Intel Xeon市场份额的侵蚀路径；验证NVIDIA在AI工厂CPU+GPU+DPU全栈布局的协同效应。</em></p>
-        <p>来源: rss:nvidia-blog 🟢 高可信 [转载自 未知来源]</p>
+        <p>DeepSeek宣布V4-Pro API永久降价至原价25%，创全球大模型价格新低，引发算力租赁市场震动。同时一则关于“上市公司禁止披露无发票海外卡部署”的传闻在市场发酵，算力租赁板块遭传闻突袭。相关上市算力租赁企业回应称关注到传闻但不清楚详情。此次降价反映大模型厂商价格战加剧，对算力需求结构和使用效率产生深远影响，需持续跟踪算力租赁企业实际订单与价格变动情况。</p>
+        <p>标的: 中科曙光, 阿里巴巴</p>
+        <p>主线: compute_demand, ai_monetization, model_capability</p>
+        
+        <p><em>DeepSeek降价反映模型效率持续提升，价格战向推理层延伸。需跟踪：1）其他大厂跟进降价节奏；2）算力租赁企业订单价格变化；3）无发票海外卡传闻核实情况（可能影响国产算力需求）。</em></p>
+        <p>来源: rss:36kr 🟡 中可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_13fd84300d0b</category>
-    </item>
-    
-    <item>
-      <title>[6分] Google’s Antigravity Signals a Shift Beyond the IDE</title>
-      <link>https://www.eetimes.com/google-antigravity-signals-a-shift-beyond-the-ide</link>
-      <guid isPermaLink="false">2659d9bc860765450d68a3ede74bd6bdbda4fb22</guid>
-      <pubDate>Tue, 26 May 2026 22:00:00 GMT</pubDate>
-      <description><![CDATA[
-        <p>据EE Times报道，Google在2026年I/O大会上发布了代号为「Antigravity」的重大技术突破，标志着其AI开发工具从传统IDE向智能化开发环境的范式转移。该技术可能涉及下一代AI编程辅助或代码生成能力，旨在提升开发者生产力并降低应用开发门槛。此举将加剧AI编程赛道的竞争，对现有开发者工具生态产生深远影响。</p>
-        <p>标的: OpenAI, 谷歌, 微软</p>
-        <p>主线: model_capability, ai_monetization</p>
-        <p>方向: 谷歌→positive 微软→neutral OpenAI→negative </p>
-        <p><em>需跟踪Antigravity的具体技术细节与商业化时间表；该技术若成熟可能重塑AI编程工具竞争格局，对微软GitHub Copilot及OpenAI的代码生成业务构成直接竞争；关注谷歌云业务协同效应</em></p>
-        <p>来源: rss:eetimes 🟡 中可信 [转载自 未知来源]</p>
-      ]]></description>
-      <category>evt_c68e4b9de122</category>
-    </item>
-    
-    <item>
-      <title>[4分] OpenAI hires ServiceNow CMO Colin Fleming as CMO for its business segment; he succeeds Kate Rouch, who stepped down earlier this year to focus on her health (Trishla Ostwal/Adweek)</title>
-      <link>https://www.techmeme.com/260526/p33#a260526p33</link>
-      <guid isPermaLink="false">85571bb1bad1d49200c5eda8740139ae3749da5d</guid>
-      <pubDate>Tue, 26 May 2026 22:35:01 GMT</pubDate>
-      <description><![CDATA[
-        <p>OpenAI任命ServiceNow首席营销官Colin Fleming为其业务部门CMO，接替因健康原因辞职的Kate Rouch。此举表明OpenAI正加强商业化组织能力，标志着公司从技术研发向规模化变现阶段的战略重心转移。作为AI行业风向标，OpenAI的组织升级对整个AI商业生态具有示范意义。</p>
-        <p>标的: 微软, OpenAI, 谷歌, Meta, 亚马逊</p>
-        <p>主线: compute_demand, ai_monetization</p>
-        <p>方向: 微软→positive 谷歌→neutral Meta→neutral 亚马逊→neutral OpenAI→positive </p>
-        <p><em>跟踪OpenAI商业化团队搭建进度及收入增速；CMO到位或加速企业级AI产品商业落地，建议关注其与微软Azure OpenAI服务协同效应。</em></p>
-        <p>来源: rss:techmeme 🔴 低可信 [转载自 未知来源]</p>
-      ]]></description>
-      <category>evt_dc4e3435022d</category>
-    </item>
-    
-    <item>
-      <title>[4分] $400 Qwen 3.6-27B Setup - Dual RTX 3060 - 30-50 t/s</title>
-      <link>https://www.reddit.com/r/localllama/comments/1tokpoc/400_qwen_3627b_setup_dual_rtx_3060_3050_ts</link>
-      <guid isPermaLink="false">5addeb8efda53475df185f1c4efebce35921609e</guid>
-      <pubDate>Tue, 26 May 2026 21:22:28 GMT</pubDate>
-      <description><![CDATA[
-        <p>海外开发者分享使用双RTX 3060（24GB总显存）本地运行Qwen3.6-27B大模型的实测方案。对比此前7900 XTX配置，Prefill速度300-500 t/s过慢问题在双卡方案下得到改善。采用GGUF量化格式（Q4_K_S），配合llama.cpp自编译版本。老旧平台i7-4770k虽已使用逾十年，但通过PCIe 3.0 x8+x8分频方式，在带宽瓶颈上与新一代平台持平。此案例反映中低端消费级GPU在端侧推理场景的可行性，对模型压缩与本地部署优化具有参考价值。</p>
-        <p>标的: AMD, 英伟达, 超微电脑, 微软</p>
-        <p>主线: edge_ai, model_capability, chip_supply, compute_demand</p>
-        <p>方向: 英伟达→neutral AMD→neutral 超微电脑→neutral 微软→neutral </p>
-        <p><em>关注GGUF量化格式在不同GPU架构上的性能差异表现；留意消费级双卡方案对推理服务商采购策略的潜在影响；老旧平台PCIe分频方案的带宽验证或为边缘推理硬件选型提供参考。</em></p>
-        <p>来源: reddit:localllama 🔴 低可信 [转载自 https://www.reddit.com/r/LocalLLaMA/comments/]</p>
-      ]]></description>
-      <category>evt_52fca774d036</category>
-    </item>
-    
-    <item>
-      <title>[4分] We're starting to see some PC makers respond to Apple's MacBook Neo</title>
-      <link>https://arstechnica.com/gadgets/2026/05/were-starting-to-see-some-pc-makers-respond-to-apples-macbook-neo</link>
-      <guid isPermaLink="false">f2e0cc1a12ad02583dcd1cde61c452f5d0f36543</guid>
-      <pubDate>Tue, 26 May 2026 20:47:31 GMT</pubDate>
-      <description><![CDATA[
-        <p>PC厂商开始响应苹果的MacBook Neo产品线，瞄准600美元以下的中低端笔记本市场。报道指出低价笔记本虽有多年历史，但品质稳定可靠的产品仍然稀缺。苹果此次推出MacBook Neo预计将采用自研ARM架构芯片，可能对传统Wintel生态形成挑战。PC制造商需要在此价格区间提升产品竞争力，以应对苹果的攻势。</p>
-        <p>标的: AMD, ARM, 微软, 高通, 苹果, 戴尔, Intel</p>
-        <p>主线: edge_ai, chip_supply, ai_monetization</p>
-        <p>方向: 苹果→positive Intel→neutral AMD→neutral 高通→neutral ARM→neutral 戴尔→neutral 微软→neutral </p>
-        <p><em>关注MacBook Neo具体配置与定价策略；跟踪低价AI PC对芯片厂的影响程度；留意戴尔、惠普等传统PC厂商的应对措施与产品更新节奏。</em></p>
-        <p>来源: rss:arstechnica 🟡 中可信 [转载自 未知来源]</p>
-      ]]></description>
-      <category>evt_466066167775</category>
+      <category>evt_6178295b3c24</category>
     </item>
     
   </channel>
