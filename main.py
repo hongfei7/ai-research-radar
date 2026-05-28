@@ -41,7 +41,8 @@ from radar.render import (
 from radar.publish import (
     create_daily_issue, send_telegram, format_telegram_alert,
     update_readme, should_telegram_alert,
-    send_wecom, send_wecom_brief, format_wecom_alert, should_wecom_alert,
+    send_wecom, send_wecom_multi, send_wecom_news, send_wecom_brief,
+    format_wecom_alert, should_wecom_alert,
 )
 
 logger = logging.getLogger("radar")
@@ -319,11 +320,11 @@ async def run_full(cfg: dict) -> None:
             try:
                 if should_wecom_alert([], [], sit, cfg):
                     all_ev = list(today_events.values())
-                    wx_title, wx_content = format_wecom_alert(
+                    wx_messages = format_wecom_alert(
                         new_events=[], updated_events=[],
                         all_active_events=all_ev, situation=sit, site_url=site_url,
                     )
-                    if await send_wecom(wx_title, wx_content):
+                    if await send_wecom_multi(wx_messages):
                         from radar.models import utcnow_iso
                         sit.last_wecom_digest_at = utcnow_iso()
                         save_situation(sit)
@@ -361,11 +362,11 @@ async def run_full(cfg: dict) -> None:
                 try:
                     if should_wecom_alert([], [], sit, cfg):
                         all_ev = list(today_events.values())
-                        wx_title, wx_content = format_wecom_alert(
+                        wx_messages = format_wecom_alert(
                             new_events=[], updated_events=[],
                             all_active_events=all_ev, situation=sit, site_url=site_url,
                         )
-                        if await send_wecom(wx_title, wx_content):
+                        if await send_wecom_multi(wx_messages):
                             from radar.models import utcnow_iso
                             sit.last_wecom_digest_at = utcnow_iso()
                             save_situation(sit)
@@ -571,7 +572,7 @@ async def run_full(cfg: dict) -> None:
                     new_events_list, updated_events_list, sit, cfg
                 ):
                     all_events_list = list(updated_events.values())
-                    wx_title, wx_content = format_wecom_alert(
+                    wx_messages = format_wecom_alert(
                         new_events=new_events_list,
                         updated_events=updated_events_list,
                         all_active_events=all_events_list,
@@ -579,7 +580,7 @@ async def run_full(cfg: dict) -> None:
                         site_url=site_url,
                         items=clustered_items,
                     )
-                    if await send_wecom(wx_title, wx_content):
+                    if await send_wecom_multi(wx_messages):
                         if sit:
                             from radar.models import utcnow_iso
                             sit.last_wecom_digest_at = utcnow_iso()
