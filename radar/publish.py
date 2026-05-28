@@ -550,7 +550,7 @@ def _aggregate_directions(items: list[Item]) -> dict[str, dict[str, int]]:
     return agg
 
 
-# —— 多消息格式化 ——
+# —— 图文卡片格式化（公众号风格长方形链接） ——
 
 def format_wecom_alert(
     new_events: list[Event],
@@ -559,17 +559,11 @@ def format_wecom_alert(
     situation: Optional[Situation],
     site_url: str = "",
     items: list[Item] | None = None,
-) -> list[tuple[str, str]]:
-    """格式化企业微信推送，返回多条 (title, content) 消息列表
+) -> dict:
+    """格式化企业微信推送，返回单条 news 图文卡片数据
 
-    消息结构:
-      [0] 概览 — 标题 + 态势摘要 + 基本统计 + 看板链接
-      [1] 市场热度 — 标的热度 + 主线分布 + 情绪
-      [2+] 新增事件 — 每 2 条事件一条消息
-      [+] 事件更新 — 每 2 条事件一条消息
-      [last] 交叉分析 + 趋势（末尾消息）
-
-    每条消息自包含标题，自动适配 3500 字节限制。
+    Returns: {"title": "...", "description": "...", "url": "..."}
+    卡片在群聊中显示为长方形链接卡片（公众号转发风格）。
     """
     from datetime import datetime
     from zoneinfo import ZoneInfo
@@ -580,19 +574,7 @@ def format_wecom_alert(
     now_dt = datetime.now(hkt) if hkt else datetime.now()
     now_str = now_dt.strftime("%m月%d日 %H:%M HKT") if hkt else ""
 
-    main_title = f"AI 投研雷达 · {now_str}"
-
-    # 建立 event_id → items 索引
-    event_items_map: dict[str, list[Item]] = {}
-    all_dir_items: list[Item] = []
-    if items:
-        for it in items:
-            if it.event_id:
-                event_items_map.setdefault(it.event_id, []).append(it)
-            if it.direction:
-                all_dir_items.append(it)
-
-    messages: list[tuple[str, str]] = []
+    card_title = f"AI 投研雷达 · {now_str}"
 
     # 去重
     updated_ids = {ev.event_id for ev in updated_events}
@@ -600,215 +582,80 @@ def format_wecom_alert(
     new_ids = {ev.event_id for ev in new_events}
     deduped_upd = [ev for ev in updated_events if ev.event_id not in new_ids]
 
-    # ================================================================
-    # 消息 0: 概览
-    # ================================================================
-    overview_lines: list[str] = []
+    # 态势摘要
+    situation_text = ""
     if situation and situation.text:
-        headline = _extract_headline(situation.text, 200)
-        if headline:
-            overview_lines.append(f"> {headline}")
-            overview_lines.append("")
+        situation_text = _extract_headline(situation.text, 140)
 
+    # 统计
     active_count = len([e for e in all_active_events if e.is_active])
     developing = len([e for e in all_active_events if e.is_active and e.status == "developing"])
 
-    stats_parts = [f"活跃 {active_count}", f"演进 {developing}"]
-    if deduped_new:
-        stats_parts.append(f"新增 {len(deduped_new)}")
-    if deduped_upd:
-        stats_parts.append(f"更新 {len(deduped_upd)}")
-    overview_lines.append(" | ".join(stats_parts))
-
-    if site_url:
-        overview_lines.append(f"[实时看板]({site_url})")
-
-    overview_lines.append("")
-    overview_lines.append("> 仅作为研究输入素材，不构成投资建议")
-
-    messages.append((main_title, "\n".join(overview_lines)))
-
-    # ================================================================
-    # 消息 1: 市场热度
-    # ================================================================
-    ticker_count: dict[str, int] = {}
-    for ev in all_active_events:
-        for tk in ev.tickers or []:
-            ticker_count[tk] = ticker_count.get(tk, 0) + 1
-    hot_tickers = sorted(ticker_count.items(), key=lambda x: x[1], reverse=True)[:10]
-
-    theme_count: dict[str, int] = {}
-    for ev in all_active_events:
-        for th in ev.themes or []:
-            theme_count[th] = theme_count.get(th, 0) + 1
-    hot_themes = sorted(theme_count.items(), key=lambda x: x[1], reverse=True)[:8]
-
+    # 市场情绪
+    all_dir_items: list[Item] = []
+    if items:
+        for it in items:
+            if it.direction:
+                all_dir_items.append(it)
     dir_agg = _aggregate_directions(all_dir_items) if all_dir_items else {}
-    bull = [tk for tk, c in dir_agg.items() if c.get("positive", 0) > c.get("negative", 0)]
-    bear = [tk for tk, c in dir_agg.items() if c.get("negative", 0) > c.get("positive", 0)]
+    bull = sorted(
+        [tk for tk, c in dir_agg.items() if c.get("positive", 0) > c.get("negative", 0)],
+        key=lambda tk: sum(dir_agg[tk].values()), reverse=True,
+    )
+    bear = sorted(
+        [tk for tk, c in dir_agg.items() if c.get("negative", 0) > c.get("positive", 0)],
+        key=lambda tk: sum(dir_agg[tk].values()), reverse=True,
+    )
 
-    heat_lines: list[str] = []
+    # 构建描述
+    desc_lines: list[str] = []
 
-    if hot_tickers:
-        ticker_strs = []
-        for tk, n in hot_tickers:
-            if n >= 4:
-                icon = "🟢"
-            elif n >= 2:
-                icon = "🟡"
-            else:
-                icon = ""
-            ticker_strs.append(f"{icon}{tk}({n})")
-        heat_lines.append(f"**标的热度**")
-        heat_lines.append(" ".join(ticker_strs))
-        heat_lines.append("")
+    # 态势一句话
+    if situation_text:
+        desc_lines.append(situation_text)
 
-    if hot_themes:
-        theme_strs = [f"{th}({n})" for th, n in hot_themes]
-        heat_lines.append(f"**主线分布**")
-        heat_lines.append(" · ".join(theme_strs))
-        heat_lines.append("")
-
-    if bull:
-        heat_lines.append(f"📈 偏多：{'/'.join(bull[:6])}")
-    if bear:
-        heat_lines.append(f"📉 偏空：{'/'.join(bear[:6])}")
-    if not bull and not bear and hot_tickers:
-        heat_lines.append("➡️ 方向信号中性")
-
-    if heat_lines:
-        messages.append(("市场热度", "\n".join(heat_lines)))
-
-    # ================================================================
-    # 新增事件（每 2 条一条消息）
-    # ================================================================
+    # 新增事件（取前 4 个标题）
     if deduped_new:
         sorted_new = sorted(deduped_new, key=lambda e: e.significance, reverse=True)
-        batch: list[str] = []
-        batch_count = 0
-        for i, ev in enumerate(sorted_new):
-            flag = "🟢" if ev.significance >= 8 else "🟡" if ev.significance >= 6 else "🔴"
-            e_items = event_items_map.get(ev.event_id, [])
-            ev_time = _extract_event_time(ev, e_items)
+        new_titles = []
+        for ev in sorted_new[:4]:
+            flag = "🟢" if ev.significance >= 8 else "🟡"
+            new_titles.append(f"{flag}{_clip(ev.title or '', 30)}")
+        desc_lines.append(f"新增{len(deduped_new)}: {' · '.join(new_titles)}")
 
-            event_lines: list[str] = []
-            header = f"{flag} {_clip(ev.title or '', 55)}"
-            if ev_time:
-                header = f"{ev_time} {header}"
-            event_lines.append(header)
-
-            meta = f"重要 {ev.significance}/10 · {ev.source_count}来源"
-            tickers_str = _fmt_tickers_wecom(ev.tickers, max_display=6)
-            event_lines.append(meta + tickers_str)
-
-            if ev.summary:
-                event_lines.append(_clip(ev.summary, 150))
-
-            dir_parts: list[str] = []
-            if ev.direction:
-                for tk, d in list(ev.direction.items())[:5]:
-                    dir_parts.append(f"{tk}{_fmt_direction_icon_wecom(d)}")
-            if ev.deep_analysis:
-                deep = _extract_headline(ev.deep_analysis, 80)
-                if deep:
-                    dir_parts.append(f"💡{deep}")
-            if dir_parts:
-                event_lines.append(" · ".join(dir_parts))
-
-            event_text = "\n".join(event_lines)
-            batch.append(event_text)
-            batch_count += 1
-
-            if batch_count >= 2 or i == len(sorted_new) - 1:
-                batch_title = f"新增事件 ({len(sorted_new)})" if len(sorted_new) <= 2 else f"新增事件 {i - batch_count + 2}-{i + 1}/{len(sorted_new)}"
-                messages.append((batch_title, "\n\n".join(batch)))
-                batch = []
-                batch_count = 0
-
-    # ================================================================
-    # 事件更新（每 2 条一条消息）
-    # ================================================================
+    # 更新事件（取前 2 个）
     if deduped_upd:
         sorted_upd = sorted(deduped_upd, key=lambda e: e.significance, reverse=True)
-        batch: list[str] = []
-        batch_count = 0
-        for i, ev in enumerate(sorted_upd):
-            e_items = event_items_map.get(ev.event_id, [])
-            ev_time = _extract_event_time(ev, e_items)
+        upd_titles = []
+        for ev in sorted_upd[:2]:
+            upd_titles.append(_clip(ev.title or '', 28))
+        desc_lines.append(f"更新{len(deduped_upd)}: {' · '.join(upd_titles)}")
 
-            event_lines: list[str] = []
-            header = _clip(ev.title or '', 55)
-            if ev_time:
-                header = f"{ev_time} {header}"
-            event_lines.append(header)
+    # 偏多/偏空
+    if bull:
+        desc_lines.append(f"偏多: {'/'.join(bull[:5])}")
+    if bear:
+        desc_lines.append(f"偏空: {'/'.join(bear[:5])}")
 
-            meta = f"重要 {ev.significance}/10 · {ev.source_count}来源"
-            tickers_str = _fmt_tickers_wecom(ev.tickers, max_display=6)
-            event_lines.append(meta + tickers_str)
-
-            if ev.summary:
-                event_lines.append(_clip(ev.summary, 120))
-
-            dir_parts = []
-            if ev.direction:
-                for tk, d in list(ev.direction.items())[:4]:
-                    dir_parts.append(f"{tk}{_fmt_direction_icon_wecom(d)}")
-            if ev.deep_analysis:
-                deep = _extract_headline(ev.deep_analysis, 60)
-                if deep:
-                    dir_parts.append(f"💡{deep}")
-            if dir_parts:
-                event_lines.append(" · ".join(dir_parts))
-
-            event_text = "\n".join(event_lines)
-            batch.append(event_text)
-            batch_count += 1
-
-            if batch_count >= 2 or i == len(sorted_upd) - 1:
-                batch_title = f"事件更新 ({len(sorted_upd)})" if len(sorted_upd) <= 2 else f"事件更新 {i - batch_count + 2}-{i + 1}/{len(sorted_upd)}"
-                messages.append((batch_title, "\n\n".join(batch)))
-                batch = []
-                batch_count = 0
-
-    # ================================================================
-    # 交叉分析 + 趋势（最后一条消息）
-    # ================================================================
-    analysis_lines: list[str] = []
+    # 交叉分析（1-2 句）
     if situation and situation.cross_analysis:
-        analysis_lines.append("**交叉分析**")
-        for para in situation.cross_analysis.strip().split("\n"):
-            para = para.strip()
-            if para:
-                analysis_lines.append(f"> {_clip(para, 300)}")
-        analysis_lines.append("")
+        ca = _extract_headline(situation.cross_analysis, 150)
+        if ca:
+            desc_lines.append(ca)
 
-    if situation and situation.trend_spotting:
-        analysis_lines.append("**趋势信号**")
-        for para in situation.trend_spotting.strip().split("\n"):
-            para = para.strip()
-            if para:
-                analysis_lines.append(f"> {_clip(para, 250)}")
+    # 活跃统计
+    stats = f"活跃{active_count} · 演进{developing}"
+    desc_lines.append(stats)
 
-    if analysis_lines:
-        messages.append(("深度分析", "\n".join(analysis_lines)))
+    description = "\n".join(desc_lines)
+    # 裁剪到适合 news 卡片的长度
+    description = _clip(description, 280)
 
-    # ================================================================
-    # 反向视角（有内容才加）
-    # ================================================================
-    if items:
-        second_opinions = [
-            it for it in items
-            if it.second_opinion and it.relevance_score >= 7
-        ][:3]
-        if second_opinions:
-            opinion_lines: list[str] = []
-            for it in second_opinions:
-                opinion_lines.append(f"> **{_clip(it.title, 40)}**")
-                opinion_lines.append(f"> {_clip(it.second_opinion, 150)}")
-                opinion_lines.append("")
-            messages.append(("反向视角", "\n".join(opinion_lines)))
-
-    return messages
+    return {
+        "title": card_title,
+        "description": description,
+        "url": site_url,
+    }
 
 
 async def send_wecom_brief(
@@ -817,17 +664,11 @@ async def send_wecom_brief(
     issue_url: str = "",
     site_url: str = "",
 ) -> bool:
-    """推送晨报到企业微信: 摘要 markdown + 公众号式图文卡片
+    """推送晨报到企业微信: 单条 news 图文卡片（公众号风格长方形链接）
 
-    先发一条概览 markdown 消息（统计数据 + 链接），
-    再发一条 news 图文卡片链接到完整晨报。
+    提取晨报首段作为卡片描述，点击跳转完整 Issue。
     """
-    webhook_url = _get_wecom_env()
-    if not webhook_url:
-        logger.warning("WECOM_WEBHOOK_URL not set, skipping WeCom push")
-        return False
-
-    # 提取首段作为卡片描述
+    # 提取首段非标题行作为描述
     desc = ""
     for line in brief_md.split("\n"):
         line = line.strip()
@@ -835,26 +676,11 @@ async def send_wecom_brief(
             desc = _clip(line, 280)
             break
 
-    # 1. 概览 markdown 消息
-    overview = f"今日晨报已生成"
-    if issue_url:
-        overview += f"\n[查看完整晨报]({issue_url})"
-    if site_url:
-        overview += f"\n[实时看板]({site_url})"
-
-    ok = await send_wecom(title, overview)
-
-    # 2. 图文卡片（公众号风格）
-    if issue_url:
-        await _asyncio.sleep(_WECOM_MSG_DELAY)
-        card_ok = await send_wecom_news([{
-            "title": title,
-            "description": desc or "点击查看完整晨报",
-            "url": issue_url,
-        }])
-        return ok and card_ok
-
-    return ok
+    return await send_wecom_news([{
+        "title": title,
+        "description": desc or "点击查看完整晨报",
+        "url": issue_url or site_url,
+    }])
 
 
 def should_wecom_alert(
