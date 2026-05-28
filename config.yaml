@@ -185,7 +185,7 @@ channels:
     enabled: true
     notify_new_event_threshold: 5
     notify_direction_flip: true
-    digest_interval_hours: 2
+    digest_interval_hours: 1
     notify_max_new_events: 8
   github_issue:
     enabled: true

@@ -641,6 +641,33 @@ def format_wecom_alert(
         desc_lines.append("▎洞察")
         desc_lines.extend(insight_parts)
 
+    # ▎当前关注（无新增/更新时展示活跃事件 TOP 5）
+    if not deduped_new and not deduped_upd and all_active_events:
+        top_active = sorted(
+            [e for e in all_active_events if e.is_active and e.significance >= 5],
+            key=lambda e: e.significance, reverse=True,
+        )[:5]
+        if top_active:
+            desc_lines.append("")
+            desc_lines.append("▎目前关注")
+            for ev in top_active:
+                icon = _importance_icon(ev.significance)
+                tickers_str = _fmt_tickers_wecom(ev.tickers, max_display=4)
+                direction = ev.direction or {}
+                first_tk = list(direction.keys())[0] if direction else ""
+                first_d = direction.get(first_tk, "") if first_tk else ""
+                dir_str = _dir_icon(first_d)
+                time_str = _event_time(ev, items_by_event)
+                desc_lines.append(
+                    f"  {icon} {_clip(ev.title or '', 22)}  {time_str}  {dir_str}{ev.significance}/10"
+                )
+                if ev.summary:
+                    desc_lines.append(f"  {_clip(ev.summary, 28)}")
+                meta = f"  {tickers_str}  信源{ev.source_count}"
+                if ev.deep_analysis:
+                    meta += f"  {_clip(ev.deep_analysis, 30)}"
+                desc_lines.append(meta)
+
     # ━━ 底部统计 ━━
     stats = f"活跃{active_count}  演进{developing}"
     if deduped_new:
