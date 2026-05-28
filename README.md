@@ -5,9 +5,11 @@
 
 ## 最新日报
 
-- [2026-05-28 晨报](https://github.com/hongfei7/ai-research-radar/issues/5)
+- [2026-05-28 晨报](https://github.com/hongfei7/ai-research-radar/issues/6)
 - [实时看板](https://hongfei7.github.io/ai-research-radar)
 - [RSS 订阅](https://hongfei7.github.io/ai-research-radar/feed.xml)
+
+---
 
 ---
 
