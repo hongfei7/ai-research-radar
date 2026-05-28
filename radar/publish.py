@@ -552,6 +552,24 @@ def _aggregate_directions(items: list[Item]) -> dict[str, dict[str, int]]:
 
 # —— 图文卡片格式化（公众号风格长方形链接） ——
 
+def _importance_icon(sig: int) -> str:
+    """重要性 emoji: 🔥高 ⚡中 ➤低"""
+    if sig >= 8:
+        return "🔥"
+    elif sig >= 6:
+        return "⚡"
+    else:
+        return "➤"
+
+
+def _dir_icon(d: str) -> str:
+    if d == "positive":
+        return "↑"
+    elif d == "negative":
+        return "↓"
+    return "→"
+
+
 def format_wecom_alert(
     new_events: list[Event],
     updated_events: list[Event],
@@ -562,8 +580,21 @@ def format_wecom_alert(
 ) -> dict:
     """格式化企业微信推送，返回单条 news 图文卡片数据
 
-    Returns: {"title": "...", "description": "...", "url": "..."}
-    卡片在群聊中显示为长方形链接卡片（公众号转发风格）。
+    卡片格式（公众号风格长方形链接）:
+      {态势综述}
+
+      ▲ 新增 (N)
+        🔥 标题 [标的] ↑8/10
+           摘要（高分事件）
+        ⚡ 标题 [标的] ↑7/10
+
+      ● 更新 (N)
+        ⚡ 标题 [标的] ↓7/10
+
+      📈 偏多 XXX | ✂️ 偏空 YYY
+      💡 交叉分析结论
+
+      活跃N 演进N 新增N 更新N
     """
     from datetime import datetime
     from zoneinfo import ZoneInfo
@@ -582,16 +613,16 @@ def format_wecom_alert(
     new_ids = {ev.event_id for ev in new_events}
     deduped_upd = [ev for ev in updated_events if ev.event_id not in new_ids]
 
-    # 态势摘要
+    # 态势
     situation_text = ""
     if situation and situation.text:
-        situation_text = _extract_headline(situation.text, 140)
+        situation_text = _extract_headline(situation.text, 160)
 
     # 统计
     active_count = len([e for e in all_active_events if e.is_active])
     developing = len([e for e in all_active_events if e.is_active and e.status == "developing"])
 
-    # 市场情绪
+    # 情绪
     all_dir_items: list[Item] = []
     if items:
         for it in items:
@@ -607,48 +638,91 @@ def format_wecom_alert(
         key=lambda tk: sum(dir_agg[tk].values()), reverse=True,
     )
 
-    # 构建描述
+    # 构建 description
     desc_lines: list[str] = []
 
-    # 态势一句话
+    # —— 态势 ——
     if situation_text:
         desc_lines.append(situation_text)
 
-    # 新增事件（取前 4 个标题）
+    # —— 新增事件 ——
     if deduped_new:
         sorted_new = sorted(deduped_new, key=lambda e: e.significance, reverse=True)
-        new_titles = []
-        for ev in sorted_new[:4]:
-            flag = "🟢" if ev.significance >= 8 else "🟡"
-            new_titles.append(f"{flag}{_clip(ev.title or '', 30)}")
-        desc_lines.append(f"新增{len(deduped_new)}: {' · '.join(new_titles)}")
+        # 过滤低价值（<5 不展示）
+        visible_new = [e for e in sorted_new if e.significance >= 5]
+        if visible_new:
+            max_show = 6 if len(visible_new) <= 3 else 4
+            desc_lines.append("")
+            desc_lines.append(f"▲ 新增 ({len(deduped_new)})")
+            for ev in visible_new[:max_show]:
+                icon = _importance_icon(ev.significance)
+                tickers_str = _fmt_tickers_wecom(ev.tickers, max_display=4)
+                direction = ev.direction or {}
+                dir_str = ""
+                if direction:
+                    # 取第一个标的的方向
+                    first_tk = list(direction.keys())[0] if direction else ""
+                    first_d = direction.get(first_tk, "") if first_tk else ""
+                    dir_str = _dir_icon(first_d)
+                line = f"  {icon} {_clip(ev.title or '', 28)}{tickers_str} {dir_str}{ev.significance}/10"
+                desc_lines.append(line)
+                # 高分事件附摘要
+                if ev.significance >= 8 and ev.summary:
+                    desc_lines.append(f"     {_clip(ev.summary, 35)}")
+            remaining = len(visible_new) - max_show
+            if remaining > 0:
+                desc_lines.append(f"  +{remaining} 更多...")
 
-    # 更新事件（取前 2 个）
+    # —— 更新事件 ——
     if deduped_upd:
         sorted_upd = sorted(deduped_upd, key=lambda e: e.significance, reverse=True)
-        upd_titles = []
-        for ev in sorted_upd[:2]:
-            upd_titles.append(_clip(ev.title or '', 28))
-        desc_lines.append(f"更新{len(deduped_upd)}: {' · '.join(upd_titles)}")
+        visible_upd = [e for e in sorted_upd if e.significance >= 5]
+        if visible_upd:
+            max_show = min(len(visible_upd), 2)
+            desc_lines.append("")
+            desc_lines.append(f"● 更新 ({len(deduped_upd)})")
+            for ev in visible_upd[:max_show]:
+                icon = _importance_icon(ev.significance)
+                tickers_str = _fmt_tickers_wecom(ev.tickers, max_display=4)
+                direction = ev.direction or {}
+                dir_str = ""
+                if direction:
+                    first_tk = list(direction.keys())[0] if direction else ""
+                    first_d = direction.get(first_tk, "") if first_tk else ""
+                    dir_str = _dir_icon(first_d)
+                line = f"  {icon} {_clip(ev.title or '', 28)}{tickers_str} {dir_str}{ev.significance}/10"
+                desc_lines.append(line)
+            remaining = len(visible_upd) - max_show
+            if remaining > 0:
+                desc_lines.append(f"  +{remaining} 更多...")
 
-    # 偏多/偏空
+    # —— 情绪 ——
+    sentiment_parts = []
     if bull:
-        desc_lines.append(f"偏多: {'/'.join(bull[:5])}")
+        sentiment_parts.append(f"📈 偏多 {'/'.join(bull[:5])}")
     if bear:
-        desc_lines.append(f"偏空: {'/'.join(bear[:5])}")
+        sentiment_parts.append(f"✂️ 偏空 {'/'.join(bear[:5])}")
+    if sentiment_parts:
+        desc_lines.append("")
+        desc_lines.append(" | ".join(sentiment_parts))
 
-    # 交叉分析（1-2 句）
+    # —— 交叉分析 ——
     if situation and situation.cross_analysis:
-        ca = _extract_headline(situation.cross_analysis, 150)
+        ca = _extract_headline(situation.cross_analysis, 180)
         if ca:
-            desc_lines.append(ca)
+            desc_lines.append("")
+            desc_lines.append(f"💡 {ca}")
 
-    # 活跃统计
-    stats = f"活跃{active_count} · 演进{developing}"
+    # —— 统计栏 ——
+    stats = f"活跃{active_count} 演进{developing}"
+    if deduped_new:
+        stats += f" 新增{len(deduped_new)}"
+    if deduped_upd:
+        stats += f" 更新{len(deduped_upd)}"
+    desc_lines.append("")
     desc_lines.append(stats)
 
     description = "\n".join(desc_lines)
-    # 裁剪到适合 news 卡片的长度
     description = _clip(description, 280)
 
     return {
