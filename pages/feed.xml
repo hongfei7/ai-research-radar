@@ -5,39 +5,135 @@
     <link>https://hongfei7.github.io/ai-research-radar</link>
     <description>AI/科技/半导体板块的持续投研情报 feed — 由 MiniMax 策展</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 28 May 2026 09:52:48 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 28 May 2026 10:43:40 GMT</lastBuildDate>
     <atom:link href="https://hongfei7.github.io/ai-research-radar/feed.xml" rel="self" type="application/rss+xml"/>
     
     <item>
-      <title>[6分] 2026年小米最重磅新品来了! 玄戒+自研os+Ai大模型 三项自研大会师</title>
-      <link>https://www.msn.cn/zh-cn/news/other/2026%E5%B9%B4%E5%B0%8F%E7%B1%B3%E6%9C%80%E9%87%8D%E7%A3%85%E6%96%B0%E5%93%81%E6%9D%A5%E4%BA%86-%E7%8E%84%E6%88%92-%E8%87%AA%E7%A0%94os-ai%E5%A4%A7%E6%A8%A1%E5%9E%8B-%E4%B8%89%E9%A1%B9%E8%87%AA%E7%A0%94%E5%A4%A7%E4%BC%9A%E5%B8%88/ar-AA24fxdW</link>
-      <guid isPermaLink="false">f1e2160fb923e01f5ab81f9b6c90d01138a3bbd5</guid>
-      <pubDate>Thu, 28 May 2026 09:49:18 GMT</pubDate>
+      <title>[5分] Amazon Thinks the Future of Data Centers Depends on a Technical Problem It Just Solved</title>
+      <link>https://www.wired.com/story/amazon-thinks-the-future-of-data-centers-depends-on-a-technical-problem-it-just-solved</link>
+      <guid isPermaLink="false">74364253f121f795821bcc517a8a69f719b12a53</guid>
+      <pubDate>Thu, 28 May 2026 10:30:00 GMT</pubDate>
       <description><![CDATA[
-        <p>小米宣布将于2026年下半年推出重磅新品，将首次同时搭载自研芯片“玄戒”、自研操作系统及自研AI大模型三项核心技术。该产品被视为小米发展史上的里程碑，标志着其从智能手机制造商向全栈技术公司转型的关键一步。作为国产终端厂商首次实现芯片/OS/AI模型三维一体的自研整合，该新品有望重塑高端手机竞争格局，对产业链上下游产生深远影响。</p>
-        <p>标的: 小米</p>
-        <p>主线: edge_ai, domestic_substitution, chip_supply, model_capability</p>
-        <p>方向: 小米→positive </p>
-        <p><em>关注玄戒芯片的制程节点与性能参数、自研OS的生态兼容性，以及AI大模型的端侧推理能力。若三项技术均达到预期，将强化小米高端化逻辑，并可能带动国内AI手机产业链估值重估；需跟踪产品发布时间线及后续市场反馈。</em></p>
-        <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
+        <p>亚马逊（AWS）宣布在数据中心网络技术方面取得突破，显著加速了其大规模云基础设施的信息流通速度。该公司认为，这一技术难题的解决将成为未来数据中心发展的关键。AWS并未披露具体技术细节，但强调这一进展将支撑其AI和云计算业务的持续扩展。作为全球最大云服务商，AWS此举意在提升数据中心效率、降低运营成本，并为更高密度的AI训练/推理负载提供基础设施支撑。</p>
+        <p>标的: 英伟达, 博通, 亚马逊, Marvell, 微软, 谷歌, AMD, Meta, 台积电</p>
+        <p>主线: datacenter_power, chip_supply, compute_demand, advanced_packaging</p>
+        <p>方向: 亚马逊→positive 英伟达→neutral AMD→neutral 博通→neutral Marvell→neutral 台积电→neutral 微软→neutral 谷歌→neutral Meta→neutral </p>
+        <p><em>AWS自研网络技术突破或降低对商用网络芯片的依赖，短期对博通/Marvell影响有限但需跟踪是否逐步替代；关注该技术是否开源或授权给合作伙伴，以及能否转化为Azure/GCP的竞争压力——若AWS借此进一步扩大云市场份额，MSFT/GOOGL的云业务增速承压；核心跟踪变量为该技术的具体参数指标（如吞吐量、延迟、功耗改善幅度）及规模化部署时间表。</em></p>
+        <p>来源: rss:wired 🟡 中可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_a6511efc9241</category>
+      <category>evt_331a3946e815</category>
     </item>
     
     <item>
-      <title>[5分] Krasis update: Qwen3.6-35B-A3B (Q4) at reading speed, 1x 8GB 3070 Mobile laptop (32GB RAM)</title>
-      <link>https://www.reddit.com/r/localllama/comments/1tpyqng/krasis_update_qwen3635ba3b_q4_at_reading_speed_1x</link>
-      <guid isPermaLink="false">f712a994373009c49e8ac646fdc9eea73f3f1973</guid>
-      <pubDate>Thu, 28 May 2026 09:42:46 GMT</pubDate>
+      <title>[4分] 两部门联手，系统布局人工智能计量能力建设</title>
+      <link>https://36kr.com/newsflashes/3828815414891398?f=rss</link>
+      <guid isPermaLink="false">b819438b59a79b2620c9d3db08d13aaab82d0a5c</guid>
+      <pubDate>Thu, 28 May 2026 10:32:27 GMT</pubDate>
       <description><![CDATA[
-        <p>Krasis LLM运行时发布v1.0版本，实现模型从系统RAM到VRAM的高效流式传输。在1x RTX 3070 Mobile 8GB笔记本上运行Qwen3.6-35B-A3B（Q4量化）达222 prefill/s、12.48 token/s decode性能。旗舰RTX 5090 32GB上，35B模型达10,030 prefill/s、124.9 token/s；80B模型达6,111 prefill/s、88.6 token/s。Qwen3.5-122B-A10B在5090上达4,880 prefill/s、25.2 token/s。该技术验证了消费级GPU运行百亿参数模型的可行性，降低LLM部署硬件门槛，对推理芯片需求和模型能力效率有重要意义。</p>
-        <p>标的: 阿里巴巴, 英伟达, 台积电</p>
-        <p>主线: edge_ai, compute_demand, chip_supply, model_capability</p>
-        <p>方向: 英伟达→positive 台积电→positive </p>
-        <p><em>Krasis验证了推理效率提升路径，建议跟踪：1）量化压缩技术（HQQ）对其他模型的适配情况；2）消费级GPU在LLM推理的市场渗透；3）该技术对英伟达推理芯片需求和台积电先进封装产能的影响。</em></p>
-        <p>来源: reddit:localllama 🔴 低可信 [转载自 未知来源]</p>
+        <p>市场监管总局、国家发改委联合印发《人工智能计量体系和能力建设指引（2026版）》，围绕基础支撑、通用技术、核心技术、计量技术规范、计量服务产业、智能赋能计量六大部分系统布局AI计量能力建设。政策聚焦AI"测不准"难题，旨在打通实验室创新与行业应用"最后一公里"，建立可信AI标准体系，推动AI产业规范化发展。</p>
+        <p>标的: 海光信息, 百度, 阿里巴巴, 腾讯, 寒武纪</p>
+        <p>主线: policy_export, domestic_substitution</p>
+        <p>方向: 寒武纪→positive 海光信息→positive 百度→positive 阿里巴巴→positive 腾讯→positive </p>
+        <p><em>跟踪指引落地细则及试点城市；关注计量标准对国产AI芯片适配要求；标准化体系建立有望加速国产算力链商业化节奏，与英伟达等国际厂商形成标准竞争。</em></p>
+        <p>来源: rss:36kr 🟡 中可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_a1e3343fa10c</category>
+      <category>evt_b3614de596fb</category>
+    </item>
+    
+    <item>
+      <title>[4分] ASRock BC-250 used for Steam Machine duty gains third-party hack to unlock all 40 CUs — mining board now has more CUs than a base PS5</title>
+      <link>https://www.tomshardware.com/video-games/pc-gaming/asrock-bc-250-used-for-steam-machine-duty-gains-third-party-hack-to-unlock-all-40-cus-mining-board-now-has-more-cus-than-a-base-ps5</link>
+      <guid isPermaLink="false">d40c419554c055d0dbd4e243f9a68eafb6fbf635</guid>
+      <pubDate>Thu, 28 May 2026 10:31:57 GMT</pubDate>
+      <description><![CDATA[
+        <p>ASRock基于PS5 SoC的服务器/挖矿主板BC-250被爱好者通过第三方破解，成功解锁全部40个计算单元（CU），使其GPU核心数量超过基础版PS5（36 CU）。PS5的SoC由AMD设计、台积电制造，此次破解展示了AMD定制芯片在非预期场景（服务器/挖矿）的算力释放潜力。值得关注的是消费级/游戏芯片被改装用于其他算力用途，可能对特定细分市场的算力供给格局产生影响。</p>
+        <p>标的: AMD, 台积电</p>
+        <p>主线: edge_ai, chip_supply</p>
+        <p>方向: AMD→neutral 台积电→neutral </p>
+        <p><em>跟踪AMD定制SoC的第三方改装社区活跃度；关注解锁后的BC-250在算力租赁或特定HPC场景的实际应用渗透；若无其他实质影响，短期内对AMD/台积电股价无直接驱动。</em></p>
+        <p>来源: rss:tomshardware 🟡 中可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_9bd8bb574c2b</category>
+    </item>
+    
+    <item>
+      <title>[4分] Critical Python package vulnerability now threatens vLLM and LLM agent systems</title>
+      <link>https://www.reddit.com/r/singularity/comments/1tpznlw/critical_python_package_vulnerability_now</link>
+      <guid isPermaLink="false">3c5a45101e1d88ab07f9839c12681c2b4156f3f2</guid>
+      <pubDate>Thu, 28 May 2026 10:31:32 GMT</pubDate>
+      <description><![CDATA[
+        <p>vLLM、MCP服务器及主流LLM Agent框架共用的Python包存在关键漏洞，Ars Technica报道已可实现远程利用，需立即打补丁；另有研究发现AI生成的CUDA内核可能在训练和推理中静默引入数据损坏，标准基准测试无法检出。量化基准显示q5/q6在质量-内存权衡上优于q8/q4，意味着基于q8假设的内存预算存在优化空间。Anthropic已合并Claude Design与Claude.ai/Claude Code的速率限制，并行Claude工作流将更快触发共享上限。</p>
+        <p>标的: 美光, 英伟达, 博通, 微软, 亚马逊, 谷歌, 超微电脑, AMD</p>
+        <p>主线: model_capability, compute_demand, chip_supply</p>
+        <p>方向: 英伟达→neutral 超微电脑→neutral AMD→neutral 博通→neutral 美光→neutral 微软→neutral 谷歌→neutral 亚马逊→neutral </p>
+        <p><em>需对非自研CUDA内核强制审计；量化参数测试需纳入内存工作负载评估；Claude并行管道重新评估吞吐假设。三条线索均指向AI基础设施的隐性风险，尚未构成直接买卖信号。</em></p>
+        <p>来源: reddit:singularity 🔴 低可信 [转载自 https://arstechnica.com/security/2025/01/critical-python-package-vulnerability-now-threatens-vllm-and-llm-agent-systems]</p>
+      ]]></description>
+      <category>evt_2375a9f69a17</category>
+    </item>
+    
+    <item>
+      <title>[4分] Mistral says it is accelerating superintelligence development to ensure Europe's independence from US tech giants, and signs deals to supply Airbus and BMW (Sam Schechner/Wall Street Journal)</title>
+      <link>https://www.techmeme.com/260528/p16#a260528p16</link>
+      <guid isPermaLink="false">0e37b0fd9127bf632633c3828a22fe3ff0ec81fd</guid>
+      <pubDate>Thu, 28 May 2026 10:00:42 GMT</pubDate>
+      <description><![CDATA[
+        <p>法国AI独角兽Mistral宣布加速超级智能开发，目标实现欧洲对美国科技巨头的战略独立。Mistral已与空客、宝马签署合作协议，提供AI技术解决方案。公司CEO指出，欧洲技术自主面临的最大瓶颈在于投资规模不足，需要与微软、谷歌等美国厂商竞争算力资源和顶尖人才。</p>
+        
+        <p>主线: model_capability, compute_demand, policy_export, ai_monetization</p>
+        
+        <p><em>欧洲AI独立叙事持续升温，若Mistral等本土厂商获得欧盟政策扶持，可能分流对英伟达、AMD等美国芯片厂商的采购需求。建议跟踪欧盟AI补贴政策落地进度及Mistral融资动态，其与微软Azure、谷歌云的合作模式变化值得重点关注。</em></p>
+        <p>来源: rss:techmeme 🔴 低可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_7eee990176cd</category>
+    </item>
+    
+    <item>
+      <title>[4分] 中芯国际获净买入南向资金41.74亿港元</title>
+      <link>https://36kr.com/newsflashes/3828783132267142?f=rss</link>
+      <guid isPermaLink="false">261de99e30dbd69a392673ac21b23948afaab8c3</guid>
+      <pubDate>Thu, 28 May 2026 09:59:36 GMT</pubDate>
+      <description><![CDATA[
+        <p>南向资金净买入港股76.09亿港元，其中中芯国际获净买入41.74亿港元居首，泡泡玛特获净买入11.21亿港元次之，华虹半导体获净买入8.11亿港元第三；净卖出方面，阿里巴巴遭净卖出13.03亿港元，小米集团遭净卖出5.96亿港元，长飞光纤光缆遭净卖出2.12亿港元。资金大幅流入中芯国际反映市场对国产半导体代工龙头的关注度提升。</p>
+        <p>标的: 阿里巴巴, 中芯国际, 小米</p>
+        <p>主线: chip_supply, domestic_substitution</p>
+        <p>方向: 中芯国际→positive 阿里巴巴→negative 小米→negative </p>
+        <p><em>南向资金对中芯国际的配置偏好显著，需持续跟踪净买入持续性；阿里巴巴、小米虽遭净卖出，但流出绝对值相对有限，需关注是获利了结还是系统性减配；资金流向变化可能影响市场对港股科技板块情绪的判断。</em></p>
+        <p>来源: rss:36kr 🟡 中可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_80824ee7b0df</category>
+    </item>
+    
+    <item>
+      <title>[4分] Chip design software maker Synopsys reaches a deal with Elliott, giving one board seat to the activist investor's Jesse Cohn, after roughly two months of talks (Svea Herbst-Bayliss/Reuters)</title>
+      <link>https://www.techmeme.com/260528/p15#a260528p15</link>
+      <guid isPermaLink="false">f5e4289838b13111e293436f08a372b4585cb392</guid>
+      <pubDate>Thu, 28 May 2026 09:50:00 GMT</pubDate>
+      <description><![CDATA[
+        <p>芯片设计软件公司Synopsys与激进的投资者Elliott Investment Management达成协议，同意给予Elliott指定的Jesse Cohn一个董事会席位，此前双方进行了约两个月的谈判。Synopsys是全球领先的EDA（电子设计自动化）软件公司，其软件用于芯片设计的关键环节。该协议标志着Elliott在科技投资领域的影响力进一步扩大，此前Elliott曾在多家科技公司推动过类似的公司治理变革。</p>
+        
+        
+        
+        <p><em>该事件需关注：1）Elliott是否会继续在芯片行业其他公司寻求类似影响力；2）公司治理变革是否会影响Synopsys的战略方向和研发投入；3）芯片设计软件领域的竞争格局变化。由于Synopsys不在直接覆盖标的中，建议跟踪其后续动作及对整个EDA行业的影响。</em></p>
+        <p>来源: rss:techmeme 🔴 低可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_aa6bf575a19e</category>
+    </item>
+    
+    <item>
+      <title>[4分] Microsoft Announces Azure Linux 4.0, Its First General-Purpose Server Linux Distribution</title>
+      <link>https://www.infoq.com/news/2026/05/azure-linux-4-server</link>
+      <guid isPermaLink="false">b29643dcebb97c1bcd2d06df3912438a4de52e6c</guid>
+      <pubDate>Thu, 28 May 2026 09:49:00 GMT</pubDate>
+      <description><![CDATA[
+        <p>微软在开源峰会上发布Azure Linux 4.0和Azure Container Linux。Azure Linux 4.0是基于Fedora的通用服务器发行版，专为Azure虚拟机设计，是微软首次超越容器托管、提供支持的通用Linux发行版。Azure Container Linux则是基于Flatcar的不可变容器优化主机系统。此举表明微软正深化其在开源基础设施领域的存在，通过自研Linux发行版加强Azure云服务的差异化竞争力，对抗亚马逊AWS和谷歌 GCP等竞争对手的云服务。</p>
+        <p>标的: 微软, 亚马逊, 谷歌, AMD, Intel</p>
+        <p>主线: compute_demand, datacenter_power</p>
+        <p>方向: 微软→positive Intel→neutral AMD→neutral 亚马逊→negative 谷歌→negative </p>
+        <p><em>微软自研通用Linux发行版进入服务器市场，关注其对Red Hat等传统Linux厂商的冲击程度；评估Azure VM市场份额变化及对Intel/AMD服务器芯片需求的影响；微软云竞争力提升或倒逼AWS/GCP加大基础设施投资。</em></p>
+        <p>来源: rss:infoq 🟡 中可信 [转载自 https://www.infoq.com/news/2024/09/microsoft-azure-linux-4/]</p>
+      ]]></description>
+      <category>evt_a96f27fb46b2</category>
     </item>
     
   </channel>
