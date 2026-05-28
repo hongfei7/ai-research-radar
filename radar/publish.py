@@ -349,9 +349,8 @@ def format_telegram_alert(
 # ================================================================
 # 企业微信推送（群机器人 Webhook）
 #
-# 格式：news 图文卡片（公众号风格长方形链接）
-# description 上限 ~500 字节（WeCom API 限制）
-# 使用 unicode 分隔符 + emoji 构建视觉层次
+# 主推送：markdown 消息（4096 字节，支持加粗/彩色字/引用/链接）
+# 晨报：  news 图文卡片（公众号风格长方形链接）
 # ================================================================
 
 import re as _re
@@ -394,7 +393,22 @@ async def _wecom_post(webhook_url: str, msgtype: str, data: dict) -> bool:
     return False
 
 
-# —— 公众号式图文卡片（news 类型） ——
+# —— markdown 消息 ——
+
+async def send_wecom_markdown(content: str) -> bool:
+    """发送单条 markdown 消息，上限 4096 字节"""
+    webhook_url = _get_wecom_env()
+    if not webhook_url:
+        logger.warning("WECOM_WEBHOOK_URL not set, skipping WeCom push")
+        return False
+    # 按字节截断到 4000（留 96 字节 margin）
+    encoded = content.encode("utf-8")[:4000]
+    content = encoded.decode("utf-8", errors="ignore")
+    content = _sanitize_wecom_md(content)
+    return await _wecom_post(webhook_url, "markdown", {"content": content})
+
+
+# —— 公众号式图文卡片（news 类型，仅用于晨报） ——
 
 async def send_wecom_news(articles: list[dict]) -> bool:
     """
@@ -511,26 +525,11 @@ def format_wecom_alert(
     site_url: str = "",
     items: list[Item] | None = None,
     max_new_events: int = 6,
-) -> dict:
-    """格式化企业微信推送，返回单条 news 图文卡片
+) -> str:
+    """格式化企业微信推送，返回 markdown 字符串
 
-    卡片格式:
-      ━━ 今日态势 ━━━━━━━━━━
-      {态势综述}
-
-      ▎新增 · N
-        {icon} {title}  {time}  ↑N/10
-        {summary}
-        [{tickers}]  信源N  {deep_analysis}
-
-      ▎更新 · N
-        ...
-
-      ▎洞察
-        ▸趋势: {trend_spotting}
-        ▸交叉: {cross_analysis}
-
-      ━━ 活跃N  演进N  新增N  更新N ━━
+    WeCom markdown 支持 **加粗** [链接](url) > 引用 <font color>彩色字
+    上限 4096 字节，自动截断到 4000 字节
     """
     from datetime import datetime
     from zoneinfo import ZoneInfo
@@ -541,149 +540,131 @@ def format_wecom_alert(
     now_dt = datetime.now(hkt) if hkt else datetime.now()
     now_str = now_dt.strftime("%m月%d日 %H:%M HKT") if hkt else ""
 
-    card_title = f"AI 投研雷达 · {now_str}"
-
-    # 去重
     updated_ids = {ev.event_id for ev in updated_events}
     deduped_new = [ev for ev in new_events if ev.event_id not in updated_ids]
     new_ids = {ev.event_id for ev in new_events}
     deduped_upd = [ev for ev in updated_events if ev.event_id not in new_ids]
 
-    # Item → Event 索引（用于提取事件时间）
     items_by_event: dict[str, list[Item]] = {}
     if items:
         for it in items:
             if it.event_id:
                 items_by_event.setdefault(it.event_id, []).append(it)
 
-    # 统计
     active_count = len([e for e in all_active_events if e.is_active])
     developing = len([e for e in all_active_events if e.is_active and e.status == "developing"])
 
-    desc_lines: list[str] = []
+    lines: list[str] = []
 
-    # ━━ 态势 ━━
+    # 标题
+    lines.append(f"**AI 投研雷达 · {now_str}**")
+    lines.append("")
+
+    # 态势
     if situation and situation.text:
-        desc_lines.append("━━ 今日态势 " + "━" * 10)
-        desc_lines.append(_clip(situation.text, 140))
+        lines.append(f'<font color="info">{_clip(situation.text, 200)}</font>')
+        lines.append("")
 
-    # ▎新增
+    # 新增事件
     if deduped_new:
         sorted_new = sorted(deduped_new, key=lambda e: e.significance, reverse=True)
         visible_new = [e for e in sorted_new if e.significance >= 5]
         if visible_new:
-            desc_lines.append("")
-            desc_lines.append(f"▎新增 · {len(deduped_new)}")
+            lines.append(f'<font color="warning">🔥 新增 ({len(deduped_new)})</font>')
             for ev in visible_new[:max_new_events]:
                 icon = _importance_icon(ev.significance)
-                tickers_str = _fmt_tickers_wecom(ev.tickers, max_display=4)
-                direction = ev.direction or {}
-                first_tk = list(direction.keys())[0] if direction else ""
-                first_d = direction.get(first_tk, "") if first_tk else ""
+                tickers_str = _fmt_tickers_wecom(ev.tickers, max_display=5)
+                d = ev.direction or {}
+                first_tk = list(d.keys())[0] if d else ""
+                first_d = d.get(first_tk, "") if first_tk else ""
                 dir_str = _dir_icon(first_d)
                 time_str = _event_time(ev, items_by_event)
-                # 标题行: icon + title + time + score
-                desc_lines.append(
-                    f"  {icon} {_clip(ev.title or '', 22)}  {time_str}  {dir_str}{ev.significance}/10"
+                lines.append(
+                    f'> {icon} **{_clip(ev.title or "", 40)}**{tickers_str}'
+                    f' {dir_str}{ev.significance}/10 · {time_str} · 信源{ev.source_count}'
                 )
-                # 摘要行
                 if ev.summary:
-                    desc_lines.append(f"  {_clip(ev.summary, 28)}")
-                # 元数据行: tickers + 信源 + deep_analysis
-                meta = f"  {tickers_str}  信源{ev.source_count}"
+                    lines.append(f'> {_clip(ev.summary, 50)}')
                 if ev.deep_analysis:
-                    meta += f"  {_clip(ev.deep_analysis, 30)}"
-                desc_lines.append(meta)
+                    lines.append(f'> <font color="comment">{_clip(ev.deep_analysis, 40)}</font>')
             remaining = len(visible_new) - max_new_events
             if remaining > 0:
-                desc_lines.append(f"  +{remaining} 更多...")
+                lines.append(f'> +{remaining} 更多...')
+            lines.append("")
 
-    # ▎更新
+    # 更新事件
     if deduped_upd:
         sorted_upd = sorted(deduped_upd, key=lambda e: e.significance, reverse=True)
         visible_upd = [e for e in sorted_upd if e.significance >= 5]
         if visible_upd:
-            desc_lines.append("")
-            desc_lines.append(f"▎更新 · {len(deduped_upd)}")
+            lines.append(f'<font color="warning">● 更新 ({len(deduped_upd)})</font>')
             for ev in visible_upd[:min(len(visible_upd), 3)]:
                 icon = _importance_icon(ev.significance)
-                tickers_str = _fmt_tickers_wecom(ev.tickers, max_display=4)
-                direction = ev.direction or {}
-                first_tk = list(direction.keys())[0] if direction else ""
-                first_d = direction.get(first_tk, "") if first_tk else ""
+                tickers_str = _fmt_tickers_wecom(ev.tickers, max_display=5)
+                d = ev.direction or {}
+                first_tk = list(d.keys())[0] if d else ""
+                first_d = d.get(first_tk, "") if first_tk else ""
                 dir_str = _dir_icon(first_d)
                 time_str = _event_time(ev, items_by_event)
-                desc_lines.append(
-                    f"  {icon} {_clip(ev.title or '', 22)}  {time_str}  {dir_str}{ev.significance}/10"
+                lines.append(
+                    f'> {icon} **{_clip(ev.title or "", 40)}**{tickers_str}'
+                    f' {dir_str}{ev.significance}/10 · {time_str} · 信源{ev.source_count}'
                 )
                 if ev.summary:
-                    desc_lines.append(f"  {_clip(ev.summary, 28)}")
-                meta = f"  {tickers_str}  信源{ev.source_count}"
+                    lines.append(f'> {_clip(ev.summary, 50)}')
                 if ev.deep_analysis:
-                    meta += f"  {_clip(ev.deep_analysis, 30)}"
-                desc_lines.append(meta)
+                    lines.append(f'> <font color="comment">{_clip(ev.deep_analysis, 40)}</font>')
             remaining = len(visible_upd) - 3
             if remaining > 0:
-                desc_lines.append(f"  +{remaining} 更多...")
+                lines.append(f'> +{remaining} 更多...')
+            lines.append("")
 
-    # ▎洞察
-    insight_parts = []
-    if situation and situation.trend_spotting:
-        trend = _clip(situation.trend_spotting.strip(), 80)
-        if trend:
-            insight_parts.append(f"▸趋势: {trend}")
-    if situation and situation.cross_analysis:
-        cross = _clip(situation.cross_analysis.strip(), 120)
-        if cross:
-            insight_parts.append(f"▸交叉: {cross}")
-    if insight_parts:
-        desc_lines.append("")
-        desc_lines.append("▎洞察")
-        desc_lines.extend(insight_parts)
-
-    # ▎当前关注（无新增/更新时展示活跃事件 TOP 5）
+    # 目前关注（无新增/更新时展示活跃事件）
     if not deduped_new and not deduped_upd and all_active_events:
         top_active = sorted(
             [e for e in all_active_events if e.is_active and e.significance >= 5],
             key=lambda e: e.significance, reverse=True,
         )[:5]
         if top_active:
-            desc_lines.append("")
-            desc_lines.append("▎目前关注")
+            lines.append('<font color="warning">目前关注</font>')
             for ev in top_active:
                 icon = _importance_icon(ev.significance)
-                tickers_str = _fmt_tickers_wecom(ev.tickers, max_display=4)
-                direction = ev.direction or {}
-                first_tk = list(direction.keys())[0] if direction else ""
-                first_d = direction.get(first_tk, "") if first_tk else ""
+                tickers_str = _fmt_tickers_wecom(ev.tickers, max_display=5)
+                d = ev.direction or {}
+                first_tk = list(d.keys())[0] if d else ""
+                first_d = d.get(first_tk, "") if first_tk else ""
                 dir_str = _dir_icon(first_d)
                 time_str = _event_time(ev, items_by_event)
-                desc_lines.append(
-                    f"  {icon} {_clip(ev.title or '', 22)}  {time_str}  {dir_str}{ev.significance}/10"
+                lines.append(
+                    f'> {icon} **{_clip(ev.title or "", 40)}**{tickers_str}'
+                    f' {dir_str}{ev.significance}/10 · {time_str} · 信源{ev.source_count}'
                 )
                 if ev.summary:
-                    desc_lines.append(f"  {_clip(ev.summary, 28)}")
-                meta = f"  {tickers_str}  信源{ev.source_count}"
+                    lines.append(f'> {_clip(ev.summary, 50)}')
                 if ev.deep_analysis:
-                    meta += f"  {_clip(ev.deep_analysis, 30)}"
-                desc_lines.append(meta)
+                    lines.append(f'> <font color="comment">{_clip(ev.deep_analysis, 40)}</font>')
+            lines.append("")
 
-    # ━━ 底部统计 ━━
-    stats = f"活跃{active_count}  演进{developing}"
+    # 洞察
+    if situation and (situation.cross_analysis or situation.trend_spotting):
+        if situation.trend_spotting:
+            lines.append(f'<font color="comment">💡 {_clip(situation.trend_spotting.strip(), 100)}</font>')
+        if situation.cross_analysis:
+            lines.append(f'<font color="comment">🔍 {_clip(situation.cross_analysis.strip(), 120)}</font>')
+        lines.append("")
+
+    # 统计栏
+    stats = f"活跃{active_count} · 演进{developing}"
     if deduped_new:
-        stats += f"  新增{len(deduped_new)}"
+        stats += f" · 新增{len(deduped_new)}"
     if deduped_upd:
-        stats += f"  更新{len(deduped_upd)}"
-    desc_lines.append("")
-    desc_lines.append("━━ " + stats + " " + "━" * 4)
+        stats += f" · 更新{len(deduped_upd)}"
+    lines.append(stats)
 
-    description = "\n".join(desc_lines)
+    if site_url:
+        lines.append(f"[实时看板]({site_url})")
 
-    return {
-        "title": card_title,
-        "description": description,
-        "url": site_url,
-    }
+    return "\n".join(lines)
 
 
 async def send_wecom_brief(

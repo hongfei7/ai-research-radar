@@ -41,7 +41,7 @@ from radar.render import (
 from radar.publish import (
     create_daily_issue, send_telegram, format_telegram_alert,
     update_readme, should_telegram_alert,
-    send_wecom_news, send_wecom_brief,
+    send_wecom_markdown, send_wecom_news, send_wecom_brief,
     format_wecom_alert, should_wecom_alert,
 )
 
@@ -294,7 +294,7 @@ async def _wecom_fallback_push(sit, today_events: dict, site_url: str, cfg: dict
                 all_active_events=all_ev, situation=sit, site_url=site_url,
                 max_new_events=max_n,
             )
-            if await send_wecom_news([card]):
+            if await send_wecom_markdown(card):
                 from radar.models import utcnow_iso
                 sit.last_wecom_digest_at = utcnow_iso()
                 save_situation(sit)
@@ -573,7 +573,7 @@ async def run_full(cfg: dict) -> None:
                         items=clustered_items,
                         max_new_events=max_n,
                     )
-                    if await send_wecom_news([card]):
+                    if await send_wecom_markdown(card):
                         if sit:
                             from radar.models import utcnow_iso
                             sit.last_wecom_digest_at = utcnow_iso()
