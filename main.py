@@ -288,9 +288,11 @@ async def _wecom_fallback_push(sit, today_events: dict, site_url: str, cfg: dict
     try:
         if should_wecom_alert([], [], sit, cfg):
             all_ev = list(today_events.values())
+            max_n = wx_cfg.get("notify_max_new_events", 6)
             card = format_wecom_alert(
                 new_events=[], updated_events=[],
                 all_active_events=all_ev, situation=sit, site_url=site_url,
+                max_new_events=max_n,
             )
             if await send_wecom_news([card]):
                 from radar.models import utcnow_iso
@@ -561,6 +563,7 @@ async def run_full(cfg: dict) -> None:
                     new_events_list, updated_events_list, sit, cfg
                 ):
                     all_events_list = list(updated_events.values())
+                    max_n = wx_cfg.get("notify_max_new_events", 6)
                     card = format_wecom_alert(
                         new_events=new_events_list,
                         updated_events=updated_events_list,
@@ -568,6 +571,7 @@ async def run_full(cfg: dict) -> None:
                         situation=sit,
                         site_url=site_url,
                         items=clustered_items,
+                        max_new_events=max_n,
                     )
                     if await send_wecom_news([card]):
                         if sit:

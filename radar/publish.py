@@ -349,23 +349,13 @@ def format_telegram_alert(
 # ================================================================
 # 企业微信推送（群机器人 Webhook）
 #
-# 设计原则（质量优先）:
-#   - 实时预警 → news 图文卡片（公众号风格长方形链接）
-#   - 晨报     → news 图文卡片
-#   - 自动清理 WeCom 不支持的 markdown 语法
-#   - 单卡片设计，可扫读，≤280 字符描述
+# 格式：news 图文卡片（公众号风格长方形链接）
+# description 上限 ~500 字节（WeCom API 限制）
+# 使用 unicode 分隔符 + emoji 构建视觉层次
 # ================================================================
 
 import re as _re
 import asyncio as _asyncio
-
-# 企业微信: markdown max 4096 字节，news max 8 条
-_WECOM_MAX_BYTES = 3500
-
-
-def _wecom_byte_len(text: str) -> int:
-    return len(text.encode("utf-8"))
-
 
 def _sanitize_wecom_md(text: str) -> str:
     """清理 WeCom 不支持的语法: backtick → 书名号，移除水平线"""
@@ -373,20 +363,6 @@ def _sanitize_wecom_md(text: str) -> str:
     text = _re.sub(r'\n---+\n', '\n', text)
     text = _re.sub(r'^---+$', '', text, flags=_re.MULTILINE)
     return text
-
-
-def _fit_wecom(text: str, max_bytes: int = _WECOM_MAX_BYTES) -> str:
-    """智能截断，在段落/句子边界断开"""
-    if _wecom_byte_len(text) <= max_bytes:
-        return text
-    budget = max_bytes - 60
-    raw = text.encode("utf-8")[:budget]
-    truncated = raw.decode("utf-8", errors="ignore")
-    for sep in ("\n\n", "\n", "。", "；", "，"):
-        cut = truncated.rfind(sep)
-        if cut > budget // 2:
-            return truncated[:cut] + "\n\n[...完整版见实时看板]"
-    return truncated + "\n\n[...完整版见实时看板]"
 
 
 def _get_wecom_env() -> str:
@@ -436,8 +412,11 @@ async def send_wecom_news(articles: list[dict]) -> bool:
 
     for a in articles:
         a["title"] = _sanitize_wecom_md(a.get("title", "")[:120])
-        a["description"] = _sanitize_wecom_md(a.get("description", "")[:300])
-        a.pop("picurl", None)  # 无图时可省略
+        # WeCom news description 上限 ~512 字节，按字节截断
+        desc = a.get("description", "")
+        desc_encoded = desc.encode("utf-8")[:500]
+        a["description"] = _sanitize_wecom_md(desc_encoded.decode("utf-8", errors="ignore"))
+        a.pop("picurl", None)
 
     return await _wecom_post(webhook_url, "news", {"articles": articles})
 
@@ -519,6 +498,11 @@ def _dir_icon(d: str) -> str:
     return "→"
 
 
+def _event_time(ev: Event, items_by_event: dict[str, list[Item]]) -> str:
+    """事件时间（HKT），用于展示时效性"""
+    return _extract_event_time(ev, items_by_event.get(ev.event_id, []))
+
+
 def format_wecom_alert(
     new_events: list[Event],
     updated_events: list[Event],
@@ -526,24 +510,27 @@ def format_wecom_alert(
     situation: Optional[Situation],
     site_url: str = "",
     items: list[Item] | None = None,
+    max_new_events: int = 6,
 ) -> dict:
-    """格式化企业微信推送，返回单条 news 图文卡片数据
+    """格式化企业微信推送，返回单条 news 图文卡片
 
-    卡片格式（公众号风格长方形链接）:
+    卡片格式:
+      ━━ 今日态势 ━━━━━━━━━━
       {态势综述}
 
-      ▲ 新增 (N)
-        🔥 标题 [标的] ↑8/10
-           摘要（高分事件）
-        ⚡ 标题 [标的] ↑7/10
+      ▎新增 · N
+        {icon} {title}  {time}  ↑N/10
+        {summary}
+        [{tickers}]  信源N  {deep_analysis}
 
-      ● 更新 (N)
-        ⚡ 标题 [标的] ↓7/10
+      ▎更新 · N
+        ...
 
-      📈 偏多 XXX | ✂️ 偏空 YYY
-      💡 交叉分析结论
+      ▎洞察
+        ▸趋势: {trend_spotting}
+        ▸交叉: {cross_analysis}
 
-      活跃N 演进N 新增N 更新N
+      ━━ 活跃N  演进N  新增N  更新N ━━
     """
     from datetime import datetime
     from zoneinfo import ZoneInfo
@@ -562,131 +549,108 @@ def format_wecom_alert(
     new_ids = {ev.event_id for ev in new_events}
     deduped_upd = [ev for ev in updated_events if ev.event_id not in new_ids]
 
-    # 态势
-    situation_text = ""
-    if situation and situation.text:
-        situation_text = _extract_headline(situation.text, 160)
+    # Item → Event 索引（用于提取事件时间）
+    items_by_event: dict[str, list[Item]] = {}
+    if items:
+        for it in items:
+            if it.event_id:
+                items_by_event.setdefault(it.event_id, []).append(it)
 
     # 统计
     active_count = len([e for e in all_active_events if e.is_active])
     developing = len([e for e in all_active_events if e.is_active and e.status == "developing"])
 
-    # 情绪
-    all_dir_items: list[Item] = []
-    if items:
-        for it in items:
-            if it.direction:
-                all_dir_items.append(it)
-    dir_agg = _aggregate_directions(all_dir_items) if all_dir_items else {}
-    bull = sorted(
-        [tk for tk, c in dir_agg.items() if c.get("positive", 0) > c.get("negative", 0)],
-        key=lambda tk: sum(dir_agg[tk].values()), reverse=True,
-    )
-    bear = sorted(
-        [tk for tk, c in dir_agg.items() if c.get("negative", 0) > c.get("positive", 0)],
-        key=lambda tk: sum(dir_agg[tk].values()), reverse=True,
-    )
-
-    # 构建 description
     desc_lines: list[str] = []
 
-    # —— 态势 ——
-    if situation_text:
-        desc_lines.append(situation_text)
+    # ━━ 态势 ━━
+    if situation and situation.text:
+        desc_lines.append("━━ 今日态势 " + "━" * 10)
+        desc_lines.append(_clip(situation.text, 140))
 
-    # —— 新增事件 ——
+    # ▎新增
     if deduped_new:
         sorted_new = sorted(deduped_new, key=lambda e: e.significance, reverse=True)
-        # 过滤低价值（<5 不展示）
         visible_new = [e for e in sorted_new if e.significance >= 5]
         if visible_new:
-            max_show = 6 if len(visible_new) <= 3 else 4
             desc_lines.append("")
-            desc_lines.append(f"▲ 新增 ({len(deduped_new)})")
-            for ev in visible_new[:max_show]:
+            desc_lines.append(f"▎新增 · {len(deduped_new)}")
+            for ev in visible_new[:max_new_events]:
                 icon = _importance_icon(ev.significance)
                 tickers_str = _fmt_tickers_wecom(ev.tickers, max_display=4)
                 direction = ev.direction or {}
-                dir_str = ""
-                if direction:
-                    # 取第一个标的的方向
-                    first_tk = list(direction.keys())[0] if direction else ""
-                    first_d = direction.get(first_tk, "") if first_tk else ""
-                    dir_str = _dir_icon(first_d)
-                line = f"  {icon} {_clip(ev.title or '', 28)}{tickers_str} {dir_str}{ev.significance}/10"
-                desc_lines.append(line)
-                # 高分事件附摘要
-                if ev.significance >= 8 and ev.summary:
-                    desc_lines.append(f"     {_clip(ev.summary, 35)}")
-            remaining = len(visible_new) - max_show
+                first_tk = list(direction.keys())[0] if direction else ""
+                first_d = direction.get(first_tk, "") if first_tk else ""
+                dir_str = _dir_icon(first_d)
+                time_str = _event_time(ev, items_by_event)
+                # 标题行: icon + title + time + score
+                desc_lines.append(
+                    f"  {icon} {_clip(ev.title or '', 22)}  {time_str}  {dir_str}{ev.significance}/10"
+                )
+                # 摘要行
+                if ev.summary:
+                    desc_lines.append(f"  {_clip(ev.summary, 28)}")
+                # 元数据行: tickers + 信源 + deep_analysis
+                meta = f"  {tickers_str}  信源{ev.source_count}"
+                if ev.deep_analysis:
+                    meta += f"  {_clip(ev.deep_analysis, 30)}"
+                desc_lines.append(meta)
+            remaining = len(visible_new) - max_new_events
             if remaining > 0:
                 desc_lines.append(f"  +{remaining} 更多...")
 
-    # —— 更新事件 ——
+    # ▎更新
     if deduped_upd:
         sorted_upd = sorted(deduped_upd, key=lambda e: e.significance, reverse=True)
         visible_upd = [e for e in sorted_upd if e.significance >= 5]
         if visible_upd:
-            max_show = min(len(visible_upd), 2)
             desc_lines.append("")
-            desc_lines.append(f"● 更新 ({len(deduped_upd)})")
-            for ev in visible_upd[:max_show]:
+            desc_lines.append(f"▎更新 · {len(deduped_upd)}")
+            for ev in visible_upd[:min(len(visible_upd), 3)]:
                 icon = _importance_icon(ev.significance)
                 tickers_str = _fmt_tickers_wecom(ev.tickers, max_display=4)
                 direction = ev.direction or {}
-                dir_str = ""
-                if direction:
-                    first_tk = list(direction.keys())[0] if direction else ""
-                    first_d = direction.get(first_tk, "") if first_tk else ""
-                    dir_str = _dir_icon(first_d)
-                line = f"  {icon} {_clip(ev.title or '', 28)}{tickers_str} {dir_str}{ev.significance}/10"
-                desc_lines.append(line)
-            remaining = len(visible_upd) - max_show
+                first_tk = list(direction.keys())[0] if direction else ""
+                first_d = direction.get(first_tk, "") if first_tk else ""
+                dir_str = _dir_icon(first_d)
+                time_str = _event_time(ev, items_by_event)
+                desc_lines.append(
+                    f"  {icon} {_clip(ev.title or '', 22)}  {time_str}  {dir_str}{ev.significance}/10"
+                )
+                if ev.summary:
+                    desc_lines.append(f"  {_clip(ev.summary, 28)}")
+                meta = f"  {tickers_str}  信源{ev.source_count}"
+                if ev.deep_analysis:
+                    meta += f"  {_clip(ev.deep_analysis, 30)}"
+                desc_lines.append(meta)
+            remaining = len(visible_upd) - 3
             if remaining > 0:
                 desc_lines.append(f"  +{remaining} 更多...")
 
-    # —— 情绪 ——
-    sentiment_parts = []
-    if bull:
-        sentiment_parts.append(f"📈 偏多 {'/'.join(bull[:5])}")
-    if bear:
-        sentiment_parts.append(f"✂️ 偏空 {'/'.join(bear[:5])}")
-    if sentiment_parts:
-        desc_lines.append("")
-        desc_lines.append(" | ".join(sentiment_parts))
-
-    # —— 交叉分析 ——
+    # ▎洞察
+    insight_parts = []
+    if situation and situation.trend_spotting:
+        trend = _clip(situation.trend_spotting.strip(), 80)
+        if trend:
+            insight_parts.append(f"▸趋势: {trend}")
     if situation and situation.cross_analysis:
-        ca = _extract_headline(situation.cross_analysis, 180)
-        if ca:
-            desc_lines.append("")
-            desc_lines.append(f"💡 {ca}")
+        cross = _clip(situation.cross_analysis.strip(), 120)
+        if cross:
+            insight_parts.append(f"▸交叉: {cross}")
+    if insight_parts:
+        desc_lines.append("")
+        desc_lines.append("▎洞察")
+        desc_lines.extend(insight_parts)
 
-    # —— 统计栏 ——
-    stats = f"活跃{active_count} 演进{developing}"
+    # ━━ 底部统计 ━━
+    stats = f"活跃{active_count}  演进{developing}"
     if deduped_new:
-        stats += f" 新增{len(deduped_new)}"
+        stats += f"  新增{len(deduped_new)}"
     if deduped_upd:
-        stats += f" 更新{len(deduped_upd)}"
+        stats += f"  更新{len(deduped_upd)}"
     desc_lines.append("")
-    desc_lines.append(stats)
-
-    # —— 兜底：无新增/更新事件时展示当前活跃事件 TOP 5 ——
-    if not deduped_new and not deduped_upd and all_active_events:
-        top_active = sorted(
-            [e for e in all_active_events if e.is_active and e.significance >= 5],
-            key=lambda e: e.significance, reverse=True,
-        )[:5]
-        if top_active:
-            desc_lines.append("")
-            desc_lines.append("当前关注:")
-            for ev in top_active:
-                icon = _importance_icon(ev.significance)
-                tickers_str = _fmt_tickers_wecom(ev.tickers, max_display=3)
-                desc_lines.append(f"  {icon} {_clip(ev.title or '', 24)}{tickers_str} {ev.significance}/10")
+    desc_lines.append("━━ " + stats + " " + "━" * 4)
 
     description = "\n".join(desc_lines)
-    description = _clip(description, 500)
 
     return {
         "title": card_title,
