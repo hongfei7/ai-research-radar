@@ -5,87 +5,55 @@
     <link>https://hongfei7.github.io/ai-research-radar</link>
     <description>AI/科技/半导体板块的持续投研情报 feed — 由 MiniMax 策展</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 28 May 2026 09:21:48 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 28 May 2026 09:40:49 GMT</lastBuildDate>
     <atom:link href="https://hongfei7.github.io/ai-research-radar/feed.xml" rel="self" type="application/rss+xml"/>
     
     <item>
-      <title>[6分] 2026年小米最重磅新品来了!玄戒自研OSAI大模型 三项自研大会师--快科技--科技改变未来</title>
-      <link>https://news.mydrivers.com/1/1125/1125622.htm</link>
-      <guid isPermaLink="false">e4014f514f9d911ec9f82d4eeec864f4fa2f59d4</guid>
-      <pubDate>Thu, 28 May 2026 14:55:01 GMT</pubDate>
+      <title>[8分] 国家集成电路基金对中芯国际的多头持仓比例降至7.99%</title>
+      <link>https://36kr.com/newsflashes/3828746439807620?f=rss</link>
+      <guid isPermaLink="false">83107f837182081420e4086c7393c3db8ab1679f</guid>
+      <pubDate>Thu, 28 May 2026 09:22:17 GMT</pubDate>
       <description><![CDATA[
-        <p>小米宣布2026年下半年推出重磅旗舰新品，首次同时搭载自研芯片（玄戒）、自研OS及自研AI大模型三大核心技术，被业内称为"三项自研大会师"。小米集团总裁卢伟冰此前已对外透露相关风声。这是小米发展历程中具备里程碑意义的核心新品，标志着其从供应链整合向全栈自研的战略跃迁。值得关注：小米自研芯片的制程节点与代工方选择、自研OS的生态定位、以及AI大模型在手机端的推理能力表现。</p>
-        <p>标的: 小米</p>
-        <p>主线: edge_ai, domestic_substitution</p>
-        <p>方向: 小米→positive </p>
-        <p><em>跟踪变量：玄戒芯片规格参数、OS生态兼容性、AI大模型参数量级与端侧推理效率；二阶效应：若小米自研芯片成功落地，或为国产芯片设计打开手机旗舰市场新空间，可关注中芯国际等晶圆代工订单外溢机会；与寒武纪等国产AI芯片厂商在端侧推理赛道形成对标效应。</em></p>
-        <p>来源: minimax_search 🔴 低可信 [转载自 未知来源]</p>
+        <p>港交所文件披露，国家集成电路产业投资基金（大基金）对中芯国际（0981.HK）的多头持仓比例于2026年5月26日从此前的8.08%下调至7.99%，减少0.09个百分点。此次减持规模虽有限，但大基金作为支持中国半导体国产替代的核心投资者，其持仓变动可能反映对中芯国际中长期发展前景或行业周期的重新评估。需持续关注大基金后续持仓变化及其对其他半导体产业链标的的配置动向。</p>
+        <p>标的: 中芯国际</p>
+        <p>主线: chip_supply, domestic_substitution</p>
+        <p>方向: 中芯国际→negative </p>
+        <p><em>跟踪大基金后续持仓变动节奏，评估其减持是阶段性获利了结还是战略性调整；关注政策支持力度边际变化及其他国产半导体标的配置动向。</em></p>
+        <p>来源: rss:36kr 🟡 中可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_a6511efc9241</category>
+      <category>evt_238201be43e1</category>
     </item>
     
     <item>
-      <title>[6分] 2026年小米最重磅新品来了!玄戒+自研os+Ai大模型 三项自研大会师</title>
-      <link>https://finance.sina.com.cn/tech/roll/2026-05-28/doc-inhzmtwq8605304.shtml</link>
-      <guid isPermaLink="false">63d75d034af8b61e76e28f5eb9bf75578d1c0af9</guid>
-      <pubDate>Thu, 28 May 2026 09:16:46 GMT</pubDate>
+      <title>[7分] 科大讯飞正式发布讯飞AI眼镜,售价4299元</title>
+      <link>https://wallstreetcn.com/livenews/3110580</link>
+      <guid isPermaLink="false">23a76d766a83f589d330d479e1a4ccfc007f28d8</guid>
+      <pubDate>Thu, 28 May 2026 15:58:18 GMT</pubDate>
       <description><![CDATA[
-        <p>小米宣布将于2026年下半年推出重磅新品，同时首发自研手机SoC芯片“玄戒”、自研操作系统及自研AI大模型三项核心技术，这是小米首次实现芯片、OS、AI模型三大核心技术的整合。该产品定位高端旗舰，标志着小米从“集成方案商”向“全栈自研厂商”的战略跃迁。若成功量产，将对国产高端手机芯片格局产生深远影响。</p>
-        <p>标的: ARM, 小米</p>
-        <p>主线: edge_ai, domestic_substitution, model_capability, chip_supply</p>
-        <p>方向: 小米→positive ARM→positive </p>
-        <p><em>需跟踪：1）玄戒芯片的制程节点与性能参数；2）自研OS的生态兼容策略；3）AI大模型的参数量与端侧推理能力。对ARM而言，若小米采用ARM架构则增加授权收入；对其他国产手机厂商（如OPPO、vivo）形成竞争压力；自研芯片若采用台积电代工需关注供应链稳定性。</em></p>
+        <p>科大讯飞发布讯飞AI眼镜，定价4299元（人民币），6月15日预售。该产品定位AI终端硬件，支持122种语言实时翻译，涵盖通话翻译、面对面翻译及视觉翻译三种模式。这是国内头部AI大模型厂商首次推出自研AI眼镜类产品，标志着大模型厂商从软件向硬件端落地的重要探索。需关注其硬件定价能否支撑销量、首批预售数据及后续生态扩展计划。</p>
+        <p>标的: 科大讯飞</p>
+        <p>主线: ai_monetization, edge_ai</p>
+        <p>方向: 科大讯飞→positive </p>
+        <p><em>需跟踪：①首批预售转化率与退货率；②芯片/传感器供应链成本；③是否与手机厂商或操作系统打通。AI眼镜若跑通可复制的软硬一体商业模式，将为其他大模型厂商提供硬件变现路径参考。</em></p>
+        <p>来源: minimax_search 🔴 低可信 [转载自 未知来源]</p>
+      ]]></description>
+      <category>evt_dde1483e4b4e</category>
+    </item>
+    
+    <item>
+      <title>[7分] 高通进军数据中心AI芯片市场挑战英伟达AMD_腾讯新闻</title>
+      <link>https://news.qq.com/rain/a/20251028A0204900</link>
+      <guid isPermaLink="false">d2f79885bb99148fac84b5384252da1ac4624c3e</guid>
+      <pubDate>Thu, 28 May 2026 09:36:11 GMT</pubDate>
+      <description><![CDATA[
+        <p>高通正式进军数据中心AI芯片市场，挑战英伟达与AMD主导地位。高通AI200芯片计划2026年商业化，AI250芯片2027年推出，沙特AI初创公司Humain成为首个客户，计划2026年起部署200兆瓦容量的新芯片。高通此举旨在抢占AI算力基础设施市场，与当前数据中心AI加速器市场的主要玩家展开竞争。</p>
+        <p>标的: 英伟达, 高通, ARM, AMD, 台积电</p>
+        <p>主线: chip_supply, ai_monetization, compute_demand, datacenter_power</p>
+        <p>方向: 高通→positive 英伟达→negative AMD→negative 台积电→neutral ARM→neutral </p>
+        <p><em>跟踪高通AI芯片性能对比英伟达H100/H200的benchmark数据；Humain 200MW部署规模若超预期可能压缩传统AI芯片份额；台积电3nm/2nm产能分配或受高通新需求影响；ARM在数据中心CPU市场份额变化值得关注。</em></p>
         <p>来源: web_search 🔴 低可信 [转载自 未知来源]</p>
       ]]></description>
-      <category>evt_676fff533968</category>
-    </item>
-    
-    <item>
-      <title>[5分] 消息称澎湃OS 4将于7-8月发布,小米18系列手机有望首发正式版_会师_技术_芯片</title>
-      <link>http://www.sohu.com/a/1028874164_114760</link>
-      <guid isPermaLink="false">7cb048b18743a1779decbd368e12f462fa9751e4</guid>
-      <pubDate>Thu, 28 May 2026 15:19:19 GMT</pubDate>
-      <description><![CDATA[
-        <p>博主爆料小米澎湃OS 4预计7-8月发布，正式版首发权可能交给年度重量级产品或小米18系列。Beta测试将在发布前进行，小米17系列和红米K90系列为首批适配机型。爆料提及的“大会师“产品或涉及自研芯片战略。澎湃OS作为小米核心软件生态，版本迭代将强化其终端AI能力和用户体验闭环。</p>
-        <p>标的: ARM, 高通, 小米</p>
-        <p>主线: edge_ai, domestic_substitution</p>
-        <p>方向: 小米→positive 高通→neutral ARM→neutral </p>
-        <p><em>需跟踪：澎湃OS 4具体功能升级、AI能力集成深度；若涉及自研芯片落地，对高通/ARM订单影响几何。二阶效应：操作系统迭代加速国产手机厂商软硬一体化趋势，与苹果iOS生态竞争加剧。</em></p>
-        <p>来源: minimax_search 🔴 低可信 [转载自 未知来源]</p>
-      ]]></description>
-      <category>evt_08234e6fce7c</category>
-    </item>
-    
-    <item>
-      <title>[5分] YouTube will let you ask AI to make a custom video feed</title>
-      <link>https://www.theverge.com/streaming/938759/youtube-custom-ai-feed-prompt-availability</link>
-      <guid isPermaLink="false">2a84881edf73b779dd43a3a4c576d1684d824ae3</guid>
-      <pubDate>Thu, 28 May 2026 08:49:07 GMT</pubDate>
-      <description><![CDATA[
-        <p>YouTube宣布推出AI个性化视频推荐功能，用户可通过自然语言描述兴趣、心情或话题，生成定制化视频流并固定在首页顶部。该功能基于生成式AI技术重构内容推荐逻辑，标志着YouTube从算法推荐向对话式交互的升级。此举将直接影响平台用户时长与广告变现效率，同时对底层AI推理算力提出更高需求。</p>
-        <p>标的: 谷歌</p>
-        <p>主线: compute_demand, ai_monetization</p>
-        <p>方向: 谷歌→positive </p>
-        <p><em>关注该功能用户采纳率与使用时长变化；若个性化推荐显著提升CPM，可强化谷歌广告业务增长逻辑；间接拉动谷歌云及合作GPU供应商算力需求。</em></p>
-        <p>来源: rss:theverge-ai 🟡 中可信 [转载自 未知来源]</p>
-      ]]></description>
-      <category>evt_2cd000493151</category>
-    </item>
-    
-    <item>
-      <title>[4分] PDF中芯国际集成电路制造有限公司2025年年度报告</title>
-      <link>https://static.cninfo.com.cn/finalpage/2026-03-27/1225037057.PDF</link>
-      <guid isPermaLink="false">d4c3718515b535a393815208844b866687d06290</guid>
-      <pubDate>Thu, 28 May 2026 09:16:46 GMT</pubDate>
-      <description><![CDATA[
-        <p>中芯国际2025年年报披露新型封装技术进展，通过系统性解决方案突破晶体管线宽极限并提升多芯片集成融合度；设计服务领域引入DTCO（设计工艺协同优化），对具体设计和工艺匹配进行评估调整，有效降低半导体工艺开发成本和使用门槛。上述技术突破有望加速国产先进制程能力提升，对国内半导体产业链自主可控具有积极意义。</p>
-        <p>标的: 长电科技, 中芯国际</p>
-        <p>主线: chip_supply, domestic_substitution, advanced_packaging</p>
-        <p>方向: 中芯国际→neutral 长电科技→positive </p>
-        <p><em>需跟踪先进封装技术量产进度及客户导入情况；长电科技作为封装厂商有望受益于多芯片集成需求提升；关注DTCO对国产工艺开发效率的实际改善幅度，以及与设备/材料供应商的协同进展。</em></p>
-        <p>来源: web_search 🔴 低可信</p>
-      ]]></description>
-      <category>evt_f4e30d952000</category>
+      <category>evt_c6969ee00109</category>
     </item>
     
   </channel>
