@@ -163,7 +163,7 @@ class SituationGenerator:
 
         if prev_situation:
             sit.last_telegram_digest_at = prev_situation.last_telegram_digest_at
-            sit.last_wechat_digest_at = prev_situation.last_wechat_digest_at
+            sit.last_wecom_digest_at = prev_situation.last_wecom_digest_at
             sit.morning_brief_date = prev_situation.morning_brief_date
             sit.cross_analysis = prev_situation.cross_analysis
             sit.trend_spotting = prev_situation.trend_spotting

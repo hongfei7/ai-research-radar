@@ -347,63 +347,63 @@ def format_telegram_alert(
 
 
 # ================================================================
-# 微信推送（PushPlus）
+# 企业微信推送（群机器人 Webhook）
 # ================================================================
 
-def _get_wechat_env() -> str:
-    return os.environ.get("WECHAT_PUSH_TOKEN", "")
+def _get_wecom_env() -> str:
+    return os.environ.get("WECOM_WEBHOOK_URL", "")
 
 
-async def send_wechat(
+async def send_wecom(
     title: str,
     content: str,
 ) -> bool:
     """
-    通过 PushPlus 推送到微信。
+    通过企业微信群机器人 Webhook 推送消息。
 
     Args:
-        title: 消息标题（必填）
-        content: 消息正文，支持 Markdown
+        title: 消息标题（嵌入 Markdown 首行）
+        content: 消息正文，支持企业微信 Markdown 子集
 
     Returns:
         True 如果发送成功
     """
     import asyncio
 
-    token = _get_wechat_env()
-    if not token:
-        logger.warning("WECHAT_PUSH_TOKEN not set, skipping WeChat push")
+    webhook_url = _get_wecom_env()
+    if not webhook_url:
+        logger.warning("WECOM_WEBHOOK_URL not set, skipping WeCom push")
         return False
 
-    url = "https://www.pushplus.plus/send"
+    # 企业微信机器人 markdown 消息格式
     payload = {
-        "token": token,
-        "title": title,
-        "content": content,
-        "template": "markdown",
+        "msgtype": "markdown",
+        "markdown": {
+            "content": content,
+        },
     }
 
     max_retries = 2
     for attempt in range(max_retries + 1):
         try:
             async with httpx.AsyncClient(timeout=15) as client:
-                resp = await client.post(url, json=payload)
+                resp = await client.post(webhook_url, json=payload)
                 resp.raise_for_status()
                 data = resp.json()
-                if data.get("code") == 200:
-                    logger.info("WeChat message sent via PushPlus")
+                if data.get("errcode") == 0:
+                    logger.info("WeCom message sent via webhook")
                     return True
                 else:
-                    logger.error(f"PushPlus API error: {data}")
+                    logger.error(f"WeCom webhook API error: {data}")
                     if attempt < max_retries:
-                        logger.info(f"Retrying WeChat push ({attempt + 1}/{max_retries})...")
+                        logger.info(f"Retrying WeCom push ({attempt + 1}/{max_retries})...")
                         await asyncio.sleep(2)
                         continue
                     return False
         except Exception as e:
-            logger.error(f"Failed to send WeChat message (attempt {attempt + 1}): {e}")
+            logger.error(f"Failed to send WeCom message (attempt {attempt + 1}): {e}")
             if attempt < max_retries:
-                logger.info(f"Retrying WeChat push ({attempt + 1}/{max_retries})...")
+                logger.info(f"Retrying WeCom push ({attempt + 1}/{max_retries})...")
                 await asyncio.sleep(2)
             else:
                 return False
@@ -411,9 +411,9 @@ async def send_wechat(
     return False
 
 
-# —— 微信推送专用格式化工具 ——
+# —— 企业微信推送专用格式化工具 ——
 
-def _fmt_tickers_wechat(tickers: list[str], max_display: int = 6) -> str:
+def _fmt_tickers_wecom(tickers: list[str], max_display: int = 6) -> str:
     """紧凑标的展示，超出显示 +N"""
     if not tickers:
         return ""
@@ -511,7 +511,7 @@ def _extract_event_time(ev: Event, event_items: list[Item]) -> str:
     return _fmt_time_hkt(best)
 
 
-def format_wechat_alert(
+def format_wecom_alert(
     new_events: list[Event],
     updated_events: list[Event],
     all_active_events: list[Event],
@@ -519,7 +519,7 @@ def format_wechat_alert(
     site_url: str = "",
     items: list[Item] | None = None,
 ) -> tuple[str, str]:
-    """格式化微信推送（WeChat-first 移动端优化），返回 (title, content)
+    """格式化企业微信推送（移动端优化），返回 (title, content)
 
     设计原则（手机屏幕优先）:
     - 第一屏：本期摘要 → 快速掌握全局
@@ -645,7 +645,7 @@ def format_wechat_alert(
             # 第一行：时间 + 序号 + 标题 + 标的重要性
             time_part = f"`{ev_time}`" if ev_time else ""
             lines.append(f"{time_part} {i}. {flag} **{_clip(ev.title or '', 60)}**")
-            lines.append(f"重要性 {ev.significance}/10 · {ev.source_count} 来源{_fmt_tickers_wechat(ev.tickers, max_display=6)}")
+            lines.append(f"重要性 {ev.significance}/10 · {ev.source_count} 来源{_fmt_tickers_wecom(ev.tickers, max_display=6)}")
 
             # 第二行：摘要
             summary = _clip(ev.summary or "", 200)
@@ -685,7 +685,7 @@ def format_wechat_alert(
             time_part = f"`{ev_time}`" if ev_time else ""
             lines.append(f"{time_part} {i}. **{_clip(ev.title or '', 60)}**")
             source_note = f"+{new_sources_in_run} 新来源" if new_sources_in_run else ""
-            lines.append(f"重要性 {ev.significance}/10 · {ev.source_count} 来源{_fmt_tickers_wechat(ev.tickers, max_display=6)} {source_note}")
+            lines.append(f"重要性 {ev.significance}/10 · {ev.source_count} 来源{_fmt_tickers_wecom(ev.tickers, max_display=6)} {source_note}")
 
             summary = _clip(ev.summary or "", 180)
             if summary:
@@ -793,53 +793,53 @@ def format_wechat_alert(
     return title, content
 
 
-async def send_wechat_brief(
+async def send_wecom_brief(
     title: str,
     brief_md: str,
     issue_url: str = "",
     site_url: str = "",
 ) -> bool:
-    """推送晨报到微信
+    """推送晨报到企业微信
 
-    将晨报 Markdown 包装成适合微信 PushPlus 的格式并发送。
+    将晨报 Markdown 包装成适合企业微信机器人的格式并发送。
     """
     content = f"# {title}\n\n{brief_md}"
     if issue_url:
         content += f"\n\n---\n[查看 Issue]({issue_url}) | [实时看板]({site_url})"
     elif site_url:
         content += f"\n\n---\n[实时看板]({site_url})"
-    return await send_wechat(title, content)
+    return await send_wecom(title, content)
 
 
-def should_wechat_alert(
+def should_wecom_alert(
     new_events: list[Event],
     updated_events: list[Event],
     situation: Optional[Situation],
     cfg: dict,
 ) -> bool:
-    """判断是否需要推送微信（与 Telegram 相同逻辑，独立状态）"""
-    wechat_cfg = cfg.get("channels", {}).get("wechat", {})
+    """判断是否需要推送企业微信（与 Telegram 相同逻辑，独立状态）"""
+    wecom_cfg = cfg.get("channels", {}).get("wecom", {})
 
-    threshold = wechat_cfg.get("notify_new_event_threshold", 7)
+    threshold = wecom_cfg.get("notify_new_event_threshold", 7)
     for ev in new_events:
         if ev.significance >= threshold and ev.source_count <= 3:
             return True
 
-    notify_update = wechat_cfg.get("notify_direction_flip", True)
+    notify_update = wecom_cfg.get("notify_direction_flip", True)
     if notify_update and updated_events:
         for ev in updated_events:
             if ev.significance >= threshold:
                 return True
 
     # 兜底推送间隔
-    if situation and situation.last_wechat_digest_at:
+    if situation and situation.last_wecom_digest_at:
         try:
             from datetime import datetime, timezone
             last = datetime.fromisoformat(
-                situation.last_wechat_digest_at.replace("Z", "+00:00")
+                situation.last_wecom_digest_at.replace("Z", "+00:00")
             )
             now = datetime.now(timezone.utc)
-            interval = wechat_cfg.get("digest_interval_hours", 2)
+            interval = wecom_cfg.get("digest_interval_hours", 2)
             if (now - last).total_seconds() >= interval * 3600:
                 return True
         except Exception:

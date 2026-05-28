@@ -181,7 +181,7 @@ channels:
     notify_new_event_threshold: 7
     notify_direction_flip: true
     digest_interval_hours: 1
-  wechat:
+  wecom:
     enabled: true
     notify_new_event_threshold: 7
     notify_direction_flip: true

@@ -41,7 +41,7 @@ from radar.render import (
 from radar.publish import (
     create_daily_issue, send_telegram, format_telegram_alert,
     update_readme, should_telegram_alert,
-    send_wechat, send_wechat_brief, format_wechat_alert, should_wechat_alert,
+    send_wecom, send_wecom_brief, format_wecom_alert, should_wecom_alert,
 )
 
 logger = logging.getLogger("radar")
@@ -313,22 +313,22 @@ async def run_full(cfg: dict) -> None:
         write_dashboard(today_items, active_events, sit, site_url, window_hours=w, half_life_hours=half_life)
         write_ticker_pages(today_items, active_events, site_url, window_hours=w)
 
-        # 微信兜底推送（即使没有新条目，也按间隔推送当前态势）
-        wx_cfg = cfg.get("channels", {}).get("wechat", {})
+        # 企业微信兜底推送（即使没有新条目，也按间隔推送当前态势）
+        wx_cfg = cfg.get("channels", {}).get("wecom", {})
         if wx_cfg.get("enabled", False) and sit:
             try:
-                if should_wechat_alert([], [], sit, cfg):
+                if should_wecom_alert([], [], sit, cfg):
                     all_ev = list(today_events.values())
-                    wx_title, wx_content = format_wechat_alert(
+                    wx_title, wx_content = format_wecom_alert(
                         new_events=[], updated_events=[],
                         all_active_events=all_ev, situation=sit, site_url=site_url,
                     )
-                    if await send_wechat(wx_title, wx_content):
+                    if await send_wecom(wx_title, wx_content):
                         from radar.models import utcnow_iso
-                        sit.last_wechat_digest_at = utcnow_iso()
+                        sit.last_wecom_digest_at = utcnow_iso()
                         save_situation(sit)
             except Exception as e:
-                logger.error(f"WeChat fallback push failed: {e}")
+                logger.error(f"WeCom fallback push failed: {e}")
 
         return
     # ================================================================
@@ -355,22 +355,22 @@ async def run_full(cfg: dict) -> None:
             write_ticker_pages([], active_events, site_url, window_hours=w)
             logger.info("No items passed triage — rendered existing state")
 
-            # 微信兜底推送（即使没有通过筛选的条目，也按间隔推送当前态势）
-            wx_cfg = cfg.get("channels", {}).get("wechat", {})
+            # 企业微信兜底推送（即使没有通过筛选的条目，也按间隔推送当前态势）
+            wx_cfg = cfg.get("channels", {}).get("wecom", {})
             if wx_cfg.get("enabled", False) and sit:
                 try:
-                    if should_wechat_alert([], [], sit, cfg):
+                    if should_wecom_alert([], [], sit, cfg):
                         all_ev = list(today_events.values())
-                        wx_title, wx_content = format_wechat_alert(
+                        wx_title, wx_content = format_wecom_alert(
                             new_events=[], updated_events=[],
                             all_active_events=all_ev, situation=sit, site_url=site_url,
                         )
-                        if await send_wechat(wx_title, wx_content):
+                        if await send_wecom(wx_title, wx_content):
                             from radar.models import utcnow_iso
-                            sit.last_wechat_digest_at = utcnow_iso()
+                            sit.last_wecom_digest_at = utcnow_iso()
                             save_situation(sit)
                 except Exception as e:
-                    logger.error(f"WeChat fallback push failed: {e}")
+                    logger.error(f"WeCom fallback push failed: {e}")
 
             # 条目标记为已见（即使未通过筛选），避免后续轮次重复 LLM 调用
             dedup = DedupStore()
@@ -524,10 +524,10 @@ async def run_full(cfg: dict) -> None:
                             tg_brief = tg_brief[:3950] + "\n\n[...完整版见 Issue]"
                         await _send_tg(tg_brief, parse_mode="Markdown")
 
-                        # 同时推送晨报到微信
-                        if channels.get("wechat", {}).get("enabled", False):
+                        # 同时推送晨报到企业微信
+                        if channels.get("wecom", {}).get("enabled", False):
                             wx_title = f"AI 投研雷达 · 晨报 · {today_str_hkt}"
-                            await send_wechat_brief(wx_title, brief_md, issue_url, site_url)
+                            await send_wecom_brief(wx_title, brief_md, issue_url, site_url)
 
                         sit.morning_brief_date = today_str_hkt
                         save_situation(sit)
@@ -563,15 +563,15 @@ async def run_full(cfg: dict) -> None:
             except Exception as e:
                 logger.error(f"Telegram push failed: {e}")
 
-        # 微信智能推送（PushPlus）
-        wx_cfg = channels.get("wechat", {})
+        # 企业微信智能推送（群机器人 Webhook）
+        wx_cfg = channels.get("wecom", {})
         if wx_cfg.get("enabled", False):
             try:
-                if should_wechat_alert(
+                if should_wecom_alert(
                     new_events_list, updated_events_list, sit, cfg
                 ):
                     all_events_list = list(updated_events.values())
-                    wx_title, wx_content = format_wechat_alert(
+                    wx_title, wx_content = format_wecom_alert(
                         new_events=new_events_list,
                         updated_events=updated_events_list,
                         all_active_events=all_events_list,
@@ -579,13 +579,13 @@ async def run_full(cfg: dict) -> None:
                         site_url=site_url,
                         items=clustered_items,
                     )
-                    if await send_wechat(wx_title, wx_content):
+                    if await send_wecom(wx_title, wx_content):
                         if sit:
                             from radar.models import utcnow_iso
-                            sit.last_wechat_digest_at = utcnow_iso()
+                            sit.last_wecom_digest_at = utcnow_iso()
                             save_situation(sit)
             except Exception as e:
-                logger.error(f"WeChat push failed: {e}")
+                logger.error(f"WeCom push failed: {e}")
 
     finally:
         await client.close()
