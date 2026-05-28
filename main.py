@@ -280,6 +280,26 @@ def _reapply_event_ttl(events: dict, ttl_hours: int) -> None:
         logger.info(f"Cold path TTL cleanup: {changed} events marked resolved")
 
 
+async def _wecom_fallback_push(sit, today_events: dict, site_url: str, cfg: dict) -> None:
+    """企业微信兜底推送：无新条目时按间隔推送当前态势"""
+    wx_cfg = cfg.get("channels", {}).get("wecom", {})
+    if not wx_cfg.get("enabled", False) or not sit:
+        return
+    try:
+        if should_wecom_alert([], [], sit, cfg):
+            all_ev = list(today_events.values())
+            card = format_wecom_alert(
+                new_events=[], updated_events=[],
+                all_active_events=all_ev, situation=sit, site_url=site_url,
+            )
+            if await send_wecom_news([card]):
+                from radar.models import utcnow_iso
+                sit.last_wecom_digest_at = utcnow_iso()
+                save_situation(sit)
+    except Exception as e:
+        logger.error(f"WeCom fallback push failed: {e}")
+
+
 async def run_full(cfg: dict) -> None:
     """M4+: 完整管道 → 采集+处理+聚类+态势+渲染+分发"""
     global _run_count
@@ -314,22 +334,7 @@ async def run_full(cfg: dict) -> None:
         write_dashboard(today_items, active_events, sit, site_url, window_hours=w, half_life_hours=half_life)
         write_ticker_pages(today_items, active_events, site_url, window_hours=w)
 
-        # 企业微信兜底推送（即使没有新条目，也按间隔推送当前态势）
-        wx_cfg = cfg.get("channels", {}).get("wecom", {})
-        if wx_cfg.get("enabled", False) and sit:
-            try:
-                if should_wecom_alert([], [], sit, cfg):
-                    all_ev = list(today_events.values())
-                    card = format_wecom_alert(
-                        new_events=[], updated_events=[],
-                        all_active_events=all_ev, situation=sit, site_url=site_url,
-                    )
-                    if await send_wecom_news([card]):
-                        from radar.models import utcnow_iso
-                        sit.last_wecom_digest_at = utcnow_iso()
-                        save_situation(sit)
-            except Exception as e:
-                logger.error(f"WeCom fallback push failed: {e}")
+        await _wecom_fallback_push(sit, today_events, site_url, cfg)
 
         return
     # ================================================================
@@ -356,22 +361,7 @@ async def run_full(cfg: dict) -> None:
             write_ticker_pages([], active_events, site_url, window_hours=w)
             logger.info("No items passed triage — rendered existing state")
 
-            # 企业微信兜底推送（即使没有通过筛选的条目，也按间隔推送当前态势）
-            wx_cfg = cfg.get("channels", {}).get("wecom", {})
-            if wx_cfg.get("enabled", False) and sit:
-                try:
-                    if should_wecom_alert([], [], sit, cfg):
-                        all_ev = list(today_events.values())
-                        card = format_wecom_alert(
-                            new_events=[], updated_events=[],
-                            all_active_events=all_ev, situation=sit, site_url=site_url,
-                        )
-                        if await send_wecom_news([card]):
-                            from radar.models import utcnow_iso
-                            sit.last_wecom_digest_at = utcnow_iso()
-                            save_situation(sit)
-                except Exception as e:
-                    logger.error(f"WeCom fallback push failed: {e}")
+            await _wecom_fallback_push(sit, today_events, site_url, cfg)
 
             # 条目标记为已见（即使未通过筛选），避免后续轮次重复 LLM 调用
             dedup = DedupStore()
@@ -507,20 +497,19 @@ async def run_full(cfg: dict) -> None:
                 schedule_hour = issue_cfg.get("schedule_hour_hkt", 7)
                 # 在目标小时 ±1h 且前半小时内触发
                 if abs(hkt_now.hour - schedule_hour) <= 1 and hkt_now.minute < 30:
-                    synthesis = sit.text if sit else ""
-                    brief_md = render_daily_brief(clustered_items, synthesis, site_url, cfg=cfg)
-                    # 日报用更长的窗口（24h）
-                    issue_url = await create_daily_issue(
-                        brief_md, issue_cfg.get("label", "晨报")
-                    )
-                    update_readme(issue_url, site_url)
-
-                    # 同时推送晨报全文到 Telegram（每天只推一次）
                     today_str_hkt = hkt_now.strftime("%Y-%m-%d")
                     if sit and sit.morning_brief_date != today_str_hkt:
+                        synthesis = sit.text if sit else ""
+                        brief_md = render_daily_brief(clustered_items, synthesis, site_url, cfg=cfg)
+                        # 日报用更长的窗口（24h）
+                        issue_url = await create_daily_issue(
+                            brief_md, issue_cfg.get("label", "晨报")
+                        )
+                        update_readme(issue_url, site_url)
+
+                        # 同时推送晨报全文到 Telegram（每天只推一次）
                         from radar.publish import send_telegram as _send_tg
                         tg_brief = f"*AI 投研雷达 · 晨报 · {today_str_hkt}*\n\n{brief_md}"
-                        # Telegram Markdown 对某些字符敏感，用 MarkdownV2 或截断处理
                         if len(tg_brief) > 4000:
                             tg_brief = tg_brief[:3950] + "\n\n[...完整版见 Issue]"
                         await _send_tg(tg_brief, parse_mode="Markdown")

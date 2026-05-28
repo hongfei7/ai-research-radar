@@ -350,10 +350,10 @@ def format_telegram_alert(
 # 企业微信推送（群机器人 Webhook）
 #
 # 设计原则（质量优先）:
-#   - 实时预警 → 多条 markdown 切分，每条约 3500 字节
-#   - 晨报     → news 图文卡片（公众号风格）
+#   - 实时预警 → news 图文卡片（公众号风格长方形链接）
+#   - 晨报     → news 图文卡片
 #   - 自动清理 WeCom 不支持的 markdown 语法
-#   - 多消息间隔 3 秒（WeCom 限制 20 条/分钟）
+#   - 单卡片设计，可扫读，≤280 字符描述
 # ================================================================
 
 import re as _re
@@ -361,7 +361,6 @@ import asyncio as _asyncio
 
 # 企业微信: markdown max 4096 字节，news max 8 条
 _WECOM_MAX_BYTES = 3500
-_WECOM_MSG_DELAY = 3.0
 
 
 def _wecom_byte_len(text: str) -> int:
@@ -419,49 +418,6 @@ async def _wecom_post(webhook_url: str, msgtype: str, data: dict) -> bool:
     return False
 
 
-# —— 单条消息 ——
-
-async def send_wecom(title: str, content: str) -> bool:
-    """发送单条 markdown 消息。title 加粗嵌入内容首行。"""
-    webhook_url = _get_wecom_env()
-    if not webhook_url:
-        logger.warning("WECOM_WEBHOOK_URL not set, skipping WeCom push")
-        return False
-
-    full = f"**{title}**\n{content}" if title else content
-    full = _sanitize_wecom_md(full)
-    full = _fit_wecom(full)
-
-    return await _wecom_post(webhook_url, "markdown", {"content": full})
-
-
-# —— 多条消息切分 ——
-
-async def send_wecom_multi(messages: list[tuple[str, str]]) -> int:
-    """发送多条 markdown 消息，每条间隔 3 秒。返回成功数。"""
-    webhook_url = _get_wecom_env()
-    if not webhook_url:
-        logger.warning("WECOM_WEBHOOK_URL not set, skipping WeCom push")
-        return 0
-
-    ok = 0
-    for i, (title, content) in enumerate(messages):
-        full = f"**{title}**\n{content}" if title else content
-        full = _sanitize_wecom_md(full)
-        full = _fit_wecom(full)
-
-        if await _wecom_post(webhook_url, "markdown", {"content": full}):
-            ok += 1
-        else:
-            logger.error(f"WeCom multi [{i + 1}/{len(messages)}] failed")
-
-        if i < len(messages) - 1:
-            await _asyncio.sleep(_WECOM_MSG_DELAY)
-
-    logger.info(f"WeCom multi: {ok}/{len(messages)} sent")
-    return ok
-
-
 # —— 公众号式图文卡片（news 类型） ——
 
 async def send_wecom_news(articles: list[dict]) -> bool:
@@ -498,13 +454,6 @@ def _fmt_tickers_wecom(tickers: list[str], max_display: int = 6) -> str:
         s += f" +{len(tickers) - max_display}"
     return f" [{s}]"
 
-
-def _fmt_direction_icon_wecom(d: str) -> str:
-    if d == "positive":
-        return "↑"
-    elif d == "negative":
-        return "↓"
-    return "→"
 
 
 def _fmt_time_hkt(iso_str: str | None) -> str:
