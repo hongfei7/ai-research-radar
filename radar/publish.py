@@ -671,8 +671,22 @@ def format_wecom_alert(
     desc_lines.append("")
     desc_lines.append(stats)
 
+    # —— 兜底：无新增/更新事件时展示当前活跃事件 TOP 5 ——
+    if not deduped_new and not deduped_upd and all_active_events:
+        top_active = sorted(
+            [e for e in all_active_events if e.is_active and e.significance >= 5],
+            key=lambda e: e.significance, reverse=True,
+        )[:5]
+        if top_active:
+            desc_lines.append("")
+            desc_lines.append("当前关注:")
+            for ev in top_active:
+                icon = _importance_icon(ev.significance)
+                tickers_str = _fmt_tickers_wecom(ev.tickers, max_display=3)
+                desc_lines.append(f"  {icon} {_clip(ev.title or '', 24)}{tickers_str} {ev.significance}/10")
+
     description = "\n".join(desc_lines)
-    description = _clip(description, 280)
+    description = _clip(description, 500)
 
     return {
         "title": card_title,
@@ -712,12 +726,12 @@ def should_wecom_alert(
     situation: Optional[Situation],
     cfg: dict,
 ) -> bool:
-    """判断是否需要推送企业微信（与 Telegram 相同逻辑，独立状态）"""
+    """判断是否需要推送企业微信"""
     wecom_cfg = cfg.get("channels", {}).get("wecom", {})
 
     threshold = wecom_cfg.get("notify_new_event_threshold", 7)
     for ev in new_events:
-        if ev.significance >= threshold and ev.source_count <= 3:
+        if ev.significance >= threshold:
             return True
 
     notify_update = wecom_cfg.get("notify_direction_flip", True)
