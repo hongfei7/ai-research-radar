@@ -93,7 +93,7 @@ def fallback_payload(kind: str, material: dict, current_time_hkt: str = "") -> D
     """
     title_prefix = {
         KIND_MORNING: "AI 首席内参",
-        KIND_WEEKLY: "观澜周末复盘",
+        KIND_WEEKLY: "Sterling 周末复盘",
         KIND_BREAKING: "首席快报",
     }[kind]
 

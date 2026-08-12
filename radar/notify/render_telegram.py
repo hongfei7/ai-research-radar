@@ -14,8 +14,8 @@ logger = logging.getLogger(__name__)
 MAX_CHARS = 4096
 
 _DEFAULT_BRAND = {
-    "institute": "观澜研究院",
-    "analyst": "沈砚舟",
+    "institute": "Sterling 证券研究",
+    "analyst": "张灏铭 Haoming Zhang",
     "analyst_title": "TMT 首席分析师",
 }
 

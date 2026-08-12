@@ -83,7 +83,7 @@ async def _execute_task(
             issue_title = f"AI 首席内参 · {today_str()}"
         else:
             issue_label = "周报"
-            issue_title = f"观澜周末复盘 · {task.slot_key}"
+            issue_title = f"Sterling 周末复盘 · {task.slot_key}"
         issue_url = await transport.find_today_issue(issue_title, label=issue_label) or ""
         if not issue_url:
             body = render_issue_body(payload, site_url, material=material,

@@ -7,8 +7,8 @@ GitHub Issue 支持完整 markdown。正文与推送同稿; 末尾附数据附�
 from radar.notify.types import DigestPayload, KIND_BREAKING
 
 _DEFAULT_BRAND = {
-    "institute": "观澜研究院",
-    "analyst": "沈砚舟",
+    "institute": "Sterling 证券研究",
+    "analyst": "张灏铭 Haoming Zhang",
     "analyst_title": "TMT 首席分析师",
 }
 

@@ -168,7 +168,7 @@ output:
   timezone: "Asia/Hong_Kong"
 
 # ============================================================
-# 推送子系统 —— 观澜研究院 · AI 首席内参
+# 推送子系统 —— Sterling 证券研究 · AI 首席内参
 # 产品: 每日内参(07:00) / 首席快报(即时) / 周末复盘(周日 20:00)
 # use_legacy=true 期间走旧 publish.py 路径, 新系统完全不生效
 # ============================================================
@@ -177,8 +177,8 @@ notify:
   use_legacy: false             # 灰度开关: true=旧路径, false=新 notify 子系统
   max_messages_per_run: 6       # 每轮 WeCom 消息总预算(快报优先)
   brand:                        # 虚构投行研究所 + 首席人设(写入各渠道报头)
-    institute: "观澜研究院"
-    analyst: "沈砚舟"
+    institute: "Sterling 证券研究"
+    analyst: "张灏铭 Haoming Zhang"
     analyst_title: "TMT 首席分析师"
   morning:                      # 每日内参(旗舰), 每日一次
     enabled: true

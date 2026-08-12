@@ -19,7 +19,7 @@ from radar.notify.copywriter import fallback_payload
 
 HKT = ZoneInfo("Asia/Hong_Kong")
 
-BRAND = {"institute": "观澜研究院", "analyst": "沈砚舟", "analyst_title": "TMT 首席分析师"}
+BRAND = {"institute": "Sterling 证券研究", "analyst": "张灏铭 Haoming Zhang", "analyst_title": "TMT 首席分析师"}
 
 
 def _cfg():
@@ -99,8 +99,8 @@ def test_wecom_oversize_single_block_splits():
 
 def test_wecom_brand_header():
     msgs = render_wecom.render(_daily_payload(1, 1), site_url="https://example.com", brand=BRAND)
-    assert "观澜研究院 | AI 首席内参" in msgs[0]
-    assert "沈砚舟" in msgs[0]
+    assert "Sterling 证券研究 | AI 首席内参" in msgs[0]
+    assert "张灏铭" in msgs[0]
 
 
 def test_wecom_zero_metadata_style():
@@ -148,7 +148,7 @@ def test_telegram_html_escaping():
 def test_telegram_full_text_daily():
     """日报 TG 版带全文(不再只截取核心观点)"""
     msg = render_telegram.render(_daily_payload(2, 1), site_url="https://example.com", brand=BRAND)
-    assert "观澜研究院" in msg and "今日议程" in msg
+    assert "Sterling 证券研究" in msg and "今日议程" in msg
 
 
 # ================================================================
