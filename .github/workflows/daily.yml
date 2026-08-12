@@ -1,7 +1,7 @@
 name: radar-scan
 on:
   schedule:
-    - cron: "*/30 * * * *"        # 每 30 分钟（首跑需手动触发建立 seen.db）
+    - cron: "*/15 * * * *"        # 每 15 分钟（抓重要事件），兜底在 :40 每 2 小时推送
   workflow_dispatch:
 concurrency:
   group: radar-scan               # 防止重叠运行，新触发会排队
@@ -30,18 +30,25 @@ jobs:
         run: |
           git config user.name "radar-bot"
           git config user.email "radar-bot@users.noreply.github.com"
+          # 先提交本地变更, 再 rebase 到远端 —— 绝不能 reset --hard,
+          # 那会丢弃本轮管道对 tracked 文件(state/ pages/ README.md)的全部修改
+          git add archive/ state/ pages/ README.md docs/
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+            exit 0
+          fi
+          git commit -m "radar: $(date -u +%Y-%m-%dT%H:%M)"
           pushed=0
           for i in 1 2 3; do
             git fetch origin main
-            git reset --hard origin/main
-            git add archive/ state/ pages/ README.md
-            if git diff --cached --quiet; then
-              echo "nothing to commit"
-              pushed=1; break
-            fi
-            git commit -m "radar: $(date -u +%Y-%m-%dT%H:%M)"
-            if git push; then
-              pushed=1; break
+            # -X theirs: rebase 语义中 theirs = 正在回放的本地提交,
+            # 冲突时优先本地(本轮管道产物最新), 避免人工介入
+            if git rebase -X theirs origin/main; then
+              if git push; then
+                pushed=1; break
+              fi
+            else
+              git rebase --abort
             fi
             echo "push failed (attempt $i), retrying after 5s..."
             sleep 5
