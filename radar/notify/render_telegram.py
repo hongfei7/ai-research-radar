@@ -32,8 +32,13 @@ def _call_parts(payload: DigestPayload, src_map: dict) -> list[str]:
         parts.append("\n<b>格局</b>")
         if macro.cycle:
             parts.append(f"周期位置：{_esc(macro.cycle)}")
-        if macro.constraint:
-            parts.append(f"当前主约束：{_esc(macro.constraint)}")
+        traj = macro.trajectory
+        if not traj.is_empty():
+            arc = " → ".join(s for s in [traj.past, traj.now, traj.next] if s)
+            parts.append(f"主线轨迹：{_esc(arc)}")
+            parts.append(f"当下：<b>{_esc(traj.now)}</b>")
+            if traj.trigger:
+                parts.append(f"切换信号：{_esc(traj.trigger)}")
         if macro.shift:
             label = SHIFT_LABEL.get(macro.shift_kind, "")
             parts.append(f"较上期：{_esc((label + ' — ' if label else '') + macro.shift)}")

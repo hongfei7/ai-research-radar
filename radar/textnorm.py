@@ -19,6 +19,7 @@ _SUFFIX_RE = re.compile(rf"\s*[{_SEP_CHARS}]\s*([^{_SEP_CHARS}]{{2,20}})\s*$")
 _CN_SITE_MARKERS = (
     "网", "科技", "财经", "新闻", "日报", "晚报", "时报", "周刊",
     "资讯", "财讯", "见闻", "早报", "快报", "在线", "社区",
+    "之家", "头条", "研究院", "观察",
 )
 # 中文站点全名(不含上述特征字的)
 _CN_SITE_NAMES = (
@@ -54,7 +55,10 @@ _SELF_REPEAT_RE = re.compile(r"^(.{8,}?)[\s　]*\1$", re.DOTALL)
 _WS_RE = re.compile(r"[\s　]+")
 _ASCII_RUN_RE = re.compile(r"[A-Za-z][A-Za-z0-9']*")
 
-_MIN_KEEP_LEN = 6  # 清洗后短于此长度视为清洗过度, 回退原标题
+# 清洗后短于此长度视为清洗过度, 回退原标题。
+# 中文标题信息密度高, "台积电扩产"才 5 个字, 门槛设 6 会让这类短标题的
+# 站点后缀剥不掉(实测 "测试标题-快科技" 因剩 4 字被整体回退)。
+_MIN_KEEP_LEN = 4
 
 
 def _is_site_suffix(text: str) -> bool:
@@ -126,6 +130,32 @@ def clean_title(title: str) -> str:
     if len(cleaned) < _MIN_KEEP_LEN:
         return original
     return cleaned
+
+
+# 标签页/索引页/检索结果页: 没有具体内容, 进了事件线只会变成一条无法引用的证据
+# (实测搜索返回过 ithome.com/tags/台积电 这种聚合页, 还被当成 sig 8 的事件)
+_INDEX_PATH_RE = re.compile(
+    r"/(?:tags?|topics?|category|categories|channel|column|search|list|archives?)"
+    r"(?:/|$|\?)",
+    re.IGNORECASE,
+)
+
+
+def is_index_page(url: str) -> bool:
+    """判断 URL 是否为标签页/栏目页等聚合页面(无具体内容)"""
+    if not url:
+        return True
+    from urllib.parse import urlparse
+    try:
+        parsed = urlparse(url)
+    except ValueError:
+        return False
+    if not parsed.netloc:
+        return True
+    path = parsed.path or "/"
+    if path in ("", "/"):
+        return True          # 站点首页
+    return bool(_INDEX_PATH_RE.search(path))
 
 
 def clip_sentence(text: str, max_len: int) -> str:

@@ -13,6 +13,7 @@ from radar.collectors.rss import normalize_url, make_id
 from radar.models import Item, utcnow_iso
 from radar.credibility import get_credibility as _source_cred
 from radar.utils import truncate
+from radar.textnorm import is_index_page
 
 logger = logging.getLogger(__name__)
 
@@ -113,6 +114,8 @@ class WebSearchCollector(Collector):
                 url = _extract_real_url(raw_url)
                 if not url:
                     continue
+                if is_index_page(url):
+                    continue  # 标签页/栏目页无具体内容, 无法作为证据引用
                 norm_url = normalize_url(url)
                 if norm_url in seen_urls:
                     continue
