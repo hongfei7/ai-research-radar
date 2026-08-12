@@ -217,7 +217,8 @@ class ClusterEngine:
 
         logger.info(
             f"Clustering: {len(items)} items → "
-            f"{len(events)} active events "
+            f"{sum(1 for e in events.values() if e.is_active)} active "
+            f"/ {len(events)} total events "
             f"(new: {sum(1 for it in items if it.is_new_event)}, "
             f"updated: {sum(1 for it in items if it.is_event_update)})"
         )
