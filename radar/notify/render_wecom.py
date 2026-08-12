@@ -11,7 +11,8 @@ import logging
 
 from radar.notify.assemble import sources_by_ref
 from radar.notify.brand import (
-    DEFAULT_BRAND as _DEFAULT_BRAND, alert_header, ordinal, source_label,
+    DEFAULT_BRAND as _DEFAULT_BRAND, alert_header, caveat_label, ordinal,
+    publisher_name,
 )
 from radar.notify.types import DigestPayload, DigestSection, SHIFT_LABEL, KIND_BREAKING
 
@@ -105,7 +106,7 @@ def _call_blocks(payload: DigestPayload) -> list[list[str]]:
 
 
 def _alert_blocks(payload: DigestPayload, material: dict, issue_url: str) -> list[list[str]]:
-    """快报正文: 事件句独立成段, 含义与盯什么各自加粗前缀, 末尾给可点原文"""
+    """快报正文: 事实 / 判断 / 盯什么 三段, 末尾一行报尾"""
     alert = payload.alert
     if alert is None:
         return []
@@ -113,7 +114,7 @@ def _alert_blocks(payload: DigestPayload, material: dict, issue_url: str) -> lis
     if alert.summary.strip():
         blocks.append([alert.summary.strip()])
     if alert.why.strip():
-        blocks.append([f"**含义** {alert.why.strip()}"])
+        blocks.append([f"**判断** {alert.why.strip()}"])
     if alert.watch.strip():
         blocks.append([f"**盯** {alert.watch.strip()}"])
 
@@ -121,10 +122,17 @@ def _alert_blocks(payload: DigestPayload, material: dict, issue_url: str) -> lis
     src_map = sources_by_ref(material or {})
     for src in src_map.get(alert.evidence_ref, [])[:1]:
         if src.get("url"):
-            bits = [b for b in [src.get("source", ""), source_label(src)] if b]
-            tail.append(f"[原文]({src['url']})" + (f" · {' · '.join(bits)}" if bits else ""))
+            bits = [f"[原文]({src['url']})"]
+            publisher = publisher_name(src)
+            if publisher:
+                bits.append(publisher)
+            caveat = caveat_label(src)
+            if caveat:
+                # 可信度是脚注不是正文, 压成灰字以免和判断抢注意力
+                bits.append(f'<font color="comment">{caveat}</font>')
+            tail.append(" · ".join(bits))
     if issue_url:
-        tail.append(f"[今日快报汇总]({issue_url})")
+        tail.append(f"[今日汇总]({issue_url})")
     if tail:
         blocks.append([_RULE])
         blocks.append([" · ".join(tail)])

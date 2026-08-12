@@ -578,12 +578,13 @@ def test_ticker_line_omits_neutral_arrows_and_fronts_directional():
     line = ticker_line(["中芯国际", "长电科技", "英伟达", "台积电"],
                        {"长电科技": "positive", "英伟达": "negative",
                         "中芯国际": "neutral"})
-    assert line == "长电科技 ↑ · 英伟达 ↓ · 中芯国际"
+    # 上限两个: 三个以上在手机上会折行
+    assert line == "长电科技 ↑｜英伟达 ↓"
 
 
 def test_ticker_line_without_direction_data():
     from radar.notify.brand import ticker_line
-    assert ticker_line(["英伟达", "台积电"]) == "英伟达 · 台积电"
+    assert ticker_line(["英伟达", "台积电"]) == "英伟达｜台积电"
     assert ticker_line([]) == ""
 
 
@@ -599,10 +600,13 @@ def test_breaking_wecom_layout():
     body = msgs[0]
     # 抬头两行: 品牌署名 + 标的与时间
     assert body.startswith("**Sterling 证券研究 · Ayer 首席快报**\n"
-                           "长电科技 ↑ · 英伟达 ↓ · 中芯国际 · 08月13日 09:20")
-    assert "**含义**" in body and "**盯**" in body
+                           "长电科技 ↑｜英伟达 ↓ · 08月13日 09:20")
+    assert "**判断**" in body and "**盯**" in body
+    # 采集器 id 是系统实现细节, 对读者零价值, 必须换成出版方
+    assert "web_search" not in body and "rss:" not in body
+    assert "36氪" in body
     assert "[原文](https://a.example/1)" in body
-    assert "[今日快报汇总](https://gh/issues/40)" in body
+    assert "[今日汇总](https://gh/issues/40)" in body
     # 汇总链接只出现一次(不与通用报尾重复)
     assert body.count("https://gh/issues/40") == 1
 
@@ -632,7 +636,7 @@ def test_breaking_telegram_layout():
     out = render_telegram.render(_breaking_payload(), "", "https://gh/issues/40",
                                  brand=BRAND, material=m)
     assert out.startswith("<b>Sterling 证券研究 · Ayer 首席快报</b>\n"
-                          "长电科技 ↑ · 英伟达 ↓ · 中芯国际 · 08月13日 09:20")
+                          "长电科技 ↑｜英伟达 ↓ · 08月13日 09:20")
     assert '<a href="https://a.example/1">原文</a>' in out
     assert out.count("https://gh/issues/40") == 1
 
@@ -644,3 +648,55 @@ def test_breaking_issue_body_is_lightweight():
     assert not body.startswith("#")
     assert "## 附录" not in body          # 单事件不需要单行附录
     assert "[鸿海Q4出货Vera Rubin](https://a.example/1)" in body
+
+
+def test_alert_footer_shows_publisher_not_collector_id():
+    """报尾必须报"谁发的", 不能露出 web_search / rss:36kr 这类采集器标识"""
+    from radar.notify.brand import publisher_name
+    assert publisher_name({"source": "rss:36kr"}) == "36氪"
+    assert publisher_name({"source": "arxiv:cs.AI"}) == "arXiv"
+    # 搜索类采集器没有出版方字段, 从域名反查
+    assert publisher_name(
+        {"source": "web_search", "url": "https://news.qq.com/rain/a/1"}) == "腾讯新闻"
+    # 未收录的域名退化为域名本身, 也好过 "web_search"
+    assert publisher_name(
+        {"source": "web_search", "url": "https://aichipfront.com/x"}) == "aichipfront.com"
+
+
+def test_caveat_label_only_when_informative():
+    """二手是默认值, 不该占位; 低可信是警示, 一手是加分"""
+    from radar.notify.brand import caveat_label
+    assert caveat_label({"credibility": "low"}) == "低可信"
+    assert caveat_label({"credibility": "high", "is_primary_source": True}) == "一手"
+    assert caveat_label({"credibility": "medium", "is_primary_source": False}) == ""
+
+
+def test_low_credibility_is_visually_weak_in_wecom():
+    """可信度是脚注, 不能和判断抢注意力"""
+    from radar.notify import render_wecom
+    m = _breaking_material(); m["events"] = [m["event"]]
+    m["event"]["sources"][0].update(credibility="low", is_primary_source=False)
+    body = render_wecom.render(_breaking_payload(), "", "", brand=BRAND, material=m)[0]
+    assert '<font color="comment">低可信</font>' in body
+
+
+def test_alert_budget_clips_at_sentence_boundary():
+    """prompt 写了字数上限但 LLM 会无视, 代码兜底且不切半句"""
+    from radar.notify.copywriter import _enforce_alert_budget
+    p = _breaking_payload(
+        summary="第一句话讲清楚发生了什么事情很重要。" * 6,
+        why="判断句。" * 30,
+    )
+    _enforce_alert_budget(p)
+    assert len(p.alert.summary) <= 110
+    assert len(p.alert.why) <= 80
+    # 按句号边界裁, 不留半句
+    assert p.alert.summary.endswith("。")
+
+
+def test_alert_budget_leaves_short_text_alone():
+    from radar.notify.copywriter import _enforce_alert_budget
+    p = _breaking_payload()
+    before = (p.alert.summary, p.alert.why, p.alert.watch)
+    _enforce_alert_budget(p)
+    assert (p.alert.summary, p.alert.why, p.alert.watch) == before

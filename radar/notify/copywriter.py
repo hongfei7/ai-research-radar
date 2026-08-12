@@ -95,6 +95,8 @@ async def write_digest(
             logger.warning(f"Copywriter [{kind}] dropped {dropped} unknown evidence refs")
         payload.validate(expect_calls=expect_calls, expect_reviews=expect_reviews,
                          expect_alert=expect_alert)
+        if expect_alert:
+            _enforce_alert_budget(payload)
         payload.generated_at = material.get("generated_at", "")
         logger.info(
             f"Copywriter [{kind}] ok: {len(payload.calls)} calls, "
@@ -110,6 +112,25 @@ async def write_digest(
     except Exception as e:
         logger.error(f"Copywriter [{kind}] unexpected error: {e}")
     return fallback_payload(kind, material, current_time_hkt)
+
+
+# 快报字数上限。目标 100-150 字, 超过 200 就不叫"快报"了。
+# prompt 里写了约束但 LLM 会无视, 所以在代码里兜底 —— 按句子边界裁, 不切半句。
+_ALERT_FIELD_BUDGET = {"summary": 110, "why": 80, "watch": 80}
+_ALERT_TOTAL_WARN = 200
+
+
+def _enforce_alert_budget(payload: DigestPayload) -> None:
+    alert = payload.alert
+    if alert is None:
+        return
+    for field_name, budget in _ALERT_FIELD_BUDGET.items():
+        text = getattr(alert, field_name, "")
+        if len(text) > budget:
+            setattr(alert, field_name, clip_sentence(text, budget))
+    total = len(alert.summary) + len(alert.why) + len(alert.watch)
+    if total > _ALERT_TOTAL_WARN:
+        logger.warning(f"Alert over budget: {total} chars (target 100-150)")
 
 
 def fallback_payload(kind: str, material: dict, current_time_hkt: str = "") -> DigestPayload:
