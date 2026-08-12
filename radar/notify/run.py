@@ -13,13 +13,17 @@ from radar.notify import assemble, copywriter, render_wecom, render_telegram, tr
 from radar.notify.render_issue import render_issue_body
 from radar.notify.scheduler import decide, content_fingerprint, PushTask
 from radar.notify.state import load_notify_state, save_notify_state, prune_fingerprints
-from radar.notify.types import KIND_MORNING, KIND_DIGEST, KIND_BREAKING
+from radar.notify.types import KIND_MORNING, KIND_WEEKLY, KIND_BREAKING
 
 logger = logging.getLogger(__name__)
 
 
 def _themes_map(cfg: dict) -> dict:
     return {t["key"]: t["name"] for t in cfg.get("themes", [])}
+
+
+def _brand(cfg: dict) -> dict:
+    return cfg.get("notify", {}).get("brand", {})
 
 
 def _apply_message_budget(messages: list[str], budget: int,
@@ -56,14 +60,12 @@ async def _execute_task(
     if task.kind == KIND_MORNING:
         material = assemble.assemble_material(hours=24, situation=situation,
                                               themes_map=_themes_map(cfg))
-    elif task.kind == KIND_DIGEST:
-        material = assemble.assemble_material(hours=6, situation=situation,
+    elif task.kind == KIND_WEEKLY:
+        material = assemble.assemble_material(hours=168, situation=situation,
                                               themes_map=_themes_map(cfg))
-        # 空素材协议(审计 H4): 速递零事件静默
-        if not material.get("events") and not cfg.get("notify", {}).get(
-            "digest", {}
-        ).get("send_empty", False):
-            logger.info("Digest skipped: no events in window (silent)")
+        # 空素材协议: 复盘零事件静默
+        if not material.get("events"):
+            logger.info("Weekly skipped: no events in window (silent)")
             return 0, True  # 视为成功, 写入去重键避免反复评估
     else:  # breaking —— 单事件分别推送
         return await _execute_breaking(task, cfg, client, site_url, state,
@@ -73,30 +75,35 @@ async def _execute_task(
     payload = await copywriter.write_digest(task.kind, material, cfg, client,
                                             current_time_hkt=now_hkt_str)
 
-    # —— 晨报: 幂等创建 Issue 全文存档(审计 H2) ——
+    # —— 内参/复盘: 幂等创建 Issue 全文存档(审计 H2) ——
     issue_url = ""
-    if task.kind == KIND_MORNING and not dry_run:
-        issue_title = f"AI 投研雷达 · 晨报 · {today_str()}"
-        issue_url = await transport.find_today_issue(issue_title) or ""
+    if task.kind in (KIND_MORNING, KIND_WEEKLY) and not dry_run:
+        if task.kind == KIND_MORNING:
+            issue_label = "晨报"
+            issue_title = f"AI 首席内参 · {today_str()}"
+        else:
+            issue_label = "周报"
+            issue_title = f"观澜周末复盘 · {task.slot_key}"
+        issue_url = await transport.find_today_issue(issue_title, label=issue_label) or ""
         if not issue_url:
-            body = render_issue_body(payload, site_url)
-            issue_url = await transport.create_issue(
-                issue_title, body, [cfg.get("channels", {}).get(
-                    "github_issue", {}).get("label", "晨报")]
-            ) or ""
+            body = render_issue_body(payload, site_url, material=material,
+                                     brand=_brand(cfg))
+            issue_url = await transport.create_issue(issue_title, body, [issue_label]) or ""
         if issue_url:
-            logger.info(f"Morning brief issue: {issue_url}")
-            try:
-                from radar.publish import update_readme
-                update_readme(issue_url, site_url)
-            except Exception as e:
-                logger.warning(f"update_readme failed: {e}")
+            logger.info(f"Issue archived: {issue_url}")
+            if task.kind == KIND_MORNING:
+                try:
+                    from radar.publish import update_readme
+                    update_readme(issue_url, site_url)
+                except Exception as e:
+                    logger.warning(f"update_readme failed: {e}")
 
     # —— 渲染 ——
-    wecom_msgs = render_wecom.render(payload, site_url, issue_url)
+    brand = _brand(cfg)
+    wecom_msgs = render_wecom.render(payload, site_url, issue_url, brand=brand)
     wecom_msgs = _apply_message_budget(wecom_msgs, budget, payload.title,
                                        issue_url or site_url)
-    tg_msg = render_telegram.render(payload, site_url, issue_url)
+    tg_msg = render_telegram.render(payload, site_url, issue_url, brand=brand)
 
     # —— 发送 / dry-run ——
     if dry_run:
@@ -128,8 +135,8 @@ async def _execute_breaking(task, cfg, client, site_url, state,
         payload = await copywriter.write_digest(
             KIND_BREAKING, material, cfg, client, current_time_hkt=now_hkt_str
         )
-        wecom_msgs = render_wecom.render(payload, site_url)
-        tg_msg = render_telegram.render(payload, site_url)
+        wecom_msgs = render_wecom.render(payload, site_url, brand=_brand(cfg))
+        tg_msg = render_telegram.render(payload, site_url, brand=_brand(cfg))
 
         if dry_run:
             _print_dry_run(task, payload, wecom_msgs, tg_msg)
@@ -213,8 +220,8 @@ async def run(
             if success and not dry_run:
                 if task.kind == KIND_MORNING:
                     state["morning_last_date"] = task.slot_key
-                elif task.kind == KIND_DIGEST:
-                    state["digest_last_slot"] = task.slot_key
+                elif task.kind == KIND_WEEKLY:
+                    state["weekly_last_slot"] = task.slot_key
     finally:
         await client.close()
 

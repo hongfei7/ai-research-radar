@@ -55,11 +55,10 @@ def load_window_events(hours: float) -> list[Event]:
 def load_window_items(hours: float) -> list[Item]:
     """从 archive 跨日加载最近 N 小时发布的条目(按发布时间过滤)"""
     cutoff = _window_cutoff(hours)
-    now = datetime.now(timezone.utc)
     items: dict[str, Item] = {}
-    # 窗口最长 24h, 最多横跨 2 个 archive 文件(按 HKT 日期命名)
+    # archive 按 HKT 日期分文件, 窗口横跨 N 天逐个加载
     from radar.models import today_str
-    days = 2 if hours > 12 else 1
+    days = min(8, max(1, int(hours // 24) + 1))
     for d in range(days):
         date_str = today_str() if d == 0 else (
             datetime.now(timezone.utc) + timedelta(hours=8) - timedelta(days=d)

@@ -4,11 +4,11 @@ from dataclasses import dataclass, field
 
 
 # 稿件种类
-KIND_MORNING = "morning"    # 晨报(每日 07:00 HKT)
-KIND_DIGEST = "digest"      # 定时速递(12:30 / 18:00 HKT)
-KIND_BREAKING = "breaking"  # 突发快讯(即时)
+KIND_MORNING = "morning"    # 每日内参(每日 07:00 HKT, 旗舰研报)
+KIND_WEEKLY = "weekly"      # 周末复盘(周日晚)
+KIND_BREAKING = "breaking"  # 首席快报(即时)
 
-VALID_KINDS = {KIND_MORNING, KIND_DIGEST, KIND_BREAKING}
+VALID_KINDS = {KIND_MORNING, KIND_WEEKLY, KIND_BREAKING}
 
 
 @dataclass
@@ -78,7 +78,7 @@ class DigestSection:
 class DigestPayload:
     """一份完整稿件"""
 
-    kind: str = KIND_DIGEST
+    kind: str = KIND_MORNING
     title: str = ""
     headline: str = ""               # 一句话导语
     sections: list = field(default_factory=list)  # list[DigestSection]
@@ -87,7 +87,7 @@ class DigestPayload:
     fallback: bool = False           # True = LLM 失败后的兜底模板稿
 
     @classmethod
-    def from_dict(cls, d: dict, kind: str = KIND_DIGEST) -> "DigestPayload":
+    def from_dict(cls, d: dict, kind: str = KIND_MORNING) -> "DigestPayload":
         if not isinstance(d, dict):
             raise ValueError("payload is not a dict")
         sections = [DigestSection.from_dict(s) for s in (d.get("sections") or [])]

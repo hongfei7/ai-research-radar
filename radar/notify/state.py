@@ -15,9 +15,9 @@ logger = logging.getLogger(__name__)
 _STATE_PATH = Path(__file__).resolve().parent.parent.parent / "state" / "notify_state.json"
 
 _DEFAULT = {
-    "morning_last_date": "",       # 晨报当日去重键 "2026-08-12"
-    "digest_last_slot": "",        # 速递槽位去重键 "2026-08-12T12:30"
-    "breaking_fingerprints": [],   # 快讯指纹 [{tickers, features, sent_at}]
+    "morning_last_date": "",       # 每日内参当日去重键 "2026-08-12"
+    "weekly_last_slot": "",        # 周末复盘周去重键 "2026-W32"
+    "breaking_fingerprints": [],   # 快报指纹 [{tickers, features, sent_at}]
 }
 
 

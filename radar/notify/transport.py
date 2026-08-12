@@ -84,15 +84,15 @@ async def send_telegram_html(text: str) -> bool:
     return ok
 
 
-async def find_today_issue(title_prefix: str) -> Optional[str]:
-    """幂等: 查找当日已存在的晨报 Issue, 返回 URL(审计 H2)"""
+async def find_today_issue(title_prefix: str, label: str = "晨报") -> Optional[str]:
+    """幂等: 查找已存在的同题 Issue, 返回 URL(审计 H2)"""
     repo = os.environ.get("GITHUB_REPOSITORY", "")
     token = os.environ.get("GITHUB_TOKEN", "")
     api_url = os.environ.get("GITHUB_API_URL", "https://api.github.com")
     if not repo or not token:
         return None
     url = f"{api_url}/repos/{repo}/issues"
-    params = {"state": "all", "labels": "晨报", "per_page": 5}
+    params = {"state": "all", "labels": label, "per_page": 5}
     try:
         async with httpx.AsyncClient(timeout=15) as client:
             resp = await client.get(

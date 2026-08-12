@@ -63,17 +63,12 @@ def _validate(cfg: dict) -> None:
         n = cfg["notify"]
         if not isinstance(n, dict):
             raise ValueError("notify must be a dict")
-        for product in ["morning", "digest", "breaking"]:
+        for product in ["morning", "weekly", "breaking", "brand"]:
             if product in n and not isinstance(n[product], dict):
                 raise ValueError(f"notify.{product} must be a dict")
-        if "digest" in n and "slots_hkt" in n["digest"]:
-            slots = n["digest"]["slots_hkt"]
-            if not isinstance(slots, list):
-                raise ValueError("notify.digest.slots_hkt must be a list of 'HH:MM'")
-            for s in slots:
-                parts = str(s).split(":")
-                if len(parts) != 2 or not all(p.isdigit() for p in parts):
-                    raise ValueError(f"invalid notify.digest slot: {s}")
+        if "weekly" in n and "weekday" in n["weekly"]:
+            if not 0 <= int(n["weekly"]["weekday"]) <= 6:
+                raise ValueError("notify.weekly.weekday must be 0-6")
 
 
 def get_coverage_names(cfg: dict) -> list[str]:

@@ -18,7 +18,7 @@ from radar.minimax_client import MinimaxClient
 from radar.prompts import load_prompt
 from radar.notify.types import (
     DigestPayload, DigestSection, DigestItem,
-    KIND_MORNING, KIND_DIGEST, KIND_BREAKING,
+    KIND_MORNING, KIND_WEEKLY, KIND_BREAKING,
 )
 
 logger = logging.getLogger(__name__)
@@ -26,14 +26,14 @@ logger = logging.getLogger(__name__)
 _LLM_TIMEOUT_SEC = 90
 
 _PROMPT_BY_KIND = {
-    KIND_MORNING: "notify_morning",
-    KIND_DIGEST: "notify_digest",
+    KIND_MORNING: "notify_daily",
+    KIND_WEEKLY: "notify_weekly",
     KIND_BREAKING: "notify_breaking",
 }
 
 _MAX_TOKENS_BY_KIND = {
     KIND_MORNING: 4096,
-    KIND_DIGEST: 2048,
+    KIND_WEEKLY: 4096,
     KIND_BREAKING: 1024,
 }
 
@@ -87,16 +87,19 @@ async def write_digest(
 
 
 def fallback_payload(kind: str, material: dict, current_time_hkt: str = "") -> DigestPayload:
-    """兜底模板稿 —— 不用 LLM, 直接从素材拼装, 保证版式一致"""
+    """兜底模板稿 —— 不用 LLM, 直接从素材拼装, 保证版式一致
+
+    研报风降级形态: 判断性文字不够时, 用平实的事件叙述段落, 不堆砌元数据。
+    """
     title_prefix = {
-        KIND_MORNING: "AI 投研雷达 · 晨报",
-        KIND_DIGEST: "AI 投研雷达 · 速递",
-        KIND_BREAKING: "AI 投研雷达 · 快讯",
+        KIND_MORNING: "AI 首席内参",
+        KIND_WEEKLY: "观澜周末复盘",
+        KIND_BREAKING: "首席快报",
     }[kind]
 
     payload = DigestPayload(
         kind=kind,
-        title=f"{title_prefix} · {current_time_hkt}".rstrip(" ·"),
+        title=f"{title_prefix} | {current_time_hkt}".rstrip(" |"),
         headline=(material.get("situation") or "").strip(),
         generated_at=material.get("generated_at", ""),
         fallback=True,
@@ -104,34 +107,20 @@ def fallback_payload(kind: str, material: dict, current_time_hkt: str = "") -> D
 
     if kind == KIND_BREAKING:
         ev = material.get("event") or {}
-        d = ev.get("direction") or {}
-        first_dir = next(iter(d.values()), "")
+        para = ev.get("title", "")
+        if ev.get("summary"):
+            para += f"。{ev['summary']}"
         payload.headline = ""
-        payload.sections = [DigestSection(
-            heading="",
-            items=[DigestItem(
-                title=ev.get("title", ""),
-                tickers=ev.get("tickers", []),
-                direction=first_dir,
-                significance=ev.get("significance", 0),
-                summary=ev.get("summary", ""),
-                why=ev.get("deep_analysis", ""),
-            )],
-        )]
+        payload.sections = [DigestSection(heading="", paragraphs=[para])]
         return payload
 
-    # morning / digest: 事件列表按重要性平铺
-    items = []
-    for ev in (material.get("events") or [])[:10]:
-        d = ev.get("direction") or {}
-        first_dir = next(iter(d.values()), "")
-        items.append(DigestItem(
-            title=ev.get("title", ""),
-            tickers=ev.get("tickers", []),
-            direction=first_dir,
-            significance=ev.get("significance", 0),
-            summary=ev.get("summary", ""),
-        ))
-    if items:
-        payload.sections = [DigestSection(heading="要闻", items=items)]
+    # morning / weekly: 事件平铺为叙述段落(不用条目块, 保持散文形态)
+    paragraphs = []
+    for ev in (material.get("events") or [])[:8]:
+        text = ev.get("title", "")
+        if ev.get("summary"):
+            text += f"。{ev['summary']}"
+        paragraphs.append(text)
+    if paragraphs:
+        payload.sections = [DigestSection(heading="要闻回顾", paragraphs=paragraphs)]
     return payload

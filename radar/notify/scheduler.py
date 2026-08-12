@@ -1,10 +1,10 @@
 """推送调度 —— 决定本轮该发哪些产品
 
-时点模型(审计 H1): 目标时点 + 宽限期 + 当日去重键, 容忍 Actions cron 5-30min 抖动
-- 晨报: 07:00 HKT, 窗口 [06:45, 08:00], 过窗未发 → 当日补发
-- 速递: 配置槽位(默认 12:30/18:00), 宽限 45min, 过窗跳过(审计 F6)
-- 快讯: 即时, sig≥8, 每轮 ≤3 条, 溢出并入下一轮快讯评估(审计 F4)
-- 静默(HKT 01:00-07:00): 仅快讯 sig≥9 可破例; 晨报/速递不受约束(审计 M3)
+时点模型(审计 H1): 目标时点 + 宽限期 + 去重键, 容忍 Actions cron 5-30min 抖动
+- 每日内参: 07:00 HKT, 窗口 [06:45, 08:00], 过窗未发 → 当日补发
+- 周末复盘: 周日 20:00 HKT(可配), 按 ISO 周去重
+- 首席快报: 即时, sig≥8, 每轮 ≤3 条, 溢出并入下一轮快报评估(审计 F4)
+- 静默(HKT 01:00-07:00): 仅快报 sig≥9 可破例; 内参/复盘不受约束(审计 M3)
 
 快讯防重(审计 S3+F9): 内容签名 = 主 ticker 集合 + 首条原始条目标题 bigram,
 冷却期内 Jaccard≥阈值判重(不用 event_id —— 6h TTL 重建后不稳定;
@@ -128,24 +128,24 @@ def _check_morning(cfg: dict, state: dict, now: datetime) -> Optional[PushTask]:
     return None
 
 
-def _check_digest(cfg: dict, state: dict, now: datetime) -> Optional[PushTask]:
-    d_cfg = cfg.get("notify", {}).get("digest", {})
-    if not d_cfg.get("enabled", True):
+def _check_weekly(cfg: dict, state: dict, now: datetime) -> Optional[PushTask]:
+    """周末复盘: 默认周日 20:00 HKT, 窗口 [19:45, 当日 23:59], 按 ISO 周去重"""
+    w_cfg = cfg.get("notify", {}).get("weekly", {})
+    if not w_cfg.get("enabled", True):
         return None
-    grace = d_cfg.get("grace_min", 45)
-    for slot in d_cfg.get("slots_hkt", ["12:30", "18:00"]):
-        try:
-            hh, mm = slot.split(":")
-            slot_dt = now.replace(hour=int(hh), minute=int(mm), second=0, microsecond=0)
-        except Exception:
-            continue
-        slot_key = f"{now.strftime('%Y-%m-%d')}T{slot}"
-        if state.get("digest_last_slot") == slot_key:
-            continue
-        if slot_dt <= now <= slot_dt + timedelta(minutes=grace):
-            return PushTask(kind="digest", slot_key=slot_key, reason=f"速递槽位 {slot}")
-        # 过窗跳过, 不补发(审计 F6)
-    return None
+    weekday = w_cfg.get("weekday", 6)  # 0=周一 ... 6=周日
+    if now.weekday() != weekday:
+        return None
+    hour = w_cfg.get("hour_hkt", 20)
+    before = w_cfg.get("window_before_min", 15)
+    target = now.replace(hour=hour, minute=0, second=0, microsecond=0)
+    if now < target - timedelta(minutes=before):
+        return None
+    iso_year, iso_week, _ = now.isocalendar()
+    slot_key = f"{iso_year}-W{iso_week:02d}"
+    if state.get("weekly_last_slot") == slot_key:
+        return None
+    return PushTask(kind="weekly", slot_key=slot_key, reason="周末复盘窗口")
 
 
 def _check_breaking(cfg: dict, state: dict, now: datetime,
@@ -198,7 +198,7 @@ def decide(
     items_by_event: dict,
     now: Optional[datetime] = None,
 ) -> list[PushTask]:
-    """返回本轮应执行的推送任务, 按优先级排序: 快讯 > 晨报 > 速递"""
+    """返回本轮应执行的推送任务, 按优先级排序: 快报 > 内参 > 复盘"""
     if now is None:
         now = _now_hkt()
     tasks: list[PushTask] = []
@@ -211,9 +211,9 @@ def decide(
     if morning:
         tasks.append(morning)
 
-    digest = _check_digest(cfg, state, now)
-    if digest:
-        tasks.append(digest)
+    weekly = _check_weekly(cfg, state, now)
+    if weekly:
+        tasks.append(weekly)
 
     if tasks:
         logger.info(f"Notify decide: {[(t.kind, t.reason) for t in tasks]}")
