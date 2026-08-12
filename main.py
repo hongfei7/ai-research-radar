@@ -302,176 +302,264 @@ async def _wecom_fallback_push(sit, today_events: dict, site_url: str, cfg: dict
         logger.error(f"WeCom fallback push failed: {e}")
 
 
-async def run_full(cfg: dict) -> None:
-    """M4+: 完整管道 → 采集+处理+聚类+态势+渲染+分发"""
+async def _legacy_distribute(
+    cfg: dict,
+    clustered_items: list[Item],
+    new_events_list: list,
+    updated_events_list: list,
+    updated_events: dict,
+    sit,
+    site_url: str,
+) -> None:
+    """旧分发路径(灰度期保留, notify.use_legacy=true 时使用, S8 删除)"""
+    channels = cfg.get("channels", {})
+
+    # GitHub Issue + 晨报 Telegram 推送（仅日报时间）
+    issue_cfg = channels.get("github_issue", {})
+    tg_cfg = channels.get("telegram", {})
+    if issue_cfg.get("enabled", False):
+        try:
+            from zoneinfo import ZoneInfo
+            hkt_now = datetime.now(ZoneInfo("Asia/Hong_Kong"))
+            schedule_hour = issue_cfg.get("schedule_hour_hkt", 7)
+            # 在目标小时 ±1h 且前半小时内触发
+            if abs(hkt_now.hour - schedule_hour) <= 1 and hkt_now.minute < 30:
+                today_str_hkt = hkt_now.strftime("%Y-%m-%d")
+                if sit and sit.morning_brief_date != today_str_hkt:
+                    synthesis = sit.text if sit else ""
+                    brief_md = render_daily_brief(clustered_items, synthesis, site_url, cfg=cfg)
+                    # 日报用更长的窗口（24h）
+                    issue_url = await create_daily_issue(
+                        brief_md, issue_cfg.get("label", "晨报")
+                    )
+                    update_readme(issue_url, site_url)
+
+                    # 同时推送晨报全文到 Telegram（每天只推一次）
+                    from radar.publish import send_telegram as _send_tg
+                    tg_brief = f"*AI 投研雷达 · 晨报 · {today_str_hkt}*\n\n{brief_md}"
+                    if len(tg_brief) > 4000:
+                        tg_brief = tg_brief[:3950] + "\n\n[...完整版见 Issue]"
+                    await _send_tg(tg_brief, parse_mode="Markdown")
+
+                    # 同时推送晨报到企业微信
+                    if channels.get("wecom", {}).get("enabled", False):
+                        wx_title = f"AI 投研雷达 · 晨报 · {today_str_hkt}"
+                        await send_wecom_brief(wx_title, brief_md, issue_url, site_url)
+
+                    sit.morning_brief_date = today_str_hkt
+                    save_situation(sit)
+        except Exception as e:
+            logger.error(f"Daily brief / issue failed: {e}")
+
+    # Telegram 智能推送
+    if tg_cfg.get("enabled", False):
+        try:
+            if should_telegram_alert(
+                new_events_list, updated_events_list, sit, cfg
+            ):
+                # 本轮新增的条目（is_new_event 或 is_event_update）
+                new_items_this_run = [
+                    it for it in clustered_items
+                    if it.is_new_event or it.is_event_update
+                ]
+                all_events_list = list(updated_events.values())
+                alert_text = format_telegram_alert(
+                    new_events=new_events_list,
+                    updated_events=updated_events_list,
+                    all_active_events=all_events_list,
+                    new_items=new_items_this_run,
+                    situation=sit,
+                    site_url=site_url,
+                )
+                if await send_telegram(alert_text):
+                    # 仅推送成功才更新兜底推送时间
+                    if sit:
+                        from radar.models import utcnow_iso
+                        sit.last_telegram_digest_at = utcnow_iso()
+                        save_situation(sit)
+        except Exception as e:
+            logger.error(f"Telegram push failed: {e}")
+
+    # 企业微信智能推送（群机器人 Webhook）
+    wx_cfg = channels.get("wecom", {})
+    if wx_cfg.get("enabled", False):
+        try:
+            if should_wecom_alert(
+                new_events_list, updated_events_list, sit, cfg
+            ):
+                all_events_list = list(updated_events.values())
+                max_n = wx_cfg.get("notify_max_new_events", 6)
+                card = format_wecom_alert(
+                    new_events=new_events_list,
+                    updated_events=updated_events_list,
+                    all_active_events=all_events_list,
+                    situation=sit,
+                    site_url=site_url,
+                    items=clustered_items,
+                    max_new_events=max_n,
+                )
+                if await send_wecom_markdown(card):
+                    if sit:
+                        from radar.models import utcnow_iso
+                        sit.last_wecom_digest_at = utcnow_iso()
+                        save_situation(sit)
+        except Exception as e:
+            logger.error(f"WeCom push failed: {e}")
+
+
+async def run_full(cfg: dict, notify_dry_run: bool = False) -> None:
+    """M4+: 完整管道 → 采集+处理+聚类+态势+渲染+分发
+
+    三条路径(无新条目/未过筛选/正常)在分发前汇合(审计 S1/F3):
+    渲染与推送不再依赖"本轮是否有新条目", 晨报/速递在低流量时段不再缺席。
+    """
     global _run_count
     _run_count += 1
 
     site_url = os.environ.get("SITE_URL", "https://USER.github.io/ai-research-radar")
     half_life = cfg["scoring"].get("time_decay", {}).get("half_life_hours", 4)
+    w = cfg["runtime"].get("rolling_window_hours", 8)
+
+    clustered_items: list[Item] = []
+    new_events_list: list = []
+    updated_events_list: list = []
+    updated_events: dict = {}
+    sit = None
+    pipeline_ran = False
 
     # ================================================================
     # Stage 1-2: 采集 + 去重
     # ================================================================
     new_items = await collect_all(cfg)
-    if not new_items:
-        logger.info("No new items — skipping processing, still rendering current state")
 
-        # 即使没有新条目，也渲染当前状态（读已有数据）
-        today_items = []
-        today_events = load_events()
-        _reapply_event_ttl(today_events, cfg["clustering"]["event_ttl_hours"])
-        save_events(today_events)
-        sit = load_situation()
-
-        all_events_list = sorted(
-            today_events.values(),
-            key=lambda e: (e.last_updated_at or "", e.significance),
-            reverse=True,
-        )
-        active_events = [e for e in all_events_list if e.is_active]
-
-        w = cfg["runtime"].get("rolling_window_hours", 8)
-        write_rss(today_items, site_url, cfg.get("channels", {}).get("rss", {}).get("max_items", 50), window_hours=w)
-        write_dashboard(today_items, active_events, sit, site_url, window_hours=w, half_life_hours=half_life)
-        write_ticker_pages(today_items, active_events, site_url, window_hours=w)
-
-        await _wecom_fallback_push(sit, today_events, site_url, cfg)
-
-        return
-    # ================================================================
     client = MinimaxClient(model=cfg["minimax"]["model"])
     try:
-        processor = Processor(client, cfg)
-        processed = await processor.process(new_items)
+        if new_items:
+            processor = Processor(client, cfg)
+            processed = await processor.process(new_items)
 
-        if not processed:
-            # 即使没有通过筛选的条目，也渲染当前已有状态
-            today_events = load_events()
-            _reapply_event_ttl(today_events, cfg["clustering"]["event_ttl_hours"])
-            save_events(today_events)
-            sit = load_situation()
-            all_events_sorted = sorted(
-                today_events.values(),
-                key=lambda e: (e.last_updated_at or "", e.significance),
-                reverse=True,
-            )
-            active_events = [e for e in all_events_sorted if e.is_active]
-            w = cfg["runtime"].get("rolling_window_hours", 8)
-            write_rss([], site_url, cfg.get("channels", {}).get("rss", {}).get("max_items", 50), window_hours=w)
-            write_dashboard([], active_events, sit, site_url, window_hours=w, half_life_hours=half_life)
-            write_ticker_pages([], active_events, site_url, window_hours=w)
-            logger.info("No items passed triage — rendered existing state")
+            if processed:
+                pipeline_ran = True
 
-            await _wecom_fallback_push(sit, today_events, site_url, cfg)
+                # Stage 2.5: 交叉综合分析 —— 每轮必跑以最大化配额使用
+                logger.info(f"Running cross-analysis on {len(processed)} items...")
+                cross_analysis_text = await processor.cross_analyze(processed)
+                if cross_analysis_text:
+                    logger.info(f"Cross-analysis complete: {len(cross_analysis_text)} chars")
+                else:
+                    logger.warning("Cross-analysis returned empty")
 
-            # 条目标记为已见（即使未通过筛选），避免后续轮次重复 LLM 调用
+                # Stage 2.6: 趋势发现 —— 每轮必跑以最大化配额使用
+                logger.info("Running trend spotting on processed items...")
+                trend_text = await processor.trend_spotting(processed)
+                if trend_text:
+                    logger.info(f"Trend spotting complete: {len(trend_text)} chars")
+                else:
+                    logger.warning("Trend spotting returned empty")
+
+                # Stage 2.7: 视觉富化 —— 高分条目配图分析（图片理解 API，配额由 config 控制）
+                logger.info("Running visual enrichment on high-score items...")
+                await processor.visual_enrich(processed)
+                visual_count = sum(1 for it in processed if it.visual_analysis)
+                if visual_count:
+                    logger.info(f"Visual enrich complete: {visual_count} items enriched")
+
+                # Stage 2.8: 反向观点分析 —— 对高分条目提供替代解读
+                logger.info("Running second opinion analysis...")
+                await processor.second_opinion(processed)
+
+                existing_events = load_events()
+                cluster_engine = ClusterEngine(client, cfg)
+                clustered_items, updated_events = await cluster_engine.cluster(
+                    processed, existing_events
+                )
+
+                # Stage 2.9: 事件深度分析 —— 对新事件做多空逻辑、驱动因素分析
+                deep_dive_eids = {it.event_id for it in clustered_items if it.is_new_event}
+                if deep_dive_eids:
+                    logger.info(f"Running event deep dive for {len(deep_dive_eids)} new events...")
+                    for eid in deep_dive_eids:
+                        event = updated_events.get(eid)
+                        if not event:
+                            continue
+                        event_items = [it for it in clustered_items if it.event_id == eid]
+                        analysis = await processor.event_deep_dive(event, event_items)
+                        if analysis:
+                            event.deep_analysis = analysis
+                    deep_dive_count = sum(1 for e in updated_events.values() if e.deep_analysis)
+                    logger.info(f"Event deep dive complete: {deep_dive_count} events analyzed")
+
+                # 统计新事件
+                new_event_count = sum(1 for it in clustered_items if it.is_new_event)
+                updated_event_count = sum(1 for it in clustered_items if it.is_event_update)
+
+                # ================================================================
+                # Stage 5: 态势更新
+                # ================================================================
+                sit_gen = SituationGenerator(client, cfg)
+                prev_sit = load_situation()
+
+                new_event_ids = {it.event_id for it in clustered_items if it.is_new_event}
+                updated_event_ids_set = {it.event_id for it in clustered_items if it.is_event_update}
+                new_events_list = [updated_events[eid] for eid in new_event_ids if eid in updated_events]
+                updated_events_list = [updated_events[eid] for eid in updated_event_ids_set if eid in updated_events]
+
+                if sit_gen.should_update(prev_sit, _run_count, new_event_count):
+                    sit = await sit_gen.generate(
+                        updated_events, clustered_items, prev_sit
+                    )
+                    if cross_analysis_text and sit:
+                        sit.cross_analysis = cross_analysis_text
+                    if trend_text and sit:
+                        sit.trend_spotting = trend_text
+                    save_situation(sit)
+                else:
+                    sit = prev_sit
+                    if cross_analysis_text and sit:
+                        sit.cross_analysis = cross_analysis_text
+                    if trend_text and sit:
+                        sit.trend_spotting = trend_text
+                    if (cross_analysis_text or trend_text) and sit:
+                        from radar.models import utcnow_iso as _now
+                        sit.generated_at = _now()
+                        save_situation(sit)
+                    logger.info("Skipping situation update (not due yet)")
+
+                # ================================================================
+                # Stage 6: 存储
+                # ================================================================
+                save_items(clustered_items)
+                save_events(updated_events)
+
+                logger.info(
+                    f"Pipeline: {len(new_items)} new → "
+                    f"{len(processed)} processed → "
+                    f"{len(updated_events)} events "
+                    f"(new: {new_event_count}, updated: {updated_event_count})"
+                )
+            else:
+                logger.info("No items passed triage — rendering existing state")
+
+            # 将所有抓取的条目标记为已见（即使未通过筛选），避免重复 LLM 调用
             dedup = DedupStore()
             dedup.mark_seen_batch([(it.id, it.title) for it in new_items])
             dedup.close()
-
-            return
-
-        # Stage 2.5: 交叉综合分析 —— 每轮必跑以最大化配额使用
-        logger.info(f"Running cross-analysis on {len(processed)} items...")
-        cross_analysis_text = await processor.cross_analyze(processed)
-        if cross_analysis_text:
-            logger.info(f"Cross-analysis complete: {len(cross_analysis_text)} chars")
         else:
-            logger.warning("Cross-analysis returned empty")
-
-        # Stage 2.6: 趋势发现 —— 每轮必跑以最大化配额使用
-        logger.info("Running trend spotting on processed items...")
-        trend_text = await processor.trend_spotting(processed)
-        if trend_text:
-            logger.info(f"Trend spotting complete: {len(trend_text)} chars")
-        else:
-            logger.warning("Trend spotting returned empty")
-
-        # Stage 2.7: 视觉富化 —— 高分条目配图分析（图片理解 API，配额由 config 控制）
-        logger.info("Running visual enrichment on high-score items...")
-        await processor.visual_enrich(processed)
-        visual_count = sum(1 for it in processed if it.visual_analysis)
-        if visual_count:
-            logger.info(f"Visual enrich complete: {visual_count} items enriched")
-
-        # Stage 2.8: 反向观点分析 —— 对高分条目提供替代解读
-        logger.info("Running second opinion analysis...")
-        await processor.second_opinion(processed)
-
-        existing_events = load_events()
-        cluster_engine = ClusterEngine(client, cfg)
-        clustered_items, updated_events = await cluster_engine.cluster(
-            processed, existing_events
-        )
-
-        # Stage 2.9: 事件深度分析 —— 对新事件做多空逻辑、驱动因素分析
-        deep_dive_eids = {it.event_id for it in clustered_items if it.is_new_event}
-        if deep_dive_eids:
-            logger.info(f"Running event deep dive for {len(deep_dive_eids)} new events...")
-            for eid in deep_dive_eids:
-                event = updated_events.get(eid)
-                if not event:
-                    continue
-                event_items = [it for it in clustered_items if it.event_id == eid]
-                analysis = await processor.event_deep_dive(event, event_items)
-                if analysis:
-                    event.deep_analysis = analysis
-            deep_dive_count = sum(1 for e in updated_events.values() if e.deep_analysis)
-            logger.info(f"Event deep dive complete: {deep_dive_count} events analyzed")
-
-        # 统计新事件
-        new_event_count = sum(1 for it in clustered_items if it.is_new_event)
-        updated_event_count = sum(1 for it in clustered_items if it.is_event_update)
+            logger.info("No new items — rendering current state")
 
         # ================================================================
-        # Stage 5: 态势更新
+        # 三路汇合: 统一状态加载(管道未跑时从存储读取 + TTL 清理)
         # ================================================================
-        sit_gen = SituationGenerator(client, cfg)
-        prev_sit = load_situation()
-
-        new_event_ids = {it.event_id for it in clustered_items if it.is_new_event}
-        updated_event_ids_set = {it.event_id for it in clustered_items if it.is_event_update}
-        new_events_list = [updated_events[eid] for eid in new_event_ids if eid in updated_events]
-        updated_events_list = [updated_events[eid] for eid in updated_event_ids_set if eid in updated_events]
-
-        if sit_gen.should_update(prev_sit, _run_count, new_event_count):
-            sit = await sit_gen.generate(
-                updated_events, clustered_items, prev_sit
-            )
-            if cross_analysis_text and sit:
-                sit.cross_analysis = cross_analysis_text
-            if trend_text and sit:
-                sit.trend_spotting = trend_text
-            save_situation(sit)
-        else:
-            sit = prev_sit
-            if cross_analysis_text and sit:
-                sit.cross_analysis = cross_analysis_text
-            if trend_text and sit:
-                sit.trend_spotting = trend_text
-            if cross_analysis_text or trend_text:
-                from radar.models import utcnow_iso as _now
-                sit.generated_at = _now()
-                save_situation(sit)
-            logger.info("Skipping situation update (not due yet)")
+        if not pipeline_ran:
+            updated_events = load_events()
+            _reapply_event_ttl(updated_events, cfg["clustering"]["event_ttl_hours"])
+            save_events(updated_events)
+            sit = load_situation()
 
         # ================================================================
-        # Stage 6: 存储
-        # ================================================================
-        save_items(clustered_items)
-        save_events(updated_events)
-
-        # 将所有抓取的条目标记为已见（即使未通过筛选）
-        dedup = DedupStore()
-        dedup.mark_seen_batch([(it.id, it.title) for it in new_items])
-        dedup.close()
-
-        # ================================================================
-        # Stage 7: 渲染
+        # Stage 7: 统一渲染
         # ================================================================
         rss_config = cfg.get("channels", {}).get("rss", {})
-        w = cfg["runtime"].get("rolling_window_hours", 8)
         write_rss(clustered_items, site_url, rss_config.get("max_items", 50), window_hours=w)
 
         all_events_sorted = sorted(
@@ -482,113 +570,70 @@ async def run_full(cfg: dict) -> None:
         active_events = [e for e in all_events_sorted if e.is_active]
 
         write_dashboard(clustered_items, active_events, sit, site_url, window_hours=w, half_life_hours=half_life)
-        write_ticker_pages(clustered_items, active_events, site_url, window_hours=w)
+        write_ticker_pages(
+            clustered_items, active_events, site_url, window_hours=w,
+            canonical_names=_canonical_ticker_names(cfg),
+        )
 
         # ================================================================
-        # Stage 8: 分发
+        # Stage 8: 分发(新 notify 子系统 / 旧路径由 notify.use_legacy 切换)
         # ================================================================
-        channels = cfg.get("channels", {})
+        notify_cfg = cfg.get("notify", {})
+        use_legacy = notify_cfg.get("use_legacy", True) or not notify_cfg.get("enabled", False)
 
-        # GitHub Issue + 晨报 Telegram 推送（仅日报时间）
-        issue_cfg = channels.get("github_issue", {})
-        tg_cfg = channels.get("telegram", {})
-        if issue_cfg.get("enabled", False):
-            try:
-                from zoneinfo import ZoneInfo
-                hkt_now = datetime.now(ZoneInfo("Asia/Hong_Kong"))
-                schedule_hour = issue_cfg.get("schedule_hour_hkt", 7)
-                # 在目标小时 ±1h 且前半小时内触发
-                if abs(hkt_now.hour - schedule_hour) <= 1 and hkt_now.minute < 30:
-                    today_str_hkt = hkt_now.strftime("%Y-%m-%d")
-                    if sit and sit.morning_brief_date != today_str_hkt:
-                        synthesis = sit.text if sit else ""
-                        brief_md = render_daily_brief(clustered_items, synthesis, site_url, cfg=cfg)
-                        # 日报用更长的窗口（24h）
-                        issue_url = await create_daily_issue(
-                            brief_md, issue_cfg.get("label", "晨报")
-                        )
-                        update_readme(issue_url, site_url)
-
-                        # 同时推送晨报全文到 Telegram（每天只推一次）
-                        from radar.publish import send_telegram as _send_tg
-                        tg_brief = f"*AI 投研雷达 · 晨报 · {today_str_hkt}*\n\n{brief_md}"
-                        if len(tg_brief) > 4000:
-                            tg_brief = tg_brief[:3950] + "\n\n[...完整版见 Issue]"
-                        await _send_tg(tg_brief, parse_mode="Markdown")
-
-                        # 同时推送晨报到企业微信
-                        if channels.get("wecom", {}).get("enabled", False):
-                            wx_title = f"AI 投研雷达 · 晨报 · {today_str_hkt}"
-                            await send_wecom_brief(wx_title, brief_md, issue_url, site_url)
-
-                        sit.morning_brief_date = today_str_hkt
-                        save_situation(sit)
-            except Exception as e:
-                logger.error(f"Daily brief / issue failed: {e}")
-
-        # Telegram 智能推送
-        if tg_cfg.get("enabled", False):
-            try:
-                if should_telegram_alert(
-                    new_events_list, updated_events_list, sit, cfg
-                ):
-                    # 本轮新增的条目（is_new_event 或 is_event_update）
-                    new_items_this_run = [
-                        it for it in clustered_items
-                        if it.is_new_event or it.is_event_update
-                    ]
-                    all_events_list = list(updated_events.values())
-                    alert_text = format_telegram_alert(
-                        new_events=new_events_list,
-                        updated_events=updated_events_list,
-                        all_active_events=all_events_list,
-                        new_items=new_items_this_run,
-                        situation=sit,
-                        site_url=site_url,
-                    )
-                    if await send_telegram(alert_text):
-                        # 仅推送成功才更新兜底推送时间
-                        if sit:
-                            from radar.models import utcnow_iso
-                            sit.last_telegram_digest_at = utcnow_iso()
-                            save_situation(sit)
-            except Exception as e:
-                logger.error(f"Telegram push failed: {e}")
-
-        # 企业微信智能推送（群机器人 Webhook）
-        wx_cfg = channels.get("wecom", {})
-        if wx_cfg.get("enabled", False):
-            try:
-                if should_wecom_alert(
-                    new_events_list, updated_events_list, sit, cfg
-                ):
-                    all_events_list = list(updated_events.values())
-                    max_n = wx_cfg.get("notify_max_new_events", 6)
-                    card = format_wecom_alert(
-                        new_events=new_events_list,
-                        updated_events=updated_events_list,
-                        all_active_events=all_events_list,
-                        situation=sit,
-                        site_url=site_url,
-                        items=clustered_items,
-                        max_new_events=max_n,
-                    )
-                    if await send_wecom_markdown(card):
-                        if sit:
-                            from radar.models import utcnow_iso
-                            sit.last_wecom_digest_at = utcnow_iso()
-                            save_situation(sit)
-            except Exception as e:
-                logger.error(f"WeCom push failed: {e}")
+        if not use_legacy:
+            items_by_event: dict[str, list[Item]] = {}
+            for it in clustered_items:
+                if it.event_id:
+                    items_by_event.setdefault(it.event_id, []).append(it)
+            from radar.notify.run import run as notify_run
+            await notify_run(
+                cfg,
+                new_events=new_events_list,
+                items_by_event=items_by_event,
+                situation=sit,
+                site_url=site_url,
+                dry_run=notify_dry_run,
+            )
+        elif pipeline_ran:
+            await _legacy_distribute(
+                cfg, clustered_items, new_events_list, updated_events_list,
+                updated_events, sit, site_url,
+            )
+        else:
+            await _wecom_fallback_push(sit, updated_events, site_url, cfg)
 
     finally:
         await client.close()
 
-    logger.info(
-        f"Full pipeline done: {len(new_items)} new → "
-        f"{len(processed)} processed → "
-        f"{len(updated_events)} events "
-        f"(new: {new_event_count}, updated: {updated_event_count})"
+    logger.info("Full pipeline done")
+
+
+def _canonical_ticker_names(cfg: dict) -> dict:
+    """构建 {小写名/别名: 规范名} 映射, 用于 ticker 页面文件名归一"""
+    mapping: dict[str, str] = {}
+    for c in cfg.get("coverage", []):
+        name = c.get("name", "")
+        if not name:
+            continue
+        mapping[name.lower()] = name
+        for alias in c.get("aliases", []) or []:
+            mapping[str(alias).lower()] = name
+    return mapping
+
+
+async def run_notify_only(cfg: dict, dry_run: bool = False) -> None:
+    """仅运行推送子系统(不采集) —— 用于 dry-run 验证与手动触发"""
+    site_url = os.environ.get("SITE_URL", "https://USER.github.io/ai-research-radar")
+    sit = load_situation()
+    from radar.notify.run import run as notify_run
+    await notify_run(
+        cfg,
+        new_events=[],
+        items_by_event={},
+        situation=sit,
+        site_url=site_url,
+        dry_run=dry_run,
     )
 
 
@@ -596,12 +641,17 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="AI 投研雷达")
     parser.add_argument(
         "--stage",
-        choices=["collect", "process", "cluster", "full"],
+        choices=["collect", "process", "cluster", "full", "notify"],
         default="collect",
         help="Pipeline stage to run",
     )
     parser.add_argument("--config", type=str, help="Path to config.yaml")
     parser.add_argument("-v", "--verbose", action="store_true", help="Verbose logging")
+    parser.add_argument(
+        "--notify-dry-run",
+        action="store_true",
+        help="新推送子系统 dry-run: 生成稿件打印到 stdout, 不发送、不写状态",
+    )
     args = parser.parse_args()
 
     setup_logging(args.verbose)
@@ -616,7 +666,9 @@ def main() -> None:
     elif args.stage == "cluster":
         asyncio.run(run_cluster(cfg))
     elif args.stage == "full":
-        asyncio.run(run_full(cfg))
+        asyncio.run(run_full(cfg, notify_dry_run=args.notify_dry_run))
+    elif args.stage == "notify":
+        asyncio.run(run_notify_only(cfg, dry_run=args.notify_dry_run))
 
     logger.info("Pipeline complete")
 

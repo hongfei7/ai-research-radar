@@ -58,6 +58,23 @@ def _validate(cfg: dict) -> None:
     if "trending_topics" in cfg and not isinstance(cfg["trending_topics"], list):
         raise ValueError("trending_topics must be a list of strings")
 
+    # notify 校验（可选字段, 缺省 = 新推送子系统关闭）
+    if "notify" in cfg:
+        n = cfg["notify"]
+        if not isinstance(n, dict):
+            raise ValueError("notify must be a dict")
+        for product in ["morning", "digest", "breaking"]:
+            if product in n and not isinstance(n[product], dict):
+                raise ValueError(f"notify.{product} must be a dict")
+        if "digest" in n and "slots_hkt" in n["digest"]:
+            slots = n["digest"]["slots_hkt"]
+            if not isinstance(slots, list):
+                raise ValueError("notify.digest.slots_hkt must be a list of 'HH:MM'")
+            for s in slots:
+                parts = str(s).split(":")
+                if len(parts) != 2 or not all(p.isdigit() for p in parts):
+                    raise ValueError(f"invalid notify.digest slot: {s}")
+
 
 def get_coverage_names(cfg: dict) -> list[str]:
     """返回覆盖标的 name 列表"""

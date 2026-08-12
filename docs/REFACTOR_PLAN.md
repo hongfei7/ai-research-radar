@@ -126,6 +126,13 @@ prompts/notify_{morning,digest,breaking}.txt
 - F8 灰度双发 → §五 关停矩阵
 - F9 指纹素材漂移 → §四-P3 用首条原始标题
 
+### 实现审计（S5)✅ 已完成（2026-08-12)
+- 20 个单元测试全绿（字节预算/UTF-8 边界/二次拆分/指纹去重/调度窗口含 Actions 延迟模拟）
+- **测试抓出 2 个实现 bug**: ① `_split_oversize_block` 单行截断死循环（截断后加省略号仍超预算）;② 调度器"晨报补发"文案错别字
+- 真实数据 dry-run 全链路验证： 调度（晨报补发）→ 装配（5 条风险素材）→ LLM 失败矩阵（本地无 API key)→ 兜底稿 → 双渠道渲染，按设计工作
+- ticker 页大小写归一（config 规范名/别名映射）落地于 render.py,`ARM/Arm`、`Meta/META` 重复页已清理
+- 遗留： LLM 真实撰稿质量需灰度首日人工审查（本地无 MINIMAX_API_KEY 未实测 LLM 路径）; 指纹阈值 0.6 待真实数据校准
+
 ## 八、验证方案
 
 1. S0.5 验证： CI 跑一轮后 `git log -- state/` 出现新提交、situation.json 时间戳更新

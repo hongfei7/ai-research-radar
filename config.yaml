@@ -168,6 +168,32 @@ output:
   timezone: "Asia/Hong_Kong"
 
 # ============================================================
+# 推送子系统(重构版) —— 晨报 / 定时速递 / 突发快讯
+# use_legacy=true 期间走旧 publish.py 路径, 新系统完全不生效
+# ============================================================
+notify:
+  enabled: true
+  use_legacy: false             # 灰度开关: true=旧路径, false=新 notify 子系统
+  max_messages_per_run: 6       # 每轮 WeCom 消息总预算(快讯优先)
+  morning:                      # P1 晨报, 每日一次
+    enabled: true
+    hour_hkt: 7                 # 目标 07:00 HKT, 窗口 [06:45, 08:00], 过窗当日补发
+    window_before_min: 15
+    window_after_min: 60
+  digest:                       # P2 定时速递, 过窗跳过不补发
+    enabled: true
+    slots_hkt: ["12:30", "18:00"]
+    grace_min: 45
+    send_empty: false           # 零事件窗口静默
+  breaking:                     # P3 突发快讯
+    enabled: true
+    min_significance: 8
+    quiet_hours_breakthrough: 9 # 静默时段(01-07)仅 sig≥9 破例
+    cooldown_min: 30
+    max_per_run: 3              # 溢出并入下一轮快讯评估
+    jaccard_threshold: 0.6      # 内容签名防重阈值
+
+# ============================================================
 # 分发渠道
 # ============================================================
 channels:

@@ -190,22 +190,33 @@ def write_ticker_pages(
     events: list[Event],
     site_url: str = "",
     window_hours: int = 8,
+    canonical_names: dict | None = None,
 ) -> None:
-    """为每个标的生成独立页面（仅展示时间窗口内的条目）"""
+    """为每个标的生成独立页面（仅展示时间窗口内的条目）
+
+    canonical_names: {小写名/别名: 规范名} —— 将 LLM 输出的大小写变体/别名
+    归一到 config coverage 规范名, 避免 ARM.html/Arm.html 这类大小写重复页面
+    (在大小写不敏感文件系统上会造成 index 冲突)。
+    """
     _ensure_pages_dir()
     template = _env.get_template("ticker.html.j2")
     recent = _filter_recent(items, window_hours)
     recent_events = _filter_recent_events(events, window_hours)
 
-    # 按 ticker name 分组
+    def _canon(name: str) -> str:
+        if canonical_names:
+            return canonical_names.get(name.lower(), name)
+        return name
+
+    # 按 ticker name 分组(归一到规范名)
     ticker_items: dict[str, list[Item]] = {}
     ticker_events: dict[str, list[Event]] = {}
     for it in recent:
         for tk in it.tickers or []:
-            ticker_items.setdefault(tk, []).append(it)
+            ticker_items.setdefault(_canon(tk), []).append(it)
     for ev in recent_events:
         for tk in ev.tickers or []:
-            ticker_events.setdefault(tk, []).append(ev)
+            ticker_events.setdefault(_canon(tk), []).append(ev)
 
     for tk_name in set(list(ticker_items) + list(ticker_events)):
         html = template.render(
