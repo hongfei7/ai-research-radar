@@ -17,7 +17,7 @@ MAX_BYTES = 3800
 
 _DEFAULT_BRAND = {
     "institute": "Sterling 证券研究",
-    "analyst": "张灏铭 Haoming Zhang",
+    "analyst": "Ayer",
     "analyst_title": "TMT 首席分析师",
 }
 

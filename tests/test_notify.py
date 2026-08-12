@@ -19,7 +19,7 @@ from radar.notify.copywriter import fallback_payload
 
 HKT = ZoneInfo("Asia/Hong_Kong")
 
-BRAND = {"institute": "Sterling 证券研究", "analyst": "张灏铭 Haoming Zhang", "analyst_title": "TMT 首席分析师"}
+BRAND = {"institute": "Sterling 证券研究", "analyst": "Ayer", "analyst_title": "TMT 首席分析师"}
 
 
 def _cfg():
@@ -100,7 +100,7 @@ def test_wecom_oversize_single_block_splits():
 def test_wecom_brand_header():
     msgs = render_wecom.render(_daily_payload(1, 1), site_url="https://example.com", brand=BRAND)
     assert "Sterling 证券研究 | AI 首席内参" in msgs[0]
-    assert "张灏铭" in msgs[0]
+    assert "Ayer" in msgs[0]
 
 
 def test_wecom_zero_metadata_style():

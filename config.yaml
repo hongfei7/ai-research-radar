@@ -178,7 +178,7 @@ notify:
   max_messages_per_run: 6       # 每轮 WeCom 消息总预算(快报优先)
   brand:                        # 虚构投行研究所 + 首席人设(写入各渠道报头)
     institute: "Sterling 证券研究"
-    analyst: "张灏铭 Haoming Zhang"
+    analyst: "Ayer"
     analyst_title: "TMT 首席分析师"
   morning:                      # 每日内参(旗舰), 每日一次
     enabled: true
