@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-12T20:23:32Z",
+  "updated_at": "2026-08-12T21:22:36Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -17760,6 +17760,150 @@
         "Meta": 1,
         "博通": 1,
         "ARM": 1
+      },
+      "max_item_score": 5
+    },
+    "evt_3941f68759eb": {
+      "event_id": "evt_3941f68759eb",
+      "title": "Cisco reports Q4 revenue up 18% YoY to $17.25B, vs. $16.82B est., AI infrastructure orders from hyperscalers worth $4B, forecasts FY 2027 revenue above est. (Juby Babu/Reuters)",
+      "summary": "思科发布最新季度财报，营收172.5亿美元同比+18%，超市场预期16.82亿美元；其中来自超大规模云厂商的AI基础设施订单达40亿美元；并给出高于华尔街预期的FY2027收入指引，显示AI网络与基础设施需求强劲持续，验证头部云厂AI capex向网络设备外溢的逻辑。",
+      "tickers": [
+        "AMD",
+        "ASML",
+        "Marvell",
+        "Meta"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand",
+        "datacenter_power"
+      ],
+      "direction": {
+        "英伟达": "positive",
+        "AMD": "positive",
+        "博通": "positive",
+        "Marvell": "positive",
+        "戴尔": "neutral",
+        "超微电脑": "neutral",
+        "微软": "positive",
+        "谷歌": "positive",
+        "亚马逊": "positive",
+        "Meta": "positive",
+        "苹果": "neutral",
+        "台积电": "positive",
+        "ASML": "positive",
+        "美光": "positive"
+      },
+      "item_ids": [
+        "3fa98b76e8d550e06b5ae49efb3fc167f6859ab6"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-12T21:21:59Z",
+      "first_published_at": "2026-08-12T21:00:13Z",
+      "last_updated_at": "2026-08-12T21:21:59Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "英伟达": 1,
+        "戴尔": 1,
+        "Marvell": 1,
+        "美光": 1,
+        "亚马逊": 1,
+        "Meta": 1,
+        "超微电脑": 1,
+        "博通": 1,
+        "微软": 1,
+        "台积电": 1,
+        "ASML": 1,
+        "苹果": 1,
+        "AMD": 1,
+        "谷歌": 1
+      },
+      "max_item_score": 7
+    },
+    "evt_7a19c711f7fa": {
+      "event_id": "evt_7a19c711f7fa",
+      "title": "The White House Is Going to Expand Its AI Policy",
+      "summary": "据WIRED报道，白宫正准备扩展其AI政策框架，知情人士透露，开源模型(open models)可能被纳入即将更新的AI监管框架。白宫此前长期采取尽量不监管AI的立场，但面对技术快速演进正重新评估监管路径。开源模型纳入监管框架将影响模型分发、权重托管及开发者合规要求，是美国AI治理从'轻度介入'转向'结构化监管'的标志性信号。",
+      "tickers": [
+        "Anthropic",
+        "Meta",
+        "OpenAI",
+        "亚马逊"
+      ],
+      "themes": [
+        "ai_monetization",
+        "model_capability",
+        "policy_export"
+      ],
+      "direction": {
+        "OpenAI": "neutral",
+        "Anthropic": "neutral",
+        "Meta": "negative",
+        "谷歌": "neutral",
+        "微软": "neutral",
+        "亚马逊": "neutral",
+        "阿里巴巴": "neutral"
+      },
+      "item_ids": [
+        "2337ec71a760fb28e6eba9fa7003c3af7879dd54"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-12T21:21:59Z",
+      "first_published_at": "2026-08-12T21:00:00Z",
+      "last_updated_at": "2026-08-12T21:21:59Z",
+      "is_active": true,
+      "significance": 6,
+      "status": "developing",
+      "deep_analysis": "1. **看多逻辑**：①监管确定性提升实质利好OpenAI、Anthropic等闭源头部厂商，合规护城河拉大、行业洗牌加速，Anthropic\"安全优先\"定位与监管方向契合，估值溢价空间打开；②开源合规成本上升将驱动推理负载向AWS、Azure等头部云集中，亚马逊云算力业务受益于\"合规驱动集中\"二阶效应；③联邦级统一框架落地有助于结束各州监管碎片化，对跨州运营的Anthropic、企业级AI集成商降低不确定性成本。\n\n2. **看空风险**：①Meta受冲击最直接，Llama系列开源策略可能被迫增加权重披露或安全评估，开发者生态吸引力下降，叙事转为承压；②监管若设置\"能力阈值触发审批\"条款，可能误伤中等规模开源项目，反向抑制创新与生态多样性，长期反哺闭源垄断；③政策外溢风险显著——若美方将合规要求绑定算力出口管制，国内大模型出海路径进一步收窄，间接削弱全球开源生态整体活力。\n\n3. **关键驱动因素**：①白宫新框架中\"开源权重要求\"的具体颗粒度（仅注册备案 vs 实质审批）；②监管是否挂钩算力/芯片出口条款，形成\"政策+芯片\"双重壁垒。\n\n4. **市场影响评估**：短期Meta承压、Anthropic/OpenAI相对受益，估值分化扩大；中期看，行业集中度抬升、推理API定价权向头部聚拢，亚马逊、微软云业务间接获益于合规驱动的负载迁移。\n\n5. **时间线推断**：预计2026年Q4发布框架草案并启动公众咨询，配套行政令最早2027年Q1落地；中期选举后的政策窗口期是关键博弈节点，芯片出口管制与AI监管协同推进的概率较高。",
+      "ticker_counts": {
+        "亚马逊": 1,
+        "OpenAI": 1,
+        "Meta": 1,
+        "微软": 1,
+        "阿里巴巴": 1,
+        "Anthropic": 1,
+        "谷歌": 1
+      },
+      "max_item_score": 6
+    },
+    "evt_91961bb54287": {
+      "event_id": "evt_91961bb54287",
+      "title": "Qualcomm details Snapdragon C specs for $300 laptops for the first time — claims 67% faster performance on battery than Intel N250, AC performance remains a mystery",
+      "summary": "高通首次披露面向300美元笔记本的骁龙C（Snapdragon C）处理器规格：8核架构，宣称在全天候电池续航下性能较英特尔N250领先67%，但交流供电（AC）性能数据未公布。涉及高通与英特尔在低功耗PC市场的竞争，以及ARM架构PC生态拓展进度。值得关注的是对比基准选择和AC性能缺失——可能影响OEM对x86与ARM路线的选型判断。",
+      "tickers": [
+        "AMD",
+        "Intel",
+        "微软",
+        "戴尔"
+      ],
+      "themes": [
+        "chip_supply",
+        "edge_ai"
+      ],
+      "direction": {
+        "高通": "positive",
+        "Intel": "negative"
+      },
+      "item_ids": [
+        "93e4254b85192be3a1142b626a5d82e7c138a265"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-12T21:21:59Z",
+      "first_published_at": "2026-08-12T21:14:33Z",
+      "last_updated_at": "2026-08-12T21:21:59Z",
+      "is_active": true,
+      "significance": 5,
+      "status": "developing",
+      "deep_analysis": "1. **看多逻辑**\n- **价格段下沉的战略意义重大**：骁龙C瞄准300美元市场，是高通PC战略从高端Copilot+向主流价位下沉的标志性动作。300美元价位段年出货量数倍于高端轻薄本，意味着ARM PC TAM的实质性扩大，生态飞轮（应用适配、用户基数）有望加速转动。\n- **电池场景下的真实使用体验优势**：67%的续航性能领先针对的是真实使用场景（电池供电），而教育市场、远程办公、便携出行等用户对续航敏感度高于极限性能。若该优势可被独立测试复现，将形成与x86竞品的差异化卖点。\n- **OEM选型天平倾斜的临界点**：戴尔等OEM面临成本与差异化双重压力，骁龙C若能提供\"够用的性能+长续航+更薄设计\"，可能促使中端机型重新分配BoM预算，对AMD低端移动产品线形成替代压力。\n\n2. **看空风险**\n- **AC性能缺失是重大红旗**：高通刻意回避交流供电性能数据，几乎可推断绝对性能（尤其多线程/持续负载）显著弱于竞品。Intel N250本身是Atom级低功耗芯片，选择此基准存在\"挑对手\"嫌疑，独立测试一旦公布，叙事可能反转。\n- **300美元价位段商业可持续性存疑**：该价位毛利率极薄，OEM对BOM成本极为敏感，ARM平台若需额外支付授权费或主控溢价，经济性未必优于Intel/AMD成熟方案。高通若以补贴换份额，将拖累自身财务。\n- **生态成熟度仍是结构性瓶颈**：尽管Windows on ARM兼容性改善，但x86原生应用、企业级软件、Linux开发环境等仍依赖转译，拖累实际体验。300美元价位段用户对价格敏感，往往难以容忍转译性能损耗。\n\n3. **关键驱动因素**\n- **AC性能独立基准测试结果**：一旦第三方（如Geekbench、SPEC、UL Procyon）公开数据，可验证高通叙事真实性，是定价权与OEM采纳意愿的\"照妖镜\"。\n- **Copilot+最低算力门槛的政策变量**：若微软将NPU算力门槛与ARM绑定或提高至x86难以低成本实现的水平，将形成强制替代效应；反之若x86阵营推出对位低功耗产品，骁龙C窗口期收窄。\n\n4. **市场影响评估**\n**短期（1-3个月）**：情绪面对Intel构成边际利空，但因N250在Intel产品矩阵中占比有限、对整体营收冲击小，更多是叙事压力而非财务冲击；AMD因不在直接对标范围，影响有限。高通获得PC叙事正向曝光，估值层面略有提振。\n**中期（6-12个月）**：核心取决于OEM实际design win数量及出货放量节奏。若戴尔/联想/HP中至少一家将骁龙C纳入主力300美元机型SKU，且AC性能差距控制在30%以内，ARM PC份额有望",
+      "ticker_counts": {
+        "戴尔": 1,
+        "Intel": 1,
+        "微软": 1,
+        "高通": 1,
+        "AMD": 1
       },
       "max_item_score": 5
     }
