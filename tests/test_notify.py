@@ -282,10 +282,15 @@ def test_fallback_daily_fails_strict_call_validation():
         payload.validate(expect_calls=True)
 
 
-def test_fallback_breaking_prose():
-    material = {"event": {"title": "台积电 CoWoS 扩产", "summary": "两座厂开建",
+def test_fallback_breaking_alert():
+    material = {"event": {"ref": "E1", "title": "台积电 CoWoS 扩产", "summary": "两座厂开建",
                           "tickers": ["台积电"], "significance": 9}}
     payload = fallback_payload(KIND_BREAKING, material, "08月12日 19:00")
     payload.validate()
+    assert payload.alert is not None
+    assert payload.alert.evidence_ref == "E1"
+    # 降级快报只有事实层, 不得冒充完整三段
+    with pytest.raises(ValueError, match="alert missing"):
+        payload.validate(expect_alert=True)
     msgs = render_wecom.render(payload, brand=BRAND)
     assert "台积电 CoWoS 扩产" in msgs[0]

@@ -8,6 +8,7 @@
 """
 
 from dataclasses import dataclass, field
+from typing import Optional
 
 
 # 稿件种类
@@ -41,7 +42,11 @@ def _as_str_list(v) -> list:
 
 @dataclass
 class DigestItem:
-    """稿件中的一个事件条目(兜底稿/快讯使用)"""
+    """一个事件条目 —— 快报正文与兜底稿共用
+
+    summary / why / watch 正是快报要的三句(发生了什么 / 为什么重要 / 盯什么)。
+    url 不由 LLM 提供, 引用一律走 evidence_ref, 渲染层查表还原。
+    """
 
     title: str = ""
     tickers: list = field(default_factory=list)
@@ -51,6 +56,7 @@ class DigestItem:
     why: str = ""                 # 为什么重要
     watch: str = ""               # 接下来关注什么
     url: str = ""
+    evidence_ref: str = ""        # 素材里的证据编号(E1…)
 
     @classmethod
     def from_dict(cls, d: dict) -> "DigestItem":
@@ -69,7 +75,13 @@ class DigestItem:
             why=_as_str(d.get("why")),
             watch=_as_str(d.get("watch")),
             url=_as_str(d.get("url")),
+            evidence_ref=_as_str(d.get("evidence_ref")),
         )
+
+    def missing_parts(self) -> list[str]:
+        """快报三段里缺的部分, 空列表表示完整"""
+        required = {"summary": self.summary, "why": self.why, "watch": self.watch}
+        return [k for k, v in required.items() if not v.strip()]
 
 
 @dataclass
@@ -253,7 +265,8 @@ class DigestPayload:
     tension: str = ""                # 判断之间的张力与联动
     reviews: list = field(default_factory=list)   # list[CallReview]
     watchlist: list = field(default_factory=list) # [{text, ref}] 未进入判断的观察
-    sections: list = field(default_factory=list)  # list[DigestSection], 快讯/复盘
+    alert: Optional[DigestItem] = None            # 快报正文(单事件三段)
+    sections: list = field(default_factory=list)  # list[DigestSection], 复盘
     footer: str = ""
     generated_at: str = ""
     fallback: bool = False           # True = LLM 失败后的兜底模板稿
@@ -285,6 +298,9 @@ class DigestPayload:
             if text:
                 watchlist.append({"text": text, "ref": ref})
 
+        alert_raw = d.get("alert")
+        alert = DigestItem.from_dict(alert_raw) if isinstance(alert_raw, dict) else None
+
         return cls(
             kind=kind,
             title=_as_str(d.get("title")),
@@ -294,6 +310,7 @@ class DigestPayload:
             tension=_as_str(d.get("tension")),
             reviews=reviews,
             watchlist=watchlist,
+            alert=alert,
             sections=sections,
             footer=_as_str(d.get("footer")),
             generated_at=_as_str(d.get("generated_at")),
@@ -321,21 +338,35 @@ class DigestPayload:
                 w = {**w, "ref": ""}
             kept_watch.append(w)
         self.watchlist = kept_watch
+        if self.alert and self.alert.evidence_ref and self.alert.evidence_ref not in valid_refs:
+            dropped += 1
+            self.alert.evidence_ref = ""
         return dropped
 
-    def validate(self, expect_calls: bool = False, expect_reviews: int = 0) -> None:
+    def validate(self, expect_calls: bool = False, expect_reviews: int = 0,
+                 expect_alert: bool = False) -> None:
         """schema 校验, 不合规抛 ValueError(触发兜底)
 
         Args:
             expect_calls:   是否要求判断链形态(每日内参)
             expect_reviews: 上期判断条数, >0 时要求本期给出等量回溯
+            expect_alert:   是否要求快报三段形态
         """
         if self.kind not in VALID_KINDS:
             raise ValueError(f"invalid kind: {self.kind}")
 
+        if expect_alert:
+            if self.alert is None:
+                raise ValueError("breaking payload has no alert")
+            missing = self.alert.missing_parts()
+            if missing:
+                raise ValueError(f"alert missing: {', '.join(missing)}")
+            return
+
         if not expect_calls:
-            if not self.headline.strip() and not self.sections:
-                raise ValueError("payload has neither headline nor sections")
+            has_body = bool(self.sections) or self.alert is not None
+            if not self.headline.strip() and not has_body:
+                raise ValueError("payload has neither headline, sections nor alert")
             return
 
         if not self.calls:

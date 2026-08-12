@@ -477,3 +477,145 @@ def test_macro_trajectory_round_trips_through_state():
     from radar.notify.types import MacroFrame
     assert MacroFrame.from_dict(p.macro.to_state()).trajectory.to_state() == {
         "past": "A", "now": "B", "next": "C", "trigger": "D"}
+
+
+# ================================================================
+# 聚合帖过滤
+# ================================================================
+
+@pytest.mark.parametrize("title", [
+    "氪星晚报｜证监会同意宇树科技科创板IPO注册；Meta带崩科技股",
+    "氪星早报｜苹果折叠屏已在量产",
+    "景嘉微最新核心消息汇总",
+    "本周要闻回顾：先进封装产能",
+    "AI 芯片今日热点盘点",
+])
+def test_digest_titles_are_filtered(title):
+    from radar.textnorm import is_digest_title
+    assert is_digest_title(title)
+
+
+@pytest.mark.parametrize("title", [
+    "英伟达成立一周年庆典",            # "一周"不能命中
+    "台积电业绩超预期",
+    "SK海力士重启中国NAND闪存生产基地建设",
+    "半导体行业观察：先进封装深度报告",  # "报告"不是"周报"
+    "美光上调全年指引",
+])
+def test_normal_titles_survive_digest_filter(title):
+    from radar.textnorm import is_digest_title
+    assert not is_digest_title(title)
+
+
+def test_digest_patterns_are_configurable():
+    from radar.textnorm import is_digest_title
+    assert is_digest_title("某某特刊", ["特刊"])
+    assert not is_digest_title("氪星晚报｜xxx", ["特刊"])
+
+
+# ================================================================
+# 快报版面
+# ================================================================
+
+def _breaking_material():
+    return {
+        "generated_at": "2026-08-13T01:00:00Z",
+        "event": {
+            "ref": "E1", "title": "鸿海Q4出货英伟达Vera Rubin",
+            "summary": "已量产", "source_count": 2,
+            "tickers": ["中芯国际", "长电科技", "英伟达", "台积电"],
+            "direction": {"长电科技": "positive", "英伟达": "negative",
+                          "中芯国际": "neutral"},
+            "sources": [
+                {"title": "鸿海Q4出货Vera Rubin", "url": "https://a.example/1",
+                 "source": "rss:36kr", "published_at": "2026-08-13T00:00:00Z",
+                 "credibility": "medium", "is_primary_source": True},
+            ],
+        },
+        "items": [{"title": "t", "url": "https://a.example/1", "cn_summary": "s"}],
+    }
+
+
+def _breaking_payload(**overrides):
+    from radar.notify.types import KIND_BREAKING
+    alert = {"summary": "鸿海Q4开始出货Vera Rubin平台。", "why": "供给节奏前移一个季度。",
+             "watch": "Q4鸿海月度营收中AI服务器占比。", "evidence_ref": "E1"}
+    alert.update(overrides)
+    return DigestPayload.from_dict(
+        {"title": "首席快报 | 08月13日 09:20", "alert": alert}, kind=KIND_BREAKING)
+
+
+def test_breaking_material_exposes_events_for_generic_helpers():
+    """快报素材要能直接用 material_refs / sources_by_ref, 不另起一套协议"""
+    m = _breaking_material()
+    m["events"] = [m["event"]]
+    assert assemble.material_refs(m) == {"E1"}
+    assert assemble.sources_by_ref(m)["E1"][0]["url"] == "https://a.example/1"
+
+
+def test_llm_material_strips_urls_from_breaking_too():
+    """过去只在日报路径剥 URL, 等于给快报留着幻觉链接的通道"""
+    m = _breaking_material()
+    m["events"] = [m["event"]]
+    assert "http" not in json.dumps(assemble.llm_material(m), ensure_ascii=False)
+
+
+def test_breaking_validate_requires_three_parts():
+    with pytest.raises(ValueError, match="watch"):
+        _breaking_payload(watch="").validate(expect_alert=True)
+    with pytest.raises(ValueError, match="why"):
+        _breaking_payload(why="").validate(expect_alert=True)
+
+
+def test_breaking_prunes_unknown_evidence_ref():
+    p = _breaking_payload(evidence_ref="E99")
+    assert p.prune_refs({"E1"}) == 1
+    assert p.alert.evidence_ref == ""
+
+
+def test_ticker_line_omits_neutral_arrows_and_fronts_directional():
+    from radar.notify.brand import ticker_line
+    line = ticker_line(["中芯国际", "长电科技", "英伟达", "台积电"],
+                       {"长电科技": "positive", "英伟达": "negative",
+                        "中芯国际": "neutral"})
+    assert line == "长电科技 ↑ · 英伟达 ↓ · 中芯国际"
+
+
+def test_ticker_line_without_direction_data():
+    from radar.notify.brand import ticker_line
+    assert ticker_line(["英伟达", "台积电"]) == "英伟达 · 台积电"
+    assert ticker_line([]) == ""
+
+
+def test_breaking_wecom_layout():
+    from radar.notify import render_wecom
+    m = _breaking_material(); m["events"] = [m["event"]]
+    msgs = render_wecom.render(_breaking_payload(), "", "https://gh/issues/40",
+                               material=m)
+    body = msgs[0]
+    # 抬头带标的与箭头, 一轮多条快报才区分得开
+    assert body.startswith("**长电科技 ↑ · 英伟达 ↓ · 中芯国际｜首席快报 · 08月13日 09:20**")
+    assert "**含义**" in body and "**盯**" in body
+    assert "[原文](https://a.example/1)" in body
+    assert "[今日快报汇总](https://gh/issues/40)" in body
+    # 汇总链接只出现一次(不与通用报尾重复)
+    assert body.count("https://gh/issues/40") == 1
+
+
+def test_breaking_telegram_layout():
+    from radar.notify import render_telegram
+    m = _breaking_material(); m["events"] = [m["event"]]
+    out = render_telegram.render(_breaking_payload(), "", "https://gh/issues/40",
+                                 material=m)
+    assert "<b>长电科技 ↑ · 英伟达 ↓ · 中芯国际｜首席快报" in out
+    assert '<a href="https://a.example/1">原文</a>' in out
+    assert out.count("https://gh/issues/40") == 1
+
+
+def test_breaking_issue_body_is_lightweight():
+    """快报归档进当日汇总 Issue 的评论, 外层已有 ### 时间, 不能再套 H1"""
+    m = _breaking_material(); m["events"] = [m["event"]]
+    body = render_issue_body(_breaking_payload(), material=m)
+    assert not body.startswith("#")
+    assert "## 附录" not in body          # 单事件不需要单行附录
+    assert "[鸿海Q4出货Vera Rubin](https://a.example/1)" in body

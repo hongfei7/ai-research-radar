@@ -34,7 +34,7 @@ from radar.processor import Processor
 from radar.cluster import ClusterEngine
 from radar.situation import SituationGenerator
 from radar.storage import save_items, load_events, save_events, load_situation, save_situation
-from radar.textnorm import clean_title
+from radar.textnorm import clean_title, is_digest_title
 
 logger = logging.getLogger("radar")
 
@@ -89,6 +89,9 @@ async def collect_all(cfg: dict) -> list[Item]:
             all_sources.append((src["id"], src["type"], params))
             window_by_source[src["id"]] = params.get("window_hours", default_window)
 
+    digest_patterns = cfg["sources"].get("digest_title_patterns")
+    digest_dropped: list[str] = []
+
     logger.info(f"Collecting from {len(all_sources)} sources (parallel)...")
 
     # 并发采集所有信源
@@ -102,11 +105,17 @@ async def collect_all(cfg: dict) -> list[Item]:
         except Exception as e:
             logger.error(f"[{src_id}] Collector failed: {e}")
             return []
-        # 采集层统一出口: 清洗标题(站点后缀/话题标签/自我重复/全小写术语)
-        # 放在这里而非各采集器内, 新增采集器自动受益; 去重基于 URL, 改标题不影响幂等
+        # 采集层统一出口: 清洗标题(站点后缀/话题标签/自我重复/全小写术语),
+        # 并丢弃多话题聚合帖。放在这里而非各采集器内, 新增采集器自动受益;
+        # 去重基于 URL, 改标题不影响幂等
+        kept = []
         for it in items:
             it.title = clean_title(it.title)
-        return items
+            if is_digest_title(it.title, digest_patterns):
+                digest_dropped.append(f"[{src_id}] {it.title[:40]}")
+                continue
+            kept.append(it)
+        return kept
 
     results = await asyncio.gather(
         *[_fetch_one(src_id, src_type, params) for src_id, src_type, params in all_sources],
@@ -122,6 +131,12 @@ async def collect_all(cfg: dict) -> list[Item]:
             all_items.extend(result)
 
     logger.info(f"Collected {len(all_items)} raw items total")
+
+    if digest_dropped:
+        logger.info(
+            f"Digest filtered: {len(digest_dropped)} 聚合帖丢弃 "
+            f"(样例: {digest_dropped[:3]})"
+        )
 
     # —— 时间窗口过滤：按信源各自的窗口保留 ——
     # 单一全局窗口会误杀批量发布的信源: arXiv 每日批次、SEC 申报日期只到天、
