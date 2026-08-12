@@ -1,5 +1,5 @@
 {
-  "morning_last_date": "",
+  "morning_last_date": "2026-08-12",
   "weekly_last_slot": "",
   "breaking_fingerprints": [
     {
@@ -103,6 +103,79 @@
         "鸿海"
       ],
       "sent_at": "2026-08-12T12:55:30Z"
+    },
+    {
+      "tickers": [
+        "AMD",
+        "台积电",
+        "谷歌"
+      ],
+      "features": [
+        "ai",
+        "assistance",
+        "enterprises",
+        "execution",
+        "from",
+        "how",
+        "put",
+        "to",
+        "work"
+      ],
+      "sent_at": "2026-08-12T13:20:09Z"
+    },
+    {
+      "tickers": [
+        "英伟达"
+      ],
+      "features": [
+        "nvidia",
+        "on",
+        "price",
+        "pro",
+        "raised",
+        "rtx",
+        "the",
+        "to",
+        "usd",
+        "website"
+      ],
+      "sent_at": "2026-08-12T13:20:42Z"
+    },
+    {
+      "tickers": [
+        "博通",
+        "英伟达",
+        "谷歌"
+      ],
+      "features": [
+        "tpu",
+        "与推",
+        "与联",
+        "代详",
+        "伟达",
+        "八代",
+        "分训",
+        "博通",
+        "发科",
+        "战英",
+        "拆分",
+        "挑战",
+        "推理",
+        "携博",
+        "歌第",
+        "理携",
+        "科挑",
+        "第八",
+        "练与",
+        "联发",
+        "英伟",
+        "解拆",
+        "训练",
+        "详解",
+        "谷歌",
+        "通与"
+      ],
+      "sent_at": "2026-08-12T13:21:11Z"
     }
   ]
 }
