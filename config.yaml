@@ -135,7 +135,7 @@ trending_topics:
 # 运行参数
 # ============================================================
 runtime:
-  cron_interval_minutes: 30      # 建议 30min，首跑手动触发建立 seen.db 后增量跑仅需 3-5min
+  cron_interval_minutes: 15      # 每 15min 抓重要事件，兜底在 :40 每 2h 推送
   rolling_window_hours: 8        # 只采集最近 N 小时内发布的内容
   situation_update_interval: 1       # 态势重写间隔(轮次)，每轮更新以最大化配额使用
   situation_trigger_new_events: 2    # 触发态势重写的新事件数阈值（真实新事件，非合并）
@@ -185,7 +185,8 @@ channels:
     enabled: true
     notify_new_event_threshold: 5
     notify_direction_flip: true
-    digest_interval_hours: 1
+    digest_interval_hours: 2
+    fallback_push_minute: 40
     notify_max_new_events: 8
   github_issue:
     enabled: true

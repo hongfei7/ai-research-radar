@@ -1,5 +1,6 @@
 """分发 —— GitHub Issue + Telegram + README 更新"""
 
+import json
 import logging
 import os
 from pathlib import Path
@@ -373,11 +374,17 @@ def _get_wecom_env() -> str:
 async def _wecom_post(webhook_url: str, msgtype: str, data: dict) -> bool:
     """发送一条 webhook 请求，含重试"""
     payload = {"msgtype": msgtype, msgtype: data}
+    # ensure_ascii=False 避免中文字符被转义为 \uXXXX 导致 JSON 体积翻倍
+    body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
 
     for attempt in range(3):
         try:
             async with httpx.AsyncClient(timeout=15) as client:
-                resp = await client.post(webhook_url, json=payload)
+                resp = await client.post(
+                    webhook_url,
+                    content=body,
+                    headers={"Content-Type": "application/json; charset=utf-8"},
+                )
                 resp.raise_for_status()
                 result = resp.json()
                 if result.get("errcode") == 0:
@@ -393,6 +400,30 @@ async def _wecom_post(webhook_url: str, msgtype: str, data: dict) -> bool:
     return False
 
 
+# —— 字节截断工具 ——
+
+def _truncate_bytes(text: str, max_bytes: int) -> str:
+    """字节级截断，保护 UTF-8 字符边界，优先在段落/句子处断"""
+    encoded = text.encode("utf-8")
+    if len(encoded) <= max_bytes:
+        return text
+    budget = max_bytes - 60  # 为截断提示留空间
+    raw = encoded[:budget]
+    while raw:
+        try:
+            truncated = raw.decode("utf-8")
+            break
+        except UnicodeDecodeError:
+            raw = raw[:-1]
+    last_break = truncated.rfind("\n\n")
+    if last_break > len(truncated) * 0.5:
+        return truncated[:last_break] + "\n\n[...完整版见实时看板]"
+    last_period = truncated.rfind("。")
+    if last_period > len(truncated) * 0.5:
+        return truncated[:last_period + 1] + "\n\n[...完整版见实时看板]"
+    return truncated + "…\n\n[...完整版见实时看板]"
+
+
 # —— markdown 消息 ——
 
 async def send_wecom_markdown(content: str) -> bool:
@@ -401,10 +432,18 @@ async def send_wecom_markdown(content: str) -> bool:
     if not webhook_url:
         logger.warning("WECOM_WEBHOOK_URL not set, skipping WeCom push")
         return False
-    # 按字节截断到 4000（留 96 字节 margin）
-    encoded = content.encode("utf-8")[:4000]
-    content = encoded.decode("utf-8", errors="ignore")
+
     content = _sanitize_wecom_md(content)
+
+    MAX_BYTES = 4000
+    encoded = content.encode("utf-8")
+    if len(encoded) > MAX_BYTES:
+        content = _truncate_bytes(content, MAX_BYTES)
+        logger.warning(
+            f"WeCom message truncated from {len(encoded)} to "
+            f"{len(content.encode('utf-8'))} bytes"
+        )
+
     return await _wecom_post(webhook_url, "markdown", {"content": content})
 
 
@@ -529,7 +568,7 @@ def format_wecom_alert(
     """格式化企业微信推送，返回 markdown 字符串
 
     WeCom markdown 支持 **加粗** [链接](url) > 引用 <font color>彩色字
-    上限 4096 字节，自动截断到 4000 字节
+    上限 4096 字节，内置渐进压缩确保不超限
     """
     from datetime import datetime
     from zoneinfo import ZoneInfo
@@ -554,117 +593,143 @@ def format_wecom_alert(
     active_count = len([e for e in all_active_events if e.is_active])
     developing = len([e for e in all_active_events if e.is_active and e.status == "developing"])
 
-    lines: list[str] = []
+    MAX_BYTES = 3900
 
-    # 标题
-    lines.append(f"**AI 投研雷达 · {now_str}**")
-    lines.append("")
+    def _build(
+        new_limit: int,
+        upd_limit: int,
+        show_analysis: bool,
+        sit_limit: int,
+    ) -> str:
+        """按给定的压缩参数重建消息文本"""
+        lines: list[str] = []
 
-    # 态势
-    if situation and situation.text:
-        lines.append(f'<font color="info">{_clip(situation.text, 200)}</font>')
+        # 标题
+        lines.append(f"**AI 投研雷达 · {now_str}**")
         lines.append("")
 
-    # 新增事件
-    if deduped_new:
-        sorted_new = sorted(deduped_new, key=lambda e: e.significance, reverse=True)
-        visible_new = [e for e in sorted_new if e.significance >= 5]
-        if visible_new:
-            lines.append(f'<font color="warning">🔥 新增 ({len(deduped_new)})</font>')
-            for ev in visible_new[:max_new_events]:
-                icon = _importance_icon(ev.significance)
-                tickers_str = _fmt_tickers_wecom(ev.tickers, max_display=5)
-                d = ev.direction or {}
-                first_tk = list(d.keys())[0] if d else ""
-                first_d = d.get(first_tk, "") if first_tk else ""
-                dir_str = _dir_icon(first_d)
-                time_str = _event_time(ev, items_by_event)
-                lines.append(
-                    f'> {icon} **{_clip(ev.title or "", 40)}**{tickers_str}'
-                    f' {dir_str}{ev.significance}/10 · {time_str} · 信源{ev.source_count}'
-                )
-                if ev.summary:
-                    lines.append(f'> {_clip(ev.summary, 50)}')
-                if ev.deep_analysis:
-                    lines.append(f'> <font color="comment">{_clip(ev.deep_analysis, 40)}</font>')
-            remaining = len(visible_new) - max_new_events
-            if remaining > 0:
-                lines.append(f'> +{remaining} 更多...')
+        # 态势
+        if situation and situation.text:
+            lines.append(f'<font color="info">{_clip(situation.text, sit_limit)}</font>')
             lines.append("")
 
-    # 更新事件
-    if deduped_upd:
-        sorted_upd = sorted(deduped_upd, key=lambda e: e.significance, reverse=True)
-        visible_upd = [e for e in sorted_upd if e.significance >= 5]
-        if visible_upd:
-            lines.append(f'<font color="warning">● 更新 ({len(deduped_upd)})</font>')
-            for ev in visible_upd[:min(len(visible_upd), 3)]:
-                icon = _importance_icon(ev.significance)
-                tickers_str = _fmt_tickers_wecom(ev.tickers, max_display=5)
-                d = ev.direction or {}
-                first_tk = list(d.keys())[0] if d else ""
-                first_d = d.get(first_tk, "") if first_tk else ""
-                dir_str = _dir_icon(first_d)
-                time_str = _event_time(ev, items_by_event)
-                lines.append(
-                    f'> {icon} **{_clip(ev.title or "", 40)}**{tickers_str}'
-                    f' {dir_str}{ev.significance}/10 · {time_str} · 信源{ev.source_count}'
-                )
-                if ev.summary:
-                    lines.append(f'> {_clip(ev.summary, 50)}')
-                if ev.deep_analysis:
-                    lines.append(f'> <font color="comment">{_clip(ev.deep_analysis, 40)}</font>')
-            remaining = len(visible_upd) - 3
-            if remaining > 0:
-                lines.append(f'> +{remaining} 更多...')
+        # 新增事件
+        if deduped_new:
+            sorted_new = sorted(deduped_new, key=lambda e: e.significance, reverse=True)
+            visible_new = [e for e in sorted_new if e.significance >= 5]
+            if visible_new:
+                lines.append(f'<font color="warning">🔥 新增 ({len(deduped_new)})</font>')
+                for ev in visible_new[:new_limit]:
+                    icon = _importance_icon(ev.significance)
+                    tickers_str = _fmt_tickers_wecom(ev.tickers, max_display=5)
+                    d = ev.direction or {}
+                    first_tk = list(d.keys())[0] if d else ""
+                    first_d = d.get(first_tk, "") if first_tk else ""
+                    dir_str = _dir_icon(first_d)
+                    time_str = _event_time(ev, items_by_event)
+                    lines.append(
+                        f'> {icon} **{_clip(ev.title or "", 40)}**{tickers_str}'
+                        f' {dir_str}{ev.significance}/10 · {time_str} · 信源{ev.source_count}'
+                    )
+                    if ev.summary:
+                        lines.append(f'> {_clip(ev.summary, 50)}')
+                    if show_analysis and ev.deep_analysis:
+                        lines.append(f'> <font color="comment">{_clip(ev.deep_analysis, 40)}</font>')
+                remaining = len(visible_new) - new_limit
+                if remaining > 0:
+                    lines.append(f'> +{remaining} 更多...')
+                lines.append("")
+
+        # 更新事件
+        if deduped_upd:
+            sorted_upd = sorted(deduped_upd, key=lambda e: e.significance, reverse=True)
+            visible_upd = [e for e in sorted_upd if e.significance >= 5]
+            if visible_upd:
+                lines.append(f'<font color="warning">● 更新 ({len(deduped_upd)})</font>')
+                for ev in visible_upd[:upd_limit]:
+                    icon = _importance_icon(ev.significance)
+                    tickers_str = _fmt_tickers_wecom(ev.tickers, max_display=5)
+                    d = ev.direction or {}
+                    first_tk = list(d.keys())[0] if d else ""
+                    first_d = d.get(first_tk, "") if first_tk else ""
+                    dir_str = _dir_icon(first_d)
+                    time_str = _event_time(ev, items_by_event)
+                    lines.append(
+                        f'> {icon} **{_clip(ev.title or "", 40)}**{tickers_str}'
+                        f' {dir_str}{ev.significance}/10 · {time_str} · 信源{ev.source_count}'
+                    )
+                    if ev.summary:
+                        lines.append(f'> {_clip(ev.summary, 50)}')
+                    if show_analysis and ev.deep_analysis:
+                        lines.append(f'> <font color="comment">{_clip(ev.deep_analysis, 40)}</font>')
+                remaining = len(visible_upd) - upd_limit
+                if remaining > 0:
+                    lines.append(f'> +{remaining} 更多...')
+                lines.append("")
+
+        # 目前关注（无新增/更新时展示活跃事件）
+        if not deduped_new and not deduped_upd and all_active_events:
+            top_active = sorted(
+                [e for e in all_active_events if e.is_active and e.significance >= 5],
+                key=lambda e: e.significance, reverse=True,
+            )[:5]
+            if top_active:
+                lines.append('<font color="warning">目前关注</font>')
+                for ev in top_active:
+                    icon = _importance_icon(ev.significance)
+                    tickers_str = _fmt_tickers_wecom(ev.tickers, max_display=5)
+                    d = ev.direction or {}
+                    first_tk = list(d.keys())[0] if d else ""
+                    first_d = d.get(first_tk, "") if first_tk else ""
+                    dir_str = _dir_icon(first_d)
+                    time_str = _event_time(ev, items_by_event)
+                    lines.append(
+                        f'> {icon} **{_clip(ev.title or "", 40)}**{tickers_str}'
+                        f' {dir_str}{ev.significance}/10 · {time_str} · 信源{ev.source_count}'
+                    )
+                    if ev.summary:
+                        lines.append(f'> {_clip(ev.summary, 50)}')
+                    if show_analysis and ev.deep_analysis:
+                        lines.append(f'> <font color="comment">{_clip(ev.deep_analysis, 40)}</font>')
+                lines.append("")
+
+        # 洞察
+        if situation and (situation.cross_analysis or situation.trend_spotting):
+            if situation.trend_spotting:
+                lines.append(f'<font color="comment">💡 {_clip(situation.trend_spotting.strip(), 100)}</font>')
+            if situation.cross_analysis:
+                lines.append(f'<font color="comment">🔍 {_clip(situation.cross_analysis.strip(), 120)}</font>')
             lines.append("")
 
-    # 目前关注（无新增/更新时展示活跃事件）
-    if not deduped_new and not deduped_upd and all_active_events:
-        top_active = sorted(
-            [e for e in all_active_events if e.is_active and e.significance >= 5],
-            key=lambda e: e.significance, reverse=True,
-        )[:5]
-        if top_active:
-            lines.append('<font color="warning">目前关注</font>')
-            for ev in top_active:
-                icon = _importance_icon(ev.significance)
-                tickers_str = _fmt_tickers_wecom(ev.tickers, max_display=5)
-                d = ev.direction or {}
-                first_tk = list(d.keys())[0] if d else ""
-                first_d = d.get(first_tk, "") if first_tk else ""
-                dir_str = _dir_icon(first_d)
-                time_str = _event_time(ev, items_by_event)
-                lines.append(
-                    f'> {icon} **{_clip(ev.title or "", 40)}**{tickers_str}'
-                    f' {dir_str}{ev.significance}/10 · {time_str} · 信源{ev.source_count}'
-                )
-                if ev.summary:
-                    lines.append(f'> {_clip(ev.summary, 50)}')
-                if ev.deep_analysis:
-                    lines.append(f'> <font color="comment">{_clip(ev.deep_analysis, 40)}</font>')
-            lines.append("")
+        # 统计栏
+        stats = f"活跃{active_count} · 演进{developing}"
+        if deduped_new:
+            stats += f" · 新增{len(deduped_new)}"
+        if deduped_upd:
+            stats += f" · 更新{len(deduped_upd)}"
+        lines.append(stats)
 
-    # 洞察
-    if situation and (situation.cross_analysis or situation.trend_spotting):
-        if situation.trend_spotting:
-            lines.append(f'<font color="comment">💡 {_clip(situation.trend_spotting.strip(), 100)}</font>')
-        if situation.cross_analysis:
-            lines.append(f'<font color="comment">🔍 {_clip(situation.cross_analysis.strip(), 120)}</font>')
-        lines.append("")
+        if site_url:
+            lines.append(f"[实时看板]({site_url})")
 
-    # 统计栏
-    stats = f"活跃{active_count} · 演进{developing}"
-    if deduped_new:
-        stats += f" · 新增{len(deduped_new)}"
-    if deduped_upd:
-        stats += f" · 更新{len(deduped_upd)}"
-    lines.append(stats)
+        return "\n".join(lines)
 
-    if site_url:
-        lines.append(f"[实时看板]({site_url})")
+    # 渐进压缩策略：依次尝试更激进的裁剪
+    strategies = [
+        (max_new_events, 3, True, 200),   # 完整版
+        (max_new_events, 3, False, 200),  # 去掉 deep_analysis
+        (4, 3, False, 200),               # 新增事件降到 4
+        (4, 2, False, 200),               # 更新事件降到 2
+        (4, 2, False, 120),               # 态势摘要缩短
+    ]
 
-    return "\n".join(lines)
+    for new_lim, upd_lim, show_analysis, sit_lim in strategies:
+        result = _build(new_lim, upd_lim, show_analysis, sit_lim)
+        if len(result.encode("utf-8")) <= MAX_BYTES:
+            return result
+
+    # 兜底：字节级截断
+    return _truncate_bytes(result, MAX_BYTES)
 
 
 async def send_wecom_brief(
@@ -698,9 +763,28 @@ def should_wecom_alert(
     situation: Optional[Situation],
     cfg: dict,
 ) -> bool:
-    """判断是否需要推送企业微信"""
+    """判断是否需要推送企业微信
+
+    规则:
+    - 静默时段 (HKT 01:00-06:59) 不推送
+    - 重要事件 (sig >= threshold) 立即推送
+    - 兜底: 每 N 小时在 :40-:54 窗口推送一次
+    """
+    from datetime import datetime, timezone
+    from zoneinfo import ZoneInfo
+
     wecom_cfg = cfg.get("channels", {}).get("wecom", {})
 
+    # 静默时段检查
+    try:
+        hkt = ZoneInfo("Asia/Hong_Kong")
+        now_hkt = datetime.now(hkt)
+        if 1 <= now_hkt.hour < 7:
+            return False
+    except Exception:
+        pass
+
+    # 重要事件 → 立即推送
     threshold = wecom_cfg.get("notify_new_event_threshold", 7)
     for ev in new_events:
         if ev.significance >= threshold:
@@ -712,16 +796,28 @@ def should_wecom_alert(
             if ev.significance >= threshold:
                 return True
 
-    # 兜底推送间隔
+    # 兜底推送: 每 N 小时在 :40 窗口触发
     if situation and situation.last_wecom_digest_at:
         try:
-            from datetime import datetime, timezone
             last = datetime.fromisoformat(
                 situation.last_wecom_digest_at.replace("Z", "+00:00")
             )
-            now = datetime.now(timezone.utc)
             interval = wecom_cfg.get("digest_interval_hours", 2)
-            if (now - last).total_seconds() >= interval * 3600:
+            target_minute = wecom_cfg.get("fallback_push_minute", 40)
+
+            # 只在指定时间窗口触发 (:40-:54)
+            if now_hkt.minute < target_minute or now_hkt.minute >= target_minute + 15:
+                return False
+            if now_hkt.hour % interval != 0:
+                return False
+
+            # 本窗口内还没推送过
+            window_start = datetime(
+                now_hkt.year, now_hkt.month, now_hkt.day,
+                now_hkt.hour, target_minute, 0,
+                tzinfo=hkt,
+            )
+            if last < window_start:
                 return True
         except Exception:
             return True
