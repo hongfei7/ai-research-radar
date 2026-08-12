@@ -58,8 +58,9 @@ def _header(payload: DigestPayload, brand: dict, material: dict) -> list[str]:
 
     if payload.kind == KIND_BREAKING:
         # 快报归档为当日汇总 Issue 里的一条, 外层已有 "### 时间" 小标题,
-        # 再套 H1 报头会层级倒置; 这里只给一行标的与时间
-        return [f"**{alert_header(material or {}, product, when)}**", ""]
+        # 再套 H1 报头会层级倒置; 这里只给品牌行与标的行
+        title, *rest = alert_header(material or {}, brand, product, when)
+        return [f"**{title}**", *rest, ""]
 
     lines = [f"# {brand.get('institute', '')} | {product}"]
     byline = " · ".join(b for b in [

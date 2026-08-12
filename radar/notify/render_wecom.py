@@ -19,6 +19,9 @@ logger = logging.getLogger(__name__)
 
 MAX_BYTES = 3800
 
+# 分割线: 企业微信 markdown 认这个, 用来划开报头/正文/报尾三段
+_RULE = "---"
+
 
 def _blocks_bytes(block: list[str]) -> int:
     return len("\n".join(block).encode("utf-8"))
@@ -123,6 +126,7 @@ def _alert_blocks(payload: DigestPayload, material: dict, issue_url: str) -> lis
     if issue_url:
         tail.append(f"[今日快报汇总]({issue_url})")
     if tail:
+        blocks.append([_RULE])
         blocks.append([" · ".join(tail)])
     return blocks
 
@@ -141,7 +145,9 @@ def render(payload: DigestPayload, site_url: str = "", issue_url: str = "",
         parts = payload.title.split("|", 1)
         product = parts[0].strip() or "首席快报"
         when = parts[1].strip() if len(parts) > 1 else ""
-        header.append(f"**{alert_header(material or {}, product, when)}**")
+        title, *rest = alert_header(material or {}, brand, product, when)
+        header.append(f"**{title}**")
+        header.extend(rest)
     else:
         # title 形如 "AI 首席内参 | 08月12日 07:00"
         parts = payload.title.split("|", 1)
@@ -155,26 +161,34 @@ def render(payload: DigestPayload, site_url: str = "", issue_url: str = "",
         header.append("（本期为降级稿：撰稿环节未完成，仅事实层）")
     if header:
         blocks.append(header)
-    if payload.headline:
-        blocks.append([payload.headline])
 
-    blocks.extend(_alert_blocks(payload, material or {}, issue_url))
-    blocks.extend(_call_blocks(payload))
+    # 报头与正文之间加分割线, 报头才不会和第一段糊在一起
+    body: list[list[str]] = []
+    if payload.headline:
+        body.append([payload.headline])
+
+    body.extend(_alert_blocks(payload, material or {}, issue_url))
+    body.extend(_call_blocks(payload))
 
     for section in payload.sections:
         if section.is_empty():
             continue
         if section.heading.strip():
-            blocks.append([f"**{section.heading.strip()}**"])
+            body.append([f"**{section.heading.strip()}**"])
         for para in section.paragraphs:
             if para.strip():
-                blocks.append([para.strip()])
+                body.append([para.strip()])
         for item in section.items:
-            blocks.append(_item_block(item))
+            body.append(_item_block(item))
+
+    if body:
+        blocks.append([_RULE])
+        blocks.extend(body)
 
     # 报尾: 仅完整版 Issue 链接(实时看板已废弃, 报告唯一完整载体为 Issue)
     # 快报的链接已由 _alert_blocks 放在正文末尾, 不重复
     if issue_url and payload.kind != KIND_BREAKING:
+        blocks.append([_RULE])
         blocks.append([f"[完整版 · 事件线与数据附录]({issue_url})"])
 
     # —— 贪心装包: block 按序装入消息, 不超 MAX_BYTES; block 间空行分隔 ——
