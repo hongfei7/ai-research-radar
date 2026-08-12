@@ -130,7 +130,8 @@ class MinimaxSearchCollector(Collector):
                         url=link,
                         source=source_id,
                         source_type="tech",
-                        published_at=r.get("date", fetched_at) or fetched_at,
+                        # 搜索结果无日期时留空, 不用 fetched_at 伪造"刚发布"
+                        published_at=r.get("date") or "",
                         fetched_at=fetched_at,
                         raw_summary=truncate(snippet),
                         credibility=_source_cred(source_id),

@@ -32,7 +32,7 @@ jobs:
           git config user.email "radar-bot@users.noreply.github.com"
           # 先提交本地变更, 再 rebase 到远端 —— 绝不能 reset --hard,
           # 那会丢弃本轮管道对 tracked 文件(state/ README.md)的全部修改
-          git add archive/ state/ README.md docs/
+          git add archive/ state/ reports/ README.md docs/
           if git diff --cached --quiet; then
             echo "nothing to commit"
             exit 0

@@ -14,17 +14,45 @@ logger = logging.getLogger(__name__)
 # 环境变量
 ENV_API_KEY = "MINIMAX_API_KEY"
 ENV_BASE_URL = "MINIMAX_BASE_URL"
+ENV_CHAT_PATH = "MINIMAX_CHAT_PATH"
+
+# chatcompletion_v2 是官方标记为 deprecated 的旧路由, 但线上一直在用。
+# 若 M3 不在该路由上供给, 无需改代码 —— 设两个环境变量切到 OpenAI 兼容端点:
+#   MINIMAX_BASE_URL=https://api.minimax.io/v1
+#   MINIMAX_CHAT_PATH=/chat/completions
+# 两种端点的成功响应都是 choices[0].message.content, 下面的解析逻辑通用。
+DEFAULT_CHAT_PATH = "/text/chatcompletion_v2"
 
 # 默认值
 DEFAULT_BASE_URL = "https://api.minimax.chat/v1"
 DEFAULT_PLAN_BASE_URL = "https://api.minimaxi.com"
-DEFAULT_MODEL = "MiniMax-Text-01"
+DEFAULT_MODEL = "MiniMax-M3"
 DEFAULT_EMBEDDING_MODEL = "embo-01"
 
 # 重试与超时
 MAX_RETRIES = 2           # 解析失败重试次数
-REQUEST_TIMEOUT = 120      # 单次请求超时(秒)
-TOTAL_TIMEOUT = 300        # 含重试的总超时(秒)
+# M3 默认开启推理, 首字延迟明显高于 M2.x; 240s 要大于调用方的 wait_for 超时,
+# 否则 httpx 会先断开, 调用方的超时形同虚设(此前 120s < 撰稿层 150s 就是这个问题)
+REQUEST_TIMEOUT = 240      # 单次请求超时(秒)
+TOTAL_TIMEOUT = 600        # 含重试的总超时(秒)
+
+# M3 的推理内容在未开启 reasoning_split 时会内联在 content 里, 用 <think> 包裹,
+# 直接 json.loads 必然失败。解析前统一剥掉。
+_THINK_TAG_RE = re.compile(r"<think>[\s\S]*?</think>\s*", re.IGNORECASE)
+_UNCLOSED_THINK_RE = re.compile(r"^[\s\S]*?</think>\s*", re.IGNORECASE)
+
+
+def strip_reasoning(text: str) -> str:
+    """剥离内联推理内容, 返回真正的回答部分"""
+    if not text:
+        return ""
+    if "</think>" not in text.lower():
+        return text
+    cleaned = _THINK_TAG_RE.sub("", text)
+    # 开标签被截断或缺失时(只剩下 </think>), 取最后一个闭标签之后的内容
+    if "</think>" in cleaned.lower():
+        cleaned = _UNCLOSED_THINK_RE.sub("", cleaned)
+    return cleaned.strip()
 
 
 class MinimaxClient:
@@ -38,6 +66,7 @@ class MinimaxClient:
     ):
         self.api_key = api_key or os.environ.get(ENV_API_KEY, "")
         self.base_url = (base_url or os.environ.get(ENV_BASE_URL, DEFAULT_BASE_URL)).rstrip("/")
+        self.chat_path = "/" + os.environ.get(ENV_CHAT_PATH, DEFAULT_CHAT_PATH).lstrip("/")
         self.model = model or DEFAULT_MODEL
         self._client: Optional[httpx.AsyncClient] = None
 
@@ -73,9 +102,10 @@ class MinimaxClient:
         temperature: float = 0.3,
         max_tokens: int = 4096,
         retries: int = MAX_RETRIES,
+        thinking: bool = True,
     ) -> str:
         """
-        调用 chat completion，返回模型生成的文本。
+        调用 chat completion，返回模型生成的文本(已剥离推理内容)。
 
         Args:
             messages:    标准 messages 列表 [{"role":"system/user","content":"..."}]
@@ -83,6 +113,8 @@ class MinimaxClient:
             temperature: 温度参数
             max_tokens:  最大输出 token
             retries:     JSON 解析失败时的重试次数
+            thinking:    是否保留模型推理。批量分类类任务关掉可显著降低延迟；
+                         需要论证质量的撰稿保持开启。M2.x 不支持关闭，参数会被忽略。
 
         Returns:
             模型生成的原始文本
@@ -91,7 +123,7 @@ class MinimaxClient:
             RuntimeError: 在重试后仍然失败
         """
         client = await self._get_client()
-        url = f"{self.base_url}/text/chatcompletion_v2"
+        url = f"{self.base_url}{self.chat_path}"
 
         payload = {
             "model": model or self.model,
@@ -99,6 +131,8 @@ class MinimaxClient:
             "temperature": temperature,
             "max_tokens": max_tokens,
         }
+        if not thinking:
+            payload["thinking"] = {"type": "disabled"}
 
         last_error = None
         for attempt in range(retries + 1):
@@ -122,7 +156,9 @@ class MinimaxClient:
                 choices = data.get("choices", [])
                 if choices:
                     content = choices[0].get("message", {}).get("content", "")
-                    return content if content is not None else ""
+                    # 开启 reasoning_split 时推理在 reasoning_details 里, content 已干净;
+                    # 未开启时推理内联在 content 中, 这里统一剥掉
+                    return strip_reasoning(content) if content else ""
 
                 # 兼容其他返回格式
                 if "reply" in data:
@@ -153,6 +189,7 @@ class MinimaxClient:
         temperature: float = 0.3,
         max_tokens: int = 4096,
         retries: int = MAX_RETRIES,
+        thinking: bool = True,
     ) -> dict | list:
         """
         调用 chat completion 并解析为 JSON。
@@ -166,6 +203,7 @@ class MinimaxClient:
             temperature=temperature,
             max_tokens=max_tokens,
             retries=MAX_RETRIES,  # 网络层重试
+            thinking=thinking,
         )
 
         for attempt in range(retries + 1):
@@ -193,6 +231,7 @@ class MinimaxClient:
                         temperature=max(0.1, temperature - 0.1),
                         max_tokens=max_tokens,
                         retries=1,  # JSON 修正重试时仍保留网络层重试
+                        thinking=False,  # 修格式不需要推理, 省一轮延迟
                     )
                 else:
                     logger.error(f"Failed to parse JSON after {retries + 1} attempts. Raw text: {text[:500]}")

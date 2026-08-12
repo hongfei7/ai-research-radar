@@ -5,17 +5,21 @@ main.py 三条路径汇合后统一调用, 不依赖本轮是否有新条目。
 """
 
 import logging
+from pathlib import Path
 from typing import Optional
 
 from radar.minimax_client import MinimaxClient
 from radar.models import Event, Item, Situation, utcnow_iso, today_str
 from radar.notify import assemble, copywriter, render_wecom, render_telegram, transport
-from radar.notify.render_issue import render_issue_body
+from radar.notify.readme_index import update_readme_index
+from radar.notify.render_issue import render_issue_body, render_report_file
 from radar.notify.scheduler import decide, content_fingerprint, PushTask
 from radar.notify.state import load_notify_state, save_notify_state, prune_fingerprints
 from radar.notify.types import KIND_MORNING, KIND_WEEKLY, KIND_BREAKING
 
 logger = logging.getLogger(__name__)
+
+_REPORTS_DIR = Path(__file__).resolve().parent.parent.parent / "reports"
 
 
 def _themes_map(cfg: dict) -> dict:
@@ -23,7 +27,8 @@ def _themes_map(cfg: dict) -> dict:
 
 
 def _brand(cfg: dict) -> dict:
-    return cfg.get("notify", {}).get("brand", {})
+    from radar.notify.brand import brand_of
+    return brand_of(cfg)
 
 
 def _apply_message_budget(messages: list[str], budget: int,
@@ -59,7 +64,8 @@ async def _execute_task(
     # —— 装配素材 ——
     if task.kind == KIND_MORNING:
         material = assemble.assemble_material(hours=24, situation=situation,
-                                              themes_map=_themes_map(cfg))
+                                              themes_map=_themes_map(cfg),
+                                              last_report=state.get("last_report"))
     elif task.kind == KIND_WEEKLY:
         material = assemble.assemble_material(hours=168, situation=situation,
                                               themes_map=_themes_map(cfg))
@@ -75,39 +81,42 @@ async def _execute_task(
     payload = await copywriter.write_digest(task.kind, material, cfg, client,
                                             current_time_hkt=now_hkt_str)
 
-    # —— 内参/复盘: 幂等创建 Issue 全文存档(审计 H2) ——
+    # —— 内参/复盘: 幂等创建 Issue + 仓库归档(审计 H2) ——
+    body = render_issue_body(payload, site_url, material=material, brand=_brand(cfg))
     issue_url = ""
     if task.kind in (KIND_MORNING, KIND_WEEKLY) and not dry_run:
         if task.kind == KIND_MORNING:
             issue_label = "晨报"
             issue_title = f"AI 首席内参 · {today_str()}"
+            report_slug = today_str()
         else:
             issue_label = "周报"
             issue_title = f"Sterling 周末复盘 · {task.slot_key}"
+            report_slug = f"weekly-{task.slot_key}"
         issue_url = await transport.find_today_issue(issue_title, label=issue_label) or ""
         if not issue_url:
-            body = render_issue_body(payload, site_url, material=material,
-                                     brand=_brand(cfg))
             issue_url = await transport.create_issue(issue_title, body, [issue_label]) or ""
         if issue_url:
             logger.info(f"Issue archived: {issue_url}")
-            if task.kind == KIND_MORNING:
-                try:
-                    from radar.publish import update_readme
-                    update_readme(issue_url, site_url)
-                except Exception as e:
-                    logger.warning(f"update_readme failed: {e}")
+        # 仓库内 Markdown 归档: 可检索、可 diff、可离线阅读, 不依赖 GitHub API 成功
+        _write_report_file(payload, body, issue_url, report_slug)
+        if task.kind == KIND_MORNING:
+            try:
+                update_readme_index(issue_url)
+            except Exception as e:
+                logger.warning(f"README index update failed: {e}")
 
     # —— 渲染 ——
     brand = _brand(cfg)
     wecom_msgs = render_wecom.render(payload, site_url, issue_url, brand=brand)
     wecom_msgs = _apply_message_budget(wecom_msgs, budget, payload.title,
                                        issue_url or site_url)
-    tg_msg = render_telegram.render(payload, site_url, issue_url, brand=brand)
+    tg_msg = render_telegram.render(payload, site_url, issue_url, brand=brand,
+                                    material=material)
 
     # —— 发送 / dry-run ——
     if dry_run:
-        _print_dry_run(task, payload, wecom_msgs, tg_msg)
+        _print_dry_run(task, payload, wecom_msgs, tg_msg, body)
         return len(wecom_msgs), True
 
     success = False
@@ -117,6 +126,14 @@ async def _execute_task(
     if cfg.get("channels", {}).get("telegram", {}).get("enabled", False):
         success = await transport.send_telegram_html(tg_msg) or success
     success = success or bool(issue_url)
+
+    # 留给下一期做框架修订与证伪回溯的锚点; 降级稿不写, 否则会用空框架覆盖好框架
+    if success and task.kind == KIND_MORNING and not payload.fallback:
+        state["last_report"] = {
+            "date": today_str(),
+            "macro": payload.macro.to_state(),
+            "calls": [c.to_state() for c in payload.calls],
+        }
 
     return len(wecom_msgs), success
 
@@ -136,7 +153,8 @@ async def _execute_breaking(task, cfg, client, site_url, state,
             KIND_BREAKING, material, cfg, client, current_time_hkt=now_hkt_str
         )
         wecom_msgs = render_wecom.render(payload, site_url, brand=_brand(cfg))
-        tg_msg = render_telegram.render(payload, site_url, brand=_brand(cfg))
+        tg_msg = render_telegram.render(payload, site_url, brand=_brand(cfg),
+                                        material=material)
 
         if dry_run:
             _print_dry_run(task, payload, wecom_msgs, tg_msg)
@@ -160,9 +178,24 @@ async def _execute_breaking(task, cfg, client, site_url, state,
     return used, any_success
 
 
-def _print_dry_run(task, payload, wecom_msgs, tg_msg) -> None:
+def _write_report_file(payload, body: str, issue_url: str, slug: str) -> None:
+    """把内参正文归档到 reports/<slug>.md"""
+    try:
+        _REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+        content = render_report_file(payload, body, issue_url, date_str=today_str())
+        path = _REPORTS_DIR / f"{slug}.md"
+        path.write_text(content, encoding="utf-8")
+        logger.info(f"Report archived: {path}")
+    except OSError as e:
+        logger.warning(f"Report archive failed: {e}")
+
+
+def _print_dry_run(task, payload, wecom_msgs, tg_msg, issue_body: str = "") -> None:
     sep = "=" * 60
     print(f"\n{sep}\n[DRY-RUN] {task.kind} ({task.reason}) fallback={payload.fallback}\n{sep}")
+    if issue_body:
+        print(f"\n--- Issue / reports 正文 ({len(issue_body)} chars) ---")
+        print(issue_body)
     for i, msg in enumerate(wecom_msgs, 1):
         print(f"\n--- WeCom 消息 {i}/{len(wecom_msgs)} ({len(msg.encode('utf-8'))}B) ---")
         print(msg)

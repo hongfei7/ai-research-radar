@@ -3,6 +3,7 @@
 import hashlib
 import json
 import logging
+import math
 import re
 from datetime import datetime, timezone
 from typing import Optional
@@ -10,8 +11,14 @@ from typing import Optional
 from radar.models import Item, Event, utcnow_iso
 from radar.minimax_client import MinimaxClient, cosine_similarity
 from radar.prompts import load_prompt
+from radar.textnorm import clean_title
 
 logger = logging.getLogger(__name__)
+
+# 合并闸门：中文 bigram 的 Jaccard 天然偏低，取值不能照搬英文分词的经验值
+_MIN_WORD_OVERLAP = 0.12
+_BIG_EVENT_SOURCES = 8              # 超过此来源数视为"大事件"，收紧合并
+_BIG_EVENT_MIN_WORD_OVERLAP = 0.20
 
 
 def _generate_event_id(title: str) -> str:
@@ -26,6 +33,35 @@ def _safe_int(value, default: int = 0) -> int:
         return int(value)
     except (ValueError, TypeError):
         return default
+
+
+def _recompute_tickers(counts: dict, source_count: int, max_tickers: int) -> list[str]:
+    """从标的命中频次收敛出事件的代表标的
+
+    直接 union 会让长命事件吸附整个覆盖池（实测单事件挂过 33 个标的，
+    附录里的"标的"列因此变成噪音，且 _find_match_keyword 的 ticker 交集
+    判断会退化——标的越多越容易匹配，形成越滚越大的垃圾桶事件）。
+    这里要求标的至少在 1/3 的来源中出现，再按频次取前 N。
+    """
+    if not counts:
+        return []
+    support = max(1, math.ceil(max(source_count, 1) / 3))
+    ranked = sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))
+    kept = [t for t, c in ranked if c >= support][:max_tickers]
+    if not kept:
+        kept = [ranked[0][0]]  # 支持度门槛过高时至少保留最高频的一个
+    return kept
+
+
+def _recompute_significance(max_item_score: int, source_count: int) -> int:
+    """重要性 = 最高条目分 + 多源加成，上限 10
+
+    原实现是 max(历史值, LLM 本轮给的值)，只增不减，配合每轮重写迅速通胀到
+    满分（实测活跃事件里 8 分以上占一半，"小米手机搭载自研芯片"拿到 10/10）。
+    """
+    base = max(0, min(10, _safe_int(max_item_score, 0)))
+    bonus = min(2, max(0, source_count - 1) // 2)
+    return min(10, base + bonus)
 
 
 def _tokenize_for_matching(text: str) -> set[str]:
@@ -66,6 +102,8 @@ class ClusterEngine:
         self.similarity_threshold = cfg["clustering"].get("similarity_threshold", 0.85)
         self.max_active_events = cfg["clustering"].get("max_active_events", 30)
         self.event_ttl_hours = cfg["clustering"].get("event_ttl_hours", 24)
+        self.max_tickers_per_event = cfg["clustering"].get("max_tickers_per_event", 4)
+        self._valid_themes = {t["key"] for t in cfg.get("themes", [])}
 
     async def cluster(
         self,
@@ -104,9 +142,19 @@ class ClusterEngine:
                 event.source_count = len(set(event.item_ids))
                 event.last_updated_at = now
                 event.is_active = True
-                # 合并 tickers / themes / direction
-                event.tickers = list(set(event.tickers + (item.tickers or [])))
-                event.themes = list(set(event.themes + (item.themes or [])))
+                # tickers 走频次收敛而非 union; themes 去重排序
+                for tk in (item.tickers or []):
+                    event.ticker_counts[tk] = event.ticker_counts.get(tk, 0) + 1
+                event.tickers = _recompute_tickers(
+                    event.ticker_counts, event.source_count, self.max_tickers_per_event
+                )
+                event.themes = sorted(set(event.themes) | set(item.themes or []))
+                event.max_item_score = max(
+                    _safe_int(event.max_item_score, 0), _safe_int(item.relevance_score, 0)
+                )
+                event.significance = _recompute_significance(
+                    event.max_item_score, event.source_count
+                )
                 item_dir = item.direction if isinstance(item.direction, dict) else {}
                 for tk, d in item_dir.items():
                     if tk not in event.direction:
@@ -127,20 +175,23 @@ class ClusterEngine:
             else:
                 # 创建新事件
                 event_id = _generate_event_id(item.cn_summary or item.title)
+                ticker_counts = {tk: 1 for tk in (item.tickers or [])}
                 event = Event(
                     event_id=event_id,
                     title=item.title,
                     summary=item.cn_summary,
-                    tickers=list(item.tickers or []),
-                    themes=list(item.themes or []),
+                    tickers=_recompute_tickers(ticker_counts, 1, self.max_tickers_per_event),
+                    themes=sorted(set(item.themes or [])),
                     direction=dict(item.direction or {}),
                     item_ids=[item.id],
                     source_count=1,
                     first_seen_at=now,
                     last_updated_at=now,
                     is_active=True,
-                    significance=item.relevance_score,
+                    significance=_recompute_significance(item.relevance_score, 1),
                     status="developing",
+                    ticker_counts=ticker_counts,
+                    max_item_score=_safe_int(item.relevance_score, 0),
                     embedding=None,  # 留待后续套餐升级后启用
                 )
                 events[event_id] = event
@@ -199,6 +250,9 @@ class ClusterEngine:
         - ticker 权重最高（0.5），同一标的的新闻才可能同事件
         - theme + 关键词权重各 0.25，辅助区分同标的不同事件
         - 阈值 0.50：防止宽泛主题（如 compute_demand）导致误合并
+        - 文本必须有最低重叠：只靠 ticker+theme 重叠就能达到 0.5，会把
+          "台积电业绩超预期"和"台积电封装扩产"并成一条（实测出现过一个
+          事件吞下 7 个来源、33 个标的），所以额外要求 word_overlap 下限
         """
         item_tickers = set(item.tickers or [])
         item_themes = set(item.themes or [])
@@ -226,6 +280,13 @@ class ClusterEngine:
 
             theme_overlap = len(item_themes & ev_themes) / max(len(item_themes | ev_themes), 1)
             word_overlap = len(item_words & ev_words) / max(len(item_words | ev_words), 1)
+
+            # 文本重叠下限：讲同一件事必然共用一批词
+            if word_overlap < _MIN_WORD_OVERLAP:
+                continue
+            # 已经很大的事件要求更强的文本证据，否则它会持续吸附无关条目
+            if event.source_count >= _BIG_EVENT_SOURCES and word_overlap < _BIG_EVENT_MIN_WORD_OVERLAP:
+                continue
 
             # ticker 权重最高 → 同标的才可能同事件
             score = ticker_overlap * 0.5 + theme_overlap * 0.25 + word_overlap * 0.25
@@ -274,16 +335,18 @@ class ClusterEngine:
                 messages=[{"role": "user", "content": prompt}],
                 temperature=0.3,
                 max_tokens=1024,
+                thinking=False,  # 事件标题/摘要改写, 机械任务
             )
             if isinstance(result, dict):
-                event.title = result.get("event_title", event.title)
+                event.title = clean_title(result.get("event_title", "") or event.title)
                 event.summary = result.get("event_summary", event.summary)
-                event.tickers = list(set(event.tickers + (result.get("tickers", []) or [])))
-                event.themes = list(set(event.themes + (result.get("themes", []) or [])))
-                event.significance = max(
-                    _safe_int(event.significance, 0),
-                    _safe_int(result.get("significance", 0), 0),
-                )
+                # tickers / significance 不采纳 LLM 的输出：
+                # 前者会重新引入 union 膨胀，后者是重要性通胀的直接来源。
+                # 两者都已由成员条目在合并时算好，这里只吸收标题/摘要/状态。
+                new_themes = {
+                    t for t in (result.get("themes") or []) if t in self._valid_themes
+                }
+                event.themes = sorted(set(event.themes) | new_themes)
                 event.status = result.get("status", event.status)
         except Exception as e:
             logger.error(f"Failed to rewrite event {event.event_id}: {e}")

@@ -34,13 +34,7 @@ from radar.processor import Processor
 from radar.cluster import ClusterEngine
 from radar.situation import SituationGenerator
 from radar.storage import save_items, load_events, save_events, load_situation, save_situation
-from radar.render import render_daily_brief
-from radar.publish import (
-    create_daily_issue, send_telegram, format_telegram_alert,
-    update_readme, should_telegram_alert,
-    send_wecom_markdown, send_wecom_news, send_wecom_brief,
-    format_wecom_alert, should_wecom_alert,
-)
+from radar.textnorm import clean_title
 
 logger = logging.getLogger("radar")
 
@@ -86,10 +80,14 @@ async def collect_all(cfg: dict) -> list[Item]:
         ms_collector.coverage = cfg.get("coverage", [])
         ms_collector.trending_topics = cfg.get("trending_topics", [])
 
+    default_window = cfg["runtime"].get("rolling_window_hours", 8)
     all_sources = []
+    window_by_source: dict[str, float] = {}
     for src_type in ["tech", "market"]:
         for src in cfg["sources"].get(src_type, []):
-            all_sources.append((src["id"], src["type"], src.get("params", {})))
+            params = src.get("params", {})
+            all_sources.append((src["id"], src["type"], params))
+            window_by_source[src["id"]] = params.get("window_hours", default_window)
 
     logger.info(f"Collecting from {len(all_sources)} sources (parallel)...")
 
@@ -100,10 +98,15 @@ async def collect_all(cfg: dict) -> list[Item]:
             logger.warning(f"No collector for type '{src_type}' (source: {src_id}), skipping")
             return []
         try:
-            return await collector.fetch(src_id, params)
+            items = await collector.fetch(src_id, params)
         except Exception as e:
             logger.error(f"[{src_id}] Collector failed: {e}")
             return []
+        # 采集层统一出口: 清洗标题(站点后缀/话题标签/自我重复/全小写术语)
+        # 放在这里而非各采集器内, 新增采集器自动受益; 去重基于 URL, 改标题不影响幂等
+        for it in items:
+            it.title = clean_title(it.title)
+        return items
 
     results = await asyncio.gather(
         *[_fetch_one(src_id, src_type, params) for src_id, src_type, params in all_sources],
@@ -120,12 +123,23 @@ async def collect_all(cfg: dict) -> list[Item]:
 
     logger.info(f"Collected {len(all_items)} raw items total")
 
-    # —— 时间窗口过滤：只保留最近 N 小时内发布的内容 ——
-    window_hours = cfg["runtime"].get("rolling_window_hours", 8)
-    cutoff = datetime.now(timezone.utc) - timedelta(hours=window_hours)
+    # —— 时间窗口过滤：按信源各自的窗口保留 ——
+    # 单一全局窗口会误杀批量发布的信源: arXiv 每日批次、SEC 申报日期只到天、
+    # HF Daily Papers 都天然落在 8h 之外, 而搜索类信源伪造 published_at=now 永远过窗,
+    # 结果是高可信源整月零产出、低可信搜索结果占四成(审计发现)。
+    now_utc = datetime.now(timezone.utc)
+    stale_by_source: dict[str, int] = {}
     filtered_items = []
-    stale_count = 0
     no_date_count = 0
+
+    def _window_for(source: str) -> float:
+        if source in window_by_source:
+            return window_by_source[source]
+        # 采集器可能派生子 source(如 "arxiv:cs.AI"、"sec_edgar:8-K")
+        for src_id, hours in window_by_source.items():
+            if source.startswith(src_id):
+                return hours
+        return default_window
 
     for it in all_items:
         pub_dt = get_effective_date(it)
@@ -135,15 +149,18 @@ async def collect_all(cfg: dict) -> list[Item]:
             filtered_items.append(it)
             continue
 
-        if pub_dt >= cutoff:
+        if pub_dt >= now_utc - timedelta(hours=_window_for(it.source)):
             filtered_items.append(it)
         else:
-            stale_count += 1
+            stale_by_source[it.source] = stale_by_source.get(it.source, 0) + 1
 
+    stale_count = sum(stale_by_source.values())
     if stale_count > 0:
+        top_stale = sorted(stale_by_source.items(), key=lambda x: -x[1])[:5]
         logger.info(
-            f"Time filter: {stale_count} items older than {window_hours}h removed, "
-            f"{no_date_count} without date kept, {len(filtered_items)} remaining"
+            f"Time filter: {stale_count} stale items removed "
+            f"(top: {top_stale}), {no_date_count} without date kept, "
+            f"{len(filtered_items)} remaining"
         )
     all_items = filtered_items
 
@@ -275,133 +292,6 @@ def _reapply_event_ttl(events: dict, ttl_hours: int) -> None:
             )
     if changed:
         logger.info(f"Cold path TTL cleanup: {changed} events marked resolved")
-
-
-async def _wecom_fallback_push(sit, today_events: dict, site_url: str, cfg: dict) -> None:
-    """企业微信兜底推送：无新条目时按间隔推送当前态势"""
-    wx_cfg = cfg.get("channels", {}).get("wecom", {})
-    if not wx_cfg.get("enabled", False) or not sit:
-        return
-    try:
-        if should_wecom_alert([], [], sit, cfg):
-            all_ev = list(today_events.values())
-            max_n = wx_cfg.get("notify_max_new_events", 6)
-            card = format_wecom_alert(
-                new_events=[], updated_events=[],
-                all_active_events=all_ev, situation=sit, site_url=site_url,
-                max_new_events=max_n,
-            )
-            if await send_wecom_markdown(card):
-                from radar.models import utcnow_iso
-                sit.last_wecom_digest_at = utcnow_iso()
-                save_situation(sit)
-    except Exception as e:
-        logger.error(f"WeCom fallback push failed: {e}")
-
-
-async def _legacy_distribute(
-    cfg: dict,
-    clustered_items: list[Item],
-    new_events_list: list,
-    updated_events_list: list,
-    updated_events: dict,
-    sit,
-    site_url: str,
-) -> None:
-    """旧分发路径(灰度期保留, notify.use_legacy=true 时使用, S8 删除)"""
-    channels = cfg.get("channels", {})
-
-    # GitHub Issue + 晨报 Telegram 推送（仅日报时间）
-    issue_cfg = channels.get("github_issue", {})
-    tg_cfg = channels.get("telegram", {})
-    if issue_cfg.get("enabled", False):
-        try:
-            from zoneinfo import ZoneInfo
-            hkt_now = datetime.now(ZoneInfo("Asia/Hong_Kong"))
-            schedule_hour = issue_cfg.get("schedule_hour_hkt", 7)
-            # 在目标小时 ±1h 且前半小时内触发
-            if abs(hkt_now.hour - schedule_hour) <= 1 and hkt_now.minute < 30:
-                today_str_hkt = hkt_now.strftime("%Y-%m-%d")
-                if sit and sit.morning_brief_date != today_str_hkt:
-                    synthesis = sit.text if sit else ""
-                    brief_md = render_daily_brief(clustered_items, synthesis, site_url, cfg=cfg)
-                    # 日报用更长的窗口（24h）
-                    issue_url = await create_daily_issue(
-                        brief_md, issue_cfg.get("label", "晨报")
-                    )
-                    update_readme(issue_url, site_url)
-
-                    # 同时推送晨报全文到 Telegram（每天只推一次）
-                    from radar.publish import send_telegram as _send_tg
-                    tg_brief = f"*AI 投研雷达 · 晨报 · {today_str_hkt}*\n\n{brief_md}"
-                    if len(tg_brief) > 4000:
-                        tg_brief = tg_brief[:3950] + "\n\n[...完整版见 Issue]"
-                    await _send_tg(tg_brief, parse_mode="Markdown")
-
-                    # 同时推送晨报到企业微信
-                    if channels.get("wecom", {}).get("enabled", False):
-                        wx_title = f"AI 投研雷达 · 晨报 · {today_str_hkt}"
-                        await send_wecom_brief(wx_title, brief_md, issue_url, site_url)
-
-                    sit.morning_brief_date = today_str_hkt
-                    save_situation(sit)
-        except Exception as e:
-            logger.error(f"Daily brief / issue failed: {e}")
-
-    # Telegram 智能推送
-    if tg_cfg.get("enabled", False):
-        try:
-            if should_telegram_alert(
-                new_events_list, updated_events_list, sit, cfg
-            ):
-                # 本轮新增的条目（is_new_event 或 is_event_update）
-                new_items_this_run = [
-                    it for it in clustered_items
-                    if it.is_new_event or it.is_event_update
-                ]
-                all_events_list = list(updated_events.values())
-                alert_text = format_telegram_alert(
-                    new_events=new_events_list,
-                    updated_events=updated_events_list,
-                    all_active_events=all_events_list,
-                    new_items=new_items_this_run,
-                    situation=sit,
-                    site_url=site_url,
-                )
-                if await send_telegram(alert_text):
-                    # 仅推送成功才更新兜底推送时间
-                    if sit:
-                        from radar.models import utcnow_iso
-                        sit.last_telegram_digest_at = utcnow_iso()
-                        save_situation(sit)
-        except Exception as e:
-            logger.error(f"Telegram push failed: {e}")
-
-    # 企业微信智能推送（群机器人 Webhook）
-    wx_cfg = channels.get("wecom", {})
-    if wx_cfg.get("enabled", False):
-        try:
-            if should_wecom_alert(
-                new_events_list, updated_events_list, sit, cfg
-            ):
-                all_events_list = list(updated_events.values())
-                max_n = wx_cfg.get("notify_max_new_events", 6)
-                card = format_wecom_alert(
-                    new_events=new_events_list,
-                    updated_events=updated_events_list,
-                    all_active_events=all_events_list,
-                    situation=sit,
-                    site_url=site_url,
-                    items=clustered_items,
-                    max_new_events=max_n,
-                )
-                if await send_wecom_markdown(card):
-                    if sit:
-                        from radar.models import utcnow_iso
-                        sit.last_wecom_digest_at = utcnow_iso()
-                        save_situation(sit)
-        except Exception as e:
-            logger.error(f"WeCom push failed: {e}")
 
 
 async def run_full(cfg: dict, notify_dry_run: bool = False) -> None:
@@ -554,37 +444,22 @@ async def run_full(cfg: dict, notify_dry_run: bool = False) -> None:
             sit = load_situation()
 
         # ================================================================
-        # Stage 7: 渲染 —— 实时看板/RSS/ticker 页已废弃删除,
-        # 报告的唯一完整载体为 GitHub Issue(notify 子系统内创建)
+        # Stage 7: 分发 —— 报告的完整载体是 GitHub Issue + reports/ 归档,
+        # 两者都在 notify 子系统内产出(实时看板/RSS/ticker 页已废弃删除)
         # ================================================================
-
-        # ================================================================
-        # Stage 8: 分发(新 notify 子系统 / 旧路径由 notify.use_legacy 切换)
-        # ================================================================
-        notify_cfg = cfg.get("notify", {})
-        use_legacy = notify_cfg.get("use_legacy", True) or not notify_cfg.get("enabled", False)
-
-        if not use_legacy:
-            items_by_event: dict[str, list[Item]] = {}
-            for it in clustered_items:
-                if it.event_id:
-                    items_by_event.setdefault(it.event_id, []).append(it)
-            from radar.notify.run import run as notify_run
-            await notify_run(
-                cfg,
-                new_events=new_events_list,
-                items_by_event=items_by_event,
-                situation=sit,
-                site_url=site_url,
-                dry_run=notify_dry_run,
-            )
-        elif pipeline_ran:
-            await _legacy_distribute(
-                cfg, clustered_items, new_events_list, updated_events_list,
-                updated_events, sit, site_url,
-            )
-        else:
-            await _wecom_fallback_push(sit, updated_events, site_url, cfg)
+        items_by_event: dict[str, list[Item]] = {}
+        for it in clustered_items:
+            if it.event_id:
+                items_by_event.setdefault(it.event_id, []).append(it)
+        from radar.notify.run import run as notify_run
+        await notify_run(
+            cfg,
+            new_events=new_events_list,
+            items_by_event=items_by_event,
+            situation=sit,
+            site_url=site_url,
+            dry_run=notify_dry_run,
+        )
 
     finally:
         await client.close()

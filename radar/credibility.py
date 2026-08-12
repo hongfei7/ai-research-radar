@@ -9,8 +9,10 @@ CREDIBILITY_RULES = {
     # —— 官方一手来源 ——
     "rss:openai":       "high",
     "rss:googleai":     "high",
+    "rss:deepmind":     "high",
     "rss:nvidia-blog":  "high",
     "rss:msft-research":"high",
+    "rss:aws-ml":       "high",
     "sec_edgar":        "high",
 
     # —— 学术 / IEEE ——
@@ -31,9 +33,20 @@ CREDIBILITY_RULES = {
     "rss:infoq":           "medium",
     "rss:importai":        "medium",
 
+    # —— 半导体与战略分析(署名深度分析, 但属观点非事实) ——
+    "rss:semiengineering": "medium",
+    "rss:semianalysis":    "medium",
+    "rss:stratechery":     "medium",
+    "rss:interconnects":   "medium",
+    "rss:simonwillison":   "medium",
+
     # —— 中文科技媒体 ——
     "rss:36kr":            "medium",
     "rss:leiphone":        "medium",
+    "rss:qbitai":          "medium",
+    "rss:geekpark":        "medium",
+    "rss:tmtpost":         "medium",
+    "rss:ifanr":           "medium",
 
     # —— 聚合器（内容来自其他源，需交叉验证） ——
     "rss:techmeme":        "low",
@@ -51,6 +64,7 @@ CREDIBILITY_RULES = {
 
     # —— HuggingFace（学术社区，可信度较高） ——
     "huggingface:papers":  "medium",
+    "rss:hf-blog":         "medium",
 
     # —— MiniMax 搜索（Google 级搜索聚合） ——
     "minimax_search":      "low",

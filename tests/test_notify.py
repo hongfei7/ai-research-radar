@@ -6,6 +6,8 @@
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
+import pytest
+
 from radar.models import Event, Item
 from radar.notify.types import (
     DigestPayload, DigestSection, DigestItem,
@@ -249,24 +251,35 @@ def test_breaking_max_per_run():
 
 
 # ================================================================
-# 兜底模板稿(散文形态)
+# 兜底模板稿
 # ================================================================
 
-def test_fallback_payload_daily_prose():
+def test_fallback_payload_daily_degraded_calls():
+    """晨报兜底稿降级为"只有事实层"的判断链, 仍保留 ref 以便渲染证据链接"""
     material = {
         "generated_at": "2026-08-12T00:00:00Z",
         "situation": "截至 08-12, 板块维持此前格局。",
         "events": [
-            {"title": "事件A", "tickers": ["英伟达"], "significance": 8,
+            {"ref": "E1", "title": "事件A", "tickers": ["英伟达"], "significance": 8,
              "summary": "摘要A", "direction": {"英伟达": "positive"}},
         ],
     }
     payload = fallback_payload(KIND_MORNING, material, "08月12日 07:00")
     assert payload.fallback
+    # 降级稿缺机理/推论/证伪, 不能按完整判断链校验
     payload.validate()
-    assert payload.sections[0].paragraphs, "兜底稿应为散文段落"
+    assert payload.calls and payload.calls[0].claim == "事件A"
+    assert payload.calls[0].evidence_refs == ["E1"]
     msgs = render_wecom.render(payload, site_url="https://example.com", brand=BRAND)
     assert "事件A" in msgs[0] and "/10" not in msgs[0]
+
+
+def test_fallback_daily_fails_strict_call_validation():
+    """降级稿不得冒充完整判断链: 按 expect_calls 校验必须失败"""
+    material = {"events": [{"ref": "E1", "title": "事件A", "summary": "摘要A"}]}
+    payload = fallback_payload(KIND_MORNING, material, "08月12日 07:00")
+    with pytest.raises(ValueError):
+        payload.validate(expect_calls=True)
 
 
 def test_fallback_breaking_prose():

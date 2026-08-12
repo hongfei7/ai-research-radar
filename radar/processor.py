@@ -24,6 +24,8 @@ class Processor:
         self.cfg = cfg
         self.min_score = cfg["scoring"]["min_score_to_keep"]
         self.max_items = cfg["scoring"].get("max_items_in_brief", 25)
+        # 按信源可信度分档的入选门槛, 未配置时退化为全局 min_score
+        self._cred_floor = cfg["scoring"].get("credibility_floor", {}) or {}
         # 预计算合法值集合，用于校验 LLM 输出
         self._valid_tickers = {c["name"] for c in cfg["coverage"]}
         # 别名 → 标准名 映射（LLM 可能用中文别名）
@@ -36,6 +38,14 @@ class Processor:
     # ================================================================
     # 后处理校验：过滤 LLM 幻觉的 ticker/theme
     # ================================================================
+
+    def _score_floor(self, item: Item) -> int:
+        """该条目的入选分数门槛: 低可信信源要求更高相关性"""
+        cred = (item.credibility or "").strip().lower()
+        for level in ("high", "medium", "low"):
+            if level in cred:
+                return max(self.min_score, int(self._cred_floor.get(level, self.min_score)))
+        return self.min_score
 
     def _resolve_ticker(self, name: str) -> str | None:
         """将 LLM 返回的名称（可能是别名）解析为标准名，无法匹配则返回 None"""
@@ -130,6 +140,7 @@ class Processor:
                     messages=[{"role": "user", "content": prompt}],
                     temperature=0.2,
                     max_tokens=8192,
+                    thinking=False,  # 40 条批量打分, 推理带来的延迟远大于收益
                 )
                 if isinstance(result, list):
                     all_scored.extend(result)
@@ -149,6 +160,7 @@ class Processor:
                 scored_map[s["id"]] = s
 
         scored_items: list[Item] = []
+        cred_filtered = 0
         for item in items:
             s = scored_map.get(item.id)
             if s is None:
@@ -159,7 +171,10 @@ class Processor:
             except (ValueError, TypeError):
                 logger.warning(f"Triage: non-numeric score for {item.id}: {s.get('score')}")
                 continue
-            if score < self.min_score:
+            floor = self._score_floor(item)
+            if score < floor:
+                if score >= self.min_score:
+                    cred_filtered += 1
                 continue
             item.relevance_score = score
             item.relevance_reason = s.get("one_line", "")
@@ -174,7 +189,8 @@ class Processor:
         kept = scored_items[: self.max_items]
 
         logger.info(
-            f"Triage result: {len(scored_items)} pass threshold → keeping top {len(kept)}"
+            f"Triage result: {len(scored_items)} pass threshold → keeping top {len(kept)} "
+            f"({cred_filtered} dropped by credibility floor)"
         )
         return kept
 
@@ -216,6 +232,7 @@ class Processor:
                         messages=[{"role": "user", "content": prompt}],
                         temperature=0.3,
                         max_tokens=4096,
+                        thinking=False,  # 单条摘要抽取, 并发 5 路, 关推理保吞吐
                     )
                     if isinstance(result, dict):
                         item.cn_summary = result.get("cn_summary", "") or ""
