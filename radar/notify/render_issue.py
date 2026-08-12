@@ -266,7 +266,8 @@ def _appendix(payload: DigestPayload, material: dict) -> list[str]:
     ]
     for ev in events[:_MAX_APPENDIX_ROWS]:
         tickers = "、".join((ev.get("tickers") or [])[:3])
-        first_seen = short_date(ev.get("first_seen_at", ""))
+        # 报新闻何时发生, 不是爬虫何时看到
+        first_seen = short_date(ev.get("first_published_at") or ev.get("first_seen_at", ""))
         srcs = ev.get("sources") or []
         link = f"[原文]({srcs[0]['url']})" if srcs and srcs[0].get("url") else "—"
         lines.append(

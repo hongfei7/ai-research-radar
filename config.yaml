@@ -138,10 +138,14 @@ sources:
     - { id: "reddit:singularity",  type: "rss", params: { url: "https://www.reddit.com/r/singularity/.rss" } }
     # ---- HuggingFace Daily Papers（JSON API，公开可用） ----
     - { id: "huggingface:papers",  type: "huggingface_papers", params: { max: 20, window_hours: 48 } }
-    # ---- MiniMax 联网搜索（Google 级搜索，替代 DDG） ----
-    - { id: "minimax_search",  type: "minimax_search", params: { max_per_stock: 3 } }
-    # ---- DuckDuckGo 搜索（低可信兜底，覆盖 A 股/港股中文盲区） ----
-    - { id: "web_search",      type: "web_search", params: { max_per_stock: 1 } }
+    # ---- 搜索类采集器：已停用（2026-08-13） ----
+    # 它们本质是档案检索而非新闻源。历史 1310 条中 URL 可反推日期的 399 条里，
+    # 394 条超过 7 天、350 条超过 30 天，最老 673 天；且大量结果来自没有发布
+    # 日期的 SEO 洗稿站（aichipfront.com 这类），一篇 5 月的旧闻被当成 8 月的
+    # 突发快报推了出去。中文覆盖已由 36氪/雷锋网/量子位/极客公园/钛媒体/爱范儿
+    # 承担。恢复条件：搜索结果能稳定带上可信的发布日期。
+    # - { id: "minimax_search",  type: "minimax_search", params: { max_per_stock: 3 } }
+    # - { id: "web_search",      type: "web_search", params: { max_per_stock: 1 } }
   market:
     # 8-K 申报稀疏且时间戳只到天, 给足窗口
     - { id: "sec_edgar",       type: "sec_edgar", params: { forms: ["8-K"], window_hours: 72 } }
@@ -232,6 +236,9 @@ notify:
   breaking:                     # 首席快报
     enabled: true
     min_significance: 8
+    # 内容年龄上限: 批量发布源的采集窗口是放宽的(SEC 72h / arXiv 30h),
+    # 一份三天前的 8-K 不该以"突发"的名义推送
+    max_content_age_hours: 24
     quiet_hours_breakthrough: 9 # 静默时段(01-07)仅 sig≥9 破例
     cooldown_min: 30
     max_per_run: 3              # 溢出并入下一轮快报评估

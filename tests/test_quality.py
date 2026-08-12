@@ -4,6 +4,7 @@
 """
 
 import json
+from datetime import datetime, timezone
 from pathlib import Path
 
 import pytest
@@ -700,3 +701,120 @@ def test_alert_budget_leaves_short_text_alone():
     before = (p.alert.summary, p.alert.why, p.alert.watch)
     _enforce_alert_budget(p)
     assert (p.alert.summary, p.alert.why, p.alert.watch) == before
+
+
+# ================================================================
+# 时效性: 无日期不等于新鲜
+# ================================================================
+
+def _mk_item(iid="i1", published_at="", source="rss:36kr", score=8):
+    from radar.models import utcnow_iso
+    return Item(id=iid, title="t", url=f"https://x/{iid}", source=source,
+                source_type="tech", published_at=published_at,
+                fetched_at=utcnow_iso(), raw_summary="s", relevance_score=score)
+
+
+def test_undated_items_are_dropped_at_collection():
+    """无日期条目此前无条件放行, 三个月前的 SEO 洗稿文因此成了突发快报"""
+    import asyncio
+    from datetime import timedelta
+    import main as radar_main
+    from radar.models import utcnow_iso
+
+    fresh = _mk_item("fresh", utcnow_iso())
+    stale = _mk_item("stale",
+                     (datetime.now(timezone.utc) - timedelta(days=90)).isoformat())
+    undated = _mk_item("undated", "", source="web_search")
+
+    cfg = {"runtime": {"rolling_window_hours": 8}, "coverage": [],
+           "sources": {"tech": [{"id": "rss:36kr", "type": "rss", "params": {}},
+                                {"id": "web_search", "type": "web_search", "params": {}}],
+                       "market": []}}
+
+    class _Stub:
+        async def fetch(self, sid, params):
+            return [fresh, stale, undated] if sid == "rss:36kr" else []
+
+    orig_map = dict(radar_main.COLLECTOR_MAP)
+    orig_dedup = radar_main.DedupStore
+    radar_main.COLLECTOR_MAP.update({"rss": _Stub(), "web_search": _Stub()})
+
+    class _NoDedup:
+        def filter_new(self, ids): return ids
+        def close(self): pass
+    radar_main.DedupStore = _NoDedup
+    try:
+        kept = asyncio.run(radar_main.collect_all(cfg))
+    finally:
+        radar_main.COLLECTOR_MAP.clear(); radar_main.COLLECTOR_MAP.update(orig_map)
+        radar_main.DedupStore = orig_dedup
+
+    assert [i.id for i in kept] == ["fresh"]
+
+
+def test_assemble_excludes_undated_items(tmp_path, monkeypatch):
+    """素材层与采集层保持同一不变式"""
+    from radar.notify import assemble as asm
+    monkeypatch.setattr(asm, "load_items", lambda d: [
+        _mk_item("dated", datetime.now(timezone.utc).isoformat()),
+        _mk_item("undated", ""),
+    ])
+    assert [i.id for i in asm.load_window_items(24)] == ["dated"]
+
+
+# ================================================================
+# 快报内容年龄闸门
+# ================================================================
+
+def _fresh_event(hours_old: float):
+    from datetime import timedelta
+    from radar.notify.scheduler import _content_is_fresh
+    ev = Event(event_id="e1", title="T", summary="S", significance=9)
+    published = (datetime.now(timezone.utc) - timedelta(hours=hours_old)).isoformat()
+    return _content_is_fresh(ev, {"e1": [_mk_item("i1", published)]}, 24)
+
+
+def test_breaking_allows_fresh_content():
+    assert _fresh_event(3) is True
+
+
+def test_breaking_blocks_stale_content():
+    """SEC 窗口 72h, 三天前的 8-K 不该以"突发"名义推送"""
+    assert _fresh_event(72) is False
+
+
+def test_breaking_blocks_when_no_publish_time():
+    """拿不出新鲜度证据就不推"""
+    from radar.notify.scheduler import _content_is_fresh
+    ev = Event(event_id="e1", title="T", summary="S", significance=9)
+    assert _content_is_fresh(ev, {"e1": [_mk_item("i1", "")]}, 24) is False
+    assert _content_is_fresh(ev, {}, 24) is False
+
+
+# ================================================================
+# 真实首报时间
+# ================================================================
+
+def test_event_tracks_earliest_publish_time():
+    from radar.cluster import _earlier_iso
+    assert _earlier_iso("2026-08-13T00:00:00Z", "2026-05-04T00:00:00Z") \
+        == "2026-05-04T00:00:00Z"
+    assert _earlier_iso("", "2026-05-04T00:00:00Z") == "2026-05-04T00:00:00Z"
+    assert _earlier_iso("2026-08-13T00:00:00Z", "") == "2026-08-13T00:00:00Z"
+
+
+def test_event_backfills_first_published_from_first_seen():
+    ev = Event.from_dict({"event_id": "e", "title": "T", "summary": "S",
+                          "first_seen_at": "2026-05-28T00:00:00Z"})
+    assert ev.first_published_at == "2026-05-28T00:00:00Z"
+
+
+def test_appendix_shows_publish_date_not_ingest_date():
+    """5 月的新闻 8 月才入库, 附录该报 05-04 而不是 08-12"""
+    material = _fake_material()
+    material["events"][0]["first_published_at"] = "2026-05-04T00:00:00Z"
+    material["events"][0]["first_seen_at"] = "2026-08-12T00:00:00Z"
+    body = render_issue_body(_full_payload(), material=material)
+    row = next(l for l in body.splitlines() if "台积电 CoWoS 扩产" in l and l.startswith("|"))
+    assert "| 05-04 |" in row       # 发布时间
+    assert "| 08-12 |" not in row   # 入库时间不该出现

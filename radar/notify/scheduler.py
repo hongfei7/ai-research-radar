@@ -148,6 +148,25 @@ def _check_weekly(cfg: dict, state: dict, now: datetime) -> Optional[PushTask]:
     return PushTask(kind="weekly", slot_key=slot_key, reason="周末复盘窗口")
 
 
+def _content_is_fresh(ev: Event, items_by_event: dict, max_age_hours: float) -> bool:
+    """事件最新成员条目是否在年龄上限内
+
+    采集层堵住无日期后普通条目天然新鲜, 但批量发布源的窗口是放宽的
+    (SEC 72h / arXiv 30h), 三天前的 8-K 不该以"突发"的名义推送。
+    取不到发布时间时按不通过处理 —— 拿不出新鲜度证据就不推。
+    """
+    from datetime import timezone
+    published = [
+        dt for dt in (parse_iso(it.published_at)
+                      for it in items_by_event.get(ev.event_id, []))
+        if dt is not None
+    ]
+    if not published:
+        return False
+    age_h = (datetime.now(timezone.utc) - max(published)).total_seconds() / 3600
+    return age_h <= max_age_hours
+
+
 def _check_breaking(cfg: dict, state: dict, now: datetime,
                     new_events: list[Event],
                     items_by_event: dict) -> Optional[PushTask]:
@@ -165,8 +184,16 @@ def _check_breaking(cfg: dict, state: dict, now: datetime,
 
     quiet = _in_quiet_hours(now)
     threshold = breakthrough_sig if quiet else min_sig
+    max_age_h = b_cfg.get("max_content_age_hours", 24)
 
-    candidates = [ev for ev in new_events if ev.significance >= threshold]
+    candidates = []
+    for ev in new_events:
+        if ev.significance < threshold:
+            continue
+        if not _content_is_fresh(ev, items_by_event, max_age_h):
+            logger.info(f"Breaking skipped (stale content): {ev.title[:40]}")
+            continue
+        candidates.append(ev)
     candidates.sort(key=lambda e: e.significance, reverse=True)
 
     existing_fps = state.get("breaking_fingerprints", [])

@@ -144,8 +144,8 @@ async def collect_all(cfg: dict) -> list[Item]:
     # 结果是高可信源整月零产出、低可信搜索结果占四成(审计发现)。
     now_utc = datetime.now(timezone.utc)
     stale_by_source: dict[str, int] = {}
+    undated_by_source: dict[str, int] = {}
     filtered_items = []
-    no_date_count = 0
 
     def _window_for(source: str) -> float:
         if source in window_by_source:
@@ -159,9 +159,10 @@ async def collect_all(cfg: dict) -> list[Item]:
     for it in all_items:
         pub_dt = get_effective_date(it)
         if pub_dt is None:
-            # published_at 不可解析：保留但标记（不 fallback 到 fetched_at）
-            no_date_count += 1
-            filtered_items.append(it)
+            # 无日期一律丢弃。放行等于把"未知"当成"新鲜": 实测搜索类信源翻出的
+            # SEO 洗稿站文章正好没有日期, 一篇三个月前的旧闻就这样成了突发快报。
+            # 除搜索类外的信源 100% 带可解析日期(实测 1260/1260), 丢弃无误杀风险。
+            undated_by_source[it.source] = undated_by_source.get(it.source, 0) + 1
             continue
 
         if pub_dt >= now_utc - timedelta(hours=_window_for(it.source)):
@@ -170,11 +171,13 @@ async def collect_all(cfg: dict) -> list[Item]:
             stale_by_source[it.source] = stale_by_source.get(it.source, 0) + 1
 
     stale_count = sum(stale_by_source.values())
-    if stale_count > 0:
-        top_stale = sorted(stale_by_source.items(), key=lambda x: -x[1])[:5]
+    undated_count = sum(undated_by_source.values())
+    if stale_count or undated_count:
         logger.info(
-            f"Time filter: {stale_count} stale items removed "
-            f"(top: {top_stale}), {no_date_count} without date kept, "
+            f"Time filter: {stale_count} stale "
+            f"(top: {sorted(stale_by_source.items(), key=lambda x: -x[1])[:5]}), "
+            f"{undated_count} undated dropped "
+            f"(top: {sorted(undated_by_source.items(), key=lambda x: -x[1])[:5]}), "
             f"{len(filtered_items)} remaining"
         )
     all_items = filtered_items
