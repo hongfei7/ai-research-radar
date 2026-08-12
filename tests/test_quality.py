@@ -587,14 +587,19 @@ def test_ticker_line_without_direction_data():
     assert ticker_line([]) == ""
 
 
+BRAND = {"institute": "Sterling 证券研究", "analyst": "Ayer",
+         "analyst_title": "TMT 首席分析师"}
+
+
 def test_breaking_wecom_layout():
     from radar.notify import render_wecom
     m = _breaking_material(); m["events"] = [m["event"]]
     msgs = render_wecom.render(_breaking_payload(), "", "https://gh/issues/40",
-                               material=m)
+                               brand=BRAND, material=m)
     body = msgs[0]
-    # 抬头带标的与箭头, 一轮多条快报才区分得开
-    assert body.startswith("**长电科技 ↑ · 英伟达 ↓ · 中芯国际｜首席快报 · 08月13日 09:20**")
+    # 抬头两行: 品牌署名 + 标的与时间
+    assert body.startswith("**Sterling 证券研究 · Ayer 首席快报**\n"
+                           "长电科技 ↑ · 英伟达 ↓ · 中芯国际 · 08月13日 09:20")
     assert "**含义**" in body and "**盯**" in body
     assert "[原文](https://a.example/1)" in body
     assert "[今日快报汇总](https://gh/issues/40)" in body
@@ -602,12 +607,32 @@ def test_breaking_wecom_layout():
     assert body.count("https://gh/issues/40") == 1
 
 
+def test_breaking_wecom_uses_rules_to_separate_sections():
+    """报头/正文/报尾之间要有分割线, 否则在微信里糊成一片"""
+    from radar.notify import render_wecom
+    m = _breaking_material(); m["events"] = [m["event"]]
+    body = render_wecom.render(_breaking_payload(), "", "https://gh/issues/40",
+                               brand=BRAND, material=m)[0]
+    lines = body.split("\n")
+    assert lines.count("---") == 2                     # 报头后 + 报尾前
+    assert lines.index("---") < lines.index("鸿海Q4开始出货Vera Rubin平台。")
+
+
+def test_daily_wecom_has_rules():
+    from radar.notify import render_wecom
+    m = _fake_material()
+    body = render_wecom.render(_full_payload(), "", "https://gh/issues/1",
+                               brand=BRAND, material=m)[0]
+    assert "---" in body.split("\n")
+
+
 def test_breaking_telegram_layout():
     from radar.notify import render_telegram
     m = _breaking_material(); m["events"] = [m["event"]]
     out = render_telegram.render(_breaking_payload(), "", "https://gh/issues/40",
-                                 material=m)
-    assert "<b>长电科技 ↑ · 英伟达 ↓ · 中芯国际｜首席快报" in out
+                                 brand=BRAND, material=m)
+    assert out.startswith("<b>Sterling 证券研究 · Ayer 首席快报</b>\n"
+                          "长电科技 ↑ · 英伟达 ↓ · 中芯国际 · 08月13日 09:20")
     assert '<a href="https://a.example/1">原文</a>' in out
     assert out.count("https://gh/issues/40") == 1
 

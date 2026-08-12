@@ -71,12 +71,23 @@ def ticker_line(tickers: list, direction: dict | None = None,
     return " · ".join(parts)
 
 
-def alert_header(material: dict, product: str, when: str) -> str:
-    """快报抬头: "英伟达 ↑ · 台积电 ↑｜首席快报 · 15:42"
+def alert_header(material: dict, brand: dict, product: str, when: str) -> list[str]:
+    """快报抬头, 两行:
 
-    一轮最多推 3 条快报, 抬头若不带标的就完全无法区分是哪只票的什么事。
+        Sterling 证券研究 · Ayer 首席快报
+        英伟达 ↑ · 台积电 ↓ · 08月13日 15:42
+
+    第一行落品牌与署名 —— 收件人要一眼知道这是谁发的。第二行才是标的与时间;
+    一轮最多推 3 条快报, 不带标的就完全无法区分是哪只票的什么事。
+    两者挤一行会长到折行, 反而更难读。
     """
+    brand = brand or DEFAULT_BRAND
     ev = (material or {}).get("event") or {}
-    line = ticker_line(ev.get("tickers"), ev.get("direction"))
-    left = f"{line}｜{product}" if line else product
-    return f"{left} · {when}" if when else left
+    title = " · ".join(b for b in [
+        brand.get("institute", ""),
+        " ".join(b for b in [brand.get("analyst", ""), product] if b),
+    ] if b)
+    subtitle = " · ".join(b for b in [
+        ticker_line(ev.get("tickers"), ev.get("direction")), when,
+    ] if b)
+    return [title, subtitle] if subtitle else [title]

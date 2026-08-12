@@ -109,7 +109,9 @@ def render(payload: DigestPayload, site_url: str = "", issue_url: str = "",
         p = payload.title.split("|", 1)
         product = p[0].strip() or "首席快报"
         when = p[1].strip() if len(p) > 1 else ""
-        parts.append(f"<b>{_esc(alert_header(material or {}, product, when))}</b>")
+        title, *rest = alert_header(material or {}, brand, product, when)
+        parts.append(f"<b>{_esc(title)}</b>")
+        parts.extend(_esc(line) for line in rest)
     else:
         p = payload.title.split("|", 1)
         product = p[0].strip()
