@@ -69,7 +69,8 @@ def load_window_events(hours: float) -> list[Event]:
     result = []
     for ev in events.values():
         dt = get_event_effective_date(ev)
-        if dt is None or dt >= cutoff:
+        # 与采集层同一个不变式: 无日期不等于新鲜, 不能当作在窗口内
+        if dt is not None and dt >= cutoff:
             result.append(ev)
     result.sort(key=lambda e: (e.significance, e.last_updated_at or ""), reverse=True)
     return result
@@ -91,7 +92,7 @@ def load_window_items(hours: float) -> list[Item]:
     result = []
     for it in items.values():
         dt = parse_iso(it.published_at)
-        if dt is None or dt >= cutoff:
+        if dt is not None and dt >= cutoff:
             result.append(it)
     result.sort(key=lambda x: x.relevance_score or 0, reverse=True)
     return result
@@ -171,6 +172,7 @@ def _event_to_material(ev: Event, ref: str, items_index: dict[str, Item]) -> dic
         "status": ev.status,
         "is_active": ev.is_active,
         "source_count": ev.source_count,
+        "first_published_at": ev.first_published_at or ev.first_seen_at,
         "first_seen_at": ev.first_seen_at,
         "last_updated_at": ev.last_updated_at,
         "deep_analysis": _clip(ev.deep_analysis, _EVENT_ANALYSIS_CLIP),

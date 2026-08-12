@@ -8,7 +8,7 @@ import re
 from datetime import datetime, timezone
 from typing import Optional
 
-from radar.models import Item, Event, utcnow_iso
+from radar.models import Item, Event, parse_iso, utcnow_iso
 from radar.minimax_client import MinimaxClient, cosine_similarity
 from radar.prompts import load_prompt
 from radar.textnorm import clean_title
@@ -51,6 +51,15 @@ def _recompute_tickers(counts: dict, source_count: int, max_tickers: int) -> lis
     if not kept:
         kept = [ranked[0][0]]  # 支持度门槛过高时至少保留最高频的一个
     return kept
+
+
+def _earlier_iso(a: str, b: str) -> str:
+    """返回两个 ISO 时间中较早的一个, 忽略空值与不可解析值"""
+    dts = [(s, parse_iso(s)) for s in (a, b)]
+    valid = [(s, dt) for s, dt in dts if dt is not None]
+    if not valid:
+        return a or b or ""
+    return min(valid, key=lambda x: x[1])[0]
 
 
 def _recompute_significance(max_item_score: int, source_count: int) -> int:
@@ -152,6 +161,9 @@ class ClusterEngine:
                 event.max_item_score = max(
                     _safe_int(event.max_item_score, 0), _safe_int(item.relevance_score, 0)
                 )
+                event.first_published_at = _earlier_iso(
+                    event.first_published_at, item.published_at
+                )
                 event.significance = _recompute_significance(
                     event.max_item_score, event.source_count
                 )
@@ -186,6 +198,7 @@ class ClusterEngine:
                     item_ids=[item.id],
                     source_count=1,
                     first_seen_at=now,
+                    first_published_at=(item.published_at or now),
                     last_updated_at=now,
                     is_active=True,
                     significance=_recompute_significance(item.relevance_score, 1),

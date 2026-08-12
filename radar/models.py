@@ -100,7 +100,10 @@ class Event:
     direction: dict = field(default_factory=dict)
     item_ids: list = field(default_factory=list)     # 属于此事件的所有条目 id
     source_count: int = 0                # 来源数
-    first_seen_at: str = ""              # ISO8601
+    first_seen_at: str = ""              # ISO8601，本系统首次入库的时间
+    # 成员条目中最早的发布时间 —— 报告里的"首报"要报新闻何时发生，
+    # 而不是爬虫何时看到（两者对长命事件线可以差好几个月）
+    first_published_at: str = ""         # ISO8601
     last_updated_at: str = ""            # ISO8601
     is_active: bool = True               # 是否仍在活跃
     significance: int = 0                # 重要性 0-10（由 max_item_score + 信源数派生）
@@ -135,9 +138,13 @@ class Event:
             "deep_analysis": "",
             "ticker_counts": {},
             "max_item_score": 0,
+            "first_published_at": "",
         }
         for k, v in defaults.items():
             d.setdefault(k, v)
+        # 旧状态没有这个字段，退回入库时间，至少不是空白
+        if not d["first_published_at"]:
+            d["first_published_at"] = d["first_seen_at"]
         # 旧状态文件没有这两个字段，用现有值回填，避免升级当轮把事件打回零分
         if not d["ticker_counts"] and d["tickers"]:
             d["ticker_counts"] = {t: 1 for t in d["tickers"]}
