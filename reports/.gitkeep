@@ -1,0 +1,5 @@
+每日内参归档目录。notify 子系统在创建 Issue 的同时把同一份正文写到
+reports/YYYY-MM-DD.md（周报为 weekly-YYYY-Www.md），带 YAML frontmatter。
+
+这个占位文件让目录在首份报告产出前就存在于仓库中 —— 否则 CI 的
+`git add reports/` 会因 pathspec 不匹配直接以 exit 128 失败。

@@ -32,7 +32,11 @@ jobs:
           git config user.email "radar-bot@users.noreply.github.com"
           # 先提交本地变更, 再 rebase 到远端 —— 绝不能 reset --hard,
           # 那会丢弃本轮管道对 tracked 文件(state/ README.md)的全部修改
-          git add archive/ state/ reports/ README.md docs/
+          # 逐个 add 并跳过不存在的路径: git add 遇到不匹配的 pathspec 会以
+          # exit 128 直接失败, 一个尚未产出的目录就能让整个 job 挂掉
+          for p in archive state reports docs README.md; do
+            if [ -e "$p" ]; then git add "$p"; fi
+          done
           if git diff --cached --quiet; then
             echo "nothing to commit"
             exit 0
