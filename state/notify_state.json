@@ -1,5 +1,5 @@
 {
-  "morning_last_date": "2026-08-12",
+  "morning_last_date": "2026-08-13",
   "weekly_last_slot": "",
   "breaking_fingerprints": [
     {
@@ -374,5 +374,35 @@
       "sent_at": "2026-08-12T17:18:44Z"
     }
   ],
-  "last_report": null
+  "last_report": {
+    "date": "2026-08-13",
+    "macro": {
+      "cycle": "扩张第三年, 绝对投入仍创历史新高, 边际斜率首次出现分化",
+      "trajectory": {
+        "past": "晶圆制程产能",
+        "now": "先进封装与HBM",
+        "next": "AI capex可持续性",
+        "trigger": "头部云厂商AI相关发债信用利差单季走阔超过150bp, 或任意单季AI收入年化跑率未能覆盖对应capex的20%"
+      },
+      "shift": "首期建立框架",
+      "shift_kind": "hold"
+    },
+    "calls": [
+      {
+        "claim": "超大规模客户ASIC放量进入加速期, 双轨采购模式从叙事走向兑现",
+        "falsifier": "若2027年Q1微软或Meta公开下调Maia或MTIA出货指引超过20%, 或第三方benchmark显示自研ASIC性能/能效较英伟达同代际差距超过30%, 本判断失效",
+        "verify": "26Q1云厂商ASIC出货指引下修>20%"
+      },
+      {
+        "claim": "英伟达RTX PRO 6000 MSRP一年内翻倍至1.6万美元, 定价权峰值与客户逃离加速同步到来",
+        "falsifier": "若2026年Q4英伟达数据中心ASP同比增速回落至30%以下, 或前三客户中至少一家公开订单递延, 本判断失效",
+        "verify": "26Q4数据中心ASP同比增速跌破30%"
+      },
+      {
+        "claim": "先进封装而非晶圆产能构成台积电新增1000亿美元投资难以快速缓解的硬约束",
+        "falsifier": "若2026年Q4 CoWoS现货或合约报价环比回落超过5%, 或AMD MI400与英伟达Rubin发布时无封装瓶颈, 本判断失效",
+        "verify": "26Q4 CoWoS报价环比回落>5%"
+      }
+    ]
+  }
 }

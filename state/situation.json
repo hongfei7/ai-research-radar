@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-12T21:22:36Z",
-  "text": "截至 2026-08-13 05:22 HKT，本轮新增动态：思科最新季报营收172.5亿美元同比+18%，超预期；超大规模云厂AI基础设施订单达40亿美元，FY2027指引高于华尔街预期，印证AI capex向网络设备外溢。白宫据报拟扩展AI政策框架，开源模型或被纳入监管，标志美AI治理从\"轻度介入\"转向\"结构化监管\"。高通首次披露骁龙C处理器规格，主打300美元笔记本，宣称续航下性能较英特尔N250领先67%，但AC性能数据未公开，ARM PC生态推进但关键基准存疑。",
-  "since": "2026-08-12T21:22:36Z",
-  "active_event_count": 11,
+  "generated_at": "2026-08-12T23:05:18Z",
+  "text": "截至 2026-08-13 07:05 HKT，新增：DeepSeek V4 Pro正式版实测能力接近前沿大模型，Agent方向取得突破，国产算力链需求获间接验证；NVIDIA与杜克大学发布SCALE论文，以自监督布局生成修复亚2nm制程P&R DRV，EDA AI化趋势加速；8月12日美股分化，纳指涨0.54%，英伟达、英特尔涨超3%，Meta跌超3%，中概股普跌。",
+  "since": "2026-08-12T23:05:18Z",
+  "active_event_count": 10,
   "key_themes": [
     "compute_demand",
     "ai_monetization",
+    "model_capability",
     "chip_supply",
-    "datacenter_power",
-    "domestic_substitution"
+    "datacenter_power"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n本轮仅一条EE Times报道，孤源但指向明确分歧：Meta通过CXL池化旧DDR4实现服务器减量25%，而\"多数其他企业难以复制\"——DIMM兼容性、功耗管控、内存遥测缺失构成三大落地门槛。这意味着CXL对HBM/DDR5的替代效应目前是Meta单点案例，尚不构成行业级供给冲击，但叙事方向与HBM紧供给主线形成对冲。\n\n【新兴趋势】\nCXL内存解耦与池化（memory pooling / disaggregation）作为新兴主题浮现，核心逻辑是利用存量DDR4替代增量HBM/DDR5采购，降低AI基础设施的内存支出强度。该趋势若被其他Hyperscaler验证，将从需求侧重塑内存市场结构。\n\n【信息盲点】\n覆盖严重不足。HBM核心供给方SK海力士、三星未被提及；CXL控制器/交换机关键供应商Microchip、XConn、Astera Labs等完全缺位；其他Hyperscaler（Google、Microsoft AWS）的CXL路线图无对照；服务器DDR5 ASP走势、Intel/AMD新平台CXL支持进度也未涉及。仅凭一条样本无法判断CXL替代节奏。\n\n【跨标的联动】\n信号一：Meta（受益降本）↔ 美光（边际承压）形成最直接的多空对冲。信号二：CXL交换机/控制器潜在受益方博通、Marvell、Microchip被列为\"neutral\"，但逻辑上应转为正面，与HBM主线（美光、海力士）形成跷跷板。信号三：超微电脑、戴尔作为Meta服务器供应商，标为neutral，但若25%减量属实，订单结构需重新评估，潜在承压未充分定价。",
-  "trend_spotting": "【新兴趋势】Cisco单季$4B超大规模AI网络订单是72小时内最实质的新信号——AI capex正从GPU/HBM向以太网交换与光模块外溢，博通Tomahawk、Marvell及光模块链需求可见度被一线OEM财报首次交叉验证，FY2027超预期指引锁定2026-27需求斜率。\n\n【早期信号】白宫将开源模型纳入监管框架的动向尚未被市场充分"
+  "cross_analysis": "【核心矛盾】\nDeepSeek V4 Pro 实测称\"能力直逼 Fable 5\"（疑似指代 GPT-5 类前沿模型），但原文未披露 benchmark、参数规模、训练算力等关键信息，体验式评测与量化数据之间存在显著证据缺口；同时爱范儿将其定位为 Agent 方向突破，vs. 此前市场对国产模型更多聚焦\"对标 GPT-4o 级别\"，存在叙事升级但缺乏佐证的矛盾。另一处分歧在美股盘面：英伟达、英特尔涨超 3% 与 Meta 跌超 3%、微软跌超 2% 并存，反映市场对\"AI 算力链谁真正受益\"存在结构性分化——硬件供应商 vs. 应用/云平台变现节奏的预期差。\n\n【新兴趋势】\n\"AI for EDA\" 作为新主题出现：NVIDIA 联合杜克大学将自监督大模型思路用于亚 2nm 布局布线 DRV 修复，叠加 DeepSeek 在 Agent 方向的迭代，AI 正在从\"训练推理\"向\"设计工具链\"和\"自主执行\"两个新维度延伸，且二者均无单独大事件，却在多条信号中隐现。此外，国产模型能力升级与美股 Intel 走强并行，国产替代 + 先进制程自主两条暗线在本轮均被强化。\n\n【信息盲点】\n1) EDA AI 化主题中 Cadence、Synopsys 完全缺席，但二者才是商业 EDA 主导者，是该趋势最直接的对标；2) HBM/存储链（SK海力士、美光等）本轮无独立信息源，却在 NVDA/AMD 拉动下处于强景气；3) 苹果 AI 进展、Arista/Coherent 等 AI 网络与光模块标的被市场行情条目覆盖但无独立深度内容；4) 国内互联网云（阿里、腾讯）capex 边际变化仅作为二阶传导被提及，缺乏独立验证。\n\n【跨标的联动】\nDeepSeek V4 Pro 若落地超预期，将通过推理侧 token 消耗放量拉动国产芯片（华为、寒武纪、海光）适配需求，形成\"国产模型→国产算力\"的二阶传导；NVIDIA EDA 论文与台积电亚 2nm 先进制程形成上下游联动，EDA 工具链 AI 化推高设计门槛，反向利好代工与设备（ASML）；美股层面英伟达/英特尔走强 vs. Meta/微软回调的分化，暗示 AI 红利向上游硬件集中，中概互联网承压可能传导至国内云 capex 节奏，间接影响工业富联、中科曙光等国产算力链订单预期。",
+  "trend_spotting": "DeepSeek V4 Pro实测接近前沿模型且Agent能力突破，72小时内国产大模型能力差距进一步收窄至同代际区间，推理侧Token消耗放量预期升温，国产算力链边际催化值得跟踪。\n\nNVIDIA联合杜克发布SCALE论文，将自监督布局生成引入亚2nm DRV修复，这是其继CuLitho之后向物理设计EDA延伸的关键信号。EDA AI化与全栈设计工具竞争正在加速，Cadence/Synopsys面临跨维度挑战，但当前市场关注度严重不足。\n\n美股8月12日呈现明显分化：英伟达、英特尔涨超3%，Meta跌超3%、微软跌超2%，中概普跌。算力链（NVDA/Intel）相对强势与应用层（Meta/Microsoft）及中概互联网承压并存，反映市场对AI capex景气延续与AI变现节奏的定价出现割裂。Meta、微软回调需关注其capex指引是否出现边际变化，这将是AI需求链的二阶验证点。\n\n值得警惕的拐点：亚2nm设计收敛难度上升+AI-EDA工具渗透，将重塑先进制程代工与设备链的成本结构，台积电与ASML的中性评级可能面临上修。"
 }
