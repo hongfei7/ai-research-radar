@@ -9,7 +9,10 @@
 
 import logging
 
-from radar.notify.brand import DEFAULT_BRAND as _DEFAULT_BRAND, ordinal
+from radar.notify.assemble import sources_by_ref
+from radar.notify.brand import (
+    DEFAULT_BRAND as _DEFAULT_BRAND, alert_header, ordinal, source_label,
+)
 from radar.notify.types import DigestPayload, DigestSection, SHIFT_LABEL, KIND_BREAKING
 
 logger = logging.getLogger(__name__)
@@ -98,8 +101,34 @@ def _call_blocks(payload: DigestPayload) -> list[list[str]]:
     return blocks
 
 
+def _alert_blocks(payload: DigestPayload, material: dict, issue_url: str) -> list[list[str]]:
+    """快报正文: 事件句独立成段, 含义与盯什么各自加粗前缀, 末尾给可点原文"""
+    alert = payload.alert
+    if alert is None:
+        return []
+    blocks: list[list[str]] = []
+    if alert.summary.strip():
+        blocks.append([alert.summary.strip()])
+    if alert.why.strip():
+        blocks.append([f"**含义** {alert.why.strip()}"])
+    if alert.watch.strip():
+        blocks.append([f"**盯** {alert.watch.strip()}"])
+
+    tail = []
+    src_map = sources_by_ref(material or {})
+    for src in src_map.get(alert.evidence_ref, [])[:1]:
+        if src.get("url"):
+            bits = [b for b in [src.get("source", ""), source_label(src)] if b]
+            tail.append(f"[原文]({src['url']})" + (f" · {' · '.join(bits)}" if bits else ""))
+    if issue_url:
+        tail.append(f"[今日快报汇总]({issue_url})")
+    if tail:
+        blocks.append([" · ".join(tail)])
+    return blocks
+
+
 def render(payload: DigestPayload, site_url: str = "", issue_url: str = "",
-           brand: dict | None = None) -> list[str]:
+           brand: dict | None = None, material: dict | None = None) -> list[str]:
     """渲染为 WeCom markdown 消息列表(按 block 边界拆分)"""
     brand = brand or _DEFAULT_BRAND
 
@@ -109,7 +138,10 @@ def render(payload: DigestPayload, site_url: str = "", issue_url: str = "",
     # 报头: 机构 | 产品 换行 日期 · 署名
     header = []
     if payload.kind == KIND_BREAKING:
-        header.append(f"**{payload.title}**")
+        parts = payload.title.split("|", 1)
+        product = parts[0].strip() or "首席快报"
+        when = parts[1].strip() if len(parts) > 1 else ""
+        header.append(f"**{alert_header(material or {}, product, when)}**")
     else:
         # title 形如 "AI 首席内参 | 08月12日 07:00"
         parts = payload.title.split("|", 1)
@@ -126,6 +158,7 @@ def render(payload: DigestPayload, site_url: str = "", issue_url: str = "",
     if payload.headline:
         blocks.append([payload.headline])
 
+    blocks.extend(_alert_blocks(payload, material or {}, issue_url))
     blocks.extend(_call_blocks(payload))
 
     for section in payload.sections:
@@ -140,7 +173,8 @@ def render(payload: DigestPayload, site_url: str = "", issue_url: str = "",
             blocks.append(_item_block(item))
 
     # 报尾: 仅完整版 Issue 链接(实时看板已废弃, 报告唯一完整载体为 Issue)
-    if issue_url:
+    # 快报的链接已由 _alert_blocks 放在正文末尾, 不重复
+    if issue_url and payload.kind != KIND_BREAKING:
         blocks.append([f"[完整版 · 事件线与数据附录]({issue_url})"])
 
     # —— 贪心装包: block 按序装入消息, 不超 MAX_BYTES; block 间空行分隔 ——

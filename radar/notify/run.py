@@ -20,6 +20,7 @@ from radar.notify.types import KIND_MORNING, KIND_WEEKLY, KIND_BREAKING
 logger = logging.getLogger(__name__)
 
 _REPORTS_DIR = Path(__file__).resolve().parent.parent.parent / "reports"
+_BREAKING_LABEL = "快报"
 
 
 def _themes_map(cfg: dict) -> dict:
@@ -152,12 +153,18 @@ async def _execute_breaking(task, cfg, client, site_url, state,
         payload = await copywriter.write_digest(
             KIND_BREAKING, material, cfg, client, current_time_hkt=now_hkt_str
         )
-        wecom_msgs = render_wecom.render(payload, site_url, brand=_brand(cfg))
-        tg_msg = render_telegram.render(payload, site_url, brand=_brand(cfg),
-                                        material=material)
+        body = render_issue_body(payload, site_url, material=material, brand=_brand(cfg))
+
+        # 先归档再推送: 推送里要带上汇总 Issue 的链接
+        issue_url = "" if dry_run else await _archive_breaking(payload, body, now_hkt_str)
+
+        wecom_msgs = render_wecom.render(payload, site_url, issue_url,
+                                         brand=_brand(cfg), material=material)
+        tg_msg = render_telegram.render(payload, site_url, issue_url,
+                                        brand=_brand(cfg), material=material)
 
         if dry_run:
-            _print_dry_run(task, payload, wecom_msgs, tg_msg)
+            _print_dry_run(task, payload, wecom_msgs, tg_msg, body)
             used += len(wecom_msgs)
             any_success = True
             continue
@@ -167,6 +174,7 @@ async def _execute_breaking(task, cfg, client, site_url, state,
             success = (await transport.send_wecom_messages(wecom_msgs)) > 0
         if cfg.get("channels", {}).get("telegram", {}).get("enabled", False):
             success = await transport.send_telegram_html(tg_msg) or success
+        success = success or bool(issue_url)
 
         if success:
             # 记录内容签名指纹(防重)
@@ -176,6 +184,46 @@ async def _execute_breaking(task, cfg, client, site_url, state,
             any_success = True
         used += len(wecom_msgs)
     return used, any_success
+
+
+async def _archive_breaking(payload, body: str, now_hkt_str: str) -> str:
+    """快报归档: 当日一个汇总 Issue, 首条建 Issue, 后续追加为评论
+
+    一天可能推十几条快报, 一条一个 Issue 会淹没仓库; 汇总成一个则既能溯源,
+    也能被日报的「上期回溯」当作当日事实底稿翻查。
+    """
+    title = f"AI 快报 · {today_str()}"
+    entry = f"### {now_hkt_str}\n\n{body}"
+    issue_url = ""
+    try:
+        found = await transport.find_issue(title, label=_BREAKING_LABEL)
+        if found:
+            issue_url = found.get("html_url") or ""
+            await transport.add_issue_comment(found.get("number"), entry)
+        else:
+            issue_url = await transport.create_issue(
+                title, entry, [_BREAKING_LABEL]) or ""
+    except Exception as e:
+        logger.warning(f"Breaking archive failed: {e}")
+
+    _append_report_file(f"breaking-{today_str()}", entry)
+    return issue_url
+
+
+def _append_report_file(slug: str, entry: str) -> None:
+    """追加写入 reports/<slug>.md; 文件不存在时带上 frontmatter"""
+    try:
+        _REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+        path = _REPORTS_DIR / f"{slug}.md"
+        if not path.exists():
+            header = (f"---\ndate: {today_str()}\nkind: breaking\n---\n\n"
+                      f"# AI 快报 · {today_str()}\n\n")
+            path.write_text(header, encoding="utf-8")
+        with open(path, "a", encoding="utf-8") as f:
+            f.write(entry.rstrip() + "\n\n---\n\n")
+        logger.info(f"Breaking archived: {path}")
+    except OSError as e:
+        logger.warning(f"Breaking report append failed: {e}")
 
 
 def _write_report_file(payload, body: str, issue_url: str, slug: str) -> None:

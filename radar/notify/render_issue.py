@@ -12,9 +12,9 @@ import logging
 
 from radar.notify.assemble import sources_by_ref
 from radar.notify.brand import (
-    DEFAULT_BRAND, brand_of, ordinal, source_label, short_date,
+    DEFAULT_BRAND, alert_header, brand_of, ordinal, source_label, short_date,
 )
-from radar.notify.types import DigestPayload, SHIFT_LABEL
+from radar.notify.types import DigestPayload, SHIFT_LABEL, KIND_BREAKING
 from radar.textnorm import clean_title, strip_markdown
 
 logger = logging.getLogger(__name__)
@@ -55,6 +55,11 @@ def _evidence_lines(refs: list, src_map: dict) -> list[str]:
 def _header(payload: DigestPayload, brand: dict, material: dict) -> list[str]:
     product = payload.title.split("|", 1)[0].strip() if payload.title else "内参"
     when = payload.title.split("|", 1)[1].strip() if "|" in payload.title else ""
+
+    if payload.kind == KIND_BREAKING:
+        # 快报归档为当日汇总 Issue 里的一条, 外层已有 "### 时间" 小标题,
+        # 再套 H1 报头会层级倒置; 这里只给一行标的与时间
+        return [f"**{alert_header(material or {}, product, when)}**", ""]
 
     lines = [f"# {brand.get('institute', '')} | {product}"]
     byline = " · ".join(b for b in [
@@ -200,6 +205,28 @@ def _watchlist_block(payload: DigestPayload, src_map: dict) -> list[str]:
     return lines
 
 
+def _alert_block(payload: DigestPayload, src_map: dict) -> list[str]:
+    """快报归档正文: 与推送同稿, 证据展开为完整清单"""
+    alert = payload.alert
+    if alert is None:
+        return []
+    lines: list[str] = []
+    if alert.summary.strip():
+        lines.append(alert.summary.strip())
+        lines.append("")
+    for label, text in (("含义", alert.why), ("盯", alert.watch)):
+        if text.strip():
+            lines.append(f"**{label}** {text.strip()}")
+            lines.append("")
+    evidence = _evidence_lines([alert.evidence_ref] if alert.evidence_ref else [], src_map)
+    if evidence:
+        lines.append("**证据**")
+        lines.append("")
+        lines.extend(evidence)
+        lines.append("")
+    return lines
+
+
 def _sections_block(payload: DigestPayload) -> list[str]:
     """快讯/复盘仍走通用段落形态"""
     lines: list[str] = []
@@ -222,7 +249,10 @@ def _sections_block(payload: DigestPayload) -> list[str]:
     return lines
 
 
-def _appendix(material: dict) -> list[str]:
+def _appendix(payload: DigestPayload, material: dict) -> list[str]:
+    # 单事件快报的证据清单已经把来源列全, 再来一张单行附录纯属重复
+    if payload.kind == KIND_BREAKING:
+        return []
     events = (material or {}).get("events") or []
     if not events:
         return []
@@ -262,11 +292,12 @@ def render_issue_body(payload: DigestPayload, site_url: str = "",
     lines.extend(_macro_block(payload))
     lines.extend(_overview_table(payload))
     lines.extend(_reviews_block(payload, src_map))
+    lines.extend(_alert_block(payload, src_map))
     lines.extend(_calls_block(payload, src_map))
     lines.extend(_tension_block(payload))
     lines.extend(_sections_block(payload))
     lines.extend(_watchlist_block(payload, src_map))
-    lines.extend(_appendix(material))
+    lines.extend(_appendix(payload, material))
 
     lines.append("---")
     lines.append(

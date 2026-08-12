@@ -84,29 +84,70 @@ async def send_telegram_html(text: str) -> bool:
     return ok
 
 
-async def find_today_issue(title_prefix: str, label: str = "晨报") -> Optional[str]:
-    """幂等: 查找已存在的同题 Issue, 返回 URL(审计 H2)"""
-    repo = os.environ.get("GITHUB_REPOSITORY", "")
-    token = os.environ.get("GITHUB_TOKEN", "")
-    api_url = os.environ.get("GITHUB_API_URL", "https://api.github.com")
+def _gh_env() -> tuple[str, str, str]:
+    return (
+        os.environ.get("GITHUB_REPOSITORY", ""),
+        os.environ.get("GITHUB_TOKEN", ""),
+        os.environ.get("GITHUB_API_URL", "https://api.github.com"),
+    )
+
+
+def _gh_headers(token: str) -> dict:
+    return {"Authorization": f"Bearer {token}",
+            "Accept": "application/vnd.github+json"}
+
+
+async def find_issue(title_prefix: str, label: str) -> Optional[dict]:
+    """幂等: 查找已存在的同题 Issue, 返回 {number, html_url}
+
+    比 find_today_issue 多返回 number —— 追加评论的 API 要的是编号而非 URL。
+    """
+    repo, token, api_url = _gh_env()
     if not repo or not token:
         return None
-    url = f"{api_url}/repos/{repo}/issues"
-    params = {"state": "all", "labels": label, "per_page": 5}
     try:
         async with httpx.AsyncClient(timeout=15) as client:
             resp = await client.get(
-                url, params=params,
-                headers={"Authorization": f"Bearer {token}",
-                         "Accept": "application/vnd.github+json"},
+                f"{api_url}/repos/{repo}/issues",
+                params={"state": "all", "labels": label, "per_page": 10},
+                headers=_gh_headers(token),
             )
             resp.raise_for_status()
             for issue in resp.json():
                 if title_prefix in (issue.get("title") or ""):
-                    return issue.get("html_url")
+                    return {"number": issue.get("number"),
+                            "html_url": issue.get("html_url")}
     except Exception as e:
-        logger.warning(f"find_today_issue failed: {e}")
+        logger.warning(f"find_issue failed: {e}")
     return None
+
+
+async def find_today_issue(title_prefix: str, label: str = "晨报") -> Optional[str]:
+    """幂等: 查找已存在的同题 Issue, 返回 URL(审计 H2)"""
+    found = await find_issue(title_prefix, label)
+    return found.get("html_url") if found else None
+
+
+async def add_issue_comment(issue_number: int, body: str) -> bool:
+    """往已有 Issue 追加评论(当日快报汇总用)"""
+    repo, token, api_url = _gh_env()
+    if not repo or not token or not issue_number:
+        logger.warning("GITHUB_REPOSITORY or GITHUB_TOKEN not set, skipping comment")
+        return False
+    payload = json.dumps({"body": body}, ensure_ascii=False).encode("utf-8")
+    try:
+        async with httpx.AsyncClient(timeout=30) as client:
+            resp = await client.post(
+                f"{api_url}/repos/{repo}/issues/{issue_number}/comments",
+                content=payload,
+                headers={**_gh_headers(token),
+                         "Content-Type": "application/json; charset=utf-8"},
+            )
+            resp.raise_for_status()
+            return True
+    except Exception as e:
+        logger.error(f"Failed to comment on issue #{issue_number}: {e}")
+        return False
 
 
 async def create_issue(title: str, body: str, labels: list[str]) -> Optional[str]:

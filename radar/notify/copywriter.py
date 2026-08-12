@@ -22,7 +22,7 @@ from radar.prompts import load_prompt
 from radar.notify.assemble import llm_material, material_refs
 from radar.textnorm import clip_sentence
 from radar.notify.types import (
-    DigestPayload, DigestSection, DigestCall, MacroFrame,
+    DigestPayload, DigestSection, DigestItem, DigestCall, MacroFrame,
     KIND_MORNING, KIND_WEEKLY, KIND_BREAKING,
 )
 
@@ -64,12 +64,13 @@ async def write_digest(
         return fallback_payload(kind, material, current_time_hkt)
 
     expect_calls = kind in _CALL_KINDS
+    expect_alert = kind == KIND_BREAKING
     valid_refs = material_refs(material)
     expect_reviews = len(((material.get("last_report") or {}).get("calls")) or [])
 
-    prompt_material = llm_material(material) if expect_calls else material
+    # 所有 kind 一律剥 URL —— 快报素材同样带链接, 不能只堵日报那条通道
     prompt = template.replace(
-        "{material_json}", json.dumps(prompt_material, ensure_ascii=False)
+        "{material_json}", json.dumps(llm_material(material), ensure_ascii=False)
     )
     prompt = prompt.replace("{current_time}", current_time_hkt)
 
@@ -92,11 +93,13 @@ async def write_digest(
         dropped = payload.prune_refs(valid_refs)
         if dropped:
             logger.warning(f"Copywriter [{kind}] dropped {dropped} unknown evidence refs")
-        payload.validate(expect_calls=expect_calls, expect_reviews=expect_reviews)
+        payload.validate(expect_calls=expect_calls, expect_reviews=expect_reviews,
+                         expect_alert=expect_alert)
         payload.generated_at = material.get("generated_at", "")
         logger.info(
             f"Copywriter [{kind}] ok: {len(payload.calls)} calls, "
             f"{len(payload.reviews)} reviews, {len(payload.sections)} sections, "
+            f"alert={'y' if payload.alert else 'n'}, "
             f"headline {len(payload.headline)} chars"
         )
         return payload
@@ -131,12 +134,18 @@ def fallback_payload(kind: str, material: dict, current_time_hkt: str = "") -> D
     )
 
     if kind == KIND_BREAKING:
+        # 降级快报: 只有事实层, 没有含义与跟踪点
         ev = material.get("event") or {}
-        para = ev.get("title", "")
-        if ev.get("summary"):
-            para += f"。{ev['summary']}"
         payload.headline = ""
-        payload.sections = [DigestSection(heading="", paragraphs=[para])]
+        title = ev.get("title", "")
+        summary = ev.get("summary", "")
+        payload.alert = DigestItem(
+            title=title,
+            # 标题带着事件主体, 降级稿不能只留摘要 —— 否则读者看到的是没有主语的半句
+            summary=f"{title}。{summary}" if title and summary else (title or summary),
+            tickers=(ev.get("tickers") or [])[:3],
+            evidence_ref=ev.get("ref", ""),
+        )
         return payload
 
     events = (material.get("events") or [])[:8]

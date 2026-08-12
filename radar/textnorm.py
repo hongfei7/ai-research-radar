@@ -158,6 +158,28 @@ def is_index_page(url: str) -> bool:
     return bool(_INDEX_PATH_RE.search(path))
 
 
+# 聚合帖(晚报/早报/汇总)是"一篇 N 个事件"的容器, 对这套系统是纯负担:
+# 词汇分布接近语料均值, 和任何事件的 Jaccard 都偏高(实测全场最高的假阳性
+# 0.208 就来自氪星晚报); 标的动辄十几个, 是标的磁铁; 作为证据链接会把读者
+# 带到一个找不到对应内容的大杂烩页面, 直接违背"每条判断可溯源"的承诺。
+_DEFAULT_DIGEST_PATTERNS = (
+    "晚报", "早报", "午报", "周报", "速览", "汇总", "盘点",
+    "一周回顾", "一周速览", "本周要闻", "今日热点", "要闻回顾",
+    "每日精选", "24小时", "新闻早餐", "资讯合集",
+)
+
+
+def is_digest_title(title: str, patterns: tuple | list | None = None) -> bool:
+    """判断标题是否为多话题聚合帖
+
+    在站点后缀已被 clean_title 剥掉之后判断, 避免"经济日报"这类站点名误伤。
+    """
+    if not title:
+        return False
+    pats = patterns if patterns is not None else _DEFAULT_DIGEST_PATTERNS
+    return any(p and p in title for p in pats)
+
+
 def clip_sentence(text: str, max_len: int) -> str:
     """按句子边界裁剪, 避免半句截断; 找不到边界时退化为硬截断加省略号"""
     if not text:

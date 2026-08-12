@@ -297,23 +297,34 @@ def material_refs(material: dict) -> set[str]:
     return {e.get("ref", "") for e in (material.get("events") or []) if e.get("ref")}
 
 
+def _strip_event_urls(ev: dict) -> dict:
+    return {
+        **{k: v for k, v in ev.items() if k != "sources"},
+        "sources": [
+            {k: v for k, v in s.items() if k != "url"}
+            for s in (ev.get("sources") or [])
+        ],
+    }
+
+
 def llm_material(material: dict) -> dict:
     """喂给撰稿 LLM 的素材副本: 剥掉所有 URL
 
     LLM 看不到链接就不可能编出链接 —— 引用一律走 ref, 渲染层再还原。
     顺带省下每条来源约 80 字符的预算, 让更多事件挤进同一个 token 窗口。
+
+    对日报/快报一视同仁: 快报素材里的 items 同样带 url, 过去只在日报路径剥,
+    等于给快报留着一条幻觉链接的通道。
     """
     stripped = dict(material)
-    stripped["events"] = [
-        {
-            **{k: v for k, v in ev.items() if k != "sources"},
-            "sources": [
-                {k: v for k, v in s.items() if k != "url"}
-                for s in (ev.get("sources") or [])
-            ],
-        }
-        for ev in (material.get("events") or [])
-    ]
+    if material.get("events"):
+        stripped["events"] = [_strip_event_urls(ev) for ev in material["events"]]
+    if isinstance(material.get("event"), dict):
+        stripped["event"] = _strip_event_urls(material["event"])
+    if material.get("items"):
+        stripped["items"] = [
+            {k: v for k, v in it.items() if k != "url"} for it in material["items"]
+        ]
     return stripped
 
 
@@ -326,10 +337,16 @@ def sources_by_ref(material: dict) -> dict[str, list[dict]]:
 
 
 def assemble_breaking_material(ev: Event, items: list[Item]) -> dict:
-    """突发快讯素材: 单事件 + 其关联条目"""
+    """突发快讯素材: 单事件 + 其关联条目
+
+    同时以 "events" 列表形式暴露该事件, 好让 material_refs / sources_by_ref /
+    llm_material 这几个通用助手直接可用 —— 快报不需要一套并行的素材协议。
+    """
     items_index = {it.id: it for it in items}
+    entry = _event_to_material(ev, "E1", items_index)
     return {
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "event": _event_to_material(ev, "E1", items_index),
+        "event": entry,
+        "events": [entry],
         "items": [_item_to_material(it) for it in items[:5]],
     }

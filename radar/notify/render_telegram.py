@@ -8,7 +8,9 @@ import html
 import logging
 
 from radar.notify.assemble import sources_by_ref
-from radar.notify.brand import DEFAULT_BRAND as _DEFAULT_BRAND, ordinal
+from radar.notify.brand import (
+    DEFAULT_BRAND as _DEFAULT_BRAND, alert_header, ordinal, source_label,
+)
 from radar.notify.types import DigestPayload, SHIFT_LABEL, KIND_BREAKING
 
 logger = logging.getLogger(__name__)
@@ -18,6 +20,32 @@ MAX_CHARS = 4096
 
 def _esc(text: str) -> str:
     return html.escape(text or "", quote=False)
+
+
+def _alert_parts(payload: DigestPayload, src_map: dict, issue_url: str) -> list[str]:
+    """快报三段: 事件句 / 含义 / 盯什么, 末尾挂原文链接"""
+    alert = payload.alert
+    if alert is None:
+        return []
+    parts: list[str] = []
+    if alert.summary.strip():
+        parts.append(f"\n{_esc(alert.summary.strip())}")
+    if alert.why.strip():
+        parts.append(f"<b>含义</b> {_esc(alert.why.strip())}")
+    if alert.watch.strip():
+        parts.append(f"<b>盯</b> {_esc(alert.watch.strip())}")
+
+    tail = []
+    for src in (src_map.get(alert.evidence_ref) or [])[:1]:
+        if src.get("url"):
+            bits = [b for b in [src.get("source", ""), source_label(src)] if b]
+            link = f'<a href="{src["url"]}">原文</a>'
+            tail.append(link + (f" · {_esc(' · '.join(bits))}" if bits else ""))
+    if issue_url:
+        tail.append(f'<a href="{issue_url}">今日快报汇总</a>')
+    if tail:
+        parts.append("\n" + " · ".join(tail))
+    return parts
 
 
 def _call_parts(payload: DigestPayload, src_map: dict) -> list[str]:
@@ -78,7 +106,10 @@ def render(payload: DigestPayload, site_url: str = "", issue_url: str = "",
 
     # 报头
     if payload.kind == KIND_BREAKING:
-        parts.append(f"<b>{_esc(payload.title)}</b>")
+        p = payload.title.split("|", 1)
+        product = p[0].strip() or "首席快报"
+        when = p[1].strip() if len(p) > 1 else ""
+        parts.append(f"<b>{_esc(alert_header(material or {}, product, when))}</b>")
     else:
         p = payload.title.split("|", 1)
         product = p[0].strip()
@@ -92,6 +123,7 @@ def render(payload: DigestPayload, site_url: str = "", issue_url: str = "",
     if payload.headline:
         parts.append(f"<i>{_esc(payload.headline)}</i>")
 
+    parts.extend(_alert_parts(payload, src_map, issue_url))
     parts.extend(_call_parts(payload, src_map))
 
     # 正文(快讯/复盘走通用段落形态)
@@ -108,7 +140,8 @@ def render(payload: DigestPayload, site_url: str = "", issue_url: str = "",
             if item.summary:
                 parts.append(_esc(item.summary))
 
-    link = issue_url
+    # 快报的链接已由 _alert_parts 放在正文末尾, 不重复
+    link = issue_url if payload.kind != KIND_BREAKING else ""
     if link:
         parts.append(f'\n<a href="{link}">完整版 · 事件线与数据附录</a>')
 
