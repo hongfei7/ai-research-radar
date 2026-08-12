@@ -834,16 +834,14 @@ def update_readme(issue_url: Optional[str] = None, site_url: str = "") -> None:
     readme_path = _ROOT / "README.md"
     today = today_str()
 
-    header = f"""# AI 投研雷达
+    header = f"""# Sterling 证券研究 · AI 首席内参
 
-> AI/科技/半导体板块 \u00b7 滚动情报库 \u00b7 由 MiniMax 驱动策展
+> AI/科技/半导体板块 · 滚动情报库 · 由 MiniMax 驱动策展
 > 仅作为研究输入素材，不构成投资建议
 
-## 最新日报
+## 最新内参
 
-- [{today} 晨报]({issue_url or f'{site_url}/brief-{today}.md'})
-- [实时看板]({site_url})
-- [RSS 订阅]({site_url}/feed.xml)
+- [{today} 内参]({issue_url})
 
 ---
 

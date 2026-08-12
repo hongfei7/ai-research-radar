@@ -34,10 +34,7 @@ from radar.processor import Processor
 from radar.cluster import ClusterEngine
 from radar.situation import SituationGenerator
 from radar.storage import save_items, load_events, save_events, load_situation, save_situation
-from radar.render import (
-    write_rss, write_dashboard, write_ticker_pages,
-    write_daily_brief, render_daily_brief,
-)
+from radar.render import render_daily_brief
 from radar.publish import (
     create_daily_issue, send_telegram, format_telegram_alert,
     update_readme, should_telegram_alert,
@@ -557,23 +554,9 @@ async def run_full(cfg: dict, notify_dry_run: bool = False) -> None:
             sit = load_situation()
 
         # ================================================================
-        # Stage 7: 统一渲染
+        # Stage 7: 渲染 —— 实时看板/RSS/ticker 页已废弃删除,
+        # 报告的唯一完整载体为 GitHub Issue(notify 子系统内创建)
         # ================================================================
-        rss_config = cfg.get("channels", {}).get("rss", {})
-        write_rss(clustered_items, site_url, rss_config.get("max_items", 50), window_hours=w)
-
-        all_events_sorted = sorted(
-            updated_events.values(),
-            key=lambda e: (e.last_updated_at or "", e.significance),
-            reverse=True,
-        )
-        active_events = [e for e in all_events_sorted if e.is_active]
-
-        write_dashboard(clustered_items, active_events, sit, site_url, window_hours=w, half_life_hours=half_life)
-        write_ticker_pages(
-            clustered_items, active_events, site_url, window_hours=w,
-            canonical_names=_canonical_ticker_names(cfg),
-        )
 
         # ================================================================
         # Stage 8: 分发(新 notify 子系统 / 旧路径由 notify.use_legacy 切换)
@@ -607,19 +590,6 @@ async def run_full(cfg: dict, notify_dry_run: bool = False) -> None:
         await client.close()
 
     logger.info("Full pipeline done")
-
-
-def _canonical_ticker_names(cfg: dict) -> dict:
-    """构建 {小写名/别名: 规范名} 映射, 用于 ticker 页面文件名归一"""
-    mapping: dict[str, str] = {}
-    for c in cfg.get("coverage", []):
-        name = c.get("name", "")
-        if not name:
-            continue
-        mapping[name.lower()] = name
-        for alias in c.get("aliases", []) or []:
-            mapping[str(alias).lower()] = name
-    return mapping
 
 
 async def run_notify_only(cfg: dict, dry_run: bool = False) -> None:

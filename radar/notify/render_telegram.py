@@ -58,10 +58,9 @@ def render(payload: DigestPayload, site_url: str = "", issue_url: str = "",
             if item.summary:
                 parts.append(_esc(item.summary))
 
-    link = issue_url or site_url
+    link = issue_url
     if link:
-        label = "完整版 · 事件线与数据附录" if issue_url else "实时看板"
-        parts.append(f'\n<a href="{link}">{label}</a>')
+        parts.append(f'\n<a href="{link}">完整版 · 事件线与数据附录</a>')
 
     text = "\n".join(parts)
     if len(text) <= MAX_CHARS:

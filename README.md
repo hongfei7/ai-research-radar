@@ -1,13 +1,11 @@
-# AI 投研雷达
+# Sterling 证券研究 · AI 首席内参
 
 > AI/科技/半导体板块 · 滚动情报库 · 由 MiniMax 驱动策展
 > 仅作为研究输入素材，不构成投资建议
 
-## 最新日报
+## 最新内参
 
-- [2026-08-12 晨报](https://github.com/hongfei7/ai-research-radar/issues/30)
-- [实时看板](https://hongfei7.github.io/ai-research-radar)
-- [RSS 订阅](https://hongfei7.github.io/ai-research-radar/feed.xml)
+- [2026-08-12 内参](https://github.com/hongfei7/ai-research-radar/issues/30)
 
 ---
 

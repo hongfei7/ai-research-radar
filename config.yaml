@@ -202,11 +202,6 @@ notify:
 # 分发渠道
 # ============================================================
 channels:
-  rss:
-    enabled: true
-    max_items: 50
-  github_pages:
-    enabled: true
   telegram:
     enabled: true
     notify_new_event_threshold: 7

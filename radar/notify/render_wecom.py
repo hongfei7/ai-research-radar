@@ -93,11 +93,9 @@ def render(payload: DigestPayload, site_url: str = "", issue_url: str = "",
         for item in section.items:
             blocks.append(_item_block(item))
 
-    # 报尾: 仅一条完整版链接
-    link = issue_url or site_url
-    if link:
-        label = "完整版 · 事件线与数据附录" if issue_url else "实时看板"
-        blocks.append([f"[{label}]({link})"])
+    # 报尾: 仅完整版 Issue 链接(实时看板已废弃, 报告唯一完整载体为 Issue)
+    if issue_url:
+        blocks.append([f"[完整版 · 事件线与数据附录]({issue_url})"])
 
     # —— 贪心装包: block 按序装入消息, 不超 MAX_BYTES; block 间空行分隔 ——
     cont_title = f"**{payload.title}(续)**" if payload.title else ""
