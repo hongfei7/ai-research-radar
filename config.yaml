@@ -61,16 +61,26 @@ themes:
 # ============================================================
 # 信源
 # ============================================================
+# window_hours: 覆盖 runtime.rolling_window_hours 的单源时间窗。
+# 批量发布的信源(arXiv 每日批次 / SEC 申报日期只精确到天 / HF Daily Papers)
+# 在 8h 全局窗口下会被整体过滤掉, 必须放宽 —— 去重表保证放宽窗口不会重复处理。
 sources:
   tech:
     # ---- 学术 / 开源社区 ----
-    - { id: "arxiv",           type: "arxiv",    params: { categories: ["cs.AI", "cs.CL", "cs.LG"], max: 60 } }
+    # arXiv 每天一批, 30h 窗口刚好覆盖一次批次(去重保证只处理一遍)。
+    # max 是每个分类的上限: 60×3 会一次涌入 150 篇原始论文淹没 triage,
+    # 高信号的学术内容主要靠 HuggingFace Daily Papers(社区精选)覆盖。
+    - { id: "arxiv",           type: "arxiv",    params: { categories: ["cs.AI", "cs.CL", "cs.LG"], max: 20, window_hours: 30 } }
     - { id: "hackernews",      type: "hackernews", params: { story: "top", max: 50 } }
     - { id: "github_trending", type: "github_trending", params: { language: "", since: "daily", max: 25 } }
     # ---- 全球 AI 厂商官方 ----
-    - { id: "rss:openai",      type: "rss", params: { url: "https://openai.com/blog/rss.xml" } }
+    # openai.com 单次返回 1100+ 条历史归档, 收紧到 40 条(按时间倒序)
+    - { id: "rss:openai",      type: "rss", params: { url: "https://openai.com/blog/rss.xml", max_entries: 40 } }
     - { id: "rss:googleai",    type: "rss", params: { url: "https://blog.google/technology/ai/rss/" } }
-    # Anthropic 无公开 RSS feed，已禁用
+    - { id: "rss:deepmind",    type: "rss", params: { url: "https://deepmind.google/blog/rss.xml", max_entries: 40 } }
+    - { id: "rss:aws-ml",      type: "rss", params: { url: "https://aws.amazon.com/blogs/machine-learning/feed/" } }
+    - { id: "rss:hf-blog",     type: "rss", params: { url: "https://huggingface.co/blog/feed.xml", max_entries: 40 } }
+    # Anthropic 仍无公开 RSS feed(anthropic.com/rss.xml 返回 404, 2026-08 复核)
     # ---- 全球科技媒体(AI 专线) ----
     - { id: "rss:theverge-ai", type: "rss", params: { url: "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml" } }
     - { id: "rss:arstechnica", type: "rss", params: { url: "https://feeds.arstechnica.com/arstechnica/index" } }
@@ -88,6 +98,10 @@ sources:
     # ---- 中文科技媒体 ----
     - { id: "rss:36kr",         type: "rss", params: { url: "https://www.36kr.com/feed" } }
     - { id: "rss:leiphone",     type: "rss", params: { url: "https://www.leiphone.com/feed" } }
+    - { id: "rss:qbitai",       type: "rss", params: { url: "https://www.qbitai.com/feed" } }
+    - { id: "rss:geekpark",     type: "rss", params: { url: "https://www.geekpark.net/rss" } }
+    - { id: "rss:tmtpost",      type: "rss", params: { url: "https://www.tmtpost.com/feed" } }
+    - { id: "rss:ifanr",        type: "rss", params: { url: "https://www.ifanr.com/feed" } }
     # ---- 国际科技媒体扩展 ----
     - { id: "rss:techmeme",     type: "rss", params: { url: "https://techmeme.com/feed.xml" } }
     - { id: "rss:tomshardware", type: "rss", params: { url: "https://www.tomshardware.com/feeds/all" } }
@@ -97,6 +111,13 @@ sources:
     - { id: "rss:importai",     type: "rss", params: { url: "https://jack-clark.net/feed/" } }
     - { id: "rss:eetimes",      type: "rss", params: { url: "https://www.eetimes.com/feed/" } }
     - { id: "rss:infoq",        type: "rss", params: { url: "https://www.infoq.com/feed/" } }
+    # ---- 半导体与战略分析(与本雷达最对口) ----
+    - { id: "rss:semiengineering", type: "rss", params: { url: "https://semiengineering.com/feed/" } }
+    - { id: "rss:stratechery",  type: "rss", params: { url: "https://stratechery.com/feed/" } }
+    - { id: "rss:interconnects", type: "rss", params: { url: "https://www.interconnects.ai/feed" } }
+    - { id: "rss:simonwillison", type: "rss", params: { url: "https://simonwillison.net/atom/everything/" } }
+    # SemiAnalysis 免费 feed 自 2025-09 起停更(正文已转付费), 恢复更新再启用
+    # - { id: "rss:semianalysis", type: "rss", params: { url: "https://semianalysis.com/feed/" } }
     # ---- 中文科技媒体(视可用性启用) ----
     # 机器之心 RSS 需要登录 session，暂时禁用
     # - { id: "rss:jiqizhixin",  type: "rss", params: { url: "https://www.jiqizhixin.com/rss" } }
@@ -107,13 +128,14 @@ sources:
     - { id: "reddit:localllama",   type: "rss", params: { url: "https://www.reddit.com/r/LocalLLaMA/.rss" } }
     - { id: "reddit:singularity",  type: "rss", params: { url: "https://www.reddit.com/r/singularity/.rss" } }
     # ---- HuggingFace Daily Papers（JSON API，公开可用） ----
-    - { id: "huggingface:papers",  type: "huggingface_papers", params: { max: 20 } }
+    - { id: "huggingface:papers",  type: "huggingface_papers", params: { max: 20, window_hours: 48 } }
     # ---- MiniMax 联网搜索（Google 级搜索，替代 DDG） ----
     - { id: "minimax_search",  type: "minimax_search", params: { max_per_stock: 3 } }
-    # ---- DuckDuckGo 搜索（备用，MiniMax 搜索失败时补充） ----
+    # ---- DuckDuckGo 搜索（低可信兜底，覆盖 A 股/港股中文盲区） ----
     - { id: "web_search",      type: "web_search", params: { max_per_stock: 1 } }
   market:
-    - { id: "sec_edgar",       type: "sec_edgar", params: { forms: ["8-K"] } }
+    # 8-K 申报稀疏且时间戳只到天, 给足窗口
+    - { id: "sec_edgar",       type: "sec_edgar", params: { forms: ["8-K"], window_hours: 72 } }
 
 # ============================================================
 # 趋势话题搜索 —— 追踪 AI 关键人物和话题（替代 X/Twitter）
@@ -144,16 +166,23 @@ runtime:
 # 事件聚类参数
 # ============================================================
 clustering:
-  similarity_threshold: 0.85        # embedding 余弦相似度阈值
+  similarity_threshold: 0.85        # embedding 余弦相似度阈值（预留，当前走关键词匹配）
   max_active_events: 30             # 最多活跃事件数
   event_ttl_hours: 6                # 无更新则标记为 resolved（缩短以保持新鲜度）
+  max_tickers_per_event: 4          # 事件代表标的上限（按命中频次收敛，防"标的磁铁"）
 
 # ============================================================
 # 处理与输出参数
 # ============================================================
 scoring:
-  min_score_to_keep: 4              # 第一段筛选阈值（降低以扩大覆盖面）
-  max_items_in_brief: 100           # 晨报最多保留条目数
+  min_score_to_keep: 5              # 第一段筛选阈值
+  max_items_in_brief: 40            # 每轮进入 extract 的条目上限
+  # 低可信信源(搜索抓取/社区)要更高相关性才值得花 extract 配额,
+  # 否则 46/80 的低可信条目会淹没高可信信号(审计发现)
+  credibility_floor:
+    low: 7                          # 🔴 低可信: score ≥ 7 才进 extract
+    medium: 5                       # 🟡 中可信
+    high: 4                         # 🟢 高可信(SEC/官方/arXiv): 放宽
   visual_enrich:
     max_images: 15                  # 每轮最多分析图片数
     min_score: 4                    # 图片分析最低分（降低以充分利用 VLM quota）
@@ -162,7 +191,9 @@ scoring:
     half_life_hours: 4              # 4 小时后有效分数减半
 
 minimax:
-  model: "MiniMax-M2.7"             # MiniMax M2.7 (Coding Plan)
+  # M3: 1M 上下文, 支持关闭推理。批量打分/抽取关推理保吞吐,
+  # 内参撰稿开推理换论证质量(见 minimax_client.chat 的 thinking 参数)
+  model: "MiniMax-M3"
 
 output:
   timezone: "Asia/Hong_Kong"
@@ -170,11 +201,10 @@ output:
 # ============================================================
 # 推送子系统 —— Sterling 证券研究 · AI 首席内参
 # 产品: 每日内参(07:00) / 首席快报(即时) / 周末复盘(周日 20:00)
-# use_legacy=true 期间走旧 publish.py 路径, 新系统完全不生效
+# 完整载体: GitHub Issue + 仓库内 reports/YYYY-MM-DD.md 归档
 # ============================================================
 notify:
   enabled: true
-  use_legacy: false             # 灰度开关: true=旧路径, false=新 notify 子系统
   max_messages_per_run: 6       # 每轮 WeCom 消息总预算(快报优先)
   brand:                        # 虚构投行研究所 + 首席人设(写入各渠道报头)
     institute: "Sterling 证券研究"

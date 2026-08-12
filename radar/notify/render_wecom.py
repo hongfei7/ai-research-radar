@@ -9,17 +9,12 @@
 
 import logging
 
-from radar.notify.types import DigestPayload, DigestSection, KIND_BREAKING
+from radar.notify.brand import DEFAULT_BRAND as _DEFAULT_BRAND, ordinal
+from radar.notify.types import DigestPayload, DigestSection, SHIFT_LABEL, KIND_BREAKING
 
 logger = logging.getLogger(__name__)
 
 MAX_BYTES = 3800
-
-_DEFAULT_BRAND = {
-    "institute": "Sterling 证券研究",
-    "analyst": "Ayer",
-    "analyst_title": "TMT 首席分析师",
-}
 
 
 def _blocks_bytes(block: list[str]) -> int:
@@ -56,6 +51,49 @@ def _item_block(item) -> list[str]:
     return lines
 
 
+def _call_blocks(payload: DigestPayload) -> list[list[str]]:
+    """判断链的微信形态
+
+    微信里读长文很痛苦, 所以只带 判断 / 推论 / 证伪三段, 略去事实与机理 ——
+    要看完整论证与证据链接就点 Issue。证据链接一律不进微信, 一条消息塞四五个
+    链接会把版面冲垮。
+    """
+    blocks: list[list[str]] = []
+
+    macro = payload.macro
+    if macro is not None and not macro.is_empty():
+        macro_lines = ["**格局**"]
+        if macro.cycle:
+            macro_lines.append(f"周期位置：{macro.cycle}")
+        if macro.constraint:
+            macro_lines.append(f"当前主约束：{macro.constraint}")
+        if macro.shift:
+            label = SHIFT_LABEL.get(macro.shift_kind, "")
+            macro_lines.append(f"较上期：{label + ' —— ' if label else ''}{macro.shift}")
+        blocks.append(macro_lines)
+
+    for call in payload.calls:
+        lines = [f"**判断{ordinal(call.n)} · {call.claim}**"]
+        if call.inference.strip():
+            lines.append(call.inference.strip())
+        elif call.fact.strip():
+            lines.append(call.fact.strip())
+        if call.falsifier.strip():
+            lines.append(f"证伪：{call.falsifier.strip()}")
+        blocks.append(lines)
+
+    if payload.tension.strip():
+        blocks.append(["**张力与联动**", payload.tension.strip()])
+
+    if payload.reviews:
+        review_lines = ["**上期回溯**"]
+        for rv in payload.reviews:
+            review_lines.append(f"{rv.claim} —— {rv.status}")
+        blocks.append(review_lines)
+
+    return blocks
+
+
 def render(payload: DigestPayload, site_url: str = "", issue_url: str = "",
            brand: dict | None = None) -> list[str]:
     """渲染为 WeCom markdown 消息列表(按 block 边界拆分)"""
@@ -77,10 +115,14 @@ def render(payload: DigestPayload, site_url: str = "", issue_url: str = "",
         byline_bits = [b for b in [when, brand.get("analyst", "")] if b]
         if byline_bits:
             header.append(" · ".join(byline_bits))
+    if payload.fallback:
+        header.append("（本期为降级稿：撰稿环节未完成，仅事实层）")
     if header:
         blocks.append(header)
     if payload.headline:
         blocks.append([payload.headline])
+
+    blocks.extend(_call_blocks(payload))
 
     for section in payload.sections:
         if section.is_empty():

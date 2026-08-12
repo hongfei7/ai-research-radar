@@ -18,6 +18,9 @@ _DEFAULT = {
     "morning_last_date": "",       # 每日内参当日去重键 "2026-08-12"
     "weekly_last_slot": "",        # 周末复盘周去重键 "2026-W32"
     "breaking_fingerprints": [],   # 快报指纹 [{tickers, features, sent_at}]
+    # 上一期内参的宏观框架与判断, 供下一期做框架增量修订与证伪回溯。
+    # 没有这份状态, 每期报告都是孤立的, 写下的证伪条件永远无人核对。
+    "last_report": None,           # {date, macro: {...}, calls: [{claim, falsifier, verify}]}
 }
 
 
@@ -32,6 +35,8 @@ def load_notify_state() -> dict:
         state.update({k: v for k, v in data.items() if k in state})
         if not isinstance(state["breaking_fingerprints"], list):
             state["breaking_fingerprints"] = []
+        if not isinstance(state["last_report"], dict):
+            state["last_report"] = None
         return state
     except Exception as e:
         logger.warning(f"Failed to load notify_state: {e}")

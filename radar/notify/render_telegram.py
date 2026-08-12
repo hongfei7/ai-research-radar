@@ -7,27 +7,68 @@
 import html
 import logging
 
-from radar.notify.types import DigestPayload, KIND_BREAKING
+from radar.notify.assemble import sources_by_ref
+from radar.notify.brand import DEFAULT_BRAND as _DEFAULT_BRAND, ordinal
+from radar.notify.types import DigestPayload, SHIFT_LABEL, KIND_BREAKING
 
 logger = logging.getLogger(__name__)
 
 MAX_CHARS = 4096
-
-_DEFAULT_BRAND = {
-    "institute": "Sterling 证券研究",
-    "analyst": "Ayer",
-    "analyst_title": "TMT 首席分析师",
-}
 
 
 def _esc(text: str) -> str:
     return html.escape(text or "", quote=False)
 
 
+def _call_parts(payload: DigestPayload, src_map: dict) -> list[str]:
+    """判断链的 TG 形态: 判断 / 推论 / 证伪, 每条判断挂一个证据链接
+
+    TG 支持 inline <a>, 一条链接不影响版面, 所以比微信多给一个来源入口。
+    """
+    parts: list[str] = []
+
+    macro = payload.macro
+    if macro is not None and not macro.is_empty():
+        parts.append("\n<b>格局</b>")
+        if macro.cycle:
+            parts.append(f"周期位置：{_esc(macro.cycle)}")
+        if macro.constraint:
+            parts.append(f"当前主约束：{_esc(macro.constraint)}")
+        if macro.shift:
+            label = SHIFT_LABEL.get(macro.shift_kind, "")
+            parts.append(f"较上期：{_esc((label + ' — ' if label else '') + macro.shift)}")
+
+    for call in payload.calls:
+        parts.append(f"\n<b>判断{ordinal(call.n)} · {_esc(call.claim)}</b>")
+        body = call.inference.strip() or call.fact.strip()
+        if body:
+            parts.append(_esc(body))
+        if call.falsifier.strip():
+            parts.append(f"证伪：{_esc(call.falsifier.strip())}")
+        for ref in call.evidence_refs:
+            srcs = src_map.get(ref) or []
+            if srcs and srcs[0].get("url"):
+                title = _esc(srcs[0].get("title", "") or "来源")
+                parts.append(f'证据：<a href="{srcs[0]["url"]}">{title}</a>')
+                break
+
+    if payload.tension.strip():
+        parts.append("\n<b>张力与联动</b>")
+        parts.append(_esc(payload.tension.strip()))
+
+    if payload.reviews:
+        parts.append("\n<b>上期回溯</b>")
+        for rv in payload.reviews:
+            parts.append(f"{_esc(rv.claim)} — {_esc(rv.status)}")
+
+    return parts
+
+
 def render(payload: DigestPayload, site_url: str = "", issue_url: str = "",
-           brand: dict | None = None) -> str:
+           brand: dict | None = None, material: dict | None = None) -> str:
     """渲染为单条 Telegram HTML 消息, 超预算时从尾部丢弃段落"""
     brand = brand or _DEFAULT_BRAND
+    src_map = sources_by_ref(material or {})
     parts: list[str] = []
 
     # 报头
@@ -41,10 +82,14 @@ def render(payload: DigestPayload, site_url: str = "", issue_url: str = "",
         byline = " · ".join(b for b in [when, brand.get("analyst", "")] if b)
         if byline:
             parts.append(_esc(byline))
+    if payload.fallback:
+        parts.append("（本期为降级稿：撰稿环节未完成，仅事实层）")
     if payload.headline:
         parts.append(f"<i>{_esc(payload.headline)}</i>")
 
-    # 正文
+    parts.extend(_call_parts(payload, src_map))
+
+    # 正文(快讯/复盘走通用段落形态)
     for section in payload.sections:
         if section.is_empty():
             continue

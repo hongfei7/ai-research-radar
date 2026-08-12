@@ -1,6 +1,6 @@
 """数据模型定义：Item, Event, Situation"""
 
-from dataclasses import dataclass, field, asdict
+from dataclasses import dataclass, field, asdict, fields
 from datetime import datetime, timezone
 from typing import Optional
 
@@ -103,9 +103,13 @@ class Event:
     first_seen_at: str = ""              # ISO8601
     last_updated_at: str = ""            # ISO8601
     is_active: bool = True               # 是否仍在活跃
-    significance: int = 0                # 重要性 0-10
+    significance: int = 0                # 重要性 0-10（由 max_item_score + 信源数派生）
     status: str = "developing"           # "developing" | "stable" | "resolved"
     deep_analysis: str = ""              # 事件深度分析（多空逻辑/驱动因素/市场影响）
+    # 标的出现频次 {标的name: 命中该标的的条目数}，用于收敛 tickers ——
+    # 直接 union 会让事件变成"标的磁铁"（实测出现过单事件挂 33 个标的）
+    ticker_counts: dict = field(default_factory=dict)
+    max_item_score: int = 0              # 成员条目的最高相关性分，significance 的基数
     # 代表向量(用于相似度比较)，不序列化到 JSON
     embedding: Optional[list] = field(default=None, repr=False)
 
@@ -129,10 +133,18 @@ class Event:
             "significance": 0,
             "status": "developing",
             "deep_analysis": "",
+            "ticker_counts": {},
+            "max_item_score": 0,
         }
         for k, v in defaults.items():
             d.setdefault(k, v)
-        return cls(**d)
+        # 旧状态文件没有这两个字段，用现有值回填，避免升级当轮把事件打回零分
+        if not d["ticker_counts"] and d["tickers"]:
+            d["ticker_counts"] = {t: 1 for t in d["tickers"]}
+        if not d["max_item_score"]:
+            d["max_item_score"] = d["significance"]
+        known = {f.name for f in fields(cls)}
+        return cls(**{k: v for k, v in d.items() if k in known})
 
 
 @dataclass
@@ -232,7 +244,9 @@ def get_event_effective_date(event) -> datetime | None:
 def compute_effective_score(item, half_life_hours: float = 4) -> float:
     """时间衰减后的有效分数: score / (1 + hours_old / half_life)
 
-    日期未知的条目不衰减（hours_old = 0），避免搜索类源被过度惩罚。
+    日期未知的条目（主要是搜索类信源）按一个半衰期计, 即打五折。
+    不能按 hours_old=0 处理 —— 那等于奖励"没有日期", 让低可信搜索结果
+    在排序里永远压过有确切时间的新闻(审计发现)。
     """
     try:
         score = float(item.relevance_score or 0)
@@ -240,7 +254,7 @@ def compute_effective_score(item, half_life_hours: float = 4) -> float:
         score = 0.0
     dt = get_effective_date(item)
     if dt is None:
-        return score
+        return score / 2.0
     hours_old = (datetime.now(timezone.utc) - dt).total_seconds() / 3600.0
     if hours_old < 0:
         hours_old = 0

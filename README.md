@@ -1,333 +1,170 @@
 # Sterling 证券研究 · AI 首席内参
 
-> AI/科技/半导体板块 · 滚动情报库 · 由 MiniMax 驱动策展
+> AI / 半导体板块 · 全自动投研情报流水线 · 由 MiniMax 驱动
 > 仅作为研究输入素材，不构成投资建议
+
+<!-- INDEX:START -->
 
 ## 最新内参
 
-- [2026-08-12 内参](https://github.com/hongfei7/ai-research-radar/issues/30)
+_暂无归档报告_
 
----
+<!-- INDEX:END -->
 
----
+## 这是什么
 
----
+每 15 分钟从 30 余个信源采集 AI / 半导体相关信息，经两级 LLM 处理（投资相关性筛选 → 深度信号提取）压成事件线，每日 07:00 HKT 产出一份「AI 首席内参」。
 
----
-
----
-
----
-
----
-
----
-
----
-
----
-
-## 系统概览
-
-**AI 投研雷达**是一套全自动投研情报流水线，专为 AI/半导体赛道设计。系统每 20 分钟从 16 个数据源采集信息，通过 MiniMax LLM 进行两级智能处理——先以投资相关性评分过滤噪音，再以深度信号提取锁定关键变量——最终经由嵌入聚类将碎片化报道编织成结构化事件脉络，并通过 RSS、Web 看板、Telegram 与 GitHub Issues 四通道分发。
+报告不是新闻摘要，而是**判断链**：每期给出 3-4 条编号判断，每条按 `事实 → 机理 → 推论 → 证伪条件` 展开，并附带可点击的证据来源。写下的证伪条件会在下一期被逐条回溯核对——这是它区别于「每天重新发明一遍观点」的自动摘要的地方。
 
 ```
-  arXiv · HN · GitHub Trending · SEC EDGAR · 10+ 全球科技媒体
-        ╲              ╱
-         ▼            ▼
-      ┌───────────────────┐
-      │   Collect & Dedup  │  原始数据采集 + 指纹去重
-      └────────┬──────────┘
-               ▼
-      ┌───────────────────┐
-      │   Triage (LLM)     │  投资相关性评分 0-10 · 噪音过滤
-      └────────┬──────────┘
-               ▼
-      ┌───────────────────┐
-      │   Extract (LLM)    │  中文摘要 · 标的映射 · 主题标签 · 方向研判
-      └────────┬──────────┘
-               ▼
-      ┌───────────────────┐
-      │   Cluster (Embed)  │  余弦相似度事件聚合 · 动态事件线
-      └────────┬──────────┘
-               ▼
-      ┌───────────────────┐
-      │   Situation (LLM)  │  滚动式市场态势综述
-      └────────┬──────────┘
-               ▼
-      ┌───────────────────┐
-      │   Render & Publish │  RSS + HTML + MD + Telegram
-      └───────────────────┘
+30+ 信源 ── 采集 ── 去重 ── Triage ── Extract ── 聚类 ── 态势
+                                                          │
+                                              ┌───────────┴───────────┐
+                                              │   notify 子系统        │
+                                              │  装配 → 撰稿 → 渲染     │
+                                              └───────────┬───────────┘
+                                          ┌───────────────┼───────────────┐
+                                     GitHub Issue    reports/*.md    WeCom / TG
 ```
 
----
+## 报告结构
 
-## 核心亮点
+四个层次，从宏观到微观再到时间维度：
 
-<table>
-<tr>
-<td width="50%">
+| 章节 | 作用 |
+|------|------|
+| **格局** | 跨期演化的宏观框架：周期位置 / 当前主约束 / 较上期是维持、微调还是转向 |
+| **本期速览** | 一张表看完全部判断与各自的验证点 |
+| **上期判断回溯** | 逐条核对上期的证伪条件：已验证 / 进展中 / 接近证伪 / 已证伪 |
+| **判断一…N** | 事实 → 机理 → 推论 → 证伪条件 → 证据链接 → 反面观点 |
+| **张力与联动** | 判断之间互相强化还是互相矛盾 |
+| **未进入判断的观察** | 值得知道但不值得展开的事件 |
+| **附录** | 事件线数据表：主标的 / 信源数 / 首报时间 / 原文链接 |
 
-### 智能信号提取
+**证据不可能是幻觉链接**：喂给撰稿 LLM 的素材已剥去全部 URL，它只能用 `E1`、`E2` 这样的编号引用事件；渲染层再把编号还原成链接。LLM 看不到链接，也就编不出链接。
 
-LLM 不只是摘要——每条信息经过投资相关性评分 (0-10)、关联到具体标的与主题、判断多空方向，并给出"So What"投资启示。所有输出严格校验，杜绝幻觉。
+## 运行
 
-</td>
-<td width="50%">
+需要 Python 3.11+ 和 [MiniMax API Key](https://platform.minimaxi.com/)。
 
-### 事件级视角
+```bash
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+export MINIMAX_API_KEY="sk-xxxx"
+```
 
-基于 Embedding 余弦相似度的自动聚类，将同一事件的分散报道编织为持续追踪的事件线。每个事件拥有独立时间轴、影响评估与当前状态。
+可选环境变量：`TELEGRAM_BOT_TOKEN` / `TELEGRAM_CHAT_ID` / `WECOM_WEBHOOK_URL` / `GITHUB_TOKEN`。
 
-</td>
-</tr>
-<tr>
-<td>
+```bash
+python main.py --stage collect             # 仅采集 + 去重 + 归档
+python main.py --stage process             # + LLM 两级处理
+python main.py --stage cluster             # + 事件聚类
+python main.py --stage full                # 完整流水线（含分发）
+python main.py --stage notify --notify-dry-run   # 只撰稿，打印到 stdout，不发送不写状态
+```
 
-### 全自动运维
+`--notify-dry-run` 会打印 Issue 正文全文、微信分条消息和 Telegram 消息，是调版式最快的方式。
 
-GitHub Actions 驱动，每 20 分钟一个完整循环。采集→处理→聚类→分发全链路自动化，结果自动提交归档。零人工干预即可持续运行。
+## 输出
 
-</td>
-<td>
+| 载体 | 位置 | 说明 |
+|------|------|------|
+| GitHub Issue | 仓库 Issues，标签 `晨报` / `周报` | 完整正文，当日幂等（同题不重复创建） |
+| Markdown 归档 | `reports/YYYY-MM-DD.md` | 与 Issue 同稿，带 frontmatter，可检索可 diff |
+| 企业微信 | 群机器人 Webhook | 速览 + 每条判断的结论与证伪条件，按字节预算拆分多条 |
+| Telegram | Bot 推送 | 单条 HTML，每条判断挂一个证据链接 |
 
-### 多渠道触达
+## 数据源
 
-RSS 订阅、交互式 HTML 看板、每日 Markdown 简报、Telegram 即时推送、GitHub Issues 归档——根据使用场景选择最佳信息消费方式。
+41 个信源，按可信度分三档，直接影响条目进入深度处理的分数门槛。
 
-</td>
-</tr>
-</table>
+- **高可信** — SEC EDGAR 8-K、arXiv、OpenAI / Google AI / DeepMind / NVIDIA / MSR / AWS ML 官方博客、IEEE Spectrum
+- **中可信** — The Verge、TechCrunch、Ars Technica、Wired、MIT TR、VentureBeat、Tom's Hardware、ZDNet、EE Times、InfoQ、HuggingFace（Daily Papers + Blog）
+- **中可信 · 半导体与战略分析** — Semiconductor Engineering、Stratechery、Interconnects、Simon Willison
+- **中可信 · 中文** — 36氪、雷锋网、量子位、极客公园、钛媒体、爱范儿
+- **低可信** — Hacker News、Reddit、GitHub Trending、Techmeme、MiniMax 搜索、DuckDuckGo 搜索
 
----
+> 批量发布的信源（arXiv 每日批次、SEC 申报日期只精确到天、HF Daily Papers）在 `params.window_hours` 里单独放宽时间窗。用统一的 8 小时窗口会把它们整体过滤掉，只剩下伪造 `published_at` 的搜索类信源能通过。
+>
+> 部分 feed 会一次吐出整个历史归档（openai.com 单次 1100+ 条），用 `params.max_entries` 收紧。
+>
+> 已验证不可用、未纳入：Anthropic（无公开 RSS）、机器之心（需登录）、Datawhale（无 feed，且内容为开源教程，投研相关性低）、SemiAnalysis（免费 feed 自 2025-09 停更）。
 
-## 监控雷达
+## 模型
 
-系统覆盖 **36 个标的**，横跨美股、港股、A 股与非上市实体，构建完整的 AI/半导体产业链监控矩阵。
+`MiniMax-M3`（1M 上下文，支持关闭推理）。推理开关按任务分档：
 
-<table>
-<tr><th>市场</th><th>数量</th><th>标的</th></tr>
-<tr>
-<td align="center"><strong>美股</strong></td>
-<td align="center">17</td>
-<td>
-  <sub>
-  NVDA · AMD · AVGO · TSM · ASML · MU · INTC · MRVL · QCOM<br>
-  ARM · SMCI · DELL · MSFT · GOOGL · AMZN · META · AAPL
-  </sub>
-</td>
-</tr>
-<tr>
-<td align="center"><strong>港股</strong></td>
-<td align="center">6</td>
-<td>
-  <sub>中芯国际 (0981) · 阿里巴巴 (9988) · 腾讯 (0700) · 百度 (9888) · 商汤 (0020) · 小米 (1810)</sub>
-</td>
-</tr>
-<tr>
-<td align="center"><strong>A 股</strong></td>
-<td align="center">9</td>
-<td>
-  <sub>寒武纪 (688256) · 海光信息 (688041) · 工业富联 (601138) · 中科曙光 (603019)<br>浪潮信息 (000977) · 景嘉微 (300474) · 长电科技 (600584) · 金山办公 (688111) · 科大讯飞 (002230)</sub>
-</td>
-</tr>
-<tr>
-<td align="center"><strong>非上市</strong></td>
-<td align="center">4</td>
-<td>
-  <sub>OpenAI · Anthropic · DeepSeek · xAI</sub>
-</td>
-</tr>
-</table>
+| 任务 | 推理 | 理由 |
+|------|------|------|
+| triage（40 条批量打分） | 关 | 延迟代价远大于质量收益 |
+| extract（并发 5 路抽取） | 关 | 保吞吐 |
+| 事件标题/摘要改写 | 关 | 机械任务 |
+| 内参撰稿 | **开** | 判断链的「机理」段是报告立身之本 |
 
-### 投资主题矩阵
+推理内容若内联在 `content` 中（未开 `reasoning_split` 时用 `<think>` 包裹），客户端在 JSON 解析前统一剥离。
 
-| 主题 | 核心关注点 |
-|------|-----------|
-| `compute_demand` | 算力需求 | 云厂 Capex · Token 消耗 · 推理/训练需求弹性 |
-| `chip_supply` | 芯片供给 | 先进制程 · 晶圆产能 · 良率 · 交付周期 |
-| `advanced_packaging` | 先进封装与 HBM | CoWoS 产能 · HBM 定价 · 封装技术路线 |
-| `model_capability` | 模型能力曲线 | 前沿模型性能 · 效率突破 · Scaling Law 演进 |
-| `ai_monetization` | AI 应用与变现 | AI 产品收入 · 商业化进展 · 付费率 |
-| `edge_ai` | 终端 AI | AI 手机/PC/眼镜 · 端侧推理芯片 · 隐私计算 |
-| `datacenter_power` | 数据中心与能源 | 数据中心建设 · 电力供给约束 · 散热技术 |
-| `policy_export` | 政策与出口管制 | 出口管制升级/松绑 · 补贴政策 · 监管动态 |
-| `domestic_substitution` | 国产替代 | 国产算力链替代进程 · 自主可控进展 |
+若 M3 未在旧路由 `chatcompletion_v2` 上供给，无需改代码，切两个环境变量即可：
 
----
+```bash
+export MINIMAX_BASE_URL="https://api.minimax.io/v1"
+export MINIMAX_CHAT_PATH="/chat/completions"
+```
 
-## 数据源矩阵
+## 覆盖标的
 
-### 学术与社区
-| 数据源 | 类型 | 说明 |
-|--------|------|------|
-| arXiv | API | cs.AI / cs.CL / cs.LG 分类，每日最新论文 |
-| Hacker News | API | Top Stories，72h 时间窗口 |
-| GitHub Trending | 爬虫 | 每日热门仓库 |
-| Lobsters | RSS | 技术社区热帖 |
+36 个，横跨美股、港股、A 股与非上市实体。
 
-### 官方与科技媒体
-| 数据源 | 类型 | 说明 |
-|--------|------|------|
-| OpenAI Blog | RSS | 官方动态 |
-| Google AI Blog | RSS | 官方研究 |
-| NVIDIA Blog | RSS | 官方技术博客 |
-| Microsoft Research | RSS | 微软研究院 |
-| The Verge AI | RSS | AI 专线 |
-| TechCrunch AI | RSS | AI 创投 |
-| Ars Technica | RSS | 深度科技 |
-| Wired | RSS | 科技文化 |
-| MIT Tech Review | RSS | 前沿科技 |
-| VentureBeat AI | RSS | AI 产业 |
-| IEEE Spectrum AI | RSS | 工程视角 |
+| 市场 | 标的 |
+|------|------|
+| 美股 | NVDA · AMD · AVGO · TSM · ASML · MU · INTC · MRVL · QCOM · ARM · SMCI · DELL · MSFT · GOOGL · AMZN · META · AAPL |
+| 港股 | 中芯国际 · 阿里巴巴 · 腾讯 · 百度 · 商汤 · 小米 |
+| A 股 | 寒武纪 · 海光信息 · 工业富联 · 中科曙光 · 浪潮信息 · 景嘉微 · 长电科技 · 金山办公 · 科大讯飞 |
+| 非上市 | OpenAI · Anthropic · DeepSeek · xAI · 天数智芯 |
 
-### 监管与财务
-| 数据源 | 类型 | 说明 |
-|--------|------|------|
-| SEC EDGAR | API | 8-K 重大事项申报，覆盖全部 US 标的 |
-
----
+投资主线九条：算力需求、芯片供给、先进封装与 HBM、模型能力曲线、AI 应用与变现、终端 AI、数据中心与能源、政策与出口管制、国产替代。
 
 ## 项目结构
 
 ```
-ai-research-radar/
-│
-├── main.py                     # 流水线编排 — 5 个运行阶段的主控制器
-├── config.yaml                 # 系统配置 — 标的、数据源、评分/聚类阈值
-├── requirements.txt            # 依赖清单
-│
-├── radar/                      # 核心引擎
-│   ├── models.py               #   数据模型：Item / Event / Situation
-│   ├── config.py               #   配置加载、校验、Prompt 格式化
-│   ├── minimax_client.py       #   MiniMax API 客户端 (Chat + Embedding)
-│   ├── processor.py            #   双层 LLM 处理管线 (Triage + Extract)
-│   ├── cluster.py              #   事件聚类引擎 (Embedding + 相似度匹配)
-│   ├── situation.py            #   态势综述生成器
-│   ├── dedup.py                #   指纹去重 (SQLite)
-│   ├── credibility.py          #   信源可信度评级 (红绿灯体系)
-│   ├── storage.py              #   持久化层 (JSONL 归档)
-│   ├── render.py               #   输出渲染 (Jinja2)
-│   ├── publish.py              #   分发引擎 (GitHub · Telegram · RSS)
-│   └── collectors/             #   采集器模块
-│       ├── base.py             #     Collector 抽象基类
-│       ├── rss.py              #     RSS/Atom 通用采集器
-│       ├── arxiv.py            #     arXiv API 采集器
-│       ├── hackernews.py       #     Hacker News Firebase API
-│       ├── github_trending.py  #     GitHub Trending HTML 解析
-│       └── sec_edgar.py        #     SEC EDGAR 监管文件采集
-│
-├── prompts/                    # LLM Prompt 模板
-│   ├── triage.txt              #   投资相关性评分
-│   ├── extract.txt             #   深度信号提取
-│   ├── cluster.txt             #   事件合并重写
-│   └── situation.txt           #   态势综述生成
-│
-├── templates/                  # Jinja2 输出模板
-│   ├── feed.xml.j2             #   RSS 2.0 Feed
-│   ├── dashboard.html.j2       #   交互式 Web 看板
-│   ├── brief.md.j2             #   每日投研简报
-│   └── ticker.html.j2          #   单票详细视图
-│
-├── archive/                    # 每日 JSONL 归档
-├── state/                      # 运行时状态 (DB, events, situation)
-├── pages/                      # 静态输出 (GitHub Pages)
-└── .github/workflows/          # CI/CD 自动化
-    ├── daily.yml               #   定时运行 (每 20 分钟)
-    └── pages.yml               #   GitHub Pages 部署
+main.py                     流水线编排（采集 → 处理 → 聚类 → 态势 → 分发）
+config.yaml                 标的、信源、阈值——所有参数集中于此
+radar/
+  models.py                 Item / Event / Situation
+  config.py                 配置加载与校验
+  minimax_client.py         MiniMax Chat / 图片理解客户端
+  processor.py              两级 LLM 处理 + 交叉分析 / 趋势 / 反向观点 / 深度分析
+  cluster.py                事件聚类（关键词 + Jaccard；标的频次收敛、重要性重算）
+  situation.py              滚动态势综述
+  textnorm.py               标题清洗、句子边界裁剪、markdown 剥离
+  credibility.py            信源可信度分级
+  dedup.py / storage.py     URL 指纹去重（SQLite）/ JSONL 归档
+  collectors/               8 类采集器，统一 Collector 接口
+  notify/
+    scheduler.py            决定本轮发什么（内参 / 复盘 / 快讯 + 防重指纹）
+    assemble.py             按时间窗装配素材，生成 ref 与证据清单
+    copywriter.py           LLM 撰稿 → DigestPayload，失败降级为兜底稿
+    types.py                稿件契约（MacroFrame / DigestCall / CallReview）
+    render_issue.py         判断链版式的完整 Markdown
+    render_wecom.py         企业微信（字节预算拆分）
+    render_telegram.py      Telegram HTML
+    readme_index.py         README 索引区重建
+    transport.py            WeCom / Telegram / GitHub Issue 发送
+prompts/                    全部 LLM prompt（纯文本，改文案不动代码）
+reports/                    每日内参归档
+archive/                    每日 JSONL 原始归档
+state/                      事件线、态势、推送去重键、已见指纹
 ```
 
----
+## 设计约束
 
-## 快速开始
-
-### 前置条件
-
-- Python 3.11+
-- [MiniMax API Key](https://platform.minimaxi.com/)
-- (可选) Telegram Bot Token + Chat ID
-- (可选) GitHub Token (用于 Issues 自动创建)
-
-### 安装
-
-```bash
-git clone <repo-url> && cd ai-research-radar
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-```
-
-### 环境变量
-
-```bash
-export MINIMAX_API_KEY="sk-xxxxxxxx"
-export TELEGRAM_BOT_TOKEN="123:abc"        # 可选
-export TELEGRAM_CHAT_ID="-100xxxxxxxx"     # 可选
-export GITHUB_TOKEN="ghp_xxxxxxxx"         # 可选
-```
-
-### 运行流水线
-
-```bash
-python main.py --stage collect   # Phase I   仅采集
-python main.py --stage process   # Phase II  采集 + LLM 两阶段处理
-python main.py --stage cluster   # Phase III 采集 + 处理 + 事件聚类
-python main.py --stage full      # Phase IV  完整流水线 + 渲染 + 分发
-```
+- **配置驱动** — 标的、信源、阈值全部来自 `config.yaml`，代码里零硬编码
+- **幻觉防御** — LLM 输出的 ticker 与 theme 经配置白名单校验；证据 ref 经素材校验；URL 从不经过 LLM
+- **重要性不通胀** — 事件重要性由成员条目最高分加多源加成算出，可升可降，不采纳 LLM 自报的分数
+- **标的不膨胀** — 事件标的按命中频次收敛（要求至少出现在 1/3 来源中，上限 4 个），不做集合并
+- **降级可见** — 撰稿失败时产出只有事实层的降级稿，并在报头显式标注，不伪装成正常内参
+- **幂等** — 采集、归档、Issue 创建、README 索引重复执行结果一致
 
 ---
 
-## 输出矩阵
-
-| 频道 | 路径/方式 | 刷新频率 | 适用场景 |
-|------|----------|----------|---------|
-| **RSS Feed** | `pages/feed.xml` | 每 20 分钟 | RSS 阅读器订阅，自动化消费 |
-| **Web 看板** | `pages/index.html` | 每 20 分钟 | 浏览器浏览，可视化监控 |
-| **每日简报** | `pages/brief-YYYY-MM-DD.md` | 每日 | 晨会阅读，结构化投研笔记 |
-| **Telegram** | Bot 推送 | 事件驱动 | 即时告警，新重大事件即刻触达 |
-| **GitHub Issues** | 仓库 Issue | 每日 07:00 HKT | 归档检索，回溯历史简报 |
-
----
-
-## 核心配置
-
-> 所有参数集中在 `config.yaml`，无需修改代码。
-
-| 参数路径 | 默认值 | 语义 |
-|----------|--------|------|
-| `runtime.cron_interval_minutes` | `20` | 流水线运行间隔 |
-| `runtime.rolling_window_hours` | `24` | 事件滚动时间窗 |
-| `runtime.situation_update_interval` | `3` | 态势重写间隔 (轮次) |
-| `scoring.min_score_to_keep` | `6` | 相关性最低保留分 (0-10) |
-| `scoring.max_items_in_brief` | `25` | 简报最大条目数 |
-| `clustering.similarity_threshold` | `0.85` | Embedding 聚类相似度阈值 |
-| `clustering.max_active_events` | `30` | 同时追踪的最大活跃事件数 |
-| `clustering.event_ttl_hours` | `24` | 无更新事件自动归档时间 |
-| `minimax.model` | `MiniMax-M2.7` | 使用的 LLM 模型 (Coding Plan) |
-
----
-
-## 架构原则
-
-- **配置驱动**：所有标的、数据源、阈值均从 `config.yaml` 读取，零硬编码
-- **幻觉防御**：LLM 输出的标的 Ticker 和主题标签均经配置文件校验，自动剔除无效值
-- **幂等设计**：采集和存储层均支持重复运行，基于指纹去重保证数据一致性
-- **模块化采集**：所有采集器实现统一 `Collector` 接口，新增数据源只需实现 `fetch()` 方法
-- **渐进式管线**：支持分阶段运行 (`collect` → `process` → `cluster` → `full`)，便于调试和资源控制
-
----
-
-## 信源可信度体系
-
-系统为每个数据源赋予可信度评级，影响其在看板中的展示权重：
-
-| 等级 | 标识 | 典型数据源 |
-|------|------|-----------|
-| **High** | 🟢 | SEC EDGAR、官方博客 |
-| **Medium** | 🟡 | arXiv、主流科技媒体 |
-| **Low** | 🔴 | 技术社区 (HN、Lobsters) |
-
----
-
-<p align="center">
-  <sub>Built for AI/Semiconductor investors who need signal, not noise.</sub>
-</p>
+<sub>Built for AI/Semiconductor investors who need signal, not noise.</sub>

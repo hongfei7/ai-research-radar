@@ -27,6 +27,8 @@ _TIMEOUT = 30
 
 # raw_summary 最大字符数
 _MAX_RAW_SUMMARY = 1500
+# 单个 feed 每轮最多处理的条目数(可被 params.max_entries 覆盖)
+_MAX_ENTRIES = 80
 
 
 def normalize_url(url: str) -> str:
@@ -170,7 +172,10 @@ class RSSCollector(Collector):
             logger.warning(f"[{source_id}] Bozo feed with no entries: {feed.bozo_exception}")
             return []
 
-        for entry in feed.entries:
+        # 部分 feed 会把整个历史归档一次吐出(openai.com 单次返回 1100+ 条),
+        # 每 15 分钟解析一遍纯属浪费 —— 条目按时间倒序, 取头部足够覆盖时间窗
+        max_entries = params.get("max_entries", _MAX_ENTRIES)
+        for entry in feed.entries[:max_entries]:
             try:
                 link = getattr(entry, "link", "")
                 if not link:
@@ -193,6 +198,11 @@ class RSSCollector(Collector):
                 logger.warning(f"[{source_id}] Failed to process entry: {e}")
                 continue
 
+        if len(feed.entries) > max_entries:
+            logger.info(
+                f"[{source_id}] Feed returned {len(feed.entries)} entries, "
+                f"kept newest {max_entries}"
+            )
         logger.info(f"[{source_id}] Fetched {len(items)} entries from RSS")
         return items
 

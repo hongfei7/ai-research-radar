@@ -134,7 +134,10 @@ class WebSearchCollector(Collector):
                     url=url,
                     source=source_id,
                     source_type="tech",
-                    published_at=fetched_at,
+                    # 搜索结果没有可靠发布时间: 留空而非填 fetched_at。
+                    # 填 now 会伪造"刚发布", 让搜索结果在时间衰减排序里永远压过
+                    # 真正的新闻, 也让它成为唯一能通过时间窗的信源(审计发现)。
+                    published_at="",
                     fetched_at=fetched_at,
                     raw_summary=truncate(snippet),
                     credibility=_source_cred(source_id),
