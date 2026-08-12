@@ -12,6 +12,7 @@ from radar.collectors.base import Collector
 from radar.collectors.rss import normalize_url, make_id
 from radar.models import Item, utcnow_iso
 from radar.credibility import get_credibility as _source_cred
+from radar.textnorm import is_index_page
 from radar.minimax_client import MinimaxClient
 from radar.utils import truncate
 
@@ -89,6 +90,8 @@ class MinimaxSearchCollector(Collector):
                     link = r.get("link", "")
                     if not link:
                         continue
+                    if is_index_page(link):
+                        continue  # 标签页/栏目页无具体内容, 无法作为证据引用
                     norm_link = normalize_url(link)
                     if norm_link in seen_urls:
                         continue

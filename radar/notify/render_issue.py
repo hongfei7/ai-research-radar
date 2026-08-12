@@ -94,9 +94,23 @@ def _macro_block(payload: DigestPayload) -> list[str]:
     if macro.cycle:
         lines.append(f"**周期位置** {macro.cycle}")
         lines.append("")
-    if macro.constraint:
-        lines.append(f"**当前主约束** {macro.constraint}")
+
+    # 主线轨迹: 过去 → 当下 → 未来, 当下一段加粗。缺失的段落用占位符,
+    # 保持箭头结构完整 —— 断掉的箭头比"未知"更难读
+    traj = macro.trajectory
+    if not traj.is_empty():
+        segments = [
+            f"过去：{traj.past}" if traj.past else "过去：未标注",
+            f"**当下：{traj.now}**",
+        ]
+        if traj.next:
+            segments.append(f"未来：{traj.next}")
+        lines.append(f"**主线轨迹** {' → '.join(segments)}")
         lines.append("")
+        if traj.trigger:
+            lines.append(f"**切换信号** {traj.trigger}")
+            lines.append("")
+
     if macro.shift:
         label = SHIFT_LABEL.get(macro.shift_kind, "")
         prefix = f"**较上期** {label} —— " if label else "**较上期** "

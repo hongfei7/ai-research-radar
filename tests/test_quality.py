@@ -164,7 +164,9 @@ def _full_payload():
     return DigestPayload.from_dict({
         "title": "AI 首席内参 | 08月12日 07:00",
         "headline": "封装是硬约束。",
-        "macro": {"cycle": "扩张第三年", "constraint": "封装散热",
+        "macro": {"cycle": "扩张第三年",
+                  "trajectory": {"past": "晶圆制程产能", "now": "封装散热",
+                                 "next": "数据中心电力", "trigger": "若电力审批成为交付瓶颈"},
                   "shift_kind": "adjust", "shift": "散热权重上调"},
         "calls": [{
             "claim": "先进封装是硬约束", "direction": "台积电 ↑", "verify": "CoWoS 报价",
@@ -391,3 +393,87 @@ def test_chat_endpoint_defaults_to_legacy_route():
     c = mc.MinimaxClient(api_key="k")
     assert c.chat_path == "/text/chatcompletion_v2"
     assert c.model == "MiniMax-M3"
+
+
+# ================================================================
+# 标题清洗与索引页过滤(补漏)
+# ================================================================
+
+@pytest.mark.parametrize("raw, expected", [
+    ("台积电_台积电最新动态_IT之家", "台积电_台积电最新动态"),
+    ("测试标题-快科技", "测试标题"),
+    ("英伟达业绩超预期 - 半导体行业观察", "英伟达业绩超预期"),
+])
+def test_clean_title_more_site_suffixes(raw, expected):
+    assert clean_title(raw) == expected
+
+
+@pytest.mark.parametrize("url", [
+    "https://www.ithome.com/tags/%E5%8F%B0%E7%A7%AF%E7%94%B5",
+    "https://www.36kr.com/topics/ai",
+    "https://example.com/category/semiconductors",
+    "https://example.com/search?q=nvidia",
+    "https://example.com/",
+    "",
+])
+def test_index_pages_are_rejected(url):
+    from radar.textnorm import is_index_page
+    assert is_index_page(url)
+
+
+@pytest.mark.parametrize("url", [
+    "https://techcrunch.com/2026/07/09/metas-new-ai-chips/",
+    "https://www.toutiao.com/article/7543833778737660431/",
+    "https://xueqiu.com/4341620579/404593520",
+])
+def test_article_pages_are_kept(url):
+    from radar.textnorm import is_index_page
+    assert not is_index_page(url)
+
+
+# ================================================================
+# 格局的时间轨迹
+# ================================================================
+
+def _payload_with_trajectory(**traj):
+    p = _full_payload()
+    from radar.notify.types import MacroTrajectory
+    p.macro.trajectory = MacroTrajectory(**traj)
+    return p
+
+
+def test_macro_trajectory_renders_arc():
+    p = _payload_with_trajectory(past="晶圆制程产能", now="先进封装与散热",
+                                 next="数据中心电力", trigger="若单机柜功率密度超 130kW")
+    body = render_issue_body(p, material=_fake_material())
+    assert "**主线轨迹** 过去：晶圆制程产能 → **当下：先进封装与散热** → 未来：数据中心电力" in body
+    assert "**切换信号** 若单机柜功率密度超 130kW" in body
+
+
+def test_macro_trajectory_without_future_keeps_arc_intact():
+    """素材不足以外推时只给当下, 箭头不能断成半截"""
+    p = _payload_with_trajectory(now="先进封装与散热")
+    body = render_issue_body(p, material=_fake_material())
+    assert "过去：未标注 → **当下：先进封装与散热**" in body
+    assert "切换信号" not in body
+
+
+def test_macro_requires_current_constraint():
+    p = _payload_with_trajectory(past="晶圆制程产能", next="数据中心电力")
+    with pytest.raises(ValueError, match="current constraint"):
+        p.validate(expect_calls=True)
+
+
+def test_macro_accepts_legacy_constraint_field():
+    """LLM 漏给 trajectory 只给 constraint 时降级为"只有当下"而不是整节丢失"""
+    from radar.notify.types import MacroFrame
+    m = MacroFrame.from_dict({"cycle": "扩张第三年", "constraint": "封装散热"})
+    assert m.trajectory.now == "封装散热"
+    assert not m.is_empty()
+
+
+def test_macro_trajectory_round_trips_through_state():
+    p = _payload_with_trajectory(past="A", now="B", next="C", trigger="D")
+    from radar.notify.types import MacroFrame
+    assert MacroFrame.from_dict(p.macro.to_state()).trajectory.to_state() == {
+        "past": "A", "now": "B", "next": "C", "trigger": "D"}

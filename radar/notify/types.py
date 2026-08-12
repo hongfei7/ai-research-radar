@@ -97,11 +97,43 @@ class DigestSection:
 
 
 @dataclass
+class MacroTrajectory:
+    """主线轨迹 —— 产业主约束的迁移路径(过去 → 当下 → 未来)
+
+    单说"当前主约束"是一张静态快照, 读者看不出这个约束是刚形成还是快过去了。
+    trigger 让"未来"这一段可被观测检验, 而不是无法证伪的预言。
+    """
+
+    past: str = ""      # 上一阶段的主约束
+    now: str = ""       # 当下的主约束
+    next: str = ""      # 下一阶段可能的主约束
+    trigger: str = ""   # 什么可观测信号出现即视为进入下一阶段
+
+    @classmethod
+    def from_dict(cls, d: dict) -> "MacroTrajectory":
+        if not isinstance(d, dict):
+            return cls()
+        return cls(
+            past=_as_str(d.get("past")),
+            now=_as_str(d.get("now")),
+            next=_as_str(d.get("next")),
+            trigger=_as_str(d.get("trigger")),
+        )
+
+    def is_empty(self) -> bool:
+        return not self.now.strip()
+
+    def to_state(self) -> dict:
+        return {"past": self.past, "now": self.now,
+                "next": self.next, "trigger": self.trigger}
+
+
+@dataclass
 class MacroFrame:
     """宏观框架 —— 跨期演化, 不是每期重新发明"""
 
     cycle: str = ""        # 周期位置
-    constraint: str = ""   # 当前主约束
+    trajectory: MacroTrajectory = field(default_factory=MacroTrajectory)
     shift: str = ""        # 相对上期的变化说明
     shift_kind: str = ""   # hold | adjust | pivot
 
@@ -110,20 +142,24 @@ class MacroFrame:
         if not isinstance(d, dict):
             return cls()
         kind = _as_str(d.get("shift_kind")).lower()
+        traj = MacroTrajectory.from_dict(d.get("trajectory") or {})
+        # 兼容只给了 constraint 的旧写法(以及 LLM 偶尔漏掉 trajectory 的情况)
+        if traj.is_empty() and d.get("constraint"):
+            traj.now = _as_str(d.get("constraint"))
         return cls(
             cycle=_as_str(d.get("cycle")),
-            constraint=_as_str(d.get("constraint")),
+            trajectory=traj,
             shift=_as_str(d.get("shift")),
             shift_kind=kind if kind in SHIFT_KINDS else "hold",
         )
 
     def is_empty(self) -> bool:
-        return not (self.cycle or self.constraint)
+        return not self.cycle.strip() and self.trajectory.is_empty()
 
     def to_state(self) -> dict:
         return {
             "cycle": self.cycle,
-            "constraint": self.constraint,
+            "trajectory": self.trajectory.to_state(),
             "shift": self.shift,
             "shift_kind": self.shift_kind,
         }
@@ -314,6 +350,8 @@ class DigestPayload:
                 raise ValueError(f"call {call.n} has no valid evidence refs")
         if self.macro.is_empty():
             raise ValueError("macro frame is empty")
+        if not self.macro.trajectory.now.strip():
+            raise ValueError("macro trajectory has no current constraint")
         if expect_reviews and len(self.reviews) < expect_reviews:
             raise ValueError(
                 f"expected {expect_reviews} call reviews, got {len(self.reviews)}"

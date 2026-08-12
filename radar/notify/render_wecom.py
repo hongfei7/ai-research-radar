@@ -65,8 +65,12 @@ def _call_blocks(payload: DigestPayload) -> list[list[str]]:
         macro_lines = ["**格局**"]
         if macro.cycle:
             macro_lines.append(f"周期位置：{macro.cycle}")
-        if macro.constraint:
-            macro_lines.append(f"当前主约束：{macro.constraint}")
+        traj = macro.trajectory
+        if not traj.is_empty():
+            arc = " → ".join(s for s in [traj.past, traj.now, traj.next] if s)
+            macro_lines.append(f"主线轨迹：{arc}（当下：{traj.now}）")
+            if traj.trigger:
+                macro_lines.append(f"切换信号：{traj.trigger}")
         if macro.shift:
             label = SHIFT_LABEL.get(macro.shift_kind, "")
             macro_lines.append(f"较上期：{label + ' —— ' if label else ''}{macro.shift}")
