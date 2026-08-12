@@ -23,7 +23,7 @@ from radar.notify.types import (
 
 logger = logging.getLogger(__name__)
 
-_LLM_TIMEOUT_SEC = 90
+_LLM_TIMEOUT_SEC = 150
 
 _PROMPT_BY_KIND = {
     KIND_MORNING: "notify_daily",
