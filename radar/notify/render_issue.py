@@ -12,7 +12,8 @@ import logging
 
 from radar.notify.assemble import sources_by_ref
 from radar.notify.brand import (
-    DEFAULT_BRAND, alert_header, brand_of, ordinal, source_label, short_date,
+    DEFAULT_BRAND, alert_header, brand_of, ordinal, publisher_name,
+    source_label, short_date,
 )
 from radar.notify.types import DigestPayload, SHIFT_LABEL, KIND_BREAKING
 from radar.textnorm import clean_title, strip_markdown
@@ -40,7 +41,7 @@ def _evidence_lines(refs: list, src_map: dict) -> list[str]:
             seen.add(url)
             title = clean_title(src.get("title") or "") or url
             bits = [b for b in [
-                src.get("source", ""),
+                publisher_name(src),
                 short_date(src.get("published_at", "")),
                 source_label(src),
             ] if b]
@@ -215,7 +216,7 @@ def _alert_block(payload: DigestPayload, src_map: dict) -> list[str]:
     if alert.summary.strip():
         lines.append(alert.summary.strip())
         lines.append("")
-    for label, text in (("含义", alert.why), ("盯", alert.watch)):
+    for label, text in (("判断", alert.why), ("盯", alert.watch)):
         if text.strip():
             lines.append(f"**{label}** {text.strip()}")
             lines.append("")

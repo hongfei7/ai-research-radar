@@ -34,6 +34,77 @@ def source_label(source: dict) -> str:
     return "一手" if source.get("is_primary_source") else "二手"
 
 
+def caveat_label(source: dict) -> str:
+    """只在有信息量时出标签: 低可信是警示, 一手是加分, 二手是默认值不必占位"""
+    label = source_label(source)
+    return label if label in ("低可信", "一手") else ""
+
+
+# 采集器 id → 出版方。source 字段存的是采集器标识("web_search"、"rss:36kr"),
+# 那是系统实现细节, 对读者零价值 —— 报给读者的必须是"谁发的"。
+_SOURCE_PUBLISHER = {
+    "rss:36kr": "36氪", "rss:leiphone": "雷锋网", "rss:qbitai": "量子位",
+    "rss:geekpark": "极客公园", "rss:tmtpost": "钛媒体", "rss:ifanr": "爱范儿",
+    "rss:theverge-ai": "The Verge", "rss:techcrunch-ai": "TechCrunch",
+    "rss:arstechnica": "Ars Technica", "rss:wired": "Wired",
+    "rss:mit-tr": "MIT Tech Review", "rss:venturebeat-ai": "VentureBeat",
+    "rss:tomshardware": "Tom's Hardware", "rss:zdnet": "ZDNet",
+    "rss:eetimes": "EE Times", "rss:infoq": "InfoQ", "rss:techmeme": "Techmeme",
+    "rss:ieee-spectrum-ai": "IEEE Spectrum", "rss:importai": "Import AI",
+    "rss:semiengineering": "Semiconductor Engineering",
+    "rss:stratechery": "Stratechery", "rss:interconnects": "Interconnects",
+    "rss:simonwillison": "Simon Willison", "rss:lobsters": "Lobsters",
+    "rss:openai": "OpenAI", "rss:googleai": "Google AI", "rss:deepmind": "DeepMind",
+    "rss:nvidia-blog": "NVIDIA", "rss:msft-research": "Microsoft Research",
+    "rss:aws-ml": "AWS", "rss:hf-blog": "Hugging Face",
+    "huggingface:papers": "HF Daily Papers", "hackernews": "Hacker News",
+    "github_trending": "GitHub Trending", "arxiv": "arXiv", "sec_edgar": "SEC",
+}
+
+# 搜索类采集器没有出版方字段, 从 URL 域名反查
+_DOMAIN_PUBLISHER = {
+    "news.qq.com": "腾讯新闻", "toutiao.com": "今日头条", "zhihu.com": "知乎",
+    "zhuanlan.zhihu.com": "知乎", "xueqiu.com": "雪球", "sohu.com": "搜狐",
+    "36kr.com": "36氪", "thepaper.cn": "澎湃", "sina.cn": "新浪",
+    "k.sina.cn": "新浪", "ithome.com": "IT之家", "leiphone.com": "雷锋网",
+    "technews.tw": "科技新报", "cnbeta.com.tw": "cnBeta",
+    "techmeme.com": "Techmeme", "tomshardware.com": "Tom's Hardware",
+    "techcrunch.com": "TechCrunch", "theverge.com": "The Verge",
+    "reddit.com": "Reddit", "github.com": "GitHub", "zdnet.com": "ZDNet",
+    "eetimes.com": "EE Times", "infoq.com": "InfoQ", "reuters.com": "Reuters",
+    "bloomberg.com": "Bloomberg", "nvidia.com": "NVIDIA", "openai.com": "OpenAI",
+    "blogs.nvidia.com": "NVIDIA", "arm.com": "Arm", "intc.com": "Intel",
+}
+
+
+def publisher_name(source: dict) -> str:
+    """出版方名称; 未收录的域名退化为域名本身, 总好过露出 "web_search" """
+    sid = (source.get("source") or "").strip()
+    if sid in _SOURCE_PUBLISHER:
+        return _SOURCE_PUBLISHER[sid]
+    for prefix, name in _SOURCE_PUBLISHER.items():
+        if sid.startswith(prefix):      # arxiv:cs.AI / sec_edgar:8-K
+            return name
+
+    from urllib.parse import urlparse
+    try:
+        host = urlparse(source.get("url") or "").netloc.lower()
+    except ValueError:
+        host = ""
+    host = host[4:] if host.startswith("www.") else host
+    if not host:
+        return ""
+    if host in _DOMAIN_PUBLISHER:
+        return _DOMAIN_PUBLISHER[host]
+    # 去掉子域再试一次(mp.weixin.qq.com → weixin.qq.com → qq.com)
+    parts = host.split(".")
+    for i in range(1, len(parts) - 1):
+        candidate = ".".join(parts[i:])
+        if candidate in _DOMAIN_PUBLISHER:
+            return _DOMAIN_PUBLISHER[candidate]
+    return host
+
+
 def short_date(iso_str: str) -> str:
     """ISO 时间 → MM-DD, 解析失败返回空串"""
     from radar.models import parse_iso
@@ -45,7 +116,8 @@ def short_date(iso_str: str) -> str:
 # 不让撰稿 LLM 重新判一次 —— 这样箭头的可靠度与标的本身一致。
 DIRECTION_ARROW = {"positive": "↑", "negative": "↓", "neutral": "→"}
 
-_MAX_HEADER_TICKERS = 3
+# 抬头最多两个标的: 三个以上就会折行, 而快报本来就是"一眼扫完"的产品
+_MAX_HEADER_TICKERS = 2
 
 
 def ticker_line(tickers: list, direction: dict | None = None,
@@ -68,7 +140,8 @@ def ticker_line(tickers: list, direction: dict | None = None,
     parts = []
     for tk in ranked[:max_tickers]:
         parts.append(f"{tk} {_arrow(tk)}".strip() if _directional(tk) else tk)
-    return " · ".join(parts)
+    # 全角竖线分隔标的, 与后面的 " · 时间" 拉开层级
+    return "｜".join(parts)
 
 
 def alert_header(material: dict, brand: dict, product: str, when: str) -> list[str]:

@@ -9,7 +9,8 @@ import logging
 
 from radar.notify.assemble import sources_by_ref
 from radar.notify.brand import (
-    DEFAULT_BRAND as _DEFAULT_BRAND, alert_header, ordinal, source_label,
+    DEFAULT_BRAND as _DEFAULT_BRAND, alert_header, caveat_label, ordinal,
+    publisher_name,
 )
 from radar.notify.types import DigestPayload, SHIFT_LABEL, KIND_BREAKING
 
@@ -23,7 +24,7 @@ def _esc(text: str) -> str:
 
 
 def _alert_parts(payload: DigestPayload, src_map: dict, issue_url: str) -> list[str]:
-    """快报三段: 事件句 / 含义 / 盯什么, 末尾挂原文链接"""
+    """快报三段: 事实 / 判断 / 盯什么, 末尾挂原文链接"""
     alert = payload.alert
     if alert is None:
         return []
@@ -31,18 +32,18 @@ def _alert_parts(payload: DigestPayload, src_map: dict, issue_url: str) -> list[
     if alert.summary.strip():
         parts.append(f"\n{_esc(alert.summary.strip())}")
     if alert.why.strip():
-        parts.append(f"<b>含义</b> {_esc(alert.why.strip())}")
+        parts.append(f"<b>判断</b> {_esc(alert.why.strip())}")
     if alert.watch.strip():
         parts.append(f"<b>盯</b> {_esc(alert.watch.strip())}")
 
     tail = []
     for src in (src_map.get(alert.evidence_ref) or [])[:1]:
         if src.get("url"):
-            bits = [b for b in [src.get("source", ""), source_label(src)] if b]
+            bits = [b for b in [publisher_name(src), caveat_label(src)] if b]
             link = f'<a href="{src["url"]}">原文</a>'
             tail.append(link + (f" · {_esc(' · '.join(bits))}" if bits else ""))
     if issue_url:
-        tail.append(f'<a href="{issue_url}">今日快报汇总</a>')
+        tail.append(f'<a href="{issue_url}">今日汇总</a>')
     if tail:
         parts.append("\n" + " · ".join(tail))
     return parts
