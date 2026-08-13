@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-13T06:08:32Z",
-  "text": "截至 2026-08-13 14:08 HKT，DeepSeek V4 Pro正式版（0813）上线，DeepSWE较Preview跃升约4.9倍至62.7，支持1M上下文，API定价较Flash涨3倍；四川发布政策布局万卡级智算集群。国产模型能力上行与算力需求扩张同步验证。",
-  "since": "2026-08-13T06:08:32Z",
-  "active_event_count": 22,
+  "generated_at": "2026-08-13T08:01:26Z",
+  "text": "当前共有 30 个活跃事件。要点包括: DeepSeek V4 Pro正式版发布，多项能力对标GPT-5; Anthropic in Talks to Buy World Model AI Startup Decart for $6B; DeepSeek-V4-Pro正式版实测：山不在高，有“梁”则灵; 腾讯AI不再“观望”; 投资方预计Anthropic将于10月挂牌上市，估值有望达2万亿美元。",
+  "since": "2026-08-13T08:01:26Z",
+  "active_event_count": 30,
   "key_themes": [
     "compute_demand",
     "ai_monetization",
     "model_capability",
-    "domestic_substitution",
+    "chip_supply",
     "datacenter_power"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nDeepSeek V4 Pro标题称\"对标Fable 5\"（疑为GPT-5笔误），但原文未披露具体benchmark、参数规模、推理价格等关键量化数据，\"对标\"说法缺乏实证支撑。四川政策条目则聚焦算力供给侧基建布局，两类来源在\"模型能力声明 vs 落地验证节奏\"之间形成叙事张力，尚缺需求端交叉印证。\n\n【新兴趋势】\n国产大模型能力曲线持续上行（DeepSeek V4 Pro）与地方算力基建政策（四川万卡集群）形成共振。\"算电融合\"及利用隧洞建设\"高安全算力设施\"作为新模式首次在省级政策中明确出现，绿电+高密度集群+隐蔽部署的组合，有望成为中西部差异化算力建设路径。\n\n【信息盲点】\n四川政策条目未覆盖任何具体标的，国产AI服务器、IDC运营商、绿电及电力设备企业均未被提及。V4 Pro相关受益链条——云厂capex、国产芯片、推理Token消耗与API调用量——同样缺乏数据支撑，相关跟踪指标处于盲区。\n\n【跨标的联动】\nDeepSeek模型迭代→算力需求扩张→四川",
+  "cross_analysis": "【核心矛盾】\n腾讯AI出现明显叙事分歧：tmtpost两篇报道同源财报数据，但一篇强调\"capex+176%、FCF十年来首次转负\"的现金代价，另一篇强调\"",
   "trend_spotting": "DeepSeek V4 Pro发布叠加四川万卡集群政策，72小时内出现两个值得串联的趋势：模型能力曲线持续上行使推理侧的token消耗与算力需求出现非线性放大预期，而供给端的地方算力底座正以\"算电融合+高安全模块化\"两条新路径加速落地。\n\n早期信号集中在两点：四川明确提出利用隧洞等隐蔽环境建设高密度算力设施，这并非传统IDC叙事的延伸，而是面向国产化、特定行业（涉密/政企）的新基建形态，尚未被市场充分定价；同期DeepSeek作为非上市标的，其版本迭代节奏本身就是国产模型自循环造血能力的验证。\n\n市场盲点在于V4 Pro缺乏公开benchmark、上下文窗口与推理定价——能力跃升能否转化为可量化的API调用与收入弹性仍属黑箱，这直接关系到对国内云厂capex与算力链订单的二阶传导。\n\n真正值得跟踪的拐点：若V4 Pro在保持低定价的同时将能力差距压缩至GPT-5的个位数百分比区间，国产模型对国际替代的临界点将正式跨过，叠加地方万卡集群交付节奏，国产算力链有望从\"备选\"切换为\"刚需\"。"
 }
