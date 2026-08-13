@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-13T15:19:05Z",
-  "text": "当前共有 30 个活跃事件。要点包括: 腾讯Q2资本开支暴增176%，AI算力扩张驱动存储链需求; DeepSeek launches V4-Pro, its most advanced model that rivals Kimi K3 on some benchmarks at much lower prices, costing $0.44/1M input and $0.87/1M output tokens (Juro Osawa/The Information); Elon Musk says xAI will increase data center capacity 7x by 2027 — targeting 10 gigawatts of compute, up to $500 billion in revenue by the end of next year; 腾讯Q2算力528亿：模型优先，出租退路存疑; 中芯国际Q2营收同比增36%，净利润超预期3倍。",
-  "since": "2026-08-13T15:19:05Z",
+  "generated_at": "2026-08-13T16:27:12Z",
+  "text": "截至 2026-08-14 00:27 HKT，DeepSeek于潜在IPO前夕大幅提价并引入动态定价，V4-Flash输出token高峰价涨至$1.32/百万；AMD拟发至多50亿美元投资级债券扩AI芯片产能；微软合并消费与商用Copilot并下线低频AI功能；OpenAI任命Dali Rajic为CRO强化B端商业化。",
+  "since": "2026-08-13T16:27:12Z",
   "active_event_count": 30,
   "key_themes": [
-    "ai_monetization",
     "compute_demand",
+    "ai_monetization",
     "model_capability",
     "chip_supply",
     "domestic_substitution"
@@ -13,6 +13,6 @@
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n本轮报道存在两对明显矛盾。其一，Nvidia推出5000亿美元GPU残值保障与融资计划以加速AI基建，而EE Times同期指出\"公众许可\"（电力、水资源、地方审批）正成为算力扩张的下一瓶颈——扩张供给侧 vs 地方落地约束形成直接张力。其二，DeepSeek同期出现两条信号",
-  "trend_spotting": "CXMT上市17天市值飙至5240亿美元、超越腾讯，与SK海力士7200亿美元龙仁集群2027年2月投产形成鲜明对照——前者是国产存储估值跃迁，后者是全球HBM供给端将进入下一轮放量周期，两端共同指向HBM供需格局在2026-2027年面临重定价，关键变量是CXMT的HBM/DDR5良率爬坡速度与龙仁产能爬坡的匹配度。\n\n【早期信号】xAI通过收购Cursor反向强化Grok 4.6的代码能力，以更低价格重返第一梯队，预示\"模型公司+开发者工具\"的垂直整合路径开始跑通；微软将消费端与商用端Copilot合并为统一超级应用，则验证了AI入口正从分散走向整合。\n\n【市场盲点】CXMT当前5240亿美元市值与实际HBM量产能力之间存在显著落差，资本预期已显著领先于产能落地；DeepSeek Harness定位\"不做下一个Codex\"暗示其瞄准Agent/插件生态，潜在挑战Cursor与GitHub Copilot在开发者工具的既有格局。\n\n【拐点提示】2027年2月龙仁投产将是HBM供需周期的关键时点，同期国产替代叙事若获HBM量产验证，全球DRAM三强定价权将面临实质性侵蚀。"
+  "cross_analysis": "【核心矛盾】\n两篇DeepSeek涨价报道存在显著数据分歧：HackerNews低可信度来源称\"最高涨幅达1000%\"并仅披露事实、无具体定价；而Bloomberg转述来源给出了V4-Flash输出token从$0.28/百万调至高峰期$1.32的具体数字（实际约4.7倍），并非10倍。两条来源对方向判断也不一致——前者标\"neutral\"，后者标\"positive\"，分歧在于涨价究竟是算力成本倒逼（负面）还是IPO前主动追求利润率（正面）。需以Bloomberg数据为准，警惕标题党误导。\n\n【新兴趋势】\n\"AI商业化纪律\"成为本轮多条报道的暗线：DeepSeek在IPO前以动态定价追求利润率、微软砍掉低使用率AI功能并合并Copilot产品线、OpenAI任命CRO强化企业销售——三者共同反映行业从\"烧钱抢市场\"转向\"ROI导向\"。同时，AI算力侧的资本开支军备竞赛升级（AMD $5B发债），与变现端收紧形成\"上游扩产、下游算账\"的剪刀差。动态定价（peak/off-peak）在云端API中首次规模化出现，可能成为行业新范式。\n\n【信息盲点】\n1) AMD发债拉动先进封装/HBM链——台积电、美光、SK海力士、ASML等本轮全部缺席，但作为最直接受益方应被覆盖；2) 国产大模型跟涨/跟降策略——阿里通义、字节豆包、智谱、月之暗面等竞争反应未被提及；3) DeepSeek涨价对AI应用层（如金山办公、猎豹移动等推理密集型应用）的成本挤压未涉及；4) 英伟达作为AMD最大对手在AMD发债背景下的相对竞争位势未被讨论；5) AI数据中心电力/冷却基础设施供应商缺失。\n\n【跨标的联动】\nDeepSeek涨价 → 下游AI应用利润承压 + 国产大模型定价策略联动（阿里、字节面临\"跟涨丢份额、不跟丢利润\"两难）；AMD $5B发债 → 先进制程产能（台积电）与HBM（美光/海力士）需求传导；OpenAI设立CRO + 微软Copilot整合 → Anthropic在企业市场的夹击位次变化，同时对微软Azure算力采购节奏产生回压；Deep",
+  "trend_spotting": "DeepSeek在潜在IPO前夕将V4-Flash输出token价从$0.28/百万拉至峰值$1.32（约4.7倍），并引入峰谷动态定价，标志国产大模型正式告别\"以价换量\"阶段，转向追求收入与利润率。同期AMD拟发50亿美元投资级债为AI capex融资，反映AI基础设施支出已从股权/现金流驱动进入企业债驱动阶段，资本密集度进一步抬升。\n\n值得关注的早期信号：推理算力在高峰期出现实质性稀缺（峰值/非峰值价差约2倍），这与\"算力过剩\"的主流叙事相悖，可能向HBM、先进封装链传导需求压力。被市场低估的是微软合并Copilot并砍掉群聊、播客等功能，暗示消费级AI助手用户黏性低于预期，资源正加速向企业级与Agent集中，叠加OpenAI新设CRO，系统化B端商业化竞赛已开启。拐点层面，国产模型价格体系重塑若传导至阿里、字节，将首次使国内AI推理成本曲线与海外收敛，影响下游应用毛利结构。"
 }
