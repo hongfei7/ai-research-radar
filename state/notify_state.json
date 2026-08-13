@@ -1,5 +1,5 @@
 {
-  "morning_last_date": "2026-08-13",
+  "morning_last_date": "2026-08-14",
   "weekly_last_slot": "",
   "breaking_fingerprints": [
     {
@@ -721,36 +721,68 @@
         "zac"
       ],
       "sent_at": "2026-08-13T18:33:40Z"
+    },
+    {
+      "tickers": [
+        "OpenAI"
+      ],
+      "features": [
+        "40b",
+        "annualized",
+        "based",
+        "bloomberg",
+        "current",
+        "doubling",
+        "end",
+        "from",
+        "generate",
+        "is",
+        "its",
+        "of",
+        "on",
+        "openai",
+        "performance",
+        "rate",
+        "revenue",
+        "roughly",
+        "run",
+        "sources",
+        "the",
+        "to",
+        "track"
+      ],
+      "sent_at": "2026-08-13T23:07:07Z"
     }
   ],
   "last_report": {
-    "date": "2026-08-13",
+    "date": "2026-08-14",
     "macro": {
-      "cycle": "扩张第三年, 绝对投入仍创历史新高, 边际斜率首次出现分化",
+      "cycle": "扩张第三年,头部客户资本开支强度再上一个台阶:腾讯Q2单季capex达528亿元人民币、同比暴增176%,xAI公开目标2027年底算力扩至10GW,AMD拟发50亿美元投资级债为AI capex融资,OpenAI年化运行率据估算有望突破400亿美元,需求侧已从股权/现金流驱动切换至企业债驱动。",
       "trajectory": {
         "past": "晶圆制程产能",
         "now": "先进封装与HBM",
-        "next": "AI capex可持续性",
-        "trigger": "头部云厂商AI相关发债信用利差单季走阔超过150bp, 或任意单季AI收入年化跑率未能覆盖对应capex的20%"
+        "next": "数据中心电力与单机柜功率",
+        "why_now": "推理侧峰谷价差约2倍,稀缺已从训练侧的训练时长瓶颈,迁移到推理侧HBM容量与CoWoS产能;AMD发债锁定上游产能的动作,以及应用材料WFE指引上修共同印证封装设备仍处紧平衡。",
+        "trigger": "若单机柜功率密度普遍突破130kW、或北美超大规模园区电力接入审批成为交付主延迟项,则约束明确切换至电力与散热"
       },
-      "shift": "首期建立框架",
-      "shift_kind": "hold"
+      "shift": "维持三段轨迹,但把now的表述从'先进封装与HBM'收紧为'HBM容量与CoWoS双约束',并把推理侧峰谷价差写入why_now;next从'AI capex可持续性'修正为'数据中心电力与单机柜功率',与前两段同处物理可观测轴",
+      "shift_kind": "adjust"
     },
     "calls": [
       {
-        "claim": "超大规模客户ASIC放量进入加速期, 双轨采购模式从叙事走向兑现",
-        "falsifier": "若2027年Q1微软或Meta公开下调Maia或MTIA出货指引超过20%, 或第三方benchmark显示自研ASIC性能/能效较英伟达同代际差距超过30%, 本判断失效",
-        "verify": "26Q1云厂商ASIC出货指引下修>20%"
+        "claim": "推理算力已进入实质性稀缺,HBM与CoWoS是当前硬约束",
+        "falsifier": "若2026Q4 SK海力士HBM3e合约价环比回落超过5%,或CoWoS现货报价环比下行,本判断失效;若AMD MI400与英伟达Rubin发布时无封装瓶颈报道,亦削弱本判断。",
+        "verify": "推理峰谷价差收敛或HBM合约价回落"
       },
       {
-        "claim": "英伟达RTX PRO 6000 MSRP一年内翻倍至1.6万美元, 定价权峰值与客户逃离加速同步到来",
-        "falsifier": "若2026年Q4英伟达数据中心ASP同比增速回落至30%以下, 或前三客户中至少一家公开订单递延, 本判断失效",
-        "verify": "26Q4数据中心ASP同比增速跌破30%"
+        "claim": "AI capex融资工具从股权/现金流切换至投资级企业债,资本密集度台阶性抬升",
+        "falsifier": "若2026Q4任意一家头部云厂的AI相关投资级债发行失败或被迫缩量,或信用利差单季走阔超过150bp,本判断失效;若AMD发债资金未能锁定上游产能(台积电/海力士排产无变化),亦削弱'债务→产能→订单'的传导逻辑。",
+        "verify": "头部云厂AI债信用利差走阔>150bp"
       },
       {
-        "claim": "先进封装而非晶圆产能构成台积电新增1000亿美元投资难以快速缓解的硬约束",
-        "falsifier": "若2026年Q4 CoWoS现货或合约报价环比回落超过5%, 或AMD MI400与英伟达Rubin发布时无封装瓶颈, 本判断失效",
-        "verify": "26Q4 CoWoS报价环比回落>5%"
+        "claim": "国产大模型价格体系重塑,国内AI推理成本曲线首次与海外收敛,挤压下游应用毛利",
+        "falsifier": "若阿里、字节选择不跟进提价并以补贴维持调用量,DeepSeek的涨价将导致份额回流,Q4国内token均价环比回落超过10%,本判断失效;若V4-Pro实际能力被独立benchmark证伪(如DeepSWE得分回退至30以下),定价权亦不成立。",
+        "verify": "阿里/字节跟进提价并传导至终端"
       }
     ]
   }
