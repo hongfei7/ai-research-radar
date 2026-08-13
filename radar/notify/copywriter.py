@@ -15,6 +15,7 @@
 import asyncio
 import json
 import logging
+import re
 from typing import Optional
 
 from radar.minimax_client import MinimaxClient
@@ -95,6 +96,8 @@ async def write_digest(
             logger.warning(f"Copywriter [{kind}] dropped {dropped} unknown evidence refs")
         payload.validate(expect_calls=expect_calls, expect_reviews=expect_reviews,
                          expect_alert=expect_alert)
+        if expect_calls:
+            _warn_unquantified_macro(payload)
         if expect_alert:
             _enforce_alert_budget(payload)
             # 时间是系统事实, 不该问 LLM 要。prompt 模板里的 title 是
@@ -121,6 +124,20 @@ async def write_digest(
 # prompt 里写了约束但 LLM 会无视, 所以在代码里兜底 —— 按句子边界裁, 不切半句。
 _ALERT_FIELD_BUDGET = {"summary": 90, "why": 80, "watch": 80}
 _ALERT_TOTAL_WARN = 200
+
+
+_DIGIT_RE = re.compile(r"\d")
+
+
+def _warn_unquantified_macro(payload: DigestPayload) -> None:
+    """周期位置不带数字就是印象派描述, 但不能因此判稿件不合格
+
+    校验失败会掉进降级稿(只有事实层, 没有机理与推论), 代价远大于一句
+    缺数字的周期判断。与 _enforce_alert_budget 同一处理哲学: 记账不拦路。
+    """
+    cycle = payload.macro.cycle if payload.macro else ""
+    if cycle and not _DIGIT_RE.search(cycle):
+        logger.warning(f"Macro cycle has no quantitative anchor: {cycle[:60]}")
 
 
 def _enforce_alert_budget(payload: DigestPayload) -> None:

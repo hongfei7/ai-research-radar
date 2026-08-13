@@ -80,8 +80,14 @@ def _call_blocks(payload: DigestPayload) -> list[list[str]]:
         if not traj.is_empty():
             arc = " → ".join(s for s in [traj.past, traj.now, traj.next] if s)
             macro_lines.append(f"主线轨迹：{arc}（当下：{traj.now}）")
+            if traj.why_now:
+                macro_lines.append(traj.why_now)
             if traj.trigger:
                 macro_lines.append(f"切换信号：{traj.trigger}")
+        if macro.blindspot:
+            macro_lines.append(f"盲区：{macro.blindspot}")
+        if macro.check:
+            macro_lines.append(f"本期检验：{macro.check}")
         if macro.shift:
             label = SHIFT_LABEL.get(macro.shift_kind, "")
             macro_lines.append(f"较上期：{label + ' —— ' if label else ''}{macro.shift}")

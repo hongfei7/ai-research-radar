@@ -70,8 +70,14 @@ def _call_parts(payload: DigestPayload, src_map: dict) -> list[str]:
             arc = " → ".join(s for s in [traj.past, traj.now, traj.next] if s)
             parts.append(f"主线轨迹：{_esc(arc)}")
             parts.append(f"当下：<b>{_esc(traj.now)}</b>")
+            if traj.why_now:
+                parts.append(_esc(traj.why_now))
             if traj.trigger:
                 parts.append(f"切换信号：{_esc(traj.trigger)}")
+        if macro.blindspot:
+            parts.append(f"<b>盲区</b> {_esc(macro.blindspot)}")
+        if macro.check:
+            parts.append(f"<b>本期检验</b> {_esc(macro.check)}")
         if macro.shift:
             label = SHIFT_LABEL.get(macro.shift_kind, "")
             parts.append(f"较上期：{_esc((label + ' — ' if label else '') + macro.shift)}")

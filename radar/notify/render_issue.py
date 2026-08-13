@@ -114,9 +114,19 @@ def _macro_block(payload: DigestPayload) -> list[str]:
             segments.append(f"未来：{traj.next}")
         lines.append(f"**主线轨迹** {' → '.join(segments)}")
         lines.append("")
+        if traj.why_now:
+            lines.append(traj.why_now)
+            lines.append("")
         if traj.trigger:
             lines.append(f"**切换信号** {traj.trigger}")
             lines.append("")
+
+    if macro.blindspot:
+        lines.append(f"**盲区** {macro.blindspot}")
+        lines.append("")
+    if macro.check:
+        lines.append(f"**本期检验** {macro.check}")
+        lines.append("")
 
     if macro.shift:
         label = SHIFT_LABEL.get(macro.shift_kind, "")
