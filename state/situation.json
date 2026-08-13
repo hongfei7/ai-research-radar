@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-13T14:05:05Z",
-  "text": "当前共有 29 个活跃事件。要点包括: DeepSeek V4 Pro正式版上线，Agent能力大幅跃升; 腾讯Q2资本开支暴增176%，AI算力扩张驱动存储链需求; 刚刚！Ilya首个模型曝光了; DeepSeek launches V4-Pro, its most advanced model that rivals Kimi K3 on some benchmarks at much lower prices, costing $0.44/1M input and $0.87/1M output tokens (Juro Osawa/The Information); Elon Musk says xAI will increase data center capacity 7x by 2027 — targeting 10 gigawatts of compute, up to $500 billion in revenue by the end of next year。",
-  "since": "2026-08-13T14:05:05Z",
-  "active_event_count": 29,
+  "generated_at": "2026-08-13T15:19:05Z",
+  "text": "当前共有 30 个活跃事件。要点包括: 腾讯Q2资本开支暴增176%，AI算力扩张驱动存储链需求; DeepSeek launches V4-Pro, its most advanced model that rivals Kimi K3 on some benchmarks at much lower prices, costing $0.44/1M input and $0.87/1M output tokens (Juro Osawa/The Information); Elon Musk says xAI will increase data center capacity 7x by 2027 — targeting 10 gigawatts of compute, up to $500 billion in revenue by the end of next year; 腾讯Q2算力528亿：模型优先，出租退路存疑; 中芯国际Q2营收同比增36%，净利润超预期3倍。",
+  "since": "2026-08-13T15:19:05Z",
+  "active_event_count": 30,
   "key_themes": [
-    "model_capability",
-    "compute_demand",
     "ai_monetization",
+    "compute_demand",
+    "model_capability",
     "chip_supply",
     "domestic_substitution"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nCXMT上市17天市值飙至5240亿美元超越腾讯，来源Tom's Hardware（中等可信度），但与A股/港股对存储芯片的传统定价存在显著背离，且同行SK海力士同期龙仁项目总投入约7200亿美元（美元口径），两个数字层级相近引发估值合理性质疑，需交叉验证CXMT上市市场与市值口径。另xAI Grok 4.6\"反超Fable 5\"表述含混，量子位来源中等可信度，自媒体测评色彩浓，与第三方独立基准未必一致。\n\n【新兴趋势】\n两条线索反复出现：一是\"模型+工具\"绑定变现（xAI收购Cursor、DeepSeek推出Harness、DeepSeek调价），显示大模型厂商从纯API竞争向开发者生态延伸；二是AI应用端整合（微软Copilot合并超级应用）反映C+B端入口收敛，间接利好办公协同赛道。此外，国产存储与端侧AI芯片均出现资本端高热度事件，但海外/国内两端口径差异大。\n\n【信息盲点】\n中芯国际、长电科技、通富微电等CXMT产业链标的、华虹、长江存储无单独动态；寒武纪、海光、摩尔线程等国产AI算力芯片本轮缺位；阿里通义、字节豆包、腾讯混元、Meta Llama均无定价/版本更新；英伟达、苹果、AMD作为HBM与端侧AI最大需求方未在本轮出现。4.8亿美元端侧芯片融资主体不明，信息盲点最大。\n\n【跨标的联动】\nSK海力士龙仁2027年2月投产与英伟达AI算力周期形成供给-需求绑定，对美光、三星HBM定价构成中长期压力；CXMT市值跃升若带动国产替代主题溢价，将传导至中芯国际封测链与设备厂商；DeepSeek若大幅降价，将沿\"模型→云厂API→推理算力\"链条冲击阿里、腾讯、微软Azure毛利；微软Copilot整合则对金山办公等国产办公AI构成产品策略压力。",
+  "cross_analysis": "【核心矛盾】\n本轮报道存在两对明显矛盾。其一，Nvidia推出5000亿美元GPU残值保障与融资计划以加速AI基建，而EE Times同期指出\"公众许可\"（电力、水资源、地方审批）正成为算力扩张的下一瓶颈——扩张供给侧 vs 地方落地约束形成直接张力。其二，DeepSeek同期出现两条信号",
   "trend_spotting": "CXMT上市17天市值飙至5240亿美元、超越腾讯，与SK海力士7200亿美元龙仁集群2027年2月投产形成鲜明对照——前者是国产存储估值跃迁，后者是全球HBM供给端将进入下一轮放量周期，两端共同指向HBM供需格局在2026-2027年面临重定价，关键变量是CXMT的HBM/DDR5良率爬坡速度与龙仁产能爬坡的匹配度。\n\n【早期信号】xAI通过收购Cursor反向强化Grok 4.6的代码能力，以更低价格重返第一梯队，预示\"模型公司+开发者工具\"的垂直整合路径开始跑通；微软将消费端与商用端Copilot合并为统一超级应用，则验证了AI入口正从分散走向整合。\n\n【市场盲点】CXMT当前5240亿美元市值与实际HBM量产能力之间存在显著落差，资本预期已显著领先于产能落地；DeepSeek Harness定位\"不做下一个Codex\"暗示其瞄准Agent/插件生态，潜在挑战Cursor与GitHub Copilot在开发者工具的既有格局。\n\n【拐点提示】2027年2月龙仁投产将是HBM供需周期的关键时点，同期国产替代叙事若获HBM量产验证，全球DRAM三强定价权将面临实质性侵蚀。"
 }
