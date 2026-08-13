@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-13T16:27:12Z",
-  "text": "截至 2026-08-14 00:27 HKT，DeepSeek于潜在IPO前夕大幅提价并引入动态定价，V4-Flash输出token高峰价涨至$1.32/百万；AMD拟发至多50亿美元投资级债券扩AI芯片产能；微软合并消费与商用Copilot并下线低频AI功能；OpenAI任命Dali Rajic为CRO强化B端商业化。",
-  "since": "2026-08-13T16:27:12Z",
+  "generated_at": "2026-08-13T17:32:36Z",
+  "text": "截至 2026-08-14 01:32 HKT，本轮变化聚焦三点：一、DeepSeek V4-Pro正式版上线，同步以MIT协议开源智能体框架Harness v0.1，并进一步上调API价格，缓存命中价涨至现价6倍；二、谷歌三周内连发Gemini 3.7 Flash，主打编码与Agent，定价$0.75/$3.75每百万token，迭代节奏显著加快；三、Ramp 7月企业支付数据显示Anthropic份额升至43.5%，进一步拉开与OpenAI差距。此外，NPO光互连方案因CPO量产痛点获行业追加，量产生命周期将延至本十年末。",
+  "since": "2026-08-13T17:32:36Z",
   "active_event_count": 30,
   "key_themes": [
-    "compute_demand",
     "ai_monetization",
     "model_capability",
+    "compute_demand",
     "chip_supply",
     "domestic_substitution"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n两篇DeepSeek涨价报道存在显著数据分歧：HackerNews低可信度来源称\"最高涨幅达1000%\"并仅披露事实、无具体定价；而Bloomberg转述来源给出了V4-Flash输出token从$0.28/百万调至高峰期$1.32的具体数字（实际约4.7倍），并非10倍。两条来源对方向判断也不一致——前者标\"neutral\"，后者标\"positive\"，分歧在于涨价究竟是算力成本倒逼（负面）还是IPO前主动追求利润率（正面）。需以Bloomberg数据为准，警惕标题党误导。\n\n【新兴趋势】\n\"AI商业化纪律\"成为本轮多条报道的暗线：DeepSeek在IPO前以动态定价追求利润率、微软砍掉低使用率AI功能并合并Copilot产品线、OpenAI任命CRO强化企业销售——三者共同反映行业从\"烧钱抢市场\"转向\"ROI导向\"。同时，AI算力侧的资本开支军备竞赛升级（AMD $5B发债），与变现端收紧形成\"上游扩产、下游算账\"的剪刀差。动态定价（peak/off-peak）在云端API中首次规模化出现，可能成为行业新范式。\n\n【信息盲点】\n1) AMD发债拉动先进封装/HBM链——台积电、美光、SK海力士、ASML等本轮全部缺席，但作为最直接受益方应被覆盖；2) 国产大模型跟涨/跟降策略——阿里通义、字节豆包、智谱、月之暗面等竞争反应未被提及；3) DeepSeek涨价对AI应用层（如金山办公、猎豹移动等推理密集型应用）的成本挤压未涉及；4) 英伟达作为AMD最大对手在AMD发债背景下的相对竞争位势未被讨论；5) AI数据中心电力/冷却基础设施供应商缺失。\n\n【跨标的联动】\nDeepSeek涨价 → 下游AI应用利润承压 + 国产大模型定价策略联动（阿里、字节面临\"跟涨丢份额、不跟丢利润\"两难）；AMD $5B发债 → 先进制程产能（台积电）与HBM（美光/海力士）需求传导；OpenAI设立CRO + 微软Copilot整合 → Anthropic在企业市场的夹击位次变化，同时对微软Azure算力采购节奏产生回压；Deep",
+  "cross_analysis": "【核心矛盾】\n模型定价策略出现明显分化：Google Gemini 3.7 Flash以$0.75/$3.75低价切入（Techmeme源），而DeepSeek V4-Pro却将缓存命中价格提至6倍（the-decoder源），同时Ramp企业支付数据显示GPT-5因定价过高份额仅6%。三方信号存在矛盾——基础模型侧价格战白热化，而头部厂商试图通过提价转嫁算力成本。此外，Gemini 3.7 Flash\"实质性提升\"（Ars Technica）与DeepMind官方源信息缺失形成信源质量落差，迭代速度与实际能力是否匹配存疑。\n\n【新兴趋势】\n三条线索反复出现：1）模型迭代周期急剧压缩（Gemini三周一代），节奏前所有未有；2）\"开源+商业化\"组合拳成为新范式（DeepSeek开源Harness但提价）；3）企业级AI变现提速信号明确（OpenAI换CRO、Ramp数据印证Anthropic企业份额升至43.5%）。NPO作为CPO过渡方案获分析师背书，量产生命周期延至本十年末，亦是隐性但反复出现的算力基础设施主题。\n\n【信息盲点】\n本轮未覆盖微软/Azure作为OpenAI主要算力供应商在份额下滑背景下的连带影响；英伟达、AMD实际订单/库存数据缺失；AWS作为Anthropic算力后方的获益逻辑未提及；国产算力链（昇腾、寒武纪等）承接DeepSeek推理增量的具体路径仅有so what提示而无独立报道；CPO龙头Marvell未单独出现。\n\n【跨标的联动】\nOpenAI份额承压（Anthropic↑/GPT-5↓）与Gemini 3.7 Flash低价发布形成对OpenAI的双向夹击；DeepSeek提价+开源Agent或利好国产推理算力链；NPO路线确认延后利好传统可插拔光模块供应链、利空纯CPO概念；OpenAI招CRO是企业端反扑的明确信号，后续ARR数据将是验证关键。",
   "trend_spotting": "DeepSeek在潜在IPO前夕将V4-Flash输出token价从$0.28/百万拉至峰值$1.32（约4.7倍），并引入峰谷动态定价，标志国产大模型正式告别\"以价换量\"阶段，转向追求收入与利润率。同期AMD拟发50亿美元投资级债为AI capex融资，反映AI基础设施支出已从股权/现金流驱动进入企业债驱动阶段，资本密集度进一步抬升。\n\n值得关注的早期信号：推理算力在高峰期出现实质性稀缺（峰值/非峰值价差约2倍），这与\"算力过剩\"的主流叙事相悖，可能向HBM、先进封装链传导需求压力。被市场低估的是微软合并Copilot并砍掉群聊、播客等功能，暗示消费级AI助手用户黏性低于预期，资源正加速向企业级与Agent集中，叠加OpenAI新设CRO，系统化B端商业化竞赛已开启。拐点层面，国产模型价格体系重塑若传导至阿里、字节，将首次使国内AI推理成本曲线与海外收敛，影响下游应用毛利结构。"
 }
