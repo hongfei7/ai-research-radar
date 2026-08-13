@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-13T00:01:41Z",
-  "text": "当前共有 14 个活跃事件。要点包括: 8点1氪丨星巴克中国否认为降成本取消14薪；DeepSeek V4 Pro正式版上线；“阿里最年轻P10”林俊旸创业，新公司估值20亿美元; Sources detail moves behind Google's AI reshuffle; Sergey Brin urged key staff to go all in on Gemini, and some teams shifted from DeepMind to corporate Google (Kenrick Cai/Reuters); Cisco reports Q4 revenue up 18% YoY to $17.25B, vs. $16.82B est., AI infrastructure orders from hyperscalers worth $4B, forecasts FY 2027 revenue above est. (Juby Babu/Reuters); 实测 DeepSeek V4 Pro 正式版：能力直逼 Fable 5，还藏了一个大招; Self-Supervised Layout Generation To Fix Advanced-Node DRVs (Nvidia, Duke)。",
-  "since": "2026-08-13T00:01:41Z",
-  "active_event_count": 14,
+  "generated_at": "2026-08-13T02:38:46Z",
+  "text": "截至 2026-08-13 10:38 HKT，新增要点：Anthropic据报洽谈以约60亿美元收购实时生成式视频初创Decart，补强世界模型与多模态能力；CoreWeave在IPO文件中新增对英伟达GPU单一依赖风险提示，凸显算力服务商转芯片成本高企；中国大厂AI商业化加速分层——阿里、字节旗下AI聊天机器人开始对生成式交易抽取佣金，腾讯WorkBuddy以月访问量2097万次领跑国内办公智能体，AI办公战场向信创终端延伸；摩尔线程半年度营收同比翻倍、亏损显著收窄，国产替代获财务面验证；OpenAI联合学者发布基于1500+企业ChatGPT Enterprise样本的采用情况工作论文。",
+  "since": "2026-08-13T02:38:46Z",
+  "active_event_count": 22,
   "key_themes": [
     "compute_demand",
     "ai_monetization",
@@ -13,6 +13,6 @@
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n中信建投研报判断高位算力硬件（英伟达、AMD、台积电等）进入分化与拥挤度风险阶段，但\"硅和平\"供应链计划则利好同一批标的——前者从资金面/估值面提示风险，后者从政策面/物流面提供支撑，两条逻辑短期方向相反，长期需观察台积电、ASML等是否被纳入盟友网络决定对冲效果。此外，DeepSeek V4 Pro以3元/百万Token的极低定价持续放量，与腾讯Q2 AI产品拖累105亿利润形成对照，暗示AI能力快速商品化对应用方是红利、对算力投入方是压力。\n\n【新兴趋势】\n版权数据采购成为AI助手标配，Apple拟以九位数美元购买出版商内容，呼应此前OpenAI/Google与媒体的交易，\"高质量数据\"正从成本项升级为护城河；AI内容水印（Anthropic）同步出现，数据确权与合规进入产品化阶段。同时，中国AI人才独立创业（林俊旸语用科技20亿美元估值、腾讯参投）密集出现，国产大模型从\"公司间竞争\"向\"创业生态扩散\"演化。\n\n【信息盲点】\n本轮对SK海力士/三星HBM供给、CoWoS先进封装产能、Oracle/Arista数据中心网络、电力/液冷（Vertiv、维谛）几乎未覆盖，而数据中心电力主题（datacenter_power）已被列入却无具体标的验证；具身AI/机器人链（特斯拉Optimus、Figure链）也无新增信息，荣耀机器人手机或为线索但未深入。\n\n【跨标的联动】\n苹果",
-  "trend_spotting": "DeepSeek V4 Pro实测接近前沿模型且Agent能力突破，72小时内国产大模型能力差距进一步收窄至同代际区间，推理侧Token消耗放量预期升温，国产算力链边际催化值得跟踪。\n\nNVIDIA联合杜克发布SCALE论文，将自监督布局生成引入亚2nm DRV修复，这是其继CuLitho之后向物理设计EDA延伸的关键信号。EDA AI化与全栈设计工具竞争正在加速，Cadence/Synopsys面临跨维度挑战，但当前市场关注度严重不足。\n\n美股8月12日呈现明显分化：英伟达、英特尔涨超3%，Meta跌超3%、微软跌超2%，中概普跌。算力链（NVDA/Intel）相对强势与应用层（Meta/Microsoft）及中概互联网承压并存，反映市场对AI capex景气延续与AI变现节奏的定价出现割裂。Meta、微软回调需关注其capex指引是否出现边际变化，这将是AI需求链的二阶验证点。\n\n值得警惕的拐点：亚2nm设计收敛难度上升+AI-EDA工具渗透，将重塑先进制程代工与设备链的成本结构，台积电与ASML的中性评级可能面临上修。"
+  "cross_analysis": "【核心矛盾】\nAnthropic收购Decart存在明显分歧：techmeme/彭博口径为约$60亿、聚焦实时生成式视频与GPU优化；hackernews口径为约$600亿、技术方向是世界模型/模拟仿真，估值差达10倍且业务描述不同，需以官方官宣为准。DeepSeek V4 Pro多家来源（钛媒体、爱范儿）将其标的对标\"Fable 5\"，均疑似为GPT-5或某前沿模型的表述/翻译错误，并非真实竞品名，技术对标口径混乱。\n\n【新兴趋势】\nAI商业化从订阅/广告加速向\"按交易抽佣\"演进（阿里通义接入第三方代理、字节豆包酒店佣金），叠加国产GPU商业化出现首个可验证样本（摩尔线程营收翻倍、亏损大幅收窄），共同强化国产模型×国产算力的内循环叙事。同时AI办公正从云端下沉至信创终端（腾讯WorkBuddy登陆联想开天AI PC），以及Agent范式获头部机构背书（Pragmatik 20亿美元估值），多线索共同指向\"推理侧算力+边缘AI\"需求结构重塑。\n\n【信息盲点】\n海外侧谷歌Gemini、Meta Llama、苹果Apple Intelligence的迭代进展本轮未覆盖；国内CSP（字节、百度）capex与推理算力采购数据缺失，无法量化国产模型能力跃升对算力链的真实拉动强度；光模块/PCB/连接器、SSD/企业级存储等中游硬件链标的几乎缺位，与CoreWeave、英伟达推理侧需求信号不匹配。\n\n【跨标的联动】\nDeepSeek V4 Pro能力跃升→国内云厂（阿里、腾讯）推理采购→国产算力链（寒武纪、海光、浪潮、中科曙光）形成正向传导；Anthropic若整合Decart GPU优化技术，将挑战英伟达议价权，叠加CoreWeave揭示的单一供应商高转换成本，使AMD/博通替代叙事面临\"客户验证难\"的中长期阻力；Pragmatik的Agent+物理智能体方向则二阶利好边缘AI芯片及推理capex链。",
+  "trend_spotting": "DeepSeek V4 Pro 0813版本在OpenRouter低调上线，三档推理深度（低/中/高）的差异化设计是当前国产大模型中少见的结构创新，配合API独占供给而非开源权重，标志其商业化路径从\"开源引流\"向\"API变现\"倾斜；该模式若被验证，将直接重塑国产模型变现范式，并对算力采购形成持续拉动。\n\nAnthropic拟以60亿美元收购Decart（含实时生成视频+GPU优化）是被低估的信号。GPU优化技术若整合进Anthropic推理栈，单token成本下降将削弱英伟达定价权；同时这是头部实验室首次明确向\"底层效率\"伸手，预示AI Infra层可能从硬件主导转向软硬协同，对AMD/博通等替代算力供应商既是机会也是压力。CoreWeave招股书新增\"切换非英伟达芯片将面临困难\"的风险提示，从客户侧验证了英伟达生态锁定的高转换成本，AMD/Intel替代叙事短期承压。\n\nPragmatik Labs以20亿美元估值、93年创始人林俊旸（前Qwen核心）切入Agentic+物理智能体，是国内大模型人才流动加速和范式分叉的拐点信号：阿里千问迭代节奏或受核心团队流失影响，但Agent workload对推理算力的需求弹性更大，对英伟达/AMD/博通/台积电构成二阶利好。国内AI聊天机器人按交易抽佣（阿里通义、字节豆包）模式若规模化跑通，将打开中国大模型商业化天花板。\n\n重点跟踪拐点：DeepSeek V4 Pro是否开源权重、Anthropic-Decart交易落定、Pragmatik首批产品Demo、信创AI PC终端DAU数据。"
 }
