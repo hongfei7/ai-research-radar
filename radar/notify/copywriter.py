@@ -97,6 +97,9 @@ async def write_digest(
                          expect_alert=expect_alert)
         if expect_alert:
             _enforce_alert_budget(payload)
+            # 时间是系统事实, 不该问 LLM 要。prompt 模板里的 title 是
+            # "首席快报"(不含时间), 渲染层从 title 里 split 时间就永远是空的。
+            payload.title = f"首席快报 | {current_time_hkt}".rstrip(" |")
         payload.generated_at = material.get("generated_at", "")
         logger.info(
             f"Copywriter [{kind}] ok: {len(payload.calls)} calls, "
@@ -127,7 +130,9 @@ def _enforce_alert_budget(payload: DigestPayload) -> None:
     for field_name, budget in _ALERT_FIELD_BUDGET.items():
         text = getattr(alert, field_name, "")
         if len(text) > budget:
-            setattr(alert, field_name, clip_sentence(text, budget))
+            # hard=False: 只丢弃末尾整句, 绝不切出半句。线上出现过
+            # "…谁有自研芯片谁就能留住…" 这种被砍断的判断, 比略长更糟。
+            setattr(alert, field_name, clip_sentence(text, budget, hard=False))
     total = len(alert.summary) + len(alert.why) + len(alert.watch)
     if total > _ALERT_TOTAL_WARN:
         logger.warning(f"Alert over budget: {total} chars (target 100-150)")

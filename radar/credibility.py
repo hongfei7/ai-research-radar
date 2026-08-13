@@ -22,6 +22,8 @@ CREDIBILITY_RULES = {
     # —— 主流科技媒体（英文） ——
     "rss:theverge-ai":     "medium",
     "rss:arstechnica":     "medium",
+    "rss:arstechnica-ai":  "medium",
+    "rss:the-decoder":     "medium",
     "rss:techcrunch-ai":   "medium",
     "rss:venturebeat-ai":  "medium",
     "rss:wired":           "medium",

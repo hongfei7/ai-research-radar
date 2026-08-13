@@ -93,6 +93,11 @@ sources:
     # ---- 全球科技媒体(AI 专线) ----
     - { id: "rss:theverge-ai", type: "rss", params: { url: "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml" } }
     - { id: "rss:arstechnica", type: "rss", params: { url: "https://feeds.arstechnica.com/arstechnica/index" } }
+    - { id: "rss:arstechnica-ai", type: "rss", params: { url: "https://arstechnica.com/ai/feed/" } }
+    # 模型发布专线: Grok 4.6 / DeepSeek V4 Pro 这类前沿模型发布, 通用科技媒体
+    # 往往只报"功能"不报"版本", 漏报过一次(全库只有 The Verge 的功能报道与
+    # 一条 Reddit 传闻)。The Decoder 专门盯模型发布。
+    - { id: "rss:the-decoder", type: "rss", params: { url: "https://the-decoder.com/feed/" } }
     - { id: "rss:techcrunch-ai", type: "rss", params: { url: "https://techcrunch.com/category/artificial-intelligence/feed/" } }
     - { id: "rss:wired",       type: "rss", params: { url: "https://www.wired.com/feed/rss" } }
     - { id: "rss:mit-tr",      type: "rss", params: { url: "https://www.technologyreview.com/feed/" } }
