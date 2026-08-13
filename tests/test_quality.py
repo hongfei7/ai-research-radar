@@ -1164,3 +1164,67 @@ def test_quantified_cycle_no_warning(caplog):
     with caplog.at_level("WARNING"):
         _warn_unquantified_macro(_full_payload())
     assert "quantitative anchor" not in caplog.text
+
+
+# ================================================================
+# SEO 关键词尾巴 / 栏目路径
+# ================================================================
+
+@pytest.mark.parametrize("raw, expected", [
+    ("微软据悉拟提高下一代AI芯片产量，正与台积电洽谈2027年交付|谷歌|英伟达|纳德拉|知名企业",
+     "微软据悉拟提高下一代AI芯片产量，正与台积电洽谈2027年交付"),
+    ("超微AI晶片進擊 台積助攻 | 科技產業 | 產經 | 聯合新聞網",
+     "超微AI晶片進擊 台積助攻"),
+    ("小米新机入网：10款AI大模型成最大亮点|Xiaomi MIX Fold|端侧AI|redmi|红米",
+     "小米新机入网：10款AI大模型成最大亮点"),
+])
+def test_seo_keyword_tail_stripped(raw, expected):
+    assert clean_title(raw) == expected
+
+
+@pytest.mark.parametrize("raw", [
+    # 单段竖线交给站点后缀逻辑, 不在关键词尾巴这一步误伤
+    "SpaceXAI Grok 4.6 matches OpenAI best model | benchmark results",
+    "英伟达发布B300｜性能较上代提升2倍",
+    "高盛：上调寒武纪评级 | 下调浪潮信息评级",
+])
+def test_two_part_titles_survive(raw):
+    assert clean_title(raw) == raw
+
+
+# ================================================================
+# 附录瘦身
+# ================================================================
+
+def _material_with_events(n, title_len=20):
+    m = _fake_material()
+    m["events"] = [{
+        "ref": f"E{i}", "title": "长" * title_len + str(i), "summary": "s",
+        "tickers": ["英伟达"], "significance": 9, "source_count": 1,
+        "first_published_at": "2026-08-13T00:00:00Z", "counterpoint": "",
+        "sources": [{"title": "t", "url": f"https://x/{i}", "source": "rss:36kr",
+                     "published_at": "2026-08-13T00:00:00Z",
+                     "credibility": "medium", "is_primary_source": True}],
+    } for i in range(n)]
+    return m
+
+
+def test_appendix_caps_rows_and_says_so():
+    """附录曾占全文一半(2461/4685 字), 是可查底稿不是倾倒场"""
+    body = render_issue_body(_full_payload(), material=_material_with_events(17))
+    appendix = body[body.index("## 附录"):]
+    assert appendix.count("| [原文]") == 12
+    assert "另有 5 个重要性较低的事件未列入" in appendix
+
+
+def test_appendix_truncates_overlong_titles():
+    """未翻译的英文长标题实测有 180 字, 会把表格撑破"""
+    body = render_issue_body(_full_payload(), material=_material_with_events(1, title_len=180))
+    row = next(l for l in body.splitlines() if l.startswith("| 长长"))
+    assert "…" in row
+    assert len(row.split("|")[1].strip()) <= 36
+
+
+def test_appendix_no_note_when_all_listed():
+    body = render_issue_body(_full_payload(), material=_material_with_events(5))
+    assert "未列入" not in body

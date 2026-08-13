@@ -51,6 +51,12 @@ _TERM_CASE = {
 # 话题标签尾巴: 标签内可含空格("#AI 算力"), 但必须整体位于末尾且前有空白
 # (前置 \s+ 要求可避免误伤 "C# 教程" 这类标题)
 _HASHTAG_TAIL_RE = re.compile(r"\s+(?:#[^#]{1,20})+$")
+
+# SEO 关键词尾巴 / 栏目路径: 末尾连着 ≥2 段竖线分隔的短词
+#   "…交付逾30万枚|谷歌|英伟达|纳德拉|知名企业"
+#   "…台積助攻 | 科技產業 | 產經 | 聯合新聞網"
+# 要求 ≥2 段, 单段 "标题 | 站点名" 交给站点后缀逻辑处理, 不在这里误伤
+_KEYWORD_TAIL_RE = re.compile(r"(?:\s*[|｜]\s*[^|｜]{1,16}){2,}\s*$")
 _SELF_REPEAT_RE = re.compile(r"^(.{8,}?)[\s　]*\1$", re.DOTALL)
 _WS_RE = re.compile(r"[\s　]+")
 _ASCII_RUN_RE = re.compile(r"[A-Za-z][A-Za-z0-9']*")
@@ -119,6 +125,11 @@ def clean_title(title: str) -> str:
 
     # 2. 话题标签尾巴
     cleaned = _HASHTAG_TAIL_RE.sub("", cleaned).strip()
+
+    # 2.5 SEO 关键词串 / 栏目路径尾巴
+    stripped = _KEYWORD_TAIL_RE.sub("", cleaned).strip()
+    if len(stripped) >= _MIN_KEEP_LEN:
+        cleaned = stripped
 
     # 3. 站点后缀
     cleaned = _strip_site_suffix(cleaned)

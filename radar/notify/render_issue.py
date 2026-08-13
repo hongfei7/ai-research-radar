@@ -20,7 +20,10 @@ from radar.textnorm import clean_title, strip_markdown
 
 logger = logging.getLogger(__name__)
 
-_MAX_APPENDIX_ROWS = 20
+# 附录是可查的数据底稿, 不是所有素材事件的倾倒场。实测它曾占到全文一半
+# (2461 字 / 4685 字), 里面还有 180 字未翻译的英文长标题直接撑破表格。
+_MAX_APPENDIX_ROWS = 12
+_MAX_APPENDIX_TITLE = 36
 _MAX_EVIDENCE_PER_CALL = 4
 
 
@@ -280,10 +283,18 @@ def _appendix(payload: DigestPayload, material: dict) -> list[str]:
         first_seen = short_date(ev.get("first_published_at") or ev.get("first_seen_at", ""))
         srcs = ev.get("sources") or []
         link = f"[原文]({srcs[0]['url']})" if srcs and srcs[0].get("url") else "—"
+        # 未翻译的英文长标题(实测最长 180 字)会把表格撑破
+        title = _md_escape_cell(clean_title(ev.get("title", "")))
+        if len(title) > _MAX_APPENDIX_TITLE:
+            title = title[:_MAX_APPENDIX_TITLE - 1] + "…"
         lines.append(
-            f"| {_md_escape_cell(clean_title(ev.get('title', '')))} | {tickers or '—'} | "
+            f"| {title} | {tickers or '—'} | "
             f"{ev.get('source_count', 0)} | {first_seen or '—'} | {link} |"
         )
+    dropped = len(events) - _MAX_APPENDIX_ROWS
+    if dropped > 0:
+        lines.append("")
+        lines.append(f"*另有 {dropped} 个重要性较低的事件未列入。*")
     lines.append("")
     return lines
 
