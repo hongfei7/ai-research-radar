@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-13T12:30:55Z",
-  "text": "截至 2026-08-13 20:30 HKT，本轮新增动态聚焦模型能力突破与产业链落地。DeepSeek V4 Pro正式版上线后不到24小时即被官方撤回，发布流程出现异常，下游应用接入节奏存不确定性。AI科研突破频出：Anthropic Claude一举求解2000阶以下哈达玛矩阵，GPT-5.6辅助神经外科医生攻克Crouzeix猜想，前沿模型在数学证明领域能力跃升。DeepSeek Harness内测项目曝光，17个入选项目70%为零热度小团队，专注Agent基建。谷歌因算力受限及内部分歧推迟Gemini新版本约两个月，布林亲自督战。产业链端，高通完成Modular收购，剑指异构计算软件栈；甲骨文扩大与AWS合作；中科曙光上半年净利同比增34%，印证国产算力景气；金山办公灵犀专业版首批接入DeepSeek V4 Pro正式版。",
-  "since": "2026-08-13T12:30:55Z",
-  "active_event_count": 30,
+  "generated_at": "2026-08-13T14:05:05Z",
+  "text": "当前共有 29 个活跃事件。要点包括: DeepSeek V4 Pro正式版上线，Agent能力大幅跃升; 腾讯Q2资本开支暴增176%，AI算力扩张驱动存储链需求; 刚刚！Ilya首个模型曝光了; DeepSeek launches V4-Pro, its most advanced model that rivals Kimi K3 on some benchmarks at much lower prices, costing $0.44/1M input and $0.87/1M output tokens (Juro Osawa/The Information); Elon Musk says xAI will increase data center capacity 7x by 2027 — targeting 10 gigawatts of compute, up to $500 billion in revenue by the end of next year。",
+  "since": "2026-08-13T14:05:05Z",
+  "active_event_count": 29,
   "key_themes": [
+    "model_capability",
     "compute_demand",
     "ai_monetization",
-    "model_capability",
     "chip_supply",
-    "datacenter_power"
+    "domestic_substitution"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nDeepSeek短期内信号分裂：一边V4-Pro突遭撤回（负面），一边公布API峰谷分时降价（中性偏正），暗示产品迭代与商业化节奏脱节。另一张力来自\"能力通胀vs变现停滞\"——Anthropic Fable 5企业付费意愿触及天花板，但AI自动化研究里程碑却加速突破，模型价值与定价能力背离。国内大厂路径同样分化：字节去蒸馏走封闭自研，阿里Qwen3.8+FlagOS走开源跨芯生态，叙事并行。\n\n【新兴趋势】\nToken计费商品化趋势明显：中国移动统一Token套餐、DeepSeek峰谷定价、Anthropic按token销售——AI服务正向\"基础设施化、套餐化\"演进。国产算力链多源共振：中芯国际成熟制程、海光DCU、Qwen3.",
-  "trend_spotting": "AI行业72小时内出现三条值得高度关注的趋势线。\n\n【新兴趋势】前沿模型能力差距正在加速分化：Claude批量攻克2000阶以下哈达玛矩阵，标志大模型在抽象数学证明领域实现质变；而谷歌Gemini因算力受限，新版旗舰推迟至8月，内测显示代码能力仍落后竞品。同一时间窗口内，Anthropic与谷歌的相对位置出现明显此消彼长。算力供给正成为模型迭代的硬约束，而非单纯技术问题。\n\n【早期信号】DeepSeek Harness入选17个项目，70%为零热度小团队原生作品，刻意回避高星\"花瓶\"——这是国内大厂首次系统性地以\"生态策展人\"姿态建设Agent基建，方向集中在MCP/Coding Agent/编排框架，意味着Agent基础设施竞争从模型层下沉到运行时与工具链层。布林亲自督战并推动资源向递归自我改进（RSI）倾斜，是另一个被低估的信号：若RSI路线跑通，将改写训练范式与算力需求结构。\n\n【市场盲点】中科曙光上半年净利润+34.19%显著快于营收+27%，毛利率改善被忽视，反映国产AI服务器议价权提升；高通收购Modular后由Chris Lattner掌舵AI软件栈，Mojo+MAX若形成开发者共识，CUDA护城河将面临首个体系化挑战。\n\n【值得关注的拐点】8月Gem"
+  "cross_analysis": "【核心矛盾】\nCXMT上市17天市值飙至5240亿美元超越腾讯，来源Tom's Hardware（中等可信度），但与A股/港股对存储芯片的传统定价存在显著背离，且同行SK海力士同期龙仁项目总投入约7200亿美元（美元口径），两个数字层级相近引发估值合理性质疑，需交叉验证CXMT上市市场与市值口径。另xAI Grok 4.6\"反超Fable 5\"表述含混，量子位来源中等可信度，自媒体测评色彩浓，与第三方独立基准未必一致。\n\n【新兴趋势】\n两条线索反复出现：一是\"模型+工具\"绑定变现（xAI收购Cursor、DeepSeek推出Harness、DeepSeek调价），显示大模型厂商从纯API竞争向开发者生态延伸；二是AI应用端整合（微软Copilot合并超级应用）反映C+B端入口收敛，间接利好办公协同赛道。此外，国产存储与端侧AI芯片均出现资本端高热度事件，但海外/国内两端口径差异大。\n\n【信息盲点】\n中芯国际、长电科技、通富微电等CXMT产业链标的、华虹、长江存储无单独动态；寒武纪、海光、摩尔线程等国产AI算力芯片本轮缺位；阿里通义、字节豆包、腾讯混元、Meta Llama均无定价/版本更新；英伟达、苹果、AMD作为HBM与端侧AI最大需求方未在本轮出现。4.8亿美元端侧芯片融资主体不明，信息盲点最大。\n\n【跨标的联动】\nSK海力士龙仁2027年2月投产与英伟达AI算力周期形成供给-需求绑定，对美光、三星HBM定价构成中长期压力；CXMT市值跃升若带动国产替代主题溢价，将传导至中芯国际封测链与设备厂商；DeepSeek若大幅降价，将沿\"模型→云厂API→推理算力\"链条冲击阿里、腾讯、微软Azure毛利；微软Copilot整合则对金山办公等国产办公AI构成产品策略压力。",
+  "trend_spotting": "CXMT上市17天市值飙至5240亿美元、超越腾讯，与SK海力士7200亿美元龙仁集群2027年2月投产形成鲜明对照——前者是国产存储估值跃迁，后者是全球HBM供给端将进入下一轮放量周期，两端共同指向HBM供需格局在2026-2027年面临重定价，关键变量是CXMT的HBM/DDR5良率爬坡速度与龙仁产能爬坡的匹配度。\n\n【早期信号】xAI通过收购Cursor反向强化Grok 4.6的代码能力，以更低价格重返第一梯队，预示\"模型公司+开发者工具\"的垂直整合路径开始跑通；微软将消费端与商用端Copilot合并为统一超级应用，则验证了AI入口正从分散走向整合。\n\n【市场盲点】CXMT当前5240亿美元市值与实际HBM量产能力之间存在显著落差，资本预期已显著领先于产能落地；DeepSeek Harness定位\"不做下一个Codex\"暗示其瞄准Agent/插件生态，潜在挑战Cursor与GitHub Copilot在开发者工具的既有格局。\n\n【拐点提示】2027年2月龙仁投产将是HBM供需周期的关键时点，同期国产替代叙事若获HBM量产验证，全球DRAM三强定价权将面临实质性侵蚀。"
 }
