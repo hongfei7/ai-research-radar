@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-12T23:05:18Z",
+  "updated_at": "2026-08-13T00:01:41Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -17623,9 +17623,9 @@
       "first_seen_at": "2026-08-12T17:18:12Z",
       "first_published_at": "2026-08-12T17:18:12Z",
       "last_updated_at": "2026-08-12T17:18:12Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 9,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "",
       "ticker_counts": {
         "英伟达": 1,
@@ -18067,6 +18067,268 @@
         "景嘉微": 1,
         "浪潮信息": 1,
         "高通": 1
+      },
+      "max_item_score": 5
+    },
+    "evt_ed65a98c2a01": {
+      "event_id": "evt_ed65a98c2a01",
+      "title": "8点1氪丨星巴克中国否认为降成本取消14薪；DeepSeek V4 Pro正式版上线；“阿里最年轻P10”林俊旸创业，新公司估值20亿美元",
+      "summary": "DeepSeek V4 Pro正式版上线，支持1M上下文/384K最大输出，定价3元/百万Token输入、6元/百万Token输出，缓存命中输入0.025元；V4 Flash已登顶全球Token调用量。林俊旸（前阿里千问技术负责人，P10级）创办语用科技，天使轮估值20亿美元，高榕与红杉中国领投，腾讯参投。Anthropic将于8月2日及之后模型起在AI生成文本中嵌入隐形水印。xAI推出Grok 4.6。谷歌称Gemini月活破10亿。",
+      "tickers": [
+        "Anthropic",
+        "DeepSeek",
+        "xAI",
+        "腾讯"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand",
+        "model_capability"
+      ],
+      "direction": {
+        "阿里巴巴": "neutral",
+        "腾讯": "positive",
+        "DeepSeek": "positive",
+        "xAI": "neutral",
+        "Anthropic": "neutral",
+        "谷歌": "positive"
+      },
+      "item_ids": [
+        "a5d189928a6a59f1099f258c9658bcf8f0ad57e4"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-13T00:00:27Z",
+      "first_published_at": "2026-08-12T23:56:32Z",
+      "last_updated_at": "2026-08-13T00:00:27Z",
+      "is_active": true,
+      "significance": 8,
+      "status": "developing",
+      "deep_analysis": "**1. 看多逻辑**\n\n① DeepSeek V4 Pro以3元/百万Token输入、0.025元缓存命中价的极致定价，配合1M超长上下文，将进一步压缩全行业模型API价格中枢，V4 Flash登顶全球Token调用量已验证\"低价+开源\"飞轮的有效性，国内应用层调用量爆发将直接拉动算力需求，云厂商及国产芯片链受益最直接。\n\n② 腾讯参投语用科技（20亿美元天使轮）体现大厂在模型/应用层持续加码的决心，\"阿里最年轻P10\"林俊旸的稀缺性叠加高榕、红杉中国背书，标志着一级市场对AGI创业的估值锚定仍在上移，腾讯AI生态叙事得到强化。\n\n③ 谷歌Gemini月活破10亿与xAI Grok 4.6迭代同步推进，海外巨头军备竞赛未停，行业整体TAM仍在扩张，AI货币化路径（中长上下文+Agent）逐步清晰。\n\n**2. 看空风险**\n\n① 行业级价格战风险：DeepSeek定价已逼近成本线，若阿里、字节、腾讯被迫跟进，模型层毛利率将快速坍塌，纯模型公司估值锚存在系统性下修风险。\n\n② 估值泡沫信号：语用科技在产品尚未落地阶段即获20亿美元天使估值，与2024-2025年AI一级市场过热期特征类似，若后续产品力不及预期，估值倒挂将传导至二级市场AI概念。\n\n③ Anthropic隐形水印若成为B端合规标配，将抬高国产模型出海门槛，部分场景下企业可能回流自建或海外模型。\n\n**3. 关键驱动因素**\n\n① DeepSeek V4 Pro上线后4-8周API调用量及企业客户签约进展，这是验证\"极致性价比能否转化为实际货币化\"的核心指标。\n\n② 语用科技首批产品形态（Agent框架/垂直应用）及与腾讯生态（微信、混元）的协同节奏，决定腾讯AI投资逻辑兑现速度。\n\n**4. 市场影响评估**\n\n短期（1-2周）：利好算力基建链（云、国产GPU、服务器ODM），腾讯AI叙事获得催化，DeepSeek关联概念股",
+      "ticker_counts": {
+        "阿里巴巴": 1,
+        "Anthropic": 1,
+        "谷歌": 1,
+        "腾讯": 1,
+        "DeepSeek": 1,
+        "xAI": 1
+      },
+      "max_item_score": 8
+    },
+    "evt_c765ec90f307": {
+      "event_id": "evt_c765ec90f307",
+      "title": "苹果拟以九位数预算签出版商，补齐Siri AI实时信息短板",
+      "summary": "据WSJ援引消息人士，苹果正与多家出版商洽谈多年期新闻内容授权协议，潜在预算达九位数美元，用于为Siri AI提供实时新闻与信息支持。此举旨在加速生成式AI能力整合，应对微软Copilot、谷歌Gemini等竞品在信息时效性上的差距。",
+      "tickers": [
+        "苹果"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand",
+        "edge_ai",
+        "model_capability"
+      ],
+      "direction": {
+        "苹果": "positive"
+      },
+      "item_ids": [
+        "7a546c44ba55a066da83843d9ba6f445a446f38f",
+        "3ac1ce09e08d9f9bb43c536fc7a3a177dc69fa18"
+      ],
+      "source_count": 2,
+      "first_seen_at": "2026-08-13T00:00:27Z",
+      "first_published_at": "2026-08-12T23:10:01Z",
+      "last_updated_at": "2026-08-13T00:00:27Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "**看多逻辑**：①补齐实时信息短板，Siri AI有望从\"指令执行\"向\"信息助手\"升级，缩小与Copilot、Gemini的体验差距，强化Apple Intelligence生态闭环；②数亿美元级内容采购虽增加成本，但相比苹果年服务收入超900亿美元体量，毛利率冲击有限，且优质版权内容可差异化AI回答质量，提升用户付费与换机意愿；③端侧推理负载提升间接利好台积电、高通、联发科AI芯片需求，验证edge_ai赛道增量。\n\n**看空风险**：①苹果在AI内容授权上明显落后于OpenAI、谷歌（后者已与多家出版商深度合作），时间窗口收窄，先发优势难以撼动；②按量计费模式存在不确定性，若用户使用频次不及预期，ROI存疑；③新闻机构对AI摘要态度谨慎，版权摩擦与\"内容农场化\"舆论风险可能拖累品牌，且监管层对生成式AI版权使用审查趋严。\n\n**关键驱动因素**：①签约出版商名单、单家金额及按量计费条款——直接决定服务业务毛利率承压幅度；②Siri AI功能上线时点与差异化能力——若2026Q4前发布并展现可感知体验，将催化换机周期；③Apple Intelligence端侧推理负载实测数据——影响芯片链业绩兑现节奏。\n\n**市场影响评估**：短期（1-3月）情绪偏中性，成本端担忧略压制估值；中期（6-12月）若产品落地达标，将成为iPhone 17/18周期AI叙事核心催化，并外溢至台积电及AI手机芯片链。\n\n**时间线推断**：2026Q3预计首批授权协议落地；2026Q4—2027H1搭载升级Siri的iOS新版本推送，叠加年度新机发布，AI功能成核心卖点；2027全年观察用户使用频次与ARPU提升幅度，验证商业化可持续性。",
+      "ticker_counts": {
+        "苹果": 2
+      },
+      "max_item_score": 7
+    },
+    "evt_0dd48df0c83f": {
+      "event_id": "evt_0dd48df0c83f",
+      "title": "美国推出新计划，加快盟友间AI关键物资流通",
+      "summary": "特朗普政府推出新计划以加速美国与盟友间AI关键物资流通。国务院将在巴拿马建立试点贸易平台，作为'硅和平'倡议的一部分，并提供最高5000万美元对外援助资金用于平台开发与部署，借助AI技术优化物流。该平台聚焦AI关键产品的供应链流通，旨在强化盟友体系内的物资调配能力，反映美国通过地缘供应链安排巩固AI领导地位的意图。",
+      "tickers": [
+        "AMD",
+        "ARM",
+        "ASML",
+        "Intel"
+      ],
+      "themes": [
+        "chip_supply",
+        "domestic_substitution",
+        "policy_export"
+      ],
+      "direction": {
+        "英伟达": "positive",
+        "AMD": "positive",
+        "博通": "positive",
+        "台积电": "positive",
+        "ASML": "positive",
+        "美光": "positive",
+        "Intel": "positive",
+        "Marvell": "neutral",
+        "高通": "neutral",
+        "ARM": "neutral"
+      },
+      "item_ids": [
+        "ff543ae2b80dd34e8fb52198abfd1edf14a40264"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-13T00:00:27Z",
+      "first_published_at": "2026-08-12T23:25:47Z",
+      "last_updated_at": "2026-08-13T00:00:27Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "1. **看多逻辑**：其一，\"硅和平\"框架为美方AI芯片在盟友体系内流转提供制度化通道，理论上可降低地缘摩擦引发的物流中断风险，AMD、Intel作为美国本土AI芯片主力将直接受益，ASML则因盟友间产能协同加速而间接受益。其二，巴拿马",
+      "ticker_counts": {
+        "Intel": 1,
+        "台积电": 1,
+        "英伟达": 1,
+        "AMD": 1,
+        "美光": 1,
+        "ARM": 1,
+        "高通": 1,
+        "ASML": 1,
+        "博通": 1,
+        "Marvell": 1
+      },
+      "max_item_score": 7
+    },
+    "evt_d157f6620215": {
+      "event_id": "evt_d157f6620215",
+      "title": "中信建投：AI仍是中期景气主线，但高位算力硬件进入分化阶段，资金逐步向AI应用端扩散",
+      "summary": "中信建投研报指出，AI仍是中期景气主线，但高位算力硬件进入分化阶段，资金逐步从算力硬件向AIGC、文化传媒、数据要素等AI应用端扩散。本周通信、电子等前期强势板块明显调整，传媒、消费、地产等低位板块表现较强。后续需更加关注业绩兑现和拥挤度风险。",
+      "tickers": [
+        "AMD",
+        "ARM",
+        "ASML",
+        "Intel"
+      ],
+      "themes": [
+        "advanced_packaging",
+        "ai_monetization",
+        "chip_supply",
+        "compute_demand",
+        "datacenter_power",
+        "domestic_substitution",
+        "edge_ai",
+        "model_capability"
+      ],
+      "direction": {
+        "英伟达": "negative",
+        "AMD": "negative",
+        "博通": "negative",
+        "台积电": "negative",
+        "ASML": "negative",
+        "美光": "negative",
+        "Intel": "negative",
+        "Marvell": "negative",
+        "高通": "negative",
+        "ARM": "negative",
+        "超微电脑": "negative",
+        "戴尔": "negative",
+        "中芯国际": "neutral",
+        "寒武纪": "negative",
+        "海光信息": "neutral",
+        "工业富联": "negative",
+        "中科曙光": "negative",
+        "浪潮信息": "negative",
+        "景嘉微": "neutral",
+        "长电科技": "neutral",
+        "微软": "neutral",
+        "谷歌": "neutral",
+        "亚马逊": "neutral",
+        "Meta": "neutral",
+        "苹果": "neutral",
+        "阿里巴巴": "positive",
+        "腾讯": "positive",
+        "百度": "positive",
+        "小米": "neutral",
+        "金山办公": "positive",
+        "商汤": "positive",
+        "科大讯飞": "positive"
+      },
+      "item_ids": [
+        "c40172f13ed7137d0cfbec0675a6a32f0ba12999"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-13T00:00:27Z",
+      "first_published_at": "2026-08-12T23:48:00Z",
+      "last_updated_at": "2026-08-13T00:00:27Z",
+      "is_active": true,
+      "significance": 5,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "工业富联": 1,
+        "戴尔": 1,
+        "小米": 1,
+        "AMD": 1,
+        "海光信息": 1,
+        "谷歌": 1,
+        "中芯国际": 1,
+        "阿里巴巴": 1,
+        "Intel": 1,
+        "英伟达": 1,
+        "商汤": 1,
+        "美光": 1,
+        "亚马逊": 1,
+        "腾讯": 1,
+        "博通": 1,
+        "景嘉微": 1,
+        "长电科技": 1,
+        "ARM": 1,
+        "百度": 1,
+        "超微电脑": 1,
+        "Meta": 1,
+        "ASML": 1,
+        "科大讯飞": 1,
+        "微软": 1,
+        "Marvell": 1,
+        "苹果": 1,
+        "中科曙光": 1,
+        "金山办公": 1,
+        "台积电": 1,
+        "高通": 1,
+        "寒武纪": 1,
+        "浪潮信息": 1
+      },
+      "max_item_score": 5
+    },
+    "evt_03cca2a90c32": {
+      "event_id": "evt_03cca2a90c32",
+      "title": "【钛晨报】央行最新定调：综合运用并适时调整货币政策工具，保持流动性充裕；二季度新AI产品影响105亿利润，腾讯总裁回应；荣耀发布首款机器人手机",
+      "summary": "央行定调综合运用并适时调整货币政策工具，保持流动性充裕，并将于8月14日及17-19日开展隔夜逆回购操作。腾讯二季度受新AI产品影响利润达105亿元，总裁回应相关情况。荣耀发布首款机器人手机，7月中国新能源汽车新车销量占比首超60%。其他动态：年内最贵新股频准激光网上弃购1.08万股；段永平加仓泡泡玛特；李宁否认签约姆巴佩；天孚通信推228.87万股股权激励。",
+      "tickers": [
+        "腾讯"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand",
+        "edge_ai",
+        "policy_export"
+      ],
+      "direction": {
+        "腾讯": "neutral"
+      },
+      "item_ids": [
+        "9394203c78f3e24dd5c3794c71770dcf520db9dd"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-13T00:00:27Z",
+      "first_published_at": "2026-08-12T23:20:00Z",
+      "last_updated_at": "2026-08-13T00:00:27Z",
+      "is_active": true,
+      "significance": 5,
+      "status": "developing",
+      "deep_analysis": "**看多逻辑：**\n腾讯Q2因AI产品对利润形成约10.5亿元量级拖累，性质属战略投入而非业务恶化，混元大模型与元宝等C端矩阵正逐步搭建\"云+广告+游戏\"全链路AI变现闭环，长期ROI可对标海外超大规模厂商。荣耀机器人手机代表端侧AI硬件创新方向，多模态交互+AI Agent推动SoC、内存、散热单机价值量提升，为国产芯片链打开新增量。央行重申流动性充裕并启动隔夜逆回购操作，对AI算力链融资环境与高估值资产构成正向支撑。\n\n**看空风险：**\n10.5亿利润拖累若持续2-3个季度且AI收入端未匹配兑现，腾讯估值修复将受压制，市场对\"烧钱换增长\"叙事耐心有限。机器人手机尚处概念验证期，销量及用户付费意愿不确定，若功能体验不及预期，主题催化易快速退潮。此外，全球AI算力供需仍存结构性分化，国产替代节奏若慢于预期，端侧AI放量对国内芯片链拉动将打折扣。\n\n**关键驱动因素：**\n腾讯Q3财报中AI对广告/云/游戏三大收入口径的边际贡献是核心验证窗口；荣耀机器人手机首批销量及供应链国产化比例决定主题持续",
+      "ticker_counts": {
+        "腾讯": 1
       },
       "max_item_score": 5
     }
