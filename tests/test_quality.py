@@ -165,9 +165,12 @@ def _full_payload():
     return DigestPayload.from_dict({
         "title": "AI 首席内参 | 08月12日 07:00",
         "headline": "封装是硬约束。",
-        "macro": {"cycle": "扩张第三年",
+        "macro": {"cycle": "扩张第三年，季度 capex 合计超 900 亿美元",
                   "trajectory": {"past": "晶圆制程产能", "now": "封装散热",
-                                 "next": "数据中心电力", "trigger": "若电力审批成为交付瓶颈"},
+                                 "next": "数据中心电力", "why_now": "热阻取代光刻成为良率约束",
+                                 "trigger": "若电力审批成为交付瓶颈"},
+                  "check": "今日证据强化了封装约束，需求侧未见反向信号",
+                  "blindspot": "云厂 capex 的季度节奏缺乏披露",
                   "shift_kind": "adjust", "shift": "散热权重上调"},
         "calls": [{
             "claim": "先进封装是硬约束", "direction": "台积电 ↑", "verify": "CoWoS 报价",
@@ -477,7 +480,7 @@ def test_macro_trajectory_round_trips_through_state():
     p = _payload_with_trajectory(past="A", now="B", next="C", trigger="D")
     from radar.notify.types import MacroFrame
     assert MacroFrame.from_dict(p.macro.to_state()).trajectory.to_state() == {
-        "past": "A", "now": "B", "next": "C", "trigger": "D"}
+        "past": "A", "now": "B", "next": "C", "why_now": "", "trigger": "D"}
 
 
 # ================================================================
@@ -1106,3 +1109,58 @@ def test_other_sources_not_exempt():
     assert is_digest_title(
         "英特尔增发200亿美元；期货市场成交额同比增长38%；汽车出口延续强劲",
         patterns=[], source="rss:36kr", exempt_sources=["rss:importai"])
+
+
+# ================================================================
+# 格局扩容: 本期检验 / 盲区 / 当下为什么是它
+# ================================================================
+
+def test_macro_state_excludes_period_specific_fields():
+    """check 与 blindspot 是当期产物, 写进跨期状态会污染下期的修订基线"""
+    state = _full_payload().macro.to_state()
+    assert "check" not in state and "blindspot" not in state
+    assert set(state) == {"cycle", "trajectory", "shift", "shift_kind"}
+
+
+def test_macro_requires_check_against_evidence():
+    """没有本期检验, 格局与判断链就是两个并列的独立段落"""
+    p = _full_payload()
+    p.macro.check = ""
+    with pytest.raises(ValueError, match="check"):
+        p.validate(expect_calls=True)
+
+
+def test_macro_blindspot_is_optional():
+    """素材真没盲点时不逼它编"""
+    p = _full_payload()
+    p.macro.blindspot = ""
+    p.validate(expect_calls=True)
+    body = render_issue_body(p, material=_fake_material())
+    assert "**盲区**" not in body
+    assert "**本期检验**" in body
+
+
+def test_macro_renders_all_new_parts():
+    body = render_issue_body(_full_payload(), material=_fake_material())
+    macro = body[body.index("## 格局"):body.index("## 本期速览")]
+    assert "热阻取代光刻成为良率约束" in macro      # why_now 挂在轨迹行下
+    assert "**盲区** 云厂 capex 的季度节奏缺乏披露" in macro
+    assert "**本期检验** 今日证据强化了封装约束" in macro
+
+
+def test_unquantified_cycle_warns_but_does_not_fail(caplog):
+    """缺数字的周期判断是印象派, 但掉进降级稿的代价更大"""
+    from radar.notify.copywriter import _warn_unquantified_macro
+    p = _full_payload()
+    p.macro.cycle = "扩张第三年，绝对投入仍创历史新高，边际斜率首次出现分化"
+    with caplog.at_level("WARNING"):
+        _warn_unquantified_macro(p)
+    assert "quantitative anchor" in caplog.text
+    p.validate(expect_calls=True)      # 仍然通过
+
+
+def test_quantified_cycle_no_warning(caplog):
+    from radar.notify.copywriter import _warn_unquantified_macro
+    with caplog.at_level("WARNING"):
+        _warn_unquantified_macro(_full_payload())
+    assert "quantitative anchor" not in caplog.text

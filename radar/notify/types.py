@@ -119,6 +119,7 @@ class MacroTrajectory:
     past: str = ""      # 上一阶段的主约束
     now: str = ""       # 当下的主约束
     next: str = ""      # 下一阶段可能的主约束
+    why_now: str = ""   # 当下这一段为什么是它 —— 没有它, 轨迹只是三个标签
     trigger: str = ""   # 什么可观测信号出现即视为进入下一阶段
 
     @classmethod
@@ -129,6 +130,7 @@ class MacroTrajectory:
             past=_as_str(d.get("past")),
             now=_as_str(d.get("now")),
             next=_as_str(d.get("next")),
+            why_now=_as_str(d.get("why_now")),
             trigger=_as_str(d.get("trigger")),
         )
 
@@ -136,16 +138,22 @@ class MacroTrajectory:
         return not self.now.strip()
 
     def to_state(self) -> dict:
-        return {"past": self.past, "now": self.now,
-                "next": self.next, "trigger": self.trigger}
+        return {"past": self.past, "now": self.now, "next": self.next,
+                "why_now": self.why_now, "trigger": self.trigger}
 
 
 @dataclass
 class MacroFrame:
     """宏观框架 —— 跨期演化, 不是每期重新发明"""
 
-    cycle: str = ""        # 周期位置
+    cycle: str = ""        # 周期位置(必须带量化锚点)
     trajectory: MacroTrajectory = field(default_factory=MacroTrajectory)
+    # 本期证据对框架的检验: 强化了哪一部分、哪里出现反向信号。
+    # 没有它, 格局与判断链就是两个并列的独立段落, 读者看不出宏观怎么被验证
+    check: str = ""
+    # 盲区: 我们不知道什么。宏观层最该承载的就是已知的未知,
+    # 素材里 cross_analysis 的「信息盲点」此前完全没被取用
+    blindspot: str = ""
     shift: str = ""        # 相对上期的变化说明
     shift_kind: str = ""   # hold | adjust | pivot
 
@@ -161,6 +169,8 @@ class MacroFrame:
         return cls(
             cycle=_as_str(d.get("cycle")),
             trajectory=traj,
+            check=_as_str(d.get("check")),
+            blindspot=_as_str(d.get("blindspot")),
             shift=_as_str(d.get("shift")),
             shift_kind=kind if kind in SHIFT_KINDS else "hold",
         )
@@ -169,6 +179,11 @@ class MacroFrame:
         return not self.cycle.strip() and self.trajectory.is_empty()
 
     def to_state(self) -> dict:
+        """写入 notify_state 供下期做增量修订
+
+        只留框架本身。check 与 blindspot 是当期产物, 写进跨期状态会把
+        "昨天看到了什么"混进"我们的框架是什么", 污染下一期的修订基线。
+        """
         return {
             "cycle": self.cycle,
             "trajectory": self.trajectory.to_state(),
@@ -383,6 +398,9 @@ class DigestPayload:
             raise ValueError("macro frame is empty")
         if not self.macro.trajectory.now.strip():
             raise ValueError("macro trajectory has no current constraint")
+        # 只要有判断就一定写得出本期检验; 盲区允许为空(素材真没盲点时不逼它编)
+        if not self.macro.check.strip():
+            raise ValueError("macro frame has no check against this period's evidence")
         if expect_reviews and len(self.reviews) < expect_reviews:
             raise ValueError(
                 f"expected {expect_reviews} call reviews, got {len(self.reviews)}"
