@@ -26,6 +26,12 @@ class Processor:
         self.max_items = cfg["scoring"].get("max_items_in_brief", 25)
         # 按信源可信度分档的入选门槛, 未配置时退化为全局 min_score
         self._cred_floor = cfg["scoring"].get("credibility_floor", {}) or {}
+        self._max_tickers = cfg["scoring"].get("max_tickers_per_item", 4)
+        # 标准名 → 该标的的所有可识别写法, 用于判断标题里有没有点它的名
+        self._names_and_aliases: dict[str, tuple] = {
+            c["name"]: tuple([c["name"], *(c.get("aliases") or [])])
+            for c in cfg["coverage"]
+        }
         # 预计算合法值集合，用于校验 LLM 输出
         self._valid_tickers = {c["name"] for c in cfg["coverage"]}
         # 别名 → 标准名 映射（LLM 可能用中文别名）
@@ -47,6 +53,45 @@ class Processor:
                 return max(self.min_score, int(self._cred_floor.get(level, self.min_score)))
         return self.min_score
 
+    def _mentioned_in_title(self, ticker: str, title: str) -> bool:
+        """标的名或其别名是否出现在标题里"""
+        low = (title or "").lower()
+        for name in self._names_and_aliases.get(ticker, (ticker,)):
+            if name and name.lower() in low:
+                return True
+        return False
+
+    def _cap_tickers(self, tickers: list[str], item: Item) -> list[str]:
+        """限制单条目的标的数, 优先保留新闻主体
+
+        prompt 里要求"只列主体标的"仍会被无视: 实测 154 条里 53 条挂了 ≥8 个
+        标的, 最多一条挂了 37 个(整个覆盖池)。后果是同一件事的两篇报道 ticker
+        交集被稀释, 聚类合不上, 于是重复推两条快报。
+
+        排序信号: 标题里点了名的几乎一定是主体, 其次是有明确多空判断的。
+        只按"前 N 个"截断没有用 —— 两篇报道各自留下一批不同的旁观标的,
+        交集反而更小。
+        """
+        if len(tickers) <= self._max_tickers:
+            return tickers
+
+        # 标题点了名的就是主体, 此时只留它们 —— 补满到上限没有意义,
+        # 两篇报道各自补进一批不同的旁观标的, 交集反而更小
+        in_title = [tk for tk in tickers if self._mentioned_in_title(tk, item.title)]
+        if in_title:
+            keep = set(in_title[: self._max_tickers])
+        else:
+            direction = item.direction if isinstance(item.direction, dict) else {}
+            ranked = sorted(
+                tickers,
+                key=lambda tk: str(direction.get(tk, "")).lower()
+                not in ("positive", "negative"),
+            )
+            keep = set(ranked[: self._max_tickers])
+
+        logger.info(f"Capped tickers {len(tickers)} → {len(keep)} for {item.id[:12]}")
+        return [tk for tk in tickers if tk in keep]   # 保持原有顺序
+
     def _resolve_ticker(self, name: str) -> str | None:
         """将 LLM 返回的名称（可能是别名）解析为标准名，无法匹配则返回 None"""
         if name in self._valid_tickers:
@@ -59,13 +104,13 @@ class Processor:
             clean: list[str] = []
             for t in item.tickers:
                 resolved = self._resolve_ticker(t)
-                if resolved:
+                if resolved and resolved not in clean:
                     clean.append(resolved)
-                else:
+                elif not resolved:
                     logger.warning(
                         f"[{stage}] Unknown ticker stripped for {item.id}: {t}"
                     )
-            item.tickers = clean
+            item.tickers = self._cap_tickers(clean, item)
         elif item.tickers and not isinstance(item.tickers, list):
             logger.warning(
                 f"[{stage}] Non-list tickers stripped for {item.id}: {type(item.tickers)}"

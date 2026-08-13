@@ -20,8 +20,12 @@ logger = logging.getLogger(__name__)
 
 MAX_BYTES = 3800
 
-# 分割线: 企业微信 markdown 认这个, 用来划开报头/正文/报尾三段
-_RULE = "---"
+# 企业微信 markdown(v1) 只支持: 标题 / 加粗 / 链接 / 行内代码 / 引用 /
+# 三种字体色(info|comment|warning)。分割线、列表、表格都不渲染 ——
+# 之前用的 "---" 会原样显示成三个减号, 还把手机通知栏的预览位置占掉。
+# 分割线与列表只在 markdown_v2, 但 v2 不支持字体色, 会丢掉"低可信"的灰字降权。
+# 所以层级一律靠空行与加粗前缀表达。
+# https://developer.work.weixin.qq.com/document/path/91770
 
 
 def _blocks_bytes(block: list[str]) -> int:
@@ -119,13 +123,17 @@ def _alert_blocks(payload: DigestPayload, material: dict, issue_url: str) -> lis
         blocks.append([f"**盯** {alert.watch.strip()}"])
 
     tail = []
-    src_map = sources_by_ref(material or {})
-    for src in src_map.get(alert.evidence_ref, [])[:1]:
+    sources = sources_by_ref(material or {}).get(alert.evidence_ref, [])
+    for src in sources[:1]:
         if src.get("url"):
             bits = [f"[原文]({src['url']})"]
-            publisher = publisher_name(src)
-            if publisher:
-                bits.append(publisher)
+            attribution = publisher_name(src)
+            # 交叉验证强度本身就是信号(它已计入 significance 的多源加成),
+            # 却在推送里完全看不见; 单源也更容易被一家媒体的转述错误带偏
+            if len(sources) > 1:
+                attribution = f"{attribution} +{len(sources) - 1}家".strip()
+            if attribution:
+                bits.append(attribution)
             caveat = caveat_label(src)
             if caveat:
                 # 可信度是脚注不是正文, 压成灰字以免和判断抢注意力
@@ -134,7 +142,6 @@ def _alert_blocks(payload: DigestPayload, material: dict, issue_url: str) -> lis
     if issue_url:
         tail.append(f"[今日汇总]({issue_url})")
     if tail:
-        blocks.append([_RULE])
         blocks.append([" · ".join(tail)])
     return blocks
 
@@ -170,7 +177,6 @@ def render(payload: DigestPayload, site_url: str = "", issue_url: str = "",
     if header:
         blocks.append(header)
 
-    # 报头与正文之间加分割线, 报头才不会和第一段糊在一起
     body: list[list[str]] = []
     if payload.headline:
         body.append([payload.headline])
@@ -189,14 +195,11 @@ def render(payload: DigestPayload, site_url: str = "", issue_url: str = "",
         for item in section.items:
             body.append(_item_block(item))
 
-    if body:
-        blocks.append([_RULE])
-        blocks.extend(body)
+    blocks.extend(body)
 
     # 报尾: 仅完整版 Issue 链接(实时看板已废弃, 报告唯一完整载体为 Issue)
     # 快报的链接已由 _alert_blocks 放在正文末尾, 不重复
     if issue_url and payload.kind != KIND_BREAKING:
-        blocks.append([_RULE])
         blocks.append([f"[完整版 · 事件线与数据附录]({issue_url})"])
 
     # —— 贪心装包: block 按序装入消息, 不超 MAX_BYTES; block 间空行分隔 ——

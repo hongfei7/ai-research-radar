@@ -182,17 +182,23 @@ def _looks_multi_topic(title: str) -> bool:
     return len(substantial) >= _MIN_TOPIC_SEGMENTS
 
 
-def is_digest_title(title: str, patterns: tuple | list | None = None) -> bool:
+def is_digest_title(title: str, patterns: tuple | list | None = None,
+                    source: str = "", exempt_sources: tuple | list | None = None) -> bool:
     """判断标题是否为多话题聚合帖
 
     两条判据取或: 命中栏目名, 或结构上就是多话题拼盘。
     在站点后缀已被 clean_title 剥掉之后判断, 避免"经济日报"这类站点名误伤。
+
+    exempt_sources 里的信源只走关键词判据 —— Import AI 这类高质量周报也用
+    分号列话题, 结构上确实是周报, 但内容价值远高于氪星晚报, 不该一并丢掉。
     """
     if not title:
         return False
     pats = patterns if patterns is not None else _DEFAULT_DIGEST_PATTERNS
     if any(p and p in title for p in pats):
         return True
+    if source and any(e and source.startswith(e) for e in (exempt_sources or ())):
+        return False
     return _looks_multi_topic(title)
 
 

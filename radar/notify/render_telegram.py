@@ -37,9 +37,13 @@ def _alert_parts(payload: DigestPayload, src_map: dict, issue_url: str) -> list[
         parts.append(f"<b>盯</b> {_esc(alert.watch.strip())}")
 
     tail = []
-    for src in (src_map.get(alert.evidence_ref) or [])[:1]:
+    sources = src_map.get(alert.evidence_ref) or []
+    for src in sources[:1]:
         if src.get("url"):
-            bits = [b for b in [publisher_name(src), caveat_label(src)] if b]
+            attribution = publisher_name(src)
+            if len(sources) > 1:      # 交叉验证强度本身就是信号
+                attribution = f"{attribution} +{len(sources) - 1}家".strip()
+            bits = [b for b in [attribution, caveat_label(src)] if b]
             link = f'<a href="{src["url"]}">原文</a>'
             tail.append(link + (f" · {_esc(' · '.join(bits))}" if bits else ""))
     if issue_url:

@@ -90,6 +90,7 @@ async def collect_all(cfg: dict) -> list[Item]:
             window_by_source[src["id"]] = params.get("window_hours", default_window)
 
     digest_patterns = cfg["sources"].get("digest_title_patterns")
+    digest_exempt = cfg["sources"].get("digest_exempt_sources") or ()
     digest_dropped: list[str] = []
 
     logger.info(f"Collecting from {len(all_sources)} sources (parallel)...")
@@ -111,7 +112,8 @@ async def collect_all(cfg: dict) -> list[Item]:
         kept = []
         for it in items:
             it.title = clean_title(it.title)
-            if is_digest_title(it.title, digest_patterns):
+            if is_digest_title(it.title, digest_patterns,
+                               source=it.source, exempt_sources=digest_exempt):
                 digest_dropped.append(f"[{src_id}] {it.title[:40]}")
                 continue
             kept.append(it)

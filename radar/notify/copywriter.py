@@ -119,7 +119,7 @@ async def write_digest(
 
 # 快报字数上限。目标 100-150 字, 超过 200 就不叫"快报"了。
 # prompt 里写了约束但 LLM 会无视, 所以在代码里兜底 —— 按句子边界裁, 不切半句。
-_ALERT_FIELD_BUDGET = {"summary": 110, "why": 80, "watch": 80}
+_ALERT_FIELD_BUDGET = {"summary": 90, "why": 80, "watch": 80}
 _ALERT_TOTAL_WARN = 200
 
 
