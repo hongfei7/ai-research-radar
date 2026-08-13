@@ -612,23 +612,47 @@ def test_breaking_wecom_layout():
     assert body.count("https://gh/issues/40") == 1
 
 
-def test_breaking_wecom_uses_rules_to_separate_sections():
-    """报头/正文/报尾之间要有分割线, 否则在微信里糊成一片"""
+def test_wecom_never_emits_horizontal_rules():
+    """企业微信 markdown v1 不渲染分割线, "---" 会原样显示成三个减号,
+    还把手机通知栏的预览位置占掉。层级一律靠空行与加粗表达。
+    """
     from radar.notify import render_wecom
     m = _breaking_material(); m["events"] = [m["event"]]
-    body = render_wecom.render(_breaking_payload(), "", "https://gh/issues/40",
-                               brand=BRAND, material=m)[0]
-    lines = body.split("\n")
-    assert lines.count("---") == 2                     # 报头后 + 报尾前
-    assert lines.index("---") < lines.index("鸿海Q4开始出货Vera Rubin平台。")
+    for payload, material in ((_breaking_payload(), m), (_full_payload(), _fake_material())):
+        body = render_wecom.render(payload, "", "https://gh/issues/40",
+                                   brand=BRAND, material=material)[0]
+        assert "---" not in body.split("\n")
 
 
-def test_daily_wecom_has_rules():
+def test_alert_body_reaches_notification_preview():
+    """正文要顶到第 3 行 —— 通知栏只显示头两三行, 之前被 "---" 占掉了"""
     from radar.notify import render_wecom
-    m = _fake_material()
-    body = render_wecom.render(_full_payload(), "", "https://gh/issues/1",
-                               brand=BRAND, material=m)[0]
-    assert "---" in body.split("\n")
+    m = _breaking_material(); m["events"] = [m["event"]]
+    lines = render_wecom.render(_breaking_payload(), "", "", brand=BRAND,
+                                material=m)[0].split("\n")
+    assert lines[0].startswith("**Sterling")
+    assert "08月13日 09:20" in lines[1]
+    assert lines[3] == "鸿海Q4开始出货Vera Rubin平台。"
+
+
+def test_footer_shows_cross_source_count():
+    """交叉验证强度本身就是信号, 单源与三源同报的可信度差很多"""
+    from radar.notify import render_wecom
+    m = _breaking_material()
+    m["event"]["sources"].append({
+        "title": "另一家报道", "url": "https://b.example/2", "source": "rss:techmeme",
+        "published_at": "2026-08-13T00:30:00Z", "credibility": "low",
+        "is_primary_source": False})
+    m["events"] = [m["event"]]
+    body = render_wecom.render(_breaking_payload(), "", "", brand=BRAND, material=m)[0]
+    assert "36氪 +1家" in body
+
+
+def test_footer_omits_count_for_single_source():
+    from radar.notify import render_wecom
+    m = _breaking_material(); m["events"] = [m["event"]]
+    body = render_wecom.render(_breaking_payload(), "", "", brand=BRAND, material=m)[0]
+    assert "36氪" in body and "+" not in body.split("36氪")[1][:6]
 
 
 def test_breaking_telegram_layout():
@@ -972,3 +996,113 @@ def test_breaking_title_gets_time_from_system_not_llm():
     from radar.notify import render_wecom
     body = render_wecom.render(p, "", "", brand=BRAND, material=material)[0]
     assert "08月13日 09:20" in body
+
+
+# ================================================================
+# 抬头只留有方向的标的
+# ================================================================
+
+def test_header_drops_directionless_tickers():
+    """同一行里有的带箭头有的光秃秃, 看起来像渲染坏了; 没有方向判断的
+    标的挤在只能放两个的抬头里也帮不了决策"""
+    from radar.notify.brand import ticker_line
+    line = ticker_line(["DeepSeek", "AMD", "腾讯"],
+                       {"DeepSeek": "positive", "AMD": "neutral"})
+    assert line == "DeepSeek ↑"
+
+
+def test_header_keeps_both_directional():
+    from radar.notify.brand import ticker_line
+    line = ticker_line(["寒武纪", "浪潮信息"],
+                       {"寒武纪": "positive", "浪潮信息": "negative"})
+    assert line == "寒武纪 ↑｜浪潮信息 ↓"
+
+
+def test_header_falls_back_to_bare_tickers():
+    """一个方向都没有时不能让抬头空掉"""
+    from radar.notify.brand import ticker_line
+    assert ticker_line(["英伟达", "台积电"], {"英伟达": "neutral"}) == "英伟达｜台积电"
+
+
+# ================================================================
+# ticker 收敛到新闻主体
+# ================================================================
+
+def _processor():
+    from radar.config import load_config
+    from radar.processor import Processor
+    cfg = load_config()
+    p = Processor.__new__(Processor)
+    p.cfg = cfg
+    p._max_tickers = cfg["scoring"]["max_tickers_per_item"]
+    p._valid_tickers = {c["name"] for c in cfg["coverage"]}
+    p._alias_to_name = {}
+    p._valid_themes = {t["key"] for t in cfg["themes"]}
+    p._names_and_aliases = {
+        c["name"]: tuple([c["name"], *(c.get("aliases") or [])]) for c in cfg["coverage"]
+    }
+    return p
+
+
+def test_tickers_converge_to_subject_named_in_title():
+    """extract 会把整条产业链都列上(实测一条挂 37 个), 导致同一件事的两篇
+    报道 ticker 交集被稀释、聚类合不上, 于是重复推两条快报"""
+    it = _mk_item("i", datetime.now(timezone.utc).isoformat())
+    it.title = "DeepSeek V4 Pro 正式版上线，多项指标逼近头部模型"
+    it.tickers = ["天数智芯", "科大讯飞", "中科曙光", "DeepSeek", "寒武纪", "英伟达"]
+    _processor()._validate_item(it, "extract")
+    assert it.tickers == ["DeepSeek"]
+
+
+def test_tickers_keep_all_subjects_named_in_title():
+    it = _mk_item("i", datetime.now(timezone.utc).isoformat())
+    it.title = "英伟达与台积电扩大CoWoS合作"
+    it.tickers = ["英伟达", "台积电", "博通", "美光", "AMD"]
+    _processor()._validate_item(it, "extract")
+    assert it.tickers == ["英伟达", "台积电"]
+
+
+def test_tickers_under_cap_untouched():
+    it = _mk_item("i", datetime.now(timezone.utc).isoformat())
+    it.title = "行业综述"
+    it.tickers = ["英伟达", "台积电"]
+    _processor()._validate_item(it, "extract")
+    assert it.tickers == ["英伟达", "台积电"]
+
+
+def test_tickers_fall_back_to_direction_when_title_names_none():
+    """宏观综述类标题不点名, 退回按多空判断排序"""
+    it = _mk_item("i", datetime.now(timezone.utc).isoformat())
+    it.title = "美股三大指数收盘涨跌不一"
+    it.tickers = ["英伟达", "台积电", "博通", "美光", "AMD"]
+    it.direction = {"美光": "positive", "AMD": "negative"}
+    _processor()._validate_item(it, "extract")
+    assert len(it.tickers) == 4
+    assert "美光" in it.tickers and "AMD" in it.tickers
+
+
+# ================================================================
+# 聚合帖源豁免
+# ================================================================
+
+def test_import_ai_exempt_from_structural_digest_rule():
+    """Import AI 也用分号列话题, 但内容价值远高于氪星晚报"""
+    from radar.textnorm import is_digest_title
+    title = "Import AI 468: 23 RSI ideas; PostTrainBench; why AI safety is hard"
+    assert is_digest_title(title, patterns=[])
+    assert not is_digest_title(title, patterns=[], source="rss:importai",
+                               exempt_sources=["rss:importai"])
+
+
+def test_exemption_does_not_cover_keyword_rule():
+    """豁免只放过结构判据, 命中栏目名仍然拦"""
+    from radar.textnorm import is_digest_title
+    assert is_digest_title("Import AI 晚报特辑", patterns=["晚报"],
+                           source="rss:importai", exempt_sources=["rss:importai"])
+
+
+def test_other_sources_not_exempt():
+    from radar.textnorm import is_digest_title
+    assert is_digest_title(
+        "英特尔增发200亿美元；期货市场成交额同比增长38%；汽车出口延续强劲",
+        patterns=[], source="rss:36kr", exempt_sources=["rss:importai"])

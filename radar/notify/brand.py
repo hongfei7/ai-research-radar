@@ -123,24 +123,23 @@ _MAX_HEADER_TICKERS = 2
 
 def ticker_line(tickers: list, direction: dict | None = None,
                 max_tickers: int = _MAX_HEADER_TICKERS) -> str:
-    """标的串: "长电科技 ↑ · 英伟达 ↓ · 台积电"
+    """标的串: "长电科技 ↑｜英伟达 ↓"
 
-    只给多空标箭头 —— 中性画一排 "→" 是纯噪音, 占位置又不带信息。
-    有明确方向的标的排在前面: 抬头位置有限, 先给读者最能决策的那几个。
+    只放有多空判断的标的。一个没有方向的标的挤在只能容两个位置的抬头里,
+    既不帮读者决策, 还会让同一行出现"有的带箭头有的光秃秃"的错乱观感。
+    一个方向都没有时退回裸标的, 保证抬头不空。
     """
     direction = direction or {}
 
     def _arrow(tk: str) -> str:
         return DIRECTION_ARROW.get(str(direction.get(tk, "")).strip().lower(), "")
 
-    def _directional(tk: str) -> bool:
-        return _arrow(tk) in ("↑", "↓")
-
-    # sorted 稳定, 组内保留原有的频次降序
-    ranked = sorted(tickers or [], key=lambda tk: 0 if _directional(tk) else 1)
-    parts = []
-    for tk in ranked[:max_tickers]:
-        parts.append(f"{tk} {_arrow(tk)}".strip() if _directional(tk) else tk)
+    tickers = tickers or []
+    directional = [tk for tk in tickers if _arrow(tk) in ("↑", "↓")]
+    if directional:
+        parts = [f"{tk} {_arrow(tk)}" for tk in directional[:max_tickers]]
+    else:
+        parts = list(tickers[:max_tickers])
     # 全角竖线分隔标的, 与后面的 " · 时间" 拉开层级
     return "｜".join(parts)
 
