@@ -48,11 +48,12 @@ def _event(eid: str, sig: int, title: str = "测试事件") -> Event:
     )
 
 
-def _item(title: str) -> Item:
+def _item(title: str, hours_old: float = 1) -> Item:
+    # 相对当前时间, 否则固定日期会随时间推移撞上快报的内容年龄闸门
+    ts = (datetime.now(timezone.utc) - timedelta(hours=hours_old)).isoformat()
     return Item(
         id="x", title=title, url="https://x.com", source="t", source_type="tech",
-        published_at="2026-08-12T01:00:00Z", fetched_at="2026-08-12T01:00:00Z",
-        raw_summary="",
+        published_at=ts, fetched_at=ts, raw_summary="",
     )
 
 

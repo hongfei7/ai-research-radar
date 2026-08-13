@@ -15,10 +15,21 @@ from radar.textnorm import clean_title
 
 logger = logging.getLogger(__name__)
 
-# 合并闸门：中文 bigram 的 Jaccard 天然偏低，取值不能照搬英文分词的经验值
-_MIN_WORD_OVERLAP = 0.12
+# 合并闸门。文本重叠用 Szymkiewicz–Simpson 重叠系数(|A∩B| / min(|A|,|B|))
+# 而非 Jaccard —— Jaccard 的分母是并集, 同一件事的短英文标题与长中文正文之间,
+# 分母被长文撑大, 相似度被稀释到闸门之下:
+#   "DeepSeek V4 Pro 0813" ↔ "实测 DeepSeek V4 Pro 正式版"
+#   Jaccard 0.074(拦下) vs 重叠系数 0.238(通过)
+# 实测后果是 DeepSeek V4 Pro 发布当天被拆成 4 个单源事件, 全都够不到快报阈值。
+#
+# 阈值 0.20 标定自 78147 对共享标的的真实条目对: p50=0.050 / p90=0.106 / p99=0.195,
+# 即 0.20 恰在 p99, 只放行 0.94% 的配对。它是闸门不是触发器 —— 复合分 ≥0.50 的
+# 要求不变。
+_MIN_WORD_OVERLAP = 0.20
 _BIG_EVENT_SOURCES = 8              # 超过此来源数视为"大事件"，收紧合并
-_BIG_EVENT_MIN_WORD_OVERLAP = 0.20
+_BIG_EVENT_MIN_WORD_OVERLAP = 0.30
+# 重叠系数对极短文本敏感(共享 1 个 token 就能到 0.25), 再加一道绝对下限
+_MIN_SHARED_FEATURES = 4
 
 
 def _generate_event_id(title: str) -> str:
@@ -293,10 +304,12 @@ class ClusterEngine:
                 ticker_overlap = 0.0
 
             theme_overlap = len(item_themes & ev_themes) / max(len(item_themes | ev_themes), 1)
-            word_overlap = len(item_words & ev_words) / max(len(item_words | ev_words), 1)
+            shared = len(item_words & ev_words)
+            # 重叠系数: 分母取较短一方, 长短文本讲同一件事时不被稀释
+            word_overlap = shared / max(min(len(item_words), len(ev_words)), 1)
 
             # 文本重叠下限：讲同一件事必然共用一批词
-            if word_overlap < _MIN_WORD_OVERLAP:
+            if shared < _MIN_SHARED_FEATURES or word_overlap < _MIN_WORD_OVERLAP:
                 continue
             # 已经很大的事件要求更强的文本证据，否则它会持续吸附无关条目
             if event.source_count >= _BIG_EVENT_SOURCES and word_overlap < _BIG_EVENT_MIN_WORD_OVERLAP:

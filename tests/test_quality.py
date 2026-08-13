@@ -818,3 +818,157 @@ def test_appendix_shows_publish_date_not_ingest_date():
     row = next(l for l in body.splitlines() if "台积电 CoWoS 扩产" in l and l.startswith("|"))
     assert "| 05-04 |" in row       # 发布时间
     assert "| 08-12 |" not in row   # 入库时间不该出现
+
+
+# ================================================================
+# 聚类: 重叠系数取代 Jaccard
+# ================================================================
+
+def _cluster_items(specs):
+    """跑真实聚类路径; specs = [(cn_summary, tickers, themes)]"""
+    import asyncio
+    from radar.cluster import ClusterEngine
+    from radar.config import load_config
+
+    items = []
+    for i, (summary, tickers, themes) in enumerate(specs):
+        it = _mk_item(f"c{i}", datetime.now(timezone.utc).isoformat())
+        it.title = summary[:30]
+        it.cn_summary = summary
+        it.tickers = list(tickers)
+        it.themes = list(themes)
+        items.append(it)
+
+    class _NoLLM:
+        async def chat_json(self, *a, **k):
+            raise RuntimeError("replay without LLM")
+
+    _, events = asyncio.run(ClusterEngine(_NoLLM(), load_config()).cluster(items, {}))
+    return events
+
+
+# 取自 2026-08-13 真实归档: DeepSeek V4 Pro 发布当天的三条报道
+_DS_EN = ("DeepSeek V4 Pro 0813 released with 1M context window, "
+          "input priced at 3 yuan per million tokens and cache hit at 0.025 yuan.")
+_DS_CN = ("DeepSeek V4 Pro 正式版上线，支持 1M 上下文，输入价 3 元每百万 Token，"
+          "缓存命中 0.025 元，实测能力直逼头部闭源模型，V4 Flash 登顶全球 Token 调用量。")
+_DIGEST = ("星巴克中国否认为降成本取消 14 薪；DeepSeek V4 Pro 正式版上线；"
+           "阿里最年轻 P10 林俊旸创业，新公司估值 20 亿美元；前 7 个月期货成交额增长。")
+_THEMES = ["model_capability", "ai_monetization", "compute_demand"]
+
+
+def test_same_story_across_languages_merges():
+    """短英文报道与长中文报道讲同一件事, 必须合并成一个事件
+
+    Jaccard 时代它们被拆成两个单源事件, 各自 sig=7 够不到快报阈值 —— 线上
+    DeepSeek V4 Pro 发布当天就是这样漏报的。
+    """
+    events = _cluster_items([
+        (_DS_EN, ["DeepSeek"], _THEMES),
+        (_DS_CN, ["DeepSeek"], _THEMES),
+    ])
+    assert len(events) == 1
+    ev = next(iter(events.values()))
+    assert ev.source_count == 2
+
+
+def test_merged_sources_lift_significance_over_breaking_threshold():
+    """三源合并后 sig 由 7 升到 8, 正好越过快报门槛"""
+    events = _cluster_items([
+        (_DS_EN, ["DeepSeek"], _THEMES),
+        (_DS_CN, ["DeepSeek"], _THEMES),
+        (_DS_CN + " API 已开始灰度推送。", ["DeepSeek"], _THEMES),
+    ])
+    ev = next(iter(events.values()))
+    assert ev.source_count == 3
+    assert ev.significance >= 8
+
+
+def test_digest_post_stays_separate_from_real_story():
+    """聚合帖词汇分布接近语料均值, 不能让它并进真报道"""
+    events = _cluster_items([
+        (_DS_EN, ["DeepSeek"], _THEMES),
+        (_DIGEST, ["DeepSeek", "阿里巴巴"], _THEMES),
+    ])
+    assert len(events) == 2
+
+
+def test_short_titles_need_absolute_overlap():
+    """重叠系数对极短文本敏感, 共享一两个 token 不该算同题"""
+    events = _cluster_items([
+        ("Grok 4.6", ["xAI"], ["model_capability"]),
+        ("Grok teammate", ["xAI"], ["model_capability"]),
+    ])
+    assert len(events) == 2
+
+
+# ================================================================
+# 聚合帖: 多话题结构判据
+# ================================================================
+
+@pytest.mark.parametrize("title", [
+    "8点1氪丨星巴克中国否认取消14薪；DeepSeek V4 Pro正式版上线；林俊旸创业估值20亿",
+    "科技早参丨英特尔增发200亿美元；期货成交额增长38%；汽车出口延续强劲",
+])
+def test_multi_topic_titles_detected_without_keyword(title):
+    """穷举栏目名追不完(线上漏过 8点1氪), 结构特征才稳"""
+    from radar.textnorm import is_digest_title
+    assert is_digest_title(title, patterns=[])   # 关键词列表为空也能识别
+
+
+@pytest.mark.parametrize("title", [
+    "英伟达发布B300；性能较上代提升2倍",
+    "高盛：上调寒武纪评级；下调浪潮信息",
+    "实测 DeepSeek V4 Pro 正式版：能力直逼 Fable 5",
+])
+def test_two_segment_titles_are_not_digests(title):
+    from radar.textnorm import is_digest_title
+    assert not is_digest_title(title, patterns=[])
+
+
+# ================================================================
+# 裁剪不切半句
+# ================================================================
+
+def test_clip_keeps_whole_sentence_when_no_boundary():
+    """线上出现过"…谁有自研芯片谁就能留住…", 被砍断的判断比略长更糟"""
+    long_one = "利润池向芯片端上移意味着服务器厂商的议价能力将持续下滑而芯片设计公司吃到全部替代红利。"
+    out = clip_sentence(long_one, 30, hard=False)
+    assert out == long_one          # 只有一句, 整句保留
+    assert not out.endswith("…")
+
+
+def test_clip_drops_trailing_sentence_within_budget():
+    out = clip_sentence("第一句足够长可以单独成立。第二句应当被丢弃。", 20, hard=False)
+    assert out == "第一句足够长可以单独成立。"
+
+
+def test_alert_budget_never_emits_fragment():
+    from radar.notify.copywriter import _enforce_alert_budget
+    p = _breaking_payload(why="没有任何句末标点的超长判断" * 8)
+    _enforce_alert_budget(p)
+    assert not p.alert.why.endswith("…")
+
+
+def test_breaking_title_gets_time_from_system_not_llm():
+    """prompt 让 LLM 输出的 title 是"首席快报"(无时间), 抬头因此永远缺时间"""
+    import asyncio
+    from radar.notify import copywriter
+    from radar.notify.types import KIND_BREAKING
+
+    material = _breaking_material(); material["events"] = [material["event"]]
+
+    class _FakeClient:
+        async def chat_json(self, *a, **k):
+            return {"title": "首席快报", "alert": {
+                "summary": "鸿海Q4出货。", "why": "供给前移。",
+                "watch": "月度营收占比。", "evidence_ref": "E1"}}
+
+    p = asyncio.run(copywriter.write_digest(
+        KIND_BREAKING, material, {"minimax": {"model": "m"}}, _FakeClient(),
+        current_time_hkt="08月13日 09:20"))
+    assert p.title == "首席快报 | 08月13日 09:20"
+
+    from radar.notify import render_wecom
+    body = render_wecom.render(p, "", "", brand=BRAND, material=material)[0]
+    assert "08月13日 09:20" in body

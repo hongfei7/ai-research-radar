@@ -169,19 +169,41 @@ _DEFAULT_DIGEST_PATTERNS = (
 )
 
 
+# 多话题结构判据: 标题被分隔符切成 N 段且每段都有实质内容。
+# 穷举各家栏目名追不完(线上就漏了 36氪的 "8点1氪"), 结构特征才是稳的。
+_TOPIC_SEP_RE = re.compile(r"[；;丨|｜]")
+_MIN_TOPIC_SEGMENTS = 3
+_MIN_SEGMENT_LEN = 6
+
+
+def _looks_multi_topic(title: str) -> bool:
+    segments = [s.strip() for s in _TOPIC_SEP_RE.split(title)]
+    substantial = [s for s in segments if len(s) >= _MIN_SEGMENT_LEN]
+    return len(substantial) >= _MIN_TOPIC_SEGMENTS
+
+
 def is_digest_title(title: str, patterns: tuple | list | None = None) -> bool:
     """判断标题是否为多话题聚合帖
 
+    两条判据取或: 命中栏目名, 或结构上就是多话题拼盘。
     在站点后缀已被 clean_title 剥掉之后判断, 避免"经济日报"这类站点名误伤。
     """
     if not title:
         return False
     pats = patterns if patterns is not None else _DEFAULT_DIGEST_PATTERNS
-    return any(p and p in title for p in pats)
+    if any(p and p in title for p in pats):
+        return True
+    return _looks_multi_topic(title)
 
 
-def clip_sentence(text: str, max_len: int) -> str:
-    """按句子边界裁剪, 避免半句截断; 找不到边界时退化为硬截断加省略号"""
+def clip_sentence(text: str, max_len: int, hard: bool = True) -> str:
+    """按句子边界裁剪, 避免半句截断
+
+    Args:
+        hard: 找不到句子边界时是否硬截断加省略号。
+              False 表示宁可超长也要保留完整句子 —— 对判断类文本,
+              一个被砍断的结论("…谁就能留住…")比一个略长的完整结论更糟。
+    """
     if not text:
         return ""
     text = text.strip()
@@ -192,6 +214,13 @@ def clip_sentence(text: str, max_len: int) -> str:
         idx = window.rfind(punct)
         if idx >= max_len // 2:
             return window[: idx + 1]
+    if not hard:
+        # 退而求其次: 截到第一个句末标点, 保住完整的第一句
+        for punct in ("。", "！", "？"):
+            idx = text.find(punct)
+            if idx != -1:
+                return text[: idx + 1]
+        return text
     return window.rstrip() + "…"
 
 
