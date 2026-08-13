@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-13T02:44:44Z",
-  "text": "当前共有 24 个活跃事件。要点包括: Anthropic in Talks to Buy World Model AI Startup Decart for $6B; 8点1氪丨星巴克中国否认为降成本取消14薪；DeepSeek V4 Pro正式版上线；“阿里最年轻P10”林俊旸创业，新公司估值20亿美元; DeepSeekV4 Pro正式版深夜现身官网，测评超越Fable 5 | 钛快讯; Sources: Anthropic is in talks to buy Decart, which offers real-time generative video and GPU optimization tech, for about $6B (Bloomberg); DeepSeek V4 Pro 正式版上线，多项指标逼近 Fable 5。",
-  "since": "2026-08-13T02:44:44Z",
-  "active_event_count": 24,
+  "generated_at": "2026-08-13T03:21:34Z",
+  "text": "当前共有 28 个活跃事件。要点包括: Anthropic in Talks to Buy World Model AI Startup Decart for $6B; DeepSeek-V4-Pro正式版实测：山不在高，有“梁”则灵; 8点1氪丨星巴克中国否认为降成本取消14薪；DeepSeek V4 Pro正式版上线；“阿里最年轻P10”林俊旸创业，新公司估值20亿美元; DeepSeekV4 Pro正式版深夜现身官网，测评超越Fable 5 | 钛快讯; Sources: Anthropic is in talks to buy Decart, which offers real-time generative video and GPU optimization tech, for about $6B (Bloomberg)。",
+  "since": "2026-08-13T03:21:34Z",
+  "active_event_count": 28,
   "key_themes": [
-    "ai_monetization",
     "compute_demand",
+    "ai_monetization",
     "model_capability",
     "chip_supply",
     "domestic_substitution"
@@ -13,6 +13,6 @@
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nDecart收购案存在叙事分歧：hackernews将Decart定位为\"世界模型（World Model）\"公司，关联AGI/具身智能；Bloomberg/techmeme则强调其\"实时生成式视频+GPU优化\"能力，指向推理成本降低。两版本交易标的同一公司，战略含义截然不同——前者为能力跃迁叙事，后者为成本效率叙事，二阶影响判断可能完全相反。DeepSeek V4 Pro评测亦存矛盾：tmtpost称\"超越Fable 5\"，ifanr称\"接近Fable 5\"，reddit则对比对象为智谱GLM-5.2，benchmark基准不统一导致能力定位模糊。\n\n【新兴趋势】\n1）推理效率成头部模型公司战略焦点（Anthropic并购Decart优化层 + CoreWeave招股书披露英伟达切换难度形成呼应），行业竞争从\"模型能力\"向\"推理成本\"延伸。2）AI商业化从订阅制向交易抽佣转型（阿里通义开放平台+豆包酒店佣金12%），同向信号密集出现。3）国产算力迎来",
-  "trend_spotting": "**1. 新兴趋势：** 头部模型公司竞争维度正在从\"模型能力\"向\"世界模型+算力效率\"纵深延伸。Anthropic拟以$6B收购Decart（同时具备实时生成视频与GPU优化能力），若落地将首次打通\"物理模拟+推理成本\"两个上游能力。同期国内大厂AI商业化集体转向交易抽佣——阿里千问开放平台接入十余家生态伙伴，豆包对AI跳转酒店订单收取约12%综合费率（较自然流量8%上浮4pct），标志变现模式从订阅/广告升级为GMV分润。\n\n**2. 早期信号：** 智谱API年内累计涨价超60%、阿里云百炼最高涨价34%、腾讯云5月已涨5%——大模型API通胀悄然启动，但市场尚未充分定价推理成本上行对应用层"
+  "cross_analysis": "【核心矛盾】\nDeepSeek V4-Pro（0813版本）API输入/输出价格较V4-Flash均涨3倍，官方预告\"整体上调API价格\"，但同一条目指出第三方测试中部分基准仍逊于Kimi K3，且官方未发布完整benchmark——这构成\"涨价底气 vs 性能验证不足\"的内在矛盾。此外，Anthropic凭借Claude Mythos预览版取得领先（来源：36kr关于布林的报道），与DeepSeek此次\"Agent/代码能力大幅跃升\"的叙事形成隐性竞赛对标，两类玩家在能力曲线与商业化节奏上呈现不同路径。\n\n【新兴趋势】\n\"头部模型厂商通过并购加速整合\"信号明显：Anthropic洽购Decart（估值约60亿美元）配合谷歌Brin亲自下场整顿DeepMind，指向同一趋势——模型层竞争已从纯自研进入\"自研+并购+创始人亲自督战\"的复合阶段。同时，DeepSeek涨价3倍、腾讯Q2 capex达528亿元、谷歌创始人介入，三条独立信息共同指向\"AI基础设施与算力投入仍在加码，未见放缓\"的一致信号，推理侧算力需求（1M上下文/384K输出）持续推升。\n\n【信息盲点】\n本轮报道未直接覆盖英伟达、博通、超微等AI算力供应链标的，尽管DeepSeek、腾讯、谷歌三条线索均对其形成需求支撑；OpenAI亦未出现，但其API定价策略与DeepSeek提价构成直接竞品对照，值得纳入。同时，国内其他云厂商（阿里、字节、百度）Q2 capex与AI收入转化数据缺失，无法横向验证腾讯528亿投入的相对位置；数据中心电力/能源主线仅有腾讯条目附带提及，缺乏独立深度报道。\n\n【跨标的联动】\nDeepSeek V4-Pro兼容OpenAI与Anthropic双接口，叠加Anthropic收购Decart，反映\"模型接口标准化与生态绑定\"深化，国内模型涨价对推理算力（英伟达/国产替代）形成边际利好。腾讯capex与谷歌加速追赶共同指向云端AI算力需求扩张，间接利好AI芯片与数据中心供应链。Anthropic洽购Decart若落地，可能引发中型AI初创估值重估，对国内AI初创投融资环境产生外溢效应。",
+  "trend_spotting": "DeepSeek V4-Pro正式版悄然上线，Agent能力DeepSWE从12.8飙至62.7（约4.9倍），同时API输入未命中与输出价格统一上调3倍至3元/6元（每1M token），这是头部国产模型首次明确告别\"低价铺量\"逻辑；能力跃升斜率（~5倍）显著超过价格上调斜率（3倍），单token推理经济性实质改善，标志Agent级推理服务商业化正循环可能正在形成。\n\nAnthropic据传60亿美元洽购Decart，是头部模型厂继人才战之后开启的\"标的并购战\"信号。叠加布林亲自下场整顿DeepMind，折射出Google在Gemini迭代节奏上已承压、创始人回归成为追赶最后选项。两条线索共同指向：模型层竞争从\"训练竞赛\"切换至\"Agent产品力+资本整合\"双轨。\n\n市场盲点在于腾讯Q2 capex 528亿元的叙事重心——\"AI投入改写利润表\"意味着大厂AI投资已从\"战略性亏损\"进入\"利润压力测试\"阶段，后续capex/收入比将成为云厂商估值关键变量。另一盲点：开源模型能力逼近闭源时，闭源厂商并购（Anthropic-Decart）旨在抢夺差异化壁垒，行业整合窗口正在打开。"
 }
