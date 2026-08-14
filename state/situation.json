@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-08-14T21:32:52Z",
-  "text": "截至 2026-08-15 05:32 HKT，本轮新增两条动态：Interconnects发文聚焦智谱GLM-5.3，强调中国大模型实验室以非蒸馏路径独立追赶全球前沿；Anthropic宣布将推出水印检测API，允许第三方识别Claude生成文本，基于Google SynthID方案，但对代码及事实密集型文本检测效果有限。",
-  "since": "2026-08-14T21:32:52Z",
-  "active_event_count": 16,
+  "generated_at": "2026-08-14T22:01:45Z",
+  "text": "截至 2026-08-15 06:01 HKT，本轮新增两条高权重动态。财务面，Anthropic向投资人披露2026年Q2营收突破115亿美元，环比Q1的47.3亿美元大幅增长，同比增长逾14倍（去年同期Q2为7.87亿美元），并实现经调整运营利润转正，标志头部大模型公司token消耗与推理需求持续放量，为云厂capex与算力需求提供基本面验证。资本配置面，Nvidia向SEC首次披露其非上市投资版图：持有SpaceX约210亿美元、Intel约300亿美元股权，2025年另向xAI投资最多20亿美元、向Intel投资50亿美元，规模远超市场预期，反映其以战略交叉持股深化生态绑定的同时，亦引发资本配置焦点是否偏离主业的讨论。",
+  "since": "2026-08-14T22:01:45Z",
+  "active_event_count": 14,
   "key_themes": [
-    "model_capability",
     "ai_monetization",
+    "model_capability",
     "compute_demand",
-    "domestic_substitution",
-    "edge_ai"
+    "edge_ai",
+    "domestic_substitution"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
