@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-14T10:21:47Z",
-  "text": "当前共有 30 个活跃事件。要点包括: 苹果联手阿里为中国市场定制训练AI大模型; 吊打SpaceX，史上最大IPO要来了？; 2 Countries are buying up all the compute; DeepSeek Harness 实测：一夜 5 万星，Agent 界的 Android 来了; SMIC co-CEO Zhao Haijun says the company raised prices following negotiations with customers in Q1, and that it will charge more for wafers processed in Q3 (Reuters)。",
-  "since": "2026-08-14T10:21:47Z",
+  "generated_at": "2026-08-14T11:23:50Z",
+  "text": "截至 2026-08-14 19:23 HKT，本轮新增要闻：智谱GLM-5.3以开源权重版本正式发布，官方称编程能力达开源SOTA，权重将于两周内开放；DeepSeek Harness以MIT协议推出开发者预览版，主打\"能力即插件\"架构，并同步发布峰谷分时定价，V4 FLASH低谷价较旧版全面上调157%-250%；OpenAI正式关停上线不足一年的AI浏览器Atlas，能力并入ChatGPT与Codex，AI浏览器替代Chrome叙事降温；腾讯混元资深研究员徐灿转岗微信WeLM，微信AI自研提速。此外，Intel高管访谈暗示可能回归DDR4平台以应对内存涨价；乌方称俄S-71巡航导弹搭载Nvidia Jetson Orin NX模块，边缘AI芯片军转民管制再引关注。",
+  "since": "2026-08-14T11:23:50Z",
   "active_event_count": 30,
   "key_themes": [
     "model_capability",
     "compute_demand",
     "ai_monetization",
     "chip_supply",
-    "advanced_packaging"
+    "edge_ai"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nGLM-5.3的定位在不同来源间存在分歧：爱范儿称其\"杀回国模顶流、按下重置键\"，量子位强调\"Coding更接近Claude\"，但Reddit LocalLLaMA社区用户仅称\"可能提供最佳容量-体积比\"，并明确指出需待量化后验证——媒体宣传口径与社区实测预期之间存在明显落差。AMD 47.5亿美元融资用途同样存在矛盾：官方仅披露\"一般企业用途\"，但市场已将其与AI芯片研发/产能扩张/M&A等叙事绑定，融资公告本身缺乏透明度成为核心争议点。\n\n【新兴趋势】\n\"全栈协同/Co-design Loop\"是本轮最显著的跨条目主题——阿里云在智驾场景强调\"芯片、云、模型三层必须打通\"，腾讯被类比为\"与xAI走入同一条河\"，反映算力-模型-产品垂直整合正在成为",
+  "cross_analysis": "【核心矛盾】\nDeepSeek同期出现两条方向性反差信号：一方面以MIT协议开源Harness框架，强调\"能力即插件\"的可拆装架构，走开放生态路线；另一方面V4 FLASH API价格较旧版全面大幅上调（缓存命中+250%、未命中+157%、输出+235%），且引入峰谷分时计费。开源工具与API提价并存的商业逻辑需后续观察。另一矛盾在于AI浏览器赛道：OpenAI关停Atlas、独立AI浏览器集体熄火，但Google/Microsoft继续把AI内嵌Chrome/Edge，国内外厂商路径分化明显。\n\n【新兴趋势】\n1）大模型能力插件化/可插拔架构成为新叙事（DeepSeek Harness），降低二次开发门槛；2）边缘AI芯片军转民风险首次具象化（Jetson Orin NX出现在俄巡航导弹），出口管制边界博弈进入新阶段；3）AI入口向超级应用回流——腾讯WeLM加速、OpenAI能力并入ChatGPT，独立AI产品作为入口的叙事降温；4）国内开源编程模型赛道升温，Zhipu GLM-5.3对标闭源编程",
   "trend_spotting": "DeepSeek在潜在IPO前夕将V4-Flash输出token价从$0.28/百万拉至峰值$1.32（约4.7倍），并引入峰谷动态定价，标志国产大模型正式告别\"以价换量\"阶段，转向追求收入与利润率。同期AMD拟发50亿美元投资级债为AI capex融资，反映AI基础设施支出已从股权/现金流驱动进入企业债驱动阶段，资本密集度进一步抬升。\n\n值得关注的早期信号：推理算力在高峰期出现实质性稀缺（峰值/非峰值价差约2倍），这与\"算力过剩\"的主流叙事相悖，可能向HBM、先进封装链传导需求压力。被市场低估的是微软合并Copilot并砍掉群聊、播客等功能，暗示消费级AI助手用户黏性低于预期，资源正加速向企业级与Agent集中，叠加OpenAI新设CRO，系统化B端商业化竞赛已开启。拐点层面，国产模型价格体系重塑若传导至阿里、字节，将首次使国内AI推理成本曲线与海外收敛，影响下游应用毛利结构。"
 }
