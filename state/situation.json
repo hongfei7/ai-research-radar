@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-14T09:13:46Z",
-  "text": "当前共有 28 个活跃事件。要点包括: 吊打SpaceX，史上最大IPO要来了？; 2 Countries are buying up all the compute; DeepSeek Harness 实测：一夜 5 万星，Agent 界的 Android 来了; 消息称苹果联手阿里训练中国版AI模型; SMIC co-CEO Zhao Haijun says the company raised prices following negotiations with customers in Q1, and that it will charge more for wafers processed in Q3 (Reuters)。",
-  "since": "2026-08-14T09:13:46Z",
-  "active_event_count": 28,
+  "generated_at": "2026-08-14T10:21:47Z",
+  "text": "当前共有 30 个活跃事件。要点包括: 苹果联手阿里为中国市场定制训练AI大模型; 吊打SpaceX，史上最大IPO要来了？; 2 Countries are buying up all the compute; DeepSeek Harness 实测：一夜 5 万星，Agent 界的 Android 来了; SMIC co-CEO Zhao Haijun says the company raised prices following negotiations with customers in Q1, and that it will charge more for wafers processed in Q3 (Reuters)。",
+  "since": "2026-08-14T10:21:47Z",
+  "active_event_count": 30,
   "key_themes": [
+    "model_capability",
     "compute_demand",
     "ai_monetization",
-    "model_capability",
-    "edge_ai",
-    "chip_supply"
+    "chip_supply",
+    "advanced_packaging"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n- CPO替代 vs 传统光模块生存：英伟达宣布CPO全面量产，自研方案若大规模铺开将冲击可插拔光模块市场格局；但炬光科技仍披露可插拔微光学产品已实现规模化供应、NPO/CPO产品\"部分完成批量验证\"，说明光模块产业链在过渡期内新旧路线并行，传统厂商尚未被立即淘汰，过渡节奏存在分歧。\n- AI算力扩张 vs 电力环境成本：得州数据中心被迫采用高排放简易燃气轮机，反映电力缺口下\"快但脏\"的现实选择，与Anthropic与AWS/SpaceX的5GW+算力扩张形成隐性矛盾，长期可能倒逼SMR/绿电PPA路径，但短期增排趋势与碳排监管走向存在博弈。\n- 谷歌全栈护城河 vs 组织内耗：原文自身即点出\"全栈既是护城河也是纷争起源\"，DeepMind理想主义时代终结暗示执行力可能弱于OpenAI/Anthropic。\n\n【新兴趋势】\n- CPO/NPO光共封装加速落地：英伟达CPO量产+炬光科技批量验证+台积电/矽品/天孚通信供应链，整条光通信路线迁移信号在两条独立报道中互为印证。\n- Token/词元成为政策与定价单位：广州海珠\"词元八条\"以词元产出效率为补贴锚点，与Anthropic按token计量的商业模式形成上下游呼应，token经济从商业层渗透到产业政策层。\n- 半导体公司大额举债支撑AI军备：AMD 47.5亿美元创纪录发债是显性信号，Anthropic G/H轮300亿→650亿美元融资节奏同步，反映\"算力军备\"已从股权融资扩展至债权融资。\n- 具身智能算力消耗两年10倍增长：机器人从训练到部署的算力密度快速攀升，与联想AI服务器业务翻倍互为侧证。\n\n【信息盲点】\n- 中际旭创、新易盛等传统可插拔光模块龙头在CPO替代浪潮中的份额迁移节奏未直接报道，是CPO叙事的最大盲点。",
+  "cross_analysis": "【核心矛盾】\nGLM-5.3的定位在不同来源间存在分歧：爱范儿称其\"杀回国模顶流、按下重置键\"，量子位强调\"Coding更接近Claude\"，但Reddit LocalLLaMA社区用户仅称\"可能提供最佳容量-体积比\"，并明确指出需待量化后验证——媒体宣传口径与社区实测预期之间存在明显落差。AMD 47.5亿美元融资用途同样存在矛盾：官方仅披露\"一般企业用途\"，但市场已将其与AI芯片研发/产能扩张/M&A等叙事绑定，融资公告本身缺乏透明度成为核心争议点。\n\n【新兴趋势】\n\"全栈协同/Co-design Loop\"是本轮最显著的跨条目主题——阿里云在智驾场景强调\"芯片、云、模型三层必须打通\"，腾讯被类比为\"与xAI走入同一条河\"，反映算力-模型-产品垂直整合正在成为",
   "trend_spotting": "DeepSeek在潜在IPO前夕将V4-Flash输出token价从$0.28/百万拉至峰值$1.32（约4.7倍），并引入峰谷动态定价，标志国产大模型正式告别\"以价换量\"阶段，转向追求收入与利润率。同期AMD拟发50亿美元投资级债为AI capex融资，反映AI基础设施支出已从股权/现金流驱动进入企业债驱动阶段，资本密集度进一步抬升。\n\n值得关注的早期信号：推理算力在高峰期出现实质性稀缺（峰值/非峰值价差约2倍），这与\"算力过剩\"的主流叙事相悖，可能向HBM、先进封装链传导需求压力。被市场低估的是微软合并Copilot并砍掉群聊、播客等功能，暗示消费级AI助手用户黏性低于预期，资源正加速向企业级与Agent集中，叠加OpenAI新设CRO，系统化B端商业化竞赛已开启。拐点层面，国产模型价格体系重塑若传导至阿里、字节，将首次使国内AI推理成本曲线与海外收敛，影响下游应用毛利结构。"
 }
