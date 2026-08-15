@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-15T23:23:10Z",
+  "updated_at": "2026-08-15T23:46:38Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -26067,9 +26067,9 @@
       "first_seen_at": "2026-08-15T14:50:44Z",
       "first_published_at": "2026-08-15T14:30:00Z",
       "last_updated_at": "2026-08-15T17:23:24Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 8,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "",
       "ticker_counts": {
         "Meta": 2,
