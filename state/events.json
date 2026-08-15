@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-15T06:43:41Z",
+  "updated_at": "2026-08-15T07:19:37Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -25440,6 +25440,67 @@
         "DeepSeek": 1
       },
       "max_item_score": 5
+    },
+    "evt_c4360ed0a45b": {
+      "event_id": "evt_c4360ed0a45b",
+      "title": "Pixel 11来了，AI真的能接管你的手机吗？",
+      "summary": "谷歌发布Pixel 11旗舰手机，AI功能成核心卖点。报道指出，谷歌旗舰大模型能力提升暂显放缓，但轻量化的Flash模型正被部署至手机端，推动AI功能走向日常使用场景。文章聚焦谷歌终端AI战略及大模型与端侧模型的分化趋势。",
+      "tickers": [
+        "谷歌"
+      ],
+      "themes": [
+        "ai_monetization",
+        "edge_ai",
+        "model_capability"
+      ],
+      "direction": {
+        "谷歌": "positive"
+      },
+      "item_ids": [
+        "e1f3eece6d9ece3662bc1b5317c18dc10c4a67c9"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-15T07:18:44Z",
+      "first_published_at": "2026-08-15T06:38:00Z",
+      "last_updated_at": "2026-08-15T07:18:44Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "1. **看多逻辑**\n- 端侧AI商业化路径初步打通：Flash模型部署至Pixel 11标志着AI从\"演示能力\"走向\"日常工具\"，谷歌以自有硬件抢占端侧AI入口，强化Gemini生态粘性。",
+      "ticker_counts": {
+        "谷歌": 1
+      },
+      "max_item_score": 7
+    },
+    "evt_230c5076b264": {
+      "event_id": "evt_230c5076b264",
+      "title": "双面腾讯：视频号前台收钱，AI后台烧钱",
+      "summary": "腾讯2026年二季度营收2047.85亿元同比+11%，归母净利润560.22亿元仅+0.7%；Non-IFRS净利润684亿元同比+9%，剔除新AI产品（Hy、元宝、CodeBuddy、WorkBuddy、小微）影响后Non-IFRS经营利润同比+19%。营销服务收入435.65亿同比+22%但毛利率从58%降至57%，增长主要来自微信生态（小游戏、微信小店、短剧）在广告平台投放，而非传统广告主。AI真金白银投入与非现金会计扰动共同压低账面利润，核心业务实际强劲。",
+      "tickers": [
+        "腾讯"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand"
+      ],
+      "direction": {
+        "腾讯": "neutral"
+      },
+      "item_ids": [
+        "e3467dba752346aaf4ac8017f207e45e2efc14a3"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-15T07:18:44Z",
+      "first_published_at": "2026-08-15T06:49:00Z",
+      "last_updated_at": "2026-08-15T07:18:44Z",
+      "is_active": true,
+      "significance": 6,
+      "status": "developing",
+      "deep_analysis": "1. **看多逻辑**\n   ① 核心业务韧性被低估：剔除新AI产品后Non-IFRS经营利润同比+19%，说明游戏、支付、视频号等现金牛业务健康度远超账面表观增速，AI是增量投入而非侵蚀存量。② 广告增长具有生态壁垒：+22%的高增速主要由微信生态内部循环（小游戏、微信小店、短剧）驱动，这是腾讯独有的私域流量变现闭环，竞争对手难以复制；随着小店和短剧商业化率提升，广告ARPU仍有上行空间。③ AI布局具期权价值：Hy、元宝、CodeBuddy覆盖C端对话、B端编程、办公协同场景，产品矩阵完整，一旦出现类似\"豆包式\"爆款，AI业务可从成本中心转为利润中心，对标海外OpenAI/Anthropic估值锚点。\n\n2. **看空风险**\n   ① 账面利润近乎零增长（+0.7%）将持续压制估值情绪，机构考核更看Non-IFRS但散户与被动资金对GAAP利润敏感，短期资金面承压。② 广告增长质量存疑：增量主要来自微信内部商家\"左手付右手\"，若小游戏/短剧热度退潮（如2024年短剧监管收紧重演），广告增速可能快速回落；外部品牌广告主预算仍受宏观制约。③ AI烧钱节奏不可控：当前披露未给出AI Capex指引，若2026下半年至2027年推理算力需求爆发（参照豆包/千问路径），毛利率57%可能进一步下行至55%以下，Non-IFRS利润增速可能从+9%回落至个位数。\n\n3. **关键驱动因素**\n   ① **AI产品商业化拐点**：元宝MAU/DAU、CodeBuddy付费企业数、Hy API收入是否在2026Q4出现环比加速，是判断AI从\"投入期\"切换至\"收获期\"的核心信号。② **广告生态健康度**：微信小店GMV、短剧投流ROI、小游戏广告eCPM三者环比走势，决定广告+22%能否在Q3、Q4延续。\n\n4.",
+      "ticker_counts": {
+        "腾讯": 1
+      },
+      "max_item_score": 6
     }
   }
 }
