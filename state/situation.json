@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-15T00:02:10Z",
-  "text": "截至 2026-08-15 08:02 HKT，本轮重要更新：据WSJ报道，英伟达已修改对OpenAI俄亥俄州10吉瓦数据中心园区融资方案，将原2500亿美元担保的初期兜底规模降至约一半，由全额背书转向分阶段、风险共担模式，以降低对OpenAI基础设施扩张的直接敞口。其余活跃事件无实质性变化。",
-  "since": "2026-08-15T00:02:10Z",
-  "active_event_count": 8,
+  "generated_at": "2026-08-15T01:54:59Z",
+  "text": "当前共有 15 个活跃事件。要点包括: Anthropic Q2营收破115亿美元，同比飙升逾13倍且经调整运营利润转正; Sources: Nvidia has reworked a deal to finance an OpenAI Ohio data center campus so that it would initially guarantee only half of its planned $250B backstop (Anissa Gardizy/Wall Street Journal); Sources: Anthropic projects 2028 revenue of ~$190B-$200B, vs. a revenue run rate of $47B in May, as bankers and investors price the company ahead of an IPO (Echo Wang/Reuters); Source: OpenAI CFO told investors that enterprise business now generates more revenue than ChatGPT-led consumer business; enterprise customers grew 32% in July (Kate Rooney/CNBC); Filing: Nvidia has a nearly $21B stake in SpaceX and a $30B stake in Intel; Nvidia invested as much as $2B in xAI in 2025 and $5B in Intel (Lynn Doan/Bloomberg)。",
+  "since": "2026-08-15T01:54:59Z",
+  "active_event_count": 15,
   "key_themes": [
     "ai_monetization",
-    "model_capability",
     "compute_demand",
+    "model_capability",
     "domestic_substitution",
-    "edge_ai"
+    "chip_supply"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n本轮唯一条目为WSJ援引\"消息人士\"报道的NVDA对OpenAI 10GW园区融资方案调整，来源credibility标注为\"low\"却获9分高投资分，权威性与重要性之间存在张力。核心矛盾在于：从2500亿美元全额兜底降至初期约一半，存在两种截然相反的解读——可视为\"NVDA对OpenAI非理性扩张信心减弱\"的风险信号，也可解读为\"分阶段风险共担\"的理性资本管理，目前尚无官方确认。\n\n【新兴趋势】\n\"分阶段、条件性、风险共担式AI基础设施融资\"开始浮现——从此前行业惯见的无条件背书，转向按里程碑分批投放的资本承诺模式。这或暗示顶级算力玩家对AI capex可持续性的审慎度上升，也可能在未来被其他超大规模算力交易效仿，成为新一轮AI基建融资的范式。\n\n【信息盲点】\n本轮严重覆盖不足的标的和主线包括：1）AMD/博通等替代算力受益方；2）CoWoS封装链（台积电）及HBM三巨头（SK",
+  "cross_analysis": "【核心矛盾】\n关于Anthropic存在两个口径冲突：36kr称Q2营收超115亿美元、年化约460亿；Reuters/Techmeme消息源则称2026年5月年化运行率已达470亿美元，且2028年预计1900-2000亿美元。两者方向一致但前者是Q2实绩、后者是run-rate，且2028年预测属\"消息人士\"披露（低可信度），需后续正式财报或S-1文件验证。同时，OpenAI人才外流（负面）与Anthropic商业化跃升（正面）形成对照，暗示头部AI公司竞争格局可能正在重排。\n\n【新兴趋势】\n三条线索反复出现：（1）中国开源大模型双线并进——阿里Qwen3.8（30亿次下载）与DeepSeek V4 Pro+Harness同步发力，国产模型与国家超算互联网\"十万卡级算力池\"深度绑定；（2）Agent框架分化——DeepSeek选择\"模型中立、横向开源\"路径，与OpenAI/Anthropic的\"向下整合\"策略形成路线之争；（3）美国对华芯片管制从逻辑/AI芯片向存储领域延伸，苹果被迫转向美光/海",
   "trend_spotting": "Anthropic内部Model 2在CoBench v2上领先Mythos 5达12.5个百分点，且报告明确85%得分即可替代自家研究员——这一阈值首次被量化为\"前沿AI替代顶级知识工作者\"的可操作基准。需注意来源为匿名测试数据，尚未官方确认。\n\n【新兴趋势】头部实验室正从\"能力发布\"转向\"能力囤积\"。Model 2暂不发布表明，最强模型已脱离通用API商业化轨道，转为内部研究飞轮与定制化企业服务的核心资产。\n\n【早期信号】85%替代阈值是关键先兆。若CoBench v2具备独立可复现性，将成为首个可被引用、可对标的\"AGI工程里程碑\"——行业讨论重心可能从\"何时到来\"切换为\"如何度量\"。\n\n【市场盲点】公众版与实验室版的能力鸿沟正在拉大而非收敛。投资者习惯用\"公开模型迭代速度\"衡量赛道进展，但真正的能力前沿已隐入闭源。市场上沿用\"OpenAI/Anthropic/Google每隔X月发布新模型\"线性外推的逻辑可能系统性低估曲线斜率。\n\n【值得关注的拐点】\"2027起飞\"的自述时间表与当前仅4个月的窗口，若叠加融资催化与Model 2未发布双重信号，意味着下一代模型发布节奏或被刻意压缩，留给下游应用方适配的窗口极窄。"
 }

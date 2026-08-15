@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-15T00:02:10Z",
+  "updated_at": "2026-08-15T01:54:59Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -24519,9 +24519,9 @@
       "first_seen_at": "2026-08-14T19:38:25Z",
       "first_published_at": "2026-08-14T19:19:22Z",
       "last_updated_at": "2026-08-14T19:38:25Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 7,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "1. **看多逻辑**：①小尺寸开源模型逼近闭源前沿，直接验证端侧推理趋势加速，利好苹果M系列芯片（Apple Intelligence本地化）和英伟达RTX系列消费级GPU的硬件需求，Edge AI叙事获得最强基本面支撑；②阿里Qwen系列在全球开源生态的影响力持续扩大（仅次于Meta Llama），开源品牌反哺云端API调用量及企业级定制服务，且模型迭代节奏快于多数竞争对手；③开发者社区采用率提升形成正循环，降低企业AI部署成本，推动下游应用层爆发，间接利好底层算力供应商。\n\n2. **看空风险**：①Reddit帖为个体体验，\"对标Opus 4.6\"或为社区过度解读，第三方跑分与实际生产力（复杂推理、Agent、长上下文）存在显著差距，Anthropic等闭源厂商在专业场景仍有护城河；②开源普及对阿里云AI API收入构成结构性替代风险，从\"模型即服务\"转向\"硬件+生态分销\"难度大，盈利兑现路径模糊；③27B本地运行需24GB+显存，实际可触达用户有限，推理速度、功耗等体验瓶颈可能限制渗透速度，且标题\"Qwen 3.8\"版本号存疑，真实性需打折扣。\n\n3. **关键驱动因素**：①Qwen 3.8正式版发布及官方基准测试结果（与社区评测的一致性）；②苹果下一代端侧AI功能升级及是否集成Qwen等开源模型、英伟达消费级GPU出货数据。\n\n4. **市场影响",
       "ticker_counts": {
         "阿里巴巴": 1,
@@ -24625,8 +24625,8 @@
     },
     "evt_909596d5813f": {
       "event_id": "evt_909596d5813f",
-      "title": "Docs: Anthropic told investors it generated $11.5B+ in revenue, with positive adjusted operating income, in Q2, up from $787M in Q2 2025 and $4.73B in Q1 2026 (Bloomberg)",
-      "summary": "据Bloomberg援引文件报道，Anthropic向投资人披露2026年Q2营收突破115亿美元，环比Q1的47.3亿美元大幅增长，同比增长逾14倍（去年同期Q2为7.87亿美元），且实现经调整运营利润转正。Anthropic作为头部大模型公司，营收爆发式增长与盈利转正，印证头部AI公司token消耗/推理需求持续放量，是云厂capex与算力需求的最强基本面信号之一。",
+      "title": "Anthropic Q2营收破115亿美元，同比飙升逾13倍且经调整运营利润转正",
+      "summary": "Anthropic向潜在投资者披露，2026年Q2营收超115亿美元，较2025年同期7.87亿美元同比增长逾13倍，环比Q1的47.3亿美元亦大幅增长，同期经调整营业利润首次转正，数据仍可能微调。这是头部大模型公司商业化加速的标志性事件，强化全球AI算力需求与token消耗的持续放量预期。",
       "tickers": [
         "Anthropic"
       ],
@@ -24639,18 +24639,19 @@
         "Anthropic": "positive"
       },
       "item_ids": [
-        "af3a810ef1533349811a64d858806f3dce66841e"
+        "af3a810ef1533349811a64d858806f3dce66841e",
+        "7110db41959ade952920e17c5621666be348557f"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "first_seen_at": "2026-08-14T22:01:04Z",
       "first_published_at": "2026-08-14T21:31:21Z",
-      "last_updated_at": "2026-08-14T22:01:04Z",
+      "last_updated_at": "2026-08-15T01:52:10Z",
       "is_active": true,
       "significance": 9,
       "status": "developing",
       "deep_analysis": "",
       "ticker_counts": {
-        "Anthropic": 1
+        "Anthropic": 2
       },
       "max_item_score": 9
     },
@@ -24756,6 +24757,259 @@
         "OpenAI": 1
       },
       "max_item_score": 9
+    },
+    "evt_1c03fadb76d7": {
+      "event_id": "evt_1c03fadb76d7",
+      "title": "Sources: Anthropic projects 2028 revenue of ~$190B-$200B, vs. a revenue run rate of $47B in May, as bankers and investors price the company ahead of an IPO (Echo Wang/Reuters)",
+      "summary": "据Reuters引述消息人士，Anthropic预计2028年营收达1900-2000亿美元，远高于2025年5月约470亿美元的年化营收运行率。当前银行家与投资人正为该公司IPO定价，潜在成为史上规模最大的IPO之一。值得关注的是，2028年2000亿美元营收意味着Anthropic的AI商业化能力将实现数倍跃升。",
+      "tickers": [
+        "Anthropic"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand",
+        "model_capability"
+      ],
+      "direction": {
+        "Anthropic": "positive"
+      },
+      "item_ids": [
+        "6efd10f54b7879a9e28fe1e8b00e07a30a8e5329"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-15T01:52:10Z",
+      "first_published_at": "2026-08-15T01:00:51Z",
+      "last_updated_at": "2026-08-15T01:52:10Z",
+      "is_active": true,
+      "significance": 9,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "Anthropic": 1
+      },
+      "max_item_score": 9
+    },
+    "evt_730c710b40c4": {
+      "event_id": "evt_730c710b40c4",
+      "title": "Commerce Secretary Howard Lutnick says the US is \"not in favor\" of Apple buying Chinese memory chips, and there have to be \"other solutions to the memory issue\" (Wall Street Journal)",
+      "summary": "美国商务部长Howard Lutnick明确表态\"不赞成\"苹果从中国采购存储芯片，要求苹果就AI驱动的芯片供应紧张问题寻找\"其他解决方案\"。此举将苹果推向美光、SK海力士、三星等非中国存储供应商，同时凸显美国对华芯片出口管制向存储领域延伸的信号。",
+      "tickers": [
+        "美光",
+        "苹果"
+      ],
+      "themes": [
+        "chip_supply",
+        "domestic_substitution",
+        "policy_export"
+      ],
+      "direction": {
+        "苹果": "negative",
+        "美光": "positive"
+      },
+      "item_ids": [
+        "2f41f69ee3d5a9faf38f010826f8a576564112a4"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-15T01:52:10Z",
+      "first_published_at": "2026-08-15T01:25:02Z",
+      "last_updated_at": "2026-08-15T01:52:10Z",
+      "is_active": true,
+      "significance": 8,
+      "status": "developing",
+      "deep_analysis": "**看多逻辑：**\n1. 美光作为美国本土唯一具备规模化DRAM/HBM产能的厂商，成为最直接受益方。在AI驱动HBM供不应求背景下，叠加政策驱动的客户回流，美光议价能力与产能利用率将显著提升，盈利弹性放大。\n2. 此表态释放美国对华芯片管制向存储领域延伸的明确信号，若后续落地为正式管制规则，将形成\"美光+海力士+三星\"对\"中国存储\"的结构性替代，长期利好非中存储厂商获取确定性增量订单。\n3. 政策不确定性反而强化\"国产替代+友岸外包\"双逻辑，SK海力士、三星同样间接受益，全球存储格局加速向非中产能倾斜。\n\n**看空风险：**\n1. 此次仅为商务部长口头表态，尚无正式法规或执行细则，落地强度存疑；苹果仍可通过海外渠道或混合方案规避，实际订单转移幅度可能不及预期。\n2. 苹果转向非中供应商将推高BOM成本，叠加消费电子需求疲软，可能挤压毛利率；若存储价格因供给集中而飙升，反而抑制下游需求。\n3. 中国存储厂商（长鑫、长存）持续扩产，若全球存储进入过剩周期，政策驱动的客户黏性将被价格机制稀释。\n\n**关键驱动因素：**\n1. 美国商务部是否将\"反对中国存储\"升级为正式出口管制或实体清单措施，以及管制覆盖范围（是否含HBM、DRAM、NAND全品类）。\n2. 苹果与美光/海力士的实际长协订单签订及HBM产能排产变化。\n\n**市场影响评估：**\n短期（1-3个月）美光受情绪与订单预期催化，股价偏强；苹果因成本压力承压但幅度有限。中期（6-12个月）若政策落地，美光DRAM/HBM ASP与出货量双升可期；苹果供应链成本上升或部分转嫁至终端。\n\n**时间线推断：**\n2026Q3-Q4关注商务部正式规则草案与公众评议；2027H1苹果新一代产品存储配置方案及长协价格信号；2027下半年美光新产能（HBM4/1γ DRAM）爬坡进度将决定受益幅度。",
+      "ticker_counts": {
+        "苹果": 1,
+        "美光": 1
+      },
+      "max_item_score": 8
+    },
+    "evt_deb37c08ff72": {
+      "event_id": "evt_deb37c08ff72",
+      "title": "阿里开源Qwen3.8，千问大模型全球下载超30亿次",
+      "summary": "8月14日晚，阿里千问正式开源Qwen3.8系列模型，其中Qwen3.8-27B为原生多模态稠密模型，仅270亿参数即在编程及办公场景超越Qwen3.7-Plus。此前旗舰Qwen3.8-Max已开源权重。阿里累计向全球AI社区开源460余个模型，千问全球下载超30亿次、衍生模型超30万个，稳居全球开源模型第一。",
+      "tickers": [
+        "阿里巴巴"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand",
+        "model_capability"
+      ],
+      "direction": {
+        "阿里巴巴": "positive"
+      },
+      "item_ids": [
+        "9aaf6bb316047ec76ae60951719934ae38199c46"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-15T01:52:10Z",
+      "first_published_at": "2026-08-15T01:15:19Z",
+      "last_updated_at": "2026-08-15T01:52:10Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "**1. 看多逻辑**\n\n第一，开源生态壁垒进一步固化。30亿次下载、30万衍生模型、460+开源数量构成全球第一的开源护城河，且\"下载→衍生→反馈迭代\"飞轮已经跑通。Qwen3.8-27B以1/5量级参数超越上一代Plus版本，表明参数效率显著提升，推理成本结构更优，利于后续ToB API调用放量与token消耗爬坡。第二，AI货币化路径逐步清晰。多模态稠密架构在编程与办公场景的实用化突破，指向企业付费意愿最强的两个垂类；如果API调用与PaaS收入能在未来两个季度内出现量级跃迁，将重塑阿里云估值锚。第三，国产推理算力链二阶受益。Qwen系列对国产芯片（寒武纪、海光、天数、昇腾）的适配成熟度直接拉动推理侧订单，配合\"非英伟达\"算力底座扩张逻辑，对国内GPU/ASIC链条构成增量催化。\n\n**2. 看空风险**\n\n第一，开源≠收入。全球第一的开源地位迄今未在阿里云AI收入端形成可量化的贡献，资本市场对此的\"免费获客\"耐心正在衰减；若Q3财报云业务AI收入占比仍低于个位数，叙事溢价将被证伪。第二，参数效率领先存在时效性。Meta（Llama 4/5）、DeepSeek、Mistral等对手迭代节奏快，27B性能窗口可能仅维持2–3个季度；同时原生多模态已是行业标配，差异化窗口收窄。第三，闭源旗舰厂商（OpenAI、Anthropic、Google Gemini）在Agent、长上下文、Tool-use维度仍保持代差优势，开源模型在中高端企业市场的渗透率天花板可能低于乐观预期。\n\n**3. 关键驱动因素**\n\nQwen3.8-Max的API调用量与企业ARR数据是首要观测指标；其次是国产推理芯片对Qwen3.8系列的Benchmark跑分与商业落地白名单进展。\n\n**4. 市场影响评估**\n\n短期（1–3个月）：事件情绪面偏多，对阿里港股/中概AI板块形成催化，但因\"开源\"标签已多次被定价，向上弹性有限，预计5–10%区间波动。中期（6–12个月）：分化将加剧——云收入与AI ARR若放量则估值上修至PE 18–20倍；反之若仍依赖电商输血，则估值天花板锁定在13–15倍。国内推理芯片供应链获得中等强度的需求侧支撑。\n\n**5. 时间线推断**\n\n2026年9月云栖大会预计公布Qwen3.8系列企业客户与token消耗数据；11月Q2财报披露AI相关收入占比与CAPEX节奏；2027年Q1预计发布Qwen4系列预热版本，届时将检验能否在闭源旗舰面前保持参数效率优势。需重点跟踪11月财报口径下\"AI推理服务收入\"是否独立披露。",
+      "ticker_counts": {
+        "阿里巴巴": 1
+      },
+      "max_item_score": 7
+    },
+    "evt_aa3b92a90d16": {
+      "event_id": "evt_aa3b92a90d16",
+      "title": "DeepSeek V4 Pro正式版+Harness上线国家超算互联网",
+      "summary": "8月14日，国家超算互联网宣布上线DeepSeek V4 Pro正式版及智能体框架DeepSeek Harness，依托全国首个十万卡级超智融合算力资源池，为科研机构与企业提供大模型全生命周期算力支持。该平台AI社区已汇聚1700余款开源大模型，支持一站式部署、微调与优化。值得关注的是，国产大模型与国产大规模算力池的深度绑定，标志着国产AI算力链商业化落地再进一步。",
+      "tickers": [
+        "DeepSeek"
+      ],
+      "themes": [
+        "compute_demand",
+        "domestic_substitution",
+        "model_capability"
+      ],
+      "direction": {
+        "DeepSeek": "positive"
+      },
+      "item_ids": [
+        "5ab5740a1f84c7fb0f77a7834afce2ddd8a74d4b"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-15T01:52:10Z",
+      "first_published_at": "2026-08-15T01:14:42Z",
+      "last_updated_at": "2026-08-15T01:52:10Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "**1. 看多逻辑**\n- 国产模型与国产算力完成\"软硬一体\"绑定，十万卡级超智融合算力池是国内首个具备承载顶级大模型训练/推理规模化能力的标杆设施，标志着国产AI基础设施从\"可用\"迈向\"好用\"，对寒武纪、海光、中科曙光等国产芯片厂商形成明确的二阶订单传导预期。\n- 智能体框架DeepSeek Harness叠加1700+开源模型社区，将超算互联网从\"卖算力\"升级为\"卖平台+生态\"，降低企业接入门槛，推理侧调用量有望持续放量，为国产算力链提供长期、可持续的需求池。\n- 国家队主导的算力底座与头部开源模型的深度耦合，强化了国产AI栈的不可逆性，对海外芯片和闭源模型形成结构性挤出，国产替代叙事兑现度提升。\n\n**2. 看空风险**\n- DeepSeek未上市，事件对二级市场无直接定价标的，更多是板块情绪催化，主题资金可能短期透支利好，缺乏业绩锚定易引发冲高回落。\n- \"十万卡\"算力池的芯片构成未披露，若实际国产比例偏低、或含较多已受限的海外HPC芯片（如H系列），则国产替代逻辑将被证伪，预期差反向修正风险大。\n- 商业化闭环尚未验证：超算互联网的定价权、毛利率水平，以及企业客户从PoC转向付费复购的转化率均不清晰，存在\"以亏损换市场\"的可持续性疑问。\n\n**3. 关键驱动因素**\n- 十万卡算力池的芯片供应商名单及国产占比（直接决定寒武纪/海光/中科曙光受益强度）。\n- DeepSeek V4 Pro在企业市场的实际调用量、API收入及付费客户数，反映真实商业化进度。\n\n**4. 市场影响评估**\n- 短期（1-2周）：国产算力链主题情绪升温，寒武纪、海光、中科曙光等弹性标的或获资金追捧，但缺乏业绩验证时易震荡。\n- 中期（1-2季度）：若Q3财报中政府/超算订单兑现，叠加推理调用量数据出炉，国产算力链有望迎来\"订单+估值\"双击；反之则进入主题冷却期。\n\n**5. 时间线推断**",
+      "ticker_counts": {
+        "DeepSeek": 1
+      },
+      "max_item_score": 7
+    },
+    "evt_6c27b3f350b3": {
+      "event_id": "evt_6c27b3f350b3",
+      "title": "Nvidia discloses $21B stake in SpaceX",
+      "summary": "英伟达披露其持有SpaceX 210亿美元（约210亿）股权。该持仓来源于此前对SpaceX的投资，意味着英伟达通过股权方式深度绑定了全球最大商业航天与卫星互联网公司。此举显示英伟达正从纯AI算力供应商，向更广泛的'AI+航天'基础设施生态延伸投资，值得关注其资本配置逻辑与协同效应。",
+      "tickers": [
+        "英伟达"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand",
+        "datacenter_power"
+      ],
+      "direction": {
+        "英伟达": "neutral"
+      },
+      "item_ids": [
+        "a21fa5726bc10c853b4168c19ad3ddf57ad03291"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-15T01:52:10Z",
+      "first_published_at": "2026-08-15T01:02:55Z",
+      "last_updated_at": "2026-08-15T01:52:10Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "**1. 看多逻辑**\n\n①生态绑定逻辑成立。SpaceX/Starlink正从纯卫星运营商转型为\"天基算力+地面数据中心\"双轮驱动的基础设施商，其全球地面站、数据中心扩张对GPU/网络芯片/边缘推理硬件存在持续采购需求。英伟达以股权换\"长期采购承诺\"的模式，既锁定了大客户，也复刻了其在AI云厂商中的渗透路径。②资本配置信号积极。$21B对当前英伟达市值（$4T量级）占比极低（约0.5%），却能在SpaceX估值持续上修中带来显著的mark-to-market收益，为Q2 FY27财报（当前处于Q3 FY26）提供非经常性增益弹药。③算力需求外延验证。Starlink若将AI推理下沉至卫星端（轨交LLM、实时遥感分析），将打开\"在轨算力\"新场景，间接验证全球算力需求仍处上修通道，对英伟达GPU TAM形成增量支撑。\n\n**2. 看空风险**\n\n①信源可信度低、披露口径存疑。\"disclose\"一词的来源不明确——英伟达并非13F申报主体，$21B持仓更可能来自私募结构（SPV/可转换优先股），实际变现路径与会计处理需进一步验证，市场可能高估其可追溯性。②资本配置偏离主业。$21B若以现金/等价物投入，相当于英伟达约2-3个季度自由现金流用于非核心战略投资，可能引发\"过度多元化\"的股东质疑，尤其在监管审查AI芯片市场支配地位的当下。③SpaceX估值泡沫与执行风险并存。SpaceX近期估值已超$400B，Starship完全回收与Starlink商业化兑现仍存不确定性；若进入下一轮融资估值回调，英伟达持仓将面临显著减值压力。\n\n**3. 关键驱动因素**\n\n①是否存在\"算力换股权\"交叉协议——若绑定",
+      "ticker_counts": {
+        "英伟达": 1
+      },
+      "max_item_score": 7
+    },
+    "evt_35eb1c55f792": {
+      "event_id": "evt_35eb1c55f792",
+      "title": "DeepSeek Harness，“杀死”Agent黑箱",
+      "summary": "DeepSeek于8月12日静默上线V4-Pro正式版模型，随后因前后端与权重配置错位导致体验问题撤下公告，并于次日重新发布并同步开源DeepSeek Harness开发者预览版。DeepSeek提出\"Model+Harness=Agent\"公式，Harness作为\"身体与神经系统\"提供工具调用、文件读写、沙箱、权限管理和任务编排能力；测试显示在Harness加持下V4-Pro响应更快且缓存命中率较Claude Code提升1%。其核心设计\"一切皆插件\"由北大与DeepSeek联合提出的\"时空可组合性\"范式支撑，与OpenAI/Anthropic向下整合策略不同，DeepSeek选择横向开源、模型中立的Agent底层标准。",
+      "tickers": [
+        "Anthropic",
+        "DeepSeek",
+        "OpenAI"
+      ],
+      "themes": [
+        "ai_monetization",
+        "model_capability"
+      ],
+      "direction": {
+        "DeepSeek": "positive",
+        "OpenAI": "neutral",
+        "Anthropic": "neutral"
+      },
+      "item_ids": [
+        "83c8f8617609c3c460d2f0eb5feae151b58c8a97"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-15T01:52:10Z",
+      "first_published_at": "2026-08-15T00:25:00Z",
+      "last_updated_at": "2026-08-15T01:52:10Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "OpenAI": 1,
+        "DeepSeek": 1,
+        "Anthropic": 1
+      },
+      "max_item_score": 7
+    },
+    "evt_425e804c4e2c": {
+      "event_id": "evt_425e804c4e2c",
+      "title": "OpenAI talent exodus raises 'huge red flag' ahead of IPO",
+      "summary": "OpenAI人才持续外流引发市场担忧，被视为其IPO前的一重大风险信号。原帖仅提供链接及讨论入口，未披露具体离职人员、规模或外流去向等细节。涉及公司为OpenAI。值得关注的原因：核心人才流失可能影响其前沿模型研发节奏与商业化推进，进而在AI行业竞争格局中产生连锁效应。",
+      "tickers": [
+        "OpenAI"
+      ],
+      "themes": [
+        "ai_monetization",
+        "model_capability"
+      ],
+      "direction": {
+        "OpenAI": "negative"
+      },
+      "item_ids": [
+        "4a5b596eed1a66df857484b1436041bde966e469"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-15T01:52:10Z",
+      "first_published_at": "2026-08-15T00:22:58Z",
+      "last_updated_at": "2026-08-15T01:52:10Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "看多逻辑：\n1. AI行业人才高流动是常态，pre-IPO阶段受锁定期与流动性限制，核心员工套现离场属正常现象，不必然指向公司基本面恶化。OpenAI当前员工规模超3000人，个位数比例离职难以构成系统性风险。\n2. OpenAI的品牌稀缺性、算力调度能力及前沿课题密度仍是顶尖研究者的首选平台，\"大规模外流\"叙事存在被媒体放大的可能，需以具体人头与去向验证。\n3. 离职人员若流向非直接竞品或选择创业，反而可能形成OpenAI系生态外溢，对公司长期话语权并非纯负面信号。\n\n看空风险：\n1. 若Safety、Alignment、核心预训练架构负责人等关键节点人物流向An",
+      "ticker_counts": {
+        "OpenAI": 1
+      },
+      "max_item_score": 7
+    },
+    "evt_db2ecbc8e09a": {
+      "event_id": "evt_db2ecbc8e09a",
+      "title": "伯克希尔·哈撒韦第二季度增持谷歌",
+      "summary": "当地时间8月14日报道，伯克希尔·哈撒韦2025年第二季度13F披露：清仓星座品牌（STZ），减持克罗格、纽柯钢铁等，清仓/减持集中在消费与金融传统价值股；增持谷歌A/C类股、达美航空、莱纳房屋、梅西百货等，其中谷歌获显著加仓。",
+      "tickers": [
+        "谷歌"
+      ],
+      "themes": [
+        "ai_monetization"
+      ],
+      "direction": {
+        "谷歌": "positive"
+      },
+      "item_ids": [
+        "d85887af691fae5a6c92ddf6b19edeeb8291707b"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-15T01:52:10Z",
+      "first_published_at": "2026-08-15T01:30:48Z",
+      "last_updated_at": "2026-08-15T01:52:10Z",
+      "is_active": true,
+      "significance": 5,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "谷歌": 1
+      },
+      "max_item_score": 5
     }
   }
 }
