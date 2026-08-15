@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-15T16:54:09Z",
+  "updated_at": "2026-08-15T17:23:29Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -26041,8 +26041,8 @@
     },
     "evt_68ab8c7347f9": {
       "event_id": "evt_68ab8c7347f9",
-      "title": "Alibaba's open-weight models have accumulated 3B+ global downloads in the past six months; Hugging Face: Google had 418M downloads while Meta had 227M in 2026 (Saritha Rai/Bloomberg)",
-      "summary": "阿里巴巴开源权重模型近6个月全球下载量超30亿次；Hugging Face数据显示2026年Google模型下载量达4.18亿次，Meta为2.27亿次。报道显示开源大模型生态正快速扩张，阿里跻身全球开源模型第一梯队，下载量规模已逼近国际头部厂商，凸显中国厂商在全球AI开源生态中的影响力提升。",
+      "title": "阿里AI模型下载量破30亿 超越Meta和Google跃居全球第一",
+      "summary": "阿里旗下开源AI模型累计下载量突破30亿次，已超越Meta和Google，跃居全球开源模型分发领先地位。该里程碑表明阿里在AI模型分发与采用度上已与西方头部厂商同台竞争，凸显中国厂商在全球AI开源生态中的影响力快速提升。",
       "tickers": [
         "Meta",
         "谷歌",
@@ -26060,20 +26060,21 @@
         "Meta": "neutral"
       },
       "item_ids": [
-        "bd0c2ff95d723b18b9fbdd9e0e897ca35cfb8ecf"
+        "bd0c2ff95d723b18b9fbdd9e0e897ca35cfb8ecf",
+        "1c0e34f96259a16d17220240382a449ebfad7439"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "first_seen_at": "2026-08-15T14:50:44Z",
       "first_published_at": "2026-08-15T14:30:00Z",
-      "last_updated_at": "2026-08-15T14:50:44Z",
+      "last_updated_at": "2026-08-15T17:23:24Z",
       "is_active": true,
       "significance": 8,
       "status": "developing",
       "deep_analysis": "",
       "ticker_counts": {
-        "Meta": 1,
-        "阿里巴巴": 1,
-        "谷歌": 1
+        "Meta": 2,
+        "阿里巴巴": 2,
+        "谷歌": 2
       },
       "max_item_score": 8
     },
