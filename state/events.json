@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-15T05:55:01Z",
+  "updated_at": "2026-08-15T06:43:41Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -25307,6 +25307,136 @@
       "deep_analysis": "",
       "ticker_counts": {
         "阿里巴巴": 1,
+        "DeepSeek": 1
+      },
+      "max_item_score": 5
+    },
+    "evt_b9398ea24465": {
+      "event_id": "evt_b9398ea24465",
+      "title": "Sources: China plans to soon lift a travel ban on Manus founders as the company unwinds its $2B acquisition by Meta; CEO Xiao Hong plans to return to Singapore (Zijing Wu/Financial Times)",
+      "summary": "据FT报道，中国计划解除对AI公司Manus创始人的出境禁令，同时该公司正在解除被Meta以20亿美元收购的交易。CEO萧弘计划返回新加坡。Manus是此前被Meta收购的AI智能体公司，目前双方正在分手清算过程中。此事件反映中美科技领域跨境投资与人才流动的复杂博弈，AI创业公司创始人面临地缘政治与商业变现的双重不确定性。值得关注的是，一家中国背景的AI公司涉及20亿美元级的跨国并购最终走向解约，这在行业中较为罕见。",
+      "tickers": [
+        "Meta"
+      ],
+      "themes": [
+        "ai_monetization",
+        "policy_export"
+      ],
+      "direction": {
+        "Meta": "negative"
+      },
+      "item_ids": [
+        "e92d182ae8b868855157487cc2014d380d9ce6e2"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-15T06:42:21Z",
+      "first_published_at": "2026-08-15T06:00:01Z",
+      "last_updated_at": "2026-08-15T06:42:21Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "1. **看多逻辑**\n- 交易解除消除悬而未决的不确定性，Meta可将该20亿美元资金重新配置于GPU采购、自研模型训练等确定性更高的AI基础设施投入，资本效率有望边际改善。\n- 若解约过程中Meta已",
+      "ticker_counts": {
+        "Meta": 1
+      },
+      "max_item_score": 7
+    },
+    "evt_1124c4a17b7f": {
+      "event_id": "evt_1124c4a17b7f",
+      "title": "Qwen 3.8 27B on AMD - 24 t/s on Ryzen AI Max+ 395 & 51 t/s on Radeon AI PRO R9700",
+      "summary": "AMD发布官方博客，展示在Ryzen AI Max+ 395（Strix Halo）及Radeon AI PRO R9700上运行Qwen 3.8 27B稠密模型的推理速度：分别达24 t/s和51 t/s，原始来源为AMD博客。社区正在征集更高量化精度（Q8）、256K上下文、MTP及未量化KV Cache下的极限数据，反映AMD ROCm/llama.cpp生态对前沿开源大模型的适配进展。",
+      "tickers": [
+        "AMD"
+      ],
+      "themes": [
+        "compute_demand",
+        "edge_ai",
+        "model_capability"
+      ],
+      "direction": {
+        "AMD": "positive"
+      },
+      "item_ids": [
+        "bdfcc38093fe9ed438e190ae4c507be2ec831db5"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-15T06:42:21Z",
+      "first_published_at": "2026-08-15T05:59:38Z",
+      "last_updated_at": "2026-08-15T06:42:21Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "1. **看多逻辑**\n   - **端侧AI推理能力获得验证**：AMD首次以官方博客形式展示消费级APU（Strix Halo）与Radeon工作站卡对前沿开源稠密模型的推理性能，24 t/s与51 t/s的输出速度在27B级别模型上已具备交互可用性，证明AMD平台不再仅是\"能跑\"，而是\"跑得有体验\"，削弱了CUDA在边缘AI PC领域的独占叙事。\n   - **ROCm + llama.cpp生态拐点信号**：社区主动征集Q8、256K上下文、MTP等极限参数测试，说明开发者对AMD生态的可用性预期已从\"能不能编译\"转向\"性能上限在哪里\"，这是软件生态从能用走向好用的关键转变。若后续社区benchmark持续验证，有望形成正反馈，吸引更多开源模型优先适配ROCm。\n\n2. **看空风险**\n   - **单点demo不代表系统性优势**：当前仅为一个27B模型的官方数据，缺乏与CUDA（RTX 4090/5090）在同模型同量化下的横向对比，且ROCm对MoE架构、长上下文、多模态等场景的成熟度仍显著落后于英伟达，难以改变数据中心AI训练/推理市场格局。\n   - **端侧叙事商业化兑现慢**：AI PC渗透率仍受制于软件生态与杀手级应用，AMD消费级APU单价、毛利贡献远低于MI300/350等数据中心产品，即便端侧推理份额提升，对AMD整体营收弹性有限。\n\n3. **关键驱动因素**\n   - **MI系列在LLM推理市场的实际放量节奏**：尤其是MI355X/MI400对Qwen、DeepSeek等开源大模型的适配与超大规模客户部署进展，这是AMD AI故事能否兑现为营收的核心变量。\n   - **ROCm对下一代开源模型（如Qwen4、DeepSeek V5）的首发适配能力**。\n\n4. **市场影响评估**\n   - 短期：事件级别有限，AMD股价更多受财报与MI300系列出货指引驱动；本次博客属营销性质，催化作用偏弱。\n   - 中期：若后续3-6个月社区benchmark持续验证Strix Halo与R9700的推理竞争力，将强化AMD在AI PC与边缘推理的差异化叙事，为消费业务提供估值支撑。\n\n5. **时间线推断**\n   - 2026年Q4：Strix Halo笔记本/迷你工作站陆续上市，社区端极限测试数据将密集释出。\n   - 2027年1月CES：AMD有望公布下一代Strix Halo后继产品及MI系列路线图，AI PC叙事将进入下一阶段验证窗口。",
+      "ticker_counts": {
+        "AMD": 1
+      },
+      "max_item_score": 7
+    },
+    "evt_ffe33f9ac08c": {
+      "event_id": "evt_ffe33f9ac08c",
+      "title": "段永平继续加仓拼多多，大幅减持英伟达、谷歌",
+      "summary": "段永平旗下H&H International Investment基金二季度总持仓约191亿美元（人民币1370亿），较去年四季度末200亿美元缩水。二季度操作：继续加仓拼多多，重新买入阿里巴巴，减持苹果、英伟达、谷歌、微软，清仓台积电、CrowdStrike等。值得关注的是其大幅减持英伟达、谷歌等AI核心标的，反映对AI龙头估值/景气度的态度转向谨慎。",
+      "tickers": [
+        "台积电",
+        "微软",
+        "英伟达",
+        "谷歌"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand"
+      ],
+      "direction": {
+        "英伟达": "negative",
+        "谷歌": "negative",
+        "微软": "negative",
+        "台积电": "negative"
+      },
+      "item_ids": [
+        "216fc496456d770f9ed79c0d4245b6cdc1832e6d"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-15T06:42:21Z",
+      "first_published_at": "2026-08-15T06:35:09Z",
+      "last_updated_at": "2026-08-15T06:42:21Z",
+      "is_active": true,
+      "significance": 5,
+      "status": "developing",
+      "deep_analysis": "**1. 看多逻辑**\n\n第一，段永平的调仓并非全面看空AI，而是结构性切换与获利了结的组合。其加仓拼多多、重新买入阿里，反映对中国消费/电商复苏的信心；同时清仓台积电、减持英伟达，可能锁定前期AI算力链超额收益，而非否定AI长期趋势。组合层面的\"高切低\"逻辑仍可成立。第二，AI龙头估值消化已部分兑现，英伟达、谷歌年内经历回调后，PE/Growth匹配度改善，叠加2026年下半年Blackwell/Rubin新平台出货与Gemini/Agent商业化催化，基本面与估值有望形成共振。第三，知名投资人减持往往是\"最后一波看空力量\"出清的信号，历史上巴菲特减持苹果等案例在事后被证明偏左侧，AI龙头机构持仓筹码可能反而因此趋于稳定。\n\n**2. 看空风险**\n\n第一，段永平是公认的\"消费股大师\"而非AI产业专家，其对英伟达、谷歌的减持更多体现个人风格漂移（向中概消费倾斜），而非对AI算力需求的前瞻判断，不宜过度放大信号权重。第二，compute_demand主线面临实质性分歧：超大规模云厂商capex增速若在Q3/Q4出现环比放缓（如AWS、Azure增速回落），叠加企业级AI ROI数据不达预期，将动摇AI龙头的核心估值锚。第三，减持是\"developing\"级别事件，若后续Pabrai、Klarman、软银等更大规模的机构同步减持，形成共振效应，将对AI算力链形成系统性估值压制。台积电被清仓尤其值得警惕，因其是算力需求最纯粹的对冲标的。\n\n**3. 关键驱动因素**\n\n一是超大规模云厂商Q3 capex指引及实际资本开支落地情况，这是验证AI需求成色的最直接指标；二是英伟达Q3财报中Blackwell出货量级与数据中心环比增速，以及客户集中度变化，谷歌TPU自给率提升对英伟达份额的侵蚀程度。\n\n**4. 市场影响评估**\n\n短期（1-3个月）：事件信号偏空，叠加台积电被清仓可能引发AI算力链情绪性回调，英伟达、谷歌承压，但因段永平持仓规模相对有限（百亿美元级），冲击幅度有限，更多体现为\"高位股\"的获利了结压力。中期（6-12个月）：市场焦点将转向基本面验证，若云厂商capex维持高增长、AI商业化加速，减持事件将逐步被消化，AI龙头有望重拾升势；反之则可能形成\"戴维斯双杀\"。\n\n**5. 时间线推断**\n\n关键节点：①2026年8-9月，超大规模云厂商Q2财报及Q3 capex指引披露；②2026年11月，英伟达Q3财报，Blackwell/Rubin出货节奏明确；③2026年Q4至2027年Q1，13F披露窗口下其他知名投资人调仓动向，将形成对段永平信号的交叉验证。若Q3财报季capex与AI收入双双超预期，当前减持信号将被证伪；反之则需警惕板块系统性回调。",
+      "ticker_counts": {
+        "台积电": 1,
+        "微软": 1,
+        "英伟达": 1,
+        "谷歌": 1
+      },
+      "max_item_score": 5
+    },
+    "evt_9f4f29a4834b": {
+      "event_id": "evt_9f4f29a4834b",
+      "title": "DeepSeek Harness插件一夜燃爆GitHub：长期记忆、电子宠物、4399小游戏全来了",
+      "summary": "DeepSeek发布Harness插件在GitHub上迅速走红，开发者基于该插件构建了长期记忆、电子宠物、4399小游戏等多种应用场景，展示出DeepSeek模型在Agent/插件生态方面的可扩展性和开发者社区号召力。值得关注的是，Harness让轻量级模型也能快速接入复杂功能，降低了AI应用开发门槛，进一步丰富了DeepSeek的开源生态。",
+      "tickers": [
+        "DeepSeek"
+      ],
+      "themes": [
+        "ai_monetization",
+        "model_capability"
+      ],
+      "direction": {
+        "DeepSeek": "positive"
+      },
+      "item_ids": [
+        "6542303ec3f27c348a312e03215d43a7794333ae"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-15T06:42:21Z",
+      "first_published_at": "2026-08-15T05:53:01Z",
+      "last_updated_at": "2026-08-15T06:42:21Z",
+      "is_active": true,
+      "significance": 5,
+      "status": "developing",
+      "deep_analysis": "**1. 看多逻辑**\n\n首先，Harness插件的爆火验证了DeepSeek在开发者社区的号召力与心智占有率。在国内大模型赛道中，模型能力趋同趋势下，\"生态粘性\"正在成为新的护城河。GitHub上的高星标、高fork本身就是一种网络效应：插件越多→应用场景越丰富→开发者停留时间越长→反向优化模型与工具链，形成正反馈闭环。长期记忆、电子宠物、4399小游戏看似娱乐化，实则验证了插件框架在多样化场景下的适配能力，尤其是\"长期记忆\"直接对应Agent核心能力，对企业级应用有明确迁移路径。\n\n其次，Harness显著降低了轻量级模型的接入门槛，这意味着DeepSeek的算力成本优势可被更广泛地开发者群体利用。在国内算力受限的背景下，\"小模型+插件增强\"的路径比堆参数更可持续，有望催生更多基于DeepSeek的垂直应用，间接推升API调用量与商业化空间。\n\n**2. 看空风险**\n\n其一，GitHub热度与商业化转化之间存在巨大鸿沟。4399小游戏、电子宠物等用例偏娱乐化、demo化，尚未涌现杀手级企业应用，开发者",
+      "ticker_counts": {
         "DeepSeek": 1
       },
       "max_item_score": 5
