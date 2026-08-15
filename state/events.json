@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-15T19:34:56Z",
+  "updated_at": "2026-08-15T19:58:19Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -26194,6 +26194,40 @@
       "deep_analysis": "",
       "ticker_counts": {},
       "max_item_score": 7
+    },
+    "evt_7d34aa552bef": {
+      "event_id": "evt_7d34aa552bef",
+      "title": "Sources: Nvidia in talks to invest up to $3B in SoftBank-backed data center developer SB Energy that aims to IPO soon and is behind a huge OpenAI campus in Ohio (The Information)",
+      "summary": "据The Information援引知情人士，英伟达正洽谈向软银集团旗下数据中心开发商SB Energy投资最多30亿美元。SB Energy计划近期IPO，并承建位于俄亥俄州的大型OpenAI园区。该交易若落地，将体现英伟达在AI基础设施领域的资本介入从芯片层延伸至电力与数据中心开发环节，强化其对超大算力集群生态的控制力。值得关注的是，OpenAI园区建设与英伟达投资形成闭环，反映头部AI玩家在算力、电力、土地等瓶颈资源上的卡位加速。",
+      "tickers": [
+        "OpenAI",
+        "英伟达"
+      ],
+      "themes": [
+        "chip_supply",
+        "compute_demand",
+        "datacenter_power"
+      ],
+      "direction": {
+        "英伟达": "positive",
+        "OpenAI": "positive"
+      },
+      "item_ids": [
+        "c15ca76a0997a22f7c25b84bc770824e076fac77"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-15T19:57:48Z",
+      "first_published_at": "2026-08-15T19:40:01Z",
+      "last_updated_at": "2026-08-15T19:57:48Z",
+      "is_active": true,
+      "significance": 8,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "英伟达": 1,
+        "OpenAI": 1
+      },
+      "max_item_score": 8
     }
   }
 }
