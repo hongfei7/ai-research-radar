@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-15T05:28:18Z",
+  "updated_at": "2026-08-15T05:55:01Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -25236,6 +25236,80 @@
         "OpenAI": 1
       },
       "max_item_score": 7
+    },
+    "evt_ab15b9174959": {
+      "event_id": "evt_ab15b9174959",
+      "title": "联想集团刘军：AI PC国内市场销量占比过半",
+      "summary": "联想集团执行副总裁兼中国区总裁刘军披露：联想AI PC全球出货量同比增86%，国内AI PC销量已占其笔电总销量50%以上。战略上推行\"一体多端\"，以个人超级智能体赋能终端；技术侧全面升级端侧与边缘算力，推动Token本地化生产以兼顾隐私与成本；生态侧加速引入Skills，强化天禧AI的L3级任务执行能力。AI PC渗透率突破临界值，端侧推理算力与生态能力成竞争焦点。",
+      "tickers": [
+        "AMD",
+        "Intel",
+        "小米",
+        "高通"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand",
+        "edge_ai"
+      ],
+      "direction": {
+        "Intel": "positive",
+        "AMD": "positive",
+        "高通": "positive",
+        "小米": "neutral"
+      },
+      "item_ids": [
+        "7b8adc51a11f93430514d2b34de42a8a8c9115ef"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-15T05:54:33Z",
+      "first_published_at": "2026-08-15T05:45:45Z",
+      "last_updated_at": "2026-08-15T05:54:33Z",
+      "is_active": true,
+      "significance": 5,
+      "status": "developing",
+      "deep_analysis": "**1. 看多逻辑**\n\n① 渗透率突破临界值，趋势确立：国内AI PC占联想笔电销量50%以上，全球出货量同比增86%，标志着AI PC从尝鲜阶段进入主流采用阶段，量价齐升通道有望打开，端侧NPU芯片（AMD/Intel/高通）出货弹性显著。\n\n② 商业模式从硬件向\"智能体+Skills生态\"延伸：联想\"一体多端\"战略叠加天禧AI的L3级任务执行能力，将PC从一次性销售转向\"硬件+订阅服务+生态分成\"的多元变现路径，ASP与LTV有望同步抬升。\n\n③ 端侧推理分流云端算力需求：本地Token生产兼顾隐私与成本，弱化对云端大模型推理的依赖，形成端云协同而非替代的格局，整体AI算力蛋糕扩大，PC芯片厂商和联想供应链均受益。\n\n**2. 看空风险**\n\n① 高管口径需交叉验证：厂家自报渗透率存在促销美化成分，IDC/Gartner等第三方数据尚未完全印证，国内50%+占比可能含早期尝鲜用户及库存压力，实际换机需求强度待观察。\n\n② ASP与毛利承压：小米、华为等加速布局AI PC，叠加AMD/Intel/高通在端侧NPU的军备竞赛，价格战风险上升；端侧Token生产成本虽低于云端，但用户付费意愿尚未验证。\n\n③ 云端算力逻辑边际受损：本地推理崛起意味着部分轻量级AI任务不再回流云端，对数据中心capex增量构成结构性替代压力，纯云算力链估值或受压制。\n\n**3. 关键驱动因素**\n\n① 联想AI PC季度ASP与渗透率走势，验证\"量价齐升\"假设；② Intel/AMD/高通下一代AI PC芯片的NPU算力跃升节奏及市占切换，绑定芯片厂商估值锚。\n\n**4. 市场影响评估**\n\n短期（1-3个月）：情绪驱动，联想供应链及PC芯片厂商（AMD/Intel）有望获得估值修复；中期（6-12个月）：取决于生态变现验证，若Skills生态能跑通订阅模式，联想将获得平台型溢价，否则回归纯硬件估值。\n\n**5. 时间线推断**\n\n① 2026年Q3联想FY26/27中报：AI PC出货量、平均售价及毛利率分项是首要验证窗口；② 2026年Q4—2027年Q1：Intel Panther Lake、AMD Strix Halo下一代AI PC平台量产，端侧NPU算力跃升将再次催化换机潮；③ 持续跟踪天禧AI Skills生态开发者数量与第三方接入进度，L3级智能体成熟度决定长期定价权。",
+      "ticker_counts": {
+        "Intel": 1,
+        "AMD": 1,
+        "高通": 1,
+        "小米": 1
+      },
+      "max_item_score": 5
+    },
+    "evt_d9cbfea0adf9": {
+      "event_id": "evt_d9cbfea0adf9",
+      "title": "“千问办公”首发上线GLM-5.3、DeepSeek V4 Pro两款模型",
+      "summary": "8月15日，阿里巴巴旗下Agent产品千问办公首发上线GLM-5.3和DeepSeek V4 Pro两款前沿模型，用户可在产品首页前沿模型档位直接选用。加上此前已上线的Qwen3.8-Max，千问办公已支持三款国产旗舰模型。",
+      "tickers": [
+        "DeepSeek",
+        "阿里巴巴"
+      ],
+      "themes": [
+        "ai_monetization",
+        "domestic_substitution",
+        "model_capability"
+      ],
+      "direction": {
+        "阿里巴巴": "positive",
+        "DeepSeek": "positive"
+      },
+      "item_ids": [
+        "3a44bbfda9af1ebe0452b8560e5008a95d5b8933"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-15T05:54:33Z",
+      "first_published_at": "2026-08-15T05:28:03Z",
+      "last_updated_at": "2026-08-15T05:54:33Z",
+      "is_active": true,
+      "significance": 5,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "阿里巴巴": 1,
+        "DeepSeek": 1
+      },
+      "max_item_score": 5
     }
   }
 }
