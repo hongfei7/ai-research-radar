@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-15T21:50:56Z",
+  "updated_at": "2026-08-15T22:25:04Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -26135,9 +26135,9 @@
       "first_seen_at": "2026-08-15T15:52:01Z",
       "first_published_at": "2026-08-15T15:41:02Z",
       "last_updated_at": "2026-08-15T15:52:01Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 8,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "1. 看多逻辑",
       "ticker_counts": {
         "Anthropic": 1,
