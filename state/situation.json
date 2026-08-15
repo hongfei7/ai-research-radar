@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-15T01:54:59Z",
-  "text": "当前共有 15 个活跃事件。要点包括: Anthropic Q2营收破115亿美元，同比飙升逾13倍且经调整运营利润转正; Sources: Nvidia has reworked a deal to finance an OpenAI Ohio data center campus so that it would initially guarantee only half of its planned $250B backstop (Anissa Gardizy/Wall Street Journal); Sources: Anthropic projects 2028 revenue of ~$190B-$200B, vs. a revenue run rate of $47B in May, as bankers and investors price the company ahead of an IPO (Echo Wang/Reuters); Source: OpenAI CFO told investors that enterprise business now generates more revenue than ChatGPT-led consumer business; enterprise customers grew 32% in July (Kate Rooney/CNBC); Filing: Nvidia has a nearly $21B stake in SpaceX and a $30B stake in Intel; Nvidia invested as much as $2B in xAI in 2025 and $5B in Intel (Lynn Doan/Bloomberg)。",
-  "since": "2026-08-15T01:54:59Z",
-  "active_event_count": 15,
+  "generated_at": "2026-08-15T03:00:32Z",
+  "text": "截至 2026-08-15 11:00 HKT，本轮增量信息集中于地缘与算力供需两端。地缘方面，美国拟告知35个伙伴国，若同时加入中国主导AI框架将被排除于\"Pax Silica\"倡议之外，AI阵营分化由芯片出口管制延伸至标准与联盟层面。算力供需方面，英伟达将OpenAI俄亥俄数据中心担保由2500亿美元进一步缩减至1200亿美元以下，财务承诺敞口收窄；AI产业虹吸存储产能加剧消费端挤压，OpenAI月采90万片DRAM晶圆占全球40%，预计2026年AI占用全球内存产能66%，国内手机全行业涨价，单款最高涨500元。模型层，智谱GLM-5.3编码能力较5.2提升约50%、CyberGym以84.5%超闭源模型，但实测表现高度依赖提示质量。此外，CoreWeave财报折射\"高营收、高亏损、高Capex\"算力层重资产困局，回报周期不确定性上升。",
+  "since": "2026-08-15T03:00:32Z",
+  "active_event_count": 19,
   "key_themes": [
     "ai_monetization",
-    "compute_demand",
     "model_capability",
+    "compute_demand",
     "domestic_substitution",
     "chip_supply"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n关于Anthropic存在两个口径冲突：36kr称Q2营收超115亿美元、年化约460亿；Reuters/Techmeme消息源则称2026年5月年化运行率已达470亿美元，且2028年预计1900-2000亿美元。两者方向一致但前者是Q2实绩、后者是run-rate，且2028年预测属\"消息人士\"披露（低可信度），需后续正式财报或S-1文件验证。同时，OpenAI人才外流（负面）与Anthropic商业化跃升（正面）形成对照，暗示头部AI公司竞争格局可能正在重排。\n\n【新兴趋势】\n三条线索反复出现：（1）中国开源大模型双线并进——阿里Qwen3.8（30亿次下载）与DeepSeek V4 Pro+Harness同步发力，国产模型与国家超算互联网\"十万卡级算力池\"深度绑定；（2）Agent框架分化——DeepSeek选择\"模型中立、横向开源\"路径，与OpenAI/Anthropic的\"向下整合\"策略形成路线之争；（3）美国对华芯片管制从逻辑/AI芯片向存储领域延伸，苹果被迫转向美光/海",
-  "trend_spotting": "Anthropic内部Model 2在CoBench v2上领先Mythos 5达12.5个百分点，且报告明确85%得分即可替代自家研究员——这一阈值首次被量化为\"前沿AI替代顶级知识工作者\"的可操作基准。需注意来源为匿名测试数据，尚未官方确认。\n\n【新兴趋势】头部实验室正从\"能力发布\"转向\"能力囤积\"。Model 2暂不发布表明，最强模型已脱离通用API商业化轨道，转为内部研究飞轮与定制化企业服务的核心资产。\n\n【早期信号】85%替代阈值是关键先兆。若CoBench v2具备独立可复现性，将成为首个可被引用、可对标的\"AGI工程里程碑\"——行业讨论重心可能从\"何时到来\"切换为\"如何度量\"。\n\n【市场盲点】公众版与实验室版的能力鸿沟正在拉大而非收敛。投资者习惯用\"公开模型迭代速度\"衡量赛道进展，但真正的能力前沿已隐入闭源。市场上沿用\"OpenAI/Anthropic/Google每隔X月发布新模型\"线性外推的逻辑可能系统性低估曲线斜率。\n\n【值得关注的拐点】\"2027起飞\"的自述时间表与当前仅4个月的窗口，若叠加融资催化与Model 2未发布双重信号，意味着下一代模型发布节奏或被刻意压缩，留给下游应用方适配的窗口极窄。"
+  "cross_analysis": "【核心矛盾】\n英伟达对OpenAI的担保从2500亿骤降至1200亿以下（缩减超50%），与CoreWeave\"高营收/高亏损/高Capex\"财报共同暴露AI算力层的财务可持续性分歧：一边是\"算力需求超级周期\"叙事，一边是回报周期被市场重新定价。同时，Pax Silica排他性框架被解读为国产替代利好，但手机端AI虹吸存储产能导致小米等终端承压，国内AI供应链内部并非同向受益。\n\n【新兴趋势】\nAI对全球存储/内存产能的虹吸效应成为跨条目的隐性主线——从OpenAI月采购90万片DRAM晶圆（占全球40%）到手机存储采购价同比涨近200%，算力需求正通过成本传导挤压消费电子。英伟达角色从纯算力供应商转向\"生态投资人\"信号明显：披露持有SpaceX约210亿、Intel约300亿股权，同时收缩对OpenAI的财务承诺。\n\n【信息盲点】\nHBM、CoWoS/先进封装、液冷/电力等算力链中游环节在本轮几乎缺席；AMD、博通作为英伟达潜在替代方未被讨论；阿里、字节、腾讯等中国大厂算力Capex节奏未见报道；Pax Silica具体成员清单与中国对应框架落地节奏仍是关键未知数。\n\n【跨标的联动】\n英伟达-OpenAI-CoreWeave-微软/戴尔/超微电脑构成算力链情绪传导链路；美光-台积电-高通-小米则呈现\"AI上游受益、消费电子下游承压\"的对立结构；国产替代链（寒武纪/海光/中芯/工业富联）",
+  "trend_spotting": "【新兴趋势】后训练强化学习正取代预训练成为模型能力跃升的主杠杆：智谱GLM-5.3与5.2共用基座，仅靠RL即在漏洞挖掘"
 }
