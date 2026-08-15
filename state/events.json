@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-15T14:52:17Z",
+  "updated_at": "2026-08-15T15:23:51Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -25591,9 +25591,9 @@
       "first_seen_at": "2026-08-15T09:03:38Z",
       "first_published_at": "2026-08-15T08:46:20Z",
       "last_updated_at": "2026-08-15T09:03:38Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 8,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "1. 看多逻辑\n其一，527.8亿单季capex(同比+176%)及管理层\"自用而非转租\"的表态，与海外大厂逻辑趋同，强力验证GPU/HBM/服务器/电力链需求强度，英伟达及国内算力供应链确定性受益。其二，腾讯主业韧性突出——剔除AI后经营利润增速可达19%，",
       "ticker_counts": {
         "英伟达": 1,
