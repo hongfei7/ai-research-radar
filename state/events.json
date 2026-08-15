@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-15T16:27:36Z",
+  "updated_at": "2026-08-15T16:54:09Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -26144,6 +26144,30 @@
         "英伟达": 1
       },
       "max_item_score": 8
+    },
+    "evt_a958d7ca4427": {
+      "event_id": "evt_a958d7ca4427",
+      "title": "SpaceX officially closes its Cursor acquisition",
+      "summary": "SpaceX正式完成对AI编程初创公司Cursor的收购，Cursor正式成为SpaceX旗下业务。Cursor以AI辅助代码生成工具著称，本次收购详情（金额、条款）尚未披露。值得关注的是，SpaceX此前以火箭和星链业务闻名，此番纳入AI编程工具，折射出大型科技/航天平台对AI编程生产力工具的战略兴趣。",
+      "tickers": [],
+      "themes": [
+        "ai_monetization",
+        "model_capability"
+      ],
+      "direction": {},
+      "item_ids": [
+        "04418f82cc0c36b2d99e9e47fbff9a39807f1b42"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-15T16:53:50Z",
+      "first_published_at": "2026-08-15T16:30:00Z",
+      "last_updated_at": "2026-08-15T16:53:50Z",
+      "is_active": true,
+      "significance": 5,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {},
+      "max_item_score": 5
     }
   }
 }
