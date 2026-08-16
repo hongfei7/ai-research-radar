@@ -1,67 +1,7 @@
 {
-  "morning_last_date": "2026-08-16",
+  "morning_last_date": "2026-08-17",
   "weekly_last_slot": "2026-W33",
   "breaking_fingerprints": [
-    {
-      "tickers": [
-        "Meta",
-        "谷歌",
-        "阿里巴巴"
-      ],
-      "features": [
-        "227m",
-        "3b",
-        "418m",
-        "accumulated",
-        "alibaba",
-        "bloomberg",
-        "downloads",
-        "face",
-        "global",
-        "google",
-        "had",
-        "have",
-        "hugging",
-        "in",
-        "meta",
-        "models",
-        "months",
-        "open-weight",
-        "past",
-        "rai",
-        "saritha",
-        "six",
-        "the",
-        "while"
-      ],
-      "sent_at": "2026-08-15T14:53:42Z"
-    },
-    {
-      "tickers": [
-        "Anthropic",
-        "OpenAI",
-        "英伟达"
-      ],
-      "features": [
-        "anthropic",
-        "as",
-        "bet",
-        "bubble",
-        "defy",
-        "forces",
-        "investor",
-        "its",
-        "just",
-        "numbers",
-        "nvidia",
-        "openai",
-        "pressure",
-        "shrink",
-        "to",
-        "warnings"
-      ],
-      "sent_at": "2026-08-15T15:52:41Z"
-    },
     {
       "tickers": [
         "Anthropic"
