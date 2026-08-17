@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-17T11:37:06Z",
-  "text": "当前共有 30 个活跃事件。要点包括: Token未来更贵还是更便宜？定价权之争白热化; OpenAI解散风险团队，冲刺史上最大IPO：先把安全放下; Qwen 3.8 27B shows a 17GB open-weight general purpose model can have long context, effective tool calling, strong vision ability, and competent code generation (Simon Willison/Simon Willison's Weblog); Analysis: nine top tech companies including Alphabet and Meta had ~$3T of AI-related off-balance-sheet commitments, far exceeding their $600B in reported capex (Wall Street Journal); Alphabet拟在澳大利亚首次发债募资约36亿美元。",
-  "since": "2026-08-17T11:37:06Z",
-  "active_event_count": 30,
+  "generated_at": "2026-08-17T12:02:13Z",
+  "text": "截至2026-08-17 20:02 HKT，本轮三则新增：Anthropic以最高API定价拿下最大收入份额，AI变现进入\"能力溢价\"阶段；Intel Arc Pro B70显卡月内涨价48%逼近2000美元，显存紧缺与AI负载共同推升硬件成本；国务院李强主持全体会议，强调加大新兴支柱产业与未来产业培育力度，强化科技赋能。",
+  "since": "2026-08-17T12:02:13Z",
+  "active_event_count": 29,
   "key_themes": [
     "compute_demand",
     "ai_monetization",
-    "model_capability",
     "datacenter_power",
+    "model_capability",
     "chip_supply"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n光互连市场预测（条目1）描绘了AI驱动下10倍增长的乐观图景，而切罗基部落禁建超大规模数据中心（条目2）揭示社区/政策阻力正约束供给侧落地节奏——需求爆发与建设受阻形成张力。对DeepSeek的解读亦存在分歧：条目3（钛媒体）以跑分对比暗示其技术领先优势收窄（direction: negative），条目4则强调其API涨价反映定价权上升，视角从\"技术追赶\"转向\"商业化护城河\"，两者评估维度不同但结论需并读。GPU涨价方面（条目5），Jon Peddie认为涨幅已超显存成本本身，暗示存在超额提价行为，与单纯\"成本传导\"叙事存在分歧。\n\n【新兴趋势】\nAI智能体安全治理在两条独立报道中集中浮现：OpenAI推出攻击型红队模型GPT-5.6-Cyber（条目8），同时其自身智能",
+  "cross_analysis": "【核心矛盾】\nAnthropic案例与常规\"价格战\"逻辑相悖：作为头部大模型中最贵的API，却获得了最高的收入份额（hackernews，低可信度），暗示企业客户愿为能力溢价买单，但单一来源样本有限，尚未与OpenAI官方数据交叉验证。同时，Intel Arc Pro B70工作站卡一个月内涨价48%（tomshardware），与硬件\"逐月降价\"的传统规律相悖，反映AI推理需求对特定显存配置（32GB）的拉动存在结构性短缺，但需观察是否仅为短期供应波动。\n\n【新兴趋势】\n\"AI算力溢价\"是本轮最显著的共同主题：Anthropic以高定价换取高收入份额，Intel因AI工作负载拉升高显存卡价格，两者均指向AI需求正在重塑硬件与软件两个层面的定价逻辑。此外，中国\"十五五\"规划开局之年的政策定调（36kr）反复强调\"未来产业培育\"，与算力需求形成政策-市场双轮驱动。\n\n【信息盲点】\nNVIDIA、AMD作为AI GPU核心受益方在本轮完全缺席报道；HBM/存储环节（SK海力士、美光）作为算力瓶颈未被提及；中国国产算力链具体标的（寒武纪、海光、昇腾、中芯国际）在政策条目中仅被笼统点出，无独立事件验证；云厂商资本开支（AWS/Azure/阿里云）及电力/液冷基础设施亦无覆盖。\n\n【跨标的联动】\nAnthropic收入份额上升直接威胁OpenAI定价权，可能引发OpenAI降价或推出企业级套件；Intel涨价反映其正试图切入AI推理工作站细分赛道，与NVIDIA（RTX Ada/L40S）、AMD（ Radeon Pro）形成正面竞争但缺乏价格优势；中国\"未来产业\"政策利好国产算力替代链，对海外芯片（Intel/AMD/NVIDIA）在国内的市场空间构成长期挤压信号。",
   "trend_spotting": "阿里剥离游戏业务回笼至少15亿美元，资本进一步向AI capex与云端倾斜。同日南向资金对中芯国际净买入17.74亿港元、对智谱净买入16"
 }
