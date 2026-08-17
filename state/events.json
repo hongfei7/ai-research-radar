@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-17T20:31:39Z",
+  "updated_at": "2026-08-17T20:58:30Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -28954,9 +28954,9 @@
       "first_seen_at": "2026-08-17T13:08:06Z",
       "first_published_at": "2026-08-17T13:00:14Z",
       "last_updated_at": "2026-08-17T14:31:53Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 10,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "1. **看多逻辑**：①规模验证超级周期。10GW是迄今最大单体数据中心项目，相当于约500万张H100级别算力部署，以\"长协+信用背书\"模式锁定需求，标志AI算力建设进入国家级基础设施级别，彻底打开了上游硬件的TAM空间。②生态绑定加深护城河。英伟达对建成后的数据中心价值提供backstop，意味着芯片商已从\"卖铲人\"演变为\"算力资产共同投资人\"，大幅提升客户黏性与切换成本，参考此前CoreWeave案例，这种深度绑定将推升溢价能力。③催化产业链联动。10GW规模将直接拉动变压器、配电、液冷、光模块等供应链订单，为电力设备及液冷龙头带来确定性增量。\n\n2. **看空风险**：①电力交付不确定性极高。SB Energy的10GW可再生能源项目从规划到并网需3-5年以上，美国电网审批、变压器交付、施工人力均为瓶颈，历史上同类超大型项目普遍延迟且超支，英伟达的backstop可能在实际投运前持续暴露。②AI需求见顶风险。若企业级AI变现不及预期、模型边际收益递减，10GW算力利用率不足将拖累整体IRR，OpenAI收入增速若放缓至40%以下，长协将转化为沉重负担。③资产负债表风险传导。英伟达backstop实质上将芯片商与重资产挂钩，若AI泡沫破裂或ASIC替代加速，可能引发远期减值，削弱资产负债表健康度。\n\n3. **关键驱动因素**：①10GW分批并网的实际节奏（首批预计2027-2028年）；②企业级AI收入能否在2026-2027年验证持续性，决定利用率假设是否成立。\n\n4. **市场影响评估**：短期（1-3个月）催化AI基建链情绪，英伟达估值叙事强化；中期（6-18个月）若首批电力按期交付，将触发供应链业绩兑现；反之则面临叙事证伪压力。\n\n5. **时间线推断**：2026Q4-2027Q1首批电力有望启动，2027-2028年进入密集交付期；英伟达backstop规模与条款或在下季财报披露。",
       "ticker_counts": {
         "英伟达": 2,
@@ -29236,9 +29236,9 @@
       "first_seen_at": "2026-08-17T14:31:53Z",
       "first_published_at": "2026-08-17T13:52:30Z",
       "last_updated_at": "2026-08-17T14:31:53Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 7,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "",
       "ticker_counts": {
         "美光": 1
@@ -29267,9 +29267,9 @@
       "first_seen_at": "2026-08-17T14:31:53Z",
       "first_published_at": "2026-08-17T14:00:01Z",
       "last_updated_at": "2026-08-17T14:31:53Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 5,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "看多逻辑方面：其一，AMD以自身为案例验证了AI对软件工程效率的实质性提升，30%生产力增益意味着研发周期缩短与产品迭代加速，对其在对标NVDA的AI芯片市场缩短time-to-design具有战略价值，研发杠杆有望传导至产品竞争力；其二，AMD明确指向AI Agent集群的下一阶段范式跃迁，若该范式成立，单一软件任务将从\"单Copilot辅助\"升级为多Agent协同计算，对",
       "ticker_counts": {
         "AMD": 1
@@ -29731,6 +29731,40 @@
         "AMD": 1
       },
       "max_item_score": 6
+    },
+    "evt_f4647acd1861": {
+      "event_id": "evt_f4647acd1861",
+      "title": "Anthropic Has Finished Training Mythos 2 But Does Not Currently Plan To Release It. Focus Is Now On Internal Improvements.",
+      "summary": "Anthropic已完成下一代模型Mythos 2的训练，但目前不计划公开发布，原因是防止中国公司通过蒸馏获取其能力。内部Mythos 3的研发仍在推进。社区评价称，尽管GPT 5.6 Sol引发关注，公开发布的Claude Fable 5仍是最智能的公开模型；Anthropic可能在OpenAI发布明显更优模型时才跟进发布新版本。",
+      "tickers": [
+        "Anthropic",
+        "OpenAI"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand",
+        "model_capability"
+      ],
+      "direction": {
+        "Anthropic": "neutral",
+        "OpenAI": "neutral"
+      },
+      "item_ids": [
+        "9c24e0687805bee0a260b2fffab4e42d7151bd70"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-17T20:58:13Z",
+      "first_published_at": "2026-08-17T20:21:38Z",
+      "last_updated_at": "2026-08-17T20:58:13Z",
+      "is_active": true,
+      "significance": 8,
+      "status": "developing",
+      "deep_analysis": "**看多逻辑：**\n1. **技术领先信号明确**：Mythos 2已完成训练但\"按兵不发\"，说明Anthropic已具备显著代际优势，主动选择不公开即是最强的能力背书，护城河进一步加深。\n2. **IP保护赋予定价权**：防止中国蒸馏的防御性策略，本质是将技术领先转化为商业领先，可为现有Fable 5 API维持溢价定价、延缓国产模型追赶争取时间窗口。\n3. **Mythos 3研发未停**：内部迭代节奏未受发布策略影响，长期技术曲线仍向上，对长期持有者而言\"非卖品储备\"反而增强了未来发布时的冲击力。\n\n**看空风险：**\n1. **短期算力需求断档**：不发布意味着推理token量与训练算力采购阶段性放缓，对AWS、Google等算力供应商及上游芯片需求形成二阶利空。\n2. **SOTA地位可能被动让渡**：社区已承认GPT 5.6 Sol引发关注，若OpenAI率先发布更强模型，Anthropic主动选择\"后发\"反而暴露策略被动，公开发布市场份额面临侵蚀。\n3. **收入兑现节奏延后**：API收入与企业客户续费依赖于明确的版本升级故事，长期不释放新模型将削弱Sales侧的客户拓展能力。\n\n**关键驱动因素：**\n1. OpenAI下一代模型发布时间与能力对标——这是Anthropic是否被迫\"亮牌\"的核心触发器。\n2. 中国头部模型厂商通过蒸馏/合成数据追赶的实际速度——若蒸馏防护被突破，防御策略失效。\n\n**市场影响评估：**\n- 短期（1-3个月）：偏负面。算力消耗预期下修，Anthropic生态合作伙伴（云厂、芯片）面临需求侧弱化信号；OpenAI在公开模型市场获相对窗口。\n- 中期（6-12个月）：取决于博弈结果。若OpenAI未发布碾压性模型",
+      "ticker_counts": {
+        "Anthropic": 1,
+        "OpenAI": 1
+      },
+      "max_item_score": 8
     }
   }
 }
