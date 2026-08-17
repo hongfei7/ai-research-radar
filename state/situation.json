@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-17T11:00:59Z",
+  "generated_at": "2026-08-17T11:37:06Z",
   "text": "当前共有 30 个活跃事件。要点包括: Token未来更贵还是更便宜？定价权之争白热化; OpenAI解散风险团队，冲刺史上最大IPO：先把安全放下; Qwen 3.8 27B shows a 17GB open-weight general purpose model can have long context, effective tool calling, strong vision ability, and competent code generation (Simon Willison/Simon Willison's Weblog); Analysis: nine top tech companies including Alphabet and Meta had ~$3T of AI-related off-balance-sheet commitments, far exceeding their $600B in reported capex (Wall Street Journal); Alphabet拟在澳大利亚首次发债募资约36亿美元。",
-  "since": "2026-08-17T11:00:59Z",
+  "since": "2026-08-17T11:37:06Z",
   "active_event_count": 30,
   "key_themes": [
     "compute_demand",
     "ai_monetization",
-    "datacenter_power",
     "model_capability",
+    "datacenter_power",
     "chip_supply"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n桥水Q2近乎清仓美光、减持微软（看空AI算力链情绪）与万国数据上调指引、100亿扩建IDC（看多中国AI需求）形成显著分歧，反映美股机构资金对AI基建持续性的警惕，与中国本土算力供需景气形成背离。同时，Meta/BlackRock 140亿美元数据中心因再保拒绝全损险暴露融资风险，提示美方超大规模capex或遇边际约束，而GDS的100亿扩产则显示中方AI算力仍处放量期——同一周期下中美AI基建节奏出现温差。\n\n【新兴趋势】\n\"算力即瓶颈\"信号反复出现：显存危机催生GDDR6改装市场、桥水减持美光/希捷、Meta数据中心保险缺口，三条线索共同指向存储与电力正取代芯片本身成为AI扩张的边际约束。另一暗线是阿里同日内连发Seedance 2.5与HappyShrimp，AI多模态商业化进入\"密集出货\"节奏。DeepSeek Harness插件化则代表Agent基建自进化的范式升级。\n\n【信息盲点】\n本轮未覆盖AMD（英伟达唯一被提及的算力对手盘）、TSMC/ASML（设备链）、Broadcom/Arista/Marvell（AI集群网络刚需），以及SK海力士/三星（HBM主供）。电力侧除桥水新进Eversource外，A股/港股电力运营商、燃机厂商未涉及——而这恰是GDS 100亿capex与Meta/BlackRock保险风险共同指向的二阶瓶颈。\n\n【跨标的联动】\nGDS 100亿扩产→中科曙光、浪潮信息、工业富联服务器/机柜链的二阶传导（原文已点明）。存储侧，美光被桥水清仓叠加GDDR6改装市场活跃，提示DRAM/NAND现货价格已传导至消费级改装生态，对海力士/三星形成定价信号。Meta保险缺口与桥",
+  "cross_analysis": "【核心矛盾】\n光互连市场预测（条目1）描绘了AI驱动下10倍增长的乐观图景，而切罗基部落禁建超大规模数据中心（条目2）揭示社区/政策阻力正约束供给侧落地节奏——需求爆发与建设受阻形成张力。对DeepSeek的解读亦存在分歧：条目3（钛媒体）以跑分对比暗示其技术领先优势收窄（direction: negative），条目4则强调其API涨价反映定价权上升，视角从\"技术追赶\"转向\"商业化护城河\"，两者评估维度不同但结论需并读。GPU涨价方面（条目5），Jon Peddie认为涨幅已超显存成本本身，暗示存在超额提价行为，与单纯\"成本传导\"叙事存在分歧。\n\n【新兴趋势】\nAI智能体安全治理在两条独立报道中集中浮现：OpenAI推出攻击型红队模型GPT-5.6-Cyber（条目8），同时其自身智能",
   "trend_spotting": "阿里剥离游戏业务回笼至少15亿美元，资本进一步向AI capex与云端倾斜。同日南向资金对中芯国际净买入17.74亿港元、对智谱净买入16"
 }
