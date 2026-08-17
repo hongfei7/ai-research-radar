@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-17T10:18:27Z",
-  "text": "截至 2026-08-17 18:18 HKT，本轮新增三条动态：华尔街日报披露Alphabet、Meta等9家科技巨头AI相关表外承诺约3万亿美元，远超其披露的6000亿美元资本开支，实际投资压力或被低估；据报Stripe拟以超70亿美元收购AI模型聚合平台OpenRouter，切入模型分发基础设施层；钛媒体观察指出AI数据中心正面临网络瓶颈，互连与高速互联成为制约算力释放的关键短板。",
-  "since": "2026-08-17T10:18:27Z",
-  "active_event_count": 29,
+  "generated_at": "2026-08-17T11:00:59Z",
+  "text": "当前共有 30 个活跃事件。要点包括: Token未来更贵还是更便宜？定价权之争白热化; OpenAI解散风险团队，冲刺史上最大IPO：先把安全放下; Qwen 3.8 27B shows a 17GB open-weight general purpose model can have long context, effective tool calling, strong vision ability, and competent code generation (Simon Willison/Simon Willison's Weblog); Analysis: nine top tech companies including Alphabet and Meta had ~$3T of AI-related off-balance-sheet commitments, far exceeding their $600B in reported capex (Wall Street Journal); Alphabet拟在澳大利亚首次发债募资约36亿美元。",
+  "since": "2026-08-17T11:00:59Z",
+  "active_event_count": 30,
   "key_themes": [
     "compute_demand",
     "ai_monetization",
-    "model_capability",
     "datacenter_power",
+    "model_capability",
     "chip_supply"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nWSJ披露9大科技公司AI表外承诺约$3T，与报表披露的$6000亿资本开支存在巨大口径差，真实现金压力或被严重低估；但钛媒体视角认为当前瓶颈已从算力转向网络互连，暗示部分资本支出可能投向错配。两者分歧在于：是真\"投入不足需追加\"还是\"结构错配需调整\"。\n\n【新兴趋势】\n\"AI基础设施分层化\"是本轮暗线——表层算力（Item1）、中间层网络/封装瓶颈（Item3）、应用层模型聚合（Item2）依次浮现，反映AI产业链价值正在从芯片向互联、聚合、支付等相邻环节扩散。\n\n【信息盲点】\n未见台积电/CoWoS产能、SK海力士/美光HBM供给、电力/核电（Vistra、OKLO）及Oracle等\"二阶受益方\"的明确报道；亦缺中国大模型与云厂商的对照数据，无法判断表外融资模式是否全球同步。\n\n【跨标的联动】\n超大规模云厂商（MSFT/GOOG/META/AMZN）的$3T表外承诺 → 直接拉动NVDA/Broadcom/Marvell的互联订单 → 反过来受限于台积电先进封装与HBM产能；Stripe收购OpenRouter则暗示支付巨头正向AI模型分发层纵向延伸，未来或与云厂商API形成\"支付+路由\"捆绑，冲击独立模型API中间商。",
+  "cross_analysis": "【核心矛盾】\n桥水Q2近乎清仓美光、减持微软（看空AI算力链情绪）与万国数据上调指引、100亿扩建IDC（看多中国AI需求）形成显著分歧，反映美股机构资金对AI基建持续性的警惕，与中国本土算力供需景气形成背离。同时，Meta/BlackRock 140亿美元数据中心因再保拒绝全损险暴露融资风险，提示美方超大规模capex或遇边际约束，而GDS的100亿扩产则显示中方AI算力仍处放量期——同一周期下中美AI基建节奏出现温差。\n\n【新兴趋势】\n\"算力即瓶颈\"信号反复出现：显存危机催生GDDR6改装市场、桥水减持美光/希捷、Meta数据中心保险缺口，三条线索共同指向存储与电力正取代芯片本身成为AI扩张的边际约束。另一暗线是阿里同日内连发Seedance 2.5与HappyShrimp，AI多模态商业化进入\"密集出货\"节奏。DeepSeek Harness插件化则代表Agent基建自进化的范式升级。\n\n【信息盲点】\n本轮未覆盖AMD（英伟达唯一被提及的算力对手盘）、TSMC/ASML（设备链）、Broadcom/Arista/Marvell（AI集群网络刚需），以及SK海力士/三星（HBM主供）。电力侧除桥水新进Eversource外，A股/港股电力运营商、燃机厂商未涉及——而这恰是GDS 100亿capex与Meta/BlackRock保险风险共同指向的二阶瓶颈。\n\n【跨标的联动】\nGDS 100亿扩产→中科曙光、浪潮信息、工业富联服务器/机柜链的二阶传导（原文已点明）。存储侧，美光被桥水清仓叠加GDDR6改装市场活跃，提示DRAM/NAND现货价格已传导至消费级改装生态，对海力士/三星形成定价信号。Meta保险缺口与桥",
   "trend_spotting": "阿里剥离游戏业务回笼至少15亿美元，资本进一步向AI capex与云端倾斜。同日南向资金对中芯国际净买入17.74亿港元、对智谱净买入16"
 }
