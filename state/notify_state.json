@@ -4,66 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "Anthropic",
-        "DeepSeek",
-        "OpenAI"
-      ],
-      "features": [
-        "token",
-        "之争",
-        "争白",
-        "价权",
-        "便宜",
-        "定价",
-        "宜定",
-        "是更",
-        "更便",
-        "更贵",
-        "未来",
-        "权之",
-        "来更",
-        "热化",
-        "白热",
-        "贵还",
-        "还是"
-      ],
-      "sent_at": "2026-08-17T05:54:30Z"
-    },
-    {
-      "tickers": [
-        "阿里巴巴"
-      ],
-      "features": [
-        "17gb",
-        "27b",
-        "ability",
-        "and",
-        "calling",
-        "can",
-        "code",
-        "competent",
-        "context",
-        "effective",
-        "general",
-        "generation",
-        "have",
-        "long",
-        "model",
-        "open-weight",
-        "purpose",
-        "qwen",
-        "shows",
-        "simon",
-        "strong",
-        "tool",
-        "vision",
-        "weblog",
-        "willison"
-      ],
-      "sent_at": "2026-08-17T05:54:56Z"
-    },
-    {
-      "tickers": [
         "OpenAI"
       ],
       "features": [
@@ -421,6 +361,26 @@
         "高管"
       ],
       "sent_at": "2026-08-18T05:16:49Z"
+    },
+    {
+      "tickers": [
+        "Anthropic"
+      ],
+      "features": [
+        "anthropic",
+        "ipo",
+        "亿美",
+        "元前",
+        "前夕",
+        "夕营",
+        "底牌",
+        "收底",
+        "曝光",
+        "牌曝",
+        "美元",
+        "营收"
+      ],
+      "sent_at": "2026-08-18T06:51:04Z"
     }
   ],
   "last_report": {
