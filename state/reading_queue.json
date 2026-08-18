@@ -324,6 +324,19 @@
       "source_traceable": true,
       "why": "Marvell以SSD/CXL/光电子解决AI内存瓶颈的技术路线分析，触及AI基础设施关键矛盾，有认知价值。",
       "queued_at": "2026-08-18T14:42:10Z"
+    },
+    {
+      "id": "f69f77afbb0ec800b5137698861bfaa4adeefed7",
+      "title": "Why I reimplemented LVM (with worse guarantees)",
+      "url": "https://depot.dev/blog/why-i-reimplemented-lvm",
+      "source": "rss:lobsters",
+      "published_at": "2026-08-18T14:08:36Z",
+      "raw_summary": "",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "作者重写 LVM 的工程复盘，包含设计取舍与权衡细节，对存储/系统研究者有参考价值。",
+      "queued_at": "2026-08-18T15:14:17Z"
     }
   ],
   "digest_last_date": "2026-08-18"
