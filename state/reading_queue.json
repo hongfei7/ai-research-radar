@@ -38,6 +38,45 @@
       "source_traceable": true,
       "why": "BAT三家在AI办公智能体上的战略整合与组织调整梳理，含具体产品、时间和人事信息，可了解中国AI Agent竞争格局。",
       "queued_at": "2026-08-18T08:16:29Z"
+    },
+    {
+      "id": "c44750dc5583709383936cc72fa1c676d5475441",
+      "title": "AI systems quietly drop user instructions when they compress context",
+      "url": "https://the-decoder.com/ai-systems-quietly-drop-user-instructions-when-they-compress-context",
+      "source": "rss:the-decoder",
+      "published_at": "2026-08-18T08:22:24Z",
+      "raw_summary": "When AI systems condense long conversations, they drop an average of 83 percent of user rules, like \"don't send emails without my approval.\" Penn State researchers propose a small add-on module built on Qwen3.5-9B that preserves over 90 percent of these restrictions. The article AI systems quietly drop user instructions when they compress context appeared first on The Decoder.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Penn State 对上下文压缩中指令丢失率的实测（平均丢 83%）及基于 Qwen3.5-9B 的保留方案，给出具体数字和模型名。",
+      "queued_at": "2026-08-18T09:04:05Z"
+    },
+    {
+      "id": "a0e385657899813af164cc9bca6d0bdc9ad3181f",
+      "title": "A Plug-and-Play 2D Motion Interface for Real-World Motion Language Models",
+      "url": "https://arxiv.org/abs/2608.15984",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-16T20:00:00Z",
+      "raw_summary": "A plug-and-play 2D motion interface allows pretrained motion language models to process 2D inputs without retraining, improving real-world applicability.",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "可即插即用 2D 运动接口让预训练运动语言模型处理 2D 输入，方法与适用场景清晰。",
+      "queued_at": "2026-08-18T09:04:05Z"
+    },
+    {
+      "id": "d14d1f744655971c38dd59cf4c50789fbf461874",
+      "title": "TRACE-Bench: Decomposing and Diagnosing Multi-Reference Image Generation",
+      "url": "https://arxiv.org/abs/2608.16765",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-16T20:00:00Z",
+      "raw_summary": "This work proposes a compositional operator framework and TRACE-Bench to diagnose multi-reference image generation capabilities across atomic operations.",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "TRACE-Bench 分解多参考图像生成的复合操作，提出诊断框架，论文可溯源。",
+      "queued_at": "2026-08-18T09:04:05Z"
     }
   ],
   "digest_last_date": "2026-08-18"
