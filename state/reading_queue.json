@@ -103,6 +103,58 @@
       "source_traceable": true,
       "why": "在264KB SRAM上跑扩散模型生成32×32图像，给出具体硬件配置、并行MAC对比及失败案例，工程细节真实可借鉴。",
       "queued_at": "2026-08-18T09:49:07Z"
+    },
+    {
+      "id": "91ccf6e583f361e7050cf7cef8681889355e96be",
+      "title": "NPU不够，诚恒微为什么还给端侧AI芯片加了GPGPU？",
+      "url": "https://www.leiphone.com/category/chips/0quho5yyzibx3jeg.html",
+      "source": "rss:leiphone",
+      "published_at": "2026-08-18T08:14:00Z",
+      "raw_summary": "如果只看今天端侧AI芯片的热门叙事，NPU几乎是绕不开的主角。大模型从云端向手机、PC、机器人等终端下沉，芯片厂商不断刷新TOPS，围绕Transformer、增加专用加速能力。一颗新的端侧AI芯片，似乎应该尽可能把有限的晶体管留给NPU。诚恒微却在首款旗舰SoC上做了一个不同的选择。近期在无锡举行的CH37系列边端侧AI SoC产品发布会上，诚恒微正式发布CH3715。除了48 TOPS INT8的六核NPU，CH375还集成了10核CPU（含4大4小主核及2个R8实时控制核，R8核频率达800MHz）、自研渲染GPU（358 GFLOPS）、六核NPU（48 TOPS INT8/24 TOPS FP16）、四核GPGPU（1 TFLOPS FP32，兼容CUDA生态）、双核DSP及自研FFT硬件加速器。为什么一颗端侧AI芯片，需要同时拥有NPU和GPGPU？诚恒微CEO楚立斌诚恒微CEO楚立斌对雷峰网表示，“CH3715的产品定义其实始于2022年。彼时ChatGPT尚未发布，具身智能也没有成为芯片行业追逐的热点，我们首先看到的是机器视觉、雷达、工业设备里一些长期没有被单颗芯片很好满足的需求：既需要AI算力，也需要高精度计算、图像处理和低时延，客户往往只能通过多颗芯片组成一套系统。“因此，诚恒微第一代旗舰AI SoC的目标，就是尽可能把这些分散的计算能力集成到一颗SoC里。NPU负责AI，但真实世界还需要GPGPU2022年定义CH3715时，诚恒微首先盯上的是智能视觉。在一些高清图像、大范围目标识别场景中，客户不仅需要更高的AI推理算力，还要求更强的图像处理能力、更低的端到端时延，以及可见光、红外等多种传感器数据的处理能力。双光、高清和低时延成为CH3715最早确定的几个产品目标，NPU算力最终被定在48 TOPS。NPU擅长神经网络推理，但真实设备还要处理大量传统计算。例如复杂视觉环境中的一些算法需要更高精度的浮点计算；雷达需要FFT和信号处理；机器人除了识别环境，还涉及几何计算和实时控制。这也是CH3715最终同时加入NPU和GPGPU的直接原因。在部分复杂场景中，只用INT8精度并不能覆盖全部算法，仍然需要GPGPU提供更高精度的浮点计算能力，而GPGPU的价值更在于其灵活性和较低的迁移成本。因此在CH3715中，NPU承担神经网络推理，GPGPU负责高精度、可编程并行计算，DSP处理信号计算，ISP负责图像输入，CPU则承担任务调度和系统控制。诚恒微将这套思路概括为“异构计算，一体架构”。这代表的是端侧AI真正面对的不是一种计算任务，而是一组同时存在的异构计算负载。如果这些计算仍然由不同芯片完成，数据需要不断跨芯片搬运，不仅增加带宽、功耗和时延，不同平台独立的软件和工具链也会增加系统集成成本。CH3715想做的并不是简单增加几个计算单元，而是把原本分散在一块主板上的异构计算能力尽可能集成到同一颗SoC。一颗芯片，替掉原来的多芯片组合，这也是CH3715的一个明显特点——高集成度。除了NPU和GPGPU，CH3715还集成CPU、DSP、FFT、VPU、双ISP等多种处理单元，并提供PCIe 4.0、万兆以太网等高速接口。楚立斌表示，“诚恒微第一代产品并不是瞄准那些一颗普通SoC已经能够很好解决的需求，而是优先寻找原本就需要多芯片组合的场景，希望用一颗芯片替掉过去两三颗芯片才能完成的工作。“例如在部分机器视觉场景中，单颗SoC无法同时满足AI算力和图像处理需求，客户需要增加额外的AI计算芯片；一些对实时信号处理要求较高的行业，则长期采",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "诚恒微在端侧SoC上同时堆NPU和GPGPU的技术路线选择，揭示对端侧AI+通用计算融合趋势的不同判断。",
+      "queued_at": "2026-08-18T10:31:44Z"
+    },
+    {
+      "id": "6ab525c3353d5134d69e548226c6a642b9f0d2da",
+      "title": "Nvidia Backs OpenAI Data Center, Anthropic News, Google Buys Spirit Airlines Data",
+      "url": "https://stratechery.com/2026/nvidia-backs-openai-data-center-anthropic-news-google-buys-spirit-airlines-data",
+      "source": "rss:stratechery",
+      "published_at": "2026-08-18T10:00:00Z",
+      "raw_summary": "Nvidia makes another deal, this time with a frontier lab; Anthropic's revenue continues to amaze; and maybe data finally is oil.",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Stratechery对Nvidia-OpenAI交易、Anthropic收入和'数据即石油'的综合分析，视角独特。",
+      "queued_at": "2026-08-18T10:31:44Z"
+    },
+    {
+      "id": "c121eaf78a256323c08e28950f735ad43c04fcff",
+      "title": "AI’s recursive self-improvement might not come so quickly after all",
+      "url": "https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement",
+      "source": "rss:mit-tr",
+      "published_at": "2026-08-18T09:00:00Z",
+      "raw_summary": "The AI industry’s boldest promise right now is that AI will soon improve itself, with almost no need for human oversight. LLMs can already write code, generate synthetic data for training, and optimize the computer chips they run on. Forecasts of explosive AI progress predict that what researchers call recursive self-improvement is on the horizon.&#160;&#8230;",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": false,
+      "why": "对'递归自我改进'这一行业关键承诺的质疑，涉及范式判断，值得一读。",
+      "queued_at": "2026-08-18T10:31:44Z"
+    },
+    {
+      "id": "479de7a97712505f203a4c62f4d892363b08cc13",
+      "title": "AI inference chip startup Etched raised $700M led by its new server rack customer Jane Street at a $21B valuation, up from $10.3B after raising $300M in July (Robbie Whelan/Wall Street Journal)",
+      "url": "https://www.techmeme.com/260818/p8#a260818p8",
+      "source": "rss:techmeme",
+      "published_at": "2026-08-18T10:26:07Z",
+      "raw_summary": "Robbie Whelan / Wall Street Journal: AI inference chip startup Etched raised $700M led by its new server rack customer Jane Street at a $21B valuation, up from $10.3B after raising $300M in July&nbsp; &mdash;&nbsp; Etched, founded by Harvard dropouts, has its own in-office data center and has signed quant-trading firm Jane Street as its first customer.",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Etched以$21B估值融资$700M，Jane Street作为首个服务器机架客户，反映专用推理芯片与量化交易算力的新格局。",
+      "queued_at": "2026-08-18T10:31:44Z"
     }
   ],
   "digest_last_date": "2026-08-18"
