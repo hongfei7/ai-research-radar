@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-18T21:01:36Z",
+  "updated_at": "2026-08-18T21:39:28Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -32420,9 +32420,9 @@
       "first_seen_at": "2026-08-18T15:14:47Z",
       "first_published_at": "2026-08-18T15:11:00Z",
       "last_updated_at": "2026-08-18T15:14:47Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 5,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "看多逻辑：①默认开启策略以\"默认值效应\"快速渗透数十亿Workspace用户，大幅降低企业AI采用摩擦，为Gemini构建独有的企业级训练数据飞轮，与OpenAI等通用模型形成差异化壁垒。②企业级数据访问将直接驱动Gemini能力跃升，叠加Google Cloud算力与TPU供给，AI商业化闭环加速。③对标微软Copilot，Google在默认策略上更激进，有望在企业AI助手赛道抢占付费席位先机，巩固Workspace基本盘。\n\n看空风险：①\"默认开启\"模式与微软Recall争议类似，存在触发欧盟GDPR/DSA监管调查的实质风险，欧盟数据保护机构可能强制改为\"opt-in\"，削弱数据获取效果。②企业IT合规部门若因数据主权担忧批量关闭权限并迁移至Microsoft 365/Apple生态，将直接侵蚀Workspace基本盘。③若发生Gemini训练数据泄露事件，将引发品牌信任危机，反噬整体AI战略。\n\n关键",
       "ticker_counts": {
         "谷歌": 1
