@@ -441,6 +441,19 @@
       "source_traceable": true,
       "why": "Mojo开源是AI编译器/高性能Python替代栈的重大事件，对关注AI基础设施栈的研究者值得了解。",
       "queued_at": "2026-08-18T17:05:07Z"
+    },
+    {
+      "id": "bbd87fa850c2f0372ec581a3c4571ad651f74d3a",
+      "title": "I pushed Qwen3.8-27B to 124 tps on a single request on a RTX 3090",
+      "url": "https://www.reddit.com/r/localllama/comments/1vrw4sz/i_pushed_qwen3827b_to_124_tps_on_a_single_request",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-18T17:35:35Z",
+      "raw_summary": "Two days ago I released a hyper-optimized Qwen3.8-27B inference engine for an RTX 3090 (82 tps single request, 672 peak) - yesterday's update took that to 99 tps single-user / ~1,000 tps at 64 concurrent. Since then I've focused on the single-request number, again without quality degradation. It's now ~114 tps at default sampling and ~124 tps greedy (real chat prompts, not random tokens), up from 90 / 98. What we had: - fp8 KV cache, lm_head + embed_tokens int8, fp16 recurrent state, int8 activations, MTP-4 drafts with a 40k-token draft head, draft_sample_method=probabilistic Now added: - Draft vocabulary counted over the model's own outputs - the old web-text list covered about 92% of what the model generates (83% on code), and every miss is a forced rejection; the new one covers 97.5%. 98 → 109 tps greedy. - GPTQ-int4 lm_head and MTP module, calibrated on the model's own hidden states: +0.6% PPL, GSM8K unchanged, acceptance intact, −1.8 ms per step. Ships as a &quot;fast variant&quot; (python fetch_fast_variant.py, ~1 GB from the Hub). - Split-KV attention kernel for the verify step... FlashAttention-2 only splits KV for single-query decode, so with 4 drafts it used 24 of the 3090's 82 SMs. Small Triton kernel: 5× faster at 1.5k context, 10× at 16k. - Sampler patch -§ sort-free top-k/top-p, multi-block softmax, drafts sampled from the target's truncated support: +4% at default sampling. - KVarN 4/2-bit KV cache ported to vLLM 0.27.1: the full 262k context now fits, needle c",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "单卡 RTX 3090 上 Qwen3-27B 跑到 124 tps，给出 fp8/int8 量化与 MTP-4 speculative decoding 的具体工程参数，动手复现价值高。",
+      "queued_at": "2026-08-18T17:44:15Z"
     }
   ],
   "digest_last_date": "2026-08-18"
