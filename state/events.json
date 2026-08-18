@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-18T05:16:25Z",
+  "updated_at": "2026-08-18T05:50:09Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -29850,9 +29850,9 @@
       "first_seen_at": "2026-08-17T23:38:30Z",
       "first_published_at": "2026-08-17T23:07:12Z",
       "last_updated_at": "2026-08-17T23:38:30Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 9,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "",
       "ticker_counts": {
         "英伟达": 1,
@@ -29882,9 +29882,9 @@
       "first_seen_at": "2026-08-17T23:38:30Z",
       "first_published_at": "2026-08-17T23:23:27Z",
       "last_updated_at": "2026-08-17T23:38:30Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 7,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "",
       "ticker_counts": {
         "亚马逊": 1,
@@ -29913,9 +29913,9 @@
       "first_seen_at": "2026-08-17T23:38:30Z",
       "first_published_at": "2026-08-17T23:04:11Z",
       "last_updated_at": "2026-08-17T23:38:30Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 7,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "",
       "ticker_counts": {
         "美光": 1
@@ -30546,6 +30546,90 @@
         "高通": 1
       },
       "max_item_score": 5
+    },
+    "evt_9e8caa5e6043": {
+      "event_id": "evt_9e8caa5e6043",
+      "title": "One of the few companies making the lasers that move data inside AI data centers just said it's keeping all of them for itself",
+      "summary": "磷化铟（InP）激光器是AI数据中心光互联中芯片间数据传输的关键光源，全球供应商极少。Coherent近日告知投资者，将不再向外部客户出售其磷化铟激光器，原因是其内部需求已消耗全部产能。这与HBM等可通过扩产缓解的短缺不同，属于供应商主动将关键组件从公开市场撤出的情形。",
+      "tickers": [
+        "博通"
+      ],
+      "themes": [
+        "chip_supply",
+        "compute_demand",
+        "datacenter_power"
+      ],
+      "direction": {},
+      "item_ids": [
+        "774a5ce874d6471a20790a8a559036f222934747"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-18T05:49:18Z",
+      "first_published_at": "2026-08-18T05:41:01Z",
+      "last_updated_at": "2026-08-18T05:49:18Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "**1. 看多逻辑**\n\n第一，AI算力集群对光互联的依赖度持续抬升，800G/1.6T光模块需求进入\"卖方市场\"。Coherent将InP激光器产能全部内化，意味着其垂直整合的Transceiver/Optical Engine业务将享有稀缺性溢价，对博通配套的光网络交换芯片（Tomahawk系列）形成正反馈——客户为锁定带宽供给会更倾向选择具备完整光互联生态的方案商。\n\n第二，博通在定制ASIC（与Google、Meta合作）与光网络芯片的协同优势凸显。若博通已通过长约或垂直整合方式锁定InP激光器供给，将在AI集群招标中享有交付确定性优势，相对NVIDIA等竞争对手形成差异化壁垒。\n\n第三，行业级供给瓶颈将加速光互联环节头部化，中游缺乏自有激光器产能的模块厂商出清，博通作为上游芯片供应商的议价权反而增强。\n\n**2. 看空风险**\n\n第一，InP激光器紧缺将系统性抬高光模块BOM",
+      "ticker_counts": {
+        "博通": 1
+      },
+      "max_item_score": 7
+    },
+    "evt_fb3593b8a454": {
+      "event_id": "evt_fb3593b8a454",
+      "title": "豆包工作任务上新，可以在虚拟桌面操作Windows",
+      "summary": "豆包（字节跳动旗下）工作任务模式再次升级，全新\"豆包虚拟桌面\"已在Windows端上线。用户授权后，豆包可在虚拟桌面中模拟人类操作——查看屏幕、移动鼠标、点击按钮、输入键盘——自主推进电脑端复杂任务。这标志着国产AI Agent从对话交互迈向桌面级任务执行的关键一步。",
+      "tickers": [],
+      "themes": [
+        "ai_monetization",
+        "edge_ai",
+        "model_capability"
+      ],
+      "direction": {},
+      "item_ids": [
+        "fdd11208343471684d27f6493e52caac63bb3134"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-18T05:49:18Z",
+      "first_published_at": "2026-08-18T05:31:46Z",
+      "last_updated_at": "2026-08-18T05:49:18Z",
+      "is_active": true,
+      "significance": 5,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {},
+      "max_item_score": 5
+    },
+    "evt_1f74f48caa4e": {
+      "event_id": "evt_1f74f48caa4e",
+      "title": "阿里杀进Agent上下文战场：钉钉聊天、企业文档、工作数据终于要被Agent吃进去了",
+      "summary": "阿里旗下钉钉推出Agent上下文产品MyContext，将钉钉聊天、企业文档、工作数据等场景统一接入Agent，作为Agent的数据加工层。意在打通办公协作中的多源数据，使Agent能直接理解并使用企业内部信息。该产品补齐了Agent落地的关键中间层。",
+      "tickers": [
+        "阿里巴巴"
+      ],
+      "themes": [
+        "ai_monetization",
+        "model_capability"
+      ],
+      "direction": {
+        "阿里巴巴": "positive"
+      },
+      "item_ids": [
+        "c8b6db119fae7b4b0f27f6367007c85181db1a8a"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-18T05:49:18Z",
+      "first_published_at": "2026-08-18T04:40:03Z",
+      "last_updated_at": "2026-08-18T05:49:18Z",
+      "is_active": true,
+      "significance": 6,
+      "status": "developing",
+      "deep_analysis": "**1. 看多逻辑**\n\n第一，钉钉MyContext切入Agent落地最稀缺的\"上下文工程\"环节。Agent从Demo走向生产环境，最大瓶颈不是模型能力而是企业私域数据的接入、清洗、权限管理与结构化。钉钉天然掌握聊天、文档、审批、日程等协同全链路数据，是国内少数具备\"端到端办公数据资产\"的入口型平台，这一卡位价值被市场严重低估。第二，云钉一体战略下的协同变现路径清晰：MyContext作为数据加工层，可向上对接通义千问/第三方模型，向下拉动钉钉AI增值订阅、API调用计费及企业版客单价提升。参照微软Copilot对M365 ARPU的拉动效应，若钉钉能将AI渗透率从当前个位数提升至两位数，业绩弹性可观。第三，构建生态护城河：MyContext开放给ISV和第三方Agent开发者后，钉钉将从\"办公工具\"演变为\"Agent操作系统\"，平台化估值逻辑成立。\n\n**2. 看空风险**\n\n第一，企业级Agent付费意愿仍待验证。国内SaaS付费率长期偏低，MyContext的\"上下文加工\"属幕后能力，用户感知弱，能否单独定价或捆绑高阶套餐提价存在不确定性。对比微软Copilot在企业端推进缓慢、ARR贡献有限的现实，需警惕预期落差。第二，钉钉自身商业化压力较大，MyContext短期内更可能是成本中心而非利润中心，AI算力投入与推理成本将拖累毛利率。第三，竞争烈度高——飞书智能伙伴、企微Agent、百度如流、字节豆包均在争夺企业Agent入口，钉钉虽数据资产厚但产品体验与AI原生体验未必占优，存在被边缘化风险。\n\n**3. 关键驱动因素**\n\n一是MyContext的企业付费转化率与ARR披露节奏，需观察钉钉AI订阅用户数及ARPU拐点；二是与通义千问/第三方模型的协同落地案例，尤其是KA客户的标杆复购情况。\n\n**4. 市场影响评估**\n\n短期（1-3个月）属于主题催化层面，B端AI落地叙事利好估值修复，但因尚未体现在财报中，股价以情绪驱动为主，波动放大。中期（6-12个月）需观察Q3财报中钉钉AI相关收入披露及企业Agent客户数增长，若ARPU提升超预期则可能触发估值切换。\n\n**5. 时间线推断**\n\n2026年Q3-钉钉AI产品矩阵持续迭代；2026年Q4-阿里云栖大会可能公布MyContext生态接入数据及企业客户案例；2027年Q1-Q2-进入商业化兑现验证窗口，关注年报中钉钉及AI相关收入的同比增速。",
+      "ticker_counts": {
+        "阿里巴巴": 1
+      },
+      "max_item_score": 6
     }
   }
 }
