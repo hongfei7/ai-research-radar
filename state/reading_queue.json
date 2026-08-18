@@ -233,6 +233,71 @@
       "source_traceable": true,
       "why": "以GLM-5.2/5.3为例拆解后训练RL的'训推一致'工程实践，含SWE-bench Pro 62.1、Terminal-Bench 3.0 81.0等具体分数与基础设施取舍。",
       "queued_at": "2026-08-18T12:03:31Z"
+    },
+    {
+      "id": "c5e5e53c3cc16565ba4c225fb2726310da32d4bc",
+      "title": "Anthropic CEO says AI centralizes by nature and open models just shift power to whoever owns the chips",
+      "url": "https://the-decoder.com/anthropic-ceo-says-ai-centralizes-by-nature-and-open-models-just-shift-power-to-whoever-owns-the-chips",
+      "source": "rss:the-decoder",
+      "published_at": "2026-08-18T13:07:57Z",
+      "raw_summary": "A heated debate over AI regulation has erupted on X: Investor Gavin Baker, former White House advisor David Sacks, and Meta researcher Yann LeCun accuse Anthropic CEO Dario Amodei of using fear-mongering to gain a regulatory advantage. Amodei counters that regulation could also limit corporate power—open models alone would merely shift power to the players with the most computing power. The article Anthropic CEO says AI centralizes by nature and open models just shift power to whoever owns the chips appeared first on The Decoder.",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "Dario与LeCun/Sacks就AI集中化vs开源模型的路线之争，含关键人物公开表态与论据，触及范式分歧。",
+      "queued_at": "2026-08-18T13:09:20Z"
+    },
+    {
+      "id": "70904cab12beaeaffbd8e764e3e7274e23e4fb6d",
+      "title": "GPU Offload in Rust: Portable, Safe, and Fast",
+      "url": "https://arxiv.org/pdf/2608.13759",
+      "source": "rss:lobsters",
+      "published_at": "2026-08-18T12:16:41Z",
+      "raw_summary": "High-performance GPU programming has traditionally forced a compromise between execution efficiency and memory safety. While Rust guarantees compile-time memory safety for host CPUs via its strict ownership model, applying these constraints to massively parallel GPU execution environments has previously mandated either vendor-locked Domain-Specific Languages (DSLs) or escaping to explicit unsafe raw pointers. This paper presents a zero-overhead, multi-vendor GPU compilation framework built natively into the Rust compiler (rustc) and LLVM backends. We leverage Rust’s rich type system, ownership system, and strict aliasing guarantees (𝑛𝑜𝑎𝑙𝑖𝑎𝑠) to efficiently manage and optimize data transfers through LLVM’s Offload infrastructure. We expose the technical challenges of cross-vendor ABI lowering mismatches between Host and Device targets and introduce a two-pass compilation pipeline capable of safely handling both manual and compiler-generated memory movements. Evaluating our framework on RAJAPerf demonstrates that our rustc-based solution can generate competitive LLVM IR for GPU kernels, achieving a solid kernel performance against native, hand-optimized CUDA and HIP C++ baselines. Comments",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Rust原生GPU编译框架，零开销多vendor，可直接关联AI算力编程栈演进，值得细读。",
+      "queued_at": "2026-08-18T13:09:20Z"
+    },
+    {
+      "id": "52ae3485bc7b4c53f28d54c7b1f133f465369446",
+      "title": "李彦宏：市场对昆仑芯的认可度不断提升",
+      "url": "https://36kr.com/newsflashes/3945036263128457?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-08-18T12:58:24Z",
+      "raw_summary": "36氪获悉，8月18日晚，李彦宏在百度财报电话会上表示，二季度昆仑芯保持强劲势头，在需求旺盛的同时持续向多行业扩展。市场对昆仑芯在大规模应用中的稳定性、效率和适配能力的认可度正在不断提升。昆仑芯推理吞吐量和整体算力效率进一步提升，并增强了规模化支持多样化、高要求AI工作负载的能力。目前，昆仑芯已完成三代AI芯片的研发和商业化，未来将继续推进产品布局，包括面向大规模推理优化的最新 M100以及未来将推出的M300。",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "百度李彦宏在财报会上对昆仑芯三代路线（M100/M300）及其推理性能提升的口述，含具体芯片产品规划信号。",
+      "queued_at": "2026-08-18T13:09:20Z"
+    },
+    {
+      "id": "dd3097fc9253602ef817c6f7e25d60e8ea7670f6",
+      "title": "IJCAI-ECAI 2026 开幕：吴佳俊斩获「计算机与思想奖」，SMOTE 算法获首届时间检验奖",
+      "url": "https://www.leiphone.com/category/private/lwzmix4bqdrjpz8g.html",
+      "source": "rss:leiphone",
+      "published_at": "2026-08-18T10:35:00Z",
+      "raw_summary": "经典大奖致敬AI先驱，14位青年学者站上全新焦点舞台，713篇主会论文把脉未来演进图景。&nbsp; &nbsp; 作者丨岑峰 马晓宁&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;当地时间 2026 年 8 月18日，第 35 届国际人工智能联合会议（IJCAI-ECAI 2026）在德国不莱梅拉开帷幕。作为历史最悠久、最具权威性的人工智能顶级学术会议之一，IJCAI 见证了 AI 半个多世纪的起伏与繁荣。今年，大会重回欧洲，不仅汇聚了全球顶尖的 AI 学者、产业领袖，更在 AGI 狂飙突进的当下，为全行业提供了一个反思基础理论、探讨技术落地的绝佳平台。AI科技评论小分队已抵达现场，为您发回开幕式及颁奖典礼的最新报道。01缅怀先驱与东道主致辞：AI 发展的传承与未来开幕式伊始，大会主席 Francesca Toni 登台致辞，正式宣布 IJCAI-ECAI 2026 开幕。本届大会受到了德国当地政府与科研机构的高规格重视。德国联邦研究、技术与空间部的 Alexandra-Gwyn Paetz 博士，以及不莱梅市长、参议院议长 Andreas Bovenschulte 分别发表了热情洋溢的欢迎致辞。Bovenschulte 的出席不仅展现了东道主对本次盛会的极高规格重视，更突显了人工智能在当今国家和地区科技战略中的核心地位。在开幕式上，大会也留下了一个特别的时刻。大屏幕上打出了“In Memoriam”的字样，全场共同缅怀了在今年离世的三位杰出科学家：Joe Halpern、Tony&nbsp;Hunter 以及 Lin Padgham。正是这些前辈学者的奠基性工作，才铺就了今天&nbsp;AI 技术的繁荣之路。02斯坦福吴佳俊斩获 “计算机与思想奖”，华人青年学者闪耀顶会开幕式的重头戏历来是各大重磅奖项的颁发，IJCAI President Kate Larson宣布了今年的获奖者。其中，备受瞩目的&nbsp;“计算机与思想奖”（The Computers and Thought Award）&nbsp;颁给了斯坦福大学助理教授&nbsp;吴佳俊（Jiajun Wu）。大会在颁奖词中高度评价了他的工作：“以表彰他在计算机视觉、生成式 AI 和机器人技术领域的奠基性贡献，他将神经与符号表示相融合，致力于构建能够理解物理世界并与之互动的机器。”（In recognition of his foundational contributions across computer vision, generative AI, and robotics, uniting neural and symbolic representations to build machines that und",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "IJCAI-ECAI 2026开幕，吴佳俊获计算机与思想奖、SMOTE获时间检验奖，713篇主会论文选题反映AI前沿方向。",
+      "queued_at": "2026-08-18T13:09:20Z"
+    },
+    {
+      "id": "bc1ea4c37519b6cd5720f4f396b6471b1099ff5f",
+      "title": "Netflix Open-Sources Agentic Workflow for Causal Inference",
+      "url": "https://www.infoq.com/news/2026/08/netflix-oci-agent",
+      "source": "rss:infoq",
+      "published_at": "2026-08-18T13:00:00Z",
+      "raw_summary": "Netflix open-sourced an agentic workflow for Observational Causal Inference (OCI) that reduces toil in causal analysis. Given observational data and the human user's analysis plan, the agent uses an actor-critic loop to estimate causality, write a report, and suggest next steps. By Anthony Alford",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Netflix开源的观察性因果推断agentic workflow，含actor-critic循环与具体实现，可作为AI agent工程参考。",
+      "queued_at": "2026-08-18T13:09:20Z"
     }
   ],
   "digest_last_date": "2026-08-18"
