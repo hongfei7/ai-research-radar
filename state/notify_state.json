@@ -494,6 +494,41 @@
         "various"
       ],
       "sent_at": "2026-08-18T22:00:46Z"
+    },
+    {
+      "tickers": [
+        "Anthropic",
+        "OpenAI"
+      ],
+      "features": [
+        "11.6b",
+        "6.7b",
+        "anthropic",
+        "but",
+        "doubled",
+        "further",
+        "grew",
+        "in",
+        "its",
+        "journal",
+        "margin",
+        "more",
+        "openai",
+        "operating",
+        "period",
+        "q2",
+        "qoq",
+        "revenue",
+        "same",
+        "sank",
+        "sources",
+        "street",
+        "than",
+        "the",
+        "to",
+        "wall"
+      ],
+      "sent_at": "2026-08-18T23:03:16Z"
     }
   ],
   "last_report": {
@@ -533,6 +568,9 @@
       }
     ]
   },
-  "morning_fallback": null,
+  "morning_fallback": {
+    "date": "2026-08-19",
+    "attempts": 1
+  },
   "blindspot_ledger": []
 }
