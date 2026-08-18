@@ -1,4 +1,44 @@
 {
-  "candidates": [],
+  "candidates": [
+    {
+      "id": "c0ef0be8898327261ec4c745b7a4e6ea8dffa0de",
+      "title": "tencent/UI-Mate-27B · Hugging Face",
+      "url": "https://www.reddit.com/r/localllama/comments/1vrhg08/tencentuimate27b_hugging_face",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-18T06:42:32Z",
+      "raw_summary": "Overview UI-Mate-27B is an open-weight foundation GUI agent for long-horizon work across applications and operating systems. It observes live screenshots, reasons over the visible state, and produces structured keyboard and mouse actions for native desktop interaction. UI-Mate supports two complementary modes: General computer use: execute tasks from natural-language instructions and live screenshots. Demonstration-guided computer use: adapt a reusable workflow extracted from one successful demonstration to a new task. A demonstration is treated as guidance rather than a fixed action script. The model continues to re-plan from the live interface when the content, layout, or application state differs. Model Details Parameters: 27B Base model: Qwen3.6-27B Input: task instruction, screenshots, interaction history, and optional demonstration context Output: reasoning, a concise action description, and structured computer-use tool calls Action space: mouse, keyboard, scrolling, waiting, user interaction, and task completion Training: supervised fine-tuning followed by online reinforcement learning in executable GUI environments License: Apache-2.0 Highlights Strong general computer-use performance across Ubuntu and Windows benchmarks. Long-horizon execution across multiple applications. One-shot procedural learning from demonstrations. Live-screen grounding instead of coordinate replay. Structured actions compatible with pyautogui. OpenAI-compatible serving and client interface. a",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "腾讯开源UI-Mate-27B GUI Agent基础模型，可追溯到Hugging Face模型卡，含架构、训练模式与动作空间等一手细节，值得研究。",
+      "queued_at": "2026-08-18T08:16:29Z"
+    },
+    {
+      "id": "e9b6fb1cb94e5a5b6c6aaddbdaeb5857f8b5702c",
+      "title": "AI代码过剩后，给代码“冲厕所”的公司贵了十倍",
+      "url": "https://www.tmtpost.com/8107004.html",
+      "source": "rss:tmtpost",
+      "published_at": "2026-08-18T07:47:26Z",
+      "raw_summary": "AI越会写代码，Blacksmith需要跑的机器反而越多。",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": false,
+      "why": "探讨AI写代码反而推高CI基础设施需求的反直觉论点，触及AI对算力/开发基础设施的真实影响，值得一读。",
+      "queued_at": "2026-08-18T08:16:29Z"
+    },
+    {
+      "id": "11d3b86a1677d2b7d7d1740a6c2b30de312db82a",
+      "title": "WorkBuddy们，正在终结钉钉、飞书、企业微信的旧战争",
+      "url": "https://www.tmtpost.com/8107000.html",
+      "source": "rss:tmtpost",
+      "published_at": "2026-08-18T07:47:16Z",
+      "raw_summary": "文 | 潮汐商业评论2026年的盛夏，互联网圈被一连串人事和架构调整搅得滚烫。7月20日，腾讯将QClaw并入WorkBuddy体系；7月21日，阿里将QoderWork、MuleRun、悟空三款Agent产品整合为\"千问办公\"；7月30日，字节跳动将飞书产品团队整体并入豆包。放弃内部赛马、归拢集团资源、全力押注AI办公智能体，三巨头的动作之整齐、转向之决绝，在中国互联网过去二十年的历史上极为罕见。要知道，就在年初，三家还在为豆包、千问、元宝砸红包推广抢用户，在AI编程赛道各自铆劲，腾讯做CodeBuddy，阿里做Qoder，字节做Trae。如今，它们齐刷刷将枪口对准了同一个新靶心&mdash;&mdash;AI办公。十天之内，三家头部公司接连落下重子，没有预热，没有试探，甚至连决策方向都透着不约而同的一致。它们到底看到了什么？它们到底在争什么？01 三巨头集体变阵，决战AI办公战场AI办公的战火，首先由腾讯点燃。2026年1月，Anthropic发布桌面智能体Claude Cowork。腾讯CodeBuddy团队的几个核心成员用一个周末就敲出了WorkBuddy的最初原型，并率先在腾讯内部开启测试。这个最初带有\"草根\"气质的项目，很快展现出惊人的潜力，让腾讯下定决心全力押注办公智能体赛道。据界面新闻报道，马化腾亲自参与WorkBuddy产品会议，项目提出的算力、技术和市场资源需求大多能快速获批，内部形容为\"一路绿灯\"。5月以来，WorkBuddy的广告从北京知春路铺到深圳高新园，从地铁延伸到写字楼和家门口，声势浩大。7月20日，腾讯将QClaw产品并入WorkBuddy体系，进一步整合资源。甚至有人认为，WorkBuddy今年大概率入选腾讯\"名品堂\"。市场表现也印证了这一押注的回报。AI产品榜2026年7月榜单显示，WorkBuddy以397.5%的环比增速位列全球第一，月活已达2000万级别。马化腾在腾讯2026年一季度财报中提到，WorkBuddy已成为中国使用最广的效率AI智能体。内部甚至流传着一种说法&mdash;&mdash;WorkBuddy是&ldquo;继QQ、微信之后，腾讯第三个战略级产品&rdquo;。相比腾讯从边缘项目生长出来的路径，阿里的转向更带着自上而下重构的激进色彩。2026年3月，阿里成立ATH（Alibaba Token Hub）事业群，将千问事业部、悟空事业部等收归统一管理。7月初，悟空事业部升级为千问办公事业部；8月初，\"千问办公\"正式公测，打通钉钉，由钉钉新任CEO陈宇森统筹，率先部署新一代基座大模型Qwen3.8。产品官宣当日，阿里巴巴港股收盘大涨7%&mdash;&mdash;市场以真金白银，表达了对阿里全栈AI自研价值的重新定价。与WorkBuddy主要面向C端不同，千问办公承接钉钉积累的B端优势，全面瞄准企业级市场，成为业内首款同时支持桌面端Agent、云端Agent、企业协同Agent的产品。官方举了一个例子：一家20人规模的律师事务所，资深律师用千问办公完成首份并购尽调报告后，可将全过程一键沉淀为\"组织级Skill\"，向全团队共享。这意味着曾经只属于资深员工的经验和方法论，不再随着人员流动流失，而是真正沉淀成了组织可复制的能力。三家之中，字节的转身最让外界意外，因为它动刀的，是一条正处在上升期的核心业务。7月30日，飞书被拆，产品团队整体并入豆包，组成新的豆包产品团队。而在这次调整之前，飞书刚交出成立以来最好的成绩单，2025年全年营收突破30亿元，2026年二季度营收同比增速超过100%，是字",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "BAT三家在AI办公智能体上的战略整合与组织调整梳理，含具体产品、时间和人事信息，可了解中国AI Agent竞争格局。",
+      "queued_at": "2026-08-18T08:16:29Z"
+    }
+  ],
   "digest_last_date": "2026-08-18"
 }
