@@ -77,6 +77,32 @@
       "source_traceable": true,
       "why": "TRACE-Bench 分解多参考图像生成的复合操作，提出诊断框架，论文可溯源。",
       "queued_at": "2026-08-18T09:04:05Z"
+    },
+    {
+      "id": "f22d9890f376fa615805cfe660c496337d7fbfba",
+      "title": "英伟达开始给电做担保了：1050亿美元押注8GW算力的电力账",
+      "url": "https://www.tmtpost.com/8107418.html",
+      "source": "rss:tmtpost",
+      "published_at": "2026-08-18T09:21:54Z",
+      "raw_summary": "英伟达这一步，标志着一个判断被正式确认：AI竞赛的下半场，胜负手不在制程，在电力。谁先把电的问题解决，谁就先解锁下一轮算力扩张。 对供电链条上的公司来说，这既是天量的订单预期，也是一次价值重估——过去数据中心电源被当成\"配套件\"，如今它成了卡住8GW落地的关键路径。",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": false,
+      "why": "英伟达1050亿美元押注8GW电力配套，分析AI算力扩张的电力瓶颈与电源/电网产业链价值重估。",
+      "queued_at": "2026-08-18T09:49:07Z"
+    },
+    {
+      "id": "1e3627ed6aa4d342ed43e59c5f123232180f5072",
+      "title": "Trained an diffusion model that runs on 264KB of RAM [P]",
+      "url": "https://www.reddit.com/r/machinelearning/comments/1vrk7t5/trained_an_diffusion_model_that_runs_on_264kb_of",
+      "source": "reddit:ml",
+      "published_at": "2026-08-18T09:26:21Z",
+      "raw_summary": "I recently bought a Shrike lite which has got 264KB of SRAM. I decided to train an image generation model that generates 32*32 pixel images. The microcontroller also has an FPGA onboard which I used to create two parallel INT8 MAC engines with 16 bit accumulation to speed up calculations, however the system soon hit a memory wall due to the high number of I/O operations, this meant that the system with parallel MAC engines ran slower than the MCU only model (~220 seconds per image vs ~70 seconds per image). It was still a fun project that I enjoyed messing around with. A lot of the images looked weird and noisy because of the heavy quantization and memory limits but some of them came out cool. Full case study here. &#32; submitted by &#32; /u/PandaBean18 [link] &#32; [comments]",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "在264KB SRAM上跑扩散模型生成32×32图像，给出具体硬件配置、并行MAC对比及失败案例，工程细节真实可借鉴。",
+      "queued_at": "2026-08-18T09:49:07Z"
     }
   ],
   "digest_last_date": "2026-08-18"
