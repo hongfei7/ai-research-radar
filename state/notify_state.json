@@ -381,6 +381,24 @@
         "营收"
       ],
       "sent_at": "2026-08-18T06:51:04Z"
+    },
+    {
+      "tickers": [
+        "Anthropic",
+        "OpenAI"
+      ],
+      "features": [
+        "above",
+        "annualized",
+        "anthropic",
+        "billion",
+        "hits",
+        "increases",
+        "rate",
+        "revenue",
+        "sevenfold"
+      ],
+      "sent_at": "2026-08-18T07:42:16Z"
     }
   ],
   "last_report": {
@@ -419,5 +437,7 @@
         "verify": "Q4国内token均价环比回落<10%"
       }
     ]
-  }
+  },
+  "morning_fallback": null,
+  "blindspot_ledger": []
 }

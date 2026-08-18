@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-18T06:50:39Z",
+  "updated_at": "2026-08-18T07:41:52Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -30815,14 +30815,106 @@
       "first_seen_at": "2026-08-18T06:49:00Z",
       "first_published_at": "2026-08-18T03:52:00Z",
       "last_updated_at": "2026-08-18T06:49:00Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 5,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "",
       "ticker_counts": {
         "OpenAI": 1,
         "谷歌": 1
       },
+      "max_item_score": 5
+    },
+    "evt_117b5319aaa2": {
+      "event_id": "evt_117b5319aaa2",
+      "title": "Anthropic increases revenue sevenfold, hits annualized rate above $65 billion",
+      "summary": "Anthropic年化营收已突破650亿美元，一年内增长约7倍（消息源：Bloomberg）。公司有望于2026年秋季以约1万亿美元估值IPO，可能早于OpenAI登陆资本市场。值得关注：头部AI实验室的营收增速与估值水平持续抬升，Anthropic有望成为继OpenAI后又一家冲击上市的顶级大模型公司，将进一步重塑AI一级/二级市场格局。",
+      "tickers": [
+        "Anthropic",
+        "OpenAI"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand",
+        "model_capability"
+      ],
+      "direction": {
+        "Anthropic": "positive",
+        "OpenAI": "negative"
+      },
+      "item_ids": [
+        "7ca485366fc38016d6bd580c92a45b74e2c10a8b"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-18T07:41:03Z",
+      "first_published_at": "2026-08-18T07:37:25Z",
+      "last_updated_at": "2026-08-18T07:41:03Z",
+      "is_active": true,
+      "significance": 9,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "OpenAI": 1,
+        "Anthropic": 1
+      },
+      "max_item_score": 9
+    },
+    "evt_f11e332b7ec6": {
+      "event_id": "evt_f11e332b7ec6",
+      "title": "Semiconductor Earnings Roundup: Revenue, Growth and Takeaways",
+      "summary": "Semiconductor Engineering发布覆盖80家半导体公司的财报汇总，指出AI驱动的需求已大幅扩展至传统芯片厂商之外。该文按公司逐一拆解营收、增速与关键看点，但原摘要未披露具体公司、营收数字及增长明细。从主题看，内容横跨AI芯片设计、晶圆代工、设备及存储等环节，揭示AI需求对全产业链的扩散效应。",
+      "tickers": [
+        "AMD",
+        "Marvell",
+        "博通",
+        "英伟达"
+      ],
+      "themes": [
+        "ai_monetization",
+        "chip_supply",
+        "compute_demand"
+      ],
+      "direction": {},
+      "item_ids": [
+        "ebe28fd76eb925fed32682849a587f9606f179cf"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-18T07:41:03Z",
+      "first_published_at": "2026-08-18T07:01:24Z",
+      "last_updated_at": "2026-08-18T07:41:03Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "AMD": 1,
+        "英伟达": 1,
+        "Marvell": 1,
+        "博通": 1
+      },
+      "max_item_score": 7
+    },
+    "evt_0e5df30a9d44": {
+      "event_id": "evt_0e5df30a9d44",
+      "title": "华虹宏力尾盘跳水跌超10%",
+      "summary": "华虹宏力港股尾盘跳水，跌幅超10%，成交额超55亿港元。原文未披露具体原因，属价格异动类消息。华虹宏力为国内晶圆代工厂，事件发生在港股交易尾盘阶段，需关注是否有公司公告或行业基本面变化与之关联。",
+      "tickers": [],
+      "themes": [
+        "chip_supply"
+      ],
+      "direction": {},
+      "item_ids": [
+        "8d0baef4b953fee452582fdc8c9e3fee3941118d"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-18T07:41:03Z",
+      "first_published_at": "2026-08-18T07:29:09Z",
+      "last_updated_at": "2026-08-18T07:41:03Z",
+      "is_active": false,
+      "significance": 5,
+      "status": "resolved",
+      "deep_analysis": "华虹宏力港股尾盘放量跳水，跌幅超10%、成交额逾55亿港元，属典型的\"尾盘异动\"——即下跌集中在收盘前最后时段，往往暗示资金抢跑或知情交易。原文未披露原因，需高度警惕潜在未公开利空，但也存在技术性超跌后的修复空间。\n\n**看多逻辑：**①尾盘集中砸盘常伴随恐慌情绪，若非基本面恶化，短期存在技术性反弹需求；10%跌幅对成熟制程龙头的估值已构成显著折价，配置性价比上升。②华虹8寸/12寸成熟制程产能仍服务于车规、工控、模拟等长周期需求，国产替代逻辑未被根本动摇；无锡12寸线产能爬坡与特色工艺（嵌入式存储、功率器件）仍处兑现期。③若为行业情绪错杀，反而是中芯国际、华润微等代工链龙头的低吸机会。\n\n**看空风险：**①55亿港元成交额+尾盘跳水模式高度疑似\"先知先觉\"资金出逃，不排除公司即将披露业绩预警、订单延迟或大客户砍单等利空；港股信息披露机制下，暴跌往往领先于公告。②全球晶圆代工成熟制程正处于下行周期——联电、世界先进已相继示警产能利用率与ASP双重承压，华虹作为成熟制程占比超90%的厂商，业绩弹性向下。③当前半导体周期拐点未确认，叠加消费电子去库存压力延续，单日10%跌幅可能仅是调整中继。\n\n**关键驱动因素：**①公司层面的公告/澄清——是否有业绩指引下修、产能调整或大客户变动；②同行业可比公司（中芯国际、联电、世界先进）Q3业绩与展望的交叉验证。\n\n**市场影响评估：**短期对港股半导体板块形成负面情绪外溢，中芯国际等A股代工股次日开盘或承压；中期影响取决于利空是否成立——若为情绪错杀，1-2周内修复概率较高；若确属基本面恶化，则需重新评估成熟制程景气底部时点。\n\n**时间线推断：**T+1（次日）观察是否止跌企稳及成交是否萎缩；T+3~5日内关注公司澄清公告或港交所披露；T+2周内跟踪中芯国际Q3业绩预告对行业景气度的指引；T+1月为关键验证窗口，若无基本面利空兑现且板块企稳，则本次跳水定性为情绪性事件。",
+      "ticker_counts": {},
       "max_item_score": 5
     }
   }
