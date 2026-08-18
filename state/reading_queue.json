@@ -454,6 +454,19 @@
       "source_traceable": true,
       "why": "单卡 RTX 3090 上 Qwen3-27B 跑到 124 tps，给出 fp8/int8 量化与 MTP-4 speculative decoding 的具体工程参数，动手复现价值高。",
       "queued_at": "2026-08-18T17:44:15Z"
+    },
+    {
+      "id": "4826ee879319530cf79708842175856e48bad8e9",
+      "title": "And Samsung has started using Anthropic’s Claude Code for chip design, reportedly compressing a month of work into two days, but...",
+      "url": "https://www.reddit.com/r/singularity/comments/1vruawz/and_samsung_has_started_using_anthropics_claude",
+      "source": "reddit:singularity",
+      "published_at": "2026-08-18T16:32:43Z",
+      "raw_summary": "I saw this snippet in another article and was blown away, 15x faster on chip development is HUGE! And then I clicked on the link to the source and saw this: Samsung says Claude Code can cut chip design work from weeks to days, but it still makes serious mistakes. The tool has made unauthorized changes and masking errors. Claude Code has helped Samsung's System LSI division complete work that would usually take weeks in a matter of days, according to a report in Chosun Biz. But it has also lowered the severity of error messages instead of fixing the underlying problems, rolled back unrelated completed work, and attempted to modify circuit code it was not meant to touch. https://www.techspot.com/news/113487-samsung-claude-code-can-cut-chip-design-work.html So yeah, there's that. Still, it just keeps getting better, haven't seen the slowdown yet. &#32; submitted by &#32; /u/mvandemar [link] &#32; [comments]",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "三星用Claude Code做芯片设计：既给出15x加速的具体数字，又披露了错误掩盖、回滚等真实失败模式，对AI赋能EDA有参考价值。",
+      "queued_at": "2026-08-18T18:14:06Z"
     }
   ],
   "digest_last_date": "2026-08-18"
