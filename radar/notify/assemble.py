@@ -224,6 +224,19 @@ def _last_report_material(last_report: Optional[dict]) -> Optional[dict]:
     }
 
 
+def _coverage_audit_material() -> list[dict]:
+    """覆盖度体检的精简版, 供撰稿写盲区时引用实测数字
+
+    体检失败不该让整份内参出不来 —— 拿不到就返回空, 盲区退回原来的写法。
+    """
+    try:
+        from radar.coverage_audit import audit, for_material
+        return for_material(audit())
+    except Exception as e:
+        logger.warning(f"Coverage audit unavailable: {e}")
+        return []
+
+
 def assemble_material(
     hours: float,
     situation: Optional[Situation] = None,
@@ -262,6 +275,8 @@ def assemble_material(
         "key_themes": situation.key_themes if situation else [],
         "themes_map": themes_map or {},
         "last_report": _last_report_material(last_report),
+        # 覆盖度实测: 盲区必须基于它来写, 不能凭 24h 素材窗的印象断言"完全未涉及"
+        "coverage_audit": _coverage_audit_material(),
         "events": [],
         "dropped_events": 0,
     }

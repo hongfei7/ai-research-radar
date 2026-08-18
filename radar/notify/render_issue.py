@@ -88,7 +88,13 @@ def _header(payload: DigestPayload, brand: dict, material: dict) -> list[str]:
         lines.append(f"*{' · '.join(bits)}*")
     if payload.fallback:
         lines.append("")
-        lines.append("> **本期为降级稿**：撰稿环节未能完成，以下仅为事实层罗列，无机理与推论。")
+        note = "> **本期为降级稿**：撰稿环节未能完成，以下仅为事实层罗列，无机理与推论。"
+        if payload.revision:
+            note += "（本日第二次尝试仍未完成撰稿）"
+        lines.append(note)
+    elif payload.revision:
+        lines.append("")
+        lines.append("> **修订版**：本篇替代本日早前发布的降级稿，撰稿已补齐。")
     lines.append("")
     return lines
 
@@ -299,6 +305,40 @@ def _appendix(payload: DigestPayload, material: dict) -> list[str]:
     return lines
 
 
+# 覆盖度告警最多列几行 —— 它是提醒, 不是又一张数据表
+_MAX_COVERAGE_WARN_ROWS = 6
+
+
+def _coverage_warning(payload: DigestPayload, material: dict) -> list[str]:
+    """覆盖度告警: 哪些标的有直连通道却长期零产出
+
+    固定出现在正文末尾, 因为这类问题的唯一失败模式就是没人看见 —— 台积电的一手
+    通道断了 83 天没被发现, 不是因为没人关心, 是因为没有任何地方会显示它。
+    「记账不拦路」: 只保证出现在人眼必经之处, 不阻断出稿。
+    """
+    if payload.kind == KIND_BREAKING:
+        return []          # 快报是单事件时效产品, 不背这类元信息
+    rows = [r for r in ((material or {}).get("coverage_audit") or [])
+            if r.get("level") == "structural"]
+    if not rows:
+        return []
+    lines = ["", "### 覆盖度告警", "",
+             "*以下标的配置上有直连通道, 但回看窗口内零一手披露 —— 相关判断只能依赖二手转述。*", ""]
+    for r in rows[:_MAX_COVERAGE_WARN_ROWS]:
+        days = r.get("days_since_own_disclosure")
+        gap = ("回看窗口内从未有过自有披露" if days is None
+               else f"距最近一次自有披露已 {days} 天")
+        lines.append(
+            f"- **{r.get('name')}** —— {gap}"
+            f"（近 30 天有 {r.get('n_items_30d', 0)} 条相关信息, 全部为二手转述）"
+        )
+    more = len(rows) - _MAX_COVERAGE_WARN_ROWS
+    if more > 0:
+        lines.append(f"- *另有 {more} 个标的同样处于此状态*")
+    lines.append("")
+    return lines
+
+
 def render_issue_body(payload: DigestPayload, site_url: str = "",
                       material: dict | None = None,
                       brand: dict | None = None) -> str:
@@ -322,6 +362,8 @@ def render_issue_body(payload: DigestPayload, site_url: str = "",
     lines.extend(_sections_block(payload))
     lines.extend(_watchlist_block(payload, src_map))
     lines.extend(_appendix(payload, material))
+    # 独立于附录: 附录在零事件时整块不出, 而覆盖度告警恰恰在素材稀薄时最该被看到
+    lines.extend(_coverage_warning(payload, material))
 
     lines.append("---")
     lines.append(
@@ -343,6 +385,8 @@ def render_report_file(payload: DigestPayload, body: str,
         f"calls: {len(payload.calls)}",
         f"fallback: {str(payload.fallback).lower()}",
     ]
+    if payload.revision:
+        front.append("revision: true")
     if issue_url:
         front.append(f"issue: {issue_url}")
     front.append("---")

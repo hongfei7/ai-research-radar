@@ -100,7 +100,9 @@ def _gh_headers(token: str) -> dict:
 async def find_issue(title_prefix: str, label: str) -> Optional[dict]:
     """幂等: 查找已存在的同题 Issue, 返回 {number, html_url}
 
-    比 find_today_issue 多返回 number —— 追加评论的 API 要的是编号而非 URL。
+    一律返回 number —— 追加评论与覆盖正文的 API 要的都是编号而非 URL。
+    曾经还有一个只返回 URL 的 find_today_issue, 调用方拿不到编号就只能
+    "复用链接、不动正文", 于是补发的修订稿永远进不了当日 Issue。
     """
     repo, token, api_url = _gh_env()
     if not repo or not token:
@@ -122,12 +124,6 @@ async def find_issue(title_prefix: str, label: str) -> Optional[dict]:
     return None
 
 
-async def find_today_issue(title_prefix: str, label: str = "晨报") -> Optional[str]:
-    """幂等: 查找已存在的同题 Issue, 返回 URL(审计 H2)"""
-    found = await find_issue(title_prefix, label)
-    return found.get("html_url") if found else None
-
-
 async def add_issue_comment(issue_number: int, body: str) -> bool:
     """往已有 Issue 追加评论(当日快报汇总用)"""
     repo, token, api_url = _gh_env()
@@ -147,6 +143,32 @@ async def add_issue_comment(issue_number: int, body: str) -> bool:
             return True
     except Exception as e:
         logger.error(f"Failed to comment on issue #{issue_number}: {e}")
+        return False
+
+
+async def update_issue(issue_number: int, body: str) -> bool:
+    """覆盖已有 Issue 的正文(降级稿补发修订版用)
+
+    补发走覆盖而非追加评论: 读者点开当日内参应当直接看到最终版本,
+    而不是先读半成品再往下翻。
+    """
+    repo, token, api_url = _gh_env()
+    if not repo or not token or not issue_number:
+        logger.warning("GITHUB_REPOSITORY or GITHUB_TOKEN not set, skipping issue update")
+        return False
+    payload = json.dumps({"body": body}, ensure_ascii=False).encode("utf-8")
+    try:
+        async with httpx.AsyncClient(timeout=30) as client:
+            resp = await client.patch(
+                f"{api_url}/repos/{repo}/issues/{issue_number}",
+                content=payload,
+                headers={**_gh_headers(token),
+                         "Content-Type": "application/json; charset=utf-8"},
+            )
+            resp.raise_for_status()
+            return True
+    except Exception as e:
+        logger.error(f"Failed to update issue #{issue_number}: {e}")
         return False
 
 

@@ -1,7 +1,22 @@
-"""SEC EDGAR 采集器 —— 提交接口查询 8-K 等表格"""
+"""SEC EDGAR 采集器 —— 提交接口查询申报表格, 并抓取申报正文
 
+两个曾经致命的设计问题(2026-08 修复):
+
+1. forms 只有 8-K。8-K 是**美国本土发行人**表格, 台积电/ASML/ARM 都是外国私募
+   发行人, 只报 6-K 与 20-F —— 实测三家 8-K 数量均为 0。于是这条唯一的一手通道
+   对台积电结构性隐形, 83 天只产出 4 条, 而内参每期都在说"缺乏独立交叉验证"。
+2. raw_summary 是一句合成占位文("X submitted Form Y on date Z"), 从不抓正文。
+   即便命中, triage 也看不到任何实质内容可打分, 等于白抓。
+
+现在短表格(8-K/6-K)会抓正文并剥掉封面样板。长表格(10-Q/10-K/20-F)正文动辄数 MB,
+截断后只剩封面, 没有意义 —— 它们只登记为"该公司发了这份申报"这一事实, 具体数字
+留给结构化的 XBRL 通道去取。
+"""
+
+import asyncio
 import json
 import logging
+import re
 from datetime import datetime, timezone, timedelta
 from typing import Optional
 
@@ -11,17 +26,100 @@ from radar.collectors.base import Collector
 from radar.collectors.rss import make_id, normalize_url
 from radar.models import Item, utcnow_iso
 from radar.credibility import get_credibility as _source_cred
+from radar.htmltext import extract_text
 
 logger = logging.getLogger(__name__)
 
 _SEC_TICKERS_URL = "https://www.sec.gov/files/company_tickers.json"
 _SEC_SUBMISSIONS = "https://data.sec.gov/submissions/CIK{}.json"
+_SEC_ARCHIVES = "https://www.sec.gov/Archives/edgar/data/{cik}/{accn}"
 _TIMEOUT = 30
-_MAX_RAW_SUMMARY = 1500
+_MAX_RAW_SUMMARY = 3000      # 申报正文比 RSS 摘要更值得多留一些
 _LOOKBACK_DAYS = 7           # 查最近 N 天的 filings
+
+# 会去抓正文的表格。长表格(10-Q/10-K/20-F)正文数 MB, 截断后只剩封面样板,
+# 抓了反而挤占预算; 它们的数字应当走 XBRL 结构化接口。
+_TEXT_FORMS = {"8-K", "6-K"}
+
+# 每个标的每轮最多抓几份正文, 避免申报密集时打爆 SEC 限速
+_MAX_TEXT_FETCH_PER_TICKER = 3
+# SEC 要求 ≤10 req/s, 这里保守取每次请求间隔
+_RATE_DELAY_SEC = 0.15
 
 # SEC 要求合法的 User-Agent
 _USER_AGENT = "ai-research-radar/1.0 (personal research tool; contact@example.com)"
+
+# 申报封面样板。6-K 每份的前 ~1500 字完全相同(表头/地址/勾选说明), 不剥掉的话
+# 每条 6-K 的开头都长一个样, triage 无从分辨谁是月营收谁是董事会决议。
+_BOILERPLATE_PATTERNS = (
+    r"^UNITED STATES$",
+    r"^SECURITIES AND EXCHANGE COMMISSION$",
+    r"^Washington,?\s*D\.?C\.?\s*20549$",
+    r"^FORM\s+\d+-[A-Z]$",
+    r"^REPORT OF FOREIGN PRIVATE ISSUER$",
+    r"^PURSUANT TO RULE 13a-16 OR 15d-16",
+    r"^UNDER THE SECURITIES EXCHANGE ACT OF 1934$",
+    r"^THE SECURITIES EXCHANGE ACT OF 1934$",
+    r"^\(?Translation of Registrant.{0,3}s Name Into English\)?$",
+    r"^\(?Address of Principal Executive Offices\)?$",
+    r"^Indicate by check mark",
+    r"^\d{4} Act Registration No",
+    r"^\(?Commission File Number",
+    r"^Form 20-F\s*☐?\s*Form 40-F",
+    r"^_{3,}$",
+    r"^-{3,}$",
+    r"^Document$",
+    r"^\d+$",
+    # SEC 在线查看器包在文档最前面的那层壳: 表格代号 / 序号 / 文件名 / 描述,
+    # 不剥的话每份申报都以 "EX-99.1 | a2026q2....htm | EX-99.1" 开头
+    r"^EX-[\d.]+[A-Za-z]?$",
+    r"^[A-Za-z0-9_\-]+\.(htm|html|txt)$",
+    r"^Exhibit\s+[\d.]+[A-Za-z]?$",
+    r"^Execution Version$",
+)
+_BOILERPLATE_RE = tuple(re.compile(p, re.I) for p in _BOILERPLATE_PATTERNS)
+
+
+# SEC 自动生成的 XBRL 渲染件(R1.htm, R2.htm…)与索引页不是申报正文, 抓回来只会得到
+# "IDEA: XBRL DOCUMENT / Document and Entity Information" 这类机器产物
+_NON_CONTENT_RE = re.compile(
+    r"^(R\d+\.htm|.*FilingSummary.*|.*index.*|\d{10}-\d\d-\d{6}.*)$", re.I
+)
+
+
+def _is_content_doc(name: str) -> bool:
+    if not name.lower().endswith((".htm", ".html")):
+        return False
+    return not _NON_CONTENT_RE.match(name)
+
+
+def _headline_of(body: str, max_len: int = 70) -> str:
+    """取正文里第一句像样的话作标题后缀
+
+    直接取首行会取到 "EX-99.1" 这类残留标签或公司名单行, 看不出这份申报讲什么。
+    要求带空格且有一定长度, 才算一句话。
+    """
+    for line in body.split("\n"):
+        s = line.strip()
+        if len(s) >= 25 and " " in s:
+            return s[:max_len]
+    first = body.split("\n", 1)[0].strip()
+    return first[:max_len]
+
+
+def strip_filing_boilerplate(text: str) -> str:
+    """剥掉 SEC 申报的封面样板, 只留下有区分度的正文"""
+    if not text:
+        return ""
+    kept = []
+    for line in text.split("\n"):
+        s = line.strip()
+        if not s:
+            continue
+        if any(rx.match(s) for rx in _BOILERPLATE_RE):
+            continue
+        kept.append(s)
+    return "\n".join(kept).strip()
 
 
 def _pad_cik(cik: int) -> str:
@@ -157,6 +255,7 @@ class SECEdgarCollector(Collector):
         primary_docs = filings.get("primaryDocument", [])
 
         items: list[Item] = []
+        text_fetched = 0
         for i in range(len(form_list)):
             form_type = form_list[i] if i < len(form_list) else ""
             filing_date = date_list[i] if i < len(date_list) else ""
@@ -172,15 +271,25 @@ class SECEdgarCollector(Collector):
             # 构造 SEC 文档链接
             accn_clean = accn.replace("-", "")
             doc_url = f"https://www.sec.gov/Archives/edgar/data/{cik}/{accn_clean}/{doc}"
-            filing_url = f"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK={cik}&type={form_type}"
 
             company_name = cov.get("name", ticker)
-            title = f"{company_name} ({ticker}) files {form_type} — {filing_date}"
-            raw_summary = (
-                f"SEC Filing: {company_name} ({ticker}) submitted Form {form_type} "
-                f"on {filing_date}. Accession: {accn}. "
-                f"View filing at {doc_url}"
-            )[:_MAX_RAW_SUMMARY]
+
+            body = ""
+            if form_type in _TEXT_FORMS and text_fetched < _MAX_TEXT_FETCH_PER_TICKER:
+                body = await self._fetch_filing_text(client, cik, accn_clean, doc)
+                text_fetched += 1
+
+            if body:
+                # 标题带上正文里第一句像样的话: "台积电 files 6-K" 这种标题看不出是
+                # 月营收还是人事变动, 而 triage 主要靠标题分辨
+                title = f"{company_name} ({ticker}) {form_type}: {_headline_of(body)}"
+                raw_summary = body[:_MAX_RAW_SUMMARY]
+            else:
+                title = f"{company_name} ({ticker}) files {form_type} — {filing_date}"
+                raw_summary = (
+                    f"SEC Filing: {company_name} ({ticker}) submitted Form {form_type} "
+                    f"on {filing_date}. Accession: {accn}."
+                )[:_MAX_RAW_SUMMARY]
 
             item = Item(
                 id=make_id(accn),
@@ -197,3 +306,46 @@ class SECEdgarCollector(Collector):
             items.append(item)
 
         return items
+
+    async def _fetch_filing_text(
+        self, client: httpx.AsyncClient, cik: int, accn_clean: str, primary_doc: str
+    ) -> str:
+        """抓申报正文并剥掉封面样板, 失败返回空串(调用方退回登记式摘要)
+
+        实质内容有时在 exhibit 而非主文档, 所以先列目录挑最大的 .htm;
+        列不到目录就退回主文档。
+        """
+        base = _SEC_ARCHIVES.format(cik=cik, accn=accn_clean)
+        candidates: list[str] = [primary_doc] if primary_doc else []
+        try:
+            await asyncio.sleep(_RATE_DELAY_SEC)
+            resp = await client.get(f"{base}/index.json",
+                                    headers={"User-Agent": _USER_AGENT})
+            resp.raise_for_status()
+            files = resp.json().get("directory", {}).get("item", [])
+            htm = [f for f in files if _is_content_doc(str(f.get("name", "")))]
+            htm.sort(key=lambda f: int(f.get("size") or 0), reverse=True)
+            for f in htm[:2]:
+                if f["name"] not in candidates:
+                    candidates.append(f["name"])
+        except Exception as e:
+            logger.debug(f"SEC index listing failed for {accn_clean}: {e}")
+
+        # 主文档常常只是封面(实测台积电月营收的主文档 1728 字全是样板), 实质在 exhibit;
+        # 但 exhibit 里最大的那份也可能是附表。逐个取回, 挑剥完样板后信息量最大的。
+        best = ""
+        for name in candidates[:3]:
+            try:
+                await asyncio.sleep(_RATE_DELAY_SEC)
+                r = await client.get(f"{base}/{name}",
+                                     headers={"User-Agent": _USER_AGENT})
+                r.raise_for_status()
+                if "IDEA: XBRL DOCUMENT" in r.text[:4000]:
+                    continue        # SEC 生成的 XBRL 渲染件, 不是申报正文
+                body = strip_filing_boilerplate(extract_text(r.text))
+                if len(body) > len(best):
+                    best = body
+            except Exception as e:
+                logger.debug(f"SEC document fetch failed ({name}): {e}")
+        # 剥完只剩零星几个字说明整份就是封面, 退回登记式摘要
+        return best if len(best) >= 120 else ""

@@ -16,6 +16,11 @@ logger = logging.getLogger(__name__)
 _TRIAGE_BATCH_SIZE = 40
 
 
+def _is_primary_signal(item: Item) -> bool:
+    """算不算"一手信号": 公司/监管/官方自己发的, 或被标为高可信"""
+    return bool(item.is_primary_source) or item.credibility == "high"
+
+
 class Processor:
     """两段式 LLM 处理引擎"""
 
@@ -231,13 +236,39 @@ class Processor:
         # 按时间衰减后的有效分数排序 + 截断
         half_life = self.cfg["scoring"].get("time_decay", {}).get("half_life_hours", 4)
         scored_items.sort(key=lambda x: compute_effective_score(x, half_life), reverse=True)
-        kept = scored_items[: self.max_items]
+        kept = self._apply_primary_reserve(scored_items)
 
+        n_primary = sum(1 for it in kept if _is_primary_signal(it))
         logger.info(
             f"Triage result: {len(scored_items)} pass threshold → keeping top {len(kept)} "
-            f"({cred_filtered} dropped by credibility floor)"
+            f"({n_primary} primary/high-cred, {cred_filtered} dropped by credibility floor)"
         )
         return kept
+
+    def _apply_primary_reserve(self, ranked: list[Item]) -> list[Item]:
+        """一手来源保底席位 —— 截断前先把位置留给一手/高可信条目
+
+        实测全库一手来源仅 8.8%、high 可信度仅 7.4%, 供应链标的的判断几乎全靠
+        二手转载支撑。纯按有效分一刀切时, 一份台积电月营收会输给一堆当日热点转载
+        —— 转载分数并不低, 数量还压倒性地多。
+
+        这里只动截断顺序, 不动任何评分逻辑: 先按排名取满 primary_reserve 个一手
+        条目, 剩余名额照旧竞争, 最后按原排名顺序输出。
+        """
+        if len(ranked) <= self.max_items:
+            return ranked
+
+        reserve = min(self.cfg["scoring"].get("primary_reserve", 0), self.max_items)
+        if reserve <= 0:
+            return ranked[: self.max_items]
+
+        reserved = [it for it in ranked if _is_primary_signal(it)][:reserve]
+        reserved_ids = {it.id for it in reserved}
+        rest = [it for it in ranked if it.id not in reserved_ids]
+        kept_ids = reserved_ids | {
+            it.id for it in rest[: self.max_items - len(reserved)]
+        }
+        return [it for it in ranked if it.id in kept_ids]
 
     # ================================================================
     # Stage 2: 深度信号提取（逐条或小批量）

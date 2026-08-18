@@ -133,6 +133,8 @@ def render(payload: DigestPayload, site_url: str = "", issue_url: str = "",
             parts.append(_esc(byline))
     if payload.fallback:
         parts.append("（本期为降级稿：撰稿环节未完成，仅事实层）")
+    elif payload.revision:
+        parts.append("（修订版：替代本日早前推送的降级稿）")
     if payload.headline:
         parts.append(f"<i>{_esc(payload.headline)}</i>")
 

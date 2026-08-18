@@ -11,6 +11,10 @@ coverage:
   - { name: "台积电",     ticker: "TSM",    market: "US",      aliases: ["TSMC", "Taiwan Semiconductor"] }
   - { name: "ASML",      ticker: "ASML",   market: "US",      aliases: [] }
   - { name: "美光",       ticker: "MU",     market: "US",      aliases: ["Micron"] }
+  # HBM 三家此前只有美光, 于是 SK 海力士/三星的产能与定价即使被读到也无标的可标
+  # (triage 硬约束: 只能用本清单里的 name)。两家均非 SEC 申报人, 靠新闻与第三方研究覆盖。
+  - { name: "海力士",     ticker: "000660", market: "KR",      aliases: ["SK Hynix", "SK海力士", "SKhynix", "SK hynix"] }
+  - { name: "三星电子",   ticker: "005930", market: "KR",      aliases: ["Samsung", "Samsung Electronics", "三星"] }
   - { name: "Intel",     ticker: "INTC",   market: "US",      aliases: ["英特尔"] }
   - { name: "Marvell",   ticker: "MRVL",   market: "US",      aliases: [] }
   - { name: "高通",       ticker: "QCOM",   market: "US",      aliases: ["Qualcomm"] }
@@ -30,6 +34,9 @@ coverage:
   - { name: "浪潮信息",   ticker: "000977", market: "CN",      aliases: ["Inspur"] }
   - { name: "景嘉微",     ticker: "300474", market: "CN",      aliases: ["景嘉微电子"] }
   - { name: "长电科技",   ticker: "600584", market: "CN",      aliases: ["JCET"] }
+  # CoWoS 产能的实际承接方之一。此前无标的可映射, "ASE 先进封装报价上调 20%+"
+  # 这类先进封装定价新闻会因为标不出标的而被削弱
+  - { name: "日月光",     ticker: "3711",   market: "TW",      aliases: ["ASE", "ASE Technology", "日月光投控", "ASEH"] }
   - { name: "阿里巴巴",   ticker: "9988",   market: "HK",      aliases: ["Alibaba", "阿里云"] }
   - { name: "腾讯",       ticker: "0700",   market: "HK",      aliases: ["Tencent"] }
   - { name: "百度",       ticker: "9888",   market: "HK",      aliases: ["Baidu"] }
@@ -43,6 +50,9 @@ coverage:
   - { name: "Anthropic", ticker: "",        market: "PRIVATE", aliases: [] }
   - { name: "DeepSeek",  ticker: "",        market: "PRIVATE", aliases: [] }
   - { name: "xAI",       ticker: "",        market: "PRIVATE", aliases: ["x.AI"] }
+  # 私有公司, 无披露义务 —— 产能与订单数据结构性不可得。列在这里只为让二手报道
+  # 能被正确打标而不是因无标的可标被丢掉; 不要指望它出现一手数据。
+  - { name: "字节跳动",   ticker: "",        market: "PRIVATE", aliases: ["ByteDance", "火山引擎", "Volcano Engine", "抖音"] }
 
 # ============================================================
 # 投资主线 —— LLM 给每条信息打标签时从这里选
@@ -156,8 +166,21 @@ sources:
     # - { id: "minimax_search",  type: "minimax_search", params: { max_per_stock: 3 } }
     # - { id: "web_search",      type: "web_search", params: { max_per_stock: 1 } }
   market:
-    # 8-K 申报稀疏且时间戳只到天, 给足窗口
-    - { id: "sec_edgar",       type: "sec_edgar", params: { forms: ["8-K"], window_hours: 72 } }
+    # 申报稀疏且时间戳只到天, 给足窗口。
+    #
+    # forms 曾经只有 8-K, 而 8-K 是美国本土发行人表格 —— 台积电/ASML/ARM 都是外国
+    # 私募发行人, 只报 6-K 与 20-F, 实测三家的 8-K 数量均为 0。于是这条唯一的一手
+    # 通道对台积电结构性隐形, 83 天只产出 4 条。加 6-K 后台积电的月营收报告(含同比
+    # 与背书保证余额)才进得来; 加 10-Q/10-K 才拿得到采购义务与表外承诺附注。
+    - { id: "sec_edgar",       type: "sec_edgar",
+        params: { forms: ["8-K", "6-K", "10-Q", "10-K", "20-F"], window_hours: 72 } }
+    # ---- 一手 IR newsroom(公司自己发的公告, 非转载) ----
+    - { id: "rss:amd-ir",      type: "rss", params: { url: "https://ir.amd.com/rss/news-releases.xml" } }
+    - { id: "rss:broadcom-ir", type: "rss", params: { url: "https://investors.broadcom.com/rss/news-releases.xml" } }
+    # ---- 第三方产业研究: HBM/CoWoS 定价与产能, 独立于英伟达口径 ----
+    # 加它的理由: 此前 high 可信度条目被 rss:openai 与 rss:nvidia-blog 主导, 等于
+    # 用被验证方自己的口径去验证自己。TrendForce 提供独立的价格与产能观测。
+    - { id: "rss:trendforce",  type: "rss", params: { url: "https://www.trendforce.com/news/feed/" } }
 
 # ============================================================
 # 趋势话题搜索 —— 追踪 AI 关键人物和话题（替代 X/Twitter）
@@ -199,6 +222,10 @@ clustering:
 scoring:
   min_score_to_keep: 5              # 第一段筛选阈值
   max_items_in_brief: 40            # 每轮进入 extract 的条目上限
+  # 一手来源保底席位: 截断前先留给 is_primary_source / credibility=high 的条目。
+  # 实测全库一手来源仅 8.8%、high 仅 7.4%, 供应链标的的判断几乎全靠二手转载支撑;
+  # 一份台积电月营收不该因为有效分不如一堆热点转载而被挤出 extract。
+  primary_reserve: 8
   # 单条目的标的数上限。extract 会把整条产业链"可能被波及"的都列上(实测最多
   # 一条挂 37 个), 导致同一件事的两篇报道 ticker 交集被稀释、聚类合不上,
   # 于是重复推两条快报。只保留新闻主体。
@@ -256,6 +283,23 @@ notify:
     cooldown_min: 30
     max_per_run: 3              # 溢出并入下一轮快报评估
     jaccard_threshold: 0.6      # 内容签名防重阈值
+
+# ============================================================
+# 深度解读阅读流 —— 与内参并行的第二条管道
+# 问的不是"这跟哪只票有关", 而是"读完认知会不会变"。
+# 候选在采集出口分叉(投研 triage 之前) —— 想要的那类文章正好是被 min_score_to_keep
+# 挡掉的那批, 从 archive 里挑什么也挑不到。
+# 完整载体: GitHub Issue(标签"阅读") + 仓库内 reports/reading-YYYY-MM-DD.md
+# ============================================================
+reading:
+  enabled: true
+  hour_hkt: 9                   # 内参 07:00 之后, 两份产物不抢同一个时段
+  window_before_min: 15
+  window_after_min: 90
+  min_score: 7                  # rubric 闸门, 与投研 min_score_to_keep 无关
+  daily_limit: 5                # 每日清单上限, 读得完才有意义
+  queue_cap: 40                 # 候选队列上限, 防止状态文件无限增长
+  fulltext: true                # 入选条目抓正文(仅 daily_limit 篇/天)
 
 # ============================================================
 # 分发渠道

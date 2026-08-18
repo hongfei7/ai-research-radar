@@ -103,6 +103,7 @@ class MinimaxClient:
         max_tokens: int = 4096,
         retries: int = MAX_RETRIES,
         thinking: bool = True,
+        timeout: float | None = None,
     ) -> str:
         """
         调用 chat completion，返回模型生成的文本(已剥离推理内容)。
@@ -115,6 +116,11 @@ class MinimaxClient:
             retries:     JSON 解析失败时的重试次数
             thinking:    是否保留模型推理。批量分类类任务关掉可显著降低延迟；
                          需要论证质量的撰稿保持开启。M2.x 不支持关闭，参数会被忽略。
+            timeout:     本次请求的超时(秒), 覆盖客户端级 REQUEST_TIMEOUT。
+                         给自带 wait_for 的调用方(撰稿层)用: 它们的外层预算比批量
+                         任务宽, 需要单独抬高 httpx 超时以维持"httpx 不能先断"的
+                         不变式, 而不能去动 REQUEST_TIMEOUT —— 那是 triage /
+                         extract / situation / cluster 唯一的时间闸门。
 
         Returns:
             模型生成的原始文本
@@ -134,10 +140,12 @@ class MinimaxClient:
         if not thinking:
             payload["thinking"] = {"type": "disabled"}
 
+        post_kwargs = {} if timeout is None else {"timeout": httpx.Timeout(timeout)}
+
         last_error = None
         for attempt in range(retries + 1):
             try:
-                resp = await client.post(url, json=payload)
+                resp = await client.post(url, json=payload, **post_kwargs)
                 resp.raise_for_status()
                 data = resp.json()
 
@@ -190,6 +198,7 @@ class MinimaxClient:
         max_tokens: int = 4096,
         retries: int = MAX_RETRIES,
         thinking: bool = True,
+        timeout: float | None = None,
     ) -> dict | list:
         """
         调用 chat completion 并解析为 JSON。
@@ -204,6 +213,7 @@ class MinimaxClient:
             max_tokens=max_tokens,
             retries=MAX_RETRIES,  # 网络层重试
             thinking=thinking,
+            timeout=timeout,
         )
 
         for attempt in range(retries + 1):
@@ -232,6 +242,7 @@ class MinimaxClient:
                         max_tokens=max_tokens,
                         retries=1,  # JSON 修正重试时仍保留网络层重试
                         thinking=False,  # 修格式不需要推理, 省一轮延迟
+                        timeout=timeout,
                     )
                 else:
                     logger.error(f"Failed to parse JSON after {retries + 1} attempts. Raw text: {text[:500]}")

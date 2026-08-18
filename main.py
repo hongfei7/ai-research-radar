@@ -341,6 +341,17 @@ async def run_full(cfg: dict, notify_dry_run: bool = False) -> None:
 
     client = MinimaxClient(model=cfg["minimax"]["model"])
     try:
+        # —— 阅读流分叉 ——
+        # 必须在 processor.process 之外: 投研 triage 把"评论与解读类"定在 4-6 分,
+        # min_score_to_keep 是 5, 没过闸的条目根本不落盘 —— 阅读流想要的正是那批。
+        # 也必须在 if processed 之外: 投研零产出的轮次恰恰是这类内容最多的时候。
+        from radar.reading.run import collect_candidates, run_daily as reading_daily
+        try:
+            await collect_candidates(new_items, cfg, client,
+                                     dry_run=notify_dry_run)
+        except Exception as e:
+            logger.error(f"Reading candidate selection failed: {e}")
+
         if new_items:
             processor = Processor(client, cfg)
             processed = await processor.process(new_items)
@@ -481,6 +492,12 @@ async def run_full(cfg: dict, notify_dry_run: bool = False) -> None:
             dry_run=notify_dry_run,
         )
 
+        # 阅读流每日清单: 每轮判时点, 到点才出。与内参彼此独立, 一边失败不拖累另一边
+        try:
+            await reading_daily(cfg, client, dry_run=notify_dry_run)
+        except Exception as e:
+            logger.error(f"Reading digest failed: {e}")
+
     finally:
         await client.close()
 
@@ -502,20 +519,37 @@ async def run_notify_only(cfg: dict, dry_run: bool = False) -> None:
     )
 
 
+async def run_reading_only(cfg: dict, dry_run: bool = False,
+                           force: bool = True) -> None:
+    """仅出阅读清单(不采集) —— 用于 dry-run 验证与手动补发
+
+    默认 force=True: 手动跑就是想现在看到结果, 不该被时点闸门拦住。
+    """
+    from radar.reading.run import run_daily
+    client = MinimaxClient(model=cfg["minimax"]["model"])
+    try:
+        body = await run_daily(cfg, client, dry_run=dry_run, force=force)
+        if body is None:
+            logger.info("Reading digest skipped (disabled in config)")
+    finally:
+        await client.close()
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="AI 投研雷达")
     parser.add_argument(
         "--stage",
-        choices=["collect", "process", "cluster", "full", "notify"],
+        choices=["collect", "process", "cluster", "full", "notify", "reading"],
         default="collect",
         help="Pipeline stage to run",
     )
     parser.add_argument("--config", type=str, help="Path to config.yaml")
     parser.add_argument("-v", "--verbose", action="store_true", help="Verbose logging")
     parser.add_argument(
-        "--notify-dry-run",
+        "--notify-dry-run", "--dry-run",
+        dest="notify_dry_run",
         action="store_true",
-        help="新推送子系统 dry-run: 生成稿件打印到 stdout, 不发送、不写状态",
+        help="dry-run: 生成稿件/阅读清单打印到 stdout, 不发送、不归档、不写状态",
     )
     args = parser.parse_args()
 
@@ -534,6 +568,8 @@ def main() -> None:
         asyncio.run(run_full(cfg, notify_dry_run=args.notify_dry_run))
     elif args.stage == "notify":
         asyncio.run(run_notify_only(cfg, dry_run=args.notify_dry_run))
+    elif args.stage == "reading":
+        asyncio.run(run_reading_only(cfg, dry_run=args.notify_dry_run))
 
     logger.info("Pipeline complete")
 

@@ -285,6 +285,9 @@ class DigestPayload:
     footer: str = ""
     generated_at: str = ""
     fallback: bool = False           # True = LLM 失败后的兜底模板稿
+    # True = 当日已推过降级稿, 这一份是补发的修订版。渲染层据此标注,
+    # 让读者知道它替代的是早上那份, 而不是当作第二份内参
+    revision: bool = False
 
     @classmethod
     def from_dict(cls, d: dict, kind: str = KIND_MORNING) -> "DigestPayload":

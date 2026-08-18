@@ -33,9 +33,29 @@
   素材里的 cross_analysis【核心矛盾】与 trend_spotting 的拐点段落是这里的主要弹药。
   写成自足的散文, **不要用"判断一/判断二"这样的编号引用** —— 格局排在速览表之前, 读者那时还没看到编号。
 
-- blindspot: 盲区, 即我们**不知道**什么。素材里的 cross_analysis【信息盲点】直接可用。
-  这是宏观层最该承载的东西 —— 一份只讲已知的报告会让读者高估确定性。
-  素材确实没有盲点可讲时留空字符串, 不要硬编。
+- blindspot: 盲区, 即我们**不知道**什么。这是宏观层最该承载的东西 ——
+  一份只讲已知的报告会让读者高估确定性。
+
+  **必须基于素材里的 coverage_audit 实测数据来写, 不得凭印象断言。**
+  coverage_audit 是对历史归档的统计, 每条形如
+  {"name": "台积电", "level": "structural", "days_since_own_disclosure": null,
+   "expected_channels": ["sec_edgar"], "n_items_30d": 493}
+  含义:
+  - level=structural: 该标的**有**直连通道(expected_channels 非空)却长期零产出
+    —— 当前判断只能靠二手转载
+  - level=thin: 有自有披露但已陈旧
+  - days_since_own_disclosure=null 表示回看窗口内从未拿到过它的自有披露
+  - n_items_30d 是近 30 天提及它的条目数
+
+  注意 n_items_30d 很大而 level=structural 是常态且**恰恰是要点**: 它天天被提及,
+  却从来不是它自己在说话。这种情况要写成"某标的近 30 天有 N 条相关信息, 但全部为
+  二手转述, 无一手披露", **不要写成"完全未涉及"** —— 那是错的, 读者一眼能证伪。
+
+  好的写法(可核查): "台积电近 30 天有 493 条相关信息进入本库, 但无一条来自其自有披露,
+  对其产能的判断全部依赖二手转述与同业外推"
+  坏的写法(凭印象、易被证伪): "本期素材完全未涉及台积电的实质信息"
+
+  coverage_audit 为空时, 才退回用 cross_analysis【信息盲点】来写; 都没有则留空字符串。
 
 - shift_kind: 相对上期取 hold(维持) / adjust(微调) / pivot(转向) 之一
 - shift: 一句话说明为什么维持或改了什么。首期无 last_report 时 shift_kind 用 hold, shift 写"首期建立框架"

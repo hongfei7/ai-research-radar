@@ -377,10 +377,36 @@ def test_strip_reasoning_passthrough():
 
 
 def test_copywriter_timeout_below_http_timeout():
-    """撰稿层超时必须小于 httpx 请求超时, 否则 httpx 先断开, wait_for 形同虚设"""
-    from radar.minimax_client import REQUEST_TIMEOUT
-    from radar.notify.copywriter import _LLM_TIMEOUT_SEC
-    assert _LLM_TIMEOUT_SEC < REQUEST_TIMEOUT
+    """撰稿层超时必须小于本次请求的 httpx 超时, 否则 httpx 先断, wait_for 形同虚设
+
+    晨报预算(300s)已超过全局 REQUEST_TIMEOUT(240s), 因此不变式改由
+    chat_json(timeout=) 的单请求覆盖维持 —— 抬全局会连带放松 triage/extract。
+    """
+    from radar.notify.copywriter import (
+        _LLM_TIMEOUT_BY_KIND, _RETRY_TIMEOUT_SEC, _HTTP_TIMEOUT_MARGIN_SEC,
+    )
+    assert _HTTP_TIMEOUT_MARGIN_SEC > 0
+    for budget in list(_LLM_TIMEOUT_BY_KIND.values()) + [_RETRY_TIMEOUT_SEC]:
+        assert budget < budget + _HTTP_TIMEOUT_MARGIN_SEC
+
+
+def test_copywriter_passes_http_timeout_above_its_own_budget():
+    """撰稿的每次调用都必须把放宽后的超时透传给 httpx, 不能只靠全局常量"""
+    import asyncio
+    from radar.notify import copywriter as cw
+
+    captured = {}
+
+    class _Client:
+        async def chat_json(self, messages, **kwargs):
+            captured.update(kwargs)
+            raise RuntimeError("stop here, we only care about the timeout")
+
+    material = {"events": [], "generated_at": "2026-08-17T00:00:00Z"}
+    asyncio.run(cw.write_digest(
+        cw.KIND_MORNING, material, {"minimax": {"model": "m"}}, _Client(),
+    ))
+    assert captured["timeout"] > cw._LLM_TIMEOUT_BY_KIND[cw.KIND_MORNING]
 
 
 def test_chat_endpoint_is_configurable(monkeypatch):
@@ -1228,3 +1254,53 @@ def test_appendix_truncates_overlong_titles():
 def test_appendix_no_note_when_all_listed():
     body = render_issue_body(_full_payload(), material=_material_with_events(5))
     assert "未列入" not in body
+
+
+def test_primary_reserve_keeps_disclosures_from_being_crowded_out():
+    """一手来源保底席位: 分数不占优也必须留在 extract 名额里
+
+    实测全库一手来源仅 8.8%, 一份台积电月营收会输给一堆当日热点转载 ——
+    转载分数并不低, 数量还压倒性地多。
+    """
+    from radar.models import Item
+    from radar.processor import Processor
+
+    def _mk(i, primary, score):
+        return Item(
+            id=f"i{i}", title=f"t{i}", url=f"https://x/{i}", source="s",
+            source_type="tech", published_at="2026-08-17T00:00:00Z",
+            fetched_at="2026-08-17T00:00:00Z", raw_summary="",
+            relevance_score=score, is_primary_source=primary,
+            credibility="high" if primary else "low",
+        )
+
+    cfg = {"scoring": {"min_score_to_keep": 5, "max_items_in_brief": 40,
+                       "primary_reserve": 8}}
+    p = Processor.__new__(Processor)
+    p.cfg = cfg
+    p.max_items = 40
+
+    # 前 60 条是高分二手转载, 末尾 8 条才是低分一手披露(已按有效分排好序)
+    ranked = [_mk(i, False, 9) for i in range(60)] + \
+             [_mk(100 + i, True, 5) for i in range(8)]
+    kept = p._apply_primary_reserve(ranked)
+
+    assert len(kept) == 40
+    n_primary = sum(1 for it in kept if it.is_primary_source)
+    assert n_primary == 8, "一手条目必须全部保住席位"
+    # 顺序仍按原排名, 不因保底而打乱
+    assert [it.id for it in kept] == [it.id for it in ranked if it in kept]
+
+
+def test_primary_reserve_noop_when_under_budget():
+    from radar.models import Item
+    from radar.processor import Processor
+
+    p = Processor.__new__(Processor)
+    p.cfg = {"scoring": {"primary_reserve": 8}}
+    p.max_items = 40
+    items = [Item(id=f"i{i}", title="t", url="u", source="s", source_type="tech",
+                  published_at="2026-08-17T00:00:00Z",
+                  fetched_at="2026-08-17T00:00:00Z", raw_summary="")
+             for i in range(10)]
+    assert p._apply_primary_reserve(items) == items

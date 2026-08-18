@@ -14,6 +14,9 @@ CREDIBILITY_RULES = {
     "rss:msft-research":"high",
     "rss:aws-ml":       "high",
     "sec_edgar":        "high",
+    # IR newsroom 是公司自己发的公告, 与官方博客同级
+    "rss:amd-ir":       "high",
+    "rss:broadcom-ir":  "high",
 
     # —— 学术 / IEEE ——
     "arxiv":                "high",
@@ -34,6 +37,10 @@ CREDIBILITY_RULES = {
     "rss:eetimes":         "medium",
     "rss:infoq":           "medium",
     "rss:importai":        "medium",
+
+    # 第三方产业研究: 报价与产能观测独立于厂商口径, 但仍是研究机构估算而非披露,
+    # 所以给 medium 而不是 high
+    "rss:trendforce":      "medium",
 
     # —— 半导体与战略分析(署名深度分析, 但属观点非事实) ——
     "rss:semiengineering": "medium",
