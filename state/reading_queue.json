@@ -220,6 +220,19 @@
       "source_traceable": false,
       "why": "国产AI加速器90%自给率判断含具体厂商与替代节奏，可了解国内AI芯片格局。",
       "queued_at": "2026-08-18T11:42:26Z"
+    },
+    {
+      "id": "6c3a1dc89fb35a3f93026fbd7c18ef01408e22cc",
+      "title": "以GLM-5为例，探究九章智算云强化学习系统如何落地“训推一致”",
+      "url": "https://www.leiphone.com/category/ai/kcpk6o5zihswfl8m.html",
+      "source": "rss:leiphone",
+      "published_at": "2026-08-18T09:51:00Z",
+      "raw_summary": "过去几年，大模型竞争的主线很清晰：更大的模型、更多的数据和更强的GPU集群。但随着预训练边际收益递减，模型能力Scaling正从单纯的预训练堆叠向后训练强化学习（RL）转变，数学推理、代码生成、复杂决策、长时序Agent等高阶能力，越来越依赖后训练强化学习（RL）激发。RL通过生成、执行、反馈和奖励，让模型持续学习推理、规划与自我纠错的能力。由此，大模型发展从“一次性训练”进入“持续训练”，模型能力Scaling也从预训练延伸至生成、反馈和迭代全过程。SemiAnalysis指出，当RL成为模型能力持续Scaling的关键，竞争的就不只是算法，还有支撑模型持续生成、训练和更新的AI基础设施系统。问题也随之变成：当模型越依赖RL获得能力，谁来支撑这种能力持续低成本地生产。从“模型+算力”到算法与AI基础设施共同Scaling智谱近期的模型迭代，为观察后训练RL提供了一个窗口。智谱公告指出，GLM-5.3与GLM-5.2在相同基座上推进强化学习，通过后训练Scaling持续提升模型智能上界。以GLM-5.2为例，其在SWE-bench Pro取得62.1分、Terminal-Bench 3.0达到81.0分，核心驱动力正是面向长时序、多步骤、工具联动场景的RL训练。这意味着，复杂推理和Agent能力的提升，正越来越依赖强化学习。这一变化也正在影响AI产业链分工方式：模型厂商不再只是单独推进算法，而是需要与AI基础设施共同服务于“智能持续生产”。目前，GLM-5系列、DeepSeek R系列等主流推理模型均已部署于九章智算云，实现规模化Token生产。不同于“模型+算力”的传统产业关系，九章智算云与模型厂商双方形成了算法与工程系统双向RL Scaling的协作模式：模型厂商持续挑战RL算法和策略边界，九章智算云则持续打磨适配的算力调度、推理服务和状态管理，实现工业级应用。大规模应用的模型算法再进化，进而提出更高的基础设施要求，而基础设施的持续迭代又为更大规模RL实现打开空间。由此，模型厂商与AI基础设施成为RL的一体两面，RL从模型训练中的单一算法环节，升级为AI云必须具备的核心能力。模型、算力、数据、状态和推理不再彼此割裂，而是共同构成一条持续运行的智能生产线。真正的问题也由“模型+算力”转向如何让算法与基础设施协同Scaling，以“一条智能生产线”更低成本持续生产有效Token和模型能力。RL让训练与推理成为一条生产线强化学习与传统预训练的核心差异，不在于增加一种训练算法，而在于改变了训练系统的结构。一个完整的RL系统通常由三部分组成：Generator、Environment和Trainer。Generator接收Prompt并通过推理生成Rollout；Environment执行代码、工具调用或任务模拟并返回Reward；Trainer依据Rollout和Reward更新模型权重，再将新权重回传Generator，形成Generate→Reward→Train→Update→Generate的持续闭环。与预训练依赖固定数据集不同，RL的训练数据由模型实时生成，因此训练与推理第一次真正形成了连续生产关系。问题也因此出现。如果Trainer每秒能够消费100个样本，而Generator只能生成60个，训练算力就会闲置；反之则会造成Rollout堆积、数据陈旧，形成Policy Staleness。因此，RL基础设施优化的核心不再是单点GPU利用率，而是Trainer Throughput与Effective Generator Throughpu",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "以GLM-5.2/5.3为例拆解后训练RL的'训推一致'工程实践，含SWE-bench Pro 62.1、Terminal-Bench 3.0 81.0等具体分数与基础设施取舍。",
+      "queued_at": "2026-08-18T12:03:31Z"
     }
   ],
   "digest_last_date": "2026-08-18"
