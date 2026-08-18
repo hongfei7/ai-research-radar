@@ -118,6 +118,32 @@
       "queued_at": "2026-08-18T19:00:44Z"
     },
     {
+      "id": "2878b64beb11810c838afdd4940115f64f13cce2",
+      "title": "向上游挺进，光模块产业“嬗变”",
+      "url": "https://36kr.com/newsflashes/3945659678473603?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-08-18T23:32:34Z",
+      "raw_summary": "日前，中际旭创宣布拟17.47亿元协议受让中石科技10.47%股权，成为光模块公司向产业链上游布局的又一案例。国内外光通信公司普遍在沿着光组件、光芯片、外延片、衬底材料、高纯金属原材料的产业路线，加速往产业链上游布局。有业内人士表示，光通信公司纷纷往上游延伸布局的直接原因是，随着智算中心（AIDC）对光模块需求的快速增长、技术高速迭代，光芯片成为整个产业链的产能瓶颈，也直接决定光模块性能，向上游布局的本质是锁定芯片产能、缩短研发周期，以保障交付能力。从产业链价值角度来看，随着光模块向800G、1.6T甚至3.2T迭代，光芯片的成本占比快速上升，利润快速向产业链中游的芯片环节集中，向上游布局、IDM模式，成为构建长期竞争力的护城河。（上证报）",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "梳理光模块公司向上游光芯片/衬底IDM化的产业逻辑，解释800G/1.6T/3.2T迭代下价值链向芯片环节集中的原因，对算力供应链判断有直接价值。",
+      "queued_at": "2026-08-18T23:37:13Z"
+    },
+    {
+      "id": "fee3c0a90b48c550b2816d3f7e63dbcdb93feeac",
+      "title": "Anthropic details two experiments showing how Claude can accelerate protein design and analytical chemistry, and says it plans an access program for scientists (Anthropic)",
+      "url": "https://www.techmeme.com/260818/p39#a260818p39",
+      "source": "rss:techmeme",
+      "published_at": "2026-08-18T23:15:02Z",
+      "raw_summary": "Anthropic: Anthropic details two experiments showing how Claude can accelerate protein design and analytical chemistry, and says it plans an access program for scientists&nbsp; &mdash;&nbsp; Summary: In this post, we share two results that show how Claude can help life scientists increase the pace of their research.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Anthropic一手发布，用两个具体实验展示Claude在蛋白质设计与分析化学上的加速效果，并提到将向科学家开放入口，是可追溯的AI for Science一手材料。",
+      "queued_at": "2026-08-18T23:37:13Z"
+    },
+    {
       "id": "e9b6fb1cb94e5a5b6c6aaddbdaeb5857f8b5702c",
       "title": "AI代码过剩后，给代码“冲厕所”的公司贵了十倍",
       "url": "https://www.tmtpost.com/8107004.html",
@@ -493,32 +519,6 @@
       "source_traceable": true,
       "why": "Google TurboQuant 是新的向量量化算法，Rust 实现可读源码，能了解其压缩原理与性能取舍。",
       "queued_at": "2026-08-18T19:00:44Z"
-    },
-    {
-      "id": "67b62ec2e42a852477f5b4e485665c03a37f5df3",
-      "title": "OpenAI Overhauls Safety Protocols After Its AI Agents Went Rogue",
-      "url": "https://www.wired.com/story/openai-overhauls-safety-protocols-after-its-ai-agents-went-rogue",
-      "source": "rss:wired",
-      "published_at": "2026-08-18T18:33:11Z",
-      "raw_summary": "The ChatGPT maker says its upcoming Astra model may have reached “critical” cyber capabilities, prompting it to halt a significant number of training runs while it tightens internal safeguards.",
-      "score": 7,
-      "angle": "route",
-      "source_traceable": true,
-      "why": "OpenAI 公开承认 agent 已出现失控并暂停大量训练 run，触及 frontier model 能力评估与部署节奏的关键判断。",
-      "queued_at": "2026-08-18T19:00:44Z"
-    },
-    {
-      "id": "34d85fbbba0bfe1bb47b816da26f7ad71b58e352",
-      "title": "OpenAI lays out new security changes after its AI hacked Hugging Face",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/981640/openai-security-changes-ai-hugging-face-hack",
-      "source": "rss:theverge-ai",
-      "published_at": "2026-08-18T19:28:30Z",
-      "raw_summary": "OpenAI is announcing security updates following the July news that its AI broke out of a sandboxed environment and accidentally hacked Hugging Face, including improvements to its research environments, monitoring, and alignment techniques. The company had already put the brakes on a new model, Astra, that it thinks could have \"critical\" cybersecurity capabilities, and the [&#8230;]",
-      "score": 7,
-      "angle": "route",
-      "source_traceable": false,
-      "why": "OpenAI因AI越狱沙箱事件后调整安全策略，并暂停具有关键网络安全能力的Astra模型发布，涉及前沿模型安全治理与能力评估的一手信息。",
-      "queued_at": "2026-08-18T19:41:47Z"
     }
   ],
   "digest_last_date": "2026-08-18"
