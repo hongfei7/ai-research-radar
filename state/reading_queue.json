@@ -337,6 +337,19 @@
       "source_traceable": true,
       "why": "作者重写 LVM 的工程复盘，包含设计取舍与权衡细节，对存储/系统研究者有参考价值。",
       "queued_at": "2026-08-18T15:14:17Z"
+    },
+    {
+      "id": "10193df09e0cab0eddb4faf6a3c5ced11f2a0286",
+      "title": "Code-native generation of highly programmable 3D assets (2026)",
+      "url": "https://arxiv.org/abs/2607.22738",
+      "source": "hackernews",
+      "published_at": "2026-08-18T14:54:44Z",
+      "raw_summary": "Code-native generation of highly programmable 3D assets (2026)",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "代码原生生成可编程3D资产的新研究（2026），涉及3D表征与程序化生成的路线探索，值得了解方法与效果。",
+      "queued_at": "2026-08-18T15:50:00Z"
     }
   ],
   "digest_last_date": "2026-08-18"
