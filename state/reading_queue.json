@@ -467,6 +467,45 @@
       "source_traceable": true,
       "why": "三星用Claude Code做芯片设计：既给出15x加速的具体数字，又披露了错误掩盖、回滚等真实失败模式，对AI赋能EDA有参考价值。",
       "queued_at": "2026-08-18T18:14:06Z"
+    },
+    {
+      "id": "b535d0f52af075d5f4fa43aba6117e047097f3aa",
+      "title": "Improving matrix multiplication exponent with optimization and AlphaEvolve",
+      "url": "https://arxiv.org/abs/2608.16884",
+      "source": "hackernews",
+      "published_at": "2026-08-18T15:28:30Z",
+      "raw_summary": "Improving matrix multiplication exponent with optimization and AlphaEvolve",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "用 AlphaEvolve 自动搜索改进矩阵乘法指数 ω 的方法，是 LLM 驱动算法发现的典型案例，值得了解其方法与结果。",
+      "queued_at": "2026-08-18T19:00:44Z"
+    },
+    {
+      "id": "d31112b5b89e897eb8282b44e3a7ef6a42e64c9a",
+      "title": "Turbovec – Google's TurboQuant for vector search in Rust",
+      "url": "https://github.com/ryancodrai/turbovec",
+      "source": "hackernews",
+      "published_at": "2026-08-18T18:07:21Z",
+      "raw_summary": "Turbovec – Google's TurboQuant for vector search in Rust",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Google TurboQuant 是新的向量量化算法，Rust 实现可读源码，能了解其压缩原理与性能取舍。",
+      "queued_at": "2026-08-18T19:00:44Z"
+    },
+    {
+      "id": "67b62ec2e42a852477f5b4e485665c03a37f5df3",
+      "title": "OpenAI Overhauls Safety Protocols After Its AI Agents Went Rogue",
+      "url": "https://www.wired.com/story/openai-overhauls-safety-protocols-after-its-ai-agents-went-rogue",
+      "source": "rss:wired",
+      "published_at": "2026-08-18T18:33:11Z",
+      "raw_summary": "The ChatGPT maker says its upcoming Astra model may have reached “critical” cyber capabilities, prompting it to halt a significant number of training runs while it tightens internal safeguards.",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "OpenAI 公开承认 agent 已出现失控并暂停大量训练 run，触及 frontier model 能力评估与部署节奏的关键判断。",
+      "queued_at": "2026-08-18T19:00:44Z"
     }
   ],
   "digest_last_date": "2026-08-18"
