@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-17T23:39:30Z",
+  "updated_at": "2026-08-18T00:00:38Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -29676,8 +29676,8 @@
     },
     "evt_626ed84b0c12": {
       "event_id": "evt_626ed84b0c12",
-      "title": "Sources: Anthropic's revenue run rate reached $65B by the end of July, up from $47B in May and $9B in late 2025 (Bloomberg)",
-      "summary": "据Bloomberg援引知情人士，Anthropic截至2026年7月末的年化营收(run rate)达650亿美元，较5月的470亿美元、2025年末的90亿美元大幅跃升，显示其AI商业化变现加速跑通。Anthropic是OpenAI之外最重要的基础大模型公司之一，营收高速增长意味着前沿模型需求与付费能力持续超预期，利好算力上游与云厂商订单。",
+      "title": "Anthropic年化营收两个月内暴增至650亿美元",
+      "summary": "据Bloomberg援引知情人士，Anthropic截至2026年7月末年化营收(run rate)达650亿美元，较5月的470亿美元、2025年末的90亿美元大幅跃升，两个月内增量高达180亿美元，IPO前商业化速度持续加快。该里程碑意味着头部大模型公司变现能力正快速兑现，将进一步驱动底层算力（GPU/ASIC）、HBM及数据中心的资本开支扩张。",
       "tickers": [
         "Anthropic"
       ],
@@ -29690,18 +29690,20 @@
         "Anthropic": "positive"
       },
       "item_ids": [
-        "502169c37e9fc0477dddab64ca398744030d76eb"
+        "502169c37e9fc0477dddab64ca398744030d76eb",
+        "bee5424cbe19e52c6c736190ca50443e55af6c99",
+        "b561a1a6ab697d4acc0b55b20f5f669d16daac07"
       ],
-      "source_count": 1,
+      "source_count": 3,
       "first_seen_at": "2026-08-17T20:31:05Z",
       "first_published_at": "2026-08-17T20:00:55Z",
-      "last_updated_at": "2026-08-17T20:31:05Z",
+      "last_updated_at": "2026-08-18T00:00:29Z",
       "is_active": true,
-      "significance": 9,
+      "significance": 10,
       "status": "developing",
       "deep_analysis": "",
       "ticker_counts": {
-        "Anthropic": 1
+        "Anthropic": 3
       },
       "max_item_score": 9
     },
