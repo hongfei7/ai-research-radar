@@ -1,101 +1,7 @@
 {
-  "morning_last_date": "2026-08-19",
+  "morning_last_date": "2026-08-20",
   "weekly_last_slot": "2026-W33",
   "breaking_fingerprints": [
-    {
-      "tickers": [
-        "Anthropic",
-        "亚马逊",
-        "微软"
-      ],
-      "features": [
-        "10b",
-        "anthropic",
-        "as",
-        "banks",
-        "bloomberg",
-        "company",
-        "compete",
-        "credit",
-        "facility",
-        "for",
-        "ipo",
-        "is",
-        "its",
-        "on",
-        "revolving",
-        "roles",
-        "roughly",
-        "set",
-        "sources",
-        "surpass",
-        "target",
-        "the",
-        "to",
-        "upcoming"
-      ],
-      "sent_at": "2026-08-18T17:46:05Z"
-    },
-    {
-      "tickers": [
-        "OpenAI"
-      ],
-      "features": [
-        "ai",
-        "are",
-        "because",
-        "degrees",
-        "down",
-        "efforts",
-        "is",
-        "its",
-        "misalignment",
-        "models",
-        "of",
-        "openai",
-        "showing",
-        "slowing",
-        "training",
-        "unreleased",
-        "various"
-      ],
-      "sent_at": "2026-08-18T22:00:46Z"
-    },
-    {
-      "tickers": [
-        "Anthropic",
-        "OpenAI"
-      ],
-      "features": [
-        "11.6b",
-        "6.7b",
-        "anthropic",
-        "but",
-        "doubled",
-        "further",
-        "grew",
-        "in",
-        "its",
-        "journal",
-        "margin",
-        "more",
-        "openai",
-        "operating",
-        "period",
-        "q2",
-        "qoq",
-        "revenue",
-        "same",
-        "sank",
-        "sources",
-        "street",
-        "than",
-        "the",
-        "to",
-        "wall"
-      ],
-      "sent_at": "2026-08-18T23:03:16Z"
-    },
     {
       "tickers": [
         "Anthropic",
@@ -706,44 +612,46 @@
     }
   ],
   "last_report": {
-    "date": "2026-08-19",
+    "date": "2026-08-20",
     "macro": {
-      "cycle": "扩张第三年向第四年过渡,头部四家云厂季度 capex 合计已超 900 亿美元、同比仍扩张 40% 以上但环比斜率首次转平,本周 Anthropic Q2 营收翻倍至 116 亿美元、年化口径两个月内从 470 亿跳到 650 亿,印证企业推理续费已接棒训练叙事,需求侧从 capex 增速驱动切换到营收兑现驱动",
+      "cycle": "扩张第三年向第四年过渡, 头部四家云厂季度capex合计已超900亿美元、同比仍扩张40%以上但环比斜率首次转平, Anthropic Q2年化营收已从470亿跳升至650亿美元(E9), 印证企业推理续费接棒训练叙事, 需求侧从capex增速驱动切换到营收兑现驱动",
       "trajectory": {
         "past": "晶圆制程产能",
-        "now": "HBM 容量与 CoWoS 双约束",
+        "now": "HBM容量与CoWoS双约束",
         "next": "数据中心电力与单机柜功率",
-        "why_now": "B200/Rubin 单卡功耗跨过 1kW 后,推理侧峰谷价差约两倍,稀缺已从训练侧良率与产能瓶颈迁移到 HBM 容量与 CoWoS 产能,Cerebras 拿下 OpenAI 百亿订单、AMD 发债锁定上游封装与高速推理重构供给",
-        "trigger": "若单机柜功率密度普遍突破 130kW,或北美超大规模园区电力接入审批成为交付主延迟项"
+        "why_now": "B200/Rubin单卡功耗跨过1kW后, 推理侧峰谷价差约两倍, 稀缺已从训练侧良率与产能瓶颈迁移到HBM容量与CoWoS产能, 加上ABF被味之素对华削减30%供货(E12)进一步抬升基板端边际成本, 封装链整体进入议价窗口",
+        "trigger": "若单机柜功率密度普遍突破130kW, 或北美超大规模园区电力接入审批成为交付主延迟项"
       },
-      "shift": "微调:把 now 从先进封装与 HBM 收紧为 HBM 容量与 CoWoS 双约束,把 Anthropic 营收口径从 115 亿更新为 650 亿年化,why_now 补充 Cerebras 高速推理与推理分层定价两条工程动因,next 保持电力与功率不变",
+      "shift": "微调: 把now从先进封装与HBM收紧为HBM容量与CoWoS双约束, why_now补充ABF对华削减30%作为封装链边际成本上行的工程动因, Anthropic营收口径更新为650亿年化, next保持电力与功率不变",
       "shift_kind": "adjust"
     },
     "calls": [
       {
-        "claim": "AI 算力供给已被长协与残值担保结构性锁定,HBM 与 CoWoS 是当前唯一硬约束",
-        "falsifier": "若 2026Q4 SK 海力士 HBM3e 合约价环比回落超过 5%,或 CoWoS 现货报价环比下行,本判断失效;若英伟达 Rubin 或 AMD MI400 发布时无封装瓶颈报道,亦削弱本判断",
-        "verify": "CoWoS 报价或 HBM 合约价回落"
+        "claim": "头部大模型独角兽同步进入IPO抢跑期, 资本化兑现窗口将重塑芯片与云分销的估值锚",
+        "falsifier": "若Anthropic IPO最终估值低于5000亿美元、或OpenAI在2027年前未提交S-1, 头部大模型资本化窗口叙事失效; 若Marvell认股权证在2026Q4被Google部分或全部弃权, ASIC股权对价模式的可复制性需重估。",
+        "verify": "Anthropic IPO定价与OpenAI招股书披露"
       },
       {
-        "claim": "AI capex 融资工具从股权与现金流切换至投资级企业债与资产支持证券,资本密集度台阶性抬升",
-        "falsifier": "若 2026Q4 任意一家头部云厂 AI 相关投资级债发行失败或被迫缩量,或信用利差单季走阔超过 150bp,本判断失效;若 AMD 发债资金未能锁定上游台积电/海力士排产,亦削弱债务到产能到订单的传导逻辑",
-        "verify": "头部云厂 AI 债信用利差走阔>150bp"
+        "claim": "AI算力供给被长协与残值担保结构性锁定, HBM容量与CoWoS仍是当前唯一硬约束",
+        "falsifier": "若2026Q4 SK海力士HBM3e合约价环比回落超过5%, 或CoWoS现货报价环比下行, 本判断失效; 若英伟达Rubin或AMD MI400发布时无封装瓶颈报道, 亦削弱本判断。",
+        "verify": "CoWoS报价或HBM合约价回落"
       },
       {
-        "claim": "企业端 AI 变现首次系统性超过消费端,推理算力需求结构从训练侧切换至企业续费",
-        "falsifier": "若 Q3 财报披露 Azure OpenAI 或 AWS Bedrock 的 AI 相关收入环比增速低于 15%,本判断削弱;若 Anthropic 的 650 亿美元营收被证实含投资承诺或股权互换等非现金科目,亦削弱;若 OpenAI 企业客户增速在 Q3 被证伪为基数效应,推理算力持续性需重估",
-        "verify": "Azure OpenAI/Bedrock 环比<15%"
-      },
-      {
-        "claim": "OpenAI 前沿训练暂停与增速被反超,标志头部大模型竞争从单极走向双寡头,训练侧高端算力订单出现客户级扰动",
-        "falsifier": "若 OpenAI 在 Q3 财报中披露其训练侧 GPU 利用率未出现明显回落,或 H2 推理收入加速对冲训练减速,本判断削弱;若 Anthropic IPO 估值低于 5000 亿美元,双寡头叙事亦需重估",
-        "verify": "Rubin/MI400 发布无封装瓶颈"
+        "claim": "中美算力博弈从全面封锁转向定向放行, H200对华小批量放行但电力瓶颈将约束实际转化率",
+        "falsifier": "若H200对华审批在2026Q4转为常态化(单家配额超过5万颗且允许大陆部署), 或香港数据中心单机楼功率密度在半年内突破20MW, 本判断的隐性配额上限假设失效; 若单家10万颗上限被证实为一次性审批而非持续订单, 利好已基本计入预期(E5/E7 counterpoint)。",
+        "verify": "H200对华审批是否常态化"
       }
     ]
   },
   "morning_fallback": null,
   "blindspot_ledger": [
+    {
+      "key": "ASML|Meta|博通|台积电|微软|日月光|苹果|长电科技",
+      "text": "coverage_audit显示结构性盲区集中在三条线: 其一, 台积电近30天有483条相关信息进入本库、博通319条、ASML 162条, 但全部为二手转述, 无一条来自其自有披露, 任何关于3nm/2nm良率、CoWoS-L实际产能爬坡的判断, 当前都只能靠同业外推; 其二, 微软为thin级且已16天无自有披露, 但411条相关信息使其商业化数据仍可观测, 真正缺的是Meta(237条)、苹果(133条)这两家对自身AI capex结构的官方拆分; 其三, 国产替代侧长电科技、日月光相关条目近30天均未进入本库结构性监控, 但ABF断供事件(E12)恰恰需要这一侧的一手排产数据来验证, 形成事件强度与监控密度的倒挂。",
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "times_seen": 1
+    },
     {
       "key": "AMD|Anthropic|Marvell|博通|台积电|英伟达|苹果|超微电脑",
       "text": "coverage_audit 显示台积电近 30 天有 492 条相关信息、博通 325 条、英伟达供应链相关条目均超百条,但全部为二手转述,无任何一条来自其自有披露;苹果 133 条、超微电脑 199 条同样零一手;Marvell 76 条且已属覆盖最薄。换言之,对算力链核心标的的产能、定价、排产判断目前完全依赖媒体外推与同业暗示,Anthropic 650 亿年化口径是否含非现金科目、英伟达 1050 亿美元电力担保的财务结构、AMD 发债资金的实际排产绑定均缺乏一手确认,本期对算力链景气度的判断需保留较高不确定折价",
