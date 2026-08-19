@@ -389,6 +389,45 @@
       "source_traceable": true,
       "why": "HarnessRisk按生命周期六阶段评测agent harness安全性，给出具体攻击成功率数据，agent安全方向的系统化基准。",
       "queued_at": "2026-08-19T04:39:52Z"
+    },
+    {
+      "id": "5232c95d15f0771749dd7f39e1a9ee5b43832619",
+      "title": "Qwen3.8-27B on 2x 3090 + vLLM + DFlash2: 218 tok/s single request",
+      "url": "https://www.reddit.com/r/localllama/comments/1vsccit/qwen3827b_on_2x_3090_vllm_dflash2_218_toks_single",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-19T04:39:19Z",
+      "raw_summary": "I hacked this together so there's probably more on the table in terms of performance. Measured with the Club-3090 canonical bench suite (bench.sh, 3 warmups + 5 measured runs, temp 0.6 / top_p 0.95 / top_k 20). Prefill: 1342 tok/s @ 10k, 628 tok/s @ 90k Spec-decode: 7 draft tokens, acceptance length 3.35, 47.8% acceptance Peak VRAM: 22.3 GB/card Context ceiling: 131k (DFlash2 drafter eats ~13.5 GB) Used Kimi K3 for all the VLLM fixes Metric Narrative Code Decode TPS 120.1 218.3 Wall TPS 117.7 204.8 TTFT 168 ms 178 ms Stack 2× RTX 3090 (PCIe Gen4 x16/x16, no NVLink, patched P2P) Power capped 220/250 W Bare-metal vLLM v0.26.1rc1 + AutoRound INT4 (group 128) + DFlash2 draft model Custom vLLM changes that made it boot cleanly: https://github.com/oceanplexian/vllm/pull/1 &#32; submitted by &#32; /u/xjx546 [link] &#32; [comments]",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Qwen3.8-27B在双3090+vLLM+DFlash2下的实测数据，含prefill/decode吞吐、spec-decode接受率、峰值显存与上下文上限，工程复现参考价值高。",
+      "queued_at": "2026-08-19T05:14:30Z"
+    },
+    {
+      "id": "c145f01098fb8a56ab7a96b1918074bb21471cb2",
+      "title": "Municipal Capital Tries to Turn AI Tokens into a Metered Utility",
+      "url": "https://www.tmtpost.com/8108581.html",
+      "source": "rss:tmtpost",
+      "published_at": "2026-08-19T05:03:02Z",
+      "raw_summary": "In Guangzhou, district-backed platforms are selling model inference by the token while banks experiment with loans sized to that consumption. The efforts show local state firms searching for recurring revenue from AI infrastructure as traditional development models slow.",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "广州地方政府平台按token售卖模型推理、银行基于消耗量放贷，分析AI基础设施的本地化商业模式与现金流逻辑，有具体产业洞察。",
+      "queued_at": "2026-08-19T05:14:30Z"
+    },
+    {
+      "id": "6c4591835ddf4abc7956186dd34acfd211a8f583",
+      "title": "Z.AI prices GLM-5.3 API access at $1.40 per million input tokens and $4.40 per million output tokens, unchanged from GLM-5.2 (Carl Franzen/VentureBeat)",
+      "url": "https://www.techmeme.com/260819/p2#a260819p2",
+      "source": "rss:techmeme",
+      "published_at": "2026-08-19T04:45:01Z",
+      "raw_summary": "Carl Franzen / VentureBeat: Z.ai prices GLM-5.3 API access at $1.40 per million input tokens and $4.40 per million output tokens, unchanged from GLM-5.2&nbsp; &mdash;&nbsp; After a stunning debut last week with cyber capabilities so advanced they reportedly found a previously undetected vulnerability in Cursor, GLM-5.3 &hellip;",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Z.AI GLM-5.3 API定价与5.2持平，且具备据称发现Cursor零日漏洞的cyber能力，是中国前沿模型价格策略与能力边界的重要信号。",
+      "queued_at": "2026-08-19T05:14:30Z"
     }
   ],
   "digest_last_date": "2026-08-19"
