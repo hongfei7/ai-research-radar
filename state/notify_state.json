@@ -4,68 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "Anthropic",
-        "OpenAI",
-        "英伟达"
-      ],
-      "features": [
-        "airlines",
-        "anthropic",
-        "backs",
-        "buys",
-        "center",
-        "data",
-        "google",
-        "news",
-        "nvidia",
-        "openai",
-        "spirit"
-      ],
-      "sent_at": "2026-08-18T10:36:14Z"
-    },
-    {
-      "tickers": [
-        "AMD",
-        "Marvell",
-        "博通"
-      ],
-      "features": [
-        "10.3b",
-        "21b",
-        "300m",
-        "700m",
-        "after",
-        "ai",
-        "at",
-        "by",
-        "chip",
-        "customer",
-        "etched",
-        "from",
-        "in",
-        "inference",
-        "its",
-        "jane",
-        "journal",
-        "july",
-        "led",
-        "new",
-        "rack",
-        "raised",
-        "raising",
-        "robbie",
-        "server",
-        "startup",
-        "street",
-        "up",
-        "valuation",
-        "wall",
-        "whelan"
-      ],
-      "sent_at": "2026-08-18T10:36:38Z"
-    },
-    {
-      "tickers": [
         "英伟达"
       ],
       "features": [
@@ -672,6 +610,45 @@
         "讯大"
       ],
       "sent_at": "2026-08-19T10:34:33Z"
+    },
+    {
+      "tickers": [
+        "字节跳动",
+        "腾讯",
+        "英伟达"
+      ],
+      "features": [
+        "and",
+        "as",
+        "beijing",
+        "block",
+        "bytedance",
+        "can",
+        "china",
+        "chips",
+        "deliveries",
+        "first",
+        "h200",
+        "hong",
+        "import",
+        "in",
+        "its",
+        "kong",
+        "licensed",
+        "loosens",
+        "most",
+        "must",
+        "nvidia",
+        "power",
+        "reach",
+        "shipments",
+        "stay",
+        "take",
+        "tencent",
+        "them",
+        "which"
+      ],
+      "sent_at": "2026-08-19T11:06:56Z"
     }
   ],
   "last_report": {
