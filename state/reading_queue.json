@@ -339,6 +339,32 @@
       "queued_at": "2026-08-19T16:34:44Z"
     },
     {
+      "id": "d5fdb8cf764e468b06153b475a8cc774eb999ece",
+      "title": "Chain-of-Thought Reasoning in the Wild Is Not Always Faithful",
+      "url": "https://arxiv.org/abs/2503.08679",
+      "source": "hackernews",
+      "published_at": "2026-08-19T16:18:57Z",
+      "raw_summary": "Chain-of-Thought Reasoning in the Wild Is Not Always Faithful",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "系统研究CoT忠实性这一关键科学问题，可能给出可检验的实验结果与边界条件。",
+      "queued_at": "2026-08-19T17:04:09Z"
+    },
+    {
+      "id": "233bb27f1cfa999497efe0a8e9f6247d3ef6720f",
+      "title": "NVFP4 on VOLTA! Despite being built for Blackwell, I made four 2017 V100s run Qwen 3.8 NVFP4 natively and match my $6000 RTX 5090.",
+      "url": "https://www.reddit.com/r/localllama/comments/1vsq3zg/nvfp4_on_volta_despite_being_built_for_blackwell",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-19T15:44:29Z",
+      "raw_summary": "Four Tesla V100s from 2017 matched my RTX 5090 on single-request Qwen 3.8 decode. Repo: https://github.com/dnv2003/v100-skinny https://i.redd.it/5ws2ak3uqckh1.gif The 5090 was not being held back. It ran NInfer, a specialist engine built to make this exact model as fast as possible on that GPU. (love this guys work) The V100s ran Qwen3.8's published mixed FP4/FP8 weights unchanged. This should be impossible. NVFP4 was built for Blackwell. The RTX 5090 has native silicon for FP4 and FP8; V100 has none of these advantages. And yet via software I wrote a translator fast enough to reach parity in decode. Here are the same-lab results: AIME 2026 problem 1, five seeds 4× V100 / v100-skinny RTX 5090 / NInfer Decode throughput 219.1 ± 5.9 tok/s 214.7 ± 9.2 tok/s Time to correct answer 6.90 ± 0.30 s 6.56 ± 1.34 s Completion tokens 1,513 ± 44 1,403 ± 253 Correct answers 5/5 5/5 Tokens committed / round 5.89 4.27 Round latency 26.9 ms 19.9 ms Native MTP depth k=7 draft-tokens=5 Both sides used temperature 0.6, top-p 0.95, top-k 20, presence penalty 1.0, thinking enabled, and the same five seeds. The V100 system is 2% ahead in the decode-throughput point estimate. NInfer is about 5% ahead in decode-only time to the correct answer. The intervals overlap. The honest conclusion is parity. And this is not a DFlash/EAGLE/n-gram/separate-drafter result. Both systems use Qwen3.8's own built-in MTP, each at its best measured depth on this workload. NInfer is at its maximum supported depth of fiv",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "在V100上软件实现NVFP4并与RTX 5090打平，有具体实现路径和repo，跨代硬件的工程复现价值高。",
+      "queued_at": "2026-08-19T17:04:09Z"
+    },
+    {
       "id": "8775a5a198494f3b218eb6c15f322b2d4eeffb73",
       "title": "From Corpora to Co-Evolving Capabilities: Capability-Centric Data Design for Generalist Image Generation [Xingjian Wang, Zhao Wang, Taihang Hu, Jun Zheng, Qing Jin]",
       "url": "http://arxiv.org/abs/2608.18076v1",
@@ -492,32 +518,6 @@
       "angle": "research",
       "source_traceable": true,
       "why": "把无结构3DGS转为稀疏结构化潜变量以便流式生成大规模航拍场景，是具体可复现的表示学习思路。",
-      "queued_at": "2026-08-19T03:00:28Z"
-    },
-    {
-      "id": "7e6cfad9a28406420d44cb1d6e3dab44c39a5d21",
-      "title": "Security Assessment of DeepSeek Harness with A.I.G: Evaluating Resistance to Indirect Prompt Injection",
-      "url": "https://arxiv.org/abs/2608.16393",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-17T20:00:00Z",
-      "raw_summary": "Researchers evaluate indirect prompt injection risks in DeepSeek Harness using controlled taint and dual judges, finding notable success rates across text and file channels and recommending controls between untrusted content and sensitive actions.",
-      "score": 7,
-      "angle": "engineering",
-      "source_traceable": true,
-      "why": "用受控污染+双评判器量化DeepSeek Harness的间接prompt injection成功率，并给出具体渠道与缓解建议，工程可落地。",
-      "queued_at": "2026-08-19T03:00:28Z"
-    },
-    {
-      "id": "a1ef75c266fcb86dbec285605017f66463e6a177",
-      "title": "StartupBench: Benchmarking General-Purpose Agents on Market-Validated End-to-End Workflows",
-      "url": "https://arxiv.org/abs/2608.17800",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-17T20:00:00Z",
-      "raw_summary": "StartupBench evaluates end-to-end AI agents on real-world startup workflows and reveals that even top models complete only about 30% of tasks, highlighting gaps in instruction following and domain expertise.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "用真实创业工作流做端到端agent评测，最强模型仅约30%完成率，暴露指令遵循与领域知识的真实差距，数据本身有信息量。",
       "queued_at": "2026-08-19T03:00:28Z"
     }
   ],
