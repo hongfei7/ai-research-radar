@@ -144,6 +144,19 @@
       "queued_at": "2026-08-18T23:37:13Z"
     },
     {
+      "id": "56de0371d14312155b56bcb97051b38c89c646a0",
+      "title": "I tested DFlash2 for Qwen3.8 27B on a 5090",
+      "url": "https://www.reddit.com/r/localllama/comments/1vs43av/i_tested_dflash2_for_qwen38_27b_on_a_5090",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-18T22:26:53Z",
+      "raw_summary": "Here's the DFlash2 announcement, and I was pretty excited for this after trying out DSpark on llama.cpp a few days ago and being somewhat disappointed that it wasn't really working. Anyways, I spent a while setting it up (you need to rebuild llama.cpp with pr #27342). Here's my config: -hf bartowski/Qwen3.8-27B-GGUF:Q5_K_L \\ -hfd incoai/Qwen3.8-27B-DFlash2-GGUF:Q4_K_M \\ --no-mmproj \\ --spec-type draft-dflash \\ --spec-draft-n-max 7 \\ --host 0.0.0.0 \\ --port 8080 \\ --alias qwen3.8-27b \\ -ngl 99 \\ -fa on \\ --ctx-size 160000 \\ --cache-type-k q8_0 \\ --cache-type-v q8_0 \\ --batch-size 2048 \\ --ubatch-size 1024 \\ -np 2 \\ --kv-unified \\ --no-context-shift \\ --temp 0.8 \\ --top-p 0.95 \\ --top-k 20 \\ --min-p 0.0 It does seem to work pretty well, with slightly larger speedups compared to MTP on predictable generation (code). Before, I think I was getting ~140tk/s on average with MTP when the model was generating code, and ~100tk/s otherwise. With DFlash2, Qwen3.8 27B can hit ~200 tk/s for short bursts on long code generation blocks, but on thinking it seems to have lower tk/s at ~80-90. On average a full one shot code generation request seems to average around 120tk/s (reasoning disabled, so the generation is 95% code, so basically best case scenario). It's a good improvement from MTP, but I still got better results with DFlash on Qwen3.6 27B. DFlash2 does seem to be quite memory hungry though, I had to drop down from 220k context down to 160k (could prob fit ~180k tbh) compared to using",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "实测DFlash2在Qwen3-27B+5090的完整配置与性能，含具体参数和部署细节，可直接复现验证。",
+      "queued_at": "2026-08-18T23:59:47Z"
+    },
+    {
       "id": "e9b6fb1cb94e5a5b6c6aaddbdaeb5857f8b5702c",
       "title": "AI代码过剩后，给代码“冲厕所”的公司贵了十倍",
       "url": "https://www.tmtpost.com/8107004.html",
@@ -506,19 +519,6 @@
       "source_traceable": true,
       "why": "三星用Claude Code做芯片设计：既给出15x加速的具体数字，又披露了错误掩盖、回滚等真实失败模式，对AI赋能EDA有参考价值。",
       "queued_at": "2026-08-18T18:14:06Z"
-    },
-    {
-      "id": "d31112b5b89e897eb8282b44e3a7ef6a42e64c9a",
-      "title": "Turbovec – Google's TurboQuant for vector search in Rust",
-      "url": "https://github.com/ryancodrai/turbovec",
-      "source": "hackernews",
-      "published_at": "2026-08-18T18:07:21Z",
-      "raw_summary": "Turbovec – Google's TurboQuant for vector search in Rust",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "Google TurboQuant 是新的向量量化算法，Rust 实现可读源码，能了解其压缩原理与性能取舍。",
-      "queued_at": "2026-08-18T19:00:44Z"
     }
   ],
   "digest_last_date": "2026-08-18"
