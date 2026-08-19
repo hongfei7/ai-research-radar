@@ -222,6 +222,32 @@
       "queued_at": "2026-08-19T09:50:24Z"
     },
     {
+      "id": "0fd554064dc243f835c54b3fda7ecb17c99bc635",
+      "title": "字节Seed基模团队调整组织架构",
+      "url": "https://36kr.com/newsflashes/3946371049586051?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-08-19T11:36:13Z",
+      "raw_summary": "字节跳动的大模型部门Seed已于上周完成了新一轮的组织调整。其中最关键的部分是Seed Foundation Model（Seed基础模型）成立了四个新的一级部门：Pretrain Data，负责人李成刚。由原先分散在文本模型、编程、视觉理解和语音等方向的预训练数据团队合并而来，统一负责新Omni模型的多模态数据，以及超大模型预训练所需的数据工作。Horizon RL，负责人唐晟宇。整合了此前散落在后训练、推理和视觉理解的后训练团队，主要负责强化学习，提升模型的基础智能上限。Product Posttrain-Work，负责人秦禹嘉。新部门主要服务B端应用，负责Agentic模型的整合与发布，并针对办公场景优化模型的Agentic能力，包括支持豆包和Dola的任务模式。原本由朱文佳负责的Application团队继续保留，并更名为Product Posttrain-Chat，主要服务C端应用，负责对话模型的整合与发布，与Product Posttrain-Work分工协作。四个新部门的负责人均向吴永辉汇报。此外，Seed还为AI安全及其他前沿探索方向分别任命了负责人。（晚点）",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "字节Seed基模组织架构调整细节清晰，揭示Omni/RL/Agentic三条产品线分工与数据、后训练战略走向，值得细读。",
+      "queued_at": "2026-08-19T11:42:18Z"
+    },
+    {
+      "id": "7c716bec179f919d83f766f5706ba5c16e2e4055",
+      "title": "Ajinomoto reportedly cuts critical chip packaging film supply to China by 30% as domestic substitutes race to qualify — ABF restriction comes following Beijing's rare earth export curbs",
+      "url": "https://www.tomshardware.com/tech-industry/semiconductors/ajinomoto-reportedly-cuts-abf-chip-packaging-film-supply-to-china-by-30-percent",
+      "source": "rss:tomshardware",
+      "published_at": "2026-08-19T11:40:00Z",
+      "raw_summary": "Japanese chemical maker Ajinomoto has reportedly told customers in mainland China that it will cut the supply of ABF.",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "味之素削减对华ABF膜供应30%是芯片先进封装供应链关键变量，国产替代走向值得追踪。",
+      "queued_at": "2026-08-19T11:42:18Z"
+    },
+    {
       "id": "8775a5a198494f3b218eb6c15f322b2d4eeffb73",
       "title": "From Corpora to Co-Evolving Capabilities: Capability-Centric Data Design for Generalist Image Generation [Xingjian Wang, Zhao Wang, Taihang Hu, Jun Zheng, Qing Jin]",
       "url": "http://arxiv.org/abs/2608.18076v1",
@@ -493,32 +519,6 @@
       "source_traceable": true,
       "why": "广州地方政府平台按token售卖模型推理、银行基于消耗量放贷，分析AI基础设施的本地化商业模式与现金流逻辑，有具体产业洞察。",
       "queued_at": "2026-08-19T05:14:30Z"
-    },
-    {
-      "id": "6c4591835ddf4abc7956186dd34acfd211a8f583",
-      "title": "Z.AI prices GLM-5.3 API access at $1.40 per million input tokens and $4.40 per million output tokens, unchanged from GLM-5.2 (Carl Franzen/VentureBeat)",
-      "url": "https://www.techmeme.com/260819/p2#a260819p2",
-      "source": "rss:techmeme",
-      "published_at": "2026-08-19T04:45:01Z",
-      "raw_summary": "Carl Franzen / VentureBeat: Z.ai prices GLM-5.3 API access at $1.40 per million input tokens and $4.40 per million output tokens, unchanged from GLM-5.2&nbsp; &mdash;&nbsp; After a stunning debut last week with cyber capabilities so advanced they reportedly found a previously undetected vulnerability in Cursor, GLM-5.3 &hellip;",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "Z.AI GLM-5.3 API定价与5.2持平，且具备据称发现Cursor零日漏洞的cyber能力，是中国前沿模型价格策略与能力边界的重要信号。",
-      "queued_at": "2026-08-19T05:14:30Z"
-    },
-    {
-      "id": "be94065b56370e5db5fddc734752f73220af1ef4",
-      "title": "CoinVE-200K: A Large-Scale High-Quality Dataset for Compositional Instruction-Guided Video Editing",
-      "url": "https://arxiv.org/abs/2608.17566",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-17T20:00:00Z",
-      "raw_summary": "A new dataset, benchmark, and 22B model enable compositional instruction-guided video editing with multi-region attention and temporal coherence.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "可追溯到论文的组合指令视频编辑数据集、基准和22B模型，提供了具体数据集和模型细节。",
-      "queued_at": "2026-08-19T06:48:50Z"
     }
   ],
   "digest_last_date": "2026-08-19"
