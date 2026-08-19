@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-19T13:13:06Z",
-  "text": "当前共有 29 个活跃事件。要点包括: Anthropic冲刺史上最大IPO; First Nvidia H200 shipments reach China, ByteDance and Tencent take deliveries as Beijing loosens its import block — most licensed chips must stay in Hong Kong, which can't power them; Marvell向谷歌发行认股权证以行权价206.58美元/股最多购入5897万股; SK海力士拟最高回购4万亿韩元股份并注销; RSS 2026热议：具身智能遭遇物理之墙，想象力成第一生产力。",
-  "since": "2026-08-19T13:13:06Z",
-  "active_event_count": 29,
+  "generated_at": "2026-08-19T14:01:00Z",
+  "text": "截至 2026-08-19 22:00 HKT，本轮新增：H200获小批量放行进入大陆，此前滞留香港、无法供电的部署僵局现边际松动；Marvell与Google扩大ASIC合作，认股权证规模升至最高122亿美元，定制芯片绑定深化；Z.ai（智谱）发布GLM-5.3以60分并列开源模型榜首、定价更低，但发布延期；Anthropic宣布Claude可端到端调度蛋白质设计全流程，抗体/小蛋白设计命中率达35%，远超行业10-15%均值。",
+  "since": "2026-08-19T14:01:00Z",
+  "active_event_count": 30,
   "key_themes": [
     "compute_demand",
     "ai_monetization",
@@ -13,6 +13,6 @@
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nAI算力需求的\"长期乐观叙事\"与\"技术天花板\"之间存在张力。一方面，Nvidia联合华尔街筹组5000亿美元将算力资产化，强化\"算力即基础设施\"的长期需求逻辑（rss:theverge-ai）；另一方面，MIT Technology Review明确质疑AI递归自我改进速度可能低于预期，叠加ETH苏黎世1-bit/2-bit后训练量化突破（BiLLM/SqueezeLLM），暗示推理侧对高显存GPU的依赖可能被削弱（rss:mit-tr, rss:leiphone）。此外，Anthropic营收首次超越OpenAI（rss:the-decoder）与Nvidia算力霸权叙事并不冲突，但反映算力采购方议价权上升，间接印证定制ASIC路线（Marvell-Google）分流的趋势。\n\n【新兴趋势】\n三条隐线反复出现：(1) 算力金融化——从Nvidia与华尔街机构合作到定制芯片认股权证（Marvell向Google发行5897万股权证，行权价206.58美元），算力正在从运营资产向可证券化资产迁移；(2) 定制ASIC对通用GPU的结构性替代——Marvell-Google TPU生态合作是显性信号；(3) 数据中心热管理议题升温，MIT Tech Review与Nvidia算力融资报道均涉及，反映液冷/功耗路径将成为下一代平台关键约束。\n\n【信息盲点】\n博通（Broadcom/AVGO）在本轮报道中完全缺席，但作为Google TPU既有核心供应商，Marvell的进入必然引发份额博弈，是最直接的对标与替代标的。台积电、ASML、HBM三巨头（SK海力士/美光/三星）、超微电脑、液冷供应商（Vertiv等）均未被点名，但在算力链上应被联动跟踪。此外，微软（OpenAI母公司）、AWS（Anthropic云分润方）、Meta、Oracle在本轮均未出现，但均处于算力采购与AI变现的关键节点。\n\n【跨标的联动】\nMarvell ↔ Broadcom（Google TPU/ASIC份额争夺）；Marvell-Google ↔ Nvidia（定制芯片对通用GPU议价",
+  "cross_analysis": "【核心矛盾】\nH200小批量对华放行与国产替代主线存在节奏博弈：政策松动（the-decoder）vs. 国产替代（寒武纪、海光等）尚未给出量化边界，原文也承认\"若放行规模有限，冲击有限\"。另一处矛盾在GLM-5.3——性能登顶但发布延期，\"能力领先\"与\"实际可用\"存在时间差。Anthropic蛋白质设计35%命中率未经独立同行评审，官方叙事与可验证性之间亦有张力。\n\n【新兴趋势】\n1）超大规模云厂以\"股权+长约\"深度绑定ASIC供应商，Marvell-Google的122亿美元权证模式可能被复制；2）LLM Agent在垂直领域（生命科学）端到端落地，模型厂商从通用能力向行业工作流渗透；3）中国开源模型以\"性能-价格比\"作为差异化竞争点，GLM-5.3与Kimi K3并列榜首，挤压闭源模型定价空间。\n\n【信息盲点】\nHBM/先进封装供应链（SK海力士、美光、台积电CoWoS）在H200放行条目中未被提及但应受连带关注；博通作为Marvell的直接ASIC竞品未被对照；国产GPU/ASIC代表（寒武纪、海光、华为昇腾）虽被so_what提及但无独立信源验证；AMD MI系列对华可能性亦无报道。\n\n【跨标的联动】\nMarvell-Google合作深化将重新切分ASIC蛋糕，对博通形成客户与议价权争夺压力；H200入华若放量将拉动HBM及CoWoS需求，同时对国产算力链（寒武纪、海光、阿里/腾讯自研芯片）构成边际替代压力；Z.ai/DeepSeek等开源模型价格战则反向上游传导至云厂算力采购结构与芯片选型决策。",
   "trend_spotting": "新兴趋势：Anthropic IPO进入倒计时，Q2营收环比翻倍，与OpenAI仅18%同比增速形成剪刀差，头部大模型竞争格局正从\"OpenAI领跑\"转向\"双寡头并立\"。\n\n早期信号：Anthropic以Claude切入蛋白质设计与分析化学，标志大模型从通用API向垂直科学SaaS变现的关键试探；其超级投票权机制亦开创AI独角兽治理新范式。\n\n市场盲点：OpenAI亏损扩大叠加增速被反超的市场反应偏弱；100亿美元IPO前信贷背后的银行承销争夺战"
 }

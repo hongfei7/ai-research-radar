@@ -274,6 +274,32 @@
       "queued_at": "2026-08-19T13:10:18Z"
     },
     {
+      "id": "e7b786996e0461b9c189d18167fc72c3fe1c9359",
+      "title": "Anthropic says any lab can now let a language model agent run the whole protein design stack",
+      "url": "https://the-decoder.com/anthropic-says-any-lab-can-now-let-a-language-model-agent-run-the-whole-protein-design-stack",
+      "source": "rss:the-decoder",
+      "published_at": "2026-08-19T13:07:56Z",
+      "raw_summary": "Anthropic had its Claude models design small proteins on their own that dock onto target structures in the body, a key step in early drug development. The hit rate reached up to 35 percent, far above the industry average of 10 to 15 percent. Claude only steered existing specialized tools, and an independent review is still pending. The article Anthropic says any lab can now let a language model agent run the whole protein design stack appeared first on The Decoder.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Anthropic用Claude Agent驱动蛋白设计全流程，命中率35%对行业10-15%是具体可核查的实验数字，方向重要。",
+      "queued_at": "2026-08-19T13:58:39Z"
+    },
+    {
+      "id": "7194533742860a1000c0a915ef953a4d876139e8",
+      "title": "IBM Makes Quantum Cryogenics Modular, but Scaling Problems Remain",
+      "url": "https://www.eetimes.com/ibm-makes-quantum-cryogenics-modular-but-scaling-problems-remain",
+      "source": "rss:eetimes",
+      "published_at": "2026-08-19T13:55:51Z",
+      "raw_summary": "IBM’s new cryogenic architecture tackles one obstacle to fault-tolerant quantum computing, while exposing wiring, control, interconnect, and reliability challenges. The post IBM Makes Quantum Cryogenics Modular, but Scaling Problems Remain appeared first on EE Times.",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "IBM模块化低温架构涉及容错量子计算的真实工程瓶颈（布线/控制/互联），对量子路线判断有价值。",
+      "queued_at": "2026-08-19T13:58:39Z"
+    },
+    {
       "id": "8775a5a198494f3b218eb6c15f322b2d4eeffb73",
       "title": "From Corpora to Co-Evolving Capabilities: Capability-Centric Data Design for Generalist Image Generation [Xingjian Wang, Zhao Wang, Taihang Hu, Jun Zheng, Qing Jin]",
       "url": "http://arxiv.org/abs/2608.18076v1",
@@ -493,32 +519,6 @@
       "source_traceable": true,
       "why": "OpenAI多阶段思维链监控使推理算力增20%且不转嫁客户，指向具体成本与安全权衡。",
       "queued_at": "2026-08-19T03:53:54Z"
-    },
-    {
-      "id": "c186d1483f280f551b96f53cb28ad73faa7a7f84",
-      "title": "Sources: Beijing allowed ByteDance and Tencent to each receive about 10,000 Nvidia H200 chips at their mainland China facilities in recent weeks (Zijing Wu/Financial Times)",
-      "url": "https://www.techmeme.com/260818/p45#a260818p45",
-      "source": "rss:techmeme",
-      "published_at": "2026-08-19T03:15:01Z",
-      "raw_summary": "Zijing Wu / Financial Times: Sources: Beijing allowed ByteDance and Tencent to each receive about 10,000 Nvidia H200 chips at their mainland China facilities in recent weeks&nbsp; &mdash;&nbsp; Beijing permits small shipments to help leading tech groups in drive to catch up with US rivals&nbsp; &mdash;&nbsp; Small batches of Nvidia's H200 chips &hellip;",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "北京允许字节腾讯各获约1万颗H200，含具体数量与时点，对算力供需判断有直接价值。",
-      "queued_at": "2026-08-19T03:53:54Z"
-    },
-    {
-      "id": "03beaeb4b7df3917b34c1b54ee060c8f7870adc1",
-      "title": "DFlash 2: Keep Drafting Parallel",
-      "url": "https://inco.ai/blog/dflash2",
-      "source": "hackernews",
-      "published_at": "2026-08-19T00:20:19Z",
-      "raw_summary": "DFlash 2: Keep Drafting Parallel",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "DFlash 2是推测解码/draft model方向的具体工作（v1出自Meta），可能给出并行draft的实验数据与吞吐提升，读完能了解投机解码新方案。",
-      "queued_at": "2026-08-19T04:39:52Z"
     }
   ],
   "digest_last_date": "2026-08-19"
