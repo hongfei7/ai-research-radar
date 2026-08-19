@@ -441,6 +441,19 @@
       "source_traceable": true,
       "why": "Kimi K3与Qwen3.8-Max引入收入分成条款，关乎开源大模型商业模式与生态路线之争，值得细读具体条款与各方表态。",
       "queued_at": "2026-08-19T05:50:36Z"
+    },
+    {
+      "id": "be94065b56370e5db5fddc734752f73220af1ef4",
+      "title": "CoinVE-200K: A Large-Scale High-Quality Dataset for Compositional Instruction-Guided Video Editing",
+      "url": "https://arxiv.org/abs/2608.17566",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-17T20:00:00Z",
+      "raw_summary": "A new dataset, benchmark, and 22B model enable compositional instruction-guided video editing with multi-region attention and temporal coherence.",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "可追溯到论文的组合指令视频编辑数据集、基准和22B模型，提供了具体数据集和模型细节。",
+      "queued_at": "2026-08-19T06:48:50Z"
     }
   ],
   "digest_last_date": "2026-08-19"
