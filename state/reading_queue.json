@@ -417,6 +417,19 @@
       "queued_at": "2026-08-19T21:42:11Z"
     },
     {
+      "id": "46852f3af1d33bde56698d21c84a71f7cd23144b",
+      "title": "Same GRPO recipe on three from-scratch LLMs (353M/316M/672M) gave three different outcomes, with no clean relationship to scale [P]",
+      "url": "https://www.reddit.com/r/machinelearning/comments/1vszsit/same_grpo_recipe_on_three_fromscratch_llms",
+      "source": "reddit:ml",
+      "published_at": "2026-08-19T21:30:26Z",
+      "raw_summary": "I trained three LLMs from scratch in raw PyTorch then post-trained each one with SFT and then GRPO. Same process every time: same synthetic arithmetic curriculum, same reward function, same hyperparameters, same KL coefficient. Pre-training went as expected, the val loss went down as the model got more modern techniques (V1 to V2) and bigger (V3 being the biggest). However, GRPO hurt both V2 and V3 and I'm not sure why. Setup V1 V2 V3 Params 353M 316M 672M d_model / layers 1024 / 24 1024 / 24 1536 / 24 Attention MHA Differential + GQA 4:1 XSA + GQA 4:1 Tokens 10B 10B 30B Data FineWeb-Edu FineWeb-Edu FineWeb-Edu + code + math Pre-training val loss went 2.8659 → 2.7844 → 2.5885. Results WikiText word perplexity across the three stages, all on lm-evaluation-harness with the same task versions and shot counts: base SFT GRPO SFT→GRPO V1 32.86 51.31 51.40 +0.2% V2 31.28 46.81 71.06 +52% V3 22.30 32.11 33.65 +5% SFT hits all three on this eval, which I expected at this scale. Also interesting to see that the degradation gets smaller as the models get bigger (+56%, +50%, +44%). GRPO is the weird one. V1 barely moved, V2 fell heavily, V3 degraded a bit. The smallest model was the least affected and the middle one was the worst, which isn't the pattern I'd have guessed. Downstream tasks moved the same way as perplexity in each case (arc_easy dropped about 6 points on V3 from SFT to GRPO). The models did learn the thing GRPO trained them on. V3 mastered 4 of the 5 curriculum stages, the",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "从零训练三个不同规模 LLM 后用相同 GRPO 配方却得到相反结果，提供了可复现的实验细节和失败案例，对 RLHF/GRPO 稳定性研究有直接参考价值。",
+      "queued_at": "2026-08-19T22:43:06Z"
+    },
+    {
       "id": "8775a5a198494f3b218eb6c15f322b2d4eeffb73",
       "title": "From Corpora to Co-Evolving Capabilities: Capability-Centric Data Design for Generalist Image Generation [Xingjian Wang, Zhao Wang, Taihang Hu, Jun Zheng, Qing Jin]",
       "url": "http://arxiv.org/abs/2608.18076v1",
@@ -505,19 +518,6 @@
       "angle": "research",
       "source_traceable": true,
       "why": "为LLM-as-judge引入不确定性守门与可证明风险保证，对客观题参考缺失场景的评估可靠性有明确贡献。",
-      "queued_at": "2026-08-19T03:00:28Z"
-    },
-    {
-      "id": "337216d6cba41df221d9d0db5ff7a5030267a26c",
-      "title": "Encoded but Not Actionable: Auditing the Decode-Generate-Steer Gap in Frozen LLMs for Geometric Constraints [Man Liang, Xinzhao Cheng, Faizan Wajid]",
-      "url": "http://arxiv.org/abs/2608.17843v1",
-      "source": "arxiv:cs.CL",
-      "published_at": "2026-08-18T14:40:28Z",
-      "raw_summary": "Large language models (LLMs) have demonstrated strong performance on structured reasoning tasks, but what they encode and whether it informs model behavior remain unclear. We investigate this question through geometric reasoning, using parametric CAD constraints as a controlled testbed for separating local pairwise relations from sketch-level constraint status. By probing the hidden states of six frozen decoder-only LLMs, we examine four properties: linear decodability, forced-choice generation, activation-level influence, and behavioral steerability. Pretraining substantially improves the decoding of local geometric relations, and this advantage persists after accounting for positional cues with shuffled-order controls. In contrast, sketch-level DOF status is already highly decodable from randomly initialized representations and improves only modestly with pretraining, indicating that much of its probe performance is available without learned weights. Further analyses show that decodable information is not always actionable. Generation often fails to express this information, and on the two intervention-tested backbones, activation-restoration effects at the patched entity position vanish while decodability persists across depth. Mean-difference steering also does not reliably control outputs. These results show that decodability, generation, activation-level influence, and steerability can diverge in the tested setting. The audit provides a controlled way to distinguish fai",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "通过几何约束审计冻结LLM的encode-generate-steer鸿沟，区分线性可解码与行为可操控性，方法学有借鉴价值。",
       "queued_at": "2026-08-19T03:00:28Z"
     }
   ],
