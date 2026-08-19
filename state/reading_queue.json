@@ -14,6 +14,19 @@
       "queued_at": "2026-08-19T03:00:28Z"
     },
     {
+      "id": "2f78fb8326e5250e7428565bf46491ffcbb11f3c",
+      "title": "Reverse-Engineering the RK3588 NPU: Building an Open Compiler to Run GPT-2 at 36 tok/s",
+      "url": "https://www.reddit.com/r/localllama/comments/1vsudsl/reverseengineering_the_rk3588_npu_building_an",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-19T18:13:31Z",
+      "raw_summary": "Last year I posted about hacking the RK3588 NPU to run one vision encoder (previous post). This year I opened the whole thing up: reverse-engineered the register format, built an open compiler + runtime, and now GPT-2 and SigLIP run from PyTorch, ONNX, and JAX, no vendor SDK. Story: https://amohan.dev/blog/2026/opening-the-black-box-a-year-building-an-open-compiler-for-the-rk3588-npu/ Report: https://amohan.dev/blog/2026/opennpu-v1-0-open-compiler-runtime-rk3588-npu/ &#32; submitted by &#32; /u/one_does_not_just [link] &#32; [comments]",
+      "score": 9,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "逆向RK3588 NPU并构建开源编译器+runtime，让PyTorch/ONNX/JAX模型直接跑在NPU上，工程细节完整、可动手，价值很高。",
+      "queued_at": "2026-08-19T20:31:18Z"
+    },
+    {
       "id": "d7d9fb4220daa5132ebc326bf3ee95a2f4098674",
       "title": "On the Fragility of Self-Improving Agents: Variance, Task Order, and Underspecification [Qinyuan Ye, Yu Li, Yada Pruksachatkun, Jiaxin Zhang, Chien-Sheng Wu]",
       "url": "http://arxiv.org/abs/2608.18066v1",
@@ -378,6 +391,19 @@
       "queued_at": "2026-08-19T19:28:00Z"
     },
     {
+      "id": "5b096fed028cb43545bbad257e77b8b44771a7c4",
+      "title": "DFlash2 speeds Qwen 3.8 27B up to 4 times",
+      "url": "https://www.reddit.com/r/localllama/comments/1vsuaoj/dflash2_speeds_qwen_38_27b_up_to_4_times",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-19T18:10:35Z",
+      "raw_summary": "llama.cpp pr #27342 adds dflash2, so i rented an rtx 6000 and ran the same four prompts through four decoding setups on qwen3.8 27B median results over the four tasks: baseline 47.4 tok/s mtp 114.7 tok/s dflash 99.3 tok/s dflash2 140.6. tok/s so on average 3x for dflash2 though i have to point out that it's far from a 3x gain some of the time, on one of the test it struggled to achieve a 1.5x gain, it really just depends on the task you give to the model the races are sped up in some places, so that the video lasts roughly 30 seconds, but the tok/s and acceptance % on screen are the real i'm from the atomic.chat team - we publish our own quants on hf and make a desktop and mobile app for running local models. so any feedback welcome - we're building this for you folks about dflash2: https://inco.ai/blog/dflash2/ &#32; submitted by &#32; /u/Top-Eye-8104 [link] &#32; [comments]",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "llama.cpp中DFlash2投机解码对Qwen3 27B的实测加速数据清晰（47→140 tok/s），指向具体PR，可复现，是有价值的工程实践。",
+      "queued_at": "2026-08-19T20:31:18Z"
+    },
+    {
       "id": "8775a5a198494f3b218eb6c15f322b2d4eeffb73",
       "title": "From Corpora to Co-Evolving Capabilities: Capability-Centric Data Design for Generalist Image Generation [Xingjian Wang, Zhao Wang, Taihang Hu, Jun Zheng, Qing Jin]",
       "url": "http://arxiv.org/abs/2608.18076v1",
@@ -492,32 +518,6 @@
       "angle": "research",
       "source_traceable": true,
       "why": "把贝叶斯更新与指数权重regret统一到二人零和博弈的Bellman等式，给出多种浓度现象的比较类变分形式，理论扎实。",
-      "queued_at": "2026-08-19T03:00:28Z"
-    },
-    {
-      "id": "15b288c7927a75a7b3fd04c32acd6acfd6194bac",
-      "title": "黑鲸鱼 DeepSeek Harness，从「赛博乐高」变成 Agent Store",
-      "url": "http://www.geekpark.net/news/369003",
-      "source": "rss:geekpark",
-      "published_at": "2026-08-19T02:33:05Z",
-      "raw_summary": "嘲讽与反转，是属于 DSH 同一个架构的因果两端。 作者｜张勇毅 编辑｜靖宇 &nbsp; 8 月 14 日上午，DeepSeek Harness 上线 GitHub 还不到十二小时，项目 GitHub Star 就突破了 5 万。跻身 GitHub 史上最速达成记录之列。 极客公园曾在首发实测总结它的「一切皆插件」的概念是，「Agent 界的 Android」，但这个评价的另一面，是当时社区围绕 DeepSeek Harness（下文简称 DSH）的巨大争议：「对非开发者不是很友好」与「毛边随处可见」是不少第一时间体验之后的评论；还有一些第三方测显示同样跑 V4 Flash，DSH 比别家 harness 多烧三倍 token。 但五天之后，DSH 在社交媒体平台上已经经历了一轮完整的「口碑反转」：不仅 GitHub 达到了 14.9 万星，1.5 万个 fork。「赛博乐高」的概念也已经被社区所接受，已经累积起了超过 5100 个插件与超过 3500 位作者。 DeepSeek Harness 开源第五天的 GitHub 仓库页，星标 14.9 万、fork 1.5 万｜图片来源：GitHub &nbsp; 乍一看，这是一次寻常的口碑回暖 &mdash;&mdash; 东西还行，用的人多了，风向自己会转。 但我觉得其实真正的原因，还得是 DSH 这个看起来非常工程师文化的「一切皆插件」概念，以及由此延伸出的更具想象力的使用方式： Harness 可以更加开箱即用，直接交付满足千人千面用户需求的 Agent &nbsp; 01 口碑反转靠社区 &nbsp; DSH 的口碑反转，其实从一开始就有迹可循：发布后的第二天夜里，一个名为 anywhere-labs 的团队把官方版本打包成了开箱即用的桌面应用。不用装 Node，不用敲命令行，服务自动拉起，插件能力和 Web 界面全保留。这个项目在两天内就收获了超过 4700 Star。 社区做的 DSH 桌面版，简介写着「万物皆『插件』，桌面本身也是『插件』」｜图片来源：GitHub &nbsp; 由于原本 webUI 以及代码部署的方式，对非代码用户来讲确实不够友好，因此不少人也立即投入了「为 DSH 造壳」的竞赛中：有开发者用 Tauri 重做一版安装包仅有 100MB 的版本；又有人用 Python 加 pywebview 压到更加离谱的 18MB。 8 月 16 日，有人发现 DeepSeek 把自家工程团队每天在用的十来个 Skill 也一并放了出来：有按仓库自己的标准做 code review 的，有专门抓过度设计和死代码的，还有清理文档里残留思维链的。 仓库 .agents/skills 目录下的十来个内部工程 Skill，从 code review 到文档规范｜图片来源：GitHub &nbsp; 有开发者评价到：资深工程师脑子里那些说不出口的经验，第一次变成了可以执行、可以复用、可以审计的「Skill」。 这个剧本其实我们也并不陌生：Stable Diffusion 刚出来那阵，所有人都在折腾 Python 环境和 CUDA，后来 AUTOMATIC1111 和 ComfyUI 来了，整合包来了，真正把它送到普通人手里的，还得是枝繁叶茂的第三方开发生态；Skill 能快速出圈也是同理。 毕竟大家虽然都喜欢当极客，但真的没人喜欢吃苦，大家都是来偷懒的。 这也是为什么这两天，你能在各种社交平台上看到无数网友根据自己喜好，发布的各种「DSH 十大插件榜」；这些榜单的前三名，往往是类似改前端 ",
-      "score": 7,
-      "angle": "engineering",
-      "source_traceable": true,
-      "why": "DeepSeek Harness的生态转向与Agent Store解读，含插件/作者数量等一手数据，对Agent工程有参考。",
-      "queued_at": "2026-08-19T03:00:28Z"
-    },
-    {
-      "id": "3f92106bde3e807a6110d4fc59e894588921665f",
-      "title": "From Corpora to Co-Evolving Capabilities: Capability-Centric Data Design for Generalist Image Generation",
-      "url": "https://arxiv.org/abs/2608.18076",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-17T20:00:00Z",
-      "raw_summary": "A capability-driven data infrastructure with curriculum scheduling and specialized data engines trains large multimodal diffusion models on curated heterogeneous supervision for diverse generative tasks.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "提出以能力为中心的数据设计范式与课程调度，用于多模态扩散模型训练，方法和数据引擎细节可参考。",
       "queued_at": "2026-08-19T03:00:28Z"
     }
   ],
