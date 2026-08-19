@@ -454,6 +454,58 @@
       "source_traceable": true,
       "why": "可追溯到论文的组合指令视频编辑数据集、基准和22B模型，提供了具体数据集和模型细节。",
       "queued_at": "2026-08-19T06:48:50Z"
+    },
+    {
+      "id": "818ebb7d048b29c6e4f76a515a50747c8b2b141e",
+      "title": "The Future Of AI Compute Won’t Run On Just One Kind Of Chip",
+      "url": "https://semiengineering.com/the-future-of-ai-compute-wont-run-on-just-one-kind-of-chip",
+      "source": "rss:semiengineering",
+      "published_at": "2026-08-19T07:01:42Z",
+      "raw_summary": "Power, token cost, interconnects, and software orchestration are pushing data centers toward heterogeneous clusters built from CPUs, GPUs, NPUs, optics, and custom accelerators. The post The Future Of AI Compute Won’t Run On Just One Kind Of Chip appeared first on Semiconductor Engineering.",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "SemiEngineering论述AI算力走向CPU/GPU/NPU/光学/定制加速器异构集群，分析了功耗、token成本和互连等关键约束，是路线层面的深度判断。",
+      "queued_at": "2026-08-19T07:41:04Z"
+    },
+    {
+      "id": "c2e41e97cf3aac97667dac547b688c65942178a3",
+      "title": "AI芯片创企Etched融资7亿美元，近一个月估值翻番至210亿美元",
+      "url": "https://36kr.com/newsflashes/3946121529408899?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-08-19T07:22:24Z",
+      "raw_summary": "当地时间8月18日，AI芯片创企Etched宣布完成7亿美元新一轮融资，公司估值达210亿美元。本轮融资由简街领投，凯鹏华盈、红杉资本、a16z、Tiger Global、贝恩资本风险投资公司、Neo、Primary、Stripes、Positive Sum和黑石等跟投。Etched同时宣布简街成为其首位客户。此前，Etched在上月完成C轮融资，当时公司估值为103亿美元。（界面）",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "AI芯片公司Etched融资7亿美元、估值翻倍至210亿，专注Transformer专用ASIC，能反映专用推理芯片路线在资本市场的热度。",
+      "queued_at": "2026-08-19T07:41:04Z"
+    },
+    {
+      "id": "bb1380b9eaecaa21faec5a8bdcfc937591f0155b",
+      "title": "M3发布后，MiniMax走了一员大将",
+      "url": "https://www.tmtpost.com/8107688.html",
+      "source": "rss:tmtpost",
+      "published_at": "2026-08-19T07:05:31Z",
+      "raw_summary": "文 | 市象据公开消息，MiniMax Agent工程部主管阿岛（缪宇航）飞书状态已经显示离职，目前下一站尚不明确。不过目前其X主页认证信息尚未更新。在其X主页中，阿岛（Skyler Miao）将自己介绍为MiniMax的Head of Engineering，负责M2.x、Agent、Audio和Hailuo AI，最新的一条动态是8月3日转发的一条AI相关内容。过往互动内容也记录了他在M3发布前后的技术传播：预告MiniMax Sparse Attention，回应开发者关于稀疏注意力的提问，透露实现代码将开源，并在M3发布时写道，团队经历了多个不眠之夜。阿岛曾任职于百度、贝壳和字节跳动，2023年加入MiniMax，参与模型、Agent以及海螺AI等产品的研发。同时，在MiniMax时期，也长期承担技术解释和对外沟通的角色。MiniMax的Agent业务正在从几个人快速做出产品的阶段，进入模型、产品、基础设施和商业化同时扩张的阶段。过去，一个强工程师可以把方向想清楚、把产品做出来、把技术讲明白。现在，MiniMax开始进入系统性的组织能力。MiniMax技术路线的解释者阿岛在MiniMax的公开形象，和公司的模型路线高度重合。在M3发布前，他曾参与对外介绍模型的上下文能力、编码能力和Agent能力；M3发布后，他又出现在用户关于计费和使用权益的讨论中。M3上线时，MiniMax在没有充分提示的情况下将付费模式从按次切换为按Token计费，引发用户争议。阿岛在社群中承认&ldquo;工作不到位&rdquo;，随后MiniMax发布致歉公告并公布补偿方案。大模型公司的技术负责人，已经不再只是研发部门的代表。他还要面对开发者、用户和社区，解释产品为什么这样设计、能力边界在哪里，以及技术变化为什么会影响用户的钱。阿岛的X动态也具有类似特点。他不只是转发公司公告，而是直接参与M3、MSA和开源话题的讨论，回答开发者关于模型结构、长上下文和稀疏注意力的问题。这种沟通方式让他成为MiniMax技术路线的一个公开接口。对于其在AI领域从事的Agent业务，阿岛也敢于对外做个人风格鲜明的判断。比如今年4月的一场公开对谈中，阿岛谈到过一个并不乐观的判断：通用Agent应用最终会被模型逐步内化，Harness和Agent应用层本身也存在生命周期。今天需要通过Prompt、Skill、Memory和多Agent协作完成的事情，可能会被下一代模型直接吸收。模型越强，外置的那一层就越薄。一个通用Agent公司如果只是把模型能力重新包装成工作流，就很难长期保持独立位置。阿岛在采访中曾直言，当前没有一家Agent企业敢说自己已经拥有真正的壁垒。所谓行业Know-how、垂直场景和客户关系，都可能被竞争对手复制。真正能形成差异的，是人才、底层基础设施和组织执行能力。这句话在他离职之后，获得了另一层现实含义。阿岛参与Agent 2.0时，MiniMax的核心问题是如何让一个Agent真正进入工作流。现在，公司要处理的已经是更大的系统。Agent最初只是四个人的实验MiniMax Agent 2.0最早并不是一个庞大的事业部项目。此前在接受自媒体差评的一次公开对话中，阿岛介绍，Agent 2.0源自公司内部使用的&ldquo;Agent实习生&rdquo;。这套工具先在研发、产品、GPU Infra、HR、投资和财务等团队内部扩散，再逐步外化成面向用户的产品。当时，桌面端主要由3名同学用了一个月开发完成，加上产品经理，整个团队大约只有4个人。这支小团队解决的问题很具体：让Age",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": false,
+      "why": "MiniMax Agent工程负责人离职，折射大模型公司从技术驱动走向组织化扩张的阶段转变，含路线与人才信号。",
+      "queued_at": "2026-08-19T07:41:04Z"
+    },
+    {
+      "id": "b152fe1225362596330e128fc90f8c736455a455",
+      "title": "EDITBRIDGE: Towards Faithful and Efficient Ultra-High-Resolution Image Editing",
+      "url": "https://arxiv.org/abs/2608.18063",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-17T20:00:00Z",
+      "raw_summary": "EditBridge enables efficient ultra high-resolution image editing via a diffusion bridge that translates low-resolution edits to high-resolution outputs while preserving source details through sparse attention.",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "EDITBridge论文用扩散桥方法实现超高清图像编辑，可追溯到具体论文，对图像编辑工程实践有参考价值。",
+      "queued_at": "2026-08-19T07:41:04Z"
     }
   ],
   "digest_last_date": "2026-08-19"
