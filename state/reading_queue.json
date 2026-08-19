@@ -259,6 +259,71 @@
       "source_traceable": true,
       "why": "用真实创业工作流做端到端agent评测，最强模型仅约30%完成率，暴露指令遵循与领域知识的真实差距，数据本身有信息量。",
       "queued_at": "2026-08-19T03:00:28Z"
+    },
+    {
+      "id": "18f878ec6f5189670fc2aa9419b9ec88d7404131",
+      "title": "How I made DeepSeek V4 Flash 12x faster on an M3 Ultra",
+      "url": "https://www.reddit.com/r/localllama/comments/1vs7ft2/how_i_made_deepseek_v4_flash_12x_faster_on_an_m3",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-19T00:48:09Z",
+      "raw_summary": "I work with a Mac Studio M3 Ultra (512GB) serving DeepSeek V4 Flash on antirez/ds4 (&quot;DwarfStar&quot;). A chat turn took between 6 and 20 seconds. Now it takes 1.6s. Kernels (+21% cold prefill at 64k, bit-exact). DeepSeek V4's sparse attention runs a &quot;lightning indexer&quot; that dominates long-context prefill. Three stacked PRs: threadgroup-tiled scorer (#830), register-blocked K-resident scorer (#831), and a streaming top-512 replacing the bitonic sort + merge cascade (#832). 392 → 475 t/s at 64k. Logits byte-identical at every context frontier, everything behind rollback envs. Cache, the 10x (this part is useful way beyond DeepSeek or ds4). If you serve any model behind a chat API, check whether your client can actually hit the engine's KV cache, because a stateless client usually can't: The live session ends in the exact reply the engine sampled. If your client doesn't resend that reply byte for byte (exact text, or the tool call by id), the prefix never matches and you re-prefill every turn. Replay it verbatim and cached_tokens ≈ everything. Prewarming: max_tokens: 0. Send the conversation with zero tokens requested and the engine prefills it and stops exactly at the prompt, so the next real request extends the cache. max_tokens: 1 doesn't work: the one sampled token becomes part of the session and every later request misses. Great for warming a room/session before anyone asks anything, or re-warming after your slot got evicted. Recipe with measurements: ds4#816",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "DeepSeek V4 Flash在M3 Ultra上12x加速的kernel优化细节，三个PR+具体吞吐数字，可复现性强。",
+      "queued_at": "2026-08-19T03:53:54Z"
+    },
+    {
+      "id": "595288ff593a3f89be22d64b28ff6dc83f4a3274",
+      "title": "Alibaba's TSMC-Built 5nm RISC-V Chip, XuanTie C950, Now Runs Qwen-3.8 27B Model Natively, Unlocking Massive Vertical Integration Tailwinds",
+      "url": "https://wccftech.com/alibabas-tsmc-built-5nm-risc-v-chip-xuantie-c950-now-runs-qwen-3-8-27b-model-natively-unlocking-massive-vertical-integration-tailwinds",
+      "source": "rss:lobsters",
+      "published_at": "2026-08-18T23:39:30Z",
+      "raw_summary": "",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "阿里玄铁C950 5nm RISC-V原生跑通Qwen-3.8 27B，对RISC-V+大模型垂直整合路径有实质信息。",
+      "queued_at": "2026-08-19T03:53:54Z"
+    },
+    {
+      "id": "c3e6aa3cffb5e9aba9bdcc3b821e1e810e858851",
+      "title": "对话前DeepMind曹原：AI for Science爆发，一个新时代到来了",
+      "url": "https://www.tmtpost.com/8107695.html",
+      "source": "rss:tmtpost",
+      "published_at": "2026-08-19T03:41:15Z",
+      "raw_summary": "文 | 硅谷1018月第一周，谷歌灵魂人物Jeff Dean宣布离职，带着其它几位高管出走成立Discovery Loop公司，致力于加速生命科学及其他行业的研究进程。在硅谷，这标志着，AI for Science这个赛道，开始爆发。就在众多数学家、物理学家、生物学家加入OpenAI和Anthropic等顶尖AI实验室之际，AI正在改变人类研发科学的范式。OpenAI宣布模型Astra推导出了10道人类长期悬而未决的数学难题，Anthropic未发布科研版Claude将黎曼猜想的相关零点下界从41.6%推进至67.2%，同时，AI在生物制药、材料、物理等领域都在迅速将科学前沿快速推进。而AI自进化，形成研发闭环，是科研加速的核心。但这中间，人的角色，稍显尴尬。这篇文章，我们和谷歌DeepMind前资深研究科学家曹原，一起聊聊AI for Science。 我们从AI科学自进化的方法论，聊到AI数学和AI物理的应用，最后甚至还聊到了一些哲学问题和人类的意义。以下，就是我们和曹原的对话。陈茜：曹原，非常欢迎你来做客硅谷101，跟我们的观众介绍一下你自己吧。曹原：大家好，我叫曹原，之前是Google DeepMind的科学家。我也是AI初创公司Unreasonable Labs的联合创始人。我们的公司主要研究AI for Knowledge Creation（知识创造）、AI for Science，以及R&amp;D（研究与试验发展）。陈茜：我们今天录制的时间很巧，就在昨天（2026年8月6日），谷歌的Jeff Dean宣布将带领一批科技高管创办一家新公司Discovery Loop，他们也希望做AI for Science（AI4S）相关的事情。我看到很多评论都很唏嘘，说这是一个时代的结束，也是另一个时代的开始。我的理解是，结束的是谷歌的一个时代，开启的可能是一个新的AI4S科学研究时代，可以这样理解吗？曹原：我认为这件事可以从几个方面解读。第一，谷歌和DeepMind内部一直有很多优秀人才和团队。过去每个团队都有各自关注的课题，相互之间干涉不多。但从三四年前Gemini项目启动之后，因为它是公司最重要的项目之一，需要集中力量办大事。从那时候起，这对组织、人事和项目管理都带来了很大挑战，内部出现一些冲突也很难避免。第二，过去半年左右Gemini的表现相对不尽如人意。比如今年年初，Gemini 3.1 Pro在排行榜上还算是比较好的语言模型，但过去三四个月，无论Anthropic、OpenAI，还是中国的一些开源公司，模型能力都在快速提升。相比之下，Gemini 3.5 Flash和最新的3.6 Flash表现相对平平，大家期待的3.x Pro目前也还没有正式发布。总体来看，Gemini的进度相对落后。在这种情况下，谷歌如果要在商业模式上追赶Anthropic以coding agent（编程智能体）为核心的新能力，把商业模式转向这个方向，也会面临很大困难。第三，Jeff Dean, Oriol, Sanjay和Quoc创办Discovery Loop这件事，本质上是让AI自主进行知识开发、知识发现和自动科研，这与我们的创业公司想做的方向非常一致。在逻辑上，这也是AI能力发展的自然延伸。过去两三年，行业最关注的能力主要集中在数学和编程，比如自动写代码、解决奥林匹克数学问题等等。等这些能力逐渐成熟之后，下一个可能让AI智能进一步爆发、产生巨大效益，并帮助人类解决更大问题的方向，很自然就是把数学和代码能力推广到更广泛的科学知识发现上。所以从今年开始，围绕K",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "前DeepMind曹原谈AI for Science方法论与自进化闭环，含一手机观点与产业判断。",
+      "queued_at": "2026-08-19T03:53:54Z"
+    },
+    {
+      "id": "5f3f1c6eb4fba5e01af525dd30bc77e2e4094b3f",
+      "title": "OpenAI says the changes to its model training will increase compute overhead by 20% of observed inference workload; the increase will not be handed to customers (Thomas Claburn/The Register)",
+      "url": "https://www.techmeme.com/260818/p46#a260818p46",
+      "source": "rss:techmeme",
+      "published_at": "2026-08-19T03:30:01Z",
+      "raw_summary": "Thomas Claburn / The Register: OpenAI says the changes to its model training will increase compute overhead by 20% of observed inference workload; the increase will not be handed to customers&nbsp; &mdash;&nbsp; Expanded multistage chain of thought monitoring makes frontier model work more expensive&nbsp; &mdash;&nbsp; OpenAI on Tuesday said its decision &hellip;",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "OpenAI多阶段思维链监控使推理算力增20%且不转嫁客户，指向具体成本与安全权衡。",
+      "queued_at": "2026-08-19T03:53:54Z"
+    },
+    {
+      "id": "c186d1483f280f551b96f53cb28ad73faa7a7f84",
+      "title": "Sources: Beijing allowed ByteDance and Tencent to each receive about 10,000 Nvidia H200 chips at their mainland China facilities in recent weeks (Zijing Wu/Financial Times)",
+      "url": "https://www.techmeme.com/260818/p45#a260818p45",
+      "source": "rss:techmeme",
+      "published_at": "2026-08-19T03:15:01Z",
+      "raw_summary": "Zijing Wu / Financial Times: Sources: Beijing allowed ByteDance and Tencent to each receive about 10,000 Nvidia H200 chips at their mainland China facilities in recent weeks&nbsp; &mdash;&nbsp; Beijing permits small shipments to help leading tech groups in drive to catch up with US rivals&nbsp; &mdash;&nbsp; Small batches of Nvidia's H200 chips &hellip;",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "北京允许字节腾讯各获约1万颗H200，含具体数量与时点，对算力供需判断有直接价值。",
+      "queued_at": "2026-08-19T03:53:54Z"
     }
   ],
   "digest_last_date": "2026-08-19"

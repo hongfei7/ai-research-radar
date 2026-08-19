@@ -4,53 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "ASML",
-        "台积电",
-        "美光"
-      ],
-      "features": [
-        "亿韩",
-        "体将",
-        "元建",
-        "其最",
-        "半导",
-        "大工",
-        "导体",
-        "将投",
-        "工厂",
-        "建设",
-        "投资",
-        "最大",
-        "美半",
-        "设其",
-        "资亿",
-        "韩元",
-        "韩美"
-      ],
-      "sent_at": "2026-08-18T03:54:11Z"
-    },
-    {
-      "tickers": [
-        "阿里巴巴"
-      ],
-      "features": [
-        "ai",
-        "一主",
-        "主线",
-        "唯一",
-        "大生",
-        "态退",
-        "成唯",
-        "潮成",
-        "生态",
-        "退潮",
-        "里大",
-        "阿里"
-      ],
-      "sent_at": "2026-08-18T03:54:34Z"
-    },
-    {
-      "tickers": [
         "DeepSeek"
       ],
       "features": [
@@ -650,6 +603,103 @@
         "飙升"
       ],
       "sent_at": "2026-08-19T03:04:14Z"
+    },
+    {
+      "tickers": [
+        "字节跳动",
+        "腾讯",
+        "英伟达"
+      ],
+      "features": [
+        "about",
+        "allowed",
+        "and",
+        "at",
+        "beijing",
+        "bytedance",
+        "china",
+        "chips",
+        "each",
+        "facilities",
+        "financial",
+        "h200",
+        "in",
+        "mainland",
+        "nvidia",
+        "receive",
+        "recent",
+        "sources",
+        "tencent",
+        "their",
+        "times",
+        "to",
+        "weeks",
+        "wu",
+        "zijing"
+      ],
+      "sent_at": "2026-08-19T03:56:38Z"
+    },
+    {
+      "tickers": [
+        "OpenAI"
+      ],
+      "features": [
+        "ai",
+        "openai",
+        "停新",
+        "入越",
+        "危险",
+        "型训",
+        "始进",
+        "开始",
+        "急暂",
+        "新模",
+        "明越",
+        "暂停",
+        "模型",
+        "紧急",
+        "练开",
+        "聪明",
+        "训练",
+        "越危",
+        "越聪",
+        "进入",
+        "阶段",
+        "险阶"
+      ],
+      "sent_at": "2026-08-19T03:56:56Z"
+    },
+    {
+      "tickers": [
+        "OpenAI"
+      ],
+      "features": [
+        "be",
+        "by",
+        "changes",
+        "claburn",
+        "compute",
+        "customers",
+        "handed",
+        "increase",
+        "inference",
+        "its",
+        "model",
+        "not",
+        "observed",
+        "of",
+        "openai",
+        "overhead",
+        "register",
+        "says",
+        "the",
+        "thomas",
+        "to",
+        "training",
+        "will",
+        "workload"
+      ],
+      "sent_at": "2026-08-19T03:57:12Z"
     }
   ],
   "last_report": {
