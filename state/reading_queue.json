@@ -326,6 +326,19 @@
       "queued_at": "2026-08-19T15:50:09Z"
     },
     {
+      "id": "b88ae5665d4b838ca4d4a2081549d97b70809890",
+      "title": "Stop Anthropomorphizing Intermediate Tokens as Reasoning/Thinking Traces",
+      "url": "https://arxiv.org/abs/2504.09762",
+      "source": "hackernews",
+      "published_at": "2026-08-19T11:35:26Z",
+      "raw_summary": "Stop Anthropomorphizing Intermediate Tokens as Reasoning/Thinking Traces",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "挑战将CoT/思考tokens拟人化的主流解读，关乎对推理模型的认知偏差，值得读原文理解论据。",
+      "queued_at": "2026-08-19T16:34:44Z"
+    },
+    {
       "id": "8775a5a198494f3b218eb6c15f322b2d4eeffb73",
       "title": "From Corpora to Co-Evolving Capabilities: Capability-Centric Data Design for Generalist Image Generation [Xingjian Wang, Zhao Wang, Taihang Hu, Jun Zheng, Qing Jin]",
       "url": "http://arxiv.org/abs/2608.18076v1",
@@ -506,19 +519,6 @@
       "source_traceable": true,
       "why": "用真实创业工作流做端到端agent评测，最强模型仅约30%完成率，暴露指令遵循与领域知识的真实差距，数据本身有信息量。",
       "queued_at": "2026-08-19T03:00:28Z"
-    },
-    {
-      "id": "595288ff593a3f89be22d64b28ff6dc83f4a3274",
-      "title": "Alibaba's TSMC-Built 5nm RISC-V Chip, XuanTie C950, Now Runs Qwen-3.8 27B Model Natively, Unlocking Massive Vertical Integration Tailwinds",
-      "url": "https://wccftech.com/alibabas-tsmc-built-5nm-risc-v-chip-xuantie-c950-now-runs-qwen-3-8-27b-model-natively-unlocking-massive-vertical-integration-tailwinds",
-      "source": "rss:lobsters",
-      "published_at": "2026-08-18T23:39:30Z",
-      "raw_summary": "",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "阿里玄铁C950 5nm RISC-V原生跑通Qwen-3.8 27B，对RISC-V+大模型垂直整合路径有实质信息。",
-      "queued_at": "2026-08-19T03:53:54Z"
     }
   ],
   "digest_last_date": "2026-08-19"
