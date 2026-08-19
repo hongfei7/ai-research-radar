@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-19T07:44:13Z",
-  "text": "当前共有 30 个活跃事件。要点包括: Sources: Beijing allowed ByteDance and Tencent to each receive about 10,000 Nvidia H200 chips at their mainland China facilities in recent weeks (Zijing Wu/Financial Times); Stripe70亿美元买下OpenRouter，到底值不值？; 费半一夜跌近5%，光与存储集体“崩了”：美债利率飙升，AI信仰开始动摇; OpenAI says the changes to its model training will increase compute overhead by 20% of observed inference workload; the increase will not be handed to customers (Thomas Claburn/The Register); OpenAI 紧急暂停新模型训练，AI 开始进入「越聪明越危险」阶段。",
-  "since": "2026-08-19T07:44:13Z",
+  "generated_at": "2026-08-19T08:19:37Z",
+  "text": "截至 2026-08-19 16:19 HKT，本轮新增：DeepSeek全线API涨价，国内大模型低价内卷格局或迎拐点；RSS 2026聚焦具身智能，英伟达发布全模态世界基础模型Cosmos 3并下沉Jetson边缘端，李飞飞团队推出Point-World 3D世界模型，行业转向\"少样本、强泛化\"；AWS扩展Bedrock AgentCore推出持久化Runtime Instances强化多智能体运行底座；上海构建\"通用+智能+超算\"三位一体算力服务体系。",
+  "since": "2026-08-19T08:19:37Z",
   "active_event_count": 30,
   "key_themes": [
     "compute_demand",
     "ai_monetization",
     "chip_supply",
     "model_capability",
-    "domestic_substitution"
+    "edge_ai"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n1. 台积电主动将CoWoS后段订单外溢至Intel马来西亚厂，官方意在加速前段出货，但市场对\"瓶颈在后段\"与\"为何让给竞争对手\"存在解读分歧——是优先级选择还是真实产能不足？\n2. 英伟达利用485亿美元季度自由现金流构建\"AI资本护城河\"（CNBC叙事，正面），但36kr同时指出AI巨头发债1200亿美元、AI债规模1.2万亿正在推高美债利率至30年5%新高，反过来压制AI资产估值——现金流与融资成本构成自我反噬张力。\n\n【新兴趋势】\n1. AI Capex融资端从股权向信用债迁移，AI债与美债争夺买盘、推升期限利率，这是跨条目（美债/CNBC/台积电资本开支）反复出现的宏观暗线。\n2. AI算力竞争从\"训练侧\"扩散到\"推理侧替代路线\"——Cerebras用晶圆级+SRAM直接对标GPU，同时IJCAI议程显示重心从模型底座转向Agent系统嵌入，推理需求与系统层落地双线升温。\n3. CPO共封装光学进入实质扩产阶段（鸿海越南增资），光模块/硅光链二阶拉动信号增强。\n\n【信息盲点】\n1. 博通、AMD在CoWoS/AI芯片叙事中天然是受益方但本轮未被独立分析；\n2. 海力士/三星/美光的HBM4具体量产节点与定价信息缺失；\n3. 国内推理芯片（寒武纪、海光、燧原）面对Cerebras挑战的相对竞争力未被讨论；\n4. 数据中心电力链（电力设备、冷却、核电）在多篇报道中是隐含需求但无独立覆盖。\n\n【跨标的联动】\n1. 台积电CoWoS瓶颈→日月光/欣兴/家登后段受益→英伟达/AMD/博通出货节奏受约束，供应链定价权重估信号明确。\n2. 海力士/三星HBM→台积电先进封装→AI芯片客户，形成韩台半导体链条联动。\n3. 鸿海CPO越南扩产→800G光模块/硅光产业链受益。\n4. Cerebras推理替代→英伟达推理定价权承压→超微/戴尔等GPU",
+  "cross_analysis": "【核心矛盾】\nRSS 2026现场出现明确路线分歧：英伟达Cosmos 3主张\"全模态大模型+规模效应\"路径，与李飞飞团队黄文龙Point-World倡导的\"反事实推理+少样本+脑内搜索\"形成范式对立（来源：leiphone a5ba52e5/0c665ac3）。DeepSeek涨价则存在\"头部话语权提升\"（阳谋）vs\"算力成本倒逼\"（不得已）两种解读（来源：tmtpost 772e2874），前者偏多后者偏空。\n\n【新兴趋势】\n\"少样本/样本高效\"在多条报道中反复出现——RSS 2026双臂BiDemoSyn、Point-World的15小时数据零样本物理预测，叠加AWS AgentCore持久化计算，三者共同指向一个方向：AI从\"堆算力堆数据\"向\"高效推理+持久状态\"迁移，Agent基础设施化和具身智能范式重构是两条平行暗线。\n\n【信息盲点】\n国产AI芯片（寒武纪、海光、燧原）、光模块/液冷/PCB等算力供应链、AI应用层标的（除DeepSeek外）均未覆盖；AMD在Agent/具身浪潮中的角色缺席；DeepSeek涨价后国产大模型（智谱、月之暗面等）是否跟进提价未见报道；上海算力政策中中芯国际角色与GPU/AI芯片关联未展开。\n\n【跨标的联动】\nCosmos 3+Jetson下沉对英伟达是双刃剑——强化生态但面临少样本范式对其算力溢价的潜在压制；AWS AgentCore持久化运行利好上游GPU（英伟达/AMD）及云厂商；上海\"通用+智能+超算\"体系利好中科曙光/浪潮信息服务器端，但若少样本范式规模化推广，将边际削弱其算力需求逻辑——多空信号同源，需密切跟踪学术落地节奏。",
   "trend_spotting": "新兴趋势：Anthropic IPO进入倒计时，Q2营收环比翻倍，与OpenAI仅18%同比增速形成剪刀差，头部大模型竞争格局正从\"OpenAI领跑\"转向\"双寡头并立\"。\n\n早期信号：Anthropic以Claude切入蛋白质设计与分析化学，标志大模型从通用API向垂直科学SaaS变现的关键试探；其超级投票权机制亦开创AI独角兽治理新范式。\n\n市场盲点：OpenAI亏损扩大叠加增速被反超的市场反应偏弱；100亿美元IPO前信贷背后的银行承销争夺战"
 }
