@@ -365,6 +365,19 @@
       "queued_at": "2026-08-19T17:04:09Z"
     },
     {
+      "id": "210b65e6ec4b1f148bc19aeb810bc92501612c78",
+      "title": "How much of the weight-space perception gap is actually symmetry? Evidence from ~1.8M fitted SIRENs [R]",
+      "url": "https://www.reddit.com/r/machinelearning/comments/1vswdnf/how_much_of_the_weightspace_perception_gap_is",
+      "source": "reddit:ml",
+      "published_at": "2026-08-19T19:24:12Z",
+      "raw_summary": "I’ve been looking at a fairly basic question in weight-space learning that I don’t think gets separated cleanly enough: Why does reading semantics directly from neural network weights work pretty well when the networks share an initialization, but collapse when the networks are fitted independently? The usual explanation is parameter symmetry. Permute hidden units, flip equivalent signs, etc., and two parameter vectors can represent the same function while looking completely different to a downstream model. But there are actually several different claims hiding in that explanation: the parameterization has a symmetry group, accounting for that symmetry improves weight-space prediction, the symmetry is actually sufficient to explain the observed degradation between shared-init and independently fitted networks. Those aren’t equivalent, so I tried to measure them separately. The setting is SIREN-style implicit neural representations. For a hidden sine neuron, the relevant function-preserving transformations generate the infinite dihedral group D_inf = Z semidirect_product Z_2 and including neuron permutations gives the layer action D_inf wr S_n. For one hidden layer, I prove generic identifiability modulo this group using the distributional Fourier transform of the realized function. Roughly, the Fourier transform becomes an atomic measure supported at the incoming frequencies +/- w_i, which lets you recover the parameters up to exactly the D_inf wr S_n action under explicit ge",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "基于 180 万次 SIREN 拟合实验区分参数对称性与 weight-space 感知 gap，触及权重空间学习这一前沿议题，值得细读原文。",
+      "queued_at": "2026-08-19T19:28:00Z"
+    },
+    {
       "id": "8775a5a198494f3b218eb6c15f322b2d4eeffb73",
       "title": "From Corpora to Co-Evolving Capabilities: Capability-Centric Data Design for Generalist Image Generation [Xingjian Wang, Zhao Wang, Taihang Hu, Jun Zheng, Qing Jin]",
       "url": "http://arxiv.org/abs/2608.18076v1",
@@ -505,19 +518,6 @@
       "angle": "research",
       "source_traceable": true,
       "why": "提出以能力为中心的数据设计范式与课程调度，用于多模态扩散模型训练，方法和数据引擎细节可参考。",
-      "queued_at": "2026-08-19T03:00:28Z"
-    },
-    {
-      "id": "7ddad5bcd0641ba72a945a4ecfac68d26959c0af",
-      "title": "GS-Voxel: Fitting-Free Structured Latents for Large-Scale 3DGS Generation",
-      "url": "https://arxiv.org/abs/2608.17988",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-17T20:00:00Z",
-      "raw_summary": "GS-Voxel converts unstructured 3D Gaussian reconstructions into sparse structured latents to enable scalable aerial scene generation via flow models.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "把无结构3DGS转为稀疏结构化潜变量以便流式生成大规模航拍场景，是具体可复现的表示学习思路。",
       "queued_at": "2026-08-19T03:00:28Z"
     }
   ],
