@@ -248,6 +248,32 @@
       "queued_at": "2026-08-19T11:42:18Z"
     },
     {
+      "id": "45c1f016a8fe8efff1c5e2ec1f94096cf507f27d",
+      "title": "Marvell与谷歌就开发定制半导体产品达成商业协议",
+      "url": "https://36kr.com/newsflashes/3946434931326089?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-08-19T12:41:12Z",
+      "raw_summary": "8月19日，Marvell Technology宣布与谷歌就为后者开发定制半导体产品达成商业协议。此次扩展的合作关系涵盖一系列与TPU生态系统关联的定制芯片项目，包括AI推理加速器、存储控制器、网络接口控制器、内存接口控制器和近内存计算。为配合此次合作，Marvell于8月18日向谷歌发行一份认股权证，允许后者以每股206.58美元的行权价格购买至多5897万股公司普通股。（界面）",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Marvell与谷歌扩展TPU生态定制芯片合作并发行认股权证，是AI ASIC供应链与商业关系的实质性进展。",
+      "queued_at": "2026-08-19T13:10:18Z"
+    },
+    {
+      "id": "47b533b22504e91f8de921218585ca905427aa5e",
+      "title": "挑战 1 比特！ETH Zürich 秦浩桐：如何把大模型「塞进」小设备？| IJCAI 2026",
+      "url": "https://www.leiphone.com/category/private/e2kawo4ecgabowbm.html",
+      "source": "rss:leiphone",
+      "published_at": "2026-08-19T10:38:00Z",
+      "raw_summary": "面对大模型规模与硬件内存之间高达20倍的算力鸿沟，不重训的“1比特量化”如何把千亿参数的硅基大脑塞进微型设备？&nbsp; &nbsp; 编辑丨岑峰&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;在 AGI 的狂飙之路上，大语言模型（LLM）正以一种近乎野蛮的“规模法则（Scaling Law）”吞噬着算力与数据。然而，当这些拥有千百亿参数的硅基大脑试图从云端降临到手机、汽车甚至植入式医疗设备时，却撞上了一堵难以逾越的“内存墙”：过去几年，模型参数规模的暴涨速度，惊人地达到了底层硬件内存容量增长速度的 20 倍。在刚刚于德国不莱梅开幕的 IJCAI 2026 大会上，AI科技评论注意到，学术界与工业界正在达成共识：寄希望于摩尔定律或下一代芯片的发布来填平这 20 倍的算力鸿沟，已是痴人说梦。唯一的出路，是向模型的数据表示方式“动刀”。来自苏黎世联邦理工学院Center for Project-Based Learning 的博士后、即将履新香港理工大学的秦浩桐，在首日的“Generalizing from Limited Resources in the Open World”主题 Workshop 中，给出了一个创新解法：挑战无需重新训练的“后训练量化（PTQ）”极限，将庞大的 LLM 强行压缩至极端的 1 比特与 2 比特。作为近年来在模型压缩领域的代表性学者，秦浩桐团队的名字因 BiLLM 与 SqueezeLLM 两项里程碑式的工作而广为人知。在此之前，后训练量化在降至 3 比特以下时，往往伴随着模型智力的“断崖式崩溃”。而秦浩桐团队彻底打破了这一魔咒。他们敏锐地捕捉到了大模型权重深处的“物理规律”：绝大多数权重呈现死寂的“钟形分布”，而真正决定模型生死存亡的“长尾敏感度”，却像遗传基因一样高度集中在极少数的通道中。这场演讲的重大现实意义在于，它向全行业展示了量化技术从“粗暴砍树”向“精准微雕”的范式跃迁。通过 BiLLM，他们不仅摒弃了动辄数十小时的重新训练，仅用半小时单卡算力，就将关键权重单独抽离，把剩余庞大权重极限量化至 1 比特，让原本注定报废的模型依然能连贯对话；而通过 SqueezeLLM，他们进一步确立了以“128 个权重为一组”的动态分配法则，成功把 2 比特量化下困惑度飙升的大模型拉回了工业可用状态。这意味着，大模型在资源受限设备上的普及，终于有了一套突破内存与带宽封锁的“终极压缩算法”。同时，秦浩桐也毫不避讳地指出了极低比特量化驶入深水区后的三大终极挑战：低于 2 比特时复杂逻辑指令的隐性折损、底层硬件对极低比特原生通路的缺失，以及庞大 Activation（激活值）与 KV Cache 的量化坚冰。当全球科技巨头都在为端侧 AI 的入口争得头破血流时，",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "ETH秦浩桐关于1比特量化将大模型部署到边缘设备的IJCAI教程，涉及模型压缩与硬件协同的一手技术路线。",
+      "queued_at": "2026-08-19T13:10:18Z"
+    },
+    {
       "id": "8775a5a198494f3b218eb6c15f322b2d4eeffb73",
       "title": "From Corpora to Co-Evolving Capabilities: Capability-Centric Data Design for Generalist Image Generation [Xingjian Wang, Zhao Wang, Taihang Hu, Jun Zheng, Qing Jin]",
       "url": "http://arxiv.org/abs/2608.18076v1",
@@ -493,32 +519,6 @@
       "source_traceable": true,
       "why": "DFlash 2是推测解码/draft model方向的具体工作（v1出自Meta），可能给出并行draft的实验数据与吞吐提升，读完能了解投机解码新方案。",
       "queued_at": "2026-08-19T04:39:52Z"
-    },
-    {
-      "id": "96e41ddb2576c1ae6dc1a9376eaccdcf3b187201",
-      "title": "HarnessRisk: A Lifecycle-Oriented Benchmark for Agent Harness Safety",
-      "url": "https://arxiv.org/abs/2608.17597",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-17T20:00:00Z",
-      "raw_summary": "HarnessRisk evaluates agent harness safety across six operational phases, revealing that configuration vulnerabilities and detection gaps allow high attack success despite preserved utility.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "HarnessRisk按生命周期六阶段评测agent harness安全性，给出具体攻击成功率数据，agent安全方向的系统化基准。",
-      "queued_at": "2026-08-19T04:39:52Z"
-    },
-    {
-      "id": "c145f01098fb8a56ab7a96b1918074bb21471cb2",
-      "title": "Municipal Capital Tries to Turn AI Tokens into a Metered Utility",
-      "url": "https://www.tmtpost.com/8108581.html",
-      "source": "rss:tmtpost",
-      "published_at": "2026-08-19T05:03:02Z",
-      "raw_summary": "In Guangzhou, district-backed platforms are selling model inference by the token while banks experiment with loans sized to that consumption. The efforts show local state firms searching for recurring revenue from AI infrastructure as traditional development models slow.",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "广州地方政府平台按token售卖模型推理、银行基于消耗量放贷，分析AI基础设施的本地化商业模式与现金流逻辑，有具体产业洞察。",
-      "queued_at": "2026-08-19T05:14:30Z"
     }
   ],
   "digest_last_date": "2026-08-19"
