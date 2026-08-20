@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-08-20T05:17:31Z",
-  "text": "截至 2026-08-20 13:17 HKT，新增变化主要在AI基础设施与企业服务两个层面。Agent基础设施方面，DeepSeek开源自主AI Agent执行运行时DeepSeek Harness（dsh）开发者预览版，采用微内核架构与append-only事件日志，为模块化、可解耦的Agent基础设施生态提供新选项，后续采用程度取决于插件生态与API维护质量。企业AI竞争方面，OpenAI宣布承诺不留存企业客户数据，并升级跨多轮交互的安全监测技术，针对Anthropic留存业务数据的痛点争夺企业市场，新安全技术已向部分客户开放预览。",
-  "since": "2026-08-20T05:17:31Z",
+  "generated_at": "2026-08-20T05:59:47Z",
+  "text": "当前共有 17 个活跃事件。要点包括: 中信证券：国产算力订单预期清晰度有望进一步增强，建议关注国产算力产业链头部厂商; Sources: China is restricting or delaying exports to Taiwan of germanium- and quartz-based materials used in fiber optics, photonics, and chip manufacturing (Nikkei Asia); Baidu’s AI Share Crosses Half of Core Revenue, Yet the Market Still Prices a Split Identity; The Open-Sourcing of DeepSeek Harness Opens the Door to Modular, Unbundled AI Agent Infrastructure; 存储巨头集体回购，“超级周期”走到哪一步了？。",
+  "since": "2026-08-20T05:59:47Z",
   "active_event_count": 17,
   "key_themes": [
     "ai_monetization",
-    "model_capability",
     "compute_demand",
-    "advanced_packaging",
-    "chip_supply"
+    "model_capability",
+    "chip_supply",
+    "edge_ai"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
