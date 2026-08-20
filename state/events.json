@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-20T21:45:11Z",
+  "updated_at": "2026-08-20T22:11:31Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -39001,9 +39001,9 @@
       "first_seen_at": "2026-08-20T16:00:24Z",
       "first_published_at": "2026-08-20T15:45:55Z",
       "last_updated_at": "2026-08-20T16:00:24Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 8,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "",
       "ticker_counts": {
         "OpenAI": 1,
@@ -39033,9 +39033,9 @@
       "first_seen_at": "2026-08-20T16:00:24Z",
       "first_published_at": "2026-08-20T15:37:14Z",
       "last_updated_at": "2026-08-20T16:00:24Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 8,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "",
       "ticker_counts": {
         "三星电子": 1,
@@ -39059,9 +39059,9 @@
       "first_seen_at": "2026-08-20T16:00:24Z",
       "first_published_at": "2026-08-20T15:37:29Z",
       "last_updated_at": "2026-08-20T16:00:24Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 7,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "看多逻辑：①需求刚性不可逆。AI/国防计算需求结构性增长，密歇根本地禁令难以改变行业大趋势，项目大概率迁址而非取消，对全美数据中心整体建设节奏影响有限。②国家安全属性加持。Los Alamos国家实验室背书意味着项目具有联邦安全战略意义，联邦层面可能通过拨款或优先审批权施压，迫使地方政府妥协，类似案例历史上联邦多次胜诉。③电力供应链受益确定性提升。社区抵制倒逼开发商更依赖离网/自备电源方案，反而加速SMR、燃气轮机、燃料电池等分布式电力方案的部署，对GEV、CWK等电力设备商构成增量需求。\n\n看空风险：①社区抵制浪潮正在扩散。北弗吉尼亚、凤凰城之后，密歇根加入抵制名单，反映\"算力中心\"与\"居民电价/环境权益\"的冲突激化，可能形成跨州示范效应，迫使更多地方议会出台类似禁令，实质性拖延项目交付。②电力审批周期拉长将直接传导至AI芯片部署节奏。电网变压器、变电站审批被卡意味着英伟达/AMD下游客户的集群上线时间推迟，间接影响半导体出货节奏。③地缘安全项目政治敏感度高。涉核武器标签使项目更容易被环保组织和反战团体锁定，增加舆论和诉讼风险，变数放大。\n\n关键驱动因素：①密歇根州层面是否会出台全州性数据中心建设指南或电力基础设施豁免法案；②同类禁令在其他州的扩散速度（尤其德州、俄亥俄等AI数据中心集聚区）。\n\n市场影响评估：短期看，事件本身冲击有限，更多是情绪层面提醒市场注意\"建设摩擦\"风险，相关电力设备及替代能源标的有望获益。中期看，若抵制浪潮形成系统性趋势，将重塑数据中心选址逻辑，利好得州、内布拉斯加等电力富余地区开发商，同时推高单MW建设成本。\n\n时间线推断：未来1-2个月关注密歇根州议会是否介入及开发商是否提起联邦诉讼；3-6个月跟踪项目是否迁址或重新选址；若迁址，从开工到投运至少延迟12-18个月，对2027年的AI算力供给构成边际扰动。",
       "ticker_counts": {},
       "max_item_score": 7
@@ -39393,6 +39393,76 @@
         "Anthropic": 1
       },
       "max_item_score": 9
+    },
+    "evt_cf90a580e01b": {
+      "event_id": "evt_cf90a580e01b",
+      "title": "Introducing cross-Region inference for OpenAI GPT-5.6 models on Amazon Bedrock",
+      "summary": "Amazon Bedrock 正式上线 OpenAI GPT-5.6 系列模型（代号 Sol、Terra、Luna）的跨区域推理能力，覆盖25个以上 AWS 区域。该服务通过美国地理与全球推理配置文件路由请求以提升吞吐量，支持 OpenAI API 与 Converse API 调用，并提供 IAM 权限、配额与监控配置方案。这是 OpenAI 模型首次在 AWS 上以跨区域方式大规模商用。值得关注的是，OpenAI 此前主要绑定微软 Azure，此次落地 AWS 标志着其云分发策略的转变。",
+      "tickers": [
+        "OpenAI",
+        "亚马逊",
+        "微软"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand",
+        "model_capability"
+      ],
+      "direction": {
+        "亚马逊": "positive",
+        "OpenAI": "positive",
+        "微软": "neutral"
+      },
+      "item_ids": [
+        "bf53464766cbc820be587201bb4a8c0e63907b32"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-20T22:11:00Z",
+      "first_published_at": "2026-08-20T21:46:03Z",
+      "last_updated_at": "2026-08-20T22:11:00Z",
+      "is_active": true,
+      "significance": 8,
+      "status": "developing",
+      "deep_analysis": "1. 看多逻辑：\n- OpenAI 打破 Azure 独家绑定、转向多云分发，显著扩大可触达市场（TAM），降低单一渠道依赖，营收弹性提升；AWS Bedrock 借此获得差异化资产，吸引偏好 OpenAI 模型但已深耕 AWS 生态的企业客户，巩固 AI 全栈竞争力。\n- 跨区域推理覆盖 25+ 区域直接放大 token 消耗规模，对算力链上游（GPU、NVLink、内存）形成增量需求，间接利好英伟达、博通等基础设施供应商。\n- 标志 OpenAI 商业化从\"绑定大客户\"转向\"分销扩张\"，ARR",
+      "ticker_counts": {
+        "微软": 1,
+        "亚马逊": 1,
+        "OpenAI": 1
+      },
+      "max_item_score": 8
+    },
+    "evt_cd1b998c950d": {
+      "event_id": "evt_cd1b998c950d",
+      "title": "ChatGPT can now send texts for you with new Apple Messages plugin",
+      "summary": "OpenAI为ChatGPT推出一款Apple Messages（iMessage）插件，允许用户授权ChatGPT代为撰写并发送短信。该功能基于苹果Messages扩展框架，使用户可在短信应用内调用ChatGPT完成文字生成。值得关注的是，这是ChatGPT进一步向苹果终端生态渗透的举措，展示了AI助手在OS级应用场景中的落地形态。",
+      "tickers": [
+        "OpenAI",
+        "苹果"
+      ],
+      "themes": [
+        "ai_monetization",
+        "edge_ai"
+      ],
+      "direction": {
+        "OpenAI": "positive",
+        "苹果": "neutral"
+      },
+      "item_ids": [
+        "62b5f81689b5df135234770c6d16a8850924b8d3"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-20T22:11:00Z",
+      "first_published_at": "2026-08-20T22:09:51Z",
+      "last_updated_at": "2026-08-20T22:11:00Z",
+      "is_active": true,
+      "significance": 5,
+      "status": "developing",
+      "deep_analysis": "看多逻辑：\n1. 生态渗透加速：ChatGPT通过iMessage扩展框架实现OS级落地，验证了\"第三方AI+苹果生态\"的协同分发模式，为OpenAI打开数亿iPhone用户的触达入口，付费转化路径有望进一步打通。\n2. AI货币化路径具象化：插件式分发为行业树立标杆，证明大模型可借系统级入口实现规模化变现，弱化\"仅有API/独立App\"的单一想象。\n3. 高频低门槛场景卡位：短消息天然高频、上下文密集，为后续向Mail、Notes、Siri等更多原生应用渗透提供样板，积累数据飞轮与用户习惯。\n\n看空风险：\n1. 替代风险：苹果Apple Intelligence能力持续迭代，长期原生AI可能挤压第三方插件价值，OpenAI的\"通道\"角色存在被边缘化可能。\n2.",
+      "ticker_counts": {
+        "苹果": 1,
+        "OpenAI": 1
+      },
+      "max_item_score": 5
     }
   }
 }
