@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-20T10:52:45Z",
-  "text": "当前共有 30 个活跃事件。要点包括: 拆解Anthropic：押注 coding 的公司很多，为什么它先吃到复利？; 迈威尔科技在芯片合作协议中授予谷歌最高122亿美元的股票购买权; Sources: China is restricting or delaying exports to Taiwan of germanium- and quartz-based materials used in fiber optics, photonics, and chip manufacturing (Nikkei Asia); 三星晶圆代工技术蓝图调整，1.4纳米延后至2029年量产; 台积电A16工艺完成开发验证，目标Q4量产。",
-  "since": "2026-08-20T10:52:45Z",
+  "generated_at": "2026-08-20T11:32:27Z",
+  "text": "当前共有 30 个活跃事件。要点包括: 拆解Anthropic：押注 coding 的公司很多，为什么它先吃到复利？; 迈威尔科技在芯片合作协议中授予谷歌最高122亿美元的股票购买权; SMIC posts record $3B quarter and hikes wafer prices — US sanctions hand Chinese foundry a captive AI market; Sources: China is restricting or delaying exports to Taiwan of germanium- and quartz-based materials used in fiber optics, photonics, and chip manufacturing (Nikkei Asia); 三星晶圆代工技术蓝图调整，1.4纳米延后至2029年量产。",
+  "since": "2026-08-20T11:32:27Z",
   "active_event_count": 30,
   "key_themes": [
-    "ai_monetization",
     "compute_demand",
-    "model_capability",
+    "ai_monetization",
     "chip_supply",
+    "model_capability",
     "domestic_substitution"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n本轮条目均聚焦阿里，核心矛盾在于\"AI云收入高增 vs 自由现金流急剧恶化\"的双面信号：阿里云外部收入加速45%创22季度新高、AI收入连续12季度三位数增长；而Q1",
+  "cross_analysis": "【核心矛盾】\n中芯国际\"量价齐升\"叙事（Tom's Hardware）与潜在上行风险之间存在张力：美方进一步收紧出口管制虽能强化内需\"保护\"效应，但同时也压制其获取EUV/先进设备路径，长期技术代差未解。AI办公赛道存在口径之争——TMTpost一篇报道以MAU口径认定腾讯WorkBuddy（1115万）领先，另一篇以增速（+1063.79%）和评测榜单（PinchBench/DeepResearch）认定百度搭子更优，两套指标给出不同赢家。Kimi K3\"逼近Opus 5\"为单一信源（量子位），缺乏第三方benchmark交叉验证。\n\n【新兴趋势】\n三条暗线反复出现：①AI算力正上抬国家级电力规划天花板（韩国2040预测净增需求翻3倍至11.9GW）；②多Agent架构成为国产大模型新路径（Kimi K3 18 Agent、百度秒哒/伐谋），单次推理",
   "trend_spotting": "72小时内最显著变化：Anthropic Q2营收115亿美元、环比+140%，已超过OpenAI的67亿美元/18%，头部模型公司商业化座次正在重写，而非仅是能力排序。叠加Stripe收购OpenRouter切入token交易，模型分发中间层开始资本化结算。\n\n新兴趋势：定制ASIC供应链绑定深化——Marvell以122亿美元股票购买权换取谷歌TPU多品类联合研发，二阶效应是博通在谷歌ASIC中的份额承压、Marvell估值面临14%稀释但订单可见性增强。在轨算力从概念走向融资，Muon Space 2.5亿美元C轮由Google参投，验证超大规模云厂对太空AI算力的布局意愿。\n\n早期信号：Pine64因存储短缺停产至2027年中，标志DRAM紧张从HBM向消费/边缘设备蔓延，与同期三星、海力士明年盈利下修形成\"高端紧、低端缺\"的分裂信号，需观察是否传导至AI终端硬件成本。Anthrop"
 }

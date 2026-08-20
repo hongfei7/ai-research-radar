@@ -27,6 +27,110 @@
       "queued_at": "2026-08-20T03:00:27Z"
     },
     {
+      "id": "8a063d1976a6bd1055d16b31376ca70bc9c757d9",
+      "title": "SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation",
+      "url": "https://arxiv.org/abs/2608.18701",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-18T20:00:00Z",
+      "raw_summary": "SoftVTBench introduces a synchronized visuo-tactile dataset and deformation-aware benchmark for evaluating physical interaction quality during deformable-object manipulation.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "同步视觉-触觉数据集与形变物体操作基准，对具身智能研究中形变物体操控的评估方法有直接参考价值。",
+      "queued_at": "2026-08-20T03:53:45Z"
+    },
+    {
+      "id": "90837a6a087fe64cc49c627b406d434b51ff5c9f",
+      "title": "How Unitree's Go series, which helped the company dominate the quadruped robot market, drew on openly published US university research funded by the US military (Michael Martina/Reuters)",
+      "url": "https://www.techmeme.com/260820/p2#a260820p2",
+      "source": "rss:techmeme",
+      "published_at": "2026-08-20T04:40:01Z",
+      "raw_summary": "Michael Martina / Reuters: How Unitree's Go series, which helped the company dominate the quadruped robot market, drew on openly published US university research funded by the US military&nbsp; &mdash;&nbsp; China's Unitree Robotics - among the world's biggest producers of humanoid and quadruped robots - based designs &hellip;",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "路透社调查报道宇树Go系列基于美大学公开研究（含DARPA资助），有具体溯源价值。",
+      "queued_at": "2026-08-20T05:16:05Z"
+    },
+    {
+      "id": "55df70c7338f74f3656f570d0b61fb49e0e7c135",
+      "title": "China's humanoid robot makers derive much of their revenue from government-backed training centers that sell training data back to them, raising demand concerns (William Langley/Financial Times)",
+      "url": "https://www.techmeme.com/260820/p4#a260820p4",
+      "source": "rss:techmeme",
+      "published_at": "2026-08-20T05:35:01Z",
+      "raw_summary": "William Langley / Financial Times: China's humanoid robot makers derive much of their revenue from government-backed training centers that sell training data back to them, raising demand concerns&nbsp; &mdash;&nbsp; Companies are selling machines to government-backed centres that then sell training data back to robot makers.",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "FT报道揭示中国具身/人形机器人公司收入高度依赖政府背景训练中心回采数据的闭环模式，是对该赛道真实需求的实质性质疑。",
+      "queued_at": "2026-08-20T05:57:49Z"
+    },
+    {
+      "id": "4f24ec10c1ae8f38bbb8b6b66071900dccd86e1b",
+      "title": "3 days benchmarking most llama.cpp flags on my weird 40gb vram laptop + tb4 egpu setup. Got +70% generation, +40% prefill, 60k more context, and filed a bug in llama around MTP. What I learned.",
+      "url": "https://www.reddit.com/r/localllama/comments/1vtc0z7/3_days_benchmarking_most_llamacpp_flags_on_my",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-20T06:56:49Z",
+      "raw_summary": "tldr: went from 16~ t/s to 27~ t/s generation. got my usable context up from 220k to the full 262k without sacrificing anything. prefill also increased from 376 to 573 command I ended up with, fwiw: llama-server -m Qwen3.8-27B-UD-Q6_K_XL.gguf -c 262144 -ngl 999 -fa on \\ -ctk q8_0 -ctv q8_0 --spec-type draft-mtp,ngram-map-k4v --spec-draft-n-max 3 \\ --spec-draft-device CUDA0 --split-mode layer -dev CUDA0,Vulkan2 -ts 40,60 \\ --jinja -fitt 256 Note that my setup is a bit atypical. P1 Gen 6 (an RTX 4090 laptop, effectively a 4080 chip running with a 95~ w cap and 16gb vram at 536ish gb/s vram speeds, something like that.) + XTX 7900, over TB4, on an AG02 egpu dock. I had the laptop lying around, so this was the cheapest way to get 40gb vram and run qwen with q6 k xl and full context. Overall very happy and impressed with the setup. Some side Qs: How big is the performance gap between these two cards? It's more interesting than you'd think. I originally thought I'd likely see a big benefit if I just reduced context and gave the XTX a bigger part of the split. Turns out they balance each other super well, actually. Prefill: the 4090 wins by 34% on a 22k cold prompt. Prefill, but 7B @ depth 0: the 4090 by 82%? damn. Generation with no speculative decode: XTX wins by 27%. Generation, 7B @ depth 0: XTX by 23%. Generation adding MTP (speculative decode) back in: XTX by 72%. Generation at depth, 7B @ 98k depth: XTX by 2.5x. So, the XTX is the more powerful decode machine, even over TB4. ",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "llama.cpp在异构GPU+laptop+eGPU配置下的flag调优实测，性能+70%并发现MTP bug，完整可复现。",
+      "queued_at": "2026-08-20T07:50:42Z"
+    },
+    {
+      "id": "08de8a36ef127d4c0c3c72c29db1f6960c023606",
+      "title": "拆解Anthropic：押注 coding 的公司很多，为什么它先吃到复利？",
+      "url": "https://www.tmtpost.com/8110602.html",
+      "source": "rss:tmtpost",
+      "published_at": "2026-08-20T09:05:58Z",
+      "raw_summary": "文 | 深流研究所，作者 | 吴绛枫据彭博社最新报道，截至今年7月底，Anthropic年化营收运行率已经突破650亿美元。与2025年底约90亿美元的水平相比，这一数字在7个月内增长超7倍。刚刚结束的二季度，Anthropic初步收入也已超过115亿美元，同比增幅达到14倍，并首次实现营业利润转正。在前沿模型公司普遍依赖巨额融资、持续消耗算力的阶段，这是一条罕见的增长曲线。推动增长的当然有Claude模型本身，但模型能力并不会自动转化为收入。过去几年，Anthropic一面推进前沿模型能力，一面推出Claude Code、MCP、Cowork等带有新品类意味的产品。这家公司常常能在模型跨过能力阈值后，迅速找到释放能力的产品形态，并实现商业化。这很难归因于几次偶然的产品判断。毕竟，押注 Coding 的公司并不少，Anthropic 却率先把前沿模型变成了可用、可验证的产品，并跑出了复利。它是怎么做到的？1、在研究和产品之间，Anthropic设置了一种特殊岗位要理解这些问题，可以先从Anthropic内部一种特殊的岗位说起。Dianne Penn是Anthropic第一位技术产品经理。她在2023年加入Anthropic，公开使用过的职务名称包括Head of Product for AI Research and Labs、Head of Product for Research and Labs，以及 Head of Research Product Management。这些说法虽有差异，却都指向一个特殊的交叉点：一端进入AI Research，跟进模型研究团队的工作；另一端连接产品实验室Labs，用原型探索新能力可能长出什么产品。在传统软件公司，技术地基相对稳定，产品经理可以围绕明确需求规划功能。但在前沿模型公司，这块地基每隔几个月就可能改变。今天做不到的产品，下一代模型可能突然做到了；当下为弥补模型缺陷搭建的复杂流程，半年后也可能成为限制新模型的脚手架。Dianne和团队的核心工作，正是研究和管理这种不确定性：实验室里刚出现的能力，哪些已经接近可用？用户说&ldquo;Claude不好用&rdquo;，缺的是模型、工具、界面，还是工程基础设施？当用户拿Claude完成团队未曾设想的任务时，那是偶然技巧，还是一种新的产品可能？Dianne需要把这些判断带回研究、产品和工程团队。2、如何把用户的一句「不好用」，变成模型的训练目标？2023年7月，Claude 2上线后的一次bug排查，初步展示了这套工作方式如何运转。当时，用户频繁抱怨Claude 2&ldquo;不太会遵循指令&rdquo;。这个反馈看似严重，却无法直接指导模型研究。用户不会区分问题来自预训练、后训练、还是系统提示、或者工具调用。他们只能描述任务没有完成。Dianne和团队开始阅读用户授权分享的失败轨迹，追问任务究竟在哪一步停下。沿着案例向下查，他们发现，在早期这类投诉中，大约80%都指向一个具体得近乎琐碎的问题：Claude无法稳定输出正确的JSON。少一个括号，API就会拒绝请求。字段不符合schema，工具调用便无法解析。对聊天机器人而言，这些只是格式错误；对需要连续调用工具的Agent而言，它意味着工作流会在第一道接口处断掉。团队从真实失败中收集了约30&mdash;40个案例，逐一写清输入、理想输出和通过条件，把它们变成一组可以重复运行的eval。此后，Claude每一代模型都要重新接受测试。按照Dianne在公开采访中的讲述，这组评测如今已达到接近99.9%&",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "拆解 Anthropic 把前沿模型能力转化为商业复利的组织与产品机制，涉及研发-产品岗位设计与商业化路径，对理解 AI 公司护城河有实质参考。",
+      "queued_at": "2026-08-20T09:18:24Z"
+    },
+    {
+      "id": "d28d3152af73153fe61b31d123199e1bdd6b5108",
+      "title": "SkillGate: Training In-Policy Skill Selection in Long-Horizon Agents",
+      "url": "https://arxiv.org/abs/2608.18852",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-18T20:00:00Z",
+      "raw_summary": "SkillGate fixes selector credit starvation in agent skill selection by separating outcome credit for execution tokens from local advantage for skill-naming tokens, improving success rates and reducing misleading skill exposure.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "SkillGate 论文提出解决长程 agent 技能选择中 selector credit starvation 的具体方法，区分 outcome credit 与 local advantage，可读原文看实验与消融。",
+      "queued_at": "2026-08-20T09:18:24Z"
+    },
+    {
+      "id": "5449cd4b0c26cb17f7137ee3d51967e0dda98c17",
+      "title": "迈威尔科技在芯片合作协议中授予谷歌最高122亿美元的股票购买权",
+      "url": "https://36kr.com/newsflashes/3947701924576387?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-08-20T10:17:43Z",
+      "raw_summary": "迈威尔科技科技与谷歌扩大合作关系，协议向谷歌授予最高可收购价值122亿美元公司股份的权利。迈威尔科技在提交给美国SEC的文件中表示，两家企业将围绕张量处理单元（TPU，谷歌自研AI芯片）相关的多款半导体产品开展联合研发，合作范围涵盖存储、网络、内存控制器、推理加速以及近内存计算芯片。（新浪财经）",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Marvell与谷歌TPU在存储/内存控制器/近内存计算上的联合研发，涉及AI芯片架构关键路径，信息量大",
+      "queued_at": "2026-08-20T10:48:31Z"
+    },
+    {
+      "id": "7b893d5afc1adb3423c1c9460ea7344c7a866ffa",
+      "title": "闭源RSI的严父：18个Agent自主科研，Kimi K3靠Harness逼近Opus 5",
+      "url": "https://www.qbitai.com/2026/08/476199.html",
+      "source": "rss:qbitai",
+      "published_at": "2026-08-20T09:46:23Z",
+      "raw_summary": "",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Kimi K3用18个Agent自主科研、Harness逼近Opus 5，涉及具体工程方法和基准对比，对Agent路线判断有价值。",
+      "queued_at": "2026-08-20T11:29:23Z"
+    },
+    {
       "id": "53c9b820426ca7daf334cdd0e5c7f044e80cd419",
       "title": "SPADE: Self-Play in Adaptive Synthetic Executable Environments [Bo Liu, Simon Yu, Yiding Jiang, Ao Qu, Andrew Zhao]",
       "url": "http://arxiv.org/abs/2608.19197v1",
@@ -170,19 +274,6 @@
       "queued_at": "2026-08-20T03:00:27Z"
     },
     {
-      "id": "8a063d1976a6bd1055d16b31376ca70bc9c757d9",
-      "title": "SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation",
-      "url": "https://arxiv.org/abs/2608.18701",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-18T20:00:00Z",
-      "raw_summary": "SoftVTBench introduces a synchronized visuo-tactile dataset and deformation-aware benchmark for evaluating physical interaction quality during deformable-object manipulation.",
-      "score": 8,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "同步视觉-触觉数据集与形变物体操作基准，对具身智能研究中形变物体操控的评估方法有直接参考价值。",
-      "queued_at": "2026-08-20T03:53:45Z"
-    },
-    {
       "id": "3e570b24bb1ab4d6e38f446b0a7919ab99b9f82b",
       "title": "我国牵头制定，全球首个算电协同领域国际标准立项",
       "url": "https://36kr.com/newsflashes/3947321391316101?f=rss",
@@ -209,19 +300,6 @@
       "queued_at": "2026-08-20T04:39:40Z"
     },
     {
-      "id": "90837a6a087fe64cc49c627b406d434b51ff5c9f",
-      "title": "How Unitree's Go series, which helped the company dominate the quadruped robot market, drew on openly published US university research funded by the US military (Michael Martina/Reuters)",
-      "url": "https://www.techmeme.com/260820/p2#a260820p2",
-      "source": "rss:techmeme",
-      "published_at": "2026-08-20T04:40:01Z",
-      "raw_summary": "Michael Martina / Reuters: How Unitree's Go series, which helped the company dominate the quadruped robot market, drew on openly published US university research funded by the US military&nbsp; &mdash;&nbsp; China's Unitree Robotics - among the world's biggest producers of humanoid and quadruped robots - based designs &hellip;",
-      "score": 8,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "路透社调查报道宇树Go系列基于美大学公开研究（含DARPA资助），有具体溯源价值。",
-      "queued_at": "2026-08-20T05:16:05Z"
-    },
-    {
       "id": "a54c8dda96d31456c6dee5654e8db93dd8a4fa82",
       "title": "欧洲五城「落子」2000辆，小马智行跨过Robotaxi出海分水岭",
       "url": "https://www.leiphone.com/category/transportation/b2ncxk9toetqdkcj.html",
@@ -246,19 +324,6 @@
       "source_traceable": true,
       "why": "DeepSeek开源Harness agent运行时，模块化微内核架构，可直接看代码评估。",
       "queued_at": "2026-08-20T05:16:05Z"
-    },
-    {
-      "id": "55df70c7338f74f3656f570d0b61fb49e0e7c135",
-      "title": "China's humanoid robot makers derive much of their revenue from government-backed training centers that sell training data back to them, raising demand concerns (William Langley/Financial Times)",
-      "url": "https://www.techmeme.com/260820/p4#a260820p4",
-      "source": "rss:techmeme",
-      "published_at": "2026-08-20T05:35:01Z",
-      "raw_summary": "William Langley / Financial Times: China's humanoid robot makers derive much of their revenue from government-backed training centers that sell training data back to them, raising demand concerns&nbsp; &mdash;&nbsp; Companies are selling machines to government-backed centres that then sell training data back to robot makers.",
-      "score": 8,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "FT报道揭示中国具身/人形机器人公司收入高度依赖政府背景训练中心回采数据的闭环模式，是对该赛道真实需求的实质性质疑。",
-      "queued_at": "2026-08-20T05:57:49Z"
     },
     {
       "id": "6ecdc0b4b102dddb523bbc84b789b17a5de6d4b9",
@@ -311,19 +376,6 @@
       "source_traceable": true,
       "why": "Callosum做AI任务与芯片匹配的软件层，1亿美元种子轮，反映AI推理基础设施调度层的新方向值得关注。",
       "queued_at": "2026-08-20T06:58:57Z"
-    },
-    {
-      "id": "4f24ec10c1ae8f38bbb8b6b66071900dccd86e1b",
-      "title": "3 days benchmarking most llama.cpp flags on my weird 40gb vram laptop + tb4 egpu setup. Got +70% generation, +40% prefill, 60k more context, and filed a bug in llama around MTP. What I learned.",
-      "url": "https://www.reddit.com/r/localllama/comments/1vtc0z7/3_days_benchmarking_most_llamacpp_flags_on_my",
-      "source": "reddit:localllama",
-      "published_at": "2026-08-20T06:56:49Z",
-      "raw_summary": "tldr: went from 16~ t/s to 27~ t/s generation. got my usable context up from 220k to the full 262k without sacrificing anything. prefill also increased from 376 to 573 command I ended up with, fwiw: llama-server -m Qwen3.8-27B-UD-Q6_K_XL.gguf -c 262144 -ngl 999 -fa on \\ -ctk q8_0 -ctv q8_0 --spec-type draft-mtp,ngram-map-k4v --spec-draft-n-max 3 \\ --spec-draft-device CUDA0 --split-mode layer -dev CUDA0,Vulkan2 -ts 40,60 \\ --jinja -fitt 256 Note that my setup is a bit atypical. P1 Gen 6 (an RTX 4090 laptop, effectively a 4080 chip running with a 95~ w cap and 16gb vram at 536ish gb/s vram speeds, something like that.) + XTX 7900, over TB4, on an AG02 egpu dock. I had the laptop lying around, so this was the cheapest way to get 40gb vram and run qwen with q6 k xl and full context. Overall very happy and impressed with the setup. Some side Qs: How big is the performance gap between these two cards? It's more interesting than you'd think. I originally thought I'd likely see a big benefit if I just reduced context and gave the XTX a bigger part of the split. Turns out they balance each other super well, actually. Prefill: the 4090 wins by 34% on a 22k cold prompt. Prefill, but 7B @ depth 0: the 4090 by 82%? damn. Generation with no speculative decode: XTX wins by 27%. Generation, 7B @ depth 0: XTX by 23%. Generation adding MTP (speculative decode) back in: XTX by 72%. Generation at depth, 7B @ 98k depth: XTX by 2.5x. So, the XTX is the more powerful decode machine, even over TB4. ",
-      "score": 8,
-      "angle": "engineering",
-      "source_traceable": true,
-      "why": "llama.cpp在异构GPU+laptop+eGPU配置下的flag调优实测，性能+70%并发现MTP bug，完整可复现。",
-      "queued_at": "2026-08-20T07:50:42Z"
     },
     {
       "id": "e56eeb9222bda5100a33d1b8a4cce161fa380d04",
@@ -391,32 +443,6 @@
       "queued_at": "2026-08-20T07:50:42Z"
     },
     {
-      "id": "08de8a36ef127d4c0c3c72c29db1f6960c023606",
-      "title": "拆解Anthropic：押注 coding 的公司很多，为什么它先吃到复利？",
-      "url": "https://www.tmtpost.com/8110602.html",
-      "source": "rss:tmtpost",
-      "published_at": "2026-08-20T09:05:58Z",
-      "raw_summary": "文 | 深流研究所，作者 | 吴绛枫据彭博社最新报道，截至今年7月底，Anthropic年化营收运行率已经突破650亿美元。与2025年底约90亿美元的水平相比，这一数字在7个月内增长超7倍。刚刚结束的二季度，Anthropic初步收入也已超过115亿美元，同比增幅达到14倍，并首次实现营业利润转正。在前沿模型公司普遍依赖巨额融资、持续消耗算力的阶段，这是一条罕见的增长曲线。推动增长的当然有Claude模型本身，但模型能力并不会自动转化为收入。过去几年，Anthropic一面推进前沿模型能力，一面推出Claude Code、MCP、Cowork等带有新品类意味的产品。这家公司常常能在模型跨过能力阈值后，迅速找到释放能力的产品形态，并实现商业化。这很难归因于几次偶然的产品判断。毕竟，押注 Coding 的公司并不少，Anthropic 却率先把前沿模型变成了可用、可验证的产品，并跑出了复利。它是怎么做到的？1、在研究和产品之间，Anthropic设置了一种特殊岗位要理解这些问题，可以先从Anthropic内部一种特殊的岗位说起。Dianne Penn是Anthropic第一位技术产品经理。她在2023年加入Anthropic，公开使用过的职务名称包括Head of Product for AI Research and Labs、Head of Product for Research and Labs，以及 Head of Research Product Management。这些说法虽有差异，却都指向一个特殊的交叉点：一端进入AI Research，跟进模型研究团队的工作；另一端连接产品实验室Labs，用原型探索新能力可能长出什么产品。在传统软件公司，技术地基相对稳定，产品经理可以围绕明确需求规划功能。但在前沿模型公司，这块地基每隔几个月就可能改变。今天做不到的产品，下一代模型可能突然做到了；当下为弥补模型缺陷搭建的复杂流程，半年后也可能成为限制新模型的脚手架。Dianne和团队的核心工作，正是研究和管理这种不确定性：实验室里刚出现的能力，哪些已经接近可用？用户说&ldquo;Claude不好用&rdquo;，缺的是模型、工具、界面，还是工程基础设施？当用户拿Claude完成团队未曾设想的任务时，那是偶然技巧，还是一种新的产品可能？Dianne需要把这些判断带回研究、产品和工程团队。2、如何把用户的一句「不好用」，变成模型的训练目标？2023年7月，Claude 2上线后的一次bug排查，初步展示了这套工作方式如何运转。当时，用户频繁抱怨Claude 2&ldquo;不太会遵循指令&rdquo;。这个反馈看似严重，却无法直接指导模型研究。用户不会区分问题来自预训练、后训练、还是系统提示、或者工具调用。他们只能描述任务没有完成。Dianne和团队开始阅读用户授权分享的失败轨迹，追问任务究竟在哪一步停下。沿着案例向下查，他们发现，在早期这类投诉中，大约80%都指向一个具体得近乎琐碎的问题：Claude无法稳定输出正确的JSON。少一个括号，API就会拒绝请求。字段不符合schema，工具调用便无法解析。对聊天机器人而言，这些只是格式错误；对需要连续调用工具的Agent而言，它意味着工作流会在第一道接口处断掉。团队从真实失败中收集了约30&mdash;40个案例，逐一写清输入、理想输出和通过条件，把它们变成一组可以重复运行的eval。此后，Claude每一代模型都要重新接受测试。按照Dianne在公开采访中的讲述，这组评测如今已达到接近99.9%&",
-      "score": 8,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "拆解 Anthropic 把前沿模型能力转化为商业复利的组织与产品机制，涉及研发-产品岗位设计与商业化路径，对理解 AI 公司护城河有实质参考。",
-      "queued_at": "2026-08-20T09:18:24Z"
-    },
-    {
-      "id": "d28d3152af73153fe61b31d123199e1bdd6b5108",
-      "title": "SkillGate: Training In-Policy Skill Selection in Long-Horizon Agents",
-      "url": "https://arxiv.org/abs/2608.18852",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-18T20:00:00Z",
-      "raw_summary": "SkillGate fixes selector credit starvation in agent skill selection by separating outcome credit for execution tokens from local advantage for skill-naming tokens, improving success rates and reducing misleading skill exposure.",
-      "score": 8,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "SkillGate 论文提出解决长程 agent 技能选择中 selector credit starvation 的具体方法，区分 outcome credit 与 local advantage，可读原文看实验与消融。",
-      "queued_at": "2026-08-20T09:18:24Z"
-    },
-    {
       "id": "2803a7fb9e3f5c9e4022eda2547e0b269fa0ff61",
       "title": "Terence Tao says AI could trigger math's biggest crisis since Gödel",
       "url": "https://the-decoder.com/terence-tao-says-ai-could-trigger-maths-biggest-crisis-since-godel",
@@ -441,19 +467,6 @@
       "source_traceable": true,
       "why": "FT报道揭示中国机器人/AI领域的循环融资模式（国资采购中心→数据回售），对理解产业泡沫与真实需求有重要认知增量。",
       "queued_at": "2026-08-20T10:01:27Z"
-    },
-    {
-      "id": "5449cd4b0c26cb17f7137ee3d51967e0dda98c17",
-      "title": "迈威尔科技在芯片合作协议中授予谷歌最高122亿美元的股票购买权",
-      "url": "https://36kr.com/newsflashes/3947701924576387?f=rss",
-      "source": "rss:36kr",
-      "published_at": "2026-08-20T10:17:43Z",
-      "raw_summary": "迈威尔科技科技与谷歌扩大合作关系，协议向谷歌授予最高可收购价值122亿美元公司股份的权利。迈威尔科技在提交给美国SEC的文件中表示，两家企业将围绕张量处理单元（TPU，谷歌自研AI芯片）相关的多款半导体产品开展联合研发，合作范围涵盖存储、网络、内存控制器、推理加速以及近内存计算芯片。（新浪财经）",
-      "score": 8,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "Marvell与谷歌TPU在存储/内存控制器/近内存计算上的联合研发，涉及AI芯片架构关键路径，信息量大",
-      "queued_at": "2026-08-20T10:48:31Z"
     },
     {
       "id": "6b94c91dbae11b0c60b720c840f731d55bebf175",
