@@ -222,6 +222,19 @@
       "queued_at": "2026-08-20T19:00:36Z"
     },
     {
+      "id": "6df3ddb49319efb5d71a3acbb31be35879c24beb",
+      "title": "Sources: Poolside struck a non-exclusive $6B licensing deal with Nvidia, plus a $1B investment at a $12B pre-money valuation; 109 staffers get Nvidia job offers (Newcomer)",
+      "url": "https://www.techmeme.com/260820/p36#a260820p36",
+      "source": "rss:techmeme",
+      "published_at": "2026-08-20T19:36:38Z",
+      "raw_summary": "Newcomer: Sources: Poolside struck a non-exclusive $6B licensing deal with Nvidia, plus a $1B investment at a $12B pre-money valuation; 109 staffers get Nvidia job offers&nbsp; &mdash;&nbsp; EXCLUSIVE TO NEWCOMER: Poolside AI, the artificial intelligence model-building startup, has struck a non-exclusive licensing deal &hellip;",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Poolside 与 Nvidia 6B 授权+1B 投资、12B 估值及 109 人并入 Nvidia，是 foundation model 商业化与算力供应商深度绑定的标志性交易，值得细读。",
+      "queued_at": "2026-08-20T19:46:44Z"
+    },
+    {
       "id": "53c9b820426ca7daf334cdd0e5c7f044e80cd419",
       "title": "SPADE: Self-Play in Adaptive Synthetic Executable Environments [Bo Liu, Simon Yu, Yiding Jiang, Ao Qu, Andrew Zhao]",
       "url": "http://arxiv.org/abs/2608.19197v1",
@@ -505,19 +518,6 @@
       "angle": "industry",
       "source_traceable": false,
       "why": "定制HBM商业模式分析，对AI算力供应链判断有直接参考价值。",
-      "queued_at": "2026-08-20T07:50:42Z"
-    },
-    {
-      "id": "0a67dc3b341d19baa0d063b23c8220c3be09e317",
-      "title": "Three Strategic Imperatives For Energy-Efficient AI Computing",
-      "url": "https://semiengineering.com/three-strategic-imperatives-for-energy-efficient-ai-computing",
-      "source": "rss:semiengineering",
-      "published_at": "2026-08-20T07:01:40Z",
-      "raw_summary": "Reducing energy consumption is key to both lowering inference cost and enabling emerging physical AI applications. The post Three Strategic Imperatives For Energy-Efficient AI Computing appeared first on Semiconductor Engineering.",
-      "score": 7,
-      "angle": "route",
-      "source_traceable": false,
-      "why": "能效AI计算的三大战略要务，涵盖推理成本与物理AI的技术路线思考。",
       "queued_at": "2026-08-20T07:50:42Z"
     }
   ],
