@@ -157,6 +157,19 @@
       "queued_at": "2026-08-20T11:56:26Z"
     },
     {
+      "id": "dc5e76348019566ed903b62b30f6a31f3bd108cd",
+      "title": "Synopsys validates a PCIe 6.0 PHY inside a face-to-face 3D stack at 64 GT/s — says it got there by pulling apart an existing 2D test chip",
+      "url": "https://www.tomshardware.com/tech-industry/semiconductors/synopsys-validates-a-pcie-6-phy-inside-a-face-to-face-3d-stack",
+      "source": "rss:tomshardware",
+      "published_at": "2026-08-20T13:32:00Z",
+      "raw_summary": "Synopsys has published silicon results for what it calls the first 3D PCIe 6.0 test chip, a 5nm PHY built into a face-to-face stacked package.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Synopsys 用 3D 堆叠做出 64 GT/s PCIe 6.0 PHY 硅验证，先进封装与高速 SerDes 交叉的工程里程碑。",
+      "queued_at": "2026-08-20T13:53:05Z"
+    },
+    {
       "id": "53c9b820426ca7daf334cdd0e5c7f044e80cd419",
       "title": "SPADE: Self-Play in Adaptive Synthetic Executable Environments [Bo Liu, Simon Yu, Yiding Jiang, Ao Qu, Andrew Zhao]",
       "url": "http://arxiv.org/abs/2608.19197v1",
@@ -505,19 +518,6 @@
       "angle": "engineering",
       "source_traceable": true,
       "why": "Modular的Mojo语言是AI编译器/异构计算栈的重要动向，值得了解其设计与生态进展",
-      "queued_at": "2026-08-20T10:48:31Z"
-    },
-    {
-      "id": "7721d13d957ced2416e399b8ca9f46308abb0171",
-      "title": "券商8月首次下调三星、SK海力士明年盈利预期",
-      "url": "https://36kr.com/newsflashes/3947716865522823?f=rss",
-      "source": "rss:36kr",
-      "published_at": "2026-08-20T10:37:08Z",
-      "raw_summary": "半导体高景气预期迎来回调8月，三星电子与SK海力士的下一年度盈利预期迎来首次下调。半导体高景气预期迎来回调8月，三星电子与SK海力士的下一年度盈利预期迎来首次下调。两家企业股价已大幅下挫，市场正关注半导体板块近期暴跌是否已经反映出未来盈利增速放缓的预期。同一时期，SK海力士预期从402万亿韩元下降3万亿韩元，至399万亿韩元。（新浪财经）",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "三星/海力士下年盈利预期首次下调，是HBM/存储周期判断的关键信号，值得读",
       "queued_at": "2026-08-20T10:48:31Z"
     }
   ],
