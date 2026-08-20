@@ -389,6 +389,45 @@
       "source_traceable": false,
       "why": "用深度学习建模interposer热膨胀/电迁移的翘曲问题，先进封装方向的具体研究进展。",
       "queued_at": "2026-08-20T07:50:42Z"
+    },
+    {
+      "id": "08de8a36ef127d4c0c3c72c29db1f6960c023606",
+      "title": "拆解Anthropic：押注 coding 的公司很多，为什么它先吃到复利？",
+      "url": "https://www.tmtpost.com/8110602.html",
+      "source": "rss:tmtpost",
+      "published_at": "2026-08-20T09:05:58Z",
+      "raw_summary": "文 | 深流研究所，作者 | 吴绛枫据彭博社最新报道，截至今年7月底，Anthropic年化营收运行率已经突破650亿美元。与2025年底约90亿美元的水平相比，这一数字在7个月内增长超7倍。刚刚结束的二季度，Anthropic初步收入也已超过115亿美元，同比增幅达到14倍，并首次实现营业利润转正。在前沿模型公司普遍依赖巨额融资、持续消耗算力的阶段，这是一条罕见的增长曲线。推动增长的当然有Claude模型本身，但模型能力并不会自动转化为收入。过去几年，Anthropic一面推进前沿模型能力，一面推出Claude Code、MCP、Cowork等带有新品类意味的产品。这家公司常常能在模型跨过能力阈值后，迅速找到释放能力的产品形态，并实现商业化。这很难归因于几次偶然的产品判断。毕竟，押注 Coding 的公司并不少，Anthropic 却率先把前沿模型变成了可用、可验证的产品，并跑出了复利。它是怎么做到的？1、在研究和产品之间，Anthropic设置了一种特殊岗位要理解这些问题，可以先从Anthropic内部一种特殊的岗位说起。Dianne Penn是Anthropic第一位技术产品经理。她在2023年加入Anthropic，公开使用过的职务名称包括Head of Product for AI Research and Labs、Head of Product for Research and Labs，以及 Head of Research Product Management。这些说法虽有差异，却都指向一个特殊的交叉点：一端进入AI Research，跟进模型研究团队的工作；另一端连接产品实验室Labs，用原型探索新能力可能长出什么产品。在传统软件公司，技术地基相对稳定，产品经理可以围绕明确需求规划功能。但在前沿模型公司，这块地基每隔几个月就可能改变。今天做不到的产品，下一代模型可能突然做到了；当下为弥补模型缺陷搭建的复杂流程，半年后也可能成为限制新模型的脚手架。Dianne和团队的核心工作，正是研究和管理这种不确定性：实验室里刚出现的能力，哪些已经接近可用？用户说&ldquo;Claude不好用&rdquo;，缺的是模型、工具、界面，还是工程基础设施？当用户拿Claude完成团队未曾设想的任务时，那是偶然技巧，还是一种新的产品可能？Dianne需要把这些判断带回研究、产品和工程团队。2、如何把用户的一句「不好用」，变成模型的训练目标？2023年7月，Claude 2上线后的一次bug排查，初步展示了这套工作方式如何运转。当时，用户频繁抱怨Claude 2&ldquo;不太会遵循指令&rdquo;。这个反馈看似严重，却无法直接指导模型研究。用户不会区分问题来自预训练、后训练、还是系统提示、或者工具调用。他们只能描述任务没有完成。Dianne和团队开始阅读用户授权分享的失败轨迹，追问任务究竟在哪一步停下。沿着案例向下查，他们发现，在早期这类投诉中，大约80%都指向一个具体得近乎琐碎的问题：Claude无法稳定输出正确的JSON。少一个括号，API就会拒绝请求。字段不符合schema，工具调用便无法解析。对聊天机器人而言，这些只是格式错误；对需要连续调用工具的Agent而言，它意味着工作流会在第一道接口处断掉。团队从真实失败中收集了约30&mdash;40个案例，逐一写清输入、理想输出和通过条件，把它们变成一组可以重复运行的eval。此后，Claude每一代模型都要重新接受测试。按照Dianne在公开采访中的讲述，这组评测如今已达到接近99.9%&",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "拆解 Anthropic 把前沿模型能力转化为商业复利的组织与产品机制，涉及研发-产品岗位设计与商业化路径，对理解 AI 公司护城河有实质参考。",
+      "queued_at": "2026-08-20T09:18:24Z"
+    },
+    {
+      "id": "d28d3152af73153fe61b31d123199e1bdd6b5108",
+      "title": "SkillGate: Training In-Policy Skill Selection in Long-Horizon Agents",
+      "url": "https://arxiv.org/abs/2608.18852",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-18T20:00:00Z",
+      "raw_summary": "SkillGate fixes selector credit starvation in agent skill selection by separating outcome credit for execution tokens from local advantage for skill-naming tokens, improving success rates and reducing misleading skill exposure.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "SkillGate 论文提出解决长程 agent 技能选择中 selector credit starvation 的具体方法，区分 outcome credit 与 local advantage，可读原文看实验与消融。",
+      "queued_at": "2026-08-20T09:18:24Z"
+    },
+    {
+      "id": "2803a7fb9e3f5c9e4022eda2547e0b269fa0ff61",
+      "title": "Terence Tao says AI could trigger math's biggest crisis since Gödel",
+      "url": "https://the-decoder.com/terence-tao-says-ai-could-trigger-maths-biggest-crisis-since-godel",
+      "source": "rss:the-decoder",
+      "published_at": "2026-08-20T08:49:36Z",
+      "raw_summary": "In a new essay, Terence Tao warns that AI could push mathematics into a crisis on par with the foundational upheaval around 1900. What's being tested this time isn't mathematical truth but the values of the field: what counts as a contribution, what gets rewarded, and who did the work. His rule of thumb: a proof that no human can explain should be considered incomplete. The article Terence Tao says AI could trigger math&#039;s biggest crisis since Gödel appeared first on The Decoder.",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "Terence Tao 亲笔撰文阐述 AI 对数学界'何为有效贡献'的范式冲击，属于一手观点且有明确立场，触及 AI 辅助证明的认知边界。",
+      "queued_at": "2026-08-20T09:18:24Z"
     }
   ],
   "digest_last_date": "2026-08-20"
