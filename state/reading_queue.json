@@ -235,6 +235,19 @@
       "queued_at": "2026-08-20T19:46:44Z"
     },
     {
+      "id": "04ac12713d7186201641962f14ff8b2ee7bfe3cc",
+      "title": "Optimizing Qwen3.8-27B on one MI300X with an open-source agent toolkit: 311 to 495 tok/s",
+      "url": "https://www.reddit.com/r/localllama/comments/1vtu21z/optimizing_qwen3827b_on_one_mi300x_with_an",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-20T19:51:58Z",
+      "raw_summary": "Here's an example of using dstack's open-source toolkit for optimizing inference on a single MI300X. Qwen3.8-27B went from 311 to 495 tok/s, +59%, at the full 1M context with p50 TTFT under 1.5s and four concurrent users at 10k in / 1.5k out. The gains came from linked optimization sessions and source-level patches to SGLang's AITER attention backend. What comes out is a portable preset that deploys on any AMD cloud, Kubernetes cluster, or bare-metal fleet. Blog: https://dstack.ai/blog/presets/ &#32; submitted by &#32; /u/cheptsov [link] &#32; [comments]",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "单卡MI300X上Qwen3-27B从311→495 tok/s的具体优化（含p50 TTFT、并发数、SGLang AITER后端源码级patch），是可直接复用的AMD推理工程经验。",
+      "queued_at": "2026-08-20T21:05:12Z"
+    },
+    {
       "id": "53c9b820426ca7daf334cdd0e5c7f044e80cd419",
       "title": "SPADE: Self-Play in Adaptive Synthetic Executable Environments [Bo Liu, Simon Yu, Yiding Jiang, Ao Qu, Andrew Zhao]",
       "url": "http://arxiv.org/abs/2608.19197v1",
@@ -505,19 +518,6 @@
       "angle": "engineering",
       "source_traceable": false,
       "why": "半导体制造中前馈控制挽救良率的工程方法论，有实际工艺控制思路可学。",
-      "queued_at": "2026-08-20T07:50:42Z"
-    },
-    {
-      "id": "30a672d409a14692770fd871a8bd463551570d21",
-      "title": "How Will The Custom HBM Business Work?",
-      "url": "https://semiengineering.com/how-will-the-custom-hbm-business-work",
-      "source": "rss:semiengineering",
-      "published_at": "2026-08-20T07:02:29Z",
-      "raw_summary": "There is no one-size-fits-all — yet. The post How Will The Custom HBM Business Work? appeared first on Semiconductor Engineering.",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": false,
-      "why": "定制HBM商业模式分析，对AI算力供应链判断有直接参考价值。",
       "queued_at": "2026-08-20T07:50:42Z"
     }
   ],
