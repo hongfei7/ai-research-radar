@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-20T10:03:14Z",
-  "text": "截至 2026-08-20 18:03 HKT，阿里FY2027 Q1财报披露：营收2690亿元，阿里云外部商业化收入加速增长45%、创22个季度新高，AI产品收入连续12个季度三位数增长；资本开支676.78亿元（同比+75%），自由现金流净流出446.7亿元，主因云基础设施投入加大。平头哥自研AI芯片真武M890已通过阿里云在超650家外部客户实现商业化部署。",
-  "since": "2026-08-20T10:03:14Z",
-  "active_event_count": 19,
+  "generated_at": "2026-08-20T10:52:45Z",
+  "text": "当前共有 30 个活跃事件。要点包括: 拆解Anthropic：押注 coding 的公司很多，为什么它先吃到复利？; 迈威尔科技在芯片合作协议中授予谷歌最高122亿美元的股票购买权; Sources: China is restricting or delaying exports to Taiwan of germanium- and quartz-based materials used in fiber optics, photonics, and chip manufacturing (Nikkei Asia); 三星晶圆代工技术蓝图调整，1.4纳米延后至2029年量产; 台积电A16工艺完成开发验证，目标Q4量产。",
+  "since": "2026-08-20T10:52:45Z",
+  "active_event_count": 30,
   "key_themes": [
     "ai_monetization",
-    "chip_supply",
-    "model_capability",
     "compute_demand",
+    "model_capability",
+    "chip_supply",
     "domestic_substitution"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
   "cross_analysis": "【核心矛盾】\n本轮条目均聚焦阿里，核心矛盾在于\"AI云收入高增 vs 自由现金流急剧恶化\"的双面信号：阿里云外部收入加速45%创22季度新高、AI收入连续12季度三位数增长；而Q1",
-  "trend_spotting": "【新兴趋势】腾讯Q2 capex大超预期，中信证券明确\"国产算力订单清晰度增强+备货加速\"，景气度正从云厂资本开支向芯片端（寒武纪、海光、中芯）传导，节奏明确。\n\n【早期信号】百度AI收入已连续两季占核心业务过半、capex同步跳升，但估值框架仍按\"搜索+AI\"双重身份定价，结构性重估窗口尚未启动，存在显著的认知时滞。\n\n【市场盲点】全球人形融资累计超110亿美元的叙事下，美方出现明显"
+  "trend_spotting": "72小时内最显著变化：Anthropic Q2营收115亿美元、环比+140%，已超过OpenAI的67亿美元/18%，头部模型公司商业化座次正在重写，而非仅是能力排序。叠加Stripe收购OpenRouter切入token交易，模型分发中间层开始资本化结算。\n\n新兴趋势：定制ASIC供应链绑定深化——Marvell以122亿美元股票购买权换取谷歌TPU多品类联合研发，二阶效应是博通在谷歌ASIC中的份额承压、Marvell估值面临14%稀释但订单可见性增强。在轨算力从概念走向融资，Muon Space 2.5亿美元C轮由Google参投，验证超大规模云厂对太空AI算力的布局意愿。\n\n早期信号：Pine64因存储短缺停产至2027年中，标志DRAM紧张从HBM向消费/边缘设备蔓延，与同期三星、海力士明年盈利下修形成\"高端紧、低端缺\"的分裂信号，需观察是否传导至AI终端硬件成本。Anthrop"
 }

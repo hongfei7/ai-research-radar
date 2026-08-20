@@ -441,6 +441,71 @@
       "source_traceable": true,
       "why": "FT报道揭示中国机器人/AI领域的循环融资模式（国资采购中心→数据回售），对理解产业泡沫与真实需求有重要认知增量。",
       "queued_at": "2026-08-20T10:01:27Z"
+    },
+    {
+      "id": "5449cd4b0c26cb17f7137ee3d51967e0dda98c17",
+      "title": "迈威尔科技在芯片合作协议中授予谷歌最高122亿美元的股票购买权",
+      "url": "https://36kr.com/newsflashes/3947701924576387?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-08-20T10:17:43Z",
+      "raw_summary": "迈威尔科技科技与谷歌扩大合作关系，协议向谷歌授予最高可收购价值122亿美元公司股份的权利。迈威尔科技在提交给美国SEC的文件中表示，两家企业将围绕张量处理单元（TPU，谷歌自研AI芯片）相关的多款半导体产品开展联合研发，合作范围涵盖存储、网络、内存控制器、推理加速以及近内存计算芯片。（新浪财经）",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Marvell与谷歌TPU在存储/内存控制器/近内存计算上的联合研发，涉及AI芯片架构关键路径，信息量大",
+      "queued_at": "2026-08-20T10:48:31Z"
+    },
+    {
+      "id": "6b94c91dbae11b0c60b720c840f731d55bebf175",
+      "title": "modular /modular",
+      "url": "https://github.com/modular/modular",
+      "source": "github_trending",
+      "published_at": "2026-08-20T10:47:51Z",
+      "raw_summary": "GitHub Trending: modular /modular. The Modular Platform (includes MAX & Mojo). Language: Mojo. Star",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Modular的Mojo语言是AI编译器/异构计算栈的重要动向，值得了解其设计与生态进展",
+      "queued_at": "2026-08-20T10:48:31Z"
+    },
+    {
+      "id": "7721d13d957ced2416e399b8ca9f46308abb0171",
+      "title": "券商8月首次下调三星、SK海力士明年盈利预期",
+      "url": "https://36kr.com/newsflashes/3947716865522823?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-08-20T10:37:08Z",
+      "raw_summary": "半导体高景气预期迎来回调8月，三星电子与SK海力士的下一年度盈利预期迎来首次下调。半导体高景气预期迎来回调8月，三星电子与SK海力士的下一年度盈利预期迎来首次下调。两家企业股价已大幅下挫，市场正关注半导体板块近期暴跌是否已经反映出未来盈利增速放缓的预期。同一时期，SK海力士预期从402万亿韩元下降3万亿韩元，至399万亿韩元。（新浪财经）",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "三星/海力士下年盈利预期首次下调，是HBM/存储周期判断的关键信号，值得读",
+      "queued_at": "2026-08-20T10:48:31Z"
+    },
+    {
+      "id": "0252e419771fb2cc52f82622f7f57701827fb59e",
+      "title": "腾讯云发布 AI 数据底座 TDSQL Nexa，多项 AI 数据库能力进入生产环境",
+      "url": "https://www.leiphone.com/category/industrynews/mnvs1yuzapfpfn7n.html",
+      "source": "rss:leiphone",
+      "published_at": "2026-08-20T08:43:00Z",
+      "raw_summary": "数据库这款有着 60 多年历史的基础软件，正在加速面向 Agent 重构。8 月 20 日，在 2026 DTCC 中国数据库技术大会上，腾讯云正式发布面向 AI 时代的数据底座 TDSQL Nexa，通过统一入口连接企业分散的多源数据，并为 Agent 提供业务语义理解和权限治理能力。同期，腾讯云还公布了数据库产品在 AI 方向的最新进展，多项能力已进入腾讯内部 AI 产品、开发者及企业生产环境。腾讯云副总裁王义成表示，Agent 带来的变化，不只是数据库多了一类新用户，数据形态、运行负载、上下文需求和安全边界也随之改变。面向 AI 时代，数据库需要具备多模统一承载、Agent 原生架构、语义与记忆、治理与自治四类核心能力。（图：腾讯云副总裁王义成在现场发布TDSQL Nexa）一个入口，让 Agent 读懂企业数据库企业建设 AI 应用时，数据往往分散在多个技术栈和平台中。一个 Agent 如果需要在多套系统之间查找、调用数据，开发、运维和权限管理都会变得复杂。此次发布的 TDSQL Nexa，将事务处理、全文及向量检索、AI 计算、大规模分析等能力统一到一个数据平台。对于不适合搬迁的数据，也可以直接连接原有数据源参与计算，减少重复存储和数据搬运。在企业落地 Agent 常见的运行记录分析（可观测）场景中，腾讯云测试显示，TDSQL Nexa 相比开源组合方案，计算性能提升 10 倍以上，成本降低 60% 以上。但 Agent 能访问数据，还要真正理解数据。企业中的表名、字段、指标口径以及长期积累的数据使用经验，都包含大量业务语义。Nexa 中的 Nexa Knowledge 可以识别并沉淀这些业务知识，让 Agent 在查询数据时同时获得业务上下文。在几十至上百张表的中等规模应用构建场景中，结合业务语义和专家经验后，Agent 生成的 SQL 基本无需人工修改，业务性能平均提升 50% 以上。企业还可依托TDSQL Nexa为每个 Agent 配置独立的身份与访问范围，系统支持行列级权限和操作审计，对高风险操作可以拦截或转入人工确认。AI 数据库已大规模进入生产环境TDSQL Nexa 之外，腾讯云已打造了面向Agent 的整体数据库布局。从 Agent 自身所需的数据、检索和记忆，到 Agent 应用所需的弹性数据库环境，再到数据库自身的智能运维，腾讯云正在将多模统一、Agent 原生、语义与记忆、治理与自治四类能力串成一套完整体系。其中，TDSQL Nexa 与 TDSQL Boundless 负责统一承载 Agent 所需的数据存储、检索和计算，打造Agent统一的数据平面；TDSQL-C 提供弹性、隔离的数据库环境；Agent Memory 沉淀长期记忆和经验；DatabaseClaw 等则让数据库自身具备智能诊断和自治能力。目前，云原生数据库 TDSQL-C 已接入 WorkBuddy、元宝、混元和美团 NoCode 等模型和AI 应用，稳定服务 50 万开发者，每天处理数十亿次请求。通过数据库 Branch 和 Serverless，Agent 可以秒级创建独立数据库环境、反复测试和回滚，并根据任务负载按需启停资源。在智能体记忆方面，TencentDB Agent Memory 开源 80 天已获得超过2 万 GitHub Stars，受到大量开发者青睐。将其接入 Agent 后，任务成功率可从 60% 提升至 80%，成本下降 66.3%。近期上线的“团队记忆”版本进一步将记忆从单个 Agent 扩展到团队，可沉淀并共享对话、",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "TDSQL Nexa面向Agent重构数据库，给出对比开源方案的1.x倍性能数据，是AI+基础设施的具体工程实践",
+      "queued_at": "2026-08-20T10:48:31Z"
+    },
+    {
+      "id": "6d614431a918a9107739408497a30fc549b113d7",
+      "title": "阿里AI进入分化期：云业务加速兑现，应用业务等待商业模式｜ 看财报",
+      "url": "https://www.tmtpost.com/8110834.html",
+      "source": "rss:tmtpost",
+      "published_at": "2026-08-20T10:43:52Z",
+      "raw_summary": "阿里开始按照AI产业链重新组织资源，把算力、模型和应用放进更清晰的业务框架中。",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "阿里按AI产业链重组业务框架的解读，涉及云/模型/应用的资源配置判断，值得读",
+      "queued_at": "2026-08-20T10:48:31Z"
     }
   ],
   "digest_last_date": "2026-08-20"
