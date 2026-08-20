@@ -168,6 +168,32 @@
       "source_traceable": true,
       "why": "20 年长期管理场景的 LLM 决策评估，发现管理行为而非规模决定性能，结论反直觉且有数据集支撑。",
       "queued_at": "2026-08-20T03:00:27Z"
+    },
+    {
+      "id": "8a063d1976a6bd1055d16b31376ca70bc9c757d9",
+      "title": "SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation",
+      "url": "https://arxiv.org/abs/2608.18701",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-18T20:00:00Z",
+      "raw_summary": "SoftVTBench introduces a synchronized visuo-tactile dataset and deformation-aware benchmark for evaluating physical interaction quality during deformable-object manipulation.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "同步视觉-触觉数据集与形变物体操作基准，对具身智能研究中形变物体操控的评估方法有直接参考价值。",
+      "queued_at": "2026-08-20T03:53:45Z"
+    },
+    {
+      "id": "3e570b24bb1ab4d6e38f446b0a7919ab99b9f82b",
+      "title": "我国牵头制定，全球首个算电协同领域国际标准立项",
+      "url": "https://36kr.com/newsflashes/3947321391316101?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-08-20T03:42:57Z",
+      "raw_summary": "由我国向国际电工委员会提出的《数据中心微电网监控与能量管理系统技术规范》提案近日获批立项。该标准是全球首个聚焦数据中心算电协同领域的国际标准，由我国专家担任项目负责人，联合法国、德国、西班牙等多国专家共同制定。（央视新闻）",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "我国牵头首个算电协同IEC国际标准立项，标志数据中心能源-算力协同进入标准制定阶段，值得了解其框架和参与方。",
+      "queued_at": "2026-08-20T03:53:45Z"
     }
   ],
   "digest_last_date": "2026-08-20"
