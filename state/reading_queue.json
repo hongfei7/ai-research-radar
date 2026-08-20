@@ -170,6 +170,19 @@
       "queued_at": "2026-08-20T13:53:05Z"
     },
     {
+      "id": "7945df167679017c98ee5af3a6bd62b7291b73fe",
+      "title": "Frontier Radar #4: China has caught up, so what's left of the Western AI lead?",
+      "url": "https://the-decoder.com/frontier-radar-4-china-has-caught-up-so-whats-left-of-the-western-ai-lead",
+      "source": "rss:the-decoder",
+      "published_at": "2026-08-20T14:08:14Z",
+      "raw_summary": "Kimi K3 and GLM-5.3 are now within striking distance of the best US models. Western labs blame distillation, and there's real evidence for it. But guilty or not, the conclusion is the same: a model lead can't be defended. This issue looks at what can. The article Frontier Radar #4: China has caught up, so what&#039;s left of the Western AI lead? appeared first on The Decoder.",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": false,
+      "why": "系统讨论中美模型差距收敛、蒸馏争议与西方护城河转移，对路线之争有清晰论点与证据。",
+      "queued_at": "2026-08-20T14:38:44Z"
+    },
+    {
       "id": "53c9b820426ca7daf334cdd0e5c7f044e80cd419",
       "title": "SPADE: Self-Play in Adaptive Synthetic Executable Environments [Bo Liu, Simon Yu, Yiding Jiang, Ao Qu, Andrew Zhao]",
       "url": "http://arxiv.org/abs/2608.19197v1",
@@ -506,19 +519,6 @@
       "source_traceable": true,
       "why": "FT报道揭示中国机器人/AI领域的循环融资模式（国资采购中心→数据回售），对理解产业泡沫与真实需求有重要认知增量。",
       "queued_at": "2026-08-20T10:01:27Z"
-    },
-    {
-      "id": "6b94c91dbae11b0c60b720c840f731d55bebf175",
-      "title": "modular /modular",
-      "url": "https://github.com/modular/modular",
-      "source": "github_trending",
-      "published_at": "2026-08-20T10:47:51Z",
-      "raw_summary": "GitHub Trending: modular /modular. The Modular Platform (includes MAX & Mojo). Language: Mojo. Star",
-      "score": 7,
-      "angle": "engineering",
-      "source_traceable": true,
-      "why": "Modular的Mojo语言是AI编译器/异构计算栈的重要动向，值得了解其设计与生态进展",
-      "queued_at": "2026-08-20T10:48:31Z"
     }
   ],
   "digest_last_date": "2026-08-20"
