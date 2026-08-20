@@ -194,6 +194,19 @@
       "source_traceable": true,
       "why": "我国牵头首个算电协同IEC国际标准立项，标志数据中心能源-算力协同进入标准制定阶段，值得了解其框架和参与方。",
       "queued_at": "2026-08-20T03:53:45Z"
+    },
+    {
+      "id": "134ca2b77fd7fa35fc1ef143923830921b63490a",
+      "title": "Co-RL: Unsupervised Reasoning Emerges from Diverse Cohort in Multi-agent RL",
+      "url": "https://arxiv.org/abs/2608.17253",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-18T20:00:00Z",
+      "raw_summary": "Co-RL enables unsupervised reasoning via cooperative multi-agent reinforcement learning with peer-derived rewards, improving performance across text and vision tasks without ground-truth labels.",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "提出Co-RL多智能体无监督推理框架，无需真值标签即提升文本与视觉任务，值得了解无监督RL的新范式。",
+      "queued_at": "2026-08-20T04:39:40Z"
     }
   ],
   "digest_last_date": "2026-08-20"
