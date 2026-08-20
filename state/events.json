@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-20T15:18:37Z",
+  "updated_at": "2026-08-20T16:01:15Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -37804,9 +37804,9 @@
       "first_seen_at": "2026-08-20T09:19:14Z",
       "first_published_at": "2026-08-20T09:05:58Z",
       "last_updated_at": "2026-08-20T09:19:14Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 9,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "",
       "ticker_counts": {
         "Anthropic": 1
@@ -38968,9 +38968,9 @@
       "first_seen_at": "2026-08-20T15:17:54Z",
       "first_published_at": "2026-08-20T12:48:00Z",
       "last_updated_at": "2026-08-20T15:17:54Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 5,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "1. **看多逻辑**\n   - **团队与资本背书强劲**：核心成员来自地平线、百度、微软、阿里、字节、蔚来等头部企业，三个月内完成近10亿元融资，地平线、高瓴、小米战投等知名机构站台，验证了市场对其技术路径的认可度，也为后续人才招募和算力资源获取提供保障。\n   - **\"脑-手-数据\"闭环路线形成系统性壁垒**：不同于单一硬件或模型路线，章鱼动力将通用世界基础模型（SYNWorld）、高自由度灵巧手（OctoH-Hand）、肌电跨个体零样本数采（OctoSense）三者打通，构建了从感知到执行的数据闭环。其中\"全球首次实现肌电跨个体零样本泛化\"是真实的技术差异化点，可显著降低数据采集成本，对规模化部署意义重大。\n   - **战略卡位契合AI+硬件融合趋势**：作为具身智能核心标的，其发展将带动上游端侧算力（地平线协同）、传感器、灵巧手零部件等环节需求增量，与国产替代、边缘AI等政策导向高度契合。\n\n2. **看空风险**\n   - **商业化路径仍存不确定性**：具身智能当前普遍停留在Demo阶段，从技术展示到规模化收入兑现存在\"死亡谷\"，章鱼动力虽技术完整但未披露明确落地客户和收入数据，过早的高估值可能透支预期。\n   - **赛道竞争白热化，差异化被快速追赶**：国内宇树、智元、银河通用等同样布局\"大脑+本体\"路线，且资金与人才密度不亚于章鱼动力，OctoSense的零样本泛化领先优势能否在6-12个月内保持存在变数。\n   - **灵巧手量产与成本瓶颈**：高自由度仿生灵巧手在量产可靠性、单价（通常>万元）方面仍是行业级难题，硬件成本下降速度将直接决定商业化天花板。\n\n3. **关键驱动因素**\n   - **下游订单与场景落地节奏**：尤其是小米系（智能家居、产线机器人）及车厂（蔚来等）的实质订单或战略合作披露，将成为估值兑现的核心催化。\n   - **SYNWorld模型迭代与开源生态**：若模型能在机器人控制任务基准上取得SOTA并开放接口，有望吸引开发者生态，形成类似大模型赛道的网络效应。",
       "ticker_counts": {
         "阿里巴巴": 1,
@@ -38979,6 +38979,92 @@
         "字节跳动": 1
       },
       "max_item_score": 5
+    },
+    "evt_a848951bb2c9": {
+      "event_id": "evt_a848951bb2c9",
+      "title": "It’s Greg Brockman’s OpenAI now",
+      "summary": "",
+      "tickers": [
+        "OpenAI",
+        "微软",
+        "苹果"
+      ],
+      "themes": [
+        "ai_monetization",
+        "model_capability"
+      ],
+      "direction": {},
+      "item_ids": [
+        "d7ef2975580865aa45752368aa847106bd36b57e"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-20T16:00:24Z",
+      "first_published_at": "2026-08-20T15:45:55Z",
+      "last_updated_at": "2026-08-20T16:00:24Z",
+      "is_active": true,
+      "significance": 8,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "OpenAI": 1,
+        "苹果": 1,
+        "微软": 1
+      },
+      "max_item_score": 8
+    },
+    "evt_e264942ceaf3": {
+      "event_id": "evt_e264942ceaf3",
+      "title": "CXMT planned to use stolen Samsung IP to develop its DRAM, court hears — former Samsung engineer who jumped to Chinese memory maker now behind bars",
+      "summary": "",
+      "tickers": [
+        "三星电子",
+        "美光"
+      ],
+      "themes": [
+        "chip_supply",
+        "domestic_substitution",
+        "policy_export"
+      ],
+      "direction": {},
+      "item_ids": [
+        "d9d1d67b027bd0ec23624b3f244e839ab7a95560"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-20T16:00:24Z",
+      "first_published_at": "2026-08-20T15:37:14Z",
+      "last_updated_at": "2026-08-20T16:00:24Z",
+      "is_active": true,
+      "significance": 8,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "三星电子": 1,
+        "美光": 1
+      },
+      "max_item_score": 8
+    },
+    "evt_409cbd48b9b4": {
+      "event_id": "evt_409cbd48b9b4",
+      "title": "Michigan township combats nuclear weapons data center by passing ban on new electrical infrastructure — 220,000-square-foot hyperscale project is backed by University of Michigan and the Los Alamos National Laboratory",
+      "summary": "",
+      "tickers": [],
+      "themes": [
+        "datacenter_power"
+      ],
+      "direction": {},
+      "item_ids": [
+        "c199e018636a3435ffdbefe07159a8f8bfc097cb"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-20T16:00:24Z",
+      "first_published_at": "2026-08-20T15:37:29Z",
+      "last_updated_at": "2026-08-20T16:00:24Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "看多逻辑：①需求刚性不可逆。AI/国防计算需求结构性增长，密歇根本地禁令难以改变行业大趋势，项目大概率迁址而非取消，对全美数据中心整体建设节奏影响有限。②国家安全属性加持。Los Alamos国家实验室背书意味着项目具有联邦安全战略意义，联邦层面可能通过拨款或优先审批权施压，迫使地方政府妥协，类似案例历史上联邦多次胜诉。③电力供应链受益确定性提升。社区抵制倒逼开发商更依赖离网/自备电源方案，反而加速SMR、燃气轮机、燃料电池等分布式电力方案的部署，对GEV、CWK等电力设备商构成增量需求。\n\n看空风险：①社区抵制浪潮正在扩散。北弗吉尼亚、凤凰城之后，密歇根加入抵制名单，反映\"算力中心\"与\"居民电价/环境权益\"的冲突激化，可能形成跨州示范效应，迫使更多地方议会出台类似禁令，实质性拖延项目交付。②电力审批周期拉长将直接传导至AI芯片部署节奏。电网变压器、变电站审批被卡意味着英伟达/AMD下游客户的集群上线时间推迟，间接影响半导体出货节奏。③地缘安全项目政治敏感度高。涉核武器标签使项目更容易被环保组织和反战团体锁定，增加舆论和诉讼风险，变数放大。\n\n关键驱动因素：①密歇根州层面是否会出台全州性数据中心建设指南或电力基础设施豁免法案；②同类禁令在其他州的扩散速度（尤其德州、俄亥俄等AI数据中心集聚区）。\n\n市场影响评估：短期看，事件本身冲击有限，更多是情绪层面提醒市场注意\"建设摩擦\"风险，相关电力设备及替代能源标的有望获益。中期看，若抵制浪潮形成系统性趋势，将重塑数据中心选址逻辑，利好得州、内布拉斯加等电力富余地区开发商，同时推高单MW建设成本。\n\n时间线推断：未来1-2个月关注密歇根州议会是否介入及开发商是否提起联邦诉讼；3-6个月跟踪项目是否迁址或重新选址；若迁址，从开工到投运至少延迟12-18个月，对2027年的AI算力供给构成边际扰动。",
+      "ticker_counts": {},
+      "max_item_score": 7
     }
   }
 }
