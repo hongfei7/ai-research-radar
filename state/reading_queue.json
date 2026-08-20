@@ -209,6 +209,19 @@
       "queued_at": "2026-08-20T16:46:35Z"
     },
     {
+      "id": "545addf7928b695cf9cc780aeb02631370d02ab3",
+      "title": "The boring way to run Deepseek V4 Flash-0731 130-150 tks - 16x5060ti 16GB over 2 PLX88096 switches",
+      "url": "https://www.reddit.com/r/localllama/comments/1vthcwk/the_boring_way_to_run_deepseek_v4_flash0731",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-20T11:53:54Z",
+      "raw_summary": "Component Validated configuration Motherboard ASRock Rack SPC621D8U-2T/OVH CPU Xeon Gold 6330 (Get gold/platinum if interested in Optane Pmem gimmicks) GPU fabric Two Broadcom/PLX PEX88096 islands, eight GPUs per island GPUs 16 x RTX 5060 Ti 16 GB OS Ubuntu 22.04.5 LTS Kernel 6.8.0-106-generic NVIDIA driver Aikitoria patched open driver 610.43.02-p2p Required BAR1 16,384 MiB on every GPU UEFI boot enabled; CSM disabled. Secure Boot disabled. The locally built EFI application and patched NVIDIA modules are unsigned. Above 4G Decoding enabled. MMIO High Granularity set to 1024G. MMIO High Base set around 56T. SR-IOV disabled on this machine. intel_iommu=off pci=realloc=on,hpmmioprefsize=512G in GRUB; NVreg_EnableResizableBar=1 for the NVIDIA module; Sets size code 14 → 16 GiB BAR1 on each of the 16 GPUs Temporarily disables PCI memory decoding and clears the old BAR1 address so Linux can reallocate it. PLX switch ACS control register: For every PLX/PEX bridge, writes: ECAP_ACS+0x6.w = 0000 After that, a little vibe coding to make custom all-reduce work within each PLX cluster and make DSpark work for pipeline parallel. For tensor parallel 8, pipeline parallel 2: 500k context available. Around 4000 pp up to 500k context, tg 100-150 (Averaging 140 in DeepSeek Harness) For tensor parallel 4, pipeline parallel 4: Full 1M context available. Around 7000 pp up to 500k context, tg 80 Paid 0.6 x RTX6000 Pro for the whole setup. &#32; submitted by &#32; /u/Primary_Exchange21 [link] &#32;",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "详细列出了16x5060Ti通过双PLX88096交换机搭建的硬件拓扑、BIOS/内核/驱动配置与P2P通信细节，是罕见的多卡消费级推理集群工程实录。",
+      "queued_at": "2026-08-20T19:00:36Z"
+    },
+    {
       "id": "53c9b820426ca7daf334cdd0e5c7f044e80cd419",
       "title": "SPADE: Self-Play in Adaptive Synthetic Executable Environments [Bo Liu, Simon Yu, Yiding Jiang, Ao Qu, Andrew Zhao]",
       "url": "http://arxiv.org/abs/2608.19197v1",
@@ -505,19 +518,6 @@
       "angle": "route",
       "source_traceable": false,
       "why": "能效AI计算的三大战略要务，涵盖推理成本与物理AI的技术路线思考。",
-      "queued_at": "2026-08-20T07:50:42Z"
-    },
-    {
-      "id": "6d0ccbc6ae3098cf9a69c58d926511a8fc6f3911",
-      "title": "Managing Thermal Expansion And Electromigration Through Interposer Design",
-      "url": "https://semiengineering.com/managing-thermal-expansion-and-electromigration-through-interposer-design",
-      "source": "rss:semiengineering",
-      "published_at": "2026-08-20T07:01:37Z",
-      "raw_summary": "New deep learning models may provide a pathway for modeling warpage. The post Managing Thermal Expansion And Electromigration Through Interposer Design appeared first on Semiconductor Engineering.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": false,
-      "why": "用深度学习建模interposer热膨胀/电迁移的翘曲问题，先进封装方向的具体研究进展。",
       "queued_at": "2026-08-20T07:50:42Z"
     }
   ],
