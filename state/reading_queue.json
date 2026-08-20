@@ -196,6 +196,19 @@
       "queued_at": "2026-08-20T15:59:53Z"
     },
     {
+      "id": "ed976920bb9831e6f4445c801b56921046c574ca",
+      "title": "Broadening access to Skala creates a faster path to predictive DFT",
+      "url": "https://www.microsoft.com/en-us/research/blog/broadening-access-to-skala-creates-a-faster-path-to-predictive-dft",
+      "source": "rss:msft-research",
+      "published_at": "2026-08-20T16:00:00Z",
+      "raw_summary": "Skala 1.1, the updated deep-learning exchange-correlation functional from Microsoft Research, provides greater accuracy, expanded accessibility across the computational chemistry ecosystem, and a living benchmark to track computational performance. The post Broadening access to Skala creates a faster path to predictive DFT appeared first on Microsoft Research.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Microsoft Research 深度学习交换关联泛函 Skala 1.1 更新，对 DFT 精度与基准有明确说明。",
+      "queued_at": "2026-08-20T16:46:35Z"
+    },
+    {
       "id": "53c9b820426ca7daf334cdd0e5c7f044e80cd419",
       "title": "SPADE: Self-Play in Adaptive Synthetic Executable Environments [Bo Liu, Simon Yu, Yiding Jiang, Ao Qu, Andrew Zhao]",
       "url": "http://arxiv.org/abs/2608.19197v1",
@@ -506,19 +519,6 @@
       "source_traceable": false,
       "why": "用深度学习建模interposer热膨胀/电迁移的翘曲问题，先进封装方向的具体研究进展。",
       "queued_at": "2026-08-20T07:50:42Z"
-    },
-    {
-      "id": "2803a7fb9e3f5c9e4022eda2547e0b269fa0ff61",
-      "title": "Terence Tao says AI could trigger math's biggest crisis since Gödel",
-      "url": "https://the-decoder.com/terence-tao-says-ai-could-trigger-maths-biggest-crisis-since-godel",
-      "source": "rss:the-decoder",
-      "published_at": "2026-08-20T08:49:36Z",
-      "raw_summary": "In a new essay, Terence Tao warns that AI could push mathematics into a crisis on par with the foundational upheaval around 1900. What's being tested this time isn't mathematical truth but the values of the field: what counts as a contribution, what gets rewarded, and who did the work. His rule of thumb: a proof that no human can explain should be considered incomplete. The article Terence Tao says AI could trigger math&#039;s biggest crisis since Gödel appeared first on The Decoder.",
-      "score": 7,
-      "angle": "route",
-      "source_traceable": true,
-      "why": "Terence Tao 亲笔撰文阐述 AI 对数学界'何为有效贡献'的范式冲击，属于一手观点且有明确立场，触及 AI 辅助证明的认知边界。",
-      "queued_at": "2026-08-20T09:18:24Z"
     }
   ],
   "digest_last_date": "2026-08-20"
