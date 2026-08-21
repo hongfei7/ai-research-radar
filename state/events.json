@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-21T16:01:09Z",
+  "updated_at": "2026-08-21T16:45:59Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -41445,9 +41445,9 @@
       "first_seen_at": "2026-08-21T10:14:01Z",
       "first_published_at": "2026-08-21T10:00:00Z",
       "last_updated_at": "2026-08-21T10:14:01Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 6,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "",
       "ticker_counts": {
         "美光": 1,

@@ -248,6 +248,19 @@
       "queued_at": "2026-08-21T15:59:40Z"
     },
     {
+      "id": "d480d08e956f7d3721b1aeb07d455210014dbbd9",
+      "title": "Does telling an LLM to \"be concise\" actually save you money? We measured it across 9 models. Compressing the output can save you money and keep accuracy, compressing the input prompt does not. [R]",
+      "url": "https://www.reddit.com/r/machinelearning/comments/1vulfei/does_telling_an_llm_to_be_concise_actually_save",
+      "source": "reddit:ml",
+      "published_at": "2026-08-21T16:38:15Z",
+      "raw_summary": "LLMs are too verbose and with a black box model the only things you control are what goes in and how you tell it to write back. Yesterday Claude Code shipped a &quot;concise output style&quot; where Claude keeps things short. We already have a paper out about this! We tested both channels, shortening the input prompt versus telling the model to output answer shorter, on the same questions across five reduction levels, and scored cost, accuracy, and whether the shortened text still matched what the model would have said unconstrained. We also evaluated GPT-4o, GPT-5.4, Claude Haiku 4.5, Claude Sonnet 4.6, Qwen2.5-VL-7B, Qwen3.5-9B, DeepSeek-R1-Distill, Gemma-4-E4B, and Kimi-K2.6 + benchmarked on five short answer datasets + a ten-language output run (German, Spanish, French, Swahili, Chinese, Japanese, Russian, Bengali, Thai, Telugu) + a longer-form summarization test. (1) Shortening the output saved money while keeping accuracy about the same, about 1.5x cheaper on average and up to 3x in the best case across the API models. It worked across languages too! (2) Shortening the input prompt did the opposite. It cost up to 96% more on the worst benchmark, because the model just answers longer to fill in for what you cut and accuracy drops. You pay more and get worse answers :( (3)Output tokens cost more than input tokens, so prompting for fewer output tokens would save costs with short single turn tasks (4) When the shortened output is correct, about half the time the text no lon",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "对 9 个模型实测 prompt/output 压缩对成本与准确率的影响，给出可复现实验数据，能直接指导 API 使用策略。",
+      "queued_at": "2026-08-21T16:45:52Z"
+    },
+    {
       "id": "682d6f8ae32ce451461c9d877ec301776fe01265",
       "title": "Inducing Task Models from Computer-Use Traces [Yucheng Jiang, Zora Zhiruo Wang, Ruishi Chen, Diyi Yang]",
       "url": "http://arxiv.org/abs/2608.20319v1",
@@ -506,19 +519,6 @@
       "source_traceable": false,
       "why": "给出宇树上市后可盯的六个可验证数据信号，方法论上对具身公司估值与跟踪框架有借鉴价值。",
       "queued_at": "2026-08-21T04:41:08Z"
-    },
-    {
-      "id": "4eb81744559e043ba37e7237b511a887c225a27a",
-      "title": "星海图高继扬：具身智能的终极商业模式，是售卖「物理世界 Token」 | WRC 2026",
-      "url": "https://www.leiphone.com/category/private/89qh7jtntlu3rknk.html",
-      "source": "rss:leiphone",
-      "published_at": "2026-08-21T03:07:00Z",
-      "raw_summary": "经典的“吉列刀架与刀片”模式，正在具身智能领域上演？&nbsp; &nbsp; 编辑丨岑峰&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;过去两年，具身智能行业掀起了一场激烈的“硬件军备竞赛”：能后空翻的人形机器人、刷新奔跑速度纪录的机械腿，以及在精密设定下倒水、叠衣服的机械臂层出不穷。但在这些炫酷的展示背后，一个极其现实的问题摆在了所有从业者面前：具身智能到底该怎么赚钱？目前，行业的主流玩法依然是“卖机器”：将昂贵的硬件本体搭配针对特定场景写死的工作流软件卖给 B 端客户。但硬件制造天然受制于供应链和规模效应，毛利率在残酷的价格战下不可避免地会走向极度微薄。如果具身智能真的是继智能手机之后的下一代计算平台，它的商业终局，绝不可能仅仅是一家“硬件设备制造商”。在正在进行的 2026 世界机器人大会（WRC）上，星海图联合创始人高继扬，指出，具身智能的商业模式最终将彻底颠覆，走向以“物理世界 Token”的销售为主体。高继扬认为，在未来的终局里，机器人硬件（整机）甚至可能沦为“负毛利”的载体，其唯一目的就是把更多的终端铺到真实世界中去。而产业真正的价值核心，将100%向“具身大脑”迁移。就像今天的 OpenAI 按大语言模型吐出的“文本 Token”向开发者收费一样，未来的具身智能巨头，将按照机器人在物理世界中执行的每一个有效动作、完成的每一次任务，即“物理世界 Token”，来攫取难以估量的商业红利。当然，要支撑起如此庞大的“Token 经济”，底层大脑必须跨越一道天堑。作为一家坚定的“具身大脑”公司，星海图在底层模型上给出了自己的解法：用统一自回归架构打通零样本泛化、通用抓取和长程任务。在演讲中，高继扬不仅分享了上述领域的底层突破，还对“泛化性”这一学术词汇给出了极其精准、通俗易懂的商业化转译：“泛化性本质上就是培训成本”。这种从实验室走向商业逻辑的独特认知，正是我们强力推荐这篇演讲的原因。以下是高继扬在 WRC 2026 上的演讲实录，雷峰网在不改变原意的前提下进行了精编与整理：01商业模式的演进：从卖整机，到卖“物理世界 Token”随着机器人的智能通用性不断取得进展——从单一场景有用，跨越到多场景跨任务有用，具身智能产业的核心商业模式将会发生一次根本性的变化：最终将演变为以“物理世界 Token 销售”为主体的模式。在这个整体进程中，我们看到具身智能包含两方面：一方面是整机（硬件），另一方面是智能（大脑）。整体的价值量会从整机逐渐向智能迁移。去年和今年，我们看到行业里（包括我们自己）销售整机产品，毛利率大概在 40% 到 60%。我们相信，到了第二阶段，也就是“方案订阅”阶段，整机的毛利率可能会降到 20% 左右。而到了真正“Token 销售”的第三阶段，整机甚至有可能变成",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": false,
-      "why": "星海图提出具身智能'物理世界Token'商业模式，挑战主流卖硬件逻辑，具商业框架价值。",
-      "queued_at": "2026-08-21T05:17:15Z"
     }
   ],
   "digest_last_date": "2026-08-21"
