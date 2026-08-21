@@ -261,6 +261,19 @@
       "queued_at": "2026-08-21T16:45:52Z"
     },
     {
+      "id": "4de984640daf70c0194e4f761f9704fdef4f249d",
+      "title": "I benchmarked Ox Alpha on SWE-bench Verified Mini (50 tasks): 96% resolved. Now I’m skeptical of myself.",
+      "url": "https://www.reddit.com/r/localllama/comments/1vuke8o/i_benchmarked_ox_alpha_on_swebench_verified_mini",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-21T16:00:19Z",
+      "raw_summary": "TL;DR: The result looks TOO GOOD TO BE TRUE — that's exactly why I'm posting it. I ran Ox alpha on the entire SWE-bench Verified-Mini set with the official mini-swe-agent scaffold — the same agent used for the swebench.com Bash-Only leaderboard. Result: 48/50 = 96% resolved, judged locally with the official SWE-bench Docker harness. For scale: Claude Fable 5 scores 95% with Anthropic's own tuned agent scaffold, and under my identical bash-only scaffold the best models score ~77% on the full 500-task set. A free-tier model landing above Fable 5 should trigger your BS detector — it triggered mine. Read the caveats below; there are good reasons my number may be inflated. —— SETUP —— • Model: Ox alpha, served through opencode's Go gateway • Scaffold: mini-swe-agent v2.4.6 (Bash-Only official leaderboard scaffold) • Prompt/config: Official swebench.yaml tool-call template, unchanged except pointing at the model; step limit 250 • Dataset: swe-bench-verified-mini — the well-known 50-task subset of SWE-bench Verified https://huggingface.co/datasets/MariusHobbhahn/swe-bench-verified-mini https://huggingface.co/datasets/princeton-nlp/SWE-bench\\_Verified • Judging: Official swebench harness run locally; resolved only if ALL FAIL_TO_PASS and PASS_TO_PASS tests pass • Hardware: One Windows 11 box, Docker Desktop (WSL2), one container per instance —— RESULTS —— • Resolved: 48 / 50 = 96.0% • Failures: django__django-11790, django__django-11815 • Empty patches / errors: 0 / 0 (all 50 submitt",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Ox Alpha在SWE-bench Verified Mini达96%的独立复现报告，含完整评测设置与对照，稀缺的一手基准数据。",
+      "queued_at": "2026-08-21T17:31:42Z"
+    },
+    {
       "id": "682d6f8ae32ce451461c9d877ec301776fe01265",
       "title": "Inducing Task Models from Computer-Use Traces [Yucheng Jiang, Zora Zhiruo Wang, Ruishi Chen, Diyi Yang]",
       "url": "http://arxiv.org/abs/2608.20319v1",
@@ -505,19 +518,6 @@
       "angle": "industry",
       "source_traceable": false,
       "why": "WRC2026现场观察，指出具身行业从拼参数转向拼闭环与真实场景收入，含49家央企采购等一手产业信号。",
-      "queued_at": "2026-08-21T04:41:08Z"
-    },
-    {
-      "id": "c1448318bd9f516c5c591cd951aae821380096ab",
-      "title": "宇树4400亿市值狂欢之后，六个需要验证的信号",
-      "url": "https://www.tmtpost.com/8111159.html",
-      "source": "rss:tmtpost",
-      "published_at": "2026-08-21T04:12:57Z",
-      "raw_summary": "要判断宇树科技未来三年的走向，需要盯住六个可以核对的数据信号，这些信号中的每一个都足以让估值逻辑发生变化。",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": false,
-      "why": "给出宇树上市后可盯的六个可验证数据信号，方法论上对具身公司估值与跟踪框架有借鉴价值。",
       "queued_at": "2026-08-21T04:41:08Z"
     }
   ],
