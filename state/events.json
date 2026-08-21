@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-21T19:59:44Z",
+  "updated_at": "2026-08-21T20:35:26Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -42426,6 +42426,40 @@
         "英伟达": 1
       },
       "max_item_score": 6
+    },
+    "evt_74628a99e91f": {
+      "event_id": "evt_74628a99e91f",
+      "title": "Anthropic hires Amir Salek, who ran Google's TPU business until 2022, to join its compute team as part of a push to develop its own chips (Dina Bass/Bloomberg)",
+      "summary": "Anthropic聘请前Google TPU业务负责人Amir Salek加入其计算团队，标志其正式布局自研AI芯片。Salek曾主导Google定制芯片项目至2022年，拥有从零搭建TPU生态的完整经验。此次招聘意味着Anthropic正从纯软件模型公司向垂直整合的算力供应商演进，呼应了行业头部玩家自研芯片以降低对英伟达依赖的趋势。",
+      "tickers": [
+        "Anthropic",
+        "谷歌"
+      ],
+      "themes": [
+        "chip_supply",
+        "compute_demand",
+        "model_capability"
+      ],
+      "direction": {
+        "Anthropic": "positive",
+        "谷歌": "neutral"
+      },
+      "item_ids": [
+        "721e08fd73e0ee7f4008f2800bb39e4a0b9da5f0"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-21T20:35:05Z",
+      "first_published_at": "2026-08-21T20:25:01Z",
+      "last_updated_at": "2026-08-21T20:35:05Z",
+      "is_active": true,
+      "significance": 8,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "谷歌": 1,
+        "Anthropic": 1
+      },
+      "max_item_score": 8
     }
   }
 }
