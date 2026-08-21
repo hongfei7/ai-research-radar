@@ -287,6 +287,19 @@
       "queued_at": "2026-08-21T20:34:22Z"
     },
     {
+      "id": "2ee04a5f7ed57d2d5ab584010bb32d1897100760",
+      "title": "Strix Halo (8060S / gfx1151), Qwen-3.8-27B @ Q8 and Q6 UD v3, up to 256K ctx, llama.cpp, DFlash2, vision, real workloads quality and steady performances, optimized recipes, ...",
+      "url": "https://www.reddit.com/r/localllama/comments/1vuqwd8/strix_halo_8060s_gfx1151_qwen3827b_q8_and_q6_ud",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-21T19:58:02Z",
+      "raw_summary": "Hi fellows fully-local halos, after manually following existing guides, I decided to build an LLM API endpoint installation and optimization guide that works even when autonomously followed by my pi agent, so I can install/experiment/reinstall easily and without babysitting. Q8 is my default citizen, options for Q6 and Q5. Recipes: Quality (Q8), Balanced (Q6), Speed (Q5), Vision (Q8). All with Unsloth Dynamic Quants 3.0, DFlash2 (except vision). Scripts for download the right LLMs, interactive testing, systemd `--user` install, adaptive quality and performances optimization. Repo: https://github.com/PieBru/Qwen-3.8-27B_Strix-Halo_gfx1151 Humans architected, verified, sealed. AI assistants built and wrote all the delivered stuff, built with pi and Qwen-3.8-27B. Piero P.S.: constructive proposals and PR are welcome. P.P.S.: no speed races, please. IMO speed is useful, but quality is fundamental - one subtle bug fewer or a better codebase always pays for itself in wall-time gained. &#32; submitted by &#32; /u/PieBru [link] &#32; [comments]",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Strix Halo 上 27B 模型的端到端部署、量化档位（Q8/Q6/Q5）、DFlash2 与 vision 路径选择，并附可复现脚本与 systemd 配置，属于高质量工程复现指南。",
+      "queued_at": "2026-08-21T21:39:59Z"
+    },
+    {
       "id": "682d6f8ae32ce451461c9d877ec301776fe01265",
       "title": "Inducing Task Models from Computer-Use Traces [Yucheng Jiang, Zora Zhiruo Wang, Ruishi Chen, Diyi Yang]",
       "url": "http://arxiv.org/abs/2608.20319v1",
@@ -505,19 +518,6 @@
       "angle": "engineering",
       "source_traceable": true,
       "why": "DeepSeek Harness把Claude Code/Codex收编为子代理的架构解读，有具体技术细节和工程意义。",
-      "queued_at": "2026-08-21T03:53:12Z"
-    },
-    {
-      "id": "75fb853962c32920054f11630f476d0bbfe348cc",
-      "title": "Repo0: Design-Driven Zero-to-All Code Generation",
-      "url": "https://arxiv.org/abs/2608.19854",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-19T20:00:00Z",
-      "raw_summary": "Repo0 uses a dual-graph architectural state and modularity-guided structural evolution to generate complete software repositories from natural-language requirements with high functionality coverage.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "Repo0提出双图架构状态和模块化引导结构演化从自然语言生成完整代码仓库，是可追溯的一手研究。",
       "queued_at": "2026-08-21T03:53:12Z"
     }
   ],
