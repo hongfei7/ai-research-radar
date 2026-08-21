@@ -233,6 +233,58 @@
       "source_traceable": true,
       "why": "把嵌套SMC引入离散扩散语言模型的推理时控制，指出并修正了前人在Feynman-Kac steering中的错误，是有方法论增量的工作。",
       "queued_at": "2026-08-21T02:47:42Z"
+    },
+    {
+      "id": "1fd99b105cbf0c357c4dfec3ca9b295c78c21004",
+      "title": "I pushed Qwen3.8-27B to 381 tps for a single request on a RTX 3090",
+      "url": "https://www.reddit.com/r/localllama/comments/1vtup5s/i_pushed_qwen3827b_to_381_tps_for_a_single",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-20T20:15:04Z",
+      "raw_summary": "Four days ago I released a hyper-optimized Qwen3.8-27B inference engine for an RTX 3090 (82 tps single request, 672 peak). Since then it went to ~114, then ~138 tps single-user with DFlash2 drafting and lookup-augmented drafting. Today it's ~133 tps on real chat prompts, 382 tps when the model reproduces its own context, and the number I care about most this time: a document-quoting workload now runs at 15 of 16 tokens accepted per verify step. What we had: - fp8 KV cache, lm_head + embed_tokens int8, fp16 recurrent state, int8 activations, DFlash2 block drafting (W4A16-requantized), lookup-augmented drafting, prefix caching for the hybrid, split-KV verify attention, sampler patch, KVarN for 262k context Now added: - Longer verify blocks. DFlash2 only drafts 7 tokens and I'd assumed the verify block had to match. It doesnt. The lookup drafter fills the extra slots from the request's own context for free. DFLASH_TOKENS=15 verifies 16 tokens per step: 260 to 382 tps reproducing a 25k-token document, +9% on ordinary chat. Costs half the request slots and 8k of context, so it's opt-in. - DFlash2 past 64k. bf16 KV is 64 KB/token and teh pinned pool is 5.2 GiB, which is what capped it. An int8 cache roughly doubles it, 138,696 tokens instead of 69,758. Two fixes were needed: vLLM equalises KV page sizes by an integer block ratio, and the drafter's 5 sliding-window layers were wasting 5.2 GiB at 1.88% utilisation until I rounded their block size from 16 to 864. - Honest result: +53%",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Qwen3.8-27B在RTX 3090上的深度推理优化（fp8 KV cache、DFlash2 drafting等），含具体tps数据和量化细节，工程价值高。",
+      "queued_at": "2026-08-21T03:53:12Z"
+    },
+    {
+      "id": "3e1fa00cf38e7dec479302c2addab3cc303d82d9",
+      "title": "“AI4S”进入深水区，国产算力如何满足需求？丨ToB产业观察",
+      "url": "https://www.tmtpost.com/8111478.html",
+      "source": "rss:tmtpost",
+      "published_at": "2026-08-21T03:10:04Z",
+      "raw_summary": "如果说稳定性和实时性是海洋计算的第一道坎，那AI的加入则把问题的复杂度拉升到了另一个维度。",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": false,
+      "why": "讨论AI4S深水区下国产算力的供需矛盾，触及算力国产化路线与科学计算场景的真实瓶颈。",
+      "queued_at": "2026-08-21T03:53:12Z"
+    },
+    {
+      "id": "5c12a78be81a46c6cb6379dfcf36e27f86a3085f",
+      "title": "DeepSeek Harness一周三更：把Claude Code和Codex收编成子代理，要当Ag",
+      "url": "https://www.tmtpost.com/8111019.html",
+      "source": "rss:tmtpost",
+      "published_at": "2026-08-21T02:41:46Z",
+      "raw_summary": "&nbsp;文 | AI唱反调DeepSeek又双叒更新了，这次的主角不是模型。8月19日深夜，DeepSeek Harness放出v0.1.0-rc.8&mdash;&mdash;距离RC.7才过去两天。这个8月13日刚开源的Agent工作台，首日GitHub Star破3万、登顶Hacker News，创下了史上最快破2万Star的纪录新版本最有嚼头的不是多模态，而是这个：Claude Code和Codex，现在可以作为子代理被装进DeepSeek的Harness里调度了。竞对的产品，变成自己的零件。这事值得展开讲。DeepSeek Harness发布RC.8：原生看图、Claude Code与Codex变子代理、web_search并发查询。开源一周，这个\"一切皆插件\"的Agent运行时，正在卡位Agent时代的调度层。Harness是个什么物种先给没跟上的读者补个背景。Harness直译是\"挽具\"&mdash;&mdash;套在模型外面的那层工程外壳，负责读文件、调工具、管上下文、执行命令。DeepSeek官方的公式写得很直白：Model + Harness = Agent。模型负责思考，Harness负责模型之外的所有工程化工作：任务拆解、工具调用、记忆管理、错误重试、结果闭环。8月13日深夜，DeepSeek两小时三连击：V4 Pro正式版转正、API涨价预告，然后就是Harness v0.1开发者预览版，MIT协议开源。架构上最狠的一刀是\"一切皆插件\"：模型、工具、技能、会话、沙箱、存储、调度、UI，甚至Agent主循环本身，全部是插件，全部可替换。底层是Cordis微内核&mdash;&mdash;DeepSeek把这份源码整个拷进自己仓库，改了18处。启动清单只有129行，里面Agent主循环和计时器插件的格式一模一样，没有任何零件是焊死的。还有个细节值得记下：这个项目从6月10日第一条提交到8月13日公开，64天里干了12293次提交，附带683篇设计笔记，连被否决的11条方案都摊在仓库里。RC.8更了什么这次更新一共14项，拆开看四条主线。第一条，原生看图。DeepSeek模型适配器可以直接开启原生图片请求，/goal、/plan等核心命令支持图文混合输入，@菜单新增文件和历史会话引用。以前把界面问题交给Agent，得先把截图里的按钮、报错、布局关系转述成文字；现在截图直接丢进去。更有意思的是社区扒出来的兜底方案：面对不支持图像输入的模型，Harness会调用OCR、颜色统计、像素扫描等工具，把图片拆成结构化信息再喂给文本模型&mdash;&mdash;相当于用工具编排，给纯文本模型拼出一套\"土法视觉\"。第二条，子代理收编。 Claude Code和Codex可以作为Profile Bundle按需安装，在Harness的工作流里当具体任务的执行者。Codex还支持非交互权限模式和多个命名实例&mdash;&mdash;一个任务里可以同时挂好几个Codex干不同的活。配套的reportDelivery机制会及时回传结果并唤醒等待中的父任务，多Agent协作不用干等。这条线其实RC.7就埋了：8月17日那版，先把Codex和Claude Code的子代理任务接进了Job Panel统一管理；RC.8再进一步，把两家做成了即装即用的插件包。第三条，工具链提速。 web_search支持并发查询，多问题并行发起；Windows PTY终端加入持久PowerShell会话，极简模式默认开启；大历史会话分叉的性能和SQLite后端读写",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "DeepSeek Harness把Claude Code/Codex收编为子代理的架构解读，有具体技术细节和工程意义。",
+      "queued_at": "2026-08-21T03:53:12Z"
+    },
+    {
+      "id": "75fb853962c32920054f11630f476d0bbfe348cc",
+      "title": "Repo0: Design-Driven Zero-to-All Code Generation",
+      "url": "https://arxiv.org/abs/2608.19854",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-19T20:00:00Z",
+      "raw_summary": "Repo0 uses a dual-graph architectural state and modularity-guided structural evolution to generate complete software repositories from natural-language requirements with high functionality coverage.",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Repo0提出双图架构状态和模块化引导结构演化从自然语言生成完整代码仓库，是可追溯的一手研究。",
+      "queued_at": "2026-08-21T03:53:12Z"
     }
   ],
   "digest_last_date": "2026-08-21"
