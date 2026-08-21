@@ -183,6 +183,19 @@
       "queued_at": "2026-08-21T11:55:54Z"
     },
     {
+      "id": "b942cb3c75523a30f93fa8a067576cb3b33a147b",
+      "title": "I fingerprinted Ox Alpha: same tokenizer as GLM-5.3 (+75 token offset), z.ai's exact error strings, near-identical temp-0 outputs",
+      "url": "https://www.reddit.com/r/singularity/comments/1vufbx1/i_fingerprinted_ox_alpha_same_tokenizer_as_glm53",
+      "source": "reddit:singularity",
+      "published_at": "2026-08-21T12:43:54Z",
+      "raw_summary": "Ran three black-box fingerprint tests on stealth/ox-alpha (OpenRouter + OpenCode) vs public GLM-5.3 on z.ai. 1. Tokenizer: I sent 6 texts (EN/DE/CN/code/emoji) and compared prompt_tokens. Ox Alpha = GLM-5.3 exactly +75 on every text. Same tokenizer, constant 75-token hidden system prompt. Kimi/Qwen/MiMo/MiniMax all diverge. Counts identical on both Ox routes. 2. Error strings: Invalid reasoning_effort on Ox Alpha (OpenCode passes params through) returns: &quot;[1210] This model always engages in thinking and cannot be disabled; please use low, high, or max&quot;, so the same as the GLM 5.3 error message 3. Temp-0 outputs: Greedy, same prompts → same markdown quirks, same German-decimal LaTeX (`0{,}375`), near word-for-word matches on factual answers. Qwen/MiMo/Kimi format these completely differently. Conclusion: I'm quite sure than Ox Alpha is a GLM model. Not sure if it's a vision variant of GLM 5.3 (GLM 5.3V) or a completely new version like GLM 5.5 but I guess it's unlikely that Z.AI drops 5.5 so early but idk. What are your thoughts? &#32; submitted by &#32; /u/FlunkyGraphics [link] &#32; [comments]",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "通过tokenizer偏移、错误字符串等黑盒指纹法识别Ox Alpha实为GLM-5.3伪装，方法论可复用。",
+      "queued_at": "2026-08-21T13:48:57Z"
+    },
+    {
       "id": "682d6f8ae32ce451461c9d877ec301776fe01265",
       "title": "Inducing Task Models from Computer-Use Traces [Yucheng Jiang, Zora Zhiruo Wang, Ruishi Chen, Diyi Yang]",
       "url": "http://arxiv.org/abs/2608.20319v1",
@@ -505,19 +518,6 @@
       "angle": "industry",
       "source_traceable": false,
       "why": "韩国半导体设备订单积压翻倍，是判断存储扩产周期与设备景气度的关键一手数据。",
-      "queued_at": "2026-08-21T07:01:09Z"
-    },
-    {
-      "id": "777281f2f8c3ffe725b92d5df445d4f7149a8915",
-      "title": "科学家只管提问题，AI负责跑实验：深势科技把科研全流程搬进一个桌面",
-      "url": "https://www.qbitai.com/2026/08/476520.html",
-      "source": "rss:qbitai",
-      "published_at": "2026-08-21T05:33:52Z",
-      "raw_summary": "",
-      "score": 7,
-      "angle": "engineering",
-      "source_traceable": false,
-      "why": "深势科技把AI科研流程桌面化，涉及AI for Science工程范式与Agent化实验的具体实践。",
       "queued_at": "2026-08-21T07:01:09Z"
     }
   ],

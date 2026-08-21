@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-21T12:57:59Z",
+  "updated_at": "2026-08-21T13:51:06Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -40569,9 +40569,9 @@
       "first_seen_at": "2026-08-21T07:02:18Z",
       "first_published_at": "2026-08-21T06:19:02Z",
       "last_updated_at": "2026-08-21T07:02:18Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 8,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "【看多逻辑】\n\n**论点一：订单积压是最硬的领先指标，转化确定性高。** 设备订单通常伴随预付款或不可撤销采购承诺，积压量翻倍意味着未来6-12个月收入已基本锁定。从\"接单→交付→验收确认\"链条看，韩国设备商从今年下半年起将进入收入兑现期，业绩弹性显著高于市场线性预期。\n\n**论点二：AI算力需求驱动存储芯片结构性扩产，与上一轮存储周期性质不同。** 三星与海力士的capex重心明显偏向HBM与先进封装，对应的是AI加速器供不应求的结构性缺口，而非传统DRAM/NAND的周期补库。这意味着设备订单的可持续性强于历史周期顶部，设备厂商的盈利能见度可达2027年。\n\n**论点三：本土供应链受益于产能扩张红利。** 韩国内设备厂商（如LEAM、AP Tech、KC Tech、Hanmi Semiconductor等）在先进封装、临时键合、测试设备等细分领域具有不可替代性，订单翻倍叠加国产化政策驱动，估值具备重估空间。\n\n---\n\n【看空风险】\n\n**风险一：积压订单≠已签订单，存在延迟与取消风险。** 历史上存储下行周期中，设备订单推迟交付甚至砍单屡见不鲜，且本条信息来源标注credibility为medium，属预测值非公告数据。\n\n**风险二：存储芯片终端需求转弱将传导至上游。** 2025-2026年HPC客户库存调整、Enterprise SSD价格松动、消费电子复苏不及预期等因素，均可能迫使三星/海力士下修capex指引，订单转化节奏延后。\n\n**风险三：地缘政治与出口管制外溢风险。** 韩国设备商虽不直接受美方先进制程限制，但若中美科技摩擦升级波及DUV/EUV零部件供应、或三星在华工厂扩建受阻，订单结构可能生变。\n\n---\n\n【关键驱动因素】\n\n**变量一：HBM4量产时点与三星市场份额。** 三星若在HBM4上实现对海力士的反超（当前HBM3E已量产），将驱动新一轮设备追加订单；反之则资本开支节奏可能放缓。\n\n**变量",
       "ticker_counts": {
         "海力士": 1,
@@ -40606,9 +40606,9 @@
       "first_seen_at": "2026-08-21T07:02:18Z",
       "first_published_at": "2026-08-21T06:12:45Z",
       "last_updated_at": "2026-08-21T07:02:18Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 7,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "1. 看多逻辑：①内容平台型玩家拥有独特的\"用户行为+内容语料\"数据资产，小红书以开源策略切入大模型底座，差异化路径明确——VibeSearchBench与VibeLifeBench直指搜索与生活服务Agent场景，指向清晰的AI变现路径（搜索增强、推荐提效、本地生活转化），对字节、腾讯、阿里的AI商业化竞争构成新的参照系。②华为昇腾实现\"0 Day\"适配，验证国产算力在主流开源生态中的卡位速度，国产替代逻辑再次得到事件催化。③Apache 2.0协议+IMO 2026满分成绩+280B/16B MoE的规格定位，dots3系列具备快速建立社区采用率的潜力，有望推动国内大厂跟进开源自研，进一步抬升国产算力链总需求。\n\n2. 看空风险：①\"Preview\"版本距离商业落地仍有距离，280B总参数+16B激活的训练与推理成本对内容平台而言ROI尚未验证；开源意味着无直接授权收入，模型价值需通过主站搜索/Agent转化间接兑现。②对字节豆包、阿里通义、腾讯混元等已建立完整模型矩阵的厂商而言，小红书开源更多是\"补位\"而非颠覆，差异化空间有限。③国内大模型开源竞争已极度内卷（Qwen、DeepSeek、豆包等），小红书能否在评测榜单与开发者心智中取得持续关注存疑。\n\n3. 关键驱动因素：①dots3-jazz/aria版本发布节奏与能力上限，以及是否在VibeBench第三方评测中持续领先；②国内其他内容平台是否跟进自研开源模型，推动行业从\"应用层\"向\"底座层\"延伸。\n\n4. 市场影响评估：短期催化国产算力链（昇腾适配链、Hugging Face开源生态合作方）与AI应用变现主题；中期需观察内容平台自研模型是否真正切入搜索与生活服务Agent的变现闭环，若仅停留在\"造底座\"层面，对标的公司更多是竞争压力而非机会。\n\n5. 时间线推断：未来2-3个月关注dots3-jazz/aria",
       "ticker_counts": {
         "阿里巴巴": 1,
@@ -40638,9 +40638,9 @@
       "first_seen_at": "2026-08-21T07:02:18Z",
       "first_published_at": "2026-08-21T05:53:13Z",
       "last_updated_at": "2026-08-21T07:02:18Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 6,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "1. 看多逻辑\n\n第一，资源再配置属于理性止损而非战略失败。Vision Pro定价3500美元、销量远低于预期已成事实，苹果及时收缩VR头显投入、将人才转向AI眼镜，符合\"避免沉没成本谬误\"的逻辑，类似于此前砍掉Project Titan电动车的果断决策。第二，AI眼镜赛道的TAM和佩戴场景远优于VR头显。Meta与雷鸟合作的Ray-Ban智能眼镜年销量已突破百万级，证明\"日常可佩戴+AI语音/视觉交互\"是高粘性、高复购的形态；苹果凭借M系列芯片的端侧AI算力、Siri升级及生态闭环，在交互体验上具备追赶甚至超越的潜力。第三，BOM结构更友好、ASP更亲民，AI眼镜更容易走量形成飞轮，反哺Vision Pro生态中的空间计算应用迁移。\n\n2. 看空风险\n\n第一，Vision Pro路线收缩实质上承认了空间计算短期商业化失败，可能削弱苹果在下一代计算平台叙事中的话语权，资本市场对\"后iPhone增长曲线\"的信心受损。第二，苹果在AI眼镜赛道已是后来者：Meta、小米、三星、华为等已发布或即将发布产品，苹果2027年才亮相，时间窗口约落后1-2代，存在\"不是最好就不进入\"的历史执念与\"不得不跟随\"之间的矛盾。第三，VR团队裁员叠加Vision Pro 2前景不明，可能引发开发者生态外溢，第三方MR应用创新放缓，形成\"硬件弱—内容弱\"的负反馈。\n\n3. 关键驱动因素\n\n一，2027年WWDC上AI眼镜的硬件规格、定价与功能定义，尤其是端侧AI能力（是否搭载M系列衍生芯片或全新NPU）以及与Vision Pro的协同方式；二，Meta Ray-Ban等竞品在2026Q4-2027H1的销量与功能迭代节奏，将直接决定苹果切入的窗口期宽窄。\n\n4. 市场影响评估\n\n短期（3-6个月）：对苹果股价偏负面，叠加Vision Pro 2预期下修，MR光学/显示模组供应链（如索尼Micro OLED、舜宇光学）承压；但利好端侧AI芯片、传感器链（如索尼CIS、Amkor封装），市场会提前博弈AI眼镜供应链主题。中期（12-18个月）：若2027WWDC产品定义清晰且供应链订单落地，苹果及核心供应商有望迎来新一轮预期重估，AR光学厂商（舜宇、丘钛、玉晶光）弹性最大。\n\n5. 时间线推断\n\n2026Q4-2027Q1：更多供应链订单与原型机曝光，苹果AI眼镜BOM成本结构逐步清晰；2027年6月（WWDC）：正式发布产品、公布SDK与开发者支持计划；2027Q3-Q4：",
       "ticker_counts": {
         "苹果": 2
@@ -40700,9 +40700,9 @@
       "first_seen_at": "2026-08-21T07:02:18Z",
       "first_published_at": "2026-08-21T03:51:58Z",
       "last_updated_at": "2026-08-21T07:02:18Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 8,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "1. **看多逻辑**\n   - **AI存储需求结构性增长**：HBM作为AI算力扩张的瓶颈环节，供需缺口在中长期持续存在。美光100亿美元真金白银的投入，反映管理层对AI驱动存储超级周期的判断已从\"机会\"升级为\"战略赌注\"，有望强化其在HBM4及HBM5代际的研发节奏与客户绑定。\n   - **本土化研发+政策红利共振**：博伊西研发中心落地美国本土，与CHIPS Act补贴导向高度契合，有望获得联邦及州级资金分摊，降低实际资本支出压力。同时可规避地缘政治对海外研发链的潜在扰动，提升与英伟达、AMD等本土AI芯片客户的协同效率。\n   - **竞争格局重塑机会**：当前HBM市场由SK海力士主导，三星次之，美光位居第三。巨额研发投入若能转化为HBM4率先通过英伟达Blackwell/Rubin平台认证的窗口，将直接挑战SK海力士的市场份额，形成\"二供\"甚至\"反超\"预期，是估值重估的核心催化。\n\n2. **看空风险**\n   - **资本开支悬崖与周期下半场风险**：存储行业历史周期表明，顶部大额Capex往往对应未来1-2年的供给过剩。美光此时大手笔投入，若AI算力扩张在2027-2028年阶段性放缓，DRAM/NAND价格回落将快速侵蚀利润，10亿美元级别的折旧将放大亏损。\n   - **HBM客户认证仍存不确定性**：美光HBM3E已获英伟达H200采用，但HBM4/4E在带宽、容量、良率上竞争白热化。若SK海力士凭借先进封装与产能优势继续锁定英伟达Rubin及后续平台主供地位，美光研发投入难以短期变现。\n   - **现金流压力与回报周期**：100亿美元规模接近美光两年自由现金流总和，建设期2-3年、研发产出到量产爬坡还需1-2年，叠加当前利率环境下融资成本不低，可能压制股东回报（回购/分红），短期EPS存在稀释风险。\n\n3. **关键驱动因素**\n   - **HBM4客户认证与量产爬坡节奏**：英伟达Rubin、AMD MI400系列平台的HBM供应商分配结果，是验证美光研发投入有效性的核心信号，预计2026Q4-2027H1将有明确节点。\n   - **CHIPS Act补贴落地金额与时点**：爱达荷项目的联邦配套资金比例，直接影响实际自由现金流压力，补贴细则有望在2026年内陆续披露。\n\n4. **市场影响评估**\n   短期（3-6个月）：消息更多体现为情绪催化与战略信心信号，叠加AI存储板块β，股价有望获得正向反应，但实质盈利贡献有限。评级上调或目标价上修概率大于基本面立即改善。中期（12-24个月）：取决于HBM4/HBM4E的客户突破节奏与博伊",
       "ticker_counts": {
         "美光": 1
@@ -41994,6 +41994,139 @@
         "英伟达": 1
       },
       "max_item_score": 6
+    },
+    "evt_0c13843eb370": {
+      "event_id": "evt_0c13843eb370",
+      "title": "DeepSeek unveils an experimental multimodal version of its V4 Flash model, saying it nears the performance of Anthropic's Opus 4.8 on multimodal benchmarks (Bloomberg)",
+      "summary": "DeepSeek发布实验性多模态版本V4 Flash模型，支持视觉提示理解，性能接近Anthropic的Opus 4.8多模态基准水平。值得关注：DeepSeek以低成本著称，其多模态能力快速逼近美国头部闭源模型，进一步验证中国AI公司在前沿模型追赶上的效率优势。",
+      "tickers": [
+        "Anthropic",
+        "DeepSeek",
+        "英伟达"
+      ],
+      "themes": [
+        "compute_demand",
+        "model_capability"
+      ],
+      "direction": {
+        "DeepSeek": "positive",
+        "Anthropic": "neutral"
+      },
+      "item_ids": [
+        "1206437fbc623ca89ef88da18e4f01a8132ff6ba"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-21T13:49:54Z",
+      "first_published_at": "2026-08-21T13:00:59Z",
+      "last_updated_at": "2026-08-21T13:49:54Z",
+      "is_active": true,
+      "significance": 8,
+      "status": "developing",
+      "deep_analysis": "1. **看多逻辑**\n   - 性价比叙事再获验证：DeepSeek以低成本著称，若V4 Flash多模态性能真实逼近Opus 4.8，将进一步坐实中国AI\"以1/10算力追平前沿\"的市场认知，强化全球开发者对中国开源模型的偏好，对DeepSeek自身估值/融资预期形成正向催化。\n   - 算力总需求扩张而非收缩：低门槛高性能模型降低应用端接入成本，反而刺激推理侧调用量爆发，利好英伟达Hopper/Blackwell推理卡及HBM（海力士）需求；同时强化国产算力链（寒武纪、海光）的替代紧迫性与订单确定性。\n   - 倒逼闭源厂商加速迭代：Anthropic、OpenAI等需加大研发投入维持溢价，对应英伟达高端训练卡（GB200/B200）的需求中枢上移，AI资本开支周期延长。\n\n2. **看空风险**\n   - \"实验性\"与\"接近\"双重打折：官方措辞为experimental且为自报基准，第三方独立跑分尚未出炉；benchmark逼近≠实际生产力对齐，Opus 4.8在长上下文、Agent、多步推理等真实场景的护城河仍深。\n   - 地缘与商业化天花板：受美国出口管制及欧盟AI法案约束，DeepSeek在欧美企业级市场的部署受限，主要收益仍集中于国内及亚太，算力链外溢效应被压制。\n   - 行业商品化担忧：若中美模型能力差距持续收窄至3–6个月，闭源模型溢价空间收窄，可能导致AI应用层重新洗牌，对依赖API分成的中间层公司形成估值压力。\n\n3. **关键驱动因素**\n   - 第三方评测结果（尤其是MMMU、MathVista、VideoMME等硬核基准）与V4 Flash的API定价策略，这是判断其是否真正\"逼近Opus 4.8\"的硬指标。\n   - 开源/闭源决策——若开源权重将加速生态扩散，若闭源则对英伟达需求利好但对国产算力链是利好。\n\n4. **市场影响评估**\n   - 短期（1–4周）：情绪面利好中国AI概念股与国产算力链，英伟达中性偏多（推理需求故事强化），Anthropic母公司估值面临\"性能溢价受挤压\"的叙事压力，可能催化新一轮降价或版本提速。\n   - 中期（3–6个月）：若实测数据坐实，将重塑开源vs闭源估值锚，加速应用层渗透，AI推理Token消费量级跃升，对英伟达/台积电/海光构成结构性利好。\n\n5. **时间线推断**\n   - 2026年8–9月：第三方基准复测与开发者实测结果陆续出炉，事件可信度重估窗口。\n   - 2026年Q4：V4 Flash有望正式GA或开放权重，叠加英伟达Blackwell Ultra/Rubin节奏，市场对2027年AI Cap",
+      "ticker_counts": {
+        "Anthropic": 1,
+        "英伟达": 1,
+        "DeepSeek": 1
+      },
+      "max_item_score": 8
+    },
+    "evt_c56a28deca6b": {
+      "event_id": "evt_c56a28deca6b",
+      "title": "LG enters chip packaging arena with Laser Direct Imaging machine, as TSMC's CoWoS remains constrained — maskless machine is designed to pattern fine interconnects, trading resolution for higher throughput",
+      "summary": "LG推出面向芯片封装及高密度PCB的激光直接成像（LDI）光刻设备,以无掩模方式在精细互连上构图,以牺牲分辨率为代价换取更高产能。背景是台积电CoWoS等先进封装产能持续紧张,业内急需补充性封装方案与设备,LG此时入局封装设备市场值得关注。",
+      "tickers": [
+        "ASML",
+        "台积电",
+        "日月光"
+      ],
+      "themes": [
+        "advanced_packaging",
+        "chip_supply"
+      ],
+      "direction": {
+        "台积电": "neutral"
+      },
+      "item_ids": [
+        "e16c362689d452403d467a6e58c10f9081b748d3"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-21T13:49:54Z",
+      "first_published_at": "2026-08-21T13:35:14Z",
+      "last_updated_at": "2026-08-21T13:49:54Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "1. **看多逻辑**\nLG切入LDI封装设备恰逢先进封装产能最紧缺的窗口期，逻辑成立。其一，CoWoS产能在2026-2027年仍受制于TSMC资本开支节奏与SoIC/RD先进制程爬坡，业内对替代或补充性封装方案（如RDL-first中介层、扇出型封装）的设备需求真实存在，LDI在重布线层（RDL）和中介层制程上具备替代潜力，若被日月光、安靠等OSAT采用，可分流部分非旗舰级封装需求。其二，LG并非白手起家，其显示业务积累了成熟的面板级激光成像与精密对位技术，跨界至封装LDI有工程基础，相较初创公司更易通过客户认证。其三，封装已成为AI芯片供给的\"第二瓶颈\"，设备多元化降低了供应链单点风险，对英",
+      "ticker_counts": {
+        "日月光": 1,
+        "台积电": 1,
+        "ASML": 1
+      },
+      "max_item_score": 7
+    },
+    "evt_922496bcd314": {
+      "event_id": "evt_922496bcd314",
+      "title": "Filings: China-based chipmaker YMTC's application to list its shares on Shanghai's STAR Market has been accepted, setting the stage for a $4.9B share sale (Reuters)",
+      "summary": "中国头部NAND闪存厂商长江存储（YMTC）申请在上海科创板上市已获受理，拟筹资约330亿元人民币（合49.1亿美元），有望成为科创板最大规模IPO之一。YMTC此前已遭美国出口管制，本次上市将进一步充实其资本实力，扩张国产NAND产能。",
+      "tickers": [
+        "三星电子",
+        "海力士",
+        "美光"
+      ],
+      "themes": [
+        "chip_supply",
+        "domestic_substitution",
+        "policy_export"
+      ],
+      "direction": {
+        "美光": "negative",
+        "海力士": "negative",
+        "三星电子": "negative"
+      },
+      "item_ids": [
+        "10b062da500792d9169da6be90e632b30a9e5011"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-21T13:49:54Z",
+      "first_published_at": "2026-08-21T13:10:01Z",
+      "last_updated_at": "2026-08-21T13:49:54Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "三星电子": 1,
+        "海力士": 1,
+        "美光": 1
+      },
+      "max_item_score": 7
+    },
+    "evt_c8c2fe26c7da": {
+      "event_id": "evt_c8c2fe26c7da",
+      "title": "WPS Comate百城AI智能体赋能计划正式启动",
+      "summary": "",
+      "tickers": [
+        "金山办公"
+      ],
+      "themes": [
+        "ai_monetization"
+      ],
+      "direction": {},
+      "item_ids": [
+        "fd79806a22f41ca3d49347b34dbf77cb47bcf4a2"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-21T13:49:54Z",
+      "first_published_at": "2026-08-21T12:56:15Z",
+      "last_updated_at": "2026-08-21T13:49:54Z",
+      "is_active": true,
+      "significance": 5,
+      "status": "developing",
+      "deep_analysis": "**看多逻辑：**\n\n1）AI编程助手赛道商业化路径清晰，WPS Comate对标GitHub Copilot、Cursor等全球产品，ARR增长迅速，金山办公凭借WPS的海量用户基数（约2亿月活）可实现低成本交叉转化，\"百城计划\"本质上是在加速企业级渗透，将C端流量优势嫁接至B端高ARPU场景。\n\n2）AI Agent代表从\"辅助工具\"向\"自主执行\"的范式跃迁，与单纯Copilot的代码补全形成代差，若生态建设顺利，可打开从单一编程场景向办公自动化、流程Agent横向拓展的想象空间，提升长期估值天花板。\n\n3）百城计划具备明显的渠道下沉与政企客户绑定特征，叠加金山系在信创、G端市场的传统优势，有望在国产替代叙事中抢占先机，享受政策红利。\n\n**看空风险：**\n\n1）赛道极度拥挤，国内通义灵码、豆包MarsCode、CodeGeeX及字节、阿里等大厂均重金投入，Comate在模型能力、品牌认知度上并不占优，\"百城\"更多是营销造势而非技术壁垒，能否转化为付费转化存疑。\n\n2）\"赋能计划\"未披露具体定价、付费率、ARR等核心指标，本质是生态布局而非收入事件，短期对业绩无实质支撑；且企业级AI销售周期长、回款慢，营销费用前置可能压制利润率。\n\n3）核心办公业务受微软Copilot深度集成及免费WPS内卷双重夹击，若AI产品无法形成独立增长极，主营基本盘增速放缓将拖累整体估值。\n\n**关键驱动因素：**\n\n① Comate付费企业数、ARR及续费率（季度披露口径）；② 与头部政企客户的标杆签约落地节奏；③ 模型迭代与Agent能力的实际可用性评测。\n\n**市场影响评估：**\n\n短期（1-3月）以主题催化为主，缺乏业绩兑现，股价波动有限；中期（6-12月）取决于企业付费转化数据，若Q4出现可验证的ARR里程碑（如破亿），将成为估值重估的关键窗口。\n\n**时间线推断：**\n\n近期将密集落地城市站与合作伙伴签约；3-6个月首批标杆案例披露；12个月窗口需观察付费用户量级是否突破临界规模，否则面临叙事证伪风险。",
+      "ticker_counts": {
+        "金山办公": 1
+      },
+      "max_item_score": 5
     }
   }
 }
