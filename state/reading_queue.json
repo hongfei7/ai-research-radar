@@ -222,6 +222,19 @@
       "queued_at": "2026-08-21T14:38:14Z"
     },
     {
+      "id": "bf62810d3edb13e6fc809ffebb218a275d7b9306",
+      "title": "NVIDIA AVO got 100% on ARC-AGI-3. It completed all 183 levels across all 25 public environments, figuring out what to do with no instructions, explicit rules, or stated goals.",
+      "url": "https://www.reddit.com/r/localllama/comments/1vuh7to/nvidia_avo_got_100_on_arcagi3_it_completed_all",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-21T14:01:07Z",
+      "raw_summary": "&#32; submitted by &#32; /u/theologi [link] &#32; [comments]",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": false,
+      "why": "若消息属实，NVIDIA AVO 在 ARC-AGI-3 上零样本通关是重要能力信号，需核实基准细节",
+      "queued_at": "2026-08-21T15:15:36Z"
+    },
+    {
       "id": "682d6f8ae32ce451461c9d877ec301776fe01265",
       "title": "Inducing Task Models from Computer-Use Traces [Yucheng Jiang, Zora Zhiruo Wang, Ruishi Chen, Diyi Yang]",
       "url": "http://arxiv.org/abs/2608.20319v1",
@@ -505,19 +518,6 @@
       "angle": "route",
       "source_traceable": false,
       "why": "系统梳理了Harness作为AI Agent执行框架的兴起、各家厂商（DeepSeek、MiniMax、阿里等）布局与生态之争，揭示Agent落地范式的关键路线分歧",
-      "queued_at": "2026-08-21T05:59:02Z"
-    },
-    {
-      "id": "8706b5bbd694b9d7a5a9bca52a5ae078979e3434",
-      "title": "天下没有免费的Deepseek",
-      "url": "https://www.tmtpost.com/8110595.html",
-      "source": "rss:tmtpost",
-      "published_at": "2026-08-21T05:11:22Z",
-      "raw_summary": "文 | 超前实验室，作者 | 青苹吹果，编辑 | star皆空若干年后，面对DeepSeek高昂的API续费账单，打工人将会想起那个缓存命中只要0.025元的遥远的下午。没错，曾经把大模型API价格打到&ldquo;地板价&rdquo;的DeepSeek，现在也&ldquo;忘本&rdquo;了，官宣新的计价方案，在国产大模型中引入了&ldquo;算力峰谷分级计价&rdquo;。高峰时段价格翻倍，闲时打五折。其中缓存命中输入直接从0.025元蹦到0.3元，涨幅1100%。消息一出，在开发者社区可谓是&ldquo;一石激起千层浪&rdquo;。有人连夜把批量任务改到凌晨跑，有人开始认真对比各家API的闲时价格表。但更多人意识到：连&ldquo;价格屠夫&rdquo;的DeepSeek都端不住了，那个随便调、不要钱的AI乌托邦，是不是真要&ldquo;完结撒花&rdquo;了？有这种预感并不稀奇，因为DeepSeek已经不是第一个涨价的大模型了。早在今年五月，豆包就在C端上线了付费会员。除此之外，腾讯云也把模型输入价格上调了好几倍，Kimi、智谱、MiniMax一个接一个跟进，B端API价格普遍&ldquo;起飞&rdquo;。免费AI时代正在落幕，大模型从&ldquo;拼价格&rdquo;转向&ldquo;拼价值&rdquo;的商业化拐点，已经到了。那些年我们薅过的羊毛，即将&ldquo;高攀不起&rdquo;去年这个时候，无论你哪个国产AI应用，基本功能全是免费的。写文案、做表格、整理会议纪要、生成图片，随便用。大家默认了一条&ldquo;潜规则&rdquo;，那就是AI本来就该免费。而今年5月，豆包率先打破了这种默契。三档付费订阅上线：标准版68元/月、加强版200元/月、专业版500元/月。免费用户还能用，但长文档处理、批量生成任务、高峰时段的优先算力分配，这些能力都被划归付费用户专享。紧接着，Kimi也坐不住了。7月发布K3后，用户想用最新模型，就得先上车会员。四档会员从39元到559元每月不等。更戏剧性的是，上线不到48小时，月之暗面就紧急叫停C端新用户订阅，因为需求太大了，请求量暴增远超预期，GPU集群扛不住了。连&ldquo;想收费&rdquo;都卡在算力供给上，这说明什么？说明涨价的另一头，厂商自己也被成本掐着喉咙。以上还是咱们普通用户能感受到的变化。而真正决定行业走向的，往往不是C端会员费，而是B端API的价格体系，直接关系到AI应用的开发成本和生态繁荣。既然如此，让咱们来看看B端的涨价情况：腾讯云3月结束GLM 5、MiniMax 2.5等第三方模型的免费公测，顺手把自研混元HY2.0 Instruct的输入价格从0.0008元/千tokens拉到0.004505元，涨幅463%。4月，又对AI算力产品统一涨价5%。一个月内&ldquo;连击两次&rdquo;，从模型到基础设施全给你安排明白。智谱AI也是，年内五次上调。一季度API定价比2025年底涨了约83%，结果调用量反而增长400%。量价齐飞，说明大家嘴上喊贵，身体却很诚实。Kimi K3在B端也没闲着，输出价格直接飙到100元/百万token，比上一代涨了3.5倍；输入20元/百万token，涨了3倍，一脚踏进海外闭源模型的价格区间。MiniMax呢，在6月1日发M3模型的同时，API输入从2.1元涨到4.2元，输出从8.4元翻到16.8元，最低套餐从29元跳到49元，并且这次涨价没有任何提前通知。最后就是DeepSeek前几天落地的&ldquo;峰谷电价&rdquo;",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": false,
-      "why": "以DeepSeek峰谷分时定价为切入点，梳理国内大模型API集体涨价潮与商业化拐点，含具体价格数字与对比",
       "queued_at": "2026-08-21T05:59:02Z"
     }
   ],
