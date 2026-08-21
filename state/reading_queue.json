@@ -196,6 +196,32 @@
       "queued_at": "2026-08-21T13:48:57Z"
     },
     {
+      "id": "b65704a95b07d168037441ede4cf53da775d5e06",
+      "title": "Nvidia AVO scores 100% on the ARC-AGI-3 interactive reasoning benchmark",
+      "url": "https://twitter.com/nvidiaai/status/2090786258981466231",
+      "source": "hackernews",
+      "published_at": "2026-08-21T13:26:03Z",
+      "raw_summary": "Nvidia AVO scores 100% on the ARC-AGI-3 interactive reasoning benchmark",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Nvidia AVO在ARC-AGI-3交互推理基准上满分，背后可能有新模型或方法学，值得看技术细节。",
+      "queued_at": "2026-08-21T14:38:14Z"
+    },
+    {
+      "id": "fdb52c398cc4891fda32d500b580c68e1035b65e",
+      "title": "Phantom Gains: Auditing Self-Improvement Against a Measured Null",
+      "url": "https://arxiv.org/abs/2608.20290",
+      "source": "hackernews",
+      "published_at": "2026-08-21T12:07:07Z",
+      "raw_summary": "Phantom Gains: Auditing Self-Improvement Against a Measured Null",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "审计LLM自改进方法是否真有增益的方法学论文，'measured null'是关键概念，对RL/self-improve方向有警示价值。",
+      "queued_at": "2026-08-21T14:38:14Z"
+    },
+    {
       "id": "682d6f8ae32ce451461c9d877ec301776fe01265",
       "title": "Inducing Task Models from Computer-Use Traces [Yucheng Jiang, Zora Zhiruo Wang, Ruishi Chen, Diyi Yang]",
       "url": "http://arxiv.org/abs/2608.20319v1",
@@ -493,32 +519,6 @@
       "source_traceable": false,
       "why": "以DeepSeek峰谷分时定价为切入点，梳理国内大模型API集体涨价潮与商业化拐点，含具体价格数字与对比",
       "queued_at": "2026-08-21T05:59:02Z"
-    },
-    {
-      "id": "edb6159c1d085a6b5c238f98c6ca058148f49149",
-      "title": "SWE-bench Science: Can Coding Agents Resolve Engineering Tasks in Science?",
-      "url": "https://arxiv.org/abs/2608.19799",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-19T20:00:00Z",
-      "raw_summary": "SWE-bench Science benchmarks coding agents on scientific software repair, revealing failure mechanisms and mixed effects of scientific guidance.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "SWE-bench Science基准测试编码Agent在科学软件修复上的能力，揭示失败机制与科学引导的混合效果，对Agent能力边界有参考价值",
-      "queued_at": "2026-08-21T05:59:02Z"
-    },
-    {
-      "id": "33bec45bca5e4074f88b29dc6023be997aec63f5",
-      "title": "韩国主要半导体设备商订单积压量预计比去年年底翻一番",
-      "url": "https://36kr.com/newsflashes/3948890392722818?f=rss",
-      "source": "rss:36kr",
-      "published_at": "2026-08-21T06:19:02Z",
-      "raw_summary": "韩国半导体设备行业受益于三星电子和SK海力士的大规模半导体设施投资，截至今年上半年末，该国主要设备企业的订单积压量预计比去年年底翻了一番。预计从今年下半年开始，销售额将大幅增长。（新浪财经）",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": false,
-      "why": "韩国半导体设备订单积压翻倍，是判断存储扩产周期与设备景气度的关键一手数据。",
-      "queued_at": "2026-08-21T07:01:09Z"
     }
   ],
   "digest_last_date": "2026-08-21"
