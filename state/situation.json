@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-21T08:00:39Z",
-  "text": "截至2026-08-21 16:00 HKT，本轮新增要点：芯片行业周报显示芯片及AI产品涨价、多芯粒封装监控与量子低温互联取得进展，18A制程获客户采纳；Anthropic拟于年内推出Claude企业数据私有云方案，保留期30天；日本经产省拟向Rapidus追加1500亿日元拨款；OpenAI GPT-Image-2支持原生透明背景生成。",
-  "since": "2026-08-21T08:00:39Z",
+  "generated_at": "2026-08-21T08:56:33Z",
+  "text": "当前共有 30 个活跃事件。要点包括: Nvidia is acquiring Poolside's \"Model Factory\" and 109 employees for $6 billion; DeepSeek Harness一周三更：把Claude Code和Codex收编成子代理，要当Ag; 韩国主要半导体设备商订单积压量预计比去年年底翻一番; Micron announces $10B research hub in Boise; 科大讯飞：将于今年全球1024开发者节推出全新主力通用大模型。",
+  "since": "2026-08-21T08:56:33Z",
   "active_event_count": 30,
   "key_themes": [
     "compute_demand",
     "ai_monetization",
     "model_capability",
-    "chip_supply",
-    "datacenter_power"
+    "domestic_substitution",
+    "chip_supply"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n本轮报道内部存在隐含张力：芯片周报显示芯片及AI产品价格上涨、供应链紧张，而Rapidus获1500亿日元追加拨款、日本2nm产能将上量，暗示中期供给端将边际增加。多条报道同时强调AI算力能耗瓶颈（人脑20W vs 大模型MW级），但先进制程与封装（CPO、multi-die、18A）仍在加码更\"耗能\"的扩张路径——短期涨价红利与中长期能效/供给约束形成博弈。\n\n【新兴趋势】\n企业级AI私有化部署成为共性主题：Anthropic推私有云安全系统、OpenAI加码API能力（透明背景），均指向B端变现从通用API向合规/定制/生态深化演进。先进封装（multi-die监控、CPO路线图）从\"配套\"上升为独立技术议题反复出现。能效比作为AI扩张硬约束，在芯片周报与EE Times文章中均有侧应。\n\n【信息盲点】\n本轮未覆盖但应被关注：HBM/存储链（SK海力士、三星HBM，涨价语境下的核心受益方）、台积电CoWoS产能与扩产进度（仅被间接提及）、电力与液冷供应链（GE Vernova、Vertiv等，AI能耗瓶颈的直接受益方）、中国先进制程（SMIC）及国产替代链、苹果与谷歌的AI基础设施动作、DeepSeek等中国大模型对算力需求结构的影响。\n\n【跨标的联动】\nOpenAI与Anthropic在企业级市场的攻防升级——前者用API能力扩张生态，后者用私有云差异化争夺高合规客户，Azure（微软）/AWS（亚马逊）作为底层承接方间接受益。Rapidus 2nm推进将分流台积电/三星订单，但同时边际利好ASML EUV需求。先进封装（CPO、multi-die）趋势联动台积电CoWoS、ASML与封测设备厂。芯片涨价与AI能耗瓶颈联动，间接推升电力设备与液冷供应链的战略权重。",
+  "cross_analysis": "【核心矛盾】\n阿里AI云盈利改善与\"亏钱转售\"形成时间维度的直接冲突。来源4/8（tmtpost/雷锋网）显示阿里云EBITA利润率升至11.6%、",
   "trend_spotting": "AI生成端原生能力正压缩后期工具价值链：OpenAI GPT-Image-2将alpha通道嵌入生成阶段，单参数激活即取代传统抠图流程，若该能力下沉为默认选项，Adobe、Remove.bg等图像SaaS护城河将被单向侵蚀，且模式可复制至视频/3D领域。\n\n芯片端出现\"量价齐升\"信号：周报揭示芯片及AI相关产品涨价、18A获客户采用、CPO路线图公布三条线并行，需重点关注涨价是否传导至HBM与CoWoS——若确认，先进封装将取代晶圆成为更紧约束，对美光、ASML的二阶影响大于表面。\n\n企业级AI私有化部署进入军备竞赛阶段：Anthropic允许企业数据存于自有云（保留30天），直击金融、医疗、政务合规痛点，OpenAI企业版必然跟进，Azure/AWS私有云承接能力将成为新的关键变量。\n\n被低估的硬约束：人脑20W与LLL兆瓦级能效差距意味着，若perf/W提升节奏放缓，电力而非芯片将成为算力扩张的实际天花板，类脑计算与液冷供应链的拐点可能比预期更早到来。日本对Rapidus累计4000亿日元的"
 }
