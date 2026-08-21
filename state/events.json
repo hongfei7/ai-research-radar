@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-21T09:42:04Z",
+  "updated_at": "2026-08-21T10:15:08Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -39982,9 +39982,9 @@
       "first_seen_at": "2026-08-21T03:54:31Z",
       "first_published_at": "2026-08-21T03:35:02Z",
       "last_updated_at": "2026-08-21T03:54:31Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 7,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "**1. 看多逻辑**\n\n① **出海破冰示范效应**：这是科大讯飞首次披露金额明确的海外超算级订单（2.5亿美元规模），标志着中国\"国产算力+国产模型\"打包方案在拉美实现零的突破，对国产AI出海估值具有标杆意义。② **国产替代主题强化**：华为（算力底座）+科大讯飞（模型与应用）的捆绑模式，验证了在地缘压力下中国AI技术体系对新兴市场的整体输出能力，与国内\"信创+国产替代\"逻辑形成共振。③ **区域辐射潜力**：巴西作为拉美第一大经济体，其示范效应可能带动阿根廷、智利、墨西哥等国跟进采购，形成\"一国突破、多国跟进\"的复制效应。\n\n**2. 看空风险**\n\n① **信息可靠性不足**：事件credibility标记为low，2.5亿美元更可能为框架协议或意向金额而非已签约合同，落地确定性存疑。② **业绩弹性有限**：2.5亿美元（约18亿人民币）对科大讯飞年营收占比约8-9%，需连续中标才能形成显著拉动，单一项目难以驱动估值重估。③ **地缘政治与交付风险**：美方可能施压巴西收紧中国AI技术准入；华为受制裁背景下高端AI芯片的合规采购与交付能力存在不确定性。\n\n**3. 关键驱动因素**\n\n① 正式合同签署公告及交付时间表落地节奏；② 巴西2026年大选后政府对华科技合作政策延续性，以及是否出现拉美其他国家跟进订单。\n\n**4. 市场影响评估**\n\n短期：情绪面利好但催化有限，因credibility低、金额占比小，股价波动以主题情绪驱动为主。中期：若项目实质落地并形成可复制的\"AI出海\"商业模式，将打开科大讯飞海外业务估值天花板，从\"国内信创标的\"向\"全球AI基础设施供应商\"切换。\n\n**5. 时间线推断**\n\n未来1-2个月跟踪正式合同细节（金额拆分、交付物清单）；3-6个月关注首批硬件设备发运与超算中心动工；6-12个月观察项目阶段性交付与拉美其他国家（如阿根廷）是否释放类似订单信号。",
       "ticker_counts": {
         "科大讯飞": 1
@@ -40014,9 +40014,9 @@
       "first_seen_at": "2026-08-21T03:54:31Z",
       "first_published_at": "2026-08-21T02:41:46Z",
       "last_updated_at": "2026-08-21T03:54:31Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 8,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "看多逻辑：(1)调度层卡位战略清晰——Harness以\"一切皆插件\"微内核架构切入Agent编排层，避开了与Anthropic/OpenAI在基础模型上的正面竞争，转而争夺工具链入口；开源首日3万Star及一周三更的迭代节奏，验证了开发者社区的认可度与团队执行力。(2)开放生态形成差异化——将Claude Code、Codex收编为子代理而非排斥竞品，凸显\"模型无关\"的中间层定位，对不愿被单一厂商绑定的企业用户具有吸引力，潜在重塑Agent工具链竞争格局。(3)多模态补齐——",
       "ticker_counts": {
         "Anthropic": 1,
@@ -40049,9 +40049,9 @@
       "first_seen_at": "2026-08-21T03:54:31Z",
       "first_published_at": "2026-08-21T03:20:22Z",
       "last_updated_at": "2026-08-21T03:54:31Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 7,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "",
       "ticker_counts": {
         "DeepSeek": 1,
@@ -40081,9 +40081,9 @@
       "first_seen_at": "2026-08-21T03:54:31Z",
       "first_published_at": "2026-08-21T03:10:04Z",
       "last_updated_at": "2026-08-21T03:54:31Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 6,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "1. **看多逻辑**\n\n第一，AI4S催生增量需求且场景特征利好国产算力。科学计算（尤其海洋气象、遥感、生命科学等）强调长时间稳定运行与高实时性，对单卡峰值算力的要求低于大模型训练，更看重集群稳定性与软硬协同，这恰好是国产AI芯片相对友好的切入场景。海光信息（DCU兼容CUDA生态）、中科曙光（高性能计算整机和液冷集群）有望率先受益于科学计算集群的建设潮。第二，国产替代逻辑在HPC领域具备更强政策刚性。国家科研基础设施的算力国产化是长期战略方向，中科院系背景的中科曙光、海光信息在国家级科学计算项目中具有渠道优势，寒武纪的思元系列也在积极适配科学计算框架。第三，AI4S是AI落地\"非互联网\"场景的标志性叙事，市场对其商业化想象空间打开后，相关标的的估值锚有望从\"训练芯片\"扩展至\"全场景AI算力\"。\n\n2. **看空风险**\n\n第一，事件本身的\"硬度\"不足。原文未披露具体公司、芯片型号、性能基准或采购订单，属于行业观察类话题，缺乏可直接定价的催化。第二，国产算力与英伟达/AMD在HPC-AI融合任务上的实际差距仍未弥合。海洋计算等场景虽不追求极端算力，但软件栈成熟度（编译器、库、AI-HPC融合框架）仍是国产芯片的短板，替代节奏可能慢于预期。第三，相关公司估值已部分反映国产替代预期。寒武纪2024-2025年股价波动剧烈、海光信息市值已较高，业绩兑现期若拉长，存在\"利好出尽\"风险。\n\n3. **关键驱动因素**\n\n一是国产AI芯片在科学计算场景的标杆案例与性能基准（Benchmark），尤其是能否跑通海洋、气象等典型负载；二是国家级科学计算项目的招标公告与采购份额披露，这是验证国产替代实质进展的最直接信号。\n\n4. **市场影响评估**\n\n短期（1-3个月）：事件偏话题性，对四家标的更多是情绪催化，难以驱动趋势性行情，但有助于维持板块热度，利于低位标的（如寒武纪）的修复性反弹。中期（6-12个月）：若出现具体落地案例或政策定调，国产算力在HPC赛道的份额将进入兑现窗口，中科曙光、海光信息的业绩可见度提升，寒武纪则需观察其在科学计算市场的实际出货。\n\n5. **时间线推断**\n\n关键节点集中在三方面：其一是未来3-6个月内是否有权威机构发布国产AI芯片的科学计算性能白皮书或评测；其二是2026年下半年国家重大科研基础设施（如国家超算、海洋实验室等）的招标进展；其三是2026年底至2027年初相关上市公司年报中AI4S/HPC业务收入的披露，将是验证逻辑的核心证据。",
       "ticker_counts": {
         "浪潮信息": 1,
@@ -40113,9 +40113,9 @@
       "first_seen_at": "2026-08-21T03:54:31Z",
       "first_published_at": "2026-08-21T03:03:38Z",
       "last_updated_at": "2026-08-21T03:54:31Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 6,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "看多逻辑：①直接财政背书强化产业地位。韩国拟将芯片行业景气带来的超额税收注入\"未来基金\"，本质是对半导体龙头的国家级资本背书。三星电子与海力士作为韩国HBM、存储芯片双雄，有望在基金投向先进制程、HBM产能扩张、AI芯片研发时获得直接或间接的资源倾斜，政策端形成长周期护城河。②景气延续信号明确。超额财政收入的前提是相关企业税基大幅扩张，这从侧面验证了当前存储芯片价格回升、HBM供不应求的高景气现状，三季度业绩仍具备上修空间。③全球AI算力竞赛的卡位价值提升。韩国通过\"未来基金\"锁定下一代半导体竞争力，与美日欧的产业补贴形成对标，对三星、海力士的全球份额争夺构成正面支撑。\n\n看空风险：①基金定向与传导路径不明。\"未来基金\"的资金口径、投向比例、是否包含直接补贴或股权投入尚未明确，若主要投向AI软件、量子计算等非存储领域，对三星、海力士的实质利好有限，更多是情绪性催化。②景气高位反转风险加大。历史经验显示，存储周期顶部往往伴随高税收与高投资情绪，韩国政府的乐观判断反而可能滞后于行业拐点；若HBM价格出现松动或客户库存调整，财政红利无法对冲业绩下修。③政策性资金可能伴随合规与反垄断约束。政府介入加深或导致利润分成、税率调整等隐性成本增加，且需关注中美科技博弈下韩国\"选边\"风险对供应链的扰动。\n\n关键驱动因素：一是\"未来基金\"立法进度与首批投向披露；二是三星、海力士三季度HBM出货量与单价指引，以及对2026年Capex的前瞻表态，这直接决定景气延续性。\n\n市场影响评估：短期（1-2周）情绪驱动占主导，三星电子、海力士港股ADR及A股存储链可能迎来政策催化型反弹；中期（1-3个月）需回归业绩验证，若HBM订单与DDR5涨价趋势在三季报兑现，反弹有望向基本面驱动切换，板块超额收益空间仍可期。\n\n时间线推断：近期需跟踪韩国国会关于\"未来基金\"的预算审议与方案落地窗口（预计2026年Q4至2027年Q1）；10月底三星电子与海力士三季报披露是关键验证节点，届时管理层对AI需求与HBM供需的最新表态将决定政策催化的持续性。",
       "ticker_counts": {
         "海力士": 1,
@@ -41252,8 +41252,8 @@
     },
     "evt_821efcddab2c": {
       "event_id": "evt_821efcddab2c",
-      "title": "DeepSeek推出新的多模态模型",
-      "summary": "DeepSeek在API平台上线多模态实验模型DeepSeek-V4-Flash-Vision-Exp，纯文本能力（Agent、推理、世界知识）与V4-Flash正式版持平，视觉理解Agent基准测试大幅跃升，多模态Agent能力接近Opus-4.8。这标志着DeepSeek在多模态Agent领域取得重要进展，性价比路线上多模态能力快速逼近闭源顶级模型。",
+      "title": "DeepSeek上线多模态实验模型V4-Flash-Vision-Exp",
+      "summary": "DeepSeek在API平台正式上线实验性多模态模型DeepSeek-V4-Flash-Vision-Exp，主打轻量级视觉理解，纯文本能力与V4-Flash正式版持平，视觉理解Agent基准测试大幅跃升，多模态Agent能力接近Opus-4.8。尚未披露参数量、定价、上下文窗口及是否开源权重等关键细节，需持续跟踪。",
       "tickers": [
         "DeepSeek"
       ],
@@ -41266,18 +41266,19 @@
         "DeepSeek": "positive"
       },
       "item_ids": [
-        "4a11730744c254dba288e4ac1dc217f71291c276"
+        "4a11730744c254dba288e4ac1dc217f71291c276",
+        "e2972d183728da1b6b7087663e60dfd90b13db7a"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "first_seen_at": "2026-08-21T09:40:51Z",
       "first_published_at": "2026-08-21T09:30:45Z",
-      "last_updated_at": "2026-08-21T09:40:51Z",
+      "last_updated_at": "2026-08-21T10:14:01Z",
       "is_active": true,
       "significance": 8,
       "status": "developing",
       "deep_analysis": "1. 看多逻辑：其一，DeepSeek延续\"低成本+高能力\"路线，Flash档位多模态能力逼近Opus-4.8，纯文本能力与正式版持平，意味新增视觉能力的边际成本可控，API平台上线标志商业化兑现进入实质阶段，有望持续侵蚀闭源模型在中小客户及推理场景的份额。其二，多模态Agent（文档解析、视觉自动化等）是高ARPU企业级场景，能力跃升将直接拉动token消耗，二阶效应利好国产推理算力链（昇腾、寒武纪等）与云厂（阿里、字节、火山引擎）。其三，DeepSeek的技术外溢性已形成生态拉力，下游应用厂商倾向于基于其API快速",
       "ticker_counts": {
-        "DeepSeek": 1
+        "DeepSeek": 2
       },
       "max_item_score": 8
     },
@@ -41414,6 +41415,136 @@
         "阿里巴巴": 1
       },
       "max_item_score": 6
+    },
+    "evt_dc7e3e632638": {
+      "event_id": "evt_dc7e3e632638",
+      "title": "DDR5 scalper bots now outnumber shoppers 10 to 1 — automated scraping hits listings every 6.5 seconds as 32GB kits surge from $72 to $392, DataDome researcher says",
+      "summary": "DataDome研究显示，黄牛机器人(bot)对零售商DDR5内存产品页的流量占比高达91%，即每1次真实访问对应约10次自动化抓取，抓取频率约每6.5秒一次。同期32GB DDR5套条价格从72美元飙升至392美元（约5.4倍）。该现象反映DDR5供需极度紧张，黄牛囤货套利加剧终端价格扭曲，值得关注AI算力扩张对存储链的拉动及供给瓶颈的持续性。",
+      "tickers": [
+        "三星电子",
+        "海力士",
+        "美光"
+      ],
+      "themes": [
+        "advanced_packaging",
+        "chip_supply",
+        "compute_demand"
+      ],
+      "direction": {
+        "美光": "positive",
+        "海力士": "positive",
+        "三星电子": "positive"
+      },
+      "item_ids": [
+        "3d8953c7c1aa61e8e77dbe83b36fdffeda045df9"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-21T10:14:01Z",
+      "first_published_at": "2026-08-21T10:00:00Z",
+      "last_updated_at": "2026-08-21T10:14:01Z",
+      "is_active": true,
+      "significance": 6,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "美光": 1,
+        "三星电子": 1,
+        "海力士": 1
+      },
+      "max_item_score": 6
+    },
+    "evt_9ff1c950bf88": {
+      "event_id": "evt_9ff1c950bf88",
+      "title": "Anthropic changes data retention policy after enterprise pushback",
+      "summary": "Anthropic 此前因数据留存政策（默认使用客户输入训练模型）在企业市场引发反弹，现已松绑该政策，允许企业客户自主保留其数据。事件核心是 Anthropic 在企业客户压力下调整隐私与数据控制条款，以减少企业部署 Claude 的合规阻力，加快商业化落地。该政策转向体现 AI 厂商在争夺企业客户过程中，正逐步让渡数据使用权以换取客户信任。",
+      "tickers": [
+        "Anthropic"
+      ],
+      "themes": [
+        "ai_monetization",
+        "model_capability",
+        "policy_export"
+      ],
+      "direction": {
+        "Anthropic": "positive"
+      },
+      "item_ids": [
+        "1f88a50fe4d3d796119f58c105fd16be7a64e374"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-21T10:14:01Z",
+      "first_published_at": "2026-08-21T09:59:51Z",
+      "last_updated_at": "2026-08-21T10:14:01Z",
+      "is_active": true,
+      "significance": 6,
+      "status": "developing",
+      "deep_analysis": "1. **看多逻辑**：①企业合规壁垒显著降低，金融、医疗、法律等强监管行业部署Claude的障碍被扫清，直接打开高客单价市场的渗透空间；②Anthropic主动让渡数据使用权换取企业信任，凸显其\"企业优先\"战略的差异化优势，相较OpenAI偏向C端开发者、谷歌受限于内部利益博弈，Anthropic在B端GTM上具备先发卡位；③二阶效应明确——企业级AI部署加速将拉动推理算力需求，利好英伟达/博通/超微等AI服务器链及云厂商资本开支预期。\n\n2. **看空风险**：①数据回流收窄意味着模型迭代的\"燃料\"减少，长期可能拉大与OpenAI/Google的模型能力差距，形成\"合规优势vs能力优势\"的取舍困境；②政策松绑本质是被动响应客户压力，侧面反映前期企业落地节奏不及预期，并非主动定价权的体现；③竞争对手若不跟进（如OpenAI维持默认训练条款），Anthropic在数据飞轮上将进一步落后；④企业客户以数据控制权换取折扣的可能性增加，对ARR质量形成压力。\n\n3. **关键驱动因素**：①Anthropic企业ARR季度环比增速及Microsoft Azure渠道贡献量，这是验证政策转向有效性的核心标尺；②OpenAI/Google是否在2026Q4前跟进调整数据政策，若仅Anthropic单方面让步，其竞争壁垒将被快速侵蚀。\n\n4. **市场影响评估**：短期（1-3个月）情绪利好AI应用层与算力链条，尤其英伟达/博通等推理侧标的获催化；中期（6-12个月）取决于ARR兑现速度——若Q4企业签约环比加速>30%，将形成正反馈循环，反之则被视为竞争失利的信号。\n\n5. **时间线推断**：2026Q3末—Q4初关注首批受新政策推动的金融/医药行业标杆客户披露；2026Q4—2027Q1观察OpenAI/Google政策回应及Anthropic下一轮融资估值锚定；同时跟踪2027Q1企业级AI Agent商业化进展，二阶受益标的的业绩兑现将进入验证窗口。",
+      "ticker_counts": {
+        "Anthropic": 1
+      },
+      "max_item_score": 6
+    },
+    "evt_8c9a6f060b2a": {
+      "event_id": "evt_8c9a6f060b2a",
+      "title": "Azure DevOps Remote MCP Server Reaches GA, Without Support for Claude, ChatGPT, or Cursor",
+      "summary": "微软将Azure DevOps远程MCP服务器正式发布（GA），提供免安装的托管端点，可连接工作项、代码仓库和流水线。但因Entra ID缺乏对动态客户端注册（DCR）和客户端ID元数据文档（CIMD）的支持，Claude Desktop、Claude Code、ChatGPT和Cursor等主流AI客户端目前尚无法接入该MCP服务器。",
+      "tickers": [
+        "微软"
+      ],
+      "themes": [
+        "ai_monetization",
+        "model_capability"
+      ],
+      "direction": {
+        "微软": "neutral"
+      },
+      "item_ids": [
+        "893bdc819ce7dc305f49fd46561bd52479b45665"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-21T10:14:01Z",
+      "first_published_at": "2026-08-21T09:55:00Z",
+      "last_updated_at": "2026-08-21T10:14:01Z",
+      "is_active": true,
+      "significance": 5,
+      "status": "developing",
+      "deep_analysis": "1. **看多逻辑**\n\n第一，微软通过托管MCP端点的GA，实质上抢占了企业DevOps+AI工作流的关键网关位。免安装的远程架构降低了开发者接入门槛，使得Azure DevOps从传统CI/CD工具升级为\"AI可调用\"的数据源，这一资产化进程本身具备长期战略价值。第二，即便短期内无法对接Claude/ChatGPT/Cursor，微软可优先服务自有Copilot产品线（GitHub Copilot、Copilot for Azure），通过\"先自家、后开放\"的节奏实现生态闭环，反而有可能强化Copilot的差异化体验。第三，MCP正快速成为AI工具调用的事实标准，微软以GA姿态高调入局，展现了其在AI Infra层的执行力，长期看仍掌握标准制定和托管服务的主动权。\n\n2. **看空风险**\n\n第一，当前缺失对Claude Desktop、Claude Code、Cursor、ChatGPT的兼容，等同于将Azure DevOps排除在当前最活跃的AI编程工作流之外。Cursor和Claude Code是开发者增速最快的工具链，开发者若被迫二选一，倾向放弃Azure DevOps的概率不低，这可能加速企业DevOps市场向GitHub（虽属微软但品牌独立）、GitLab或Atlassian的迁移。第二，DCR/CIMD并非前沿技术，而是行业已有共识的OAuth扩展，微软Entra ID至今未支持，暴露出身份基础设施迭代节奏落后于AI生态演化速度，叠加GitHub品牌独立运作的定位冲突，\"Azure DevOps vs GitHub\"内部竞争可能进一步稀释微软在企业DevOps的话语权。第三，事件虽标注为\"developing\"但解决路径不明确，存在被竞争对手借机补位（如GitLab直接推出MCP原生支持）的窗口风险。\n\n3. **关键驱动因素**\n\nEntra ID何时补齐DCR/CIMD规范支持是决定事件方向的核心变量；GitHub Copilot与Azure DevOps MCP的整合深度（是否能提供独家增值体验）是验证\"先自家\"策略成败的关键指标。\n\n4. **市场影响评估**\n\n短期偏中性偏负面——GA本身是积极信号，但兼容性缺口削弱了叙事强度，可能压制市场对Azure DevOps AI化进展的预期；中期取决于修复速度，若3-6个月内补齐DCR/CIMD并接入主流客户端，事件影响可消化；反之将形成持续竞争压力。\n\n5. **时间线推断**\n\n未来1-2个季度需重点跟踪Entra ID对DCR/CIMD的Roadmap更新及GA落地时间；同步关注GitLab、Atlassian是否借机推出原生MCP服务端形成差异化竞争；3-6个月内若未解决兼容性问题，可能从\"中性\"事件升级为Azure DevOps份额压力的信号。",
+      "ticker_counts": {
+        "微软": 1
+      },
+      "max_item_score": 5
+    },
+    "evt_aeeebcac07a1": {
+      "event_id": "evt_aeeebcac07a1",
+      "title": "腾讯“测试中”的Agent钱包，被亚马逊抢先了",
+      "summary": "亚马逊云科技(AWS)宣布其AgentCore Payments正式进入GA(通用可用)阶段，可代替用户直接完成支付。腾讯此前被曝光正在内测类似的Agent钱包功能，但尚未公开上线，亚马逊在该Agent商业化基础设施上抢得先机。",
+      "tickers": [
+        "亚马逊",
+        "腾讯"
+      ],
+      "themes": [
+        "ai_monetization"
+      ],
+      "direction": {
+        "亚马逊": "positive",
+        "腾讯": "neutral"
+      },
+      "item_ids": [
+        "d387220a84354c83aca77f0675c2e6bab4a31d9e"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-21T10:14:01Z",
+      "first_published_at": "2026-08-21T09:53:31Z",
+      "last_updated_at": "2026-08-21T10:14:01Z",
+      "is_active": true,
+      "significance": 5,
+      "status": "developing",
+      "deep_analysis": "1. **看多逻辑**：① AWS抢得Agent支付基础设施先发优势，Agent规模化落地后，支付环节是高频刚需场景，先发者享有生态绑定红利，可拉动AWS整体AI云服务ARPU提升；② 亚马逊企业客户基础雄厚，AgentCore Payments GA意味着可直接嵌入既有B端工作流，冷启动成本低；③ Agent商业化是AI变现的最后一公里，谁掌控支付谁就掌握交易数据与费率定价权，长期想象空间大。\n\n2. **看空风险**：① \"GA\"仅代表可用性，实际接入客户数与交易量尚未验证，Agent支付仍处早期，概念溢价大于实质收入；② 腾讯在中国市场受支付牌照与监管壁垒保护，亚马逊AWS在国内直接服务C端支付场景受限，\"抢先\"未必能转化为腾讯的实际损失；③ 字节、阿里、蚂蚁等国内大厂加速跟进可能形成多极竞争，AWS全球先发优势未必能在中国市场复制。\n\n3. **关键驱动因素**：① 后续1-2个季度AWS AgentCore Payments的签约客户名单与交易GMV数据；② 腾讯Agent钱包的内测转正时间表与是否拿下国内首批Agent支付合规框架。\n\n4. **市场影响评估**：短期对亚马逊情绪面偏正面，腾讯中性偏空但跌幅有限（市场早有预期其布局落后）；中期看实际生态粘性，若AWS能在6个月内跑出标杆客户案例，估值溢价将持续；腾讯若在2026年内推出正式版且绑定微信生态，叙事可迅速反转。\n\n5. **时间线推断**：① 2026Q4—2027Q1关注腾讯Agent钱包正式发布与首批合作Agent应用；② 2027年中期跟踪AWS AgentCore Payments交易量是否突破关键阈值，以判断Agent商业化基础设施是否真正跑通。",
+      "ticker_counts": {
+        "腾讯": 1,
+        "亚马逊": 1
+      },
+      "max_item_score": 5
     }
   }
 }
