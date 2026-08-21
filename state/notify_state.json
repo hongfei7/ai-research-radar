@@ -1,154 +1,7 @@
 {
-  "morning_last_date": "2026-08-21",
+  "morning_last_date": "2026-08-22",
   "weekly_last_slot": "2026-W33",
   "breaking_fingerprints": [
-    {
-      "tickers": [
-        "三星电子",
-        "美光"
-      ],
-      "features": [
-        "bars",
-        "behind",
-        "chinese",
-        "court",
-        "cxmt",
-        "develop",
-        "dram",
-        "engineer",
-        "former",
-        "hears",
-        "ip",
-        "its",
-        "jumped",
-        "maker",
-        "memory",
-        "now",
-        "planned",
-        "samsung",
-        "stolen",
-        "to",
-        "use",
-        "who"
-      ],
-      "sent_at": "2026-08-20T16:01:44Z"
-    },
-    {
-      "tickers": [
-        "OpenAI",
-        "微软",
-        "苹果"
-      ],
-      "features": [
-        "brockman",
-        "greg",
-        "it",
-        "now",
-        "openai"
-      ],
-      "sent_at": "2026-08-20T16:02:17Z"
-    },
-    {
-      "tickers": [
-        "英伟达"
-      ],
-      "features": [
-        "an",
-        "begin",
-        "by",
-        "chinese",
-        "chip",
-        "complies",
-        "control",
-        "customers",
-        "end",
-        "export",
-        "for",
-        "information",
-        "liu",
-        "lpu",
-        "nvidia",
-        "of",
-        "plans",
-        "qianer",
-        "rules",
-        "shipments",
-        "small-batch",
-        "sources",
-        "tailored",
-        "the",
-        "to",
-        "us",
-        "with"
-      ],
-      "sent_at": "2026-08-20T17:33:50Z"
-    },
-    {
-      "tickers": [
-        "英伟达"
-      ],
-      "features": [
-        "12b",
-        "1b",
-        "6b",
-        "at",
-        "deal",
-        "get",
-        "investment",
-        "job",
-        "licensing",
-        "newcomer",
-        "non-exclusive",
-        "nvidia",
-        "offers",
-        "plus",
-        "poolside",
-        "pre-money",
-        "sources",
-        "staffers",
-        "struck",
-        "valuation",
-        "with"
-      ],
-      "sent_at": "2026-08-20T19:48:25Z"
-    },
-    {
-      "tickers": [
-        "Anthropic",
-        "OpenAI",
-        "博通"
-      ],
-      "features": [
-        "60b",
-        "ai",
-        "an",
-        "and",
-        "anthropic",
-        "benefit",
-        "bloomberg",
-        "broadcom",
-        "chip",
-        "companies",
-        "deal",
-        "debt",
-        "financing",
-        "for",
-        "group",
-        "in",
-        "is",
-        "lenders",
-        "of",
-        "other",
-        "raise",
-        "sources",
-        "talks",
-        "that",
-        "to",
-        "will",
-        "with"
-      ],
-      "sent_at": "2026-08-20T21:06:30Z"
-    },
     {
       "tickers": [
         "Anthropic"
@@ -660,44 +513,51 @@
     }
   ],
   "last_report": {
-    "date": "2026-08-21",
+    "date": "2026-08-22",
     "macro": {
-      "cycle": "扩张第三年向第四年过渡, 头部四家云厂季度 capex 合计已超 900 亿美元、同比仍扩张 40% 以上但环比斜率首次转平, Anthropic Q2 年化营收已从 470 亿跳升至 650 亿美元, 企业推理续费接棒训练叙事, 需求侧从 capex 增速驱动切换到营收兑现驱动, 同时阿里 AI 相关 ARR 单季突破 495 亿元、占云外部收入 35%, 中国云首次出现可量化的 AI 收入曲线, 头部玩家 capex 回报锚定在 2 至 3 年回本框架, 使扩张具备现金流支撑而非纯靠融资",
+      "cycle": "扩张第三年向第四年过渡, 头部四家云厂季度 capex 合计仍维持在 900 亿美元以上、同比扩张 40% 以上, 但本季环比斜率首次转平, 同时阿里 FY2027Q1 单季资本开支 676.78 亿元、同比+75% 远超市场预期约 360 亿元, 中美头部已共同进入营收兑现与回本框架约束并行的阶段",
       "trajectory": {
         "past": "晶圆制程产能",
         "now": "HBM 容量与 CoWoS 双约束",
         "next": "数据中心电力与单机柜功率",
-        "why_now": "B200/Rubin 单卡功耗跨过 1kW 后, HBM 堆叠层数增加抬升封装热密度, CoWoS 产线被 Google TPU、AMD MI 系列、博通 ASIC 多线并抢, 加上味之素 ABF 基板对华削减 30% 供货进一步推高封装链边际成本",
-        "trigger": "若单机柜功率密度普遍突破 130kW, 或北美超大规模园区电力接入审批成为交付主延迟项"
+        "why_now": "B200/Rubin 单卡功耗跨过 1kW 之后, HBM 堆叠层数继续抬升封装热密度, CoWoS 又被 Google TPU、AMD MI 系列、博通 ASIC 多线争抢, 味之素 ABF 基板对华削减 30% 供货进一步推高边际成本",
+        "trigger": "若单机柜功率密度普遍突破 130kW, 或北美超大规模园区电力接入审批成为交付主延迟项, 即视为算力主约束完成向电力段的迁移"
       },
-      "shift": "check 段增补今日 ASIC 融资与跨区域推理对硬约束的再强化, 并加入出口管制向渠道商与本土代工下沉的双向证据, 框架主轴未动",
+      "shift": "trajectory 主轴维持晶圆-封装-电力三段, 但在 check 段正式将电力从'next'的预备段升格为'now'的待溢出段, 并新增 AVO 对智能体中间层价值链的判断",
       "shift_kind": "adjust"
     },
     "calls": [
       {
-        "claim": "ASIC 替代通用 GPU 进入资本结构级兑现, 博通与 Marvell 同时获得超大规模客户以股权/债务对价的多年期绑定",
-        "falsifier": "若 2026Q4 Marvell 股票购买权被 Google 部分或全部弃权, 或博通 600 亿美元融资在 2026 年底前未签署最终协议, 本判断的资本结构级背书失效",
-        "verify": "若 Marvell 股权被部分弃权或博通 600 亿融资未落地, 绑定失效"
+        "claim": "算力主约束正在从先进封装向电力段溢出, 二阶受益方不在英伟达链条",
+        "falsifier": "若 2026Q4 起北美超大规模园区电力接入审批未出现排队或延迟, 或单机柜主流功率密度回落至 100kW 以下, 电力段主约束判断失效",
+        "verify": "若 2026Q4 北美园区未出现电力接入审批延迟, 电力段证伪"
       },
       {
-        "claim": "OpenAI 在 AWS Bedrock 跨区域推理标志着模型分发从单一云绑定走向多云铺货, 议价权从云厂向模型厂迁移, 算力侧 token 消耗强度被结构性放大",
-        "falsifier": "若 Azure 与 OpenAI 在 2026Q4 续签含排他条款的长期协议, 或 OpenAI 跨区域推理单价较 Azure 端高出 20% 以上, 多云分发叙事失效",
-        "verify": "若 Azure 独占协议续签或 OpenAI 跨区域单价回升, 迁移不成立"
+        "claim": "AVO 类智能体系统正在把价值链杠杆点从预训练搬到编排层, 英伟达具备直接吞下中间层的路径",
+        "falsifier": "若 AVO 公开集结果在私有测试集或跨域任务中显著回落(超过 30 个百分点), 或英伟达未在 2026Q4 前将 AVO 类系统整合进 NIM 与 AI Enterprise 的公开路线图, 本判断的整合叙事失效",
+        "verify": "若 AVO 未开源或未并入 NIM, 中间层判断不成立"
       },
       {
-        "claim": "英伟达正从纯算力供应商向算力+模型垂直整合者跃迁, Poolside 整建制并入与定制 LPU 双线补强",
-        "falsifier": "若 Poolside 109 人 offer 在 2026Q4 前大规模撤回(>20%), 或对华 LPU 出货推迟至 2027 年下半年, 本判断的整合叙事失效",
-        "verify": "若 Poolside 109 人团队未实际并入或 LPU 出货推迟, 整合失效"
+        "claim": "中国侧 AI 算力供给形成国产代工与英伟达合规定制双轨, 国产窗口期被两头挤压",
+        "falsifier": "若 2026Q4 中芯 N+2 良率回落至 60% 以下, 或英伟达对华 LPU 单家配额超过 5 万颗并允许大陆部署, 双轨均衡假设失效",
+        "verify": "若英伟达 LPU 对华单家配额超 5 万颗, 双轨松动"
       },
       {
-        "claim": "中国侧 AI 算力供给形成国产代工与合规定制双轨, 中芯国际量价齐升与英伟达对华 LPU 共同压缩纯国产芯片的窗口期",
-        "falsifier": "若中芯 N+2 良率在 2026Q4 回落至 60% 以下, 或英伟达对华 LPU 单家配额超过 5 万颗并允许大陆部署, 本判断的双轨均衡假设失效",
-        "verify": "若中芯 N+2 良率回落或英伟达 LPU 对华配额超 5 万颗, 双轨松动"
+        "claim": "CPO 量产解决可插拔光模块瓶颈, 但物理瓶颈正向 3D 异构堆叠侧迁移",
+        "falsifier": "若 3D 异构堆叠在 2027H1 未实现良率突破, 或 CPO 在超大规模集群中相对可插拔方案未能保持 5 倍能效优势, 本判断的瓶颈迁移假设失效",
+        "verify": "若 3D 异构堆叠良率未在 2027H1 突破, 迁移判断不成立"
       }
     ]
   },
   "morning_fallback": null,
   "blindspot_ledger": [
+    {
+      "key": "AMD|ARM|博通|台积电|戴尔|美光|英伟达|苹果|超微电脑",
+      "text": "本库覆盖审计中, 苹果 30 天 125 条、戴尔 112 条、ARM 99 条、超微电脑 178 条, 但全部为二手转述, 无任何一条来自其自有披露; 台积电 30 天 440 条、博通 294 条、美光 171 条同样全部为二手转载, 我们对先进封装真实稼动率、HBM 库存与定价的判断都建立在二手外推之上, 实际产能口径与官方指引之间可能存在显著偏差; 另本期素材完全未覆盖英伟达对华 LPU 出货节奏、AMD MI 系列在 CSP 客户的实测份额、以及北美三大变压器的交付排期, 这三者任一变量都可能改写主约束的迁移时点",
+      "first_seen": "2026-08-22",
+      "last_seen": "2026-08-22",
+      "times_seen": 1
+    },
     {
       "key": "ARM|ASML|Intel|Meta|OpenAI|博通|台积电|微软|戴尔|美光|苹果|高通",
       "text": "我们对台积电、博通、Meta、美光、ASML、高通、Intel、苹果、戴尔、ARM 这十家结构性覆盖标的, 近 30 天分别有 453、302、222、169、151、149、130、130、118、106 条相关信息进入本库, 但全部为二手转述与同业外推, 无一条来自其自有披露通道, 即所有关于产能、良率、客户结构与制程节奏的判断均建立在二手叙事之上。微软虽是 thin 档(391 条)但已 17 天未拿到自有披露, 对其 Azure 端 OpenAI 独占协议与跨云分销后的真实份额变化, 同样无法做一手验证",
