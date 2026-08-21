@@ -1,6 +1,32 @@
 {
   "candidates": [
     {
+      "id": "8540075a92ae2c645c46cff921460a45b660995b",
+      "title": "ASU 魏华：大模型智能体正在重蹈强化学习的覆辙，如何跨越「仿真到现实」的鸿沟？ | IJCAI 2026",
+      "url": "https://www.leiphone.com/category/private/ra5ho5wx7phyj86b.html",
+      "source": "rss:leiphone",
+      "published_at": "2026-08-21T03:11:00Z",
+      "raw_summary": "当大语言模型化身为智能体走向真实世界，它们面临的困境，与十年前在十字路口指挥交通的强化学习模型如出一辙。&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;作者丨岑峰&nbsp;幸丽娟&nbsp; &nbsp; 编辑丨岑峰&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;在通往 AGI 的浪潮中，基础模型智能体（Foundation Model Agents）正以前所未有的速度接管各种任务。业界曾普遍乐观地认为，凭借大模型海量的预训练知识，智能体可以无缝适应各种真实场景。但在现实中，当我们将一个在英文语境下表现完美的智能体，切换到中文或低资源语言环境中时，其错误率往往会呈现断崖式上升。这种环境切换带来的“智力降级”，真的是大模型时代特有的新问题吗？在正在进行的 2026 年的德国不莱梅 IJCAI大会的 Early Career Spotlight（早期职业焦点）环节，亚利桑那州立大学（ASU）助理教授魏华给出了一个极具启发性的“降维”视角：今天大模型智能体所面临的脆弱性，本质上与传统强化学习（RL）在物理世界中遭遇的“仿真到现实（Sim-to-Real）”差距如出一辙。作为长期深耕强化学习与真实世界决策的学者，魏华教授早年曾在腾讯 AI Lab 担任研究员，后于新泽西理工学院和 ASU 任教。早在2017 年，魏华团队就通过一系列 KDD论文证明了强化学习能够完美复现传统的“绿波”优化解，甚至能找到更优的调度策略。但随着研究从实验室走向中国杭州等真实复杂路网，他发现，完美的模拟器是不存在的。天气、摄像头视角、甚至奖励函数的定义，在真实世界中都存在着致命的偏差。实验室中取得的完美结果一旦部署到真实的街头，面对大雨、大雾以及穿行的行人，AI 的决策就会瞬间崩溃。在此次 IJCAI 的演讲中，魏华巧妙地将“交通信号灯”与“大语言模型”连接了起来。他指出，无论是机器人、强化学习还是今天的大模型智能体，只要涉及决策与执行，就必然面临动态差距、观察差距和奖励差距。更为重要的是，他提出，既然问题的本质相同，我们完全可以将机器人领域成熟的“域随机化（Domain Randomization）”等技术，直接“平移”到大模型智能体中。最新的实验证明，通过对智能体的提示词、动作和奖励空间进行随机化扰动，一个仅 30 亿参数（3B）的模型，在应对跨语言等“仿真到现实”难题时，其表现甚至能击败 320 亿参数（32B）的庞然大物。此外，魏华强调了“不确定性量化”与“人类在环（Human-in-the-loop）”的终极价值：智能体可以无限扩展，但不能增加人类的监督负担。机器必须知道自己“何时不知道”，并精准地向人类求助。以下是魏华教授的演讲分享，演讲题目为《Towards Reliable Ag",
+      "score": 9,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "IJCAI 2026上ASU魏华对LLM Agent与强化学习类比的深度论述，涉及sim-to-real鸿沟的可检验观点。",
+      "queued_at": "2026-08-21T05:17:15Z"
+    },
+    {
+      "id": "d76bf30ad823e5909724f255ea91599b5d3ca0b2",
+      "title": "Qwen3.8-27B at 262K context on a Strix Halo + RTX 3090 Ti: 9.5 -> 153 tok/s, and it beats a dual-3090 vLLM box on HumanEval",
+      "url": "https://www.reddit.com/r/localllama/comments/1vu7yce/qwen3827b_at_262k_context_on_a_strix_halo_rtx",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-21T06:06:07Z",
+      "raw_summary": "Spent a while treating layer placement, KV format and llama.cpp itself as experimental variables. 159 logged experiments. Numbers first, caveats after. Hardware: AMD Ryzen AI MAX+ 395 (Strix Halo, 128 GB unified) + RTX 3090 Ti on an eGPU link. One llama.cpp process, AMD on Vulkan, NVIDIA on CUDA, one 27B model split across both. Baseline: 9.474 tok/s. Target-only, no speculation, AMD side alone. Now, code-shaped generation: 32K context: 153.32 tok/s 200K context: 87.74 tok/s HumanEval, 164 problems, driven by a real coding agent (pi-agent), graded by executing the official tests: Local: 159/164 in 29.7 min Remote 2x RTX 3090 running vLLM TP2: 157/164 in 42.4 min Long-context retrieval suite: 15/15, 352 s local vs 551 s on the remote. Things that actually moved the needle, roughly in order of surprise: The chat template. Swapping to a terser template (Qwen-Sharp) cut wall time 44% and output tokens 51%, with no accuracy change. Bigger than several weeks of GPU work. It just stops the model narrating. KV cache format as a placement lever. Going q8_0 -&gt; q4_0 on both K and V freed exactly 2,176 MiB, which was enough to move every full-attention layer onto the fast card at full 262K. +28% prefill, +20% generation. Qwen3.8 is 3:1 Gated DeltaNet to full attention, so only 16 of 64 layers have KV at all, and those are the only ones whose cost scales with context. Which layer sits on which GPU matters enormously. --spec-type draft-mtp,ngram-mod. The flag accumulates. n-gram on top ",
+      "score": 9,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "159 次实验详尽记录 Strix Halo+RTX 异构推理从 9.5→153 tok/s 的调优过程，含具体 KV/layer 策略，可直接复现参考。",
+      "queued_at": "2026-08-21T07:58:24Z"
+    },
+    {
       "id": "dba996ecd51b5c5d8926c15b49011b3cfd807197",
       "title": "AI4AI-Bench: Benchmarking LLM Agents in Algorithmic Design for Recursive Self-Improvement [Yizhe Chi, Wenyi Li, Deyao Hong, Xiaoqiu Wang, Mingju Gao]",
       "url": "http://arxiv.org/abs/2608.20318v1",
@@ -38,6 +64,110 @@
       "source_traceable": true,
       "why": "SK海力士在Nature Electronics上的CPO路线图论文给出100 Tb/s、<1 pJ/bit、<10 ns三大量化目标，并联姻英伟达，是下一代AI光互连架构的重要一手材料。",
       "queued_at": "2026-08-21T02:47:42Z"
+    },
+    {
+      "id": "1fd99b105cbf0c357c4dfec3ca9b295c78c21004",
+      "title": "I pushed Qwen3.8-27B to 381 tps for a single request on a RTX 3090",
+      "url": "https://www.reddit.com/r/localllama/comments/1vtup5s/i_pushed_qwen3827b_to_381_tps_for_a_single",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-20T20:15:04Z",
+      "raw_summary": "Four days ago I released a hyper-optimized Qwen3.8-27B inference engine for an RTX 3090 (82 tps single request, 672 peak). Since then it went to ~114, then ~138 tps single-user with DFlash2 drafting and lookup-augmented drafting. Today it's ~133 tps on real chat prompts, 382 tps when the model reproduces its own context, and the number I care about most this time: a document-quoting workload now runs at 15 of 16 tokens accepted per verify step. What we had: - fp8 KV cache, lm_head + embed_tokens int8, fp16 recurrent state, int8 activations, DFlash2 block drafting (W4A16-requantized), lookup-augmented drafting, prefix caching for the hybrid, split-KV verify attention, sampler patch, KVarN for 262k context Now added: - Longer verify blocks. DFlash2 only drafts 7 tokens and I'd assumed the verify block had to match. It doesnt. The lookup drafter fills the extra slots from the request's own context for free. DFLASH_TOKENS=15 verifies 16 tokens per step: 260 to 382 tps reproducing a 25k-token document, +9% on ordinary chat. Costs half the request slots and 8k of context, so it's opt-in. - DFlash2 past 64k. bf16 KV is 64 KB/token and teh pinned pool is 5.2 GiB, which is what capped it. An int8 cache roughly doubles it, 138,696 tokens instead of 69,758. Two fixes were needed: vLLM equalises KV page sizes by an integer block ratio, and the drafter's 5 sliding-window layers were wasting 5.2 GiB at 1.88% utilisation until I rounded their block size from 16 to 864. - Honest result: +53%",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Qwen3.8-27B在RTX 3090上的深度推理优化（fp8 KV cache、DFlash2 drafting等），含具体tps数据和量化细节，工程价值高。",
+      "queued_at": "2026-08-21T03:53:12Z"
+    },
+    {
+      "id": "2ec20396c2d718181b4253f34e062d927183ae86",
+      "title": "SenseNova U1.5-Lite full release: expert training, OPD distillation, one model at inference",
+      "url": "https://www.reddit.com/r/localllama/comments/1vu5dzi/sensenova_u15lite_full_release_expert_training",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-21T03:52:03Z",
+      "raw_summary": "Benchmarks: Benchmark U1 Preview Full Qwen-Image-Bench 47.14 55.20 (PE) 60.18 (PE) ImgEdit 3.9 4.37 4.59 GEdit-Bench-EN 7.47 8.14 8.26 Instead of just scaling up, they train task-specialized expert models for text rendering and infographics, aesthetic quality, and image editing. Then OPD consolidates those experts back into U1.5-Lite. At inference you get one model. No router, no expert switching, no manual selection. The slogan they use: specialized in training, unified in delivery. Post-training now includes task-oriented RL with three user-visible objectives: instruction adherence, visual quality and preference alignment, and edit fidelity with preservation of untouched regions. What improved: Complex instruction following. Multiple constraints in one request (subjects, counts, spatial relationships, text, layout, style, preservation requirements) handled more consistently. Text rendering and dense layouts. Chinese and English in posters and infographics. Native 4K generation with stable global structure. Native editing with better preservation of subject identity, geometry, and unedited regions. Multi-reference editing and precise local edits included. Visual understanding strengthens generation. Representations learned from understanding tasks (object relations, spatial structure, layout, info hierarchy) transfer to generation and editing. JSON-structured supervision is used as a training mechanism for controllability, not a mandatory user-facing format. Natural language",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "SenseNova U1.5-Lite提出\"specialized in training, unified in delivery\"的专家训练+OPD蒸馏路线，benchmark涨幅明显，值得读原文看方法细节。",
+      "queued_at": "2026-08-21T04:41:08Z"
+    },
+    {
+      "id": "852a43816123f6f4902ca6aa22b2fa5c4a087580",
+      "title": "FlashPrefill V2: Block-Sparse Prefill Attention for Long-Context LLM Serving",
+      "url": "https://arxiv.org/abs/2608.19758",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-20T04:02:55Z",
+      "raw_summary": "FlashPrefill V2 improves long-context serving via mean-corrected sparse attention, optimized GPU operators, and framework integration, achieving large speedups over dense baselines.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "FlashPrefill V2对长上下文prefill做block-sparse attention，给出GPU算子优化与速度数据，是可复现的serving优化方向。",
+      "queued_at": "2026-08-21T04:41:08Z"
+    },
+    {
+      "id": "d1318ed69e360932b611a0fcfdbb347018b085a8",
+      "title": "星动纪元陈建宇：VLA 非终局，具身大脑已进入世界模型时代 | WRC 2026",
+      "url": "https://www.leiphone.com/category/private/kz4iq31np4vb8cep.html",
+      "source": "rss:leiphone",
+      "published_at": "2026-08-21T03:14:00Z",
+      "raw_summary": "当机器人开始理解世界，通用智能才进入物理空间。&nbsp; &nbsp; 作者丨吴思梦 陈嘉欣&nbsp; &nbsp; 编辑丨岑 &nbsp; 峰&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;过去几年，机器人解决的问题是“如何更精准地执行动作”。在工业生产线上，机器人可以完成焊接、搬运、装配等大量重复任务，但这些能力建立在一个前提之上：环境、流程和目标都已经被提前定义。机器人并不需要真正理解世界，只需要按照预设路径完成任务。但当机器人开始走出工厂，进入物流、服务甚至家庭场景，问题正在发生变化。面对一个没有见过的物体、一个没有训练过的任务，机器人能不能理解环境、预测变化，并找到完成任务的方法？这成为通用机器人走向下一阶段必须回答的问题。大模型的发展为机器人提供了新的可能。语言模型证明，人工智能可以通过大规模数据学习复杂规律，并获得跨任务泛化能力。但机器人面对的并不是语言世界，而是真实的物理世界。因此，具身智能领域正在探索一个更底层的问题：大模型究竟应该如何赋能机器人？目前行业的主流方向是 VLA。它让机器人通过学习大量人类行为数据，将视觉、语言和动作统一起来。但 VLA 的核心仍然是模仿——模型学习人类过去如何行动。问题在于，如果机器人面对一个从未见过的新任务，仅依靠已有动作经验，是否能够真正泛化？另一条更激进的路线，是让机器人拥有世界模型。它不只是学习“应该做什么动作”，而是尝试理解物理世界运行的规律，并预测未来可能发生什么。在 WRC 2026 大会上，星动纪元创始人、CEO 陈建宇提出了自己的判断：世界模型可能不仅是 VLA 的增强模块，而可能成为下一代具身智能的核心范式。他更强调机器人作为物理智能体的特殊性。模型的进化并不只依赖数据规模，还需要通过本体进入真实世界，在真实交互中获得反馈。大脑、本体和场景并不是三个独立环节，而是在持续循环中共同演化。以下为陈建宇演讲内容精编，雷峰网·AI 科技评论在不改变原意的基础上进行编辑和整理。01&nbsp; 通用机器人的两个特征，与协同进化的飞轮终端之后的下一代智能终端产品，很可能是以某种家用机器人的形式存在的。这里最关键的一点，是能不能打造出更加通用的机器人。我认为，这样的机器人必须具备两个特征。第一个特征是上限更高：拥有更高的自由度、更高的智能，能够做到许多以前的机器人做不到的事情，从而把整个市场打开。第二个特征是更加通用、泛化性更强：当我们去做一件新的事情时，不再像以前的专用机器那样需要重新开发硬件和软件，绝大部分能力都可以直接复用与泛化。要打造这样一个通用机器，避不开两件事：同时做它的“大脑”和它的“本体”。围绕这个目标，我们这几年已经实现了通用机器人软硬一体、全栈自研的多项突破。在大脑侧，自研了支撑端到端的大模型运动控制；",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": false,
+      "why": "星动纪元提出VLA不是终局、具身大脑进入世界模型时代的路线判断，属具身智能关键技术路线之争。",
+      "queued_at": "2026-08-21T05:17:15Z"
+    },
+    {
+      "id": "e3b6be7fbd248fae7da40937f089dd7aecc7ba7d",
+      "title": "Towards Quantifying Benchmark Optimization in ASR Models",
+      "url": "https://arxiv.org/abs/2608.19936",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-19T20:00:00Z",
+      "raw_summary": "High-performing speech recognition models reproduce benchmark transcripts despite contradictory audio, revealing benchmark-optimized behaviors that inflate scores without improving real-world transcription.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "针对ASR模型在benchmark上过度优化、与真实音频矛盾的量化研究，直指评估体系可信度问题，对理解模型评测范式很有价值",
+      "queued_at": "2026-08-21T05:59:02Z"
+    },
+    {
+      "id": "c2f3320c5c85de01dfe34445d149cd6ff6f39523",
+      "title": "小红书悄悄开源发布了自己的大模型，内容平台也要造底座",
+      "url": "http://www.geekpark.net/news/369161",
+      "source": "rss:geekpark",
+      "published_at": "2026-08-21T06:12:45Z",
+      "raw_summary": "&nbsp; 头图来源：chatgpt 生成 &nbsp; 前几天，我们注意小红书在海外发布了一款大模型 dots3-note preview。 这款模型采用 MoE 架构，总参数 280B、激活参数 16B，支持 512K 上下文，并具备文本、视觉、语音的多模态理解能力。它属于 dots3 系列，后续还将有 jazz、aria 等不同定位的版本。作为先行发布的 note 版本，它更像是小红书将模型能力推向实际业务和开发者生态的第一步。 模型上线后，海外开发者社区很快开始讨论，Hugging Face 下载量破百，华为昇腾也在当天宣布完成适配；但在国内，这次发布暂时还没有掀起太大水花。 在这件事上，值得注意的并不只是又多了一款开源模型，而是小红书开始公开展示自己的基础模型能力。 作为一家月活超过 3 亿的平台，小红书拥有海量图文和视频内容，也积累了用户从「想去哪里」「买什么」到「如何解决一个生活问题」的消费决策数据。它选择自研并开源模型，意味着AI 在小红书内部的角色，可能正在从搜索、推荐或创作工具中的一个功能，变成支撑整套产品能力的底座。 如果把大模型看作数字世界的「工业母机」，这个动作就更容易理解。它本身不是最终产品，却决定了搜索、推荐、内容创作和智能服务等上层能力的精度与迭代速度。对一个体量足够大的平台而言，长期完全依赖外部模型，并不是一个稳妥的选择。 小红书做模型，还开源了 dots3-note preview 是一款 MoE 模型：总参数 280B，激活参数 16B，支持 512K 上下文，同时覆盖文本、视觉和语音理解。 它属于 dots3 系列。小红书披露，这个系列此前曾在 IMO 2026 获得官方认证的满分成绩。此次发布的 note，是系列中更强调效率和实际部署的版本；后续还将推出 jazz 和 aria，覆盖不同的能力与成本区间。 从公开评测看，dots3-note preview 在推理、Agent 和多模态任务中给出了有竞争力的成绩。比如在 ARC-AGI-3、个人助理类任务上，它的表现超过了一部分参数规模更大的模型；但在终端操作、复杂编程等任务上，与头部模型仍有差距。 也就是说，它更像是在发布一块已经能上手使用、但仍会继续演进的能力模块。 而这恰恰更接近大模型竞争进入下一阶段后的现实：模型不只比谁在榜单上更高，更要看谁能进入真实产品，谁能被更低成本、更稳定地调用，谁能在具体场景里持续迭代。 小红书同时选择了 Apache 2.0 协议开源，并同步发布在 Hugging Face 和 GitHub。 开源当然有直接收益。 新模型最需要的是测试、反馈和生态支持。开发者会把它部署到不同硬件上，带到不同任务里，发现它在哪些地方有效、又会在哪些地方失效。华为昇腾的 0 Day 适配，就是这种生态协作速度的一个例子。 但开源的意义不止于此。 对过去在大模型领域相对低调的小红书来说，这也是一次面向技术社区的公开表达。模型、评测集、代码和部署适配，构成了可被开发者检验的技术语言。它能够让外界更具体地理解：小红书不只是在应用层接入 AI，也在参与底层能力的建设。 此次同时开放的 VibeSearchBench 与 VibeLifeBench，前者考察用户意图逐步披露时的多轮搜索能力，后者聚焦非静态环境下的跨阶段任务执行。它们并没有选择最泛化的命题，而是指向搜索与真实生活服务&mdash;&mdash;这恰好是小红书最有可能建立差异化的领域。 换句话说，小红书不只是做一个模型，也在尝试定义：什么样的 Agent，才算真正理解用户的生活需求。 ",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "小红书开源dots3-note（280B MoE/16B激活/512K/多模态）并已上Hugging Face与昇腾适配，可作为内容平台自建基础模型的架构选型参考。",
+      "queued_at": "2026-08-21T07:01:09Z"
+    },
+    {
+      "id": "7752b12eb0705682962fd581f83a3ad32d854122",
+      "title": "AI智能体之间也会“传染”：Anthropic揭示“思维病毒”",
+      "url": "https://www.tmtpost.com/8108120.html",
+      "source": "rss:tmtpost",
+      "published_at": "2026-08-21T06:53:43Z",
+      "raw_summary": "一条错误的想法，能不能像病毒一样，在一群AI智能体之间靠“聊天”疯狂传播？Anthropic最新论文给出的答案是：能。",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Anthropic关于AI Agent间\"思维病毒\"传播的论文，触及多智能体系统安全与可解释性这一前沿议题。",
+      "queued_at": "2026-08-21T07:01:09Z"
+    },
+    {
+      "id": "acf3806c08aca66d997f22925fae0f461916cbf1",
+      "title": "Listening Forward: Next Patch Embedding Prediction Enables Scalable Audio Learners",
+      "url": "https://arxiv.org/abs/2608.19863",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-19T20:00:00Z",
+      "raw_summary": "NAPE uses causal Transformers to predict successive spectrogram patch embeddings for self-supervised audio learning without auxiliary components.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "NAPE 用因果 Transformer 预测频谱 patch embedding 做自监督音频学习，提出可检验的新范式，指向具体论文。",
+      "queued_at": "2026-08-21T07:58:24Z"
     },
     {
       "id": "682d6f8ae32ce451461c9d877ec301776fe01265",
@@ -235,19 +365,6 @@
       "queued_at": "2026-08-21T02:47:42Z"
     },
     {
-      "id": "1fd99b105cbf0c357c4dfec3ca9b295c78c21004",
-      "title": "I pushed Qwen3.8-27B to 381 tps for a single request on a RTX 3090",
-      "url": "https://www.reddit.com/r/localllama/comments/1vtup5s/i_pushed_qwen3827b_to_381_tps_for_a_single",
-      "source": "reddit:localllama",
-      "published_at": "2026-08-20T20:15:04Z",
-      "raw_summary": "Four days ago I released a hyper-optimized Qwen3.8-27B inference engine for an RTX 3090 (82 tps single request, 672 peak). Since then it went to ~114, then ~138 tps single-user with DFlash2 drafting and lookup-augmented drafting. Today it's ~133 tps on real chat prompts, 382 tps when the model reproduces its own context, and the number I care about most this time: a document-quoting workload now runs at 15 of 16 tokens accepted per verify step. What we had: - fp8 KV cache, lm_head + embed_tokens int8, fp16 recurrent state, int8 activations, DFlash2 block drafting (W4A16-requantized), lookup-augmented drafting, prefix caching for the hybrid, split-KV verify attention, sampler patch, KVarN for 262k context Now added: - Longer verify blocks. DFlash2 only drafts 7 tokens and I'd assumed the verify block had to match. It doesnt. The lookup drafter fills the extra slots from the request's own context for free. DFLASH_TOKENS=15 verifies 16 tokens per step: 260 to 382 tps reproducing a 25k-token document, +9% on ordinary chat. Costs half the request slots and 8k of context, so it's opt-in. - DFlash2 past 64k. bf16 KV is 64 KB/token and teh pinned pool is 5.2 GiB, which is what capped it. An int8 cache roughly doubles it, 138,696 tokens instead of 69,758. Two fixes were needed: vLLM equalises KV page sizes by an integer block ratio, and the drafter's 5 sliding-window layers were wasting 5.2 GiB at 1.88% utilisation until I rounded their block size from 16 to 864. - Honest result: +53%",
-      "score": 8,
-      "angle": "engineering",
-      "source_traceable": true,
-      "why": "Qwen3.8-27B在RTX 3090上的深度推理优化（fp8 KV cache、DFlash2 drafting等），含具体tps数据和量化细节，工程价值高。",
-      "queued_at": "2026-08-21T03:53:12Z"
-    },
-    {
       "id": "3e1fa00cf38e7dec479302c2addab3cc303d82d9",
       "title": "“AI4S”进入深水区，国产算力如何满足需求？丨ToB产业观察",
       "url": "https://www.tmtpost.com/8111478.html",
@@ -287,32 +404,6 @@
       "queued_at": "2026-08-21T03:53:12Z"
     },
     {
-      "id": "2ec20396c2d718181b4253f34e062d927183ae86",
-      "title": "SenseNova U1.5-Lite full release: expert training, OPD distillation, one model at inference",
-      "url": "https://www.reddit.com/r/localllama/comments/1vu5dzi/sensenova_u15lite_full_release_expert_training",
-      "source": "reddit:localllama",
-      "published_at": "2026-08-21T03:52:03Z",
-      "raw_summary": "Benchmarks: Benchmark U1 Preview Full Qwen-Image-Bench 47.14 55.20 (PE) 60.18 (PE) ImgEdit 3.9 4.37 4.59 GEdit-Bench-EN 7.47 8.14 8.26 Instead of just scaling up, they train task-specialized expert models for text rendering and infographics, aesthetic quality, and image editing. Then OPD consolidates those experts back into U1.5-Lite. At inference you get one model. No router, no expert switching, no manual selection. The slogan they use: specialized in training, unified in delivery. Post-training now includes task-oriented RL with three user-visible objectives: instruction adherence, visual quality and preference alignment, and edit fidelity with preservation of untouched regions. What improved: Complex instruction following. Multiple constraints in one request (subjects, counts, spatial relationships, text, layout, style, preservation requirements) handled more consistently. Text rendering and dense layouts. Chinese and English in posters and infographics. Native 4K generation with stable global structure. Native editing with better preservation of subject identity, geometry, and unedited regions. Multi-reference editing and precise local edits included. Visual understanding strengthens generation. Representations learned from understanding tasks (object relations, spatial structure, layout, info hierarchy) transfer to generation and editing. JSON-structured supervision is used as a training mechanism for controllability, not a mandatory user-facing format. Natural language",
-      "score": 8,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "SenseNova U1.5-Lite提出\"specialized in training, unified in delivery\"的专家训练+OPD蒸馏路线，benchmark涨幅明显，值得读原文看方法细节。",
-      "queued_at": "2026-08-21T04:41:08Z"
-    },
-    {
-      "id": "852a43816123f6f4902ca6aa22b2fa5c4a087580",
-      "title": "FlashPrefill V2: Block-Sparse Prefill Attention for Long-Context LLM Serving",
-      "url": "https://arxiv.org/abs/2608.19758",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-20T04:02:55Z",
-      "raw_summary": "FlashPrefill V2 improves long-context serving via mean-corrected sparse attention, optimized GPU operators, and framework integration, achieving large speedups over dense baselines.",
-      "score": 8,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "FlashPrefill V2对长上下文prefill做block-sparse attention，给出GPU算子优化与速度数据，是可复现的serving优化方向。",
-      "queued_at": "2026-08-21T04:41:08Z"
-    },
-    {
       "id": "b98f89cea4edca4117c45f50db04818f8f0a0c15",
       "title": "模型不拼参数拼闭环、讲家庭场景落地，今年的大会不再「性感」丨直击WRC2026",
       "url": "https://36kr.com/p/3948754198117504?f=rss",
@@ -339,32 +430,6 @@
       "queued_at": "2026-08-21T04:41:08Z"
     },
     {
-      "id": "8540075a92ae2c645c46cff921460a45b660995b",
-      "title": "ASU 魏华：大模型智能体正在重蹈强化学习的覆辙，如何跨越「仿真到现实」的鸿沟？ | IJCAI 2026",
-      "url": "https://www.leiphone.com/category/private/ra5ho5wx7phyj86b.html",
-      "source": "rss:leiphone",
-      "published_at": "2026-08-21T03:11:00Z",
-      "raw_summary": "当大语言模型化身为智能体走向真实世界，它们面临的困境，与十年前在十字路口指挥交通的强化学习模型如出一辙。&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;作者丨岑峰&nbsp;幸丽娟&nbsp; &nbsp; 编辑丨岑峰&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;在通往 AGI 的浪潮中，基础模型智能体（Foundation Model Agents）正以前所未有的速度接管各种任务。业界曾普遍乐观地认为，凭借大模型海量的预训练知识，智能体可以无缝适应各种真实场景。但在现实中，当我们将一个在英文语境下表现完美的智能体，切换到中文或低资源语言环境中时，其错误率往往会呈现断崖式上升。这种环境切换带来的“智力降级”，真的是大模型时代特有的新问题吗？在正在进行的 2026 年的德国不莱梅 IJCAI大会的 Early Career Spotlight（早期职业焦点）环节，亚利桑那州立大学（ASU）助理教授魏华给出了一个极具启发性的“降维”视角：今天大模型智能体所面临的脆弱性，本质上与传统强化学习（RL）在物理世界中遭遇的“仿真到现实（Sim-to-Real）”差距如出一辙。作为长期深耕强化学习与真实世界决策的学者，魏华教授早年曾在腾讯 AI Lab 担任研究员，后于新泽西理工学院和 ASU 任教。早在2017 年，魏华团队就通过一系列 KDD论文证明了强化学习能够完美复现传统的“绿波”优化解，甚至能找到更优的调度策略。但随着研究从实验室走向中国杭州等真实复杂路网，他发现，完美的模拟器是不存在的。天气、摄像头视角、甚至奖励函数的定义，在真实世界中都存在着致命的偏差。实验室中取得的完美结果一旦部署到真实的街头，面对大雨、大雾以及穿行的行人，AI 的决策就会瞬间崩溃。在此次 IJCAI 的演讲中，魏华巧妙地将“交通信号灯”与“大语言模型”连接了起来。他指出，无论是机器人、强化学习还是今天的大模型智能体，只要涉及决策与执行，就必然面临动态差距、观察差距和奖励差距。更为重要的是，他提出，既然问题的本质相同，我们完全可以将机器人领域成熟的“域随机化（Domain Randomization）”等技术，直接“平移”到大模型智能体中。最新的实验证明，通过对智能体的提示词、动作和奖励空间进行随机化扰动，一个仅 30 亿参数（3B）的模型，在应对跨语言等“仿真到现实”难题时，其表现甚至能击败 320 亿参数（32B）的庞然大物。此外，魏华强调了“不确定性量化”与“人类在环（Human-in-the-loop）”的终极价值：智能体可以无限扩展，但不能增加人类的监督负担。机器必须知道自己“何时不知道”，并精准地向人类求助。以下是魏华教授的演讲分享，演讲题目为《Towards Reliable Ag",
-      "score": 9,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "IJCAI 2026上ASU魏华对LLM Agent与强化学习类比的深度论述，涉及sim-to-real鸿沟的可检验观点。",
-      "queued_at": "2026-08-21T05:17:15Z"
-    },
-    {
-      "id": "d1318ed69e360932b611a0fcfdbb347018b085a8",
-      "title": "星动纪元陈建宇：VLA 非终局，具身大脑已进入世界模型时代 | WRC 2026",
-      "url": "https://www.leiphone.com/category/private/kz4iq31np4vb8cep.html",
-      "source": "rss:leiphone",
-      "published_at": "2026-08-21T03:14:00Z",
-      "raw_summary": "当机器人开始理解世界，通用智能才进入物理空间。&nbsp; &nbsp; 作者丨吴思梦 陈嘉欣&nbsp; &nbsp; 编辑丨岑 &nbsp; 峰&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;过去几年，机器人解决的问题是“如何更精准地执行动作”。在工业生产线上，机器人可以完成焊接、搬运、装配等大量重复任务，但这些能力建立在一个前提之上：环境、流程和目标都已经被提前定义。机器人并不需要真正理解世界，只需要按照预设路径完成任务。但当机器人开始走出工厂，进入物流、服务甚至家庭场景，问题正在发生变化。面对一个没有见过的物体、一个没有训练过的任务，机器人能不能理解环境、预测变化，并找到完成任务的方法？这成为通用机器人走向下一阶段必须回答的问题。大模型的发展为机器人提供了新的可能。语言模型证明，人工智能可以通过大规模数据学习复杂规律，并获得跨任务泛化能力。但机器人面对的并不是语言世界，而是真实的物理世界。因此，具身智能领域正在探索一个更底层的问题：大模型究竟应该如何赋能机器人？目前行业的主流方向是 VLA。它让机器人通过学习大量人类行为数据，将视觉、语言和动作统一起来。但 VLA 的核心仍然是模仿——模型学习人类过去如何行动。问题在于，如果机器人面对一个从未见过的新任务，仅依靠已有动作经验，是否能够真正泛化？另一条更激进的路线，是让机器人拥有世界模型。它不只是学习“应该做什么动作”，而是尝试理解物理世界运行的规律，并预测未来可能发生什么。在 WRC 2026 大会上，星动纪元创始人、CEO 陈建宇提出了自己的判断：世界模型可能不仅是 VLA 的增强模块，而可能成为下一代具身智能的核心范式。他更强调机器人作为物理智能体的特殊性。模型的进化并不只依赖数据规模，还需要通过本体进入真实世界，在真实交互中获得反馈。大脑、本体和场景并不是三个独立环节，而是在持续循环中共同演化。以下为陈建宇演讲内容精编，雷峰网·AI 科技评论在不改变原意的基础上进行编辑和整理。01&nbsp; 通用机器人的两个特征，与协同进化的飞轮终端之后的下一代智能终端产品，很可能是以某种家用机器人的形式存在的。这里最关键的一点，是能不能打造出更加通用的机器人。我认为，这样的机器人必须具备两个特征。第一个特征是上限更高：拥有更高的自由度、更高的智能，能够做到许多以前的机器人做不到的事情，从而把整个市场打开。第二个特征是更加通用、泛化性更强：当我们去做一件新的事情时，不再像以前的专用机器那样需要重新开发硬件和软件，绝大部分能力都可以直接复用与泛化。要打造这样一个通用机器，避不开两件事：同时做它的“大脑”和它的“本体”。围绕这个目标，我们这几年已经实现了通用机器人软硬一体、全栈自研的多项突破。在大脑侧，自研了支撑端到端的大模型运动控制；",
-      "score": 8,
-      "angle": "route",
-      "source_traceable": false,
-      "why": "星动纪元提出VLA不是终局、具身大脑进入世界模型时代的路线判断，属具身智能关键技术路线之争。",
-      "queued_at": "2026-08-21T05:17:15Z"
-    },
-    {
       "id": "4eb81744559e043ba37e7237b511a887c225a27a",
       "title": "星海图高继扬：具身智能的终极商业模式，是售卖「物理世界 Token」 | WRC 2026",
       "url": "https://www.leiphone.com/category/private/89qh7jtntlu3rknk.html",
@@ -376,19 +441,6 @@
       "source_traceable": false,
       "why": "星海图提出具身智能'物理世界Token'商业模式，挑战主流卖硬件逻辑，具商业框架价值。",
       "queued_at": "2026-08-21T05:17:15Z"
-    },
-    {
-      "id": "e3b6be7fbd248fae7da40937f089dd7aecc7ba7d",
-      "title": "Towards Quantifying Benchmark Optimization in ASR Models",
-      "url": "https://arxiv.org/abs/2608.19936",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-19T20:00:00Z",
-      "raw_summary": "High-performing speech recognition models reproduce benchmark transcripts despite contradictory audio, revealing benchmark-optimized behaviors that inflate scores without improving real-world transcription.",
-      "score": 8,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "针对ASR模型在benchmark上过度优化、与真实音频矛盾的量化研究，直指评估体系可信度问题，对理解模型评测范式很有价值",
-      "queued_at": "2026-08-21T05:59:02Z"
     },
     {
       "id": "b03796a754bf4056b716907ceba7f033842d0afc",
@@ -430,32 +482,6 @@
       "queued_at": "2026-08-21T05:59:02Z"
     },
     {
-      "id": "c2f3320c5c85de01dfe34445d149cd6ff6f39523",
-      "title": "小红书悄悄开源发布了自己的大模型，内容平台也要造底座",
-      "url": "http://www.geekpark.net/news/369161",
-      "source": "rss:geekpark",
-      "published_at": "2026-08-21T06:12:45Z",
-      "raw_summary": "&nbsp; 头图来源：chatgpt 生成 &nbsp; 前几天，我们注意小红书在海外发布了一款大模型 dots3-note preview。 这款模型采用 MoE 架构，总参数 280B、激活参数 16B，支持 512K 上下文，并具备文本、视觉、语音的多模态理解能力。它属于 dots3 系列，后续还将有 jazz、aria 等不同定位的版本。作为先行发布的 note 版本，它更像是小红书将模型能力推向实际业务和开发者生态的第一步。 模型上线后，海外开发者社区很快开始讨论，Hugging Face 下载量破百，华为昇腾也在当天宣布完成适配；但在国内，这次发布暂时还没有掀起太大水花。 在这件事上，值得注意的并不只是又多了一款开源模型，而是小红书开始公开展示自己的基础模型能力。 作为一家月活超过 3 亿的平台，小红书拥有海量图文和视频内容，也积累了用户从「想去哪里」「买什么」到「如何解决一个生活问题」的消费决策数据。它选择自研并开源模型，意味着AI 在小红书内部的角色，可能正在从搜索、推荐或创作工具中的一个功能，变成支撑整套产品能力的底座。 如果把大模型看作数字世界的「工业母机」，这个动作就更容易理解。它本身不是最终产品，却决定了搜索、推荐、内容创作和智能服务等上层能力的精度与迭代速度。对一个体量足够大的平台而言，长期完全依赖外部模型，并不是一个稳妥的选择。 小红书做模型，还开源了 dots3-note preview 是一款 MoE 模型：总参数 280B，激活参数 16B，支持 512K 上下文，同时覆盖文本、视觉和语音理解。 它属于 dots3 系列。小红书披露，这个系列此前曾在 IMO 2026 获得官方认证的满分成绩。此次发布的 note，是系列中更强调效率和实际部署的版本；后续还将推出 jazz 和 aria，覆盖不同的能力与成本区间。 从公开评测看，dots3-note preview 在推理、Agent 和多模态任务中给出了有竞争力的成绩。比如在 ARC-AGI-3、个人助理类任务上，它的表现超过了一部分参数规模更大的模型；但在终端操作、复杂编程等任务上，与头部模型仍有差距。 也就是说，它更像是在发布一块已经能上手使用、但仍会继续演进的能力模块。 而这恰恰更接近大模型竞争进入下一阶段后的现实：模型不只比谁在榜单上更高，更要看谁能进入真实产品，谁能被更低成本、更稳定地调用，谁能在具体场景里持续迭代。 小红书同时选择了 Apache 2.0 协议开源，并同步发布在 Hugging Face 和 GitHub。 开源当然有直接收益。 新模型最需要的是测试、反馈和生态支持。开发者会把它部署到不同硬件上，带到不同任务里，发现它在哪些地方有效、又会在哪些地方失效。华为昇腾的 0 Day 适配，就是这种生态协作速度的一个例子。 但开源的意义不止于此。 对过去在大模型领域相对低调的小红书来说，这也是一次面向技术社区的公开表达。模型、评测集、代码和部署适配，构成了可被开发者检验的技术语言。它能够让外界更具体地理解：小红书不只是在应用层接入 AI，也在参与底层能力的建设。 此次同时开放的 VibeSearchBench 与 VibeLifeBench，前者考察用户意图逐步披露时的多轮搜索能力，后者聚焦非静态环境下的跨阶段任务执行。它们并没有选择最泛化的命题，而是指向搜索与真实生活服务&mdash;&mdash;这恰好是小红书最有可能建立差异化的领域。 换句话说，小红书不只是做一个模型，也在尝试定义：什么样的 Agent，才算真正理解用户的生活需求。 ",
-      "score": 8,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "小红书开源dots3-note（280B MoE/16B激活/512K/多模态）并已上Hugging Face与昇腾适配，可作为内容平台自建基础模型的架构选型参考。",
-      "queued_at": "2026-08-21T07:01:09Z"
-    },
-    {
-      "id": "7752b12eb0705682962fd581f83a3ad32d854122",
-      "title": "AI智能体之间也会“传染”：Anthropic揭示“思维病毒”",
-      "url": "https://www.tmtpost.com/8108120.html",
-      "source": "rss:tmtpost",
-      "published_at": "2026-08-21T06:53:43Z",
-      "raw_summary": "一条错误的想法，能不能像病毒一样，在一群AI智能体之间靠“聊天”疯狂传播？Anthropic最新论文给出的答案是：能。",
-      "score": 8,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "Anthropic关于AI Agent间\"思维病毒\"传播的论文，触及多智能体系统安全与可解释性这一前沿议题。",
-      "queued_at": "2026-08-21T07:01:09Z"
-    },
-    {
       "id": "33bec45bca5e4074f88b29dc6023be997aec63f5",
       "title": "韩国主要半导体设备商订单积压量预计比去年年底翻一番",
       "url": "https://36kr.com/newsflashes/3948890392722818?f=rss",
@@ -480,6 +506,19 @@
       "source_traceable": false,
       "why": "深势科技把AI科研流程桌面化，涉及AI for Science工程范式与Agent化实验的具体实践。",
       "queued_at": "2026-08-21T07:01:09Z"
+    },
+    {
+      "id": "81e032e14761750c34e4dc7298627f216731fb68",
+      "title": "日本政府拟向半导体厂商Rapidus追加拨款1500亿日元",
+      "url": "https://36kr.com/newsflashes/3948952011439240?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-08-21T07:21:43Z",
+      "raw_summary": "据报道，日本经济产业省将在2027财年预算申请中拨款1500亿日元，用于追加投资日本半导体厂商Rapidus。此前，日本经产省已宣布将向Rapidus拨款2500亿日元。（界面）",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "日本向 Rapidus 追加 1500 亿日元拨款直接关乎先进制程供应链格局，是重要产业信号。",
+      "queued_at": "2026-08-21T07:58:24Z"
     }
   ],
   "digest_last_date": "2026-08-21"
