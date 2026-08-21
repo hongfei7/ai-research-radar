@@ -285,6 +285,58 @@
       "source_traceable": true,
       "why": "Repo0提出双图架构状态和模块化引导结构演化从自然语言生成完整代码仓库，是可追溯的一手研究。",
       "queued_at": "2026-08-21T03:53:12Z"
+    },
+    {
+      "id": "2ec20396c2d718181b4253f34e062d927183ae86",
+      "title": "SenseNova U1.5-Lite full release: expert training, OPD distillation, one model at inference",
+      "url": "https://www.reddit.com/r/localllama/comments/1vu5dzi/sensenova_u15lite_full_release_expert_training",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-21T03:52:03Z",
+      "raw_summary": "Benchmarks: Benchmark U1 Preview Full Qwen-Image-Bench 47.14 55.20 (PE) 60.18 (PE) ImgEdit 3.9 4.37 4.59 GEdit-Bench-EN 7.47 8.14 8.26 Instead of just scaling up, they train task-specialized expert models for text rendering and infographics, aesthetic quality, and image editing. Then OPD consolidates those experts back into U1.5-Lite. At inference you get one model. No router, no expert switching, no manual selection. The slogan they use: specialized in training, unified in delivery. Post-training now includes task-oriented RL with three user-visible objectives: instruction adherence, visual quality and preference alignment, and edit fidelity with preservation of untouched regions. What improved: Complex instruction following. Multiple constraints in one request (subjects, counts, spatial relationships, text, layout, style, preservation requirements) handled more consistently. Text rendering and dense layouts. Chinese and English in posters and infographics. Native 4K generation with stable global structure. Native editing with better preservation of subject identity, geometry, and unedited regions. Multi-reference editing and precise local edits included. Visual understanding strengthens generation. Representations learned from understanding tasks (object relations, spatial structure, layout, info hierarchy) transfer to generation and editing. JSON-structured supervision is used as a training mechanism for controllability, not a mandatory user-facing format. Natural language",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "SenseNova U1.5-Lite提出\"specialized in training, unified in delivery\"的专家训练+OPD蒸馏路线，benchmark涨幅明显，值得读原文看方法细节。",
+      "queued_at": "2026-08-21T04:41:08Z"
+    },
+    {
+      "id": "852a43816123f6f4902ca6aa22b2fa5c4a087580",
+      "title": "FlashPrefill V2: Block-Sparse Prefill Attention for Long-Context LLM Serving",
+      "url": "https://arxiv.org/abs/2608.19758",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-20T04:02:55Z",
+      "raw_summary": "FlashPrefill V2 improves long-context serving via mean-corrected sparse attention, optimized GPU operators, and framework integration, achieving large speedups over dense baselines.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "FlashPrefill V2对长上下文prefill做block-sparse attention，给出GPU算子优化与速度数据，是可复现的serving优化方向。",
+      "queued_at": "2026-08-21T04:41:08Z"
+    },
+    {
+      "id": "b98f89cea4edca4117c45f50db04818f8f0a0c15",
+      "title": "模型不拼参数拼闭环、讲家庭场景落地，今年的大会不再「性感」丨直击WRC2026",
+      "url": "https://36kr.com/p/3948754198117504?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-08-21T04:03:14Z",
+      "raw_summary": "文｜邱晓芬 黄楠&nbsp; 编辑｜袁斯来&nbsp; 8月20日，世界机器人大会（下称WRC）在北京亦庄国创会展中心举办。开展恰逢宇树上市，其市值最高点超过4000亿，给本就燥热的行业新添了一把火。 今年的WRC吸引了300多家展商参加，数量直接比去年暴涨了4成，参展的机器人产品更是高达3000台。 新面孔中，除了新一批的具身初创公司之外，还有实在的客户——据官方数据披露，今年有49家央企组团进场，带着12个真实工程场景（电网、航天、矿冶等）来找机器人。 WRC设置为ABCD四个馆，比去年新增了一个。整个动线从C馆的人形整机、到A、D馆塞入了完整的落地场景，再到以产业链上游厂商为主的B馆，拼成了具身完整的产业链。 值得注意的是，在B馆里也出现了一众国际芯片巨头新面孔，比如AMD、英飞凌、realtek等等，试图抢夺一众机器人新贵客户。 作为每年机器人领域最重要的一场大会，WRC可以作为行业风向标的重要观察窗口。 硬氪暴走完了5.2万m²的场馆，我们发现，人们已经不想再为愿景、故事买单，这一次WRC上，公司必须回答尖锐的问题：它们的模型是否闭环、机器人能不能完成真实工作。 随着宇树上市以及多家百亿估值公司诞生，具身智能已经进入深水区。2026年WRC是个前哨窗口，它代表了一种商业价值的回归：无论终局多么诱人，企业首先要在当下拿到收入。 图源/硬氪拍摄 &nbsp; 模型真的用上了，但不拼智商拼闭环 硬氪参加过多次WRC，此前各家比的都是“模型有多聪明”、或者“我的参数有多大”，但今年更务实了，所有人都在聊同一个问题：如何把模型、数据和实际任务串成一个闭环，让模型服务于真实的场景落地。 不过，技术上的一个新变化是，去年全场打着VLA标签，今年大家不谈VLA，但基本在其上叠加世界模型。 单一的VLA模型能看场景、懂指令、出动作，短程封闭场景够用，但不知道环境长什么样，也不知道因果关系，因此任务一长，误差越滚越大，换个陌生环境就失败。而世界模型补上的就是这个短板——让机器人动手之前在脑子里推演几种可能，先想再做，而不是边做边错。 只是，VLA和世界模型怎么整合，各家又出现了分化。 硬氪在WRC观察发现，目前比较有代表性的路径是，把世界模型直接“捏”进模型本身，让动作生成不再是单纯的端到端映射，而是在对世界动态变化的预判基础上完成。 鹿明机器人创始人喻超向硬氪解释，他们做具身大脑Prime R0的思路，是把世界模型的预判能力直接融入VLA的决策框架，让语义理解、行为执行和态势预判形成一个闭环。 “我们没有把世界模型简单当外挂，而是让它在学动作的同时，也学动作之后世界的变化。”喻超表示。 鹿明同期发布的机器人技能进化引擎NexCore，也是在搭这样一个闭环：从真实产业任务出发，采集真实世界数据，通过模型训练形成机器人技能，再部署到机器人上完成任务。机器人运行过程中会产生新的反馈和数据，再回到模型和技能体系中持续迭代。 星尘智能走的是另一条路，在模型内部引入可解释、可检查、可干预的reasoning，从Lumo-1的显式文本推理，逐步演化到Lumo-2对世界动态变化的隐式建模。 两者本质区别在于：一个把推理过程暴露出来、可检查，一个把推理过程压缩进隐空间、求效率。 简单来说，Lumo-1的推理过程是可读的，AI会先用语言组织思路，再执行动作，相当于把思考过程“写出来”。它把任务拆成规划、预测、控制三个独立模块，世界模型作为中间的预测层单独。这一架构的好处是长程任务稳，坏处是模块之间来回传数据，速度慢，很难切入高频交互的真实场景。 今年，星尘智能在Lumo-2",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": false,
+      "why": "WRC2026现场观察，指出具身行业从拼参数转向拼闭环与真实场景收入，含49家央企采购等一手产业信号。",
+      "queued_at": "2026-08-21T04:41:08Z"
+    },
+    {
+      "id": "c1448318bd9f516c5c591cd951aae821380096ab",
+      "title": "宇树4400亿市值狂欢之后，六个需要验证的信号",
+      "url": "https://www.tmtpost.com/8111159.html",
+      "source": "rss:tmtpost",
+      "published_at": "2026-08-21T04:12:57Z",
+      "raw_summary": "要判断宇树科技未来三年的走向，需要盯住六个可以核对的数据信号，这些信号中的每一个都足以让估值逻辑发生变化。",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": false,
+      "why": "给出宇树上市后可盯的六个可验证数据信号，方法论上对具身公司估值与跟踪框架有借鉴价值。",
+      "queued_at": "2026-08-21T04:41:08Z"
     }
   ],
   "digest_last_date": "2026-08-21"
