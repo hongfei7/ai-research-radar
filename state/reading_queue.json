@@ -170,6 +170,19 @@
       "queued_at": "2026-08-21T07:58:24Z"
     },
     {
+      "id": "5206f5c913c5349f3652174622c36866d8f7ef56",
+      "title": "摩根大通：阿里云12%利润率被系统性低估，成熟态ROIC应接近20%",
+      "url": "https://www.leiphone.com/category/industrynews/eptbkwmmrk2resbb.html",
+      "source": "rss:leiphone",
+      "published_at": "2026-08-21T09:47:00Z",
+      "raw_summary": "8月21日，摩根大通在最新研究报告中指出，阿里云当前12%利润率被系统性低估，成熟态ROIC应接近20%。原因在于，过去几个季度Capex投放快，大量GPU和数据中心资产刚投产、仍处于60%利用率的爬坡阶段，首年单批ROIC仅约6%，远低于成熟态的20%。摩根大通用堆叠vintage模型外推：即便Capex保持稳定、单位经济不再改善，随着旧资产逐季变多、新资产利用率爬升，整体加权ROIC将从当前约6%的水平自然爬升至接近16%，AI基础设施净自由现金流将在第三年前后穿越盈亏平衡线。",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "摩根大通对阿里云AI基础设施的ROIC/vintage模型拆解，含具体Capex、GPU利用率、首年ROIC数字与爬坡外推方法论，对理解云厂商AI资本回报逻辑有实质参考。",
+      "queued_at": "2026-08-21T11:55:54Z"
+    },
+    {
       "id": "682d6f8ae32ce451461c9d877ec301776fe01265",
       "title": "Inducing Task Models from Computer-Use Traces [Yucheng Jiang, Zora Zhiruo Wang, Ruishi Chen, Diyi Yang]",
       "url": "http://arxiv.org/abs/2608.20319v1",
@@ -506,19 +519,6 @@
       "source_traceable": false,
       "why": "深势科技把AI科研流程桌面化，涉及AI for Science工程范式与Agent化实验的具体实践。",
       "queued_at": "2026-08-21T07:01:09Z"
-    },
-    {
-      "id": "81e032e14761750c34e4dc7298627f216731fb68",
-      "title": "日本政府拟向半导体厂商Rapidus追加拨款1500亿日元",
-      "url": "https://36kr.com/newsflashes/3948952011439240?f=rss",
-      "source": "rss:36kr",
-      "published_at": "2026-08-21T07:21:43Z",
-      "raw_summary": "据报道，日本经济产业省将在2027财年预算申请中拨款1500亿日元，用于追加投资日本半导体厂商Rapidus。此前，日本经产省已宣布将向Rapidus拨款2500亿日元。（界面）",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "日本向 Rapidus 追加 1500 亿日元拨款直接关乎先进制程供应链格局，是重要产业信号。",
-      "queued_at": "2026-08-21T07:58:24Z"
     }
   ],
   "digest_last_date": "2026-08-21"
