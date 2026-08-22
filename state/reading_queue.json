@@ -51,6 +51,19 @@
       "source_traceable": true,
       "why": "DeepMind SIMA 2智能体从Atari到EVE Online的演进，15年游戏AI研究总结，对具身/智能体方向有体系性认知价值。",
       "queued_at": "2026-08-22T04:35:47Z"
+    },
+    {
+      "id": "d167f632cb0bad98427f1bae3908943355bf6d2f",
+      "title": "I developed my own quantized LLM from scratch, trained on 30B tokens, deploys in 60 MB [R]",
+      "url": "https://www.reddit.com/r/machinelearning/comments/1vv2nkh/i_developed_my_own_quantized_llm_from_scratch",
+      "source": "reddit:ml",
+      "published_at": "2026-08-22T04:39:18Z",
+      "raw_summary": "I trained a 250M parameter model from scratch on 30B tokens of fineweb. It’s quantized to under 2 bits so the whole deployment is 60 MB and it needs about 80 MB of RAM to run. Runs around 400 tok/s on a normal laptop CPU, no GPU needed. How the long context works: the most recent 2048 tokens stay in fp16 like a normal KV cache. Everything older gets compressed to 1 bit and written to disk, about 320 bytes per token, so 1 million tokens of history is roughly 320 MB on disk. From the start the model was trained to retrieve from that disk cache, up to 100M tokens. Due to a limited budget it wasn’t trained to reason over those tokens, only retrieve and answer from them. Language modeling quality of the base model, measured on held-out English web text that was never seen in training (educational web pages, 2,048 token windows): cross entropy 3.15 nats per token, perplexity 23.3, 0.99 bits per byte. The vocabulary is also not a normal embedding table. Every token is a fixed 512-bit code, 8.4 MB for all 131k tokens, zero trained parameters. I tested it on WordSim-353 (human word similarity ratings): my table scores 0.619 Spearman correlation vs 0.029 for random codes. Test script is in the repo. Some outputs (settings included so you know I’m not cherry picking, all reproducible from the repo): “Explain photosynthesis in two sentences.” (greedy) Photosynthesis is a process in which plants convert sunlight into chemical energy, which is then used to produce oxygen and other chemical",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "从零训练250M模型+极低比特量化+磁盘KV压缩的完整工程复现帖，能学到端侧LLM的极限压缩与长上下文工程取舍。",
+      "queued_at": "2026-08-22T05:05:38Z"
     }
   ],
   "digest_last_date": "2026-08-22"
