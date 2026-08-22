@@ -168,6 +168,32 @@
       "source_traceable": true,
       "why": "DoorDash的AI内容审核架构实战分享：混合快慢模型+多轴评分+无代码工作流回测，具体工程取舍和效果数据可参考。",
       "queued_at": "2026-08-22T11:01:08Z"
+    },
+    {
+      "id": "4830606672d8acda33a938095a1dac8f85f2c072",
+      "title": "Study explains why AI agents benefit from \"skills\" and when they fail",
+      "url": "https://the-decoder.com/study-explains-why-ai-agents-benefit-from-skills-and-when-they-fail",
+      "source": "rss:the-decoder",
+      "published_at": "2026-08-22T12:15:10Z",
+      "raw_summary": "A study from researchers at Princeton University and UC San Diego finds that so-called skills make AI agents better mainly through structured workflows, not through added knowledge. But as the skill library grows, agents have a harder and harder time finding the right set of instructions. The article Study explains why AI agents benefit from &quot;skills&quot; and when they fail appeared first on The Decoder.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Princeton/UCSD 关于 AI agent 'skills' 机制的研究解读，解释 skills 为何有效以及检索瓶颈，与 agent 工程实践直接相关",
+      "queued_at": "2026-08-22T12:54:55Z"
+    },
+    {
+      "id": "49ec2e763ae4e870211ee11eecee076f9a721ab7",
+      "title": "Anyone else tried out KV cache blending?",
+      "url": "https://www.reddit.com/r/localllama/comments/1vv9oe2/anyone_else_tried_out_kv_cache_blending",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-22T11:14:40Z",
+      "raw_summary": "Idea is simple-ish in abstract: instead of running normal prefill over all of a given prompt, split it into parts - generates caches for part A and part B in isolation, concatenate the result, feed it into decode like normal. I honestly thought it'd totally fail. But I've been trying it out on Ling3-tiny for the non KDA layers - and if I give them some overlap between chunks, the model actually maintains full needle-in-haystack retrieval. Can even synthesise across the split parts. Currently running 256k prompts chunked into individual 4k bits and it seems to be unaffected on (simple) retrieval tasks so far. There's probably a trade-off somewhere. But it's boosted my prefill speed by 3x, giving me ~1.3k tps prefill at 256k tokens - which is pretty much the same prefill speed as running Qwen3.8-27b on my 5090. So looks like it might be worth it &#32; submitted by &#32; /u/maddie-lovelace [link] &#32; [comments]",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": false,
+      "why": "KV cache blending（分块预填拼接）在 Ling3-tiny 上实测保留检索能力，是对长上下文推理的有价值工程探索",
+      "queued_at": "2026-08-22T12:54:55Z"
     }
   ],
   "digest_last_date": "2026-08-22"

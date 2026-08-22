@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-22T11:58:17Z",
+  "updated_at": "2026-08-22T12:56:08Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -43023,9 +43023,9 @@
       "first_seen_at": "2026-08-22T06:03:26Z",
       "first_published_at": "2026-08-22T04:33:06Z",
       "last_updated_at": "2026-08-22T06:03:26Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 8,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "",
       "ticker_counts": {
         "OpenAI": 1
@@ -43279,6 +43279,39 @@
         "高通": 1
       },
       "max_item_score": 5
+    },
+    "evt_e7b0ced47289": {
+      "event_id": "evt_e7b0ced47289",
+      "title": "Desktop CPU shipments crater 20% amid high component costs, but AMD gains record share despite 'ugly' desktop processor market — Intel floods laptop market with millions of CPUs, but AMD still sets all-time share records",
+      "summary": "桌面CPU出货量因高元器件成本同比骤降约20%，市场表现疲软。AMD在桌面CPU市场逆势创历史最高份额纪录，份额持续从Intel手中夺取。Intel则将产能转向数据中心与笔记本CPU，向笔电市场大量出货，但仍未能阻止AMD创下全时段份额新高。",
+      "tickers": [
+        "AMD",
+        "Intel"
+      ],
+      "themes": [
+        "chip_supply",
+        "compute_demand"
+      ],
+      "direction": {
+        "AMD": "positive",
+        "Intel": "negative"
+      },
+      "item_ids": [
+        "cf83e4208a3c26704e154aefc5af3b6b25e7ce85"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-22T12:55:42Z",
+      "first_published_at": "2026-08-22T12:30:00Z",
+      "last_updated_at": "2026-08-22T12:55:42Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "1. **看多逻辑**\n首先，AMD在桌面CPU市场逆势创下历史最高份额纪录，验证了其Zen架构产品力和OEM认可度的结构性优势。在一个整体萎缩约20%的市场中，份额不降反升意味着AMD正以Intel的损失为代价获得\"此消彼长\"的红利，这种alpha属性在弱市中尤为珍贵。其次，Intel主动将产能重心转向数据中心与笔记本（笔记本端\"洪水式\"出货即为信号），桌面端的竞争烈度实际上被稀释，AMD在客户端的定价权和ASP弹性有望增强。第三，AMD份额提升的传导路径已形成——若桌面端的优势进一步渗透至服务器（EPYC）和移动端（Ryzen笔记本处理器），将形成跨细分市场的协同放量，中期收入弹性显著。\n\n2. **看空风险**\n第一，TAM收缩的风险不可忽视：桌面市场整体下滑20%意味着即使AMD份额提升，绝对出货量可能仍同比下降，\"以量换价\"逻辑面临天花板，份额创新高的财报效应可能被总量萎缩抵消。第二，AMD同样高度依赖台积电先进制程与外部组件采购，高元器件成本对其BOM和毛利率的侵蚀与Intel相当，所谓的\"份额优势\"在毛利层面未必能完全兑现。第三，Intel笔记本端大规模倾销CPU可能引发客户端价格战，传导至AMD笔记本份额，侵蚀其高毛利的移动业务基本盘。第四，当前AMD估值已充分反映份额扩张预期，进一步上行需要超预期的服务器端催化，短期面临\"利好兑现\"风险。\n\n3. **关键驱动因素**\n一是上游组件成本（DRAM、封装基板、PCB）的回落节奏，若2026 Q4至2027 H1进入降本通道，整个PC市场的需求修复将直接放大AMD的份额优势转化为绝对收入的能力；二是AMD在服务器CPU市场（EPYC Genoa/Bergamo/Turin）的份额渗透速度，这是判断桌面端胜利能否\"复制\"的核心变量，也是市场重新估值的最大杠杆。\n\n4. **市场影响评估**\n短期看，AMD相对受益、Intel承压的格局已部分被市场定价；AMD份额创新高更多是叙事强化而非业绩超预期催化剂。中期看，胜负手在于AI需求外溢能否拉动全PC换机周期，以及AMD服务器端的份额跃升能否兑现。若组件成本松动叠加服务器份额突破25%阈值，AMD有望迎来戴维斯双击；反之Intel若在18A节点实现工艺追赶并稳住数据中心毛利，则份额叙事可能逆转。\n\n5. **时间线推断**\n2026年Q4需关注：一是Q3财报中AMD桌面ASP与Intel客户端业务亏损幅度；二是DRAM/封装价格指数的拐点信号。2027年上半年是关键验证窗口：AMD EPYC下一代平台（Turin后续产品）的OEM采纳率、Intel Panther Lake在笔电端能否止血、以及CES 2027上两家的AI PC路线",
+      "ticker_counts": {
+        "Intel": 1,
+        "AMD": 1
+      },
+      "max_item_score": 7
     }
   }
 }
