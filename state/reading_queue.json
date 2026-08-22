@@ -337,6 +337,19 @@
       "source_traceable": true,
       "why": "把推理引擎移植到矿卡 CMP170HX 并跑通 Qwen3.6-35B，含具体硬件与算子取舍的工程细节。",
       "queued_at": "2026-08-22T20:32:26Z"
+    },
+    {
+      "id": "03e8f221e96a20e664051b59bf5a69003ed88f56",
+      "title": "Quoting Linus Torvalds",
+      "url": "https://simonwillison.net/2026/aug/22/linus-torvalds",
+      "source": "rss:simonwillison",
+      "published_at": "2026-08-22T21:04:26Z",
+      "raw_summary": "And this was a debug session from hell, enormously helped by an AI doing much of the grunt-work. I'd like to call it my tireless helper, but the AI several times stated flat out that this was impossible and unsolvable and that we should just write a report about it. I suspect those things have been trained by people who may not be quite as stubborn as I am. But while the AI was ready to give up several times, it did keep adding debug code and analyzing it faithfully when I pushed. So credit where credit is due and I let the AI write the commit message above. &mdash; Linus Torvalds, drm/xe: Don't hand out the flat CCS storage as usable VRAM Tags: linus-torvalds, linux, generative-ai, ai-assisted-programming, ai, llms",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Linus本人公开记录AI在Linux内核调试中的实际表现（一手commit message），可了解当前LLM在系统级debug中的能力边界与协作模式。",
+      "queued_at": "2026-08-22T21:36:21Z"
     }
   ],
   "digest_last_date": "2026-08-22"
