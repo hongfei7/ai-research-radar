@@ -233,6 +233,19 @@
       "source_traceable": true,
       "why": "Cloudflare把浏览器拆成Wasm/Rust组件跑在Workers上，给出明确架构与CDP兼容细节，对Agent基础设施设计有直接参考价值。",
       "queued_at": "2026-08-22T15:30:07Z"
+    },
+    {
+      "id": "6e8afcabbf5a008e21d3c1d0ec2125b16623d700",
+      "title": "The evaluation resolution has been shown to have a significant impact on the identification of the \"learning rule\" that exhibits the most brain-like characteristics at V1. [R]",
+      "url": "https://www.reddit.com/r/machinelearning/comments/1vvdxwt/the_evaluation_resolution_has_been_shown_to_have",
+      "source": "reddit:ml",
+      "published_at": "2026-08-22T14:30:28Z",
+      "raw_summary": "The preprint can be accessed via the following link: https://arxiv.org/abs/2608.12408 (q-bio.NC / cs.LG). And for the code: https://github.com/nilsleut/evaluation-resolution-rsa The following assertion is frequently made in model-brain comparisons: untrained convolutional neural networks (CNNs) have the capacity to match or surpass backpropagation-trained CNNs at the early visual cortex (V1) in recurrent self-attention (RSA). The present study demonstrates that this phenomenon is predominantly an artefact of evaluation resolution. The configuration comprised a small CNN trained at 32px (CIFAR-10 subset), five learning rules (random init, backprop, feedback alignment, predictive coding, STDP), and was evaluated on THINGS-fMRI stimuli at six resolutions from 32px to 224px. The weights and normalisation were held fixed. The primary outcome of this study is the observation of a discrepancy between the trained and untrained backpropagation (BP) V1 gap, which exhibits a non-monotonic trend across the range of image sizes examined. Specifically, the gap narrows from −0.001±0.007 at 32 pixels to +0.044±0.006 at 224 pixels, a pattern that persists consistently across the entire image size range (n=5 seeds). The model incorporates five rule conditions, human fMRI, directionally single-seed macaque ephys, the full training trajectory, and two off-the-shelf 224px-trained models (ResNet-50, Swin-Tiny). Therefore, the presence of an artifact resulting from a mismatch between training and e",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "指出V1视觉皮层模型比较中'untrained CNN超越trained CNN'的结论是评估分辨率的伪迹，有具体实验与代码，可复现验证。",
+      "queued_at": "2026-08-22T15:51:10Z"
     }
   ],
   "digest_last_date": "2026-08-22"
