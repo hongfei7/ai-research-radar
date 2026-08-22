@@ -4,35 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "Anthropic",
-        "DeepSeek",
-        "OpenAI"
-      ],
-      "features": [
-        "ag",
-        "claude",
-        "code",
-        "codex",
-        "deepseek",
-        "harness",
-        "一周",
-        "三更",
-        "代理",
-        "周三",
-        "和收",
-        "子代",
-        "成子",
-        "把和",
-        "收编",
-        "更把",
-        "理要",
-        "编成",
-        "要当"
-      ],
-      "sent_at": "2026-08-21T03:56:39Z"
-    },
-    {
-      "tickers": [
         "三星电子",
         "海力士"
       ],
@@ -485,6 +456,18 @@
         "起电"
       ],
       "sent_at": "2026-08-22T02:59:08Z"
+    },
+    {
+      "tickers": [
+        "OpenAI"
+      ],
+      "features": [
+        "gpt",
+        "price",
+        "reduction",
+        "sol"
+      ],
+      "sent_at": "2026-08-22T06:04:20Z"
     }
   ],
   "last_report": {

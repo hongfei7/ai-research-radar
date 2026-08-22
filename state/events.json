@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-22T05:43:46Z",
+  "updated_at": "2026-08-22T06:03:55Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -43000,6 +43000,37 @@
         "谷歌": 1
       },
       "max_item_score": 7
+    },
+    "evt_926fe9b3b6ea": {
+      "event_id": "evt_926fe9b3b6ea",
+      "title": "GPT 5.6 Sol 20% price reduction",
+      "summary": "GPT 5.6（Sol版本）API定价下调20%。这是OpenAI近期又一次降价动作，旨在降低开发者使用前沿大模型的成本，可能进一步压低行业模型API均价，加速AI应用普及与token消耗放量。原文信息有限，未披露具体定价细则及生效时间。",
+      "tickers": [
+        "OpenAI"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand",
+        "model_capability"
+      ],
+      "direction": {
+        "OpenAI": "neutral"
+      },
+      "item_ids": [
+        "c302d2d335373831dd6d0de8830b04aa902eb685"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-22T06:03:26Z",
+      "first_published_at": "2026-08-22T04:33:06Z",
+      "last_updated_at": "2026-08-22T06:03:26Z",
+      "is_active": true,
+      "significance": 8,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "OpenAI": 1
+      },
+      "max_item_score": 8
     }
   }
 }
