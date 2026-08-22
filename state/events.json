@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-22T03:45:26Z",
+  "updated_at": "2026-08-22T04:37:36Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -42892,6 +42892,114 @@
         "海力士": 1
       },
       "max_item_score": 5
+    },
+    "evt_217c01b37ce4": {
+      "event_id": "evt_217c01b37ce4",
+      "title": "GPT 3 MOMENT of Robotics!!",
+      "summary": "Generalist AI 发布 GEN-1.5 机器人基础模型，被社区热议为'机器人领域的GPT-3时刻'，研究人员在演示中表现极为兴奋。该模型代表通用机器人智能的显著突破，但原文未披露技术细节、参数规模、训练数据或商业化进展。值得关注的是事件本身在社区引发的反响。",
+      "tickers": [],
+      "themes": [
+        "edge_ai",
+        "model_capability"
+      ],
+      "direction": {},
+      "item_ids": [
+        "833b9f7d4bb046c53979e7ae74c9e7ee6a9137cf"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-22T04:36:37Z",
+      "first_published_at": "2026-08-22T03:58:35Z",
+      "last_updated_at": "2026-08-22T04:36:37Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {},
+      "max_item_score": 7
+    },
+    "evt_575c400abb2b": {
+      "event_id": "evt_575c400abb2b",
+      "title": "东山精密加码AI光芯片光模块扩产，项目总投资上调至17亿美元",
+      "summary": "8月21日，苏州东山精密公告拟对子公司Source Photonics及泰国、盐城子公司实施的光芯片及光模块扩建项目新增投资5亿美元，项目总投资额由12亿美元调增至17亿美元。Source Photonics是东山精密旗下光模块/光芯片子公司，产品覆盖数据中心光互连领域。此次加码扩产意在把握AI算力需求驱动的高速光模块增长机遇。",
+      "tickers": [],
+      "themes": [
+        "compute_demand",
+        "domestic_substitution"
+      ],
+      "direction": {},
+      "item_ids": [
+        "90624bba8b3a416c61ff4585d60974610be411bc"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-22T04:36:37Z",
+      "first_published_at": "2026-08-22T04:13:26Z",
+      "last_updated_at": "2026-08-22T04:36:37Z",
+      "is_active": true,
+      "significance": 6,
+      "status": "developing",
+      "deep_analysis": "1. **看多逻辑**：①AI算力建设进入加速期，800G/1.6T高速光模块需求结构性向上，Source Photonics作为全球少数同时具备光芯片+光模块垂直整合能力的厂商之一，扩产卡位窗口期逻辑成立；②项目总投资由12亿上调至17亿美元（+42%），管理层真金白银加码，对行业景气度形成强信号验证；③泰国产能布局兼具地缘风险对冲与关税成本优势，符合全球数据中心客户分散供应链诉求。\n\n2. **看空风险**：①Source Photonics当前客户结构以二线北美及国内云厂商为主，能否实质性切入英伟达GB200/GB300及超大规模客户主导的800G/1.6T主供序列仍存不确定性，扩产存在\"有产能无订单\"风险；②17亿美元资本开支显著高于公司年经营性现金流净额，短期将压制ROE和分红能力，且光模块行业技术迭代快（2-3年一代），存在产能折旧沉没风险；③A股光模块龙头中际旭创、新易盛已锁定头部客户并享受规模效应，Source Photonics作为挑战者份额提升空间有限；④当前光模块板块经历大幅上涨后估值已反映乐观预期，安全边际不足。\n\n3. **关键驱动因素**：①Source Photonics在800G/1.6T主流客户的认证进展及大单落地；②泰国/盐城产能爬坡节奏、良率水平及单位成本竞争力。\n\n4. **市场影响评估**：短期情绪利好但东山本身体量大、光模块业务占比有限，股价弹性受限；中期需观察其对A股光模块竞争格局的边际冲击，可能压制行业整体估值溢价，同时利好上游光器件、磷化铟/InP外延等供应链。\n\n5. **时间线推断**：2026H2为产能建设关键期，关注大客户送样验证进展；2027Q1-Q2为800G放量验证窗口；2027H2至2028年将面临1.6T代际切换与产能利用率考验，届时才能真正评估17亿美元投资的回报质量。",
+      "ticker_counts": {},
+      "max_item_score": 6
+    },
+    "evt_991e42f3bd44": {
+      "event_id": "evt_991e42f3bd44",
+      "title": "苹果拟在Siri和Vision Pro团队裁员超200人",
+      "summary": "苹果计划在Siri和Vision Pro团队裁减超200个岗位，以推动业务发展并为用户提供最佳体验，同时将新设岗位。Siri涉及AI语音助手能力建设，Vision Pro是苹果空间计算头显产品线，裁员反映其正对AI与新兴硬件团队进行资源整合与方向调整。",
+      "tickers": [
+        "苹果"
+      ],
+      "themes": [
+        "ai_monetization",
+        "edge_ai"
+      ],
+      "direction": {
+        "苹果": "negative"
+      },
+      "item_ids": [
+        "b0ee700a1cde37fdc37cd29906a9aa1d5420c0e9"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-22T04:36:37Z",
+      "first_published_at": "2026-08-22T04:16:00Z",
+      "last_updated_at": "2026-08-22T04:36:37Z",
+      "is_active": true,
+      "significance": 5,
+      "status": "developing",
+      "deep_analysis": "1. **看多逻辑：**\n其一，此次裁员同时设立新岗位，本质是战略性的资源再配置而非纯收缩，反映苹果正将人力从短期承压的Vision Pro线转向优先级更高的AI能力建设，体现大模型时代的追赶决心。其二，苹果具备自研芯片、隐私架构和庞大设备基数三重护城河，端侧AI（edge AI）的商业化路径仍有差异化空间，AI能力沉淀有望在iOS生态中释放杠杆效应。其三，苹果历史上多次\"迟到但主导\"（智能手机、智能手表），当前组织调整或为下一代AI交互体验铺路。\n\n2. **看空风险：**\n其一，Vision Pro销量远低于市场预期（普遍预期数百万级，实际仅数十万级别），此次裁员可能预示空间计算战略降温，硬件创新叙事受挫。其二，Siri在生成式AI浪潮",
+      "ticker_counts": {
+        "苹果": 1
+      },
+      "max_item_score": 5
+    },
+    "evt_d7e45b4461eb": {
+      "event_id": "evt_d7e45b4461eb",
+      "title": "Google Deepmind - SIMA 2 - From Atari to EVE Online: Building on 15 Years of AI Research in Games",
+      "summary": "Google DeepMind发布SIMA 2智能体，梳理从Atari到EVE Online等游戏中长达15年的AI研究积累，展示了通用智能体在多样化游戏环境中的能力进化。涉及的核心技术为强化学习与多模态智能体。DeepMind的进展凸显谷歌在通用AI智能体方向的技术领先。",
+      "tickers": [
+        "谷歌"
+      ],
+      "themes": [
+        "ai_monetization",
+        "model_capability"
+      ],
+      "direction": {
+        "谷歌": "positive"
+      },
+      "item_ids": [
+        "5ba7893f72792a673609a7b7242b2936e7570d34"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-22T04:36:37Z",
+      "first_published_at": "2026-08-22T00:48:05Z",
+      "last_updated_at": "2026-08-22T04:36:37Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "谷歌": 1
+      },
+      "max_item_score": 7
     }
   }
 }
