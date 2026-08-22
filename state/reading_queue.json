@@ -272,6 +272,32 @@
       "source_traceable": false,
       "why": "实测将训练过的MTP head嫁接到Ornith1.5 35B A3B量化版上获得2.5x速度提升，给出了具体数字和操作细节，是可复现的推理优化实验。",
       "queued_at": "2026-08-22T16:27:30Z"
+    },
+    {
+      "id": "683931e34e4d9cf385236e1080b746eb4b3f6df0",
+      "title": "Inherent, founded by DeepMind alumni, says its AI ‘teammate’ just outperformed Anthropic and OpenAI at replicating research",
+      "url": "https://techcrunch.com/2026/08/22/inherent-founded-by-deepmind-alumni-says-its-ai-teammate-just-outperformed-anthropic-and-openai-at-replicating-research",
+      "source": "rss:techcrunch-ai",
+      "published_at": "2026-08-22T19:00:00Z",
+      "raw_summary": "Built by DeepMind alumni, British AI lab Inherent released Faraday, an AI agent whose ability to replicate scientific papers could be a stepping stone for innovation.",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": false,
+      "why": "DeepMind出身团队做科研复现Agent并声称超越Anthropic/OpenAI，若benchmark细节真实，对AI for Science方向有参考价值。",
+      "queued_at": "2026-08-22T19:05:17Z"
+    },
+    {
+      "id": "0ec08d8ee346ad5f934d6d399a8f453b8d033019",
+      "title": "Sources: Nvidia informed some of its biggest customers of price hikes of 15%+ on its systems, including Vera Rubin and Grace Blackwell, starting in early 2027 (Bloomberg)",
+      "url": "https://www.techmeme.com/260822/p11#a260822p11",
+      "source": "rss:techmeme",
+      "published_at": "2026-08-22T19:00:01Z",
+      "raw_summary": "Bloomberg: Sources: Nvidia informed some of its biggest customers of price hikes of 15%+ on its systems, including Vera Rubin and Grace Blackwell, starting in early 2027&nbsp; &mdash;&nbsp; Some of Nvidia Corp.'s biggest customers have been told that the prices of servers containing its artificial intelligence chips &hellip;",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": false,
+      "why": "Nvidia对Vera Rubin/Grace Blackwell涨价15%+，反映下一代AI算力定价权与供需格局，是产业层面实质信号。",
+      "queued_at": "2026-08-22T19:05:17Z"
     }
   ],
   "digest_last_date": "2026-08-22"
