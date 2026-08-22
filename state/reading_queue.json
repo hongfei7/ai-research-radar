@@ -64,6 +64,19 @@
       "source_traceable": true,
       "why": "从零训练250M模型+极低比特量化+磁盘KV压缩的完整工程复现帖，能学到端侧LLM的极限压缩与长上下文工程取舍。",
       "queued_at": "2026-08-22T05:05:38Z"
+    },
+    {
+      "id": "065ffcd2361992d87c6ba68b73fb98bb9c1d982f",
+      "title": "Giving an LLM your prod database is easy. Taking access away is the hard part",
+      "url": "https://deepsql.ai/blog/giving-an-llm-your-database-is-easy-taking-access-away-is-hard",
+      "source": "hackernews",
+      "published_at": "2026-08-22T03:33:34Z",
+      "raw_summary": "Giving an LLM your prod database is easy. Taking access away is the hard part",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": false,
+      "why": "讨论LLM接入生产数据库后的权限回收难题，涉及安全工程实践中的真实痛点与权衡。",
+      "queued_at": "2026-08-22T05:43:39Z"
     }
   ],
   "digest_last_date": "2026-08-22"
