@@ -1,18 +1,17 @@
 {
-  "generated_at": "2026-08-22T07:02:08Z",
-  "text": "截至 2026-08-22 15:02 HKT，本轮新增两条动态：SemiAnalysis指出开源模型追赶闭源前沿的时间逐阶段减半，能力差距系统性收窄；DeepMind研究员暗示Ox Alpha或为下一代Gemini Pro，DeepSWE得分超80%，领先GPT-5.6-Sol的52%与Claude Fable的65%，若属实谷歌在代码与Agent能力上已超越OpenAI与Anthropic。",
-  "since": "2026-08-22T07:02:08Z",
-  "active_event_count": 18,
+  "generated_at": "2026-08-22T10:44:11Z",
+  "text": "当前共有 8 个活跃事件。要点包括: Deepmind Researcher Strongly Hints Ox Alpha Is The Next Gemini Pro Model; GPT 5.6 Sol 20% price reduction; With each successive era of AI, from early scaling, to reasoning, to agentic, open models have taken half as long to catch up to the first closed model (SemiAnalysis); Codex开始“反杀”Claude Code了吗？; 王坚的“遗产”，为阿里留出后路。",
+  "since": "2026-08-22T10:44:11Z",
+  "active_event_count": 8,
   "key_themes": [
     "compute_demand",
     "ai_monetization",
     "model_capability",
-    "chip_supply",
-    "domestic_substitution"
+    "datacenter_power"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n两条素材对前沿模型竞争格局的解读存在张力：SemiAnalysis 指出开源模型每一代追赶闭源前沿的耗时减半、护城河系统性收窄，倾向看空闭源溢价；而 Ox Alpha 暗示信息却显示谷歌在 Agent 编程基准上已甩开 GPT 与 Claude，呈现\"前沿仍在加速分化\"的反向叙事。此外两源可信度均标注为 low（付费摘要 + 论坛推断），需以官方披露与第三方复现为准。\n\n【新兴趋势】\n\"Agentic 阶段\"作为新一轮竞争分水岭在两条素材中共同浮现——SemiAnalysis 将其与 pre-training、reasoning 并列为三个时代切换点，Ox Alpha 的领先优势也集中在 DeepSWE 这类 Agent 编程基准。开源追赶与闭源领跑两条主线在同一周期叠加，指向 Agent 能力正取代纯模型智能成为新的定价权锚点。\n\n【信息盲点】\n本轮未覆盖：AI 算力链（NVIDIA、台积电、CoWoS 封装、HBM）及配套基础设施标的；同时缺位 Microsoft/Azure 与 OpenAI 商业化协同进展、以及国内互联网大厂（阿里、字节、腾讯）在开源追赶潮中的资源投入与定价策略。芯片端供给侧动态对推理算力需求结构判断至关重要。\n\n【跨标的联动】\n开源阵营（DeepSeek/Meta）与闭源三强（OpenAI/Anthropic/Google）形成新一轮博弈：若 Google 确在 Agent 端领跑，叠加开源追赶加速，OpenAI 与 Anthropic 的 API 定价权与开发者粘性将首当其冲；同时模型能力上行使推理算力总量继续扩张，对 compute_demand 链条构成方向分化——闭源溢价承压、基础设施总量受益。",
-  "trend_spotting": "英伟达AVO系统在ARC-AGI-3公开集实现183关100%通过率，将Claude Opus 5基线从30%直接拉至100%，这一70个百分点的跃升几乎完全来自智能体系统设计，而非底层模型本身。三个值得关注的信号：\n\n一是\"模型-智能体\"价值链正在重切。AVO证明在固定底座模型条件下，编排与搜索架构可独立产出量级跃迁，智能体中间层（agentic middleware）正在成为比预训练更高效的杠杆点，相关编排框架、记忆机制、工具调用协议供应商存在估值重估空间。\n\n二是英伟达的角色正在从\"卖铲人\"向\"AI研究范式定义者\"迁移。以往英伟达通过硬件和CUDA生态定义AI基础设施范式，现在开始用NIM/DLSS等软件栈输出方法论，影响上层应用开发范式——这对纯硬件标的属性是稀释，但对平台型估值是强化。\n\n三是基准失真风险。ARC-AGI-3公开集仅25个环境、183关，样本规模小，且100%通过率极易出现过拟合或环境特定启发式解；短期市场可能高估\"AGI临近\"叙事，需关注其私有测试集与跨域泛化结果。\n\n拐点在于：若AVO类系统开源并被整合进NIM或NVIDIA AI Enterprise，将首次出现算力厂商直接控制智能体编排层的情况，挤压LangChain等独立中间件生态。"
+  "cross_analysis": "【核心矛盾】\n来源间存在两条明显分歧：一是AI编程Agent赛道，tmtpost报道显示Codex周活用户已反超Claude Code（2000万 vs 增速放缓），但同一篇文章又指出Workato中Claude Code仍占企业AI编程用量80%，用户规模与付费渗透出现背离；二是数据中心景气度判断，万国数据Q2财报释放乐观信号（上半年新签470MW、全年销售目标翻倍至1GW），与\"3万亿美元隐形债务\"警示文章形成多空对垒，分歧本质在于订单先行能否最终转化为偿债现金流。\n\n【新兴趋势】\n三条隐性主线反复出现：①\"订单/投入跑在收入前\"成为AI基建标志性现象，万国数据是微观印证，3万亿债务文章是宏观注脚；②后训练规模化（post-training scaling）正取代预训练成为新的算力消耗驱动，智谱GLM-5.3\"沿用基座、靠后训练扩规模\"是典型案例；③国产模型差异化收窄，智谱GLM-5.3\"开源第一、与GPT-5同档\"但股价反跌3.6%，叠加阿里将AI作为\"唯一路\"的资源倾斜，竞争主战场已从跑分转向商业化变现。\n\n【信息盲点】\n本轮缺失三条应被覆盖的主线：①英伟达/AMD及AI芯片供应链被3万亿债务文章隐含提及但无独立信源验证capex边际变化；②电力/光模块/液冷等数据中心上游配套（万国数据订单放量最直接受益方）完全缺席；③字节火山引擎作为国内AI算力需求大户，在万国数据和阿里两条线索中均被遗漏，而so_what已隐含其",
+  "trend_spotting": "72小时内，AI编程Agent赛道从Claude一家独大转向双寡头格局——Codex周活四个月从600万跳至2000万，OpenAI企业ARR年化增速50%反超整体35%，但Workato内Claude Code仍占80%用量，\"用户基数反超、企业心智滞后\"的剪刀差是最值得盯的早期信号。\n\n中国侧的拐点更明显：阿里首次明确将资金从即时零售收拢转向大模型与算力基建，王坚\"遗产\"被重新激活，意味着BAT级别巨头正式承认AI是唯一增长极，国产算力链订单可见度延伸12-18个月。万国数据上半年新签470MW已超2025全年，管理层将全年目标翻倍至1GW，订单跑在收入前的特征在IDC板块全面重演。\n\n被低估的信号：智谱GLM-5.3综合智能指数60分追平GPT-5.6 Sol，但发布日股价反"
 }

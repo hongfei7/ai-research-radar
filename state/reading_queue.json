@@ -129,6 +129,32 @@
       "source_traceable": true,
       "why": "提出 Mental World Modeling 框架，明确指出当前世界模型忽略心智状态是核心瓶颈，并给出弱模型+心智建模可超越强模型的实验结论，值得追踪原始论文看其消融与边界。",
       "queued_at": "2026-08-22T09:44:04Z"
+    },
+    {
+      "id": "1828e0c837772dba2089ba74a59b41d23d9ee74b",
+      "title": "越会用 AI 的人，学习能力退化得越快",
+      "url": "http://www.geekpark.net/news/369212",
+      "source": "rss:geekpark",
+      "published_at": "2026-08-22T10:07:50Z",
+      "raw_summary": "「坏 AI，使人笨！」 作者｜张勇毅 编辑｜靖宇 「AI 用多了，人会不会逐渐变笨？」 这应该是过去三年被讨论最多的一个迷思之一，从 ChatGPT 走红那天就有。吵了三年多，两边都拿不出像样的证据： 担心的人只有体感，不担心的人只有立场。 8 月 18 日，《经济学人》给这场争论补上了迄今最硬的一份证据。 报道的主角是 2.7 万名中国中学生。用上 AI 之后，他们的作业分数平均涨了 18%，写一份作业的时间从 64 分钟缩到 45 分钟。到这里全是好消息，直到月考卷子发下来：闭卷考试里，这批学生的成绩比不用 AI 的同学低了 20%。 作业分曾是最可靠的「晴雨表」：作业越好，考试越好。而在用 AI 的学生中间，作业分越高，基本等于 AI 用得越深。于是曲线变成了：用得越狠的孩子，考试跌得越惨。 作业分，第一次开始撒谎。 作业分超过 100 的人之中，不用 AI 的人分数上涨到了 112，用 AI 之后一路跳水到 64。｜图片来源：经济学人 《经济学人》的数据底稿，是斯德哥尔摩大学和香港大学三位经济学家 6 月挂出的论文，标题就叫《生成式 AI 学习惩罚》。 《生成式 AI 学习惩罚》｜图片来源：SSRN 样本来自中国中部一个县，人口超过一百万。论文特意强调它的普通：像沿海之外的大多数中国县城。26811 名初高中生，5 所初中、4 所高中，装下当地九成中学生，从 2022 年 9 月跟到 2025 年 6 月，整整 30 个月。 这个县的作业在线上提交，系统记下每个人的用时；月考、中考、高考的成绩都进数据库&mdash;&mdash;写多快、考多好，第一次成了直接测量的硬数据。谁在用 AI，则来自回收率超过 96% 的全员问卷。 2022 年 9 月，用 AI 的学生几乎为零。到 2025 年 6 月，这个数字是 80%。这条曲线有两次明显跳升，分别踩在 DeepSeek V2.5 和 R1 的发布点上。工具全是熟面孔：豆包、DeepSeek、文心一言、通义千问。 采纳曲线的两次跳升，都踩在 DeepSeek 发版上｜图片来源：CEPR 结论就是开头那组数字：作业 +18%，用时 &minus;30%，月考 &minus;20%，相当于 1.4 个标准差。惩罚在各科并不均匀：社科类最重，跌 27%；数学 22%；英语 17%；语文最轻，9%。初中生比高中生惨四成，男生比女生惨。 看来变笨这件事也不优待聪明人：恰恰是原来成绩最好的那批孩子，跌得最狠。 升学考试的账要算得更小心。6 月底这项研究在中文互联网刷屏时，传播最广的说法是「中考暴跌 24%、高考暴跌 18%」。论文里的原意克制得多：这是用满两年以上学生的完整惩罚，全体 AI 用户的平均效应只有 7% 左右。 但这份「克制」本身才是更坏的消息：惩罚需要两年才长满。作者们专门点了一句，眼下那些几星期、几个月的短期研究，都在系统性低估 AI 的学习成本。 01 消失的模范生 这项研究 6 月刚出现时，英文讨论中其实还有一个安慰性的结论：有两成学生用 AI 但不外包作业，成绩没受损。所以问题不在 AI，在用法。 论文确实说了前半句。它给「外包」下了一个数值上的定义：作业用时少于 50 分钟算「内包」，少于 45 分钟才算是真「外包」。 刚开始用 AI 的学生里，外包的占 58%。而那些照常花时间写作业、只拿 AI 当家教的孩子，考试成绩和不用 AI 的同学几乎没有差别。 论文甚至发现，在 50 到 65 分钟的重叠区间里，两类孩子花同样的时间，考出几乎一样的分数。AI 本身不带毒性，毒性全在省下",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "解读SSRN上《生成式AI学习惩罚》论文，26811名中国中学生样本，作业涨分/闭卷跌分的反直觉数据，对AI辅助学习的有效性有具体证据。",
+      "queued_at": "2026-08-22T10:41:56Z"
+    },
+    {
+      "id": "5eb9605d50b33aeacdc90d18701b6f8e084bbb12",
+      "title": "Inside the World Robot Conference in Beijing, drawing over 300 exhibitors; Unitree founder Wang Xingxing said the industry's \"ChatGPT moment\" has yet to come (Financial Times)",
+      "url": "https://www.techmeme.com/260822/p5#a260822p5",
+      "source": "rss:techmeme",
+      "published_at": "2026-08-22T10:30:01Z",
+      "raw_summary": "Financial Times: Inside the World Robot Conference in Beijing, drawing over 300 exhibitors; Unitree founder Wang Xingxing said the industry's &ldquo;ChatGPT moment&rdquo; has yet to come&nbsp; &mdash;&nbsp; Beijing policymakers have made robotics a &lsquo;strategic priority&rsquo;&nbsp; &mdash;&nbsp; At the World Robot Conference in Beijing this week &hellip;",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "王兴兴关于具身智能'ChatGPT时刻'未到的判断+北京政策定位+300+展商现场，结合FT一手报道价值较高。",
+      "queued_at": "2026-08-22T10:41:56Z"
     }
   ],
   "digest_last_date": "2026-08-22"

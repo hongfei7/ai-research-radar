@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-22T10:02:31Z",
+  "updated_at": "2026-08-22T10:44:11Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -42910,9 +42910,9 @@
       "first_seen_at": "2026-08-22T04:36:37Z",
       "first_published_at": "2026-08-22T03:58:35Z",
       "last_updated_at": "2026-08-22T04:36:37Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 7,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "",
       "ticker_counts": {},
       "max_item_score": 7
@@ -42934,9 +42934,9 @@
       "first_seen_at": "2026-08-22T04:36:37Z",
       "first_published_at": "2026-08-22T04:13:26Z",
       "last_updated_at": "2026-08-22T04:36:37Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 6,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "1. **看多逻辑**：①AI算力建设进入加速期，800G/1.6T高速光模块需求结构性向上，Source Photonics作为全球少数同时具备光芯片+光模块垂直整合能力的厂商之一，扩产卡位窗口期逻辑成立；②项目总投资由12亿上调至17亿美元（+42%），管理层真金白银加码，对行业景气度形成强信号验证；③泰国产能布局兼具地缘风险对冲与关税成本优势，符合全球数据中心客户分散供应链诉求。\n\n2. **看空风险**：①Source Photonics当前客户结构以二线北美及国内云厂商为主，能否实质性切入英伟达GB200/GB300及超大规模客户主导的800G/1.6T主供序列仍存不确定性，扩产存在\"有产能无订单\"风险；②17亿美元资本开支显著高于公司年经营性现金流净额，短期将压制ROE和分红能力，且光模块行业技术迭代快（2-3年一代），存在产能折旧沉没风险；③A股光模块龙头中际旭创、新易盛已锁定头部客户并享受规模效应，Source Photonics作为挑战者份额提升空间有限；④当前光模块板块经历大幅上涨后估值已反映乐观预期，安全边际不足。\n\n3. **关键驱动因素**：①Source Photonics在800G/1.6T主流客户的认证进展及大单落地；②泰国/盐城产能爬坡节奏、良率水平及单位成本竞争力。\n\n4. **市场影响评估**：短期情绪利好但东山本身体量大、光模块业务占比有限，股价弹性受限；中期需观察其对A股光模块竞争格局的边际冲击，可能压制行业整体估值溢价，同时利好上游光器件、磷化铟/InP外延等供应链。\n\n5. **时间线推断**：2026H2为产能建设关键期，关注大客户送样验证进展；2027Q1-Q2为800G放量验证窗口；2027H2至2028年将面临1.6T代际切换与产能利用率考验，届时才能真正评估17亿美元投资的回报质量。",
       "ticker_counts": {},
       "max_item_score": 6
@@ -42962,9 +42962,9 @@
       "first_seen_at": "2026-08-22T04:36:37Z",
       "first_published_at": "2026-08-22T04:16:00Z",
       "last_updated_at": "2026-08-22T04:36:37Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 5,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "1. **看多逻辑：**\n其一，此次裁员同时设立新岗位，本质是战略性的资源再配置而非纯收缩，反映苹果正将人力从短期承压的Vision Pro线转向优先级更高的AI能力建设，体现大模型时代的追赶决心。其二，苹果具备自研芯片、隐私架构和庞大设备基数三重护城河，端侧AI（edge AI）的商业化路径仍有差异化空间，AI能力沉淀有望在iOS生态中释放杠杆效应。其三，苹果历史上多次\"迟到但主导\"（智能手机、智能手表），当前组织调整或为下一代AI交互体验铺路。\n\n2. **看空风险：**\n其一，Vision Pro销量远低于市场预期（普遍预期数百万级，实际仅数十万级别），此次裁员可能预示空间计算战略降温，硬件创新叙事受挫。其二，Siri在生成式AI浪潮",
       "ticker_counts": {
         "苹果": 1
@@ -42992,9 +42992,9 @@
       "first_seen_at": "2026-08-22T04:36:37Z",
       "first_published_at": "2026-08-22T00:48:05Z",
       "last_updated_at": "2026-08-22T04:36:37Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 7,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "",
       "ticker_counts": {
         "谷歌": 1
@@ -43098,6 +43098,159 @@
         "Anthropic": 1
       },
       "max_item_score": 9
+    },
+    "evt_16daaf6eeb44": {
+      "event_id": "evt_16daaf6eeb44",
+      "title": "Codex开始“反杀”Claude Code了吗？",
+      "summary": "OpenAI Codex本周突破2000万活跃用户，近一个月从600万连续跳涨至2000万，8月10日过去四周增长20.8%。同期Claude Code四周增长率仅5.2%，年化收入在7月于142-145亿美元区间走平。OpenAI企业业务本季度年化收入增长约50%，快于公司整体的35%。Workato中Claude Code占AI编程用量80%、Codex仅20%，但Codex用户基数已反超。值得关注的是AI编程Agent赛道竞争格局重塑。",
+      "tickers": [
+        "Anthropic",
+        "OpenAI"
+      ],
+      "themes": [
+        "ai_monetization",
+        "model_capability"
+      ],
+      "direction": {
+        "OpenAI": "positive",
+        "Anthropic": "neutral"
+      },
+      "item_ids": [
+        "069b71f383dbf3a49909c89982772c7213dcf116"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-22T10:42:48Z",
+      "first_published_at": "2026-08-22T10:14:33Z",
+      "last_updated_at": "2026-08-22T10:42:48Z",
+      "is_active": true,
+      "significance": 8,
+      "status": "developing",
+      "deep_analysis": "1. **看多逻辑**\n   - Codex用户增速呈指数级爆发：单月从600万跳至2000万，四周增速20.8%远超Claude Code的5.2%，说明OpenAI在编程Agent赛道已实现产品力追赶甚至反超，结合GPT-5系列在代码任务上的能力跃升，形成\"用户飞轮→数据反馈→模型迭代\"的正循环。\n   - 企业级变现加速：OpenAI企业业务本季度ARR增速50%，显著高于公司整体35%，意味着Codex增长不仅是免费用户扩张，更在向付费转化传导，企业客户对OpenAI全栈模型（GPT-5+Codex+Agent SDK）的捆绑采购意愿增强。\n   - 赛道扩容利好上游：双寡头格局下竞争压低单token价格，但开发者群体被激活将推升总token消耗，对算力链（台积电、SK海力士、英伟达）形成二阶利好，是比单纯份额变化更确定的趋势。\n\n2. **看空风险**\n   - 用户数≠收入：Workato数据揭示Claude Code在企业实际AI编程用量中仍占80%，Codex仅20%。周活20M中相当比例可能为免费/试用用户，付费转化率和ARPU尚未验证，存在\"叫好不叫座\"风险。\n   - Claude Code增速放缓或系供给端约束而非需求见顶：Anthropic 7月ARR走平至142-145亿美元，可能反映算力配额管控下的主动节制，而非客户流失。Anthropic若释放产能，份额防御能力仍强。\n   - 企业切换成本高：IDE插件、CI/CD集成、内部知识库索引均构成迁移摩擦，存量企业客户重新评估需1-2个季度，Codex的领先可能仅限于增量市场和开发者个人用户。\n\n3. **关键驱动因素**\n   - 变量一：Codex企业付费转化率与ARPU——需观察三季度OpenAI披露的企业ARR中编程Agent贡献占比，若能将20%使用份额转化为对等的收入份额，则看多逻辑成立。\n   - 变量二：Anthropic企业续费率与新一代模型（Claude 5/Opus迭代）发布节奏——若Q4推出能力跃升的新模型并配合企业降价策略，可能逆转当前颓势。\n\n4. **市场影响评估**\n   - 短期（1-2个月）：叙事驱动，OpenAI估值锚定上修，Anthropic私募估值面临折价压力，AI编程概念股（如GitLab、Codestory关联标的）情绪受益。\n   - 中期（3-6个月）：若Codex付费转化数据兑现，将验证\"双寡头+算力通胀\"逻辑，英伟达/台积电产业链确定性增强；若Anthropic以模型代际差反击，则可能演变为\"快鱼吃慢鱼\"的反复拉锯",
+      "ticker_counts": {
+        "OpenAI": 1,
+        "Anthropic": 1
+      },
+      "max_item_score": 8
+    },
+    "evt_adb17e25eb67": {
+      "event_id": "evt_adb17e25eb67",
+      "title": "王坚的“遗产”，为阿里留出后路",
+      "summary": "阿里战略转向：王坚的AI与云基础设施\"遗产\"成为公司新重心。资金将从即时零售和电商收拢，转向大模型能力提升与基础设施建设，静待AI商业化爆发。原文判断\"从本季度开始，AI已经是阿里唯一的路\"，标志着阿里在云与AI基础设施领域的投入加码，将利好上游算力与芯片产业链。",
+      "tickers": [
+        "阿里巴巴"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand",
+        "datacenter_power",
+        "model_capability"
+      ],
+      "direction": {
+        "阿里巴巴": "positive"
+      },
+      "item_ids": [
+        "dce0e64cec7a6edf53cfbc7ca9df0a925eb66835"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-22T10:42:48Z",
+      "first_published_at": "2026-08-22T10:27:40Z",
+      "last_updated_at": "2026-08-22T10:42:48Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "1. **看多逻辑**：①资本配置从低毛利即时零售/电商向高壁垒AI云基础设施切换，长期利润结构有望改善，阿里云已具备国内最完整的IDC与异构算力底座；②王坚时代沉淀的\"云+AI\"架构遗产可直接承接大模型训练与推理，规模效应摊薄单位算力成本；③战略All-in信号明确，叠加AI商业化临近拐点",
+      "ticker_counts": {
+        "阿里巴巴": 1
+      },
+      "max_item_score": 7
+    },
+    "evt_8887ed004426": {
+      "event_id": "evt_8887ed004426",
+      "title": "订单跑在收入前，透过万国数据看数据中心的真相",
+      "summary": "万国数据发布2026年二季度财报：上半年净利34.9亿元扭亏，二季度单季净利8.38亿元，Q2经营现金流14.16亿元同比增64%。但主业经营仍亏，毛利率21.5%同比降2.3pct。上半年新增签约470兆瓦超2025全年，管理层将全年销售目标翻番至1吉瓦，体现AI算力需求驱动IDC订单先行、现金流后续落袋的重资产长合同模式特征。",
+      "tickers": [
+        "百度",
+        "腾讯",
+        "阿里巴巴"
+      ],
+      "themes": [
+        "compute_demand",
+        "datacenter_power"
+      ],
+      "direction": {},
+      "item_ids": [
+        "2103c5cd1de1d30141b10ba21c1d009d65281f7e"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-22T10:42:48Z",
+      "first_published_at": "2026-08-22T10:26:20Z",
+      "last_updated_at": "2026-08-22T10:42:48Z",
+      "is_active": true,
+      "significance": 6,
+      "status": "developing",
+      "deep_analysis": "1. **看多逻辑**  \n①订单先行指标创历史：上半年新增签约470MW已超2025全年，管理层将全年销售目标翻倍至1GW，订单增速远超行业自然增长（国内IDC行业近三年CAGR约15-20%），说明AI算力需求从\"口号\"传导至\"合同\"已得到验证，阿里、腾讯、百度等大客户锁定长周期容量，订单可见性通常延伸2-3年。  \n②现金流拐点已现：Q2经营现金流14.16亿元同比增64%，上半年净利34.9亿元扭亏，重资产长合同模式下\"先收租、后折旧\"的财务特征开始正向兑现，类比2018-2019年美国Equinix的现金流拐点期。  \n③第三方IDC结构性受益：自建数据中心受电力审批、能耗指标限制趋严，大型云厂商外溢需求向头部第三方集中，万国数据作为\"IDC中万豪\"，网络效应与议价能力同步提升。\n\n2. **看空风险**  \n①盈利能力与扩张速度背离：主业经营仍亏、毛利率21.5%同比降2.3pct，意味着每多签1MW短期就多一份折旧+电力亏损；上半年扭亏可能含资产处置或公允价值变动等非经常性损益，可持续经营性利润质量需打折扣。  \n②AI capex退潮的尾部风险：当前订单爆满建立在云厂商激进资本开支假设上，若2027年AI训练投入放缓或推理ASIC化降低单机柜功耗需求，万国数据1GW的销售目标可能成为高基数压力。  \n③电力成本+折旧剪刀差：电价市场化改革推进叠加新机房集中投放，毛利率回升斜率可能弱于市场预期，PE/EBITDA估值锚在利率高位环境下存在压缩空间。\n\n3. **关键驱动因素**  \n①Q3-Q4新签机柜上架率与单MW实际租金水平（验证\"订单→收入\"转化效率）；②阿里、腾讯、字节火山引擎的第三方IDC租赁渗透率（决定行业β弹性）。\n\n4. **市场影响评估**  \n短期：财报超预期+销售指引翻倍有望催化IDC板块情绪，腾讯、阿里",
+      "ticker_counts": {
+        "百度": 1,
+        "阿里巴巴": 1,
+        "腾讯": 1
+      },
+      "max_item_score": 6
+    },
+    "evt_2a4f54381309": {
+      "event_id": "evt_2a4f54381309",
+      "title": "更强的GLM-5.3，为什么没有刷屏？",
+      "summary": "8月14日智谱发布GLM-5.3，8月19日开放API，定价与GLM-5.2持平，权重计划开源。模型沿用5.2基座，靠扩大后训练规模提升Coding、长程Agent和网络安全能力，Artificial Analysis综合智能指数60分，与Claude Fable 5、GPT-5.6 Sol同档，开源模型并列第一，单任务成本低。但发布当天智谱股价跌3.6%，市场关注度远低于前代（5.1发布涨11.5%、5.2发布涨32.8%），反映国产模型密集迭代下跑分领先已难激发兴奋点，关键看差异化能否转化为产品与收入。",
+      "tickers": [
+        "商汤"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand",
+        "model_capability"
+      ],
+      "direction": {
+        "商汤": "neutral"
+      },
+      "item_ids": [
+        "bbdd9ee3e33661e23204985f3174dc36d9b732c6"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-22T10:42:48Z",
+      "first_published_at": "2026-08-22T10:14:44Z",
+      "last_updated_at": "2026-08-22T10:42:48Z",
+      "is_active": true,
+      "significance": 6,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "商汤": 1
+      },
+      "max_item_score": 6
+    },
+    "evt_4100e2c66357": {
+      "event_id": "evt_4100e2c66357",
+      "title": "3万亿美元隐形债务浮出水面：“AI基建潮”会引发下一场次贷危机吗？",
+      "summary": "钛媒体转载文章指出，AI基建热潮背后隐藏约3万亿美元债务风险。作者以次贷危机为类比，警示尽管算力需求真实存在，但大量举债建设的数据中心能否产生匹配现金流偿债仍存疑问。文章核心担忧是：当AI capex增速放缓或模型变现不及预期时，基建侧的高杠杆将率先承压，可能引发类似次贷危机的连锁反应。",
+      "tickers": [],
+      "themes": [
+        "ai_monetization",
+        "compute_demand",
+        "datacenter_power"
+      ],
+      "direction": {},
+      "item_ids": [
+        "0e1dfd4415bd5fabcbc16448b476b03d932d2633"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-22T10:42:48Z",
+      "first_published_at": "2026-08-22T10:26:13Z",
+      "last_updated_at": "2026-08-22T10:42:48Z",
+      "is_active": true,
+      "significance": 5,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {},
+      "max_item_score": 5
     }
   }
 }
