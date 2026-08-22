@@ -220,6 +220,19 @@
       "source_traceable": true,
       "why": "将Intel Arc Pro B70上的Qwen 3.8推理做成Helm chart，公开vLLM补丁与吞吐数据(63 tok/s @128k)，可复现的边缘GPU部署实践。",
       "queued_at": "2026-08-22T14:31:04Z"
+    },
+    {
+      "id": "b22cd6502884338bd02f19611e16462931fbe772",
+      "title": "Cloudflare Announces Kitesurf, a Browser Engine for Agents",
+      "url": "https://www.infoq.com/news/2026/08/cloudflare-kitesurf-browser",
+      "source": "rss:infoq",
+      "published_at": "2026-08-22T15:01:00Z",
+      "raw_summary": "Cloudflare recently introduced Kitesurf, a lightweight browser built for automated workloads. Kitesurf runs browser components in isolated WebAssembly/Rust environments on Cloudflare Workers and supports the Chrome DevTools Protocol, allowing tools such as Playwright and Puppeteer to drive it with lower resource overhead than a full Chromium browser. By Renato Losio",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Cloudflare把浏览器拆成Wasm/Rust组件跑在Workers上，给出明确架构与CDP兼容细节，对Agent基础设施设计有直接参考价值。",
+      "queued_at": "2026-08-22T15:30:07Z"
     }
   ],
   "digest_last_date": "2026-08-22"
