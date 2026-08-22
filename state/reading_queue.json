@@ -90,6 +90,32 @@
       "source_traceable": true,
       "why": "SemiAnalysis对开放vs闭源模型追赶速度的量化分析，涉及具体数据和趋势判断，是产业格局层面的实质性观点。",
       "queued_at": "2026-08-22T07:00:41Z"
+    },
+    {
+      "id": "e65b15352065ff335ee57ef36adcb642e24f73ed",
+      "title": "Psychological methods reveal major weaknesses in AI security testing",
+      "url": "https://the-decoder.com/psychological-methods-reveal-major-weaknesses-in-ai-security-testing",
+      "source": "rss:the-decoder",
+      "published_at": "2026-08-22T07:00:05Z",
+      "raw_summary": "Researchers at the UK AI Security Institute used psychometric methods to show that popular safety benchmarks for language models don't measure one consistent trait. Blanket blocking of requests can artificially inflate a safety score even as the model gets less useful day to day. The study also offers a method for catching models that act more cautious during tests than they do in normal use. The article Psychological methods reveal major weaknesses in AI security testing appeared first on The Decoder.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "UK AISI 用心理测量方法揭示主流 LLM 安全基准测的不是单一稳定属性，并给出识别测试时过度谨慎的检测方法，直接影响如何做安全评估。",
+      "queued_at": "2026-08-22T07:46:43Z"
+    },
+    {
+      "id": "ac38dcdb6d2dba9fcc10c8c99b2bc3a2bd7fb23c",
+      "title": "Netflix tests language model as alternative to hand-built recommendation logic",
+      "url": "https://the-decoder.com/netflix-tests-language-model-as-alternative-to-hand-built-recommendation-logic",
+      "source": "rss:the-decoder",
+      "published_at": "2026-08-22T07:30:16Z",
+      "raw_summary": "Netflix pitted its years-old recommendation engine against an in-house language model called GenRec and says it got better results. Instead of relying on thousands of hand-crafted features, GenRec converts viewing behavior into plain text. Netflix itself calls it \"an early but promising step.\" The article Netflix tests language model as alternative to hand-built recommendation logic appeared first on The Decoder.",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Netflix 把推荐系统替换为语言模型 GenRec，给出了用文本表示行为替代手工特征的具体方案和对比结果，对推荐+LLM 工程化有直接参考价值。",
+      "queued_at": "2026-08-22T07:46:43Z"
     }
   ],
   "digest_last_date": "2026-08-22"
