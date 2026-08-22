@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-22T22:31:16Z",
+  "updated_at": "2026-08-22T22:59:12Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -43426,9 +43426,9 @@
       "first_seen_at": "2026-08-22T16:53:41Z",
       "first_published_at": "2026-08-22T16:40:01Z",
       "last_updated_at": "2026-08-22T16:53:41Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 8,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "**1. 看多逻辑：**\n①**价格碾压驱动企业级渗透**——中国模型API定价",
       "ticker_counts": {
         "字节跳动": 1,
