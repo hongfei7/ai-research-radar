@@ -246,6 +246,32 @@
       "source_traceable": true,
       "why": "指出V1视觉皮层模型比较中'untrained CNN超越trained CNN'的结论是评估分辨率的伪迹，有具体实验与代码，可复现验证。",
       "queued_at": "2026-08-22T15:51:10Z"
+    },
+    {
+      "id": "3637846ade33fcbad329081de245be83ee515418",
+      "title": "More than just code review",
+      "url": "https://simonwillison.net/2026/aug/22/more-than-just-code-review",
+      "source": "rss:simonwillison",
+      "published_at": "2026-08-22T15:56:54Z",
+      "raw_summary": "The key skill required to make productive use of coding agents is being able to confidently instruct them on how to make changes and then confidently verify that those changes have been applied in the correct way. Sometimes this involves reviewing every line of code they have written, but there are other ways to achieve that goal. Eyeballing every line of code has never been the most effective way to validate a chance to a piece of software. Tags: code-review, coding-agents, generative-ai, agentic-engineering, ai, llms",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": false,
+      "why": "Simon Willison对代码评审与AI agent协作方式的反思，提出'逐行review并非最有效验证手段'的实用观点。",
+      "queued_at": "2026-08-22T16:27:30Z"
+    },
+    {
+      "id": "f1bc4171530f849d178da207d37cf012ab15ef1b",
+      "title": "Fixed the MTP head on Ornith1.5 35B A3B. +3% TPS -33% wall clock",
+      "url": "https://www.reddit.com/r/localllama/comments/1vvft7b/fixed_the_mtp_head_on_ornith15_35b_a3b_3_tps_33",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-22T15:46:27Z",
+      "raw_summary": "I love the Ornith 35B local models, 1.0 has been running my HAM radio rig for me. I have a hackRF receiver and a 5 watt quansheng portable the both run headless through the PC. I tried out the new Ornith1.5 build and it was faster and more accurate than 1.0. I read the threads that talked about the untrained MTP head so I found a trained version of the MTP head on a quant I couldn't use so I spliced it onto an APEX requant of Ornith1.5 to make a beast that is 2.5X faster than Ornith1.0 and 33% faster than the released version of Ornith1.5. I cant believe how good this model is, and how fast it works at the same tasks. And it doesn't try to lecture me when I ask it to key up the mic on a licensed freq. The crazy thing is tokens/sec only went up by 4. From 60 to 64 t/s avg. But the time to complete the same tasks went down by 1/3, from 21 to 14 seconds average on my radio torture tests. https://ollama.com/slickwillies/ornith15-35b-a3b-apex-mtp-fixed testing methodology and results: https://github.com/h00nigan/Ornith-testing-results &#32; submitted by &#32; /u/frankentriple [link] &#32; [comments]",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": false,
+      "why": "实测将训练过的MTP head嫁接到Ornith1.5 35B A3B量化版上获得2.5x速度提升，给出了具体数字和操作细节，是可复现的推理优化实验。",
+      "queued_at": "2026-08-22T16:27:30Z"
     }
   ],
   "digest_last_date": "2026-08-22"
