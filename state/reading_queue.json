@@ -298,6 +298,45 @@
       "source_traceable": false,
       "why": "Nvidia对Vera Rubin/Grace Blackwell涨价15%+，反映下一代AI算力定价权与供需格局，是产业层面实质信号。",
       "queued_at": "2026-08-22T19:05:17Z"
+    },
+    {
+      "id": "2a02c51dd523d8d706c99169d339e89e7411b1d7",
+      "title": "Single RTX 5090: Qwen3.8-27B NVFP4 at a real 262K context in vLLM — 77 tok/s short-context, 64.7 tok/s at 128K",
+      "url": "https://www.reddit.com/r/localllama/comments/1vvl7pc/single_rtx_5090_qwen3827b_nvfp4_at_a_real_262k",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-22T19:16:31Z",
+      "raw_summary": "This is the Qwen3.8-27B setup I actually use every day on one RTX 5090. I wanted to write it down with enough detail that another 5090 owner can reproduce it instead of guessing which memory knobs I used. The short version: the full 262,144-token window fits together with vision, FP8 KV, prefix caching, tool calling, and a normal KDE desktop. Decode is 77.2 tok/s after a 1K prompt and 64.7 tok/s with 128K already resident. A successful 262,000-token prefill took 166 seconds. This is not a claim that 262K is fast; it is proof that it genuinely fits and completes. Model: joshebbs/qwen3.8-27b-uncensored-nvfp4-modelopt, pinned to revision e5ff4986938dcd0dd05ab4cce89da1b052be6ce3. It is an NVFP4 ModelOpt export of JonathanColetti/Qwen3.8-27B-Uncensored. The checkpoint is 19.18 GiB of safetensors and retains the vision tower and MTP head. The model is a 64-layer hybrid: 48 Gated DeltaNet layers and 16 full-attention layers. Results All runs hit the already-warm daily vLLM server through /v1/completions, concurrency 1, random token prompts, --ignore-eos, and temperature 0. PP means accepted input tokens divided by TTFT. TG means 1000 / mean_TPOT_ms, so it excludes prefill. The non-prefix runs had zero prefix-cache hits according to the server counters. Workload Runs PP tok/s TTFT Steady TG tok/s End-to-end output tok/s 8,192 in -&gt; 1 out 5 7,005 1.169 s mean / 1.167 s median n/a n/a 32,768 in -&gt; 1 out 3 6,148 5.330 s mean / 5.332 s median n/a n/a 131,072 in -&gt; 256 out 1 2,78",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "单卡 5090 跑 262K 上下文的具体配置与各段 tok/s 数据，可复现且信息密度高。",
+      "queued_at": "2026-08-22T20:32:26Z"
+    },
+    {
+      "id": "d4fcab0198aba950917b5277461e37973355f08b",
+      "title": "London-based Inherent, founded by DeepMind alumni and with $50M in seed funding, says its new Faraday agent beats GPT-5.5 at reproducing research paper findings (Anna Heim/TechCrunch)",
+      "url": "https://www.techmeme.com/260822/p12#a260822p12",
+      "source": "rss:techmeme",
+      "published_at": "2026-08-22T20:00:13Z",
+      "raw_summary": "Anna Heim / TechCrunch: London-based Inherent, founded by DeepMind alumni and with $50M in seed funding, says its new Faraday agent beats GPT-5.5 at reproducing research paper findings&nbsp; &mdash;&nbsp; Inherent, a London AI lab founded by Google DeepMind alumni, says its AI agent just outperformed much larger models from Anthropic and OpenAI using a fraction of the size.",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "DeepMind 系创业公司宣称小模型超越 GPT-5.5，触及模型效率路线之争，值得看其评测方法与口径。",
+      "queued_at": "2026-08-22T20:32:26Z"
+    },
+    {
+      "id": "48f6f08217951796fd9ca81eeb28b8277f883df3",
+      "title": "I forked Ninfer 3090 and converted it to run on the CMP170HX - doubled my Qwen3.6-35B from llama.cpp",
+      "url": "https://www.reddit.com/r/localllama/comments/1vvjxg1/i_forked_ninfer_3090_and_converted_it_to_run_on",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-22T18:27:18Z",
+      "raw_summary": "Good afternoon, everyone! I wanted to show the work I've been doing around porting Ninfer over to the CMP170HX (Github) So, first, I do want to call out the amazing work that Neroued, Sergiuszm and specifically Don-Chad have all done, to not take away from vLLM, Llama.cpp and SGLang, but to enable local AI to squeeze every ounce of performance we can out of our hardware at home. Free tokens are free tokens and the work that these folks did 100% enabled this fork. I also want to preface early on in this post that I am not a developer, a coder or anything like that. I am an IT Architect so I do know tech and I have been pretty active in the AI community here for the last year. Hermes, powered by Codex and local Qwen3.8-27B, powered by the 4090-fork of Ninfer, were my developers on this project and I just guided them. I have been playing with the 3090 and 4090 Ninfer the last week or so, testing, validating, configuring to work with Llama-swap, and also worked through an NInfer/llama-swap telemetry compatibility gap so llama-swap could capture NInfer’s timing and throughput metrics. BUT getting 30-50% or more performance bumps consistently, for &quot;free&quot;, inspired me. Being that the RTX 3090/3090Ti and the CMP170HX were cousins, I ran some recon tests against Don-Chad's repo and my local instance of CMP170HX, unlocked by the CMPUnlocker ( got lucky and got my card &lt;$1000) and was pleasantly surprised that the plumbing was mostly compatible. So Hermes, between GPT-5.6-T",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "把推理引擎移植到矿卡 CMP170HX 并跑通 Qwen3.6-35B，含具体硬件与算子取舍的工程细节。",
+      "queued_at": "2026-08-22T20:32:26Z"
     }
   ],
   "digest_last_date": "2026-08-22"
