@@ -116,6 +116,19 @@
       "source_traceable": true,
       "why": "Netflix 把推荐系统替换为语言模型 GenRec，给出了用文本表示行为替代手工特征的具体方案和对比结果，对推荐+LLM 工程化有直接参考价值。",
       "queued_at": "2026-08-22T07:46:43Z"
+    },
+    {
+      "id": "3d428c643630a8b8febba72f597cf3a439429750",
+      "title": "World models that ignore human beliefs predict the wrong actions, new research shows",
+      "url": "https://the-decoder.com/world-models-that-ignore-human-beliefs-predict-the-wrong-actions-new-research-shows",
+      "source": "rss:the-decoder",
+      "published_at": "2026-08-22T09:00:20Z",
+      "raw_summary": "Current world models like Sora or Genie only simulate physics and ignore what people think, want, or feel. The new \"Mental World Modeling\" framework adds mental variables like beliefs and intentions. Even weaker language models using this approach outperform stronger models without mental modeling. The biggest bottleneck: predicting how physical and mental states change together. The article World models that ignore human beliefs predict the wrong actions, new research shows appeared first on The Decoder.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "提出 Mental World Modeling 框架，明确指出当前世界模型忽略心智状态是核心瓶颈，并给出弱模型+心智建模可超越强模型的实验结论，值得追踪原始论文看其消融与边界。",
+      "queued_at": "2026-08-22T09:44:04Z"
     }
   ],
   "digest_last_date": "2026-08-22"
