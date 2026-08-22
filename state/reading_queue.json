@@ -155,6 +155,19 @@
       "source_traceable": true,
       "why": "王兴兴关于具身智能'ChatGPT时刻'未到的判断+北京政策定位+300+展商现场，结合FT一手报道价值较高。",
       "queued_at": "2026-08-22T10:41:56Z"
+    },
+    {
+      "id": "7394296569adfba3cb0011896ab0873002320c1d",
+      "title": "Presentation: SafeChat: Building AI-Powered Safety Systems at Scale in a Real-Time Marketplace",
+      "url": "https://www.infoq.com/presentations/doordash-llm-ai-moderation-platform",
+      "source": "rss:infoq",
+      "published_at": "2026-08-22T11:00:00Z",
+      "raw_summary": "Bruna Pereira explains how DoorDash built a content-agnostic AI moderation platform. She covers replacing costly LLM-only pipelines with a hybrid pattern: using fast internal models to filter obvious cases, LLM multi-axis scoring for nuanced decisions, and no-code workflows with backtesting. Discover how this architectural pattern cut safety incidents while scaling to millions of daily messages. By Bruna Pereira",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "DoorDash的AI内容审核架构实战分享：混合快慢模型+多轴评分+无代码工作流回测，具体工程取舍和效果数据可参考。",
+      "queued_at": "2026-08-22T11:01:08Z"
     }
   ],
   "digest_last_date": "2026-08-22"
