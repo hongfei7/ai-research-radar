@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-23T11:35:39Z",
+  "updated_at": "2026-08-23T11:59:00Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -43721,9 +43721,9 @@
       "first_seen_at": "2026-08-23T05:49:09Z",
       "first_published_at": "2026-08-23T05:19:48Z",
       "last_updated_at": "2026-08-23T05:49:09Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 8,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "",
       "ticker_counts": {
         "亚马逊": 1,
@@ -43755,9 +43755,9 @@
       "first_seen_at": "2026-08-23T05:49:09Z",
       "first_published_at": "2026-08-23T05:25:33Z",
       "last_updated_at": "2026-08-23T05:49:09Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 7,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "",
       "ticker_counts": {
         "阿里巴巴": 1
