@@ -51,6 +51,19 @@
       "source_traceable": false,
       "why": "提出用可逆逻辑（Toffoli/Fredkin）改造CoT以解决误差累积和KV增长的新思路，值得了解其理论可行性。",
       "queued_at": "2026-08-23T03:52:42Z"
+    },
+    {
+      "id": "0c1d46a6cddae48964159b9bd38d7e0dbefd0a75",
+      "title": "DRAM Controller Register Manipulation Breaks CPU Memory Isolation",
+      "url": "https://www.infoq.com/news/2026/08/amd-memory-exploit",
+      "source": "rss:infoq",
+      "published_at": "2026-08-23T04:04:00Z",
+      "raw_summary": "Security researcher Christopher Domas developed skitter-creek-bath-salts, an open-source hardware security tool that disrupts CPU privilege boundaries by manipulating memory controller translation registers. This allows unprivileged software to access protected memory regions, revealing a vulnerability in modern processor architectures that could affect cloud and confidential computing security. By Olimpiu Pop",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "通过DRAM控制器寄存器操作绕过CPU内存隔离的硬件安全研究，对机密计算/云安全有直接工程与架构意义。",
+      "queued_at": "2026-08-23T04:40:27Z"
     }
   ],
   "digest_last_date": "2026-08-23"
