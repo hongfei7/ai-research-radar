@@ -77,6 +77,45 @@
       "source_traceable": false,
       "why": "Qwen 3.8 27B在OCR、编码上与闭源前沿模型的实测对比，并触发了'自购硬件'的部署讨论，对开源模型落地能力有具体一手体感数据。",
       "queued_at": "2026-08-23T05:48:25Z"
+    },
+    {
+      "id": "093237f1062690ef7e7649d82b597d97698ad958",
+      "title": "300MW级F级首台套示范电站项目落地广东",
+      "url": "https://36kr.com/newsflashes/3951649626013056?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-08-23T06:50:51Z",
+      "raw_summary": "近日，广东省发展改革委发布《关于中国重燃自主研制300MW级F级重型燃气轮机首台套示范电站项目核准的批复》（粤发改核准〔2026〕6号），正式核准国家电投中国重燃自主研制300MW级F级重型燃气轮机首台套示范电站项目建设。“300MW级F级重型燃气轮机是我国自主研制的功率最大、技术等级最高的燃气轮机”概括了这台装备的分量。（中国能源报）",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "国内自主300MW级F级重型燃气轮机首台套核准落地，意味着高温合金/涡轮叶片/燃烧室等供应链和工程能力的实质突破，对功率半导体与电力设备格局有外溢意义。",
+      "queued_at": "2026-08-23T07:21:51Z"
+    },
+    {
+      "id": "cb546ae3d9ff951bb85b2baa4f4e33123a4e444c",
+      "title": "# Qwen3.8-27B — One Week Later: The r/LocalLLaMA + r/LocalLLM Verdict",
+      "url": "https://www.reddit.com/r/localllama/comments/1vvu15m/qwen3827b_one_week_later_the_rlocalllama",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-23T01:39:46Z",
+      "raw_summary": "Companion to the Qwen 3.8 Release Megathread. Compiled from ~2,000 posts scanned across both subs, with deep reads of the 45 highest-signal threads (560 posts and comments), Aug 15–22, 2026, plus independent X benchmarks. Every number is attributed to the poster's stated hardware/runtime/quant. This community contradicts itself on nearly every axis — so this thread keeps the disagreements side-by-side instead of picking a winner for you. TL;DR The consensus pick: a 27B dense multimodal model that genuinely moved the bar for local agentic coding. The strongest claim with controlled evidence behind it isn't benchmarks — it's tool-calling reliability. The default ships at xhigh reasoning and it thinks a lot. Low and medium presets score nearly as well on Artificial Analysis (~43/44 intelligence index, within a few points of the xhigh headline) while cutting thinking tokens ~7–9x (and wall time ~6–7x). Most of you should not be running xhigh. Knowledge recall regressed vs 3.6 — widely reported and best understood as a deliberate agentic-design tradeoff. Trivia nerds: keep Gemma around. Q4_K_M is basically indistinguishable from Q8 on perplexity, but real-world reports split hard below Q6 for complex reasoning. KV cache quantization is one of the most contested settings in the corpus. The &quot;neck and neck with DeepSeek V4 / GPT-5.6 Luna Max&quot; AA headline is real but heavily caveated — see the benchmark credibility section before quoting it at your friends. 1. What it's actu",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "对Qwen3.8-27B两周内社区~2000帖、45个高信号线程的系统性梳理，每条数字都带硬件/量化上下文，对本地部署与Agent场景选型是高密度情报。",
+      "queued_at": "2026-08-23T07:21:51Z"
+    },
+    {
+      "id": "7bbbc9247ba2389e3f9b8e1a995fb511eb7989da",
+      "title": "Foundational Verification of Running-Time Bounds for Interactive Programs",
+      "url": "https://adam.chlipala.net/papers/metricscpp26/metricscpp26.pdf",
+      "source": "rss:lobsters",
+      "published_at": "2026-08-23T06:56:45Z",
+      "raw_summary": "",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "交互式程序运行时间的形式化验证，属于PL/系统研究前沿，与编译器/推理服务等场景的边界证明有可迁移启发。",
+      "queued_at": "2026-08-23T07:21:51Z"
     }
   ],
   "digest_last_date": "2026-08-23"
