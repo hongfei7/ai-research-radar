@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-23T19:37:03Z",
+  "updated_at": "2026-08-23T19:57:41Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -43826,9 +43826,9 @@
       "first_seen_at": "2026-08-23T08:40:25Z",
       "first_published_at": "2026-08-23T08:15:28Z",
       "last_updated_at": "2026-08-23T13:36:55Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 8,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "",
       "ticker_counts": {
         "美光": 2,
@@ -44124,9 +44124,9 @@
       "first_seen_at": "2026-08-23T13:36:55Z",
       "first_published_at": "2026-08-23T13:00:00Z",
       "last_updated_at": "2026-08-23T13:36:55Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 7,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "",
       "ticker_counts": {
         "英伟达": 1

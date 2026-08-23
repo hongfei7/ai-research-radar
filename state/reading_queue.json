@@ -324,6 +324,19 @@
       "source_traceable": true,
       "why": "在macOS上对Qwen3.8-27B多个推理引擎(MLX/omlx等)做的严格基准对比，5天100+ GPU小时，含具体加速技术和真实agentic负载测试，工程参考价值高。",
       "queued_at": "2026-08-23T18:40:42Z"
+    },
+    {
+      "id": "8e4f008cc0430322f118ab6a226e99450c070749",
+      "title": "Etched Sohu vs. Nvidia: Transformer ASIC vs. GPU (2026) – Spheron Blog",
+      "url": "https://www.spheron.network/blog/etched-ai-sohu-vs-nvidia-transformer-asic-inference",
+      "source": "hackernews",
+      "published_at": "2026-08-23T18:27:33Z",
+      "raw_summary": "Etched Sohu vs. Nvidia: Transformer ASIC vs. GPU (2026) – Spheron Blog",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "Transformer ASIC vs GPU 的架构路线对比，涉及 Etched Sohu 这类专用芯片与 Nvidia 的范式之争，值得了解。",
+      "queued_at": "2026-08-23T19:57:33Z"
     }
   ],
   "digest_last_date": "2026-08-23"
