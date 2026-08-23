@@ -168,6 +168,19 @@
       "source_traceable": true,
       "why": "作者基于Anthropic SynthID-Text论文自行实现了LLM水印最小版本，附有代码和原论文指向，可动手复现并理解token级统计水印原理。",
       "queued_at": "2026-08-23T09:44:36Z"
+    },
+    {
+      "id": "f4c603a14e05a80e99e6c1e3e111f3167411cb75",
+      "title": "AI is becoming AI's biggest customer as agentic token usage jumps 14x on OpenRouter",
+      "url": "https://the-decoder.com/ai-is-becoming-ais-biggest-customer-as-agentic-token-usage-jumps-14x-on-openrouter",
+      "source": "rss:the-decoder",
+      "published_at": "2026-08-23T10:02:00Z",
+      "raw_summary": "AI agents have consumed more tokens than humans on OpenRouter since February 6, 2025. Agentic usage has grown 14x since then, while human usage is up just 2.8x. Nearly 70 percent of agent token consumption comes from cheap cached prompts, though, so actual costs are rising far more slowly than the raw numbers suggest. The article AI is becoming AI&#039;s biggest customer as agentic token usage jumps 14x on OpenRouter appeared first on The Decoder.",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "给出了OpenRouter平台上agentic token 14倍增长、缓存占比70%等具体数字，可用于理解AI agent的算力消费结构与推理成本演化。",
+      "queued_at": "2026-08-23T10:42:13Z"
     }
   ],
   "digest_last_date": "2026-08-23"
