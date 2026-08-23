@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-23T08:41:13Z",
+  "updated_at": "2026-08-23T09:06:12Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -43571,12 +43571,13 @@
     },
     "evt_b5b70d99bfb8": {
       "event_id": "evt_b5b70d99bfb8",
-      "title": "Sources: Nvidia plans to use its $6B deal with Poolside to build an open-weight AI model to compete with Chinese models like DeepSeek and Kimi (Robbie Whelan/Wall Street Journal)",
-      "summary": "据华尔街日报援引消息人士，英伟达计划利用其与AI初创公司Poolside达成的60亿美元合作，开发一款开源权重的AI模型，旨在对标中国DeepSeek、Kimi等开源大模型，构建美国本土开源AI生态。此举意味着英伟达从纯芯片供应商向模型生态层延伸，可能重塑开源大模型竞争格局。",
+      "title": "英伟达60亿美元收购Poolside，加码开源大模型对标中国厂商",
+      "summary": "英伟达拟以10亿美元股权+60亿美元技术授权及人才引进方式收购AI编程初创公司Poolside，逾100名员工将并入英伟达并参与Nemotron大模型项目。此举意在补强英伟达在开放权重大模型方向的能力，对标DeepSeek等中国厂商的开源生态竞争。",
       "tickers": [
         "英伟达"
       ],
       "themes": [
+        "ai_monetization",
         "compute_demand",
         "model_capability",
         "policy_export"
@@ -43585,18 +43586,19 @@
         "英伟达": "positive"
       },
       "item_ids": [
-        "93bf09333c9da891fedb81529bd9e3d18e2741b4"
+        "93bf09333c9da891fedb81529bd9e3d18e2741b4",
+        "5c3bc6ea32314841f13e69a81413f6ca264ecc79"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "first_seen_at": "2026-08-23T03:53:30Z",
       "first_published_at": "2026-08-23T03:30:01Z",
-      "last_updated_at": "2026-08-23T03:53:30Z",
+      "last_updated_at": "2026-08-23T09:05:34Z",
       "is_active": true,
       "significance": 8,
       "status": "developing",
       "deep_analysis": "",
       "ticker_counts": {
-        "英伟达": 1
+        "英伟达": 2
       },
       "max_item_score": 8
     },
@@ -43890,6 +43892,47 @@
       "deep_analysis": "",
       "ticker_counts": {
         "Anthropic": 1
+      },
+      "max_item_score": 7
+    },
+    "evt_da56dc497adb": {
+      "event_id": "evt_da56dc497adb",
+      "title": "OVHcloud Raises Prices as AI Memory Demand Reprices Non-AI Infrastructure",
+      "summary": "欧洲云厂商OVHcloud宣布9月起上调服务器价格，其中2026款游戏服务器涨价87%，近期其他服务器涨价40%-59%。创始人Octave Klaba透露，6月内存价格较一年前上涨六倍，主因RAM供应商将产能转向面向AI的高带宽内存（HBM）。与此同时，AWS因长周期采购已对一款GPU预留实例产品重新定价。",
+      "tickers": [
+        "三星电子",
+        "亚马逊",
+        "海力士",
+        "美光"
+      ],
+      "themes": [
+        "advanced_packaging",
+        "chip_supply",
+        "compute_demand",
+        "datacenter_power"
+      ],
+      "direction": {
+        "亚马逊": "negative",
+        "美光": "positive",
+        "海力士": "positive",
+        "三星电子": "positive"
+      },
+      "item_ids": [
+        "14cb2aaa1007ab52d2a784533b1176285bf1d48b"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-23T09:05:34Z",
+      "first_published_at": "2026-08-23T08:43:00Z",
+      "last_updated_at": "2026-08-23T09:05:34Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "1. **看多逻辑**\n① HBM对传统DRAM产能的\"虹吸效应\"已被终端定价验证，OVHcloud涨价87%及AWS重新定价GPU预留实例，说明内存厂商的议价权从合约层级下沉到现货层级，美光、海力士、三星在HBM高溢价+传统DRAM量价齐升的双轮驱动下，盈利弹性显著放大。② 6月内存价格同比涨6倍属于历史罕见涨幅，叠加AI需求外溢至通用算力，说明行业供给紧张具有结构性而非周期性特征，三星若HBM3E/HBM4验证顺利，存在估值修复空间。③ 欧洲云厂商率先提价预示成本传导链条启动，AWS跟随定价意味着头部CSP已默许毛利让渡换取供给稳定，利好内存原厂的\"定价权溢价\"重估。\n\n2. **看空风险**\n① 对亚马逊而言，涨价若无法完全转嫁至终端客户，将直接挤压AWS毛利率（尤其是通用算力/EC2非AI实例），而AI工作负载对价格敏感度低、非AI租户则可能因价格弹性流失或自建替代，长期面临需求破坏风险。② 三星HBM客户验证节奏仍慢于海力士，若Q4 NVIDIA Blackwell/Blackwell Ultra订单仍以海力士为主，三星的HBM收入弹性将打折。③ OVHcloud体量较小（全球云市场份额<2%），其涨价或仅为区域/产品线行为，存在样本偏差风险，不足以代表全行业定价趋势。\n\n3. **关键驱动因素**\n① 内存原厂HBM产线良率与新增产能投放节奏——三星平泽P5/HBM4、海力士M16/M15X产线爬坡进度是判断供给紧缺缓解时点的核心信号。② 9月起OVHcloud及AWS定价落地后的客户留存/流失数据，以及Q3财报中DRAM合约价是否继续环比上涨15%以上。\n\n4. **市场影响评估**\n短期（1-3个月）：内存三巨头受益于价格确认，股价有继续上行催化；亚马逊面临毛利率下修预期，承压。中期（6-12个月）：若HBM新增产能于2027H1集中释放，传统DRAM价格或回落，内存股估值面临\"高基数\"考验；亚马逊则取决于非AI业务能否通过产品组合优化消化成本。\n\n5. **时间线推断**\n2026年9月：OVHcloud新价格正式生效，AWS GPU预留实例新定价落地。2026Q3财报季（10-11月）：验证DRAM合约价及云厂商毛利走向。2026Q4-2027Q1：三星HBM4量产与NVIDIA下一代GPU供应分配明朗化。2027H2：若HBM供给缓解，传统DRAM价格或进入回调通道。",
+      "ticker_counts": {
+        "美光": 1,
+        "海力士": 1,
+        "亚马逊": 1,
+        "三星电子": 1
       },
       "max_item_score": 7
     }

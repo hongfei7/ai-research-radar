@@ -116,6 +116,45 @@
       "source_traceable": true,
       "why": "交互式程序运行时间的形式化验证，属于PL/系统研究前沿，与编译器/推理服务等场景的边界证明有可迁移启发。",
       "queued_at": "2026-08-23T07:21:51Z"
+    },
+    {
+      "id": "846bee69ef066c8cfc65412814499a429dabbf08",
+      "title": "I hosted Kimi K3 (2.8T parameters) using 8 B300s. 92 tok/s, $190 per million tokens",
+      "url": "https://www.reddit.com/r/localllama/comments/1vw1j2p/i_hosted_kimi_k3_28t_parameters_using_8_b300s_92",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-23T08:25:35Z",
+      "raw_summary": "What I ran: 8x B300 on Modal, $56.79 per hour, vLLM, tensor parallel 8, native MXFP4 Cold boot ~27 min (1.56 TB load, JIT, 51 CUDA graph captures) TTFT 0.92 to 1.02 s, decode 92 tok/s steady, 83 tok/s average over 4 prompts $190 per million output tokens. One clean run is about $36 of GPU time. Left warm, it is $1,363 a day. I also ran Unsloth's Dynamic GGUF. Their 1-bit UD-IQ1_S (594 GB) fits 8x A100-80GB via llama.cpp. $19.99 per hour, 2.8x cheaper. Result: ~9 tok/s, TTFT 7 to 60 s, ~$620 per million tokens, so 3.3x more expensive per token. Quality at 1-bit was fine (correct arithmetic, coherent prose). Full write-up with every flag, the Modal deployment file, and the raw benchmark JSON: https://books.vizuara.ai/book/kimi-k3-hosting &#32; submitted by &#32; /u/OtherRaisin3426 [link] &#32; [comments]",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "8xB300跑Kimi K3 2.8T的具体吞吐、TTFT、冷启动时延与每token成本，并对比1-bit GGUF，给出可复现的工程数据。",
+      "queued_at": "2026-08-23T09:04:41Z"
+    },
+    {
+      "id": "14cb2aaa1007ab52d2a784533b1176285bf1d48b",
+      "title": "OVHcloud Raises Prices as AI Memory Demand Reprices Non-AI Infrastructure",
+      "url": "https://www.infoq.com/news/2026/08/ovhcloud-memory-price-rise",
+      "source": "rss:infoq",
+      "published_at": "2026-08-23T08:43:00Z",
+      "raw_summary": "OVHcloud will raise prices from September, with 2026-edition gaming servers up 87 percent and other recent servers 40 to 59 percent. Founder Octave Klaba says memory cost six times more in June than a year earlier, as RAM suppliers shifted capacity toward high-bandwidth memory for AI. AWS, buying years ahead, has repriced one reserved GPU product. By Steef-Jan Wiggers",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "给出具体涨价幅度与HBM挤占DDR产能的数据，揭示AI对通用算力定价的溢出效应。",
+      "queued_at": "2026-08-23T09:04:41Z"
+    },
+    {
+      "id": "5c3bc6ea32314841f13e69a81413f6ca264ecc79",
+      "title": "Nvidia Poolside deal to compete with Chinese Open Weights",
+      "url": "https://www.reddit.com/r/localllama/comments/1vw0mcd/nvidia_poolside_deal_to_compete_with_chinese_open",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-23T07:31:55Z",
+      "raw_summary": "Nvidia is investing $1 billion in Poolside and paying $6 billion to license its technology and hire most of its engineers. Over 100 Poolside staff will move to Nvidia to work on Nemotron. Good news for us! &#32; submitted by &#32; /u/mrgreatheart [link] &#32; [comments]",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Nvidia对Poolside的10亿美元投资+60亿美元技术授权+人员转入Nemotron，透露其应对中国开源模型的组织与资本动作。",
+      "queued_at": "2026-08-23T09:04:41Z"
     }
   ],
   "digest_last_date": "2026-08-23"
