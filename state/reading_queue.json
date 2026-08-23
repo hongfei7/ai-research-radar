@@ -363,6 +363,19 @@
       "source_traceable": true,
       "why": "非侵入式EEG解码静默阅读是一手神经技术研究，对BCI/脑机接口研究者有具体方法与数据可参考。",
       "queued_at": "2026-08-23T21:00:02Z"
+    },
+    {
+      "id": "3c952c8cbad09e541768215a5fb1d2c122d88ff4",
+      "title": "Testing whether discrete topology is a more durable memory medium than continuous weights — it isn't ... probably [R]",
+      "url": "https://www.reddit.com/r/machinelearning/comments/1vwjbu8/testing_whether_discrete_topology_is_a_more",
+      "source": "reddit:ml",
+      "published_at": "2026-08-23T21:18:48Z",
+      "raw_summary": "I ran a controlled comparison of two &quot;write-in-place&quot; memory adapters for a frozen LM: one edits continuous weights, the other (EPMem) keeps weights frozen and random and only edits a binary edge mask via straight-through estimation. Storage bits and write steps are matched across both. On a continual fact-writing benchmark (TinyStories-33M), EPMem writes facts fine but forgets them just as fast as the continuous adapter, underperforms it overall, and takes more write steps to get there. Mechanistically: per-write interference scales as sqrt(F) in the number of mask flips F, and retention decays faster than a random-collision null — so the mask-learning gradient isn't colliding by chance, it's preferentially re-flipping edges that are already storing something (anti-consolidation, not neutral overwrite). Replicated on Pythia-410M: same pattern, sharper — scale makes writing easier, retention worse. Takeaway: binary-mask methods that do avoid forgetting (SupSup, WSN, etc.) work because they explicitly enforce non-overlapping allocation between writes, not because discreteness itself is forgetting-resistant. The substrate isn't the lever — the write/allocation rule is. Paper: https://zenodo.org/records/22071715 (DOI: 10.5281/zenodo.22071715) Genuinely interested in pushback — particularly whether this holds outside fact-writing tasks, or whether it's an artifact of straight-through estimation specifically. &#32; submitted by &#32; /u/Icy_Agent_266 [link] &#32; [commen",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "一手控制实验对比离散拓扑与连续权重作为记忆介质的持续学习能力，给出定量结论和干扰机制分析，有认知增量。",
+      "queued_at": "2026-08-23T21:30:39Z"
     }
   ],
   "digest_last_date": "2026-08-23"
