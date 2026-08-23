@@ -389,6 +389,19 @@
       "source_traceable": true,
       "why": "偶极场约束聚变是与托卡马克不同的技术路线，OpenStar给出实验演示值得了解路线差异和工程取舍。",
       "queued_at": "2026-08-23T21:58:18Z"
+    },
+    {
+      "id": "b832fd5e09720b882cc9c66ba75854c2b748e034",
+      "title": "Training AI to Paint with Code",
+      "url": "https://surya.website/rling-qwen-to-paint-with-code",
+      "source": "hackernews",
+      "published_at": "2026-08-23T19:39:29Z",
+      "raw_summary": "Training AI to Paint with Code",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "用代码（图形程序）作为训练信号让AI绘画，涉及可执行的代码表征与生成范式，值得了解其方法与效果。",
+      "queued_at": "2026-08-23T22:31:11Z"
     }
   ],
   "digest_last_date": "2026-08-23"
