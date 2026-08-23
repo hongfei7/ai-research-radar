@@ -4,76 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "OpenAI"
-      ],
-      "features": [
-        "gpt",
-        "price",
-        "reduction",
-        "sol"
-      ],
-      "sent_at": "2026-08-22T06:04:20Z"
-    },
-    {
-      "tickers": [
-        "Anthropic",
-        "OpenAI",
-        "谷歌"
-      ],
-      "features": [
-        "alpha",
-        "deepmind",
-        "gemini",
-        "hints",
-        "is",
-        "model",
-        "next",
-        "ox",
-        "pro",
-        "researcher",
-        "strongly",
-        "the"
-      ],
-      "sent_at": "2026-08-22T07:02:35Z"
-    },
-    {
-      "tickers": [
-        "DeepSeek",
-        "Meta",
-        "OpenAI"
-      ],
-      "features": [
-        "agentic",
-        "ai",
-        "as",
-        "catch",
-        "closed",
-        "each",
-        "early",
-        "era",
-        "first",
-        "from",
-        "half",
-        "have",
-        "long",
-        "model",
-        "models",
-        "of",
-        "open",
-        "reasoning",
-        "scaling",
-        "semianalysis",
-        "successive",
-        "taken",
-        "the",
-        "to",
-        "up",
-        "with"
-      ],
-      "sent_at": "2026-08-22T07:02:57Z"
-    },
-    {
-      "tickers": [
         "Anthropic",
         "OpenAI"
       ],
@@ -216,6 +146,46 @@
         "qwen"
       ],
       "sent_at": "2026-08-23T05:50:07Z"
+    },
+    {
+      "tickers": [
+        "阿里巴巴"
+      ],
+      "features": [
+        "七年",
+        "大的",
+        "年来",
+        "最大",
+        "本运",
+        "来最",
+        "的资",
+        "资本",
+        "运作",
+        "里七",
+        "阿里"
+      ],
+      "sent_at": "2026-08-23T08:41:40Z"
+    },
+    {
+      "tickers": [
+        "三星电子",
+        "海力士",
+        "美光"
+      ],
+      "features": [
+        "about",
+        "ai",
+        "drives",
+        "memory",
+        "nvidia",
+        "percent",
+        "prices",
+        "reportedly",
+        "server",
+        "shortage",
+        "up"
+      ],
+      "sent_at": "2026-08-23T08:41:57Z"
     }
   ],
   "last_report": {

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-23T07:58:01Z",
+  "updated_at": "2026-08-23T08:41:13Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -43792,6 +43792,106 @@
         "小米": 1
       },
       "max_item_score": 6
+    },
+    "evt_9d35db113db1": {
+      "event_id": "evt_9d35db113db1",
+      "title": "Memory shortage reportedly drives Nvidia AI server prices up about 15 percent",
+      "summary": "据Bloomberg报道，受三星、SK海力士、美光DRAM持续短缺影响，搭载Vera Rubin和Grace Blackwell芯片的英伟达AI服务器价格预计上涨约15%。该涨价直接波及微软、谷歌、Meta等正大举投入AI基础设施的云厂商，形成资本支出反而强化供应商市场地位的悖论。",
+      "tickers": [
+        "三星电子",
+        "海力士",
+        "美光",
+        "英伟达"
+      ],
+      "themes": [
+        "advanced_packaging",
+        "chip_supply",
+        "compute_demand",
+        "datacenter_power"
+      ],
+      "direction": {
+        "英伟达": "neutral",
+        "美光": "positive",
+        "海力士": "positive",
+        "三星电子": "positive"
+      },
+      "item_ids": [
+        "9025e541f70fc9c71cf09313bfff59fed4e5bfd5"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-23T08:40:25Z",
+      "first_published_at": "2026-08-23T08:15:28Z",
+      "last_updated_at": "2026-08-23T08:40:25Z",
+      "is_active": true,
+      "significance": 8,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "美光": 1,
+        "海力士": 1,
+        "三星电子": 1,
+        "英伟达": 1
+      },
+      "max_item_score": 8
+    },
+    "evt_c49356df4d54": {
+      "event_id": "evt_c49356df4d54",
+      "title": "阿里七年来最大的资本运作",
+      "summary": "阿里启动近七年最大资本运作，宣布约800亿配股融资，为AI军备竞赛补充弹药。此前阿里自由现金流已连续两个季度转负，CFO徐宏在财报会上表示必须capex先行，配股即为对应资金安排。CEO吴泳铭提出的\"三年回本\"目标因此获得资本支撑。此举反映国内云厂在重资产AI投入下融资需求显著上升。",
+      "tickers": [
+        "阿里巴巴"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand",
+        "datacenter_power"
+      ],
+      "direction": {
+        "阿里巴巴": "positive"
+      },
+      "item_ids": [
+        "e1f81f328139f42b7b8582872785d93c32bae939"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-23T08:40:25Z",
+      "first_published_at": "2026-08-23T08:03:42Z",
+      "last_updated_at": "2026-08-23T08:40:25Z",
+      "is_active": true,
+      "significance": 8,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "阿里巴巴": 1
+      },
+      "max_item_score": 8
+    },
+    "evt_749610ef6fea": {
+      "event_id": "evt_749610ef6fea",
+      "title": "伯南克加盟Anthropic：一个救火队长，守得住AI的门吗？",
+      "summary": "",
+      "tickers": [
+        "Anthropic"
+      ],
+      "themes": [
+        "model_capability",
+        "policy_export"
+      ],
+      "direction": {},
+      "item_ids": [
+        "850f1efcde7f760ecec8672a6cd7782fa72bef62"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-23T08:40:25Z",
+      "first_published_at": "2026-08-23T08:13:46Z",
+      "last_updated_at": "2026-08-23T08:40:25Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "Anthropic": 1
+      },
+      "max_item_score": 7
     }
   }
 }
