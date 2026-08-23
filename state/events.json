@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-23T14:01:04Z",
+  "updated_at": "2026-08-23T14:42:38Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -43861,9 +43861,9 @@
       "first_seen_at": "2026-08-23T08:40:25Z",
       "first_published_at": "2026-08-23T08:03:42Z",
       "last_updated_at": "2026-08-23T08:40:25Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 8,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "",
       "ticker_counts": {
         "阿里巴巴": 1
@@ -43889,9 +43889,9 @@
       "first_seen_at": "2026-08-23T08:40:25Z",
       "first_published_at": "2026-08-23T08:13:46Z",
       "last_updated_at": "2026-08-23T08:40:25Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 7,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "",
       "ticker_counts": {
         "Anthropic": 1
@@ -44132,6 +44132,30 @@
         "英伟达": 1
       },
       "max_item_score": 7
+    },
+    "evt_d7a787a40e0c": {
+      "event_id": "evt_d7a787a40e0c",
+      "title": "Gen1.5 模型带来重要进展：物理 AI 正在接近 GPT3 时刻",
+      "summary": "Generalist公司发布具身基座模型GEN-1.5，展示两项关键能力：一是机器人能从大规模人类操作数据中涌现出未教过的动作策略（如用香蕉、簸箕替代刷子完成任务）；二是「物理提示」（physical prompting），即仅用3-12秒示范一次、不微调参数，机器人即可在新环境下复现任务。Google DeepMind前Gemini Robotics研究员Ted Xiao称这是机器人领域「看一次就学会」的迄今最佳结果，感受类似首次使用GPT-3。",
+      "tickers": [],
+      "themes": [
+        "ai_monetization",
+        "model_capability"
+      ],
+      "direction": {},
+      "item_ids": [
+        "46d0563bd88135130bb6d3e8846e6462921d550a"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-23T14:42:10Z",
+      "first_published_at": "2026-08-23T14:35:51Z",
+      "last_updated_at": "2026-08-23T14:42:10Z",
+      "is_active": true,
+      "significance": 5,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {},
+      "max_item_score": 5
     }
   }
 }
