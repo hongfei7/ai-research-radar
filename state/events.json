@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-23T18:41:38Z",
+  "updated_at": "2026-08-23T19:04:54Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -44092,9 +44092,9 @@
       "first_seen_at": "2026-08-23T12:56:49Z",
       "first_published_at": "2026-08-23T12:31:00Z",
       "last_updated_at": "2026-08-23T12:56:49Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 6,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "字节以豆包为AI入口整合飞书协作能力，标志其AI商业化从C端流量变现向B端SaaS纵深推进，逻辑上具备三重看多支撑：一是飞书经过十年沉淀，已在国内形成唯一可对标微软365+Copilot的PaaS级组件矩阵（文档、会议、知识库、低代码），组件化对外输出意味着边际交付成本极低、毛利率结构优于传统SaaS；二是豆包C端DAU已具备相当规模，可作为获客通道，绕过传统B端销售长周期瓶颈，以\"AI",
       "ticker_counts": {
         "阿里巴巴": 1,
