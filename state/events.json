@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-23T12:57:09Z",
+  "updated_at": "2026-08-23T13:37:17Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -43797,13 +43797,13 @@
     },
     "evt_9d35db113db1": {
       "event_id": "evt_9d35db113db1",
-      "title": "Memory shortage reportedly drives Nvidia AI server prices up about 15 percent",
-      "summary": "据Bloomberg报道，受三星、SK海力士、美光DRAM持续短缺影响，搭载Vera Rubin和Grace Blackwell芯片的英伟达AI服务器价格预计上涨约15%。该涨价直接波及微软、谷歌、Meta等正大举投入AI基础设施的云厂商，形成资本支出反而强化供应商市场地位的悖论。",
+      "title": "英伟达AI服务器涨价约15%，因内存成本飙升",
+      "summary": "据报道，英伟达已向最大客户通知，因HBM/DRAM等内存成本持续上涨，将对AI服务器提价约15%，新价格适用于2027年初出货的Grace Blackwell和Vera Rubin系统。存储供不应求压力正向上游整机环节传导，可能影响超大规模云厂商AI资本开支节奏。",
       "tickers": [
-        "三星电子",
         "海力士",
         "美光",
-        "英伟达"
+        "英伟达",
+        "三星电子"
       ],
       "themes": [
         "advanced_packaging",
@@ -43815,24 +43815,27 @@
         "英伟达": "neutral",
         "美光": "positive",
         "海力士": "positive",
-        "三星电子": "positive"
+        "三星电子": "positive",
+        "超微电脑": "neutral"
       },
       "item_ids": [
-        "9025e541f70fc9c71cf09313bfff59fed4e5bfd5"
+        "9025e541f70fc9c71cf09313bfff59fed4e5bfd5",
+        "e019cf5130978ba291b65bb11af92dc2acae599a"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "first_seen_at": "2026-08-23T08:40:25Z",
       "first_published_at": "2026-08-23T08:15:28Z",
-      "last_updated_at": "2026-08-23T08:40:25Z",
+      "last_updated_at": "2026-08-23T13:36:55Z",
       "is_active": true,
       "significance": 8,
       "status": "developing",
       "deep_analysis": "",
       "ticker_counts": {
-        "美光": 1,
-        "海力士": 1,
+        "美光": 2,
+        "海力士": 2,
         "三星电子": 1,
-        "英伟达": 1
+        "英伟达": 2,
+        "超微电脑": 1
       },
       "max_item_score": 8
     },
@@ -44099,6 +44102,36 @@
         "字节跳动": 1
       },
       "max_item_score": 6
+    },
+    "evt_66a5fa4d7e80": {
+      "event_id": "evt_66a5fa4d7e80",
+      "title": "Nvidia’s GB300-powered DGX Station desktop tower listed for nearly $100,000 online — Enterprise AI powerhouse now available to buy for mere mortals with lots of cash",
+      "summary": "英伟达旗舰桌面AI工作站DGX Station（搭载GB300/Blackwell Ultra）已开放购买，起售价94,930美元，配置升级后最高约108,350美元。该机型配备72核Grace CPU与Blackwell Ultra GPU，提供748GB统一内存，面向预算充裕的个人开发者与中小企业，是英伟达将企业级AI算力下沉至桌面形态的重要产品。",
+      "tickers": [
+        "英伟达"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand"
+      ],
+      "direction": {
+        "英伟达": "positive"
+      },
+      "item_ids": [
+        "15e28a66f38529006d938e3b245062a8d35ef58c"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-23T13:36:55Z",
+      "first_published_at": "2026-08-23T13:00:00Z",
+      "last_updated_at": "2026-08-23T13:36:55Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "英伟达": 1
+      },
+      "max_item_score": 7
     }
   }
 }
