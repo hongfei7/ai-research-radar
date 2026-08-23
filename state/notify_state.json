@@ -4,37 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "DeepSeek",
-        "字节跳动",
-        "百度"
-      ],
-      "features": [
-        "ai",
-        "as",
-        "at",
-        "attractive",
-        "bloomberg",
-        "businesses",
-        "chinese",
-        "compelling",
-        "gap",
-        "increasingly",
-        "look",
-        "low-cost",
-        "makes",
-        "models",
-        "narrowing",
-        "of",
-        "releases",
-        "spate",
-        "the",
-        "to",
-        "us-china"
-      ],
-      "sent_at": "2026-08-22T16:54:16Z"
-    },
-    {
-      "tickers": [
         "英伟达"
       ],
       "features": [
@@ -220,6 +189,27 @@
         "us"
       ],
       "sent_at": "2026-08-23T15:03:38Z"
+    },
+    {
+      "tickers": [
+        "Anthropic",
+        "OpenAI"
+      ],
+      "features": [
+        "ai",
+        "anthropic",
+        "as",
+        "attract",
+        "best",
+        "cheaper",
+        "model",
+        "struggles",
+        "thrive",
+        "to",
+        "tools",
+        "users"
+      ],
+      "sent_at": "2026-08-23T20:33:38Z"
     }
   ],
   "last_report": {
