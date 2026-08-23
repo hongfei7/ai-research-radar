@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-23T05:13:39Z",
+  "updated_at": "2026-08-23T05:49:41Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -43691,6 +43691,76 @@
         "阿里巴巴": 1
       },
       "max_item_score": 5
+    },
+    "evt_6e87f5edee61": {
+      "event_id": "evt_6e87f5edee61",
+      "title": "Qwen 3.8 27B is a game changer.",
+      "summary": "Reddit用户实测阿里Qwen 3.8 27B模型后称其为'game changer'。在编程任务上与GPT Luna相当，OCR质量优于Gemini 3.5 Flash Lite。该团队首次认真讨论自购硬件，估算回本周期不足两个月。原帖称受对华制裁倒逼，中国小型本地模型质量飙升，可能重演Llama式开源复兴，并冲击超大规模云厂商依赖硬件堆砌的护城河。",
+      "tickers": [
+        "亚马逊",
+        "微软",
+        "谷歌",
+        "阿里巴巴"
+      ],
+      "themes": [
+        "compute_demand",
+        "domestic_substitution",
+        "edge_ai",
+        "model_capability",
+        "policy_export"
+      ],
+      "direction": {
+        "阿里巴巴": "positive"
+      },
+      "item_ids": [
+        "30d077b305b92e0507a42e0be9f62929cb40ca23"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-23T05:49:09Z",
+      "first_published_at": "2026-08-23T05:19:48Z",
+      "last_updated_at": "2026-08-23T05:49:09Z",
+      "is_active": true,
+      "significance": 8,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "亚马逊": 1,
+        "阿里巴巴": 1,
+        "微软": 1,
+        "谷歌": 1
+      },
+      "max_item_score": 8
+    },
+    "evt_e748e2c4a56f": {
+      "event_id": "evt_e748e2c4a56f",
+      "title": "阿里巴巴拟配售800亿港元新股",
+      "summary": "阿里巴巴宣布拟在香港配售新股，融资规模约800亿港元。原文未披露资金用途、定价及配售对象等细节。作为国内头部云厂商，阿里此次大额融资或意在补充资本以支撑云计算与AI基础设施投入，值得关注其后续募资用途披露对算力需求侧信号的影响。",
+      "tickers": [
+        "阿里巴巴"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand",
+        "datacenter_power"
+      ],
+      "direction": {
+        "阿里巴巴": "neutral"
+      },
+      "item_ids": [
+        "74f3e5e2e451acfc9dcdc0eb443c8380e62456a4"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-23T05:49:09Z",
+      "first_published_at": "2026-08-23T05:25:33Z",
+      "last_updated_at": "2026-08-23T05:49:09Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "阿里巴巴": 1
+      },
+      "max_item_score": 7
     }
   }
 }
