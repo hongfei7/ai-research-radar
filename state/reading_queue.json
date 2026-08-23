@@ -402,6 +402,32 @@
       "source_traceable": true,
       "why": "用代码（图形程序）作为训练信号让AI绘画，涉及可执行的代码表征与生成范式，值得了解其方法与效果。",
       "queued_at": "2026-08-23T22:31:11Z"
+    },
+    {
+      "id": "13b557b66fd4daef1070dd7108ad4b7782a3253a",
+      "title": "AI智能体能自主生成并运行量子计算代码",
+      "url": "https://36kr.com/newsflashes/3952708603362433?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-08-23T23:03:07Z",
+      "raw_summary": "氛围编程（Vibe Coding）正从传统软件开发进入量子计算领域。据英国《自然》杂志日前消息，法国量子计算初创企业Pasqal研究人员开发出一种人工智能（AI）智能体，能根据英文自然语言指令生成量子计算代码，并自动在真实量子计算机上运行。研究人员表示，这种量子氛围编程有望降低量子计算实验的技术门槛，让更多人能够开展量子计算研究。（科技日报）",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Pasqal的量子氛围编程AI智能体，发表于Nature，AI+量子交叉的新范式，值得读原文了解技术架构与实验边界。",
+      "queued_at": "2026-08-23T23:29:56Z"
+    },
+    {
+      "id": "dfaa216178bc9339def87c7f6ac780e969fa7697",
+      "title": "We quantized Qwen 3.8 27B and compared the quants on an RTX 6000",
+      "url": "https://www.reddit.com/r/localllama/comments/1vwh3u7/we_quantized_qwen_38_27b_and_compared_the_quants",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-23T19:52:11Z",
+      "raw_summary": "Me and my team made Atomic Dynamic GGUF quants for Qwen 3.8 27B, so we wanted to see the difference between them by giving each quant the same voxel island creation task First of all we were surprised at how well Qwen 3.8 27B handled the 3D scenes in general, though part of that is probably because all the scenes were voxels quant size top-1 vs BF16 mean KLD decode, RTX PRO 6000 AD-Q4_K_M 17.1 GB 95.6% 0.0113 67 tok/s AD-Q5_K_M 20.2 GB 97.3% 0.0042 57 tok/s AD-Q6_K 25.0 GB 98.7% 0.0011 49 tok/s Q8_0 28.9 GB 98.9% 0.0006 50 tok/s We think that each quant handled the scenes in a pretty similar way, the difference isn't that drastic, to the point that sometimes we preferred the Q4 output overall, though for the safest pick we recommend AD-Q6_K We ran the test inside atomic.chat and watched the output right there, the quants are available to download directly inside the app or on huggingface ( https://huggingface.co/collections/AtomicChat/qwen-38-27b ) (any feedback is appreciated, we're trying to make the product and models as good for you guys as possible) &#32; submitted by &#32; /u/Fun-Meaning-6474 [link] &#32; [comments]",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Qwen 3.8 27B多种GGUF量化在RTX 6000上的KLD与速度实测对比，数据详实，可直接用于部署决策。",
+      "queued_at": "2026-08-23T23:29:56Z"
     }
   ],
   "digest_last_date": "2026-08-23"
