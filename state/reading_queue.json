@@ -285,6 +285,45 @@
       "source_traceable": true,
       "why": "来自Ramp企业级支付数据的Anthropic模型消费份额变化，揭示了高端模型(Fable 5/Opus 5)与廉价模型间的需求迁移趋势，对判断推理模型商业化路径有参考价值。",
       "queued_at": "2026-08-23T17:58:09Z"
+    },
+    {
+      "id": "7bb51dbafd7cce0969f99dd36150addbfdaa2537",
+      "title": "Google's HEIR Aims to Make Homomorphic-Encrypted Inference a One-Click Capability",
+      "url": "https://www.infoq.com/news/2026/08/google-heir-homomorphic-llm",
+      "source": "rss:infoq",
+      "published_at": "2026-08-23T18:00:00Z",
+      "raw_summary": "Google is introducing HEIR (Homomorphic Encryption Intermediate Representation), an open-source compiler and development toolchain designed to make encrypted computation easier to deploy. In particular, HEIR can compile pre-trained AI models built for conventional, unencrypted inputs so they can instead operate on encrypted data. By Sergio De Simone",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Google开源的同态加密编译器HEIR，能把预训练模型编译为可处理加密数据，隐私计算落地工程价值高，有GitHub可查。",
+      "queued_at": "2026-08-23T18:40:42Z"
+    },
+    {
+      "id": "47b0e080fd3a799f6417b095a083e79163651150",
+      "title": "New qwen3.8:27b on a 39k line C to single-file HTML / three.js port",
+      "url": "https://www.reddit.com/r/localllama/comments/1vwde84/new_qwen3827b_on_a_39k_line_c_to_singlefile_html",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-23T17:32:32Z",
+      "raw_summary": "I was just curious how the new qwen3.8:27b does on a hard C to HTML porting job against Opus 5 in a default Claude Code. The job: my fun side project is a procedural shooter in a single C file. Port it to a single-file html / three.js with one bot. One prompt, no follow-ups, no help from me. game.c is 2.1 MB, roughly 600k tokens of C, so it doesn't fit in the window and the agent has to walk the file and work out what matters. Setup: qwen3.8:27b in FP8 on vLLM, FP8 KV cache, full 262144 context, RTX 6000 Pro 96GB. Nothing truncated on my side, and the file is still more than twice the window. agent model wall clock lines out result claude code Opus 5 (cloud reference) 21 min 1759 okay hermes qwen3.8:27b 4h 18m 949 bad codehamr qwen3.8:27b 1h 40m 1056 bad Video has the C original first, then the three ports in table order. Only the Opus port is something in &quot;okay&quot; quality. What I actually wanted to know is whether the HTML comes out playable at all. One run each and a one-shot prompt for 39k lines of C, so this isn't representative of anything, and I knew it was brutal for a local LLM. My take: local models still live or die on the prompt. Same weights under two very different harnesses gave me the same broken port. hermes carries a lot more machinery, and a single turn with a thin prompt gives it nothing to use it on, so it spent four hours reaching the same place. A verbose harness doesn't rescue a thin prompt, it just burns GPU time. No deep take here, unfortunate",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Qwen3.8:27B在超长上下文(600k token)单文件C到three.js的硬核移植实测，含具体硬件配置(vLLM FP8、RTX 6000 Pro 96GB)和与Opus 5的对比，有可复现细节。",
+      "queued_at": "2026-08-23T18:40:42Z"
+    },
+    {
+      "id": "c92fc551c3a6b88043a5e5ce4319e3b6cbb76112",
+      "title": "Benchmark results: what is the best and fastest engine to run Qwen3.8-27B on macOS",
+      "url": "https://www.reddit.com/r/localllama/comments/1vwbyzr/benchmark_results_what_is_the_best_and_fastest",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-23T16:37:44Z",
+      "raw_summary": "WARNING: I think I made a mistake with omlx, and its results below seem to be without any kind of acceleration. I am rerunning them with Lightning MTP and ANE support for prefill. Will update the post once done. The new Qwen 3.8 27B is fantastic for local agentic use. The problem is, what makes it so good, being a dense model, also makes it slow. Many engines and versions of the model claim various speed increase. How true are those claim? And does a proven huge boost claim on a short synthetic test actually holds on real agentic work? I spent five days and over 100 GPU hours running rigorous repeatable agentic coding tests, collecting and comparing the data. 200 GB of models downloaded. Ended up with 20 Bubble Bobble clones on my disk, including the ones from failed tests. None of them good, but that wasn't the point. My recommendation: MTPLX or llama.cpp+MTP I ran the tests on 8-bit quants (GGUF or MLX), unquantised KV cache. 100k max response size, full 262k context, official Qwen coding sampler, official Qwen Jinja chat template. I first tested each engine with a short synthetic benchmark, to verify the installation, usage, results collection, and to verify the speed claims Then came the real test, with an agentic coding benchmark consisting of 4 phases/prompts; each engine was tested twice, at medium and xhigh reasoning effort: 2.1. capturing requirements and writing the specification plan 2.2. writing the implementation plan 2.3. implementing the core functionality 2.4.",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "在macOS上对Qwen3.8-27B多个推理引擎(MLX/omlx等)做的严格基准对比，5天100+ GPU小时，含具体加速技术和真实agentic负载测试，工程参考价值高。",
+      "queued_at": "2026-08-23T18:40:42Z"
     }
   ],
   "digest_last_date": "2026-08-23"
