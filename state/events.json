@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-23T17:35:37Z",
+  "updated_at": "2026-08-23T17:58:57Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -44222,6 +44222,37 @@
         "Anthropic": 1
       },
       "max_item_score": 8
+    },
+    "evt_6d8badcc4981": {
+      "event_id": "evt_6d8badcc4981",
+      "title": "Ramp data: Fable 5, launched in June, has plateaued at ~11% of spending on Anthropic tools, as companies shift to cheaper models; Opus 5 surpassed Fable 5 (George Hammond/Financial Times)",
+      "summary": "据Financial Times援引Ramp企业支出数据，Anthropic于6月推出的旗舰模型Fable 5在企业客户中份额停滞于约11%，被更便宜的Opus 5反超。显示企业用户在AI模型选择上正从高端旗舰向性价比模型迁移，Anthropic内部产品线出现需求分化。",
+      "tickers": [
+        "Anthropic"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand",
+        "model_capability"
+      ],
+      "direction": {
+        "Anthropic": "negative"
+      },
+      "item_ids": [
+        "d6cf9c39047b6b5ea5af0fd4329510225ed1e657"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-23T17:58:40Z",
+      "first_published_at": "2026-08-23T17:45:27Z",
+      "last_updated_at": "2026-08-23T17:58:40Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "1. **看多逻辑**\n- 产品矩阵分层成熟：Opus 5反超Fable 5恰恰说明Anthropic已形成清晰的能力阶梯——企业按任务ROI自动分层调用，这是健康SaaS生态的标志，而非\"旗舰失灵\"。\n- 量增对冲价降：低价模型渗透通常驱动调用频次和总token消耗量上升，整体API收入未必受损，甚至可能因覆盖面扩大而提振ARR。\n- 推理经济性改善：小模型单位算力成本",
+      "ticker_counts": {
+        "Anthropic": 1
+      },
+      "max_item_score": 7
     }
   }
 }
