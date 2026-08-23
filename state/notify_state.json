@@ -4,85 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "Anthropic"
-      ],
-      "features": [
-        "100b",
-        "2t",
-        "anthropic",
-        "at",
-        "bankers",
-        "company",
-        "could",
-        "discussions",
-        "in",
-        "investors",
-        "ipo",
-        "it",
-        "its",
-        "new",
-        "potential",
-        "raise",
-        "recent",
-        "said",
-        "sources",
-        "the",
-        "times",
-        "value",
-        "which",
-        "with",
-        "york"
-      ],
-      "sent_at": "2026-08-22T01:48:12Z"
-    },
-    {
-      "tickers": [
-        "字节跳动",
-        "百度",
-        "腾讯"
-      ],
-      "features": [
-        "ai",
-        "厂护",
-        "向就",
-        "城河",
-        "大厂",
-        "就能",
-        "护城",
-        "构大",
-        "砸向",
-        "能重",
-        "重构"
-      ],
-      "sent_at": "2026-08-22T01:48:33Z"
-    },
-    {
-      "tickers": [
-        "三星电子",
-        "海力士",
-        "美光"
-      ],
-      "features": [
-        "ai",
-        "不起",
-        "买不",
-        "代大",
-        "力紧",
-        "大学",
-        "学生",
-        "时代",
-        "生买",
-        "电脑",
-        "算力",
-        "紧缺",
-        "缺时",
-        "脑了",
-        "起电"
-      ],
-      "sent_at": "2026-08-22T02:59:08Z"
-    },
-    {
-      "tickers": [
         "OpenAI"
       ],
       "features": [
@@ -226,6 +147,60 @@
         "达服"
       ],
       "sent_at": "2026-08-23T01:35:36Z"
+    },
+    {
+      "tickers": [
+        "阿里巴巴"
+      ],
+      "features": [
+        "capex",
+        "三年",
+        "别怕",
+        "吴泳",
+        "回本",
+        "年回",
+        "怕三",
+        "泳铭",
+        "里吴",
+        "铭别",
+        "阿里"
+      ],
+      "sent_at": "2026-08-23T03:54:26Z"
+    },
+    {
+      "tickers": [
+        "英伟达"
+      ],
+      "features": [
+        "6b",
+        "ai",
+        "an",
+        "and",
+        "build",
+        "chinese",
+        "compete",
+        "deal",
+        "deepseek",
+        "its",
+        "journal",
+        "kimi",
+        "like",
+        "model",
+        "models",
+        "nvidia",
+        "open-weight",
+        "plans",
+        "poolside",
+        "robbie",
+        "sources",
+        "street",
+        "to",
+        "use",
+        "wall",
+        "whelan",
+        "with"
+      ],
+      "sent_at": "2026-08-23T03:54:45Z"
     }
   ],
   "last_report": {
