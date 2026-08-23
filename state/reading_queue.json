@@ -155,6 +155,19 @@
       "source_traceable": true,
       "why": "Nvidia对Poolside的10亿美元投资+60亿美元技术授权+人员转入Nemotron，透露其应对中国开源模型的组织与资本动作。",
       "queued_at": "2026-08-23T09:04:41Z"
+    },
+    {
+      "id": "6ee840c1e16b84af55f640431091f401accbe242",
+      "title": "Implementing Watermarking for Language Models [P]",
+      "url": "https://www.reddit.com/r/machinelearning/comments/1vw18ys/implementing_watermarking_for_language_models_p",
+      "source": "reddit:ml",
+      "published_at": "2026-08-23T08:09:02Z",
+      "raw_summary": "I recently implemented a minimal, educational version of SynthID-Text-style watermarking for language models. I saw anthropic post about how they'll start adding watermarks to their model responses and it made me very curious as to how they'll do it and what do they even mean by watermark here. Like will we start getting random ads or something in the middle of model responses or what. Then decided to read their article and found out that watermark is not a visible message at all. It is a subtle statistical pattern introduced while the model chooses its tokens. My implementation is not an exact reproduction of the original SynthID-Text system. I simplified or implemented a few components differently to keep the project understandable, but the main idea is there I think. Github: https://github.com/Saad1926Q/llm-watermark If you find it interesting then you may star the repo !! &#32; submitted by &#32; /u/Saad_ahmed04 [link] &#32; [comments]",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "作者基于Anthropic SynthID-Text论文自行实现了LLM水印最小版本，附有代码和原论文指向，可动手复现并理解token级统计水印原理。",
+      "queued_at": "2026-08-23T09:44:36Z"
     }
   ],
   "digest_last_date": "2026-08-23"
