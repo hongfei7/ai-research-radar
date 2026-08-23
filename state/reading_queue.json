@@ -220,6 +220,32 @@
       "source_traceable": true,
       "why": "一个程序合成引擎在CPU指令修复任务上从单例反推通用规则，5/5修复且通过极小性验证；具体数字与可复现性都到位，值得读原文。",
       "queued_at": "2026-08-23T12:56:10Z"
+    },
+    {
+      "id": "695be71104b79d356eb97e8639bd1497c2c86ca8",
+      "title": "Qwen3.8-27B NVFP4 with vision + 451K token KV-cache on one RTX 5090 (power limited to 400W) at 120 tokens/s average",
+      "url": "https://www.reddit.com/r/localllama/comments/1vw5q47/qwen3827b_nvfp4_with_vision_451k_token_kvcache_on",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-23T12:19:05Z",
+      "raw_summary": "Hello, So I've been trying lots of combinations in that never-ending landscape of options and settings. I wanted a proper quant of 3.8 27B running as fast as possible on my 5090 at 400W, with vision and with as much KV-cache as possible and with concurrency enabled (aiming at 3 parallel sessions). tl;dr: I'm using this setup and it works very well, very fast and is accurate in coding sessions. --- vLLM is the obvious choice, even if not user-friendly at first, once it runs, it runs well. I tried fancy DSpark / DFlash2 but the cost in context size wasn't worth the marginal gains vs MTP=3. Here is a full NVFP4 setup (model and cache): Model: https://huggingface.co/gittensor-model-hub/Qwen3.8-27B-NVFP4-RTX5090 Context: 196K per session / 451K global KV-cache (NVFP4) Speed: conservative average at 120 tps. prompt pp t/s ttfr (ms) tg64 t/s 4K 11,388 352 130 8K 10,475 765 150 16K 8,750 1,830 126 32K 6,790 4,714 131 64K 4,729 13,535 111 128K 2,932 43,661 107 185K 2,194 84,306 112 (tests from llama-benchy 0.4.0) Full write-up with how to setup vLLM and every gotchas: https://gist.github.com/co-l/c2aeaf40b53fcacfe9dd3293be75f23a (+ more benchmarks, including a real coding session, in line with numbers above). Note: env is Linux (Bazzite of all distros lol), with UI deactivated to allow 0.98 mem use. &#32; submitted by &#32; /u/t4a8945 [link] &#32; [comments]",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "给出 RTX 5090 上 Qwen3.8-27B NVFP4 + 视觉 + 451K KV cache + 120 t/s 的完整工程配方，附具体取舍（DSpark/DFlash2 vs MTP=3），可直接复现。",
+      "queued_at": "2026-08-23T14:00:58Z"
+    },
+    {
+      "id": "864e423271413da533dcf015de02025c0e1e1dee",
+      "title": "DeepSeek V4 Flash on an M2 Ultra: repacked to 141 GiB losslessly, smaller than the Q4 GGUF, at 25.8 t/s (42 t/s peak)",
+      "url": "https://www.reddit.com/r/localllama/comments/1vw4qzf/deepseek_v4_flash_on_an_m2_ultra_repacked_to_141",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-23T11:28:58Z",
+      "raw_summary": "This is one more vibe slopped custom optimization for, in this case, my hardware (m2 ultra 60 cores, 192gb). It is just a fork from llama.cpp with a few changes, it achieves: - DeepSeek V4 Flash, no kv cache quant - 141GiB model, byte-identical lossless, smaller than the public GGUFs (more room for context!) - Faster than even the M3 Ultra (16 t/s vs 25 t/s) - SSD KV cache and dynamic lanes, 1M context total, 8 lanes - PP is a bit low at ~350 t/s at 8k-32k, but SSD cache compensates for it a lot... but we could probably push this number higher, lot of compute being left on the table https://github.com/Agusx1211/llama-cpp-ds4f-m2-ultra &#32; submitted by &#32; /u/Agusx1211 [link] &#32; [comments]",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "M2 Ultra 上 DeepSeek V4 Flash 141 GiB 无损重打包 + SSD KV cache + 动态 lane 的 llama.cpp 改 fork，给出 25.8 t/s 实测与 PP 数据，对 Apple Silicon 部署有直接参考价值。",
+      "queued_at": "2026-08-23T14:00:58Z"
     }
   ],
   "digest_last_date": "2026-08-23"
