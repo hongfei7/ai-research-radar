@@ -350,6 +350,19 @@
       "source_traceable": true,
       "why": "Fable 团队关于模型选型与成本权衡的一手经验，反映\"用高级模型兜底\"策略的终结，认知价值较高。",
       "queued_at": "2026-08-23T20:32:04Z"
+    },
+    {
+      "id": "4eb9fc2c2f8f1a8085ac40352230b65af1f3ac46",
+      "title": "Decoding silent reading from non-invasive EEG",
+      "url": "https://arxiv.org/abs/2608.20186",
+      "source": "hackernews",
+      "published_at": "2026-08-23T20:13:34Z",
+      "raw_summary": "Decoding silent reading from non-invasive EEG",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "非侵入式EEG解码静默阅读是一手神经技术研究，对BCI/脑机接口研究者有具体方法与数据可参考。",
+      "queued_at": "2026-08-23T21:00:02Z"
     }
   ],
   "digest_last_date": "2026-08-23"
