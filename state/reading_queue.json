@@ -181,6 +181,45 @@
       "source_traceable": true,
       "why": "给出了OpenRouter平台上agentic token 14倍增长、缓存占比70%等具体数字，可用于理解AI agent的算力消费结构与推理成本演化。",
       "queued_at": "2026-08-23T10:42:13Z"
+    },
+    {
+      "id": "cb0c9d4de0217beb9ee32eadb9848e06a0ecc9c6",
+      "title": "28 TPS on Qwen2.5-7B across two separate cloud regions over public WAN using speculative decoding + CUDA Graphs [P]",
+      "url": "https://www.reddit.com/r/machinelearning/comments/1vw5ysj/28_tps_on_qwen257b_across_two_separate_cloud",
+      "source": "reddit:ml",
+      "published_at": "2026-08-23T12:30:55Z",
+      "raw_summary": "been building ShardFlow for the past few months, a distributed LLM inference framework that splits any HuggingFace transformer across N GPU machines and uses neural speculative decoding to deal with WAN latency. the setup for the benchmark: two T4 nodes in separate GCP regions (Iowa + Oregon) talking through an AWS EC2 TCP relay in Ohio. ~86ms RTT on public internet. the key insight with speculative decoding here is that WAN latency stops being a per-token cost and becomes a per-round cost. with K=8 drafting you're committing 4.07 tokens per round trip instead of 1. at 86ms RTT that's a big deal. numbers on Qwen2.5-7B: non-speculative baseline: 4.92 TPS neural drafter (eager): 14.3 TPS peak + CUDA Graphs on drafter: 28.10 TPS peak / 20.31 TPS avg also ran Qwen2.5-14B with NF4 4-bit quant, same two nodes: 14.43 TPS avg. the v2.1 fix that surprised me most: draft generation was launching ~1500 CUDA kernels per round from a Python loop. each kernel 2-5us, Python launch overhead 8-10us. GPU sitting idle 65% of the time. capturing the full 0.5B forward pass as a CUDA Graph and replaying with one driver call dropped draft latency from 112ms to 25ms. other things in the stack: zero-copy Rust TCP relay, StaticCache + in-place KV rewind for graph compatibility, meta-device model slicing to avoid loading 15GB into CPU RAM. repo: https://github.com/rautaditya2606/Shardflow happy to answer questions on the speculative decoding implementation or the CUDA graphs stuff specifically. &#32; s",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "给出跨公网WAN的分布式推理实测：两台T4、86ms RTT、speculative decoding K=8下4.07 token/round、28 TPS；工程细节与权衡清晰，可复现性强。",
+      "queued_at": "2026-08-23T12:56:10Z"
+    },
+    {
+      "id": "2ec4069d6e3a779df51ebd6a7287ccd94f2b6e09",
+      "title": "The market is underpricing memory bandwidth",
+      "url": "https://tradestie.com/news/the-market-is-underpricing-memory-bandwidth-20260823",
+      "source": "hackernews",
+      "published_at": "2026-08-23T06:37:46Z",
+      "raw_summary": "The market is underpricing memory bandwidth",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": false,
+      "why": "讨论HBM/内存带宽供需缺口的市场判断，对算力供应链认知有增量；摘要截断但主题明确，论点值得深读。",
+      "queued_at": "2026-08-23T12:56:10Z"
+    },
+    {
+      "id": "bf2ce41f989424978e455833b7befaa510723e86",
+      "title": "I gave a repair tool exactly one worked example. It inferred the rest and fixed 5/5 bugs in code it had never seen — 4 CPU instructions, zero tokens.[p]",
+      "url": "https://www.reddit.com/r/machinelearning/comments/1vw6dmi/i_gave_a_repair_tool_exactly_one_worked_example",
+      "source": "reddit:ml",
+      "published_at": "2026-08-23T12:50:30Z",
+      "raw_summary": "You tell it one fact — fault kind 0 is repaired by act 5 — and it returns the act for any fault kind it's never been told about. The offset isn't stored; it's recovered from the worked example on every call, so you can renumber your act codes freely and nothing breaks. A lookup table is wrong on 15 of the 16 renumberings. This is wrong on none. The expression was authored by a program-synthesis engine, not by me. It appears in the repo verbatim — not hand-written, not hand-simplified. The engine's verdict was minimal in D∩I: no smaller expression exists in the space it searched. I tried independently to beat it and tied exactly. What's verified: all 2^32 inputs vs an independent reference 0 mismatches each act 0-15 occurs exactly 2^28 times uniform partition bits 12-31 influence the result never (exhaustive, not sampled) emitted arm64 4 instructions: lsr, sub, add, and Then I pointed it at code it had never seen — idioms from funcy, a chunking loop, cachetools-style TTL arithmetic, a sortedcontainers-style bisect bound — one single-line fault each: repaired 5/5 EXACT 5/5 10.3s 0 tokens Exact means byte-identical to the intended source, not merely &quot;the test suite went green.&quot; That distinction matters: a weak suite will happily accept a wrong edit, and I've watched other repair tools do exactly that. A bug I found while running it, because it's the more useful half of this post: the pipeline executed candidates with no timeout. Act 6 decremented a literal until a loop",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "一个程序合成引擎在CPU指令修复任务上从单例反推通用规则，5/5修复且通过极小性验证；具体数字与可复现性都到位，值得读原文。",
+      "queued_at": "2026-08-23T12:56:10Z"
     }
   ],
   "digest_last_date": "2026-08-23"
