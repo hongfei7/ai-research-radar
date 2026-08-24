@@ -170,6 +170,19 @@
       "queued_at": "2026-08-24T15:01:57Z"
     },
     {
+      "id": "b1f5556307d93a7e4cb8cb0dea3af22f404b010c",
+      "title": "Hot Chips 2026: Applying High Bandwidth Flash (HBF)",
+      "url": "https://chipsandcheese.com/p/hot-chips-2026-applying-high-bandwidth",
+      "source": "hackernews",
+      "published_at": "2026-08-24T14:48:58Z",
+      "raw_summary": "Hot Chips 2026: Applying High Bandwidth Flash (HBF)",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Hot Chips 上高带宽闪存（HBF）用于 AI 加速器的具体架构与权衡，值得读原文。",
+      "queued_at": "2026-08-24T15:57:07Z"
+    },
+    {
       "id": "82dcd6120f7160fce14224427e0f243f883f1c7f",
       "title": "ConvRot Quant method now in llama-cpp-turboquant",
       "url": "https://www.reddit.com/r/localllama/comments/1vwoseh/convrot_quant_method_now_in_llamacppturboquant",
@@ -506,19 +519,6 @@
       "source_traceable": true,
       "why": "把ELF可执行文件伪装成SQLite数据库自执行的黑客技巧，工程上有趣且有可追溯C代码和schema。",
       "queued_at": "2026-08-24T12:02:38Z"
-    },
-    {
-      "id": "c202e491964b3c800aca0aa6d8a4cfb88e53f7f3",
-      "title": "SeL4 security proofs now complete on AArch64",
-      "url": "https://proofcraft.systems/news-2026#2026-08-21",
-      "source": "hackernews",
-      "published_at": "2026-08-24T11:32:51Z",
-      "raw_summary": "SeL4 security proofs now complete on AArch64",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "seL4 微内核在 AArch64 上完成形式化安全证明，对可信执行环境与系统软件验证是重要里程碑。",
-      "queued_at": "2026-08-24T13:14:32Z"
     }
   ],
   "digest_last_date": "2026-08-24"
