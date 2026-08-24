@@ -207,6 +207,45 @@
       "source_traceable": true,
       "why": "长江存储科创板IPO受理，拟融资330亿，国内唯一3D NAND IDM，产业格局关键事件。",
       "queued_at": "2026-08-24T07:38:20Z"
+    },
+    {
+      "id": "4165b3116b79c1c9aeea3eda1ce37ba49ea7fb5b",
+      "title": "美光研究员警告：“内存墙”依然存在，HBM无法跟上计算速度的提升",
+      "url": "https://36kr.com/newsflashes/3953254677233026?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-08-24T08:25:23Z",
+      "raw_summary": "美光HBM设计架构研究员Sreeramaneni最新警告，“内存墙”依然存在，且情况还在恶化。他表示，AI加速器计算性能每两年增长3倍，同期HBM发展速度还不足每两年2倍，这可能将加剧内存的短缺。他强调，打破计算和存储之间界限的新设计将是突破这一瓶颈的途径之一。（财联社）",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "美光研究员给出'算力每两年3倍 vs HBM 不足2倍'的具体数据，揭示 memory wall 恶化趋势及'打破存算界限'路线，值得关注。",
+      "queued_at": "2026-08-24T08:28:11Z"
+    },
+    {
+      "id": "3de5ed18721648b598d8c2426dfa8e1c5e179a98",
+      "title": "DeepSeek Harness来了：AI开始制造AI了？",
+      "url": "https://www.tmtpost.com/8114523.html",
+      "source": "rss:tmtpost",
+      "published_at": "2026-08-24T07:56:20Z",
+      "raw_summary": "文 | 深流研究所，作者 | 之丰\"第一台超智能机器，将是人类最后一项发明。\"这句话出自数学家I.J. 古德在1965年发表的论文《关于第一台超智能机器的猜想》。言外之意，机器一旦比人聪明，就能自己设计更聪明的下一代。这个循环的第一步是让机器开始动手改进自己。这也是AI圈内最近备受关注的RSI（Recursive Self-Improvement,递归式自我改进）的含义。简单来说，RSI就是让AI自己参与造更强的AI，再让更强的AI加速下一轮AI的改进，循环往复。在Codex、Claude Code、Kimi、Hy都有了自己的Harness之后，上周DeepSeek终于推出了DeepSeek Harness(DSH)。尽管DSH姗姗来迟，而且还只是一个开发者预览版，但依然引起了巨大关注。这是因为，梁文锋对RSI路径的规划，开始清晰地显现出来了。在7月底内部的四小时发言中，梁文锋将AI的发展比喻成一个个阶梯：LLM&mdash;CoT&mdash;Agent&mdash;持续学习&mdash;自我迭代&mdash;具身智能。在他看来，AI的自我迭代，将会带领大家走到一个奇点。当然，DSH还是DeepSeek在探索RSI路上的一次落点，还远远到不了奇点。发布几天后，也被一些用户吐槽部署繁琐、配置复杂，体验上感觉像是&ldquo;半成品&rdquo;。但这作为一次对AI业内对RSI探索的呼应，还是让AI圈内兴奋。那么，DeepSeek给实现RSI提供了怎样的解法？当各家都在追求RSI时，业内竞争的方向又发生了怎样的转变？一、DeepSeek怎么让AI自进化？在内部发言中，梁文锋讲了一句挺奇怪的话。他说，DeepSeek做的模型，&ldquo;第一目标不是大家用得好用，而是我们自己用得好用&rdquo;。模型做出来，不就是给用户用的吗？梁文锋进一步解释，模型先服务于DeepSeek，这是DeepSeek实现AGI最快的办法。RSI不等于AGI，也不是说有了RSI就一定能实现AGI。但RSI解决了追求AGI路上的一个关键问题：谁来加速AI能力本身的进化？所以，AGI是目标，RSI是手段。让AI帮助自己不断变强，最终把AI的能力推向AGI。具体来讲，RSI是怎么帮助DeepSeek走向AGI的？在发布DSH的同时，DeepSeek和北京大学联合发表了论文《a programming paradigm for spatiotemporal composability》，透露了更多关于这套架构的思路。DSH的底层运行框架里，有一个叫Cordis的核心机制。它试图解决的是行业的一个老难题：传统插件系统普遍擅长将插件装上去，却很难在不重启整个进程的情况下，把一个插件留下的影响完整撤掉。这个问题放在一个要求能自进化的AI Agent身上，就是致命的。一个Agent的运行环境里通常塞满了工具、权限、沙箱、记忆、会话状态等等组件。想象一下，如果未来Agent为了提升自己的能力，需要持续修改这些插件，那么每次修改都要求整个系统重启，原本持续运行的状态就会被打断。更麻烦的是，一次失败的修改还可能把系统带进一个无法恢复的中间状态。那么，创造一个让AI敢于自我进化的环境就至关重要。Cordis尝试从时间和空间两个维度去解决，一是让插件退出时，它此前产生的影响能够被追踪和撤销；二是插件之间的依赖发生变化时，系统能够自动重新协调。这就是论文题目里提到的temporal composability（时间可组合性）和spatial composability（空间可组合性）。这不是纸上谈",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "DeepSeek Harness 与梁文锋关于 LLM→CoT→Agent→自我迭代→具身智能的阶梯论，是 RSI 路线的重要公开表态，值得细读。",
+      "queued_at": "2026-08-24T08:28:11Z"
+    },
+    {
+      "id": "da937e284cc640846bef2a1135369813e638ed8d",
+      "title": "Nvidia’s Inference Pivot Reaches Rebellions in Korea",
+      "url": "https://www.eetimes.com/nvidia-inference-pivot-reaches-rebellions-in-korea",
+      "source": "rss:eetimes",
+      "published_at": "2026-08-24T08:07:18Z",
+      "raw_summary": "Nvidia is reportedly in talks with Korean inference upstart Rebellions about a technical partnership, investment, or acquisition. The post Nvidia’s Inference Pivot Reaches Rebellions in Korea appeared first on EE Times.",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Nvidia 接触韩国 Rebellions 谈 inference 合作/投资/收购，反映其 inference 战略与韩国 NPU 生态布局，值得追踪。",
+      "queued_at": "2026-08-24T08:28:11Z"
     }
   ],
   "digest_last_date": "2026-08-24"

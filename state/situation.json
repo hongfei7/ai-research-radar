@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-24T07:41:37Z",
-  "text": "当前共有 23 个活跃事件。要点包括: “消失”的万亿债务：深扒数据中心“影子借贷”、GPU金融化与次贷风险; Alibaba Raises HK$80 Billion for AI After Reporting Faster Cloud Growth and Heavier Spending; 匿名模型“牛来”刷新OpenRouter纪录，技术线索被指关联GLM; 英伟达洽谈以超300亿美元估值投资AI搜索公司Perplexity; 腾讯在 AI 时代的船票，不是 WorkBuddy。",
-  "since": "2026-08-24T07:41:37Z",
-  "active_event_count": 23,
+  "generated_at": "2026-08-24T08:30:53Z",
+  "text": "当前共有 28 个活跃事件。要点包括: “消失”的万亿债务：深扒数据中心“影子借贷”、GPU金融化与次贷风险; Alibaba Raises HK$80 Billion for AI After Reporting Faster Cloud Growth and Heavier Spending; 匿名模型“牛来”刷新OpenRouter纪录，技术线索被指关联GLM; 英伟达洽谈以超300亿美元估值投资AI搜索公司Perplexity; 腾讯在 AI 时代的船票，不是 WorkBuddy。",
+  "since": "2026-08-24T08:30:53Z",
+  "active_event_count": 28,
   "key_themes": [
     "compute_demand",
     "ai_monetization",
     "model_capability",
-    "datacenter_power",
-    "chip_supply"
+    "chip_supply",
+    "datacenter_power"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n阿里800亿配售获3倍超额认购（主权+长线基金占比超40%）释放AI capex强信号，但DeepSeek多模态以\"不到GPT/Claude一半\"的token定价上线，两类信号对国内AI变现路径暗示方向不一致——一边是重资本投入支撑长线叙事，另一边是边际成本急速下行压制利润。长江存储IPO市场预期估值从1600亿跳至3000亿+，但原文同时披露其2010年代曾经历破产与巨额亏损，估值预期与历史业绩存在张力。\n\n【新兴趋势】\n1) 国产3nm芯片在手机SoC（小米玄戒O3）与车规AI（玄戒D100）双线突破，叠加2nm及以下制程Chiplet多Die封装成主流，先进制程+先进封装形成\"国产追赶\"的双引擎叙事。2) 中国开放权重模型（Kimi K3）首次进入美国头部垂直AI公司训练体系，标志国产模型\"反向输出\"。3) 主权基金配置中国AI龙头比例超40%，全球长线资金对中国AI capex回报路径的认可度边际抬升。\n\n【信息盲点】\n本轮对腾讯混元/字节豆包/华为昇腾的AI进展完全未涉及；AI算力链条上的液冷、电力设备、国产GPU（如摩尔线程、燧原）以及HBM/AI内存链均未提及；CXMT等国产DRAM标的与长江存储NAND形成互补逻辑但未被覆盖。\n\n【跨标的联动】\n阿里800亿+小米425亿capex外溢至液冷/电力/服务器/国产算力链的二阶拉动效应明确；长江存储IPO（330亿融资、3000亿预期估值）将拉动国产设备与封测链需求；小米3nm芯片量产依赖台积电或中芯国际代工，若国产代工将直接利好中芯国际及先进封装链；DeepSeek低token定价+阿里Wan3.0视频模型共同推升推理侧云端GPU需求。",
+  "cross_analysis": "【核心矛盾】\n美光研究员发出\"内存墙\"恶化、HBM供给紧张的警示（#4165b311），理论上对海力士、三星、美光构成定价支撑、对英伟达算力释放形成制约；但#3aebdf57显示港股恒生科技当日大跌3.61%，澜起科技跌超8%、中芯国际跌超7%，市场显然在抛售而非定价结构性短缺。基本面长期供需矛盾与短期资金面/情绪面背离明显，存储链的\"看多逻辑\"尚未被资金认可。\n\n【新兴趋势】\nAI Agent工具链收敛与\"AI制造AI\"路径形成多源共振：字节将TRAE/扣子并入豆包推出\"豆包工作\"（#e1cf298a、#77eeb962），DeepSeek同步发布Harness并由梁文锋将RSI列为通向AGI的手段（#3de5ed18），两条线索共同指向\"Agent基础设施化\"和\"模型自迭代\"。此外，推理市场成为下一阶段竞争焦点——英伟达洽谈Rebellions（#da937e28）即是信号，HBM/算力供需缺口则是贯穿多条的暗线。\n\n【信息盲点】\nAMD、Marvell、Broadcom在推理赛道的进展未被单独覆盖，但英伟达收购Rebellions直接压制其竞争空间；TSMC、ASML作为代工/设备底座未出现，与芯片供给主线密切相关；Oracle、CoreWeave等算力租赁商及超算厂商capex节奏缺失，无法闭环验证英伟达推理转型的需求侧；液冷/电力等数据中心物理瓶颈未提及，是HBM之外的另一堵\"墙\"。\n\n【跨标的联动】\n英伟达×Rebellions×海力士/三星形成韩系推理生态闭环（#da937e28），与#4165b311的HBM紧缺叙事形成\"以收代供\"的合纵信号；字节豆包工作（#77eeb962）与阿里钉钉/腾讯企微/百度正面碰撞，叠加南向",
   "trend_spotting": "DeepSeek V4-Flash-Vision以不到GPT/Claude一半的token成本切入多模态，配合Files API免费开放，国内多模态推理边际成本曲线正被加速压平。同期阿里800亿港元配售获3倍超额认购、主权与长线基金占比超40%，释放全球资本重新定价中国AIcapex的明确信号——这两条线交汇，意味着\"低成本模型供给+长线资金支撑capex\"正形成国内AI算力需求的正反馈闭环。\n\n最被低估的信号是Harvey基于Kimi K3后训练推出Tenet：中国开放权重模型首次进入美国头部垂直AI公司（110亿美元估值、年化3.5亿美元收入）训练体系，动摇OpenAI/Anthropic在高端B端的护城河。配合阿里Wan3.0、小米玄戒D100（3nm车规AI芯片明年商用）与O3 SoC同步亮相，国产模型与芯片正从\"备选\"走向\"主线\"。\n\n潜在拐点在于长江存储330亿IPO（市场预期估值3000亿+）若成功定价，将成为国产存储自主化的资本化锚点，并拉动国产设备/封测链订单兑现，同时与2nm以下多Die封装趋势叠加，重塑全球封测格局。"
 }
