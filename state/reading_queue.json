@@ -261,6 +261,19 @@
       "queued_at": "2026-08-24T19:37:40Z"
     },
     {
+      "id": "e7c9a1c8884e5ee2d5ff02731282189893bd0732",
+      "title": "One LLM wrote a trading feature. Another reviewed it. Both missed a future-data bug",
+      "url": "https://www.reddit.com/r/localllama/comments/1vxajio/one_llm_wrote_a_trading_feature_another_reviewed",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-24T18:09:22Z",
+      "raw_summary": "An AQuA research loop let one LLM write an intraday trading feature and a second LLM review it for causality. The feature divided the volume seen so far by the day's final total volume. At prediction time, that final total included trades from later in the day: future data. The reviewer approved the causal-sounding explanation. The feature then lost its unusual signal on a clean re-split, and a manual audit found the leak. That leaves a real choice: build a smarter reviewer, or give the agent a smaller, safer toolset? This is not simply “LLMs make mistakes.” Two model roles converged on a plausible explanation while the actual bug sat in the operation the authoring agent was allowed to express. A more capable causality review would still have to reconstruct the data flow behind that denominator. AQuA v2 responds structurally. The paper says the data splits, feature and label definitions, and evaluator are sealed outside the agent's adaptive surface. Arbitrary feature code is replaced with a fixed registry of causal operators. In that specification space, the full-day normalizer is not an available operation. That guarantee is bounded by the implemented registry and sandbox. It also creates a cost. A registry can make a known-invalid transformation impossible, but every restriction narrows what the agent can invent. A better reviewer preserves more of the search space, but has to catch subtle dependencies reliably. The paper is “AQuA: Recursively Self-Improving Quantitative Tr",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": false,
+      "why": "AQuA研究中两个LLM协作仍漏掉未来数据bug，有具体失败案例和反思价值，对agent+金融场景有启发。",
+      "queued_at": "2026-08-24T20:03:42Z"
+    },
+    {
       "id": "82dcd6120f7160fce14224427e0f243f883f1c7f",
       "title": "ConvRot Quant method now in llama-cpp-turboquant",
       "url": "https://www.reddit.com/r/localllama/comments/1vwoseh/convrot_quant_method_now_in_llamacppturboquant",
@@ -505,19 +518,6 @@
       "angle": "engineering",
       "source_traceable": true,
       "why": "Omarchy把AI agent做进OS层并十天1074个插件，加上DHH和Dell/Dorsey等八人800万美元天使，是AI-native OS路线的明确产业信号。",
-      "queued_at": "2026-08-24T10:12:59Z"
-    },
-    {
-      "id": "eeb32a04885781db59fe2a767f27558402c359fe",
-      "title": "Chinese EV maker XPeng says its robotics business raised $900M+ led by IDG and Gaorong Ventures at a $6.3B valuation, with Tencent and Alibaba participating (Reuters)",
-      "url": "https://www.techmeme.com/260824/p9#a260824p9",
-      "source": "rss:techmeme",
-      "published_at": "2026-08-24T10:10:00Z",
-      "raw_summary": "Reuters: Chinese EV maker XPeng says its robotics business raised $900M+ led by IDG and Gaorong Ventures at a $6.3B valuation, with Tencent and Alibaba participating&nbsp; &mdash;&nbsp; China's Xpeng said on Monday its robotics business raised over $900 million in its first funding round, led by IDG and Gaorong Ventures &hellip;",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "小鹏机器人业务以63亿美元估值独立融资9亿美元+，腾讯阿里入场，是具身智能赛道估值与产业化的重要锚点。",
       "queued_at": "2026-08-24T10:12:59Z"
     }
   ],
