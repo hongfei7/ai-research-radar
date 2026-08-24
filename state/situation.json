@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-24T16:01:22Z",
-  "text": "当前共有 30 个活跃事件。要点包括: 英伟达洽谈投资Perplexity，估值或超300亿美元; 英伟达AI芯片价格或将上涨约17%，服务器厂商通知客户; Nvidia says its inference accelerator Groq 3 LPX has entered full production and Nebius has signed on as the first customer; SpaceXAI will adopt Vera CPUs (Mike Wheatley/SiliconANGLE); Nine indicted by Taiwan over illegal export of Nvidia B300 GPUs to China — details reveal five-point strategy to exploit and avoid customs controls; With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents。",
-  "since": "2026-08-24T16:01:22Z",
-  "active_event_count": 30,
+  "generated_at": "2026-08-24T16:48:10Z",
+  "text": "当前共有 26 个活跃事件。要点包括: Nvidia says its inference accelerator Groq 3 LPX has entered full production and Nebius has signed on as the first customer; SpaceXAI will adopt Vera CPUs (Mike Wheatley/SiliconANGLE); Nine indicted by Taiwan over illegal export of Nvidia B300 GPUs to China — details reveal five-point strategy to exploit and avoid customs controls; With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents; 阿里发布视频生成模型Wan3.0，单条成本约6美元; 为什么手机内存进入英伟达机柜后，贵过HBM？。",
+  "since": "2026-08-24T16:48:10Z",
+  "active_event_count": 26,
   "key_themes": [
     "ai_monetization",
     "compute_demand",
     "chip_supply",
     "model_capability",
-    "domestic_substitution"
+    "advanced_packaging"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n36kr报道字节跳动Seed世界模型团队主导探索自动驾驶，官方却否认做智驾业务，称仅为AI前沿探索，二者在战略定位上存在明显分歧。NVIDIA官方与媒体口径一致强调Groq 3 LPX量产及Vera Rubin推理优势，但TomsHardware披露的B300走私案揭示其在华供应链合规风险，与\"扩产+新客户\"正面叙事形成张力。阿里一边发布Wan3.0丰富多模态生态，一边财报显示季度利润同比下滑75%，AI capex短期承压与商业化兑现之间的矛盾凸显。\n\n【新兴趋势】\n\"AI Agent+Token经济\"成为多源共振主线：NVIDIA Vera Rubin NVL72主打Agentic推理（每瓦30倍提升、token消耗15倍于普通对话）、Groq 3 LPX切入快速token生成、OpenAI全力推Agent战略，硬件—模型—应用三层共同指向Agent驱动的算力需求跃迁。另一暗线是\"系统级/XPU叙事\"：NVIDIA将竞争从单卡升级为AI工厂，叠加博通、Marvell、亚马逊自研芯片动向，定制算力对通用GPU的替代/补充窗口成为隐含焦点。\n\n【信息盲点】\nAMD、英特尔、ARM在AI推理加速战局中本轮无直接条目；台积电、ASML虽在上游受益逻辑中频繁被引用但未单列报道；HBM三雄仅因DDR5涨价被提及，缺乏HBM4/HBM3e产能与定价直接信号；Anthropic、谷歌Gemini、Meta缺席；国内寒武纪、海光、壁仞等AI芯片标的无覆盖；数据中心电力（GEV、Constellation）、液冷、CCL等配套环节零提及。\n\n【跨标的联动】\n英伟达—博通/Marvell—亚马逊构成XPU竞",
+  "cross_analysis": "【核心矛盾】\n英伟达在两条线上存在张力：一方面黄仁勋公开斥责超微电脑（SMCI）参与走私，另一方面自家高级经理被起诉涉案，暴露其\"受害者\"叙事与内部合规漏洞之间的矛盾。Groq 3 LPX性能宣传（来源credibility为low）与出口管制收紧并行，显示英伟达在合规与产品扩张之间需重新平衡。\n\n【新兴趋势】\n\"专用推理硬件\"成为新主题：英伟达LPX（基于Groq LPU技术）瞄准低延迟大上下文场景，与AMD MI系列、博通/Marvell ASIC方案形成推理赛道细分竞争。HBM供应链\"基础裸片\"环节出现新进入者（三星），打破SK海力士+美光双寡头格局，AI芯片厂商的HBM采购议价权可能变化。供应链合规追溯从成本项变为竞争壁垒。\n\n【信息盲点】\n本轮未覆盖但应关注：①台积电（CoWoS/先进封装产能仍是瓶颈）；②博通/Arista（机架级网络与定制ASIC）；③云厂商（AWS/Azure/GCP）的实际部署节奏与采购动向；④中国本土替代（华为昇腾、寒武纪）因走私案曝光可能受益的逻辑；⑤超微电脑的政府客户/订单风险量化数据缺失。\n\n【跨标的联动】\n英伟达-超微电脑：走私案直接冲击渠道信任，可能迫使英伟达向合规审计能力更强的服务器商（如戴尔、HPE）倾斜订单，形成渠道再分配。三星入局HBM基础裸片→SK海力士/美光定价压力→英伟达/AMD/谷歌TPU的HBM采购成本与议价策略联动。LPX放量则与Marvell/博通定制推理ASIC形成正面竞争。",
   "trend_spotting": "【新兴趋势】英伟达GB300/Rubin200涨价约17%，单吉瓦数据中心建设成本至少增加50亿美元，定价权加速向芯片上游集中。同期Perplexity年化营收从年初不足2.5亿美元跃升至7.5亿美元以上，AI Agent商业化曲线明显陡于市场预期；英伟达以股权投资+算力绑定方式锁定下游推理需求，形成\"算力即股权\"的新型产业链关系。\n\n【早期信号】上海\"十五五\"规划首次将光计算、量子AI、异构计算写入新型工业化框架，并明确芯片-大模型-智算云协同自主生态，信号意义大于短期订单；阿里800亿港元配售+管理层1.2亿港元同步增持，资本与内部信心双重背书指向全栈AI基建持续加码，但市场对配售稀释与capex回报周期讨论不足。\n\n【市场盲点】服务器厂商利润率压力被低估——超微、戴尔在芯片涨价17%背景下转嫁能力有限，量价剪刀差将压缩毛利1-2个百分点；Perplexity Computer在企业场景的快速放量，意味着AI Agent不再是\"概念验证\"阶段，推理算力需求的可见性正在前移。\n\n【值得关注的拐点】GB300/Rubin200涨价若落地，将成为云厂capex上修的强制触发点；小米3nm Xring O3若实销量兑现，可能引发OPPO、vivo跟进自研SoC，重构高通/联发科在国产手机端的份额版图。"
 }

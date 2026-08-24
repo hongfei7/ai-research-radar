@@ -183,6 +183,32 @@
       "queued_at": "2026-08-24T15:57:07Z"
     },
     {
+      "id": "02540c69d16746130bf0f083e71394e6f3ecfef6",
+      "title": "IBM's next-gen mainframe chip is the first to run Arm and Z workloads",
+      "url": "https://venturebeat.com/infrastructure/ibms-next-gen-mainframe-chip-is-the-first-to-run-arm-and-z-workloads-on-the-same-cores",
+      "source": "hackernews",
+      "published_at": "2026-08-24T16:34:42Z",
+      "raw_summary": "IBM's next-gen mainframe chip is the first to run Arm and Z workloads",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "IBM下一代主机芯片首次跑Arm+Z负载，是异构/Chiplet路线的重要里程碑信号",
+      "queued_at": "2026-08-24T16:46:29Z"
+    },
+    {
+      "id": "de7e26cbfe3e470c116311be5a2ebad0f62d6f14",
+      "title": "Nvidia says its Groq 3 LPX racks delivered 3,400 tokens per second in an Artificial Analysis benchmark running Gemma 4 31B with a 100,000-token input sequence (The Register)",
+      "url": "https://www.techmeme.com/260824/p25#a260824p25",
+      "source": "rss:techmeme",
+      "published_at": "2026-08-24T16:30:00Z",
+      "raw_summary": "The Register: Nvidia says its Groq 3 LPX racks delivered 3,400 tokens per second in an Artificial Analysis benchmark running Gemma 4 31B with a 100,000-token input sequence&nbsp; &mdash;&nbsp; Nvidia's $20 billion bet on Groq's LPU tech sure looks like it was a good one.&nbsp; On Monday, the GPU giant offered the first glimpse &hellip;",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Nvidia Groq 3 LPX在长上下文推理跑出3400 tok/s，给出具体benchmark数字，关乎LPU路线兑现度",
+      "queued_at": "2026-08-24T16:46:29Z"
+    },
+    {
       "id": "82dcd6120f7160fce14224427e0f243f883f1c7f",
       "title": "ConvRot Quant method now in llama-cpp-turboquant",
       "url": "https://www.reddit.com/r/localllama/comments/1vwoseh/convrot_quant_method_now_in_llamacppturboquant",
@@ -493,32 +519,6 @@
       "source_traceable": true,
       "why": "全国首个AI4Chip专项政策，从产业政策视角看AI for EDA/制造的落地节奏，方向判断有参考价值。",
       "queued_at": "2026-08-24T11:34:34Z"
-    },
-    {
-      "id": "cb0035246e88944d6541dd036db62be429eb91da",
-      "title": "Xiaomi AI Cube announced with 1.2TB/s memory bandwidth",
-      "url": "https://www.reddit.com/r/localllama/comments/1vwvghi/xiaomi_ai_cube_announced_with_12tbs_memory",
-      "source": "reddit:localllama",
-      "published_at": "2026-08-24T07:04:32Z",
-      "raw_summary": "Xiaomi announced a prototype for their Xiaomi AI Cube. 3 chip system: - Xiaomi Xuanjie O3 - Xiaomi Xuanjie O100 - Xiaomi Xuanjie D100 The specs are impressive, but a bit confusing. The D100 chip (originally for their EVs) supports up to 160GB of RAM, but O100 has the 1.22TB/s memory bandwidth. Perhaps the 1.22TB/s figure is for SRAM? Hard to say definitively. Source: https://www.ithome.com/0/993/546.htm &#32; submitted by &#32; /u/Mysterious_Finish543 [link] &#32; [comments]",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "小米AI Cube三芯片架构含1.2TB/s内存带宽，原车规D100+O100组合，国产SoC/Chiplet路线值得关注。",
-      "queued_at": "2026-08-24T11:34:34Z"
-    },
-    {
-      "id": "7787ab9568542a75c0dd107384384b6f3cb34d9e",
-      "title": "Your executable is a SQLite database",
-      "url": "https://simonwillison.net/2026/aug/24/your-executable-is-a-sqlite-database",
-      "source": "rss:simonwillison",
-      "published_at": "2026-08-24T11:38:15Z",
-      "raw_summary": "Your executable is a SQLite database Farid Zakaria describes a neat Linux pattern for creating a SQLite database file that can be directly used as an executable binary. The trick sets the SQLite file format's 4-byte application ID (68 bytes into the file) to SELF, standing for Structured Executable &amp; Linkable Format. The various components of the ELF executable format are then arranged into a number of different SQLite tables, using this schema. Their self-exec interpreter (C code here) can then extract and execute the necessary pieces. You can additionally use a Linux mechanism called binfmt_misc to teach the kernel to execute that any time it encounters an executable matching that binary pattern. Farid uses NixOS here, but without NixOS I think registration looks something like this: printf '%s\\n' ':self:M:68:SELF::/usr/local/bin/self-exec:' \\ &gt; /proc/sys/fs/binfmt_misc/register Via Hacker News Tags: c, linux, sqlite",
-      "score": 7,
-      "angle": "engineering",
-      "source_traceable": true,
-      "why": "把ELF可执行文件伪装成SQLite数据库自执行的黑客技巧，工程上有趣且有可追溯C代码和schema。",
-      "queued_at": "2026-08-24T12:02:38Z"
     }
   ],
   "digest_last_date": "2026-08-24"
