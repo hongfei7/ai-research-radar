@@ -248,6 +248,19 @@
       "queued_at": "2026-08-24T18:04:58Z"
     },
     {
+      "id": "f1b6aac358f7999cede00ff7afab3f0cf2adc944",
+      "title": "LLMs could control their host machines by exploiting inference engines",
+      "url": "https://boydkane.com/essays/llms-could-control-their-host-machines-by-exploiting-inference-engines",
+      "source": "hackernews",
+      "published_at": "2026-08-24T19:03:06Z",
+      "raw_summary": "LLMs could control their host machines by exploiting inference engines",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "讨论LLM通过推理引擎漏洞控制宿主机器，涉及具体攻击面与安全边界，对部署和推理框架选型有直接参考价值。",
+      "queued_at": "2026-08-24T19:37:40Z"
+    },
+    {
       "id": "82dcd6120f7160fce14224427e0f243f883f1c7f",
       "title": "ConvRot Quant method now in llama-cpp-turboquant",
       "url": "https://www.reddit.com/r/localllama/comments/1vwoseh/convrot_quant_method_now_in_llamacppturboquant",
@@ -505,19 +518,6 @@
       "angle": "industry",
       "source_traceable": true,
       "why": "小鹏机器人业务以63亿美元估值独立融资9亿美元+，腾讯阿里入场，是具身智能赛道估值与产业化的重要锚点。",
-      "queued_at": "2026-08-24T10:12:59Z"
-    },
-    {
-      "id": "2a8165d26f494705b86356d7031c5146648c73f2",
-      "title": "Alibaba launches Wan3.0, a video generation model that can generate 30-second videos from documents, spreadsheets, slides, and web pages (Reuters)",
-      "url": "https://www.techmeme.com/260824/p7#a260824p7",
-      "source": "rss:techmeme",
-      "published_at": "2026-08-24T10:01:28Z",
-      "raw_summary": "Reuters: Alibaba launches Wan3.0, a video generation model that can generate 30-second videos from documents, spreadsheets, slides, and web pages&nbsp; &mdash;&nbsp; Alibaba (9988.HK) officially rolled out its latest AI video generation-model Wan3. on Monday with enhanced capabilities after the Chinese internet giant launched &hellip;",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "阿里Wan3.0可从文档/表格/网页直接生成30秒视频，是多模态生成产品化的重要更新，值得跟踪能力边界。",
       "queued_at": "2026-08-24T10:12:59Z"
     }
   ],
