@@ -1,28 +1,7 @@
 {
-  "morning_last_date": "2026-08-24",
+  "morning_last_date": "2026-08-25",
   "weekly_last_slot": "2026-W34",
   "breaking_fingerprints": [
-    {
-      "tickers": [
-        "Anthropic",
-        "OpenAI"
-      ],
-      "features": [
-        "ai",
-        "anthropic",
-        "as",
-        "attract",
-        "best",
-        "cheaper",
-        "model",
-        "struggles",
-        "thrive",
-        "to",
-        "tools",
-        "users"
-      ],
-      "sent_at": "2026-08-23T20:33:38Z"
-    },
     {
       "tickers": [
         "Intel",
@@ -603,9 +582,9 @@
     }
   ],
   "last_report": {
-    "date": "2026-08-24",
+    "date": "2026-08-25",
     "macro": {
-      "cycle": "扩张第三年向第四年过渡,头部四家云厂季度 capex 合计仍维持 900 亿美元以上、同比扩张 40% 以上,但本季环比斜率首次转平;同时阿里 FY2027Q1 单季资本开支 676.78 亿元、同比+75%,远超市场预期 360 亿元,中美头部已共同进入营收兑现与回本框架约束并行的阶段",
+      "cycle": "扩张第三年向第四年过渡,头部四家云厂季度 capex 合计仍维持 900 亿美元以上、同比扩张 40% 以上,但本季环比斜率首次转平;同期阿里单季资本开支 676.78 亿元、同比 75%,远超市场预期 360 亿元,中美头部已共同进入营收兑现与回本框架约束并行的阶段",
       "trajectory": {
         "past": "晶圆制程产能",
         "now": "HBM 容量与 CoWoS 双约束",
@@ -618,29 +597,31 @@
     },
     "calls": [
       {
-        "claim": "英伟达系统级涨价确认封装段仍是当前硬约束,定价权尚未被 ASIC 路径瓦解",
-        "falsifier": "若 2027Q1 头部四家云厂公布的 AI 服务器系统实际签单价低于英伟达涨价后报价 5% 以上,或 AMD MI400 量产版在 2026Q4 拿到独立于英伟达配额之外的 HBM4 长协,本判断失效",
-        "verify": "2027Q1云厂实际签单价低于涨价后报价"
+        "claim": "HBM 紧缺正通过产能虹吸效应向通用 DRAM 传导,存储三巨头议价权进入强势周期",
+        "falsifier": "若 2026Q4 海力士/三星/美光任一家季报披露的 DRAM 业务 ASP 环比涨幅低于 8%,或 2027Q1 Amazon 重新下调硬件终端零售价,本判断失效。",
+        "verify": "Amazon 硬件涨价 60% 归因内存紧缺"
       },
       {
-        "claim": "模型层定价权正在结构性下沉,头部模型公司通过收购与开源权重对冲硬件定价权上移",
-        "falsifier": "若 2027Q1 之前 Anthropic 首颗自研 ASIC 仍未流片,或 OpenAI Jalapeno 量产推迟超过两个季度,头部模型公司对冲硬件定价权的路径判断失效",
-        "verify": "Anthropic未在2027Q1前流片首颗自研ASIC"
+        "claim": "英伟达在推理栈用 GPU+LPU 双轮巩固编排层主导权,定价权尚未被专用 ASIC 路径瓦解",
+        "falsifier": "若 2027Q1 头部四家云厂公布的 AI 服务器系统实际签单价低于英伟达涨价后报价 5% 以上,或 AMD MI400 量产版在 2026Q4 拿到独立于英伟达配额之外的 HBM4 长协,本判断失效。",
+        "verify": "Groq 3 LPX 量产 + 3,400 tok/s 基准"
       },
       {
-        "claim": "开源追赶周期被 SemiAnalysis 减半规律锁定,闭源-开源能力差进入不可逆收窄区间",
-        "falsifier": "若下一范式(具身或多模态 Agent)开源模型追平首个闭源模型的时间超过 12 个月,或闭源厂商在 Agent 工作流计费上取得 30% 以上的定价回升,减半规律与价值链上移判断同时失效",
-        "verify": "开源在下一范式追平周期超过12个月"
-      },
-      {
-        "claim": "中国头部云厂在 AI 军备竞赛中以股权融资替代债权,定价权争夺进入资本密度主导阶段",
-        "falsifier": "若 FY2027Q4 阿里 AI 云收入增速跌破 30%,或自由现金流改善节奏低于 Capex 节奏(年化经营现金流/资本开支比降至 0.4 以下),股权融资溢价将被重估",
-        "verify": "阿里自由现金流连续两季为负"
+        "claim": "封装段代际切换信号从私有协议向 UCIe 开放标准迁移,Intel 与台积电的封测订单再分配窗口打开",
+        "falsifier": "若 2027Q1 Intel 18A-P 良率未超过 50%,或 Diamond Rapids 量产版晶圆仍主要交由台积电 N3 制造,本判断失效。",
+        "verify": "Intel Diamond Rapids 以 UCIe-S 替代 EMIB"
       }
     ]
   },
   "morning_fallback": null,
   "blindspot_ledger": [
+    {
+      "key": "AMD|ASML|Anthropic|Intel|Marvell|Meta|OpenAI|博通|台积电|美光|超微电脑",
+      "text": "台积电近 30 天有 377 条相关信息进入本库,但无一条来自其自有披露,对其 N3/N2 排产节奏与 CoWoS 产能配比的判断全部依赖二手转述与同业外推;博通 249 条、Meta 175 条、美光 169 条、超微电脑 159 条、ASML 131 条、Intel 120 条同样为结构性零一手披露。本期涉及的关键算子——Anthropic 自研 ASIC、OpenAI Jalapeno 量产、AMD MI400 HBM4 长协、Marvell/Broadcom 定制 ASIC 受益度——均无主体直接发言,只能从云厂或台积电外侧信号反推,这是当前最容易被低估的不确定来源。",
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25",
+      "times_seen": 1
+    },
     {
       "key": "ASML|OpenAI|博通|台积电|微软|超微电脑",
       "text": "库内对头部硬件标的的覆盖呈典型结构性失衡。台积电近 30 天有 391 条相关信息进入本库,但无一条来自其自有披露,对其 CoWoS 产能与 HBM 客户结构的判断全部依赖二手转述与同业外推;博通 258 条、超微电脑 162 条、ASML 134 条同样全部为二手,意味着当前关于先进封装、定制 ASIC 与 EUV 节奏的判断都建立在间接观察之上;微软虽近 30 天有 337 条信息,但 days_since_own_disclosure 已达 20 天,处于 thin 级别,Azure 资本开支结构与 OpenAI 算力承诺的最新口径需要 8 月底财报季才能补齐",
