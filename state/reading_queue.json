@@ -428,6 +428,32 @@
       "source_traceable": false,
       "why": "把卫星热管理放到算力星座背景下，给出Starlink V3 50kW、AI1卫星120-150kW等关键功耗数据，反映太空算力的物理瓶颈演化。",
       "queued_at": "2026-08-24T10:56:24Z"
+    },
+    {
+      "id": "5da9ad67380bb6b0c6ad12e6508d166d7dafdd5a",
+      "title": "北京亦庄发布全国首个AI4Chip专项政策",
+      "url": "https://36kr.com/newsflashes/3953428250410375?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-08-24T11:15:10Z",
+      "raw_summary": "36氪获悉，据北京亦庄消息，近日，北京经济技术开发区正式发布《“AI4Chip”人工智能赋能集成电路产业跨越式发展行动计划（2026—2028年）》。作为全国首个AI4Chip专项政策，“AI4Chip20条”聚焦AI原生全链赋能、“AI+智能设计”焕芯、“AI+制造封测”筑芯、“AI+设备材料”强芯、“AI+产业生态”育芯五大行动精准发力。根据“AI4Chip20条”目标蓝图，力争到2028年，经开区基本建成集成电路产业AI融合发展体系，培育3—5家具有国际影响力的AI4Chip生态型领军企业，形成10个以上具备行业推广能力的标杆应用，持续推动集成电路产业“AI原生”创新与“AI赋能”升级，构建“软硬互驱、芯智共生”的产业发展新范式。",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "全国首个AI4Chip专项政策，从产业政策视角看AI for EDA/制造的落地节奏，方向判断有参考价值。",
+      "queued_at": "2026-08-24T11:34:34Z"
+    },
+    {
+      "id": "cb0035246e88944d6541dd036db62be429eb91da",
+      "title": "Xiaomi AI Cube announced with 1.2TB/s memory bandwidth",
+      "url": "https://www.reddit.com/r/localllama/comments/1vwvghi/xiaomi_ai_cube_announced_with_12tbs_memory",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-24T07:04:32Z",
+      "raw_summary": "Xiaomi announced a prototype for their Xiaomi AI Cube. 3 chip system: - Xiaomi Xuanjie O3 - Xiaomi Xuanjie O100 - Xiaomi Xuanjie D100 The specs are impressive, but a bit confusing. The D100 chip (originally for their EVs) supports up to 160GB of RAM, but O100 has the 1.22TB/s memory bandwidth. Perhaps the 1.22TB/s figure is for SRAM? Hard to say definitively. Source: https://www.ithome.com/0/993/546.htm &#32; submitted by &#32; /u/Mysterious_Finish543 [link] &#32; [comments]",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "小米AI Cube三芯片架构含1.2TB/s内存带宽，原车规D100+O100组合，国产SoC/Chiplet路线值得关注。",
+      "queued_at": "2026-08-24T11:34:34Z"
     }
   ],
   "digest_last_date": "2026-08-24"

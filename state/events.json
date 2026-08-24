@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-24T10:57:58Z",
+  "updated_at": "2026-08-24T11:36:26Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -46024,6 +46024,66 @@
         "AMD": 1
       },
       "max_item_score": 5
+    },
+    "evt_1f10e0b2ef4d": {
+      "event_id": "evt_1f10e0b2ef4d",
+      "title": "北京亦庄发布全国首个AI4Chip专项政策",
+      "summary": "北京亦庄发布全国首个AI4Chip专项政策——《\"AI4Chip\"人工智能赋能集成电路产业跨越式发展行动计划（2026—2028年）》，提出\"AI4Chip20条\"，围绕AI原生全链赋能、AI+智能设计、AI+制造封测、AI+设备材料、AI+产业生态五大方向，目标到2028年建成集成电路产业AI融合发展体系，培育3—5家国际影响力AI4Chip生态领军企业，形成10个以上标杆应用，推动IC产业从\"AI赋能\"向\"AI原生\"升级，构建\"软硬互驱、芯智共生\"新范式。",
+      "tickers": [],
+      "themes": [
+        "advanced_packaging",
+        "ai_monetization",
+        "chip_supply",
+        "domestic_substitution",
+        "policy_export"
+      ],
+      "direction": {},
+      "item_ids": [
+        "5da9ad67380bb6b0c6ad12e6508d166d7dafdd5a"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-24T11:35:38Z",
+      "first_published_at": "2026-08-24T11:15:10Z",
+      "last_updated_at": "2026-08-24T11:35:38Z",
+      "is_active": true,
+      "significance": 5,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {},
+      "max_item_score": 5
+    },
+    "evt_7e90308f07ac": {
+      "event_id": "evt_7e90308f07ac",
+      "title": "Qwen 3.8 27B Aider score",
+      "summary": "用户Baldur-Norddahl在MacBook上用vLLM运行Qwen 3.8 27B FP8（FP8 KV缓存、256K上下文），Aider基准测试得分72.9，与2025年4月12日版的Gemini 2.5 Pro持平，并超过Claude Opus 4（72.0）和DeepSeek R1（71.4）等此前SOTA模型。作者认为Aider是较老的基准，且搭配DeepSeek Harness后实际表现更佳。值得关注的是，终端侧模型在编程类基准上已逼近一年前的云端前沿模型水平。",
+      "tickers": [
+        "DeepSeek",
+        "阿里巴巴"
+      ],
+      "themes": [
+        "edge_ai",
+        "model_capability"
+      ],
+      "direction": {
+        "阿里巴巴": "positive",
+        "DeepSeek": "neutral"
+      },
+      "item_ids": [
+        "b64c48b1d2e5338cce795aa7ad67d0c33dd260fc"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-24T11:35:38Z",
+      "first_published_at": "2026-08-24T07:56:50Z",
+      "last_updated_at": "2026-08-24T11:35:38Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "1. **看多逻辑**\n   - **开源模型竞争力持续兑现**：Qwen 3.8 27B在编码基准上打平Gemini 2.5 Pro、超越Claude Opus 4和DeepSeek R1，表明阿里在\"中等参数+高质量数据\"路线上已稳居全球开源第一梯队，开发生态粘性将转化为通义系列在B端市场的渗透。\n   - **端侧AI拐点信号**：FP8量化+256K上下文可在MacBook端侧运行，意味着本地推理已可承担严肃开发任务。若该趋势在Llama 4、Mistral等模型上复制，将利好端侧AI芯片（高通、苹果、联发科）以及PC/手机换机周期，模型厂商通过授权与生态分成获得二次变现。\n   - **云端推理需求结构性重塑**：开发者级编码任务向端侧迁移，可能压制云端token消耗增速，但同时云厂会被迫向\"超大参数+长思维链\"高端推理集中，反而提升单token价值，对阿里云的\"模型即服务\"业务有结构性正面影响。\n\n2. **看空风险**\n   - **基准可信度存疑**：分数来自单一开发者非官方复现，credibility低；Aider是较老的多轮编辑基准，无法反映SWE-bench、TerminalBench等更贴近真实工程的能力，且本身存在benchmark overfitting风险，72.9分并不必然意味着生产可用。\n   - **\"追平一年前\"恰是空方论据**：云端SOTA在过去一年已完成多轮迭代（GPT-5、Claude 4.5、Gemini 3等），端侧模型与当前云端前沿的实际差距并未收窄，反而可能扩大；用旧标杆衡量新进展，存在叙事偏差。\n   - **商业化路径未跑通**：Qwen系列以开源低价策略抢占份额，但阿里云AI收入尚未在财报中形成可观的独立披露线；端侧授权的",
+      "ticker_counts": {
+        "DeepSeek": 1,
+        "阿里巴巴": 1
+      },
+      "max_item_score": 7
     }
   }
 }
