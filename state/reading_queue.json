@@ -222,6 +222,32 @@
       "queued_at": "2026-08-24T16:46:29Z"
     },
     {
+      "id": "0ac53f04a3423303f48098ae3f5e04cb64fe580e",
+      "title": "SK hynix pushes hybrid bonding HBM5 as AI memory hits 775-micron ceiling — firm extends MR-MUF through Nvidia Rubin",
+      "url": "https://www.tomshardware.com/tech-industry/semiconductors/sk-hynix-says-hybrid-bonding-wont-be-ready-for-hbm4e-as-ai-memory-runs-into-a-775-micron-ceiling",
+      "source": "rss:tomshardware",
+      "published_at": "2026-08-24T17:55:45Z",
+      "raw_summary": "The problem, per SK, is that HBM cubes are capped at a total thickness of 775 microns, the standard thickness of a 300mm logic wafer.",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "SK hynix阐述HBM5 hybrid bonding技术路线，含775微米物理极限的工程约束分析，对AI内存路线判断有直接价值。",
+      "queued_at": "2026-08-24T18:04:58Z"
+    },
+    {
+      "id": "060c7351bf3350312e536cc4f77e246c1450f669",
+      "title": "IBM's first dual-ISA core natively executes ARM and z/Architecture in the same core; all cores run at 5.7 GHz base frequency — next-gen mainframe AI processor is built on 2nm node with 11 cores",
+      "url": "https://www.tomshardware.com/pc-components/cpus/ibms-first-dual-isa-core-natively-executes-arm-and-z-architecture-in-the-same-core-all-cores-run-at-5-7-ghz-base-frequency-next-gen-mainframe-ai-processor-is-built-on-2nm-node-with-11-cores",
+      "source": "rss:tomshardware",
+      "published_at": "2026-08-24T17:42:34Z",
+      "raw_summary": "IBM is vastly expanding softwarte support on its mainframes with its first dual-ISA CPU core that natively supports z/Architecture and ARM instructions.",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "IBM双ISA核心原生支持ARM和z/Architecture，2nm制程11核5.7GHz，mainframe AI处理器架构细节有工程参考价值。",
+      "queued_at": "2026-08-24T18:04:58Z"
+    },
+    {
       "id": "82dcd6120f7160fce14224427e0f243f883f1c7f",
       "title": "ConvRot Quant method now in llama-cpp-turboquant",
       "url": "https://www.reddit.com/r/localllama/comments/1vwoseh/convrot_quant_method_now_in_llamacppturboquant",
@@ -493,32 +519,6 @@
       "source_traceable": true,
       "why": "阿里Wan3.0可从文档/表格/网页直接生成30秒视频，是多模态生成产品化的重要更新，值得跟踪能力边界。",
       "queued_at": "2026-08-24T10:12:59Z"
-    },
-    {
-      "id": "6e33627d4c351fe6391cdb1d0c4d0c7dfdd97010",
-      "title": "Autonomy and Innovation",
-      "url": "https://stratechery.com/2026/autonomy-and-innovation",
-      "source": "rss:stratechery",
-      "published_at": "2026-08-24T10:00:00Z",
-      "raw_summary": "Incentives favor offense when it comes to agentic cybersecurity; it's the same dynamic that will limit incumbents and fuel startups in the long run.",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": false,
-      "why": "Ben Thompson从网络安全攻防激励结构出发，分析agentic AI时代初创公司与在位者的竞争动态，框架性观点有启发。",
-      "queued_at": "2026-08-24T10:12:59Z"
-    },
-    {
-      "id": "0cfaf3535d052d7fe2831997c5b8c7620c463fcb",
-      "title": "在轨3年、全栈自研，宇航级热控方案供应商「锐莱热控」获A+轮数千万融资",
-      "url": "https://36kr.com/p/3953370022034820?f=rss",
-      "source": "rss:36kr",
-      "published_at": "2026-08-24T10:33:16Z",
-      "raw_summary": "热管理正从卫星的辅助分系统，成为制约星座规模化、商业化落地的核心变量。 36氪获悉，宇航级热控方案供应商锐莱热控科技（北京）有限公司（以下简称“锐莱热控”）已于近期完成A+轮数千万融资。本轮融资由英诺天使基金、方广资本、集萃华财、湘江信成联合投资，老股东金雨茂物持续加持。资金将主要用于宇航主动液冷业务研发、被动热管理产线扩建以及产业链上下游的延伸布局。 锐莱热控是国内少数掌握主动热管理完整技术栈的民营企业，核心创始团队拥有中科院和航天五院背景，曾深度参与过载人航天、空间站、探月工程等国家级重大项目，具备从载荷设计到整星集成、入轨及项目管理的全流程经验。 据联合创始人兼CTO陈江平透露，锐莱热控液冷卫星系统在国内市场占有率已达到90%，国内主要算力星座建设中的泵驱动液冷方案及产品，多数由锐莱热控提供。 此外，搭载其单相流体回路的银河灵犀03星已在轨稳定运行3年。今年7月和8月，辰光一号、蓝箭鸿擎鸿鹄03星搭载的液冷流体回路先后在轨顺利运行。预计到2026年底，搭载锐莱主动热控系统的太空计算高功率在轨卫星将达到5颗。 卫星功率升级，主动液冷成必选项 SpaceX前不久发射的20颗Starlink V3卫星，单颗卫星功耗约50kW；而最新的AI1算力卫星，单颗卫星功耗升至120kW—150kW，正在重新改写商业航天卫星的功耗标准。 从V1版本的十几Gbps通信带宽到V2版本的100Gbps，再到现在的1Tbps，短短几年里，Starlink单星处理能力提升了两个数量级，但随之飙升的能耗，也正在向卫星的“体温”极限发起挑战。 在航天器热控领域，传统方案以被动散热为主，依靠热管、辐射板、涂层等进行导热和排热。但当卫星功率达到数十至上百kW级，传统的被动方案达到物理上限，就必须引入主动液冷，即通过泵驱动流体工质在管路中循环，将热量从发热器件“搬运”到辐射器，再向太空排散。 液冷技术在国外互联网卫星领域已成为趋势。SpaceX在Starlink V2版本卫星上采用了泵驱动液冷方案，AI1算力卫星更是从初始版本就使用了这一方案；亚马逊柯伊伯卫星通过微通道液冷实现星载边缘计算；OneWeb二代卫星则采用“整体液冷+局部热管”方式，将热控系统效率提升40%。 当前，国内低轨互联网通信卫星星座正处于从“造试验星”向“造服务星”转变的关键期，算力卫星星座的单星功耗普遍与AI1相当，起步就接近百kW量级。 高功率服务型卫星要上天，主动液冷就已经不再只是热控管理系统中的可选项，而是关乎星座能否真正产生商业价值的必选项。 在轨三年，全栈能力的真空试炼 “未来卫星一定会往更高集成度、更低成本的方向走，而液冷是解决功耗瓶颈的唯一办法。”基于这一判断，锐莱热控从创立之初就确定了“主动液冷为核心，被动热控为补充”的布局。 陈江平解释，即便在主动液冷系统中，辐射器涂层和部分热管仍是辅助散热不可或缺的环节：“主动面向未来，被动覆盖存量，两者不是替代关系。” 据介绍，锐莱热控目前已具备从加排阀、流体回路泵、辐射器到热管、铝VC、热控涂层等全套主被动热控产品的自研与量产能力。 “从底层材料工艺到顶层系统设计全部自主可控的全栈能力，让我们在系统集成精度上比竞争对手高出几个量级，产品也能做到体积更小、重量更轻。”陈江平表示。同时，团队还将民品供应链和工艺创新性地引入航天级产品的生产制造中，进一步压缩了冗余成本。 全栈自研也带来了交付层面上的优势保障。面对客户的不同需求，产能可以提前部署、灵活适配，规避了外部供应链带来的不确定性。 不过对于宇航级热控系统而言，无论多少测算数据和环境模拟，都不能替代",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": false,
-      "why": "把卫星热管理放到算力星座背景下，给出Starlink V3 50kW、AI1卫星120-150kW等关键功耗数据，反映太空算力的物理瓶颈演化。",
-      "queued_at": "2026-08-24T10:56:24Z"
     }
   ],
   "digest_last_date": "2026-08-24"
