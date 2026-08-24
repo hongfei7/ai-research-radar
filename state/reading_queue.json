@@ -157,6 +157,19 @@
       "queued_at": "2026-08-24T13:14:32Z"
     },
     {
+      "id": "f10775ba975c98e5110f87732caae07f208b8dfd",
+      "title": "Continuous Diffusion Language Models",
+      "url": "https://sander.ai/2026/08/24/continuous-dlms.html",
+      "source": "hackernews",
+      "published_at": "2026-08-24T10:08:52Z",
+      "raw_summary": "Continuous Diffusion Language Models",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "连续空间扩散语言模型是对自回归范式的潜在挑战，指向具体新论文，值得追踪其方法与实验结果。",
+      "queued_at": "2026-08-24T15:01:57Z"
+    },
+    {
       "id": "82dcd6120f7160fce14224427e0f243f883f1c7f",
       "title": "ConvRot Quant method now in llama-cpp-turboquant",
       "url": "https://www.reddit.com/r/localllama/comments/1vwoseh/convrot_quant_method_now_in_llamacppturboquant",
@@ -505,19 +518,6 @@
       "angle": "research",
       "source_traceable": true,
       "why": "seL4 微内核在 AArch64 上完成形式化安全证明，对可信执行环境与系统软件验证是重要里程碑。",
-      "queued_at": "2026-08-24T13:14:32Z"
-    },
-    {
-      "id": "ccf5f70b7a6747061685eabc7a6441eddd6e6f8d",
-      "title": "Thomson Reuters bets $40M on owning its AI instead of renting from OpenAI or Anthropic",
-      "url": "https://the-decoder.com/thomson-reuters-bets-40m-on-owning-its-ai-instead-of-renting-from-openai-or-anthropic",
-      "source": "rss:the-decoder",
-      "published_at": "2026-08-24T12:59:43Z",
-      "raw_summary": "Thomson Reuters is launching \"Thomson,\" its own language model built on Alibaba's Qwen, at a cost of about $40 million over two years. But the benchmarks only show top marks when the model can tap into the company's own content, like Westlaw. CTO Joel Hron makes the point that what matters isn't intelligence itself, but knowing which intelligence you need to own. The article Thomson Reuters bets $40M on owning its AI instead of renting from OpenAI or Anthropic appeared first on The Decoder.",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "Thomson Reuters 基于 Qwen 自建行业模型并给出 $40M 成本与战略判断，对企业 AI 落地路径有参考价值。",
       "queued_at": "2026-08-24T13:14:32Z"
     }
   ],
