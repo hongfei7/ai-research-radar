@@ -454,6 +454,19 @@
       "source_traceable": true,
       "why": "小米AI Cube三芯片架构含1.2TB/s内存带宽，原车规D100+O100组合，国产SoC/Chiplet路线值得关注。",
       "queued_at": "2026-08-24T11:34:34Z"
+    },
+    {
+      "id": "7787ab9568542a75c0dd107384384b6f3cb34d9e",
+      "title": "Your executable is a SQLite database",
+      "url": "https://simonwillison.net/2026/aug/24/your-executable-is-a-sqlite-database",
+      "source": "rss:simonwillison",
+      "published_at": "2026-08-24T11:38:15Z",
+      "raw_summary": "Your executable is a SQLite database Farid Zakaria describes a neat Linux pattern for creating a SQLite database file that can be directly used as an executable binary. The trick sets the SQLite file format's 4-byte application ID (68 bytes into the file) to SELF, standing for Structured Executable &amp; Linkable Format. The various components of the ELF executable format are then arranged into a number of different SQLite tables, using this schema. Their self-exec interpreter (C code here) can then extract and execute the necessary pieces. You can additionally use a Linux mechanism called binfmt_misc to teach the kernel to execute that any time it encounters an executable matching that binary pattern. Farid uses NixOS here, but without NixOS I think registration looks something like this: printf '%s\\n' ':self:M:68:SELF::/usr/local/bin/self-exec:' \\ &gt; /proc/sys/fs/binfmt_misc/register Via Hacker News Tags: c, linux, sqlite",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "把ELF可执行文件伪装成SQLite数据库自执行的黑客技巧，工程上有趣且有可追溯C代码和schema。",
+      "queued_at": "2026-08-24T12:02:38Z"
     }
   ],
   "digest_last_date": "2026-08-24"
