@@ -1,6 +1,19 @@
 {
   "candidates": [
     {
+      "id": "cd91132ba13e3c69ffbd0734d415cb5e3f76875c",
+      "title": "Hot Chips 2026: CUDA Targets RISC-V – By Chester Lam",
+      "url": "https://chipsandcheese.com/p/hot-chips-2026-cuda-targets-risc",
+      "source": "hackernews",
+      "published_at": "2026-08-24T16:52:01Z",
+      "raw_summary": "Hot Chips 2026: CUDA Targets RISC-V – By Chester Lam",
+      "score": 9,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "Hot Chips 2026 上 NVIDIA 把 CUDA 编译器目标对准 RISC-V 是一手技术路线信号，值得读原文理解动机与边界。",
+      "queued_at": "2026-08-24T17:33:30Z"
+    },
+    {
       "id": "f17465bd588a0ae83ce41a8cfe28996b1a77a900",
       "title": "2.6万中国学生30个月追踪：AI把作业分抬高18%，把中考分打掉24%",
       "url": "https://www.tmtpost.com/8113492.html",
@@ -506,19 +519,6 @@
       "source_traceable": false,
       "why": "把卫星热管理放到算力星座背景下，给出Starlink V3 50kW、AI1卫星120-150kW等关键功耗数据，反映太空算力的物理瓶颈演化。",
       "queued_at": "2026-08-24T10:56:24Z"
-    },
-    {
-      "id": "5da9ad67380bb6b0c6ad12e6508d166d7dafdd5a",
-      "title": "北京亦庄发布全国首个AI4Chip专项政策",
-      "url": "https://36kr.com/newsflashes/3953428250410375?f=rss",
-      "source": "rss:36kr",
-      "published_at": "2026-08-24T11:15:10Z",
-      "raw_summary": "36氪获悉，据北京亦庄消息，近日，北京经济技术开发区正式发布《“AI4Chip”人工智能赋能集成电路产业跨越式发展行动计划（2026—2028年）》。作为全国首个AI4Chip专项政策，“AI4Chip20条”聚焦AI原生全链赋能、“AI+智能设计”焕芯、“AI+制造封测”筑芯、“AI+设备材料”强芯、“AI+产业生态”育芯五大行动精准发力。根据“AI4Chip20条”目标蓝图，力争到2028年，经开区基本建成集成电路产业AI融合发展体系，培育3—5家具有国际影响力的AI4Chip生态型领军企业，形成10个以上具备行业推广能力的标杆应用，持续推动集成电路产业“AI原生”创新与“AI赋能”升级，构建“软硬互驱、芯智共生”的产业发展新范式。",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "全国首个AI4Chip专项政策，从产业政策视角看AI for EDA/制造的落地节奏，方向判断有参考价值。",
-      "queued_at": "2026-08-24T11:34:34Z"
     }
   ],
   "digest_last_date": "2026-08-24"

@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-24T16:48:10Z",
-  "text": "当前共有 26 个活跃事件。要点包括: Nvidia says its inference accelerator Groq 3 LPX has entered full production and Nebius has signed on as the first customer; SpaceXAI will adopt Vera CPUs (Mike Wheatley/SiliconANGLE); Nine indicted by Taiwan over illegal export of Nvidia B300 GPUs to China — details reveal five-point strategy to exploit and avoid customs controls; With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents; 阿里发布视频生成模型Wan3.0，单条成本约6美元; 为什么手机内存进入英伟达机柜后，贵过HBM？。",
-  "since": "2026-08-24T16:48:10Z",
-  "active_event_count": 26,
+  "generated_at": "2026-08-24T17:34:36Z",
+  "text": "截至 2026-08-25 01:34 HKT，本轮新增：Hot Chips 2026上英伟达展示CUDA向RISC-V架构的适配进展，CUDA生态正式突破x86/ARM边界，RISC-V阵营厂商有望受益。其余活跃事件延续此前格局：Groq 3 LPX量产并与Vera Rubin整合、B300走私案持续发酵、阿里Wan3.0发布及800亿港元配股推进、Vera Rubin NVL72每瓦推理性能较Hopper最高提升30倍。",
+  "since": "2026-08-24T17:34:36Z",
+  "active_event_count": 24,
   "key_themes": [
     "ai_monetization",
     "compute_demand",
@@ -13,6 +13,6 @@
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n英伟达在两条线上存在张力：一方面黄仁勋公开斥责超微电脑（SMCI）参与走私，另一方面自家高级经理被起诉涉案，暴露其\"受害者\"叙事与内部合规漏洞之间的矛盾。Groq 3 LPX性能宣传（来源credibility为low）与出口管制收紧并行，显示英伟达在合规与产品扩张之间需重新平衡。\n\n【新兴趋势】\n\"专用推理硬件\"成为新主题：英伟达LPX（基于Groq LPU技术）瞄准低延迟大上下文场景，与AMD MI系列、博通/Marvell ASIC方案形成推理赛道细分竞争。HBM供应链\"基础裸片\"环节出现新进入者（三星），打破SK海力士+美光双寡头格局，AI芯片厂商的HBM采购议价权可能变化。供应链合规追溯从成本项变为竞争壁垒。\n\n【信息盲点】\n本轮未覆盖但应关注：①台积电（CoWoS/先进封装产能仍是瓶颈）；②博通/Arista（机架级网络与定制ASIC）；③云厂商（AWS/Azure/GCP）的实际部署节奏与采购动向；④中国本土替代（华为昇腾、寒武纪）因走私案曝光可能受益的逻辑；⑤超微电脑的政府客户/订单风险量化数据缺失。\n\n【跨标的联动】\n英伟达-超微电脑：走私案直接冲击渠道信任，可能迫使英伟达向合规审计能力更强的服务器商（如戴尔、HPE）倾斜订单，形成渠道再分配。三星入局HBM基础裸片→SK海力士/美光定价压力→英伟达/AMD/谷歌TPU的HBM采购成本与议价策略联动。LPX放量则与Marvell/博通定制推理ASIC形成正面竞争。",
-  "trend_spotting": "【新兴趋势】英伟达GB300/Rubin200涨价约17%，单吉瓦数据中心建设成本至少增加50亿美元，定价权加速向芯片上游集中。同期Perplexity年化营收从年初不足2.5亿美元跃升至7.5亿美元以上，AI Agent商业化曲线明显陡于市场预期；英伟达以股权投资+算力绑定方式锁定下游推理需求，形成\"算力即股权\"的新型产业链关系。\n\n【早期信号】上海\"十五五\"规划首次将光计算、量子AI、异构计算写入新型工业化框架，并明确芯片-大模型-智算云协同自主生态，信号意义大于短期订单；阿里800亿港元配售+管理层1.2亿港元同步增持，资本与内部信心双重背书指向全栈AI基建持续加码，但市场对配售稀释与capex回报周期讨论不足。\n\n【市场盲点】服务器厂商利润率压力被低估——超微、戴尔在芯片涨价17%背景下转嫁能力有限，量价剪刀差将压缩毛利1-2个百分点；Perplexity Computer在企业场景的快速放量，意味着AI Agent不再是\"概念验证\"阶段，推理算力需求的可见性正在前移。\n\n【值得关注的拐点】GB300/Rubin200涨价若落地，将成为云厂capex上修的强制触发点；小米3nm Xring O3若实销量兑现，可能引发OPPO、vivo跟进自研SoC，重构高通/联发科在国产手机端的份额版图。"
+  "cross_analysis": "【核心矛盾】\n本轮仅有一条来源（hackernews，可信度为 low），不存在多源对同一事件的不同解读或争议。但条目本身隐含一个张力点：英伟达在 ARM 生态中已有成熟布局（Grace CPU 等），同时推动 CUDA 向 RISC-V 延伸，可能引发\"RISC-V 是对 ARM 的补充还是替代\"的讨论，但原文未给出明确倾向，需后续更多数据验证。\n\n【新兴趋势】\n\"CUDA 解耦于 x86/ARM 单一 CPU 架构\"是本条目最值得关注的潜在趋势。英伟达主动将软件栈适配到开源 RISC-V，意味着 GPU 厂商首次系统性降低对特定 CPU ISA 的绑定，这一信号若持续发酵，将重新定义\"CPU+GPU\"组合的话语权结构，也与边缘 AI、异构计算的需求扩张相吻合。\n\n【信息盲点】\n1) 适配的时间表、性能损耗、首发硬件合作伙伴均未披露；2) 国内 RISC-V 厂商（平头哥/芯来/蓝芯等）是否进入英伟达合作白名单未见提及；3) AMD ROCm 对 RISC-V 的态度、Intel 在 x86+RISC-V 异构上的布局未被覆盖；4) 国产 GPU 厂商（摩尔线程、壁仞等）软件栈策略对比缺失；5) 边缘 AI 芯片（如高通、联发科）的 RISC-V 动作未涉及。\n\n【跨标的联动】\n英伟达与 RISC-V 阵营（SiFive、平头哥等）出现合作信号，是首次明确的上游联动；与此同时，ARM 面临\"从唯一备选变为三选一\"的位置松动，需关注其股价及授权模式回应；下游层面，国内 RISC-V IP 与国产 GPU/CPU 厂商存在间接联动机会，但尚需落地证据支持。",
+  "trend_spotting": "英伟达将CUDA向RISC-V延伸，是72小时内GPU软件生态首次明确\"去x86/ARM化\"的关键动向。趋势层面，CUDA不再绑定特定CPU ISA，英伟达正主动重塑异构计算主导权，RISC-V国际基金会与国产RISC-V厂商（如平头哥相关标的）有望进入其推荐硬件清单。早期信号：边缘AI与中小型数据中心或率先落地RISC-V+GPU组合，因其规避授权费、便于定制指令扩展，与英伟达现有CUDA生态形成互补而非冲突。市场盲点在于，多数分析仍把RISC-V视为\"ARM替代品\"，却忽视其作为CUDA新载体的增量价值——该组合可能反向蚕食ARM在AI服务器CPU的份额。值得关注的拐点：若2027年前英伟达推出生产级RISC-V CUDA支持方案，叠加国产替代政策，将形成对ARM数据中心业务的实质性挤压，并加速国内RISC-V IP公司的商业化兑现节奏。"
 }
