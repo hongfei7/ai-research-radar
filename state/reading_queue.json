@@ -90,6 +90,32 @@
       "source_traceable": true,
       "why": "阿里巴巴财报+800亿港币AI融资的连贯叙事，反映全栈AI资本投入规模。",
       "queued_at": "2026-08-24T04:52:08Z"
+    },
+    {
+      "id": "f5ae4fdcc653422de048e7f51142dfa14c7130ac",
+      "title": "deepseek-v4-flash-0731 - surprisingly usable",
+      "url": "https://www.reddit.com/r/localllama/comments/1vwsjut/deepseekv4flash0731_surprisingly_usable",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-24T04:20:37Z",
+      "raw_summary": "I just finished building my (relatively) low rent local inference machine: * Epyc 7663 * 256GB ECC DDR4-3200 * 1x RTX 5090 32GB Yeah I realize it's weird to throw a 5090 and 256GB of anything together and call it low end, but relative to ~151GB of weights it is. I'm running UD-Q8_K_XL and getting 23.8-24.6 tokens/sec, with pp ranging from 60 on the first prompt to 385 near the last (no doubt lots of caching) on tasks using 100-128k total context. It was slower with DFlash so I took that out. It was also slower with a 3090 I put in there temporarily. I'm posting this mostly because I didn't see too many other data points for this config (DDR4 Epyc + Blackwell doing cpu-moe). And also that I'm pretty surprised that a model this good can actually run in my basement without dropping $10k or running a sub-panel down there. I'm otherwise fairly new to this - would love any tips on what else to run or how to further improve it. &#32; submitted by &#32; /u/IntravenusDeMilo [link] &#32; [comments]",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "deepseek-v4-flash-0730在Epyc+5090平台上的实际推理数据：23.8-24.6 tok/s、100-128k context下PP从60到385，含具体量化与硬件配置，是有价值的本地部署参考。",
+      "queued_at": "2026-08-24T05:40:42Z"
+    },
+    {
+      "id": "99f5469f428c4ca5dceb31db0fb0f15fface6cc3",
+      "title": "I developed my own quantized LLM from scratch, trained on 30B tokens, deploys in 60 MB",
+      "url": "https://www.reddit.com/r/localllama/comments/1vwt6m7/i_developed_my_own_quantized_llm_from_scratch",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-24T04:55:45Z",
+      "raw_summary": "Reposting here after sharing this on [r/MachineLearning](r/MachineLearning) a few days ago, where it got a much better response than I expected (300+ upvotes, great questions, zero roasting) GitHub is at 35 stars now. So here it is. I trained a 250M parameter model from scratch on 30B tokens of fineweb. It’s quantized to under 2 bits so the whole deployment is 60 MB and it needs about 80 MB of RAM to run. Runs around 400 tok/s on a normal laptop CPU, no GPU needed, no framework, just a small compiled runtime (Windows and Linux included, MIT licensed). Language modeling quality of the base model, measured on held-out English web text that was never seen in training (educational web pages, 2,048 token windows): cross entropy 3.15 nats per token, perplexity 23.3, 0.99 bits per byte. How the long context works: the most recent 2048 tokens stay in fp16 like a normal KV cache. Everything older gets compressed to 1 bit and written to disk, about 320 bytes per token, so 1 million tokens of history is roughly 320 MB on disk. From the start the model was trained to retrieve from that disk cache, up to 100M tokens. Due to a limited budget it wasn’t trained to reason over those tokens, only retrieve and answer from them. The vocabulary is also not a normal embedding table. Every token is a fixed 512-bit code, 8.4 MB for all 131k tokens, zero trained parameters. I tested it on WordSim-353 (human word similarity ratings): my table scores 0.619 Spearman correlation vs 0.029 for random codes",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "从零训练250M参数模型、<2 bit量化至60MB、CPU上400 tok/s，含具体训练数据规模与可复现仓库，对极小模型/极限量化路线有参考价值。",
+      "queued_at": "2026-08-24T05:40:42Z"
     }
   ],
   "digest_last_date": "2026-08-24"
