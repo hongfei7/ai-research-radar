@@ -40,6 +40,19 @@
       "queued_at": "2026-08-25T18:58:14Z"
     },
     {
+      "id": "0afa4e960ecc88c7cefd073d504a1b0932662c9b",
+      "title": "Cross-vendor byte-identical inference for a 72B LLM (AMD MI300X vs. Nvidia H100)",
+      "url": "https://zenodo.org/records/19882078",
+      "source": "hackernews",
+      "published_at": "2026-08-25T20:24:36Z",
+      "raw_summary": "Cross-vendor byte-identical inference for a 72B LLM (AMD MI300X vs. Nvidia H100)",
+      "score": 9,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "AMD MI300X 与 Nvidia H100 上 72B 模型实现逐字节一致推理，涉及 kernel/算子对齐等硬核工程细节，对跨厂商部署与验证极具参考价值。",
+      "queued_at": "2026-08-25T23:26:54Z"
+    },
+    {
       "id": "27be27fcb74f8301dab86ff57e70cc822dc80c07",
       "title": "How to Train a Critic Stably and Efficiently [Penghui Qi, Xiangxin Zhou, Wee Sun Lee]",
       "url": "http://arxiv.org/abs/2608.23566v1",
@@ -378,6 +391,19 @@
       "queued_at": "2026-08-25T18:58:14Z"
     },
     {
+      "id": "0b2320c15d4f2ef4e1d2d65329c1d4bbf8f6caa1",
+      "title": "Peak Portable Personal Datacenter",
+      "url": "https://www.reddit.com/r/localllama/comments/1vyephx/peak_portable_personal_datacenter",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-25T22:28:30Z",
+      "raw_summary": "Portable rig for Qwen3.8-27B-BF16 200K+ token prompts. My work Panasonic Toughbook + the T1 + power brick + headphones all fit in my lunchbox. Need the BF16 for huge context highly sensitive document OCR, image analysis, aggregation and summarization. I've done a ton of testing and it absolutely makes a difference vs even UD Q8_K_XL when legal precision is needed. 77gb VRAM at full 262K context + MMPROJ Rips through prefill (1,1715 tok/sec = 102 seconds to process 175K tokens), but token generation (20K tokens of output) relatively slow at 45 tok/sec (with MTP) as a result of BF16 despite the beast of a GPU. Better than Gemini Pro and ChatGPT 5.6 Sol especially considering I have control over the sampler settings (Temp 0.1; top-k 0; top-p 0.95; min-p 0.05; repeat penalty 1.02). Not better than Opus yet. During prefill - CPU around 60 degrees, GPU around 79 degrees (with 90% power limit) During token generation - CPU around 75 degrees and GPU around 76 degrees. FormD T1 Minisforum BD770i SE Ryzen 7745HX 8-core laptop CPU 96gb 5200 MHz DDR5 SODIMM 96gb RTX Pro 6000 Blackwell workstation edition Loki 1200W SFX-L ROG Equalizer 12v-2x6 SMX Heinz flipped GPU 2.5 slot kit SMX Heinz custom short PCIe 5.0 riser ZCOOI custom &quot;transparent purple&quot; Teflon cables (2) Phanteks T30-120mm (1) Noctua NF-A14x25r G2 Thermalright MC-3 Digital RAM cooler (I don't think this will fit on a regular DDR5 ) &#32; submitted by &#32; /u/Special-Wolverine [link] &#32; [comments]",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "便携式 27B BF16 长上下文推理给出了 VRAM、prefill 1175 tok/s、decode 45 tok/s、MTP 等具体数字与硬件配置，工程取舍清晰可复现。",
+      "queued_at": "2026-08-25T23:26:54Z"
+    },
+    {
       "id": "91d8faa919e1a2b28b837e932e6b3a02a2311052",
       "title": "SWE Refactor Bench: Can Coding Agents Complete a Long-Horizon, Whole-Repository Stack Migration? [Deyao Hong, Yizhe Chi, Wenyi Li, Xiaoqiu Wang, Mingju Gao]",
       "url": "http://arxiv.org/abs/2608.23564v1",
@@ -492,32 +518,6 @@
       "angle": "engineering",
       "source_traceable": true,
       "why": "LLM引导的进化搜索求解器高效MIP形式，把'建模正确'扩展到'形式强度'，对OR+LLM有实际价值",
-      "queued_at": "2026-08-25T03:02:10Z"
-    },
-    {
-      "id": "788e2509c001b1321be4cef0b601e673fd4d68f5",
-      "title": "Agent-G$^2$: Gaussian Guidance for Agentic Reinforcement Learning [Zixuan Wang, Yanrui Miao, Zhengxi Lu, Teng Pan, Yiwen Qiu]",
-      "url": "http://arxiv.org/abs/2608.23318v1",
-      "source": "arxiv:cs.CL",
-      "published_at": "2026-08-24T14:34:34Z",
-      "raw_summary": "Hint-based reinforcement learning addresses reward sparsity in long-horizon agentic tasks by retaining a prefix of an expert trajectory before each rollout, letting the policy explore from a state closer to success. Its effectiveness hinges on the guidance depth: how much of the trajectory to keep. Existing methods treat this depth as a deterministic scalar. Scheduled approaches share one value across samples and ignore per-task heterogeneity; per-sample probing estimates it separately at the cost of extra rollouts. We find that useful guidance occupies a band of depths whose informativeness profile is approximately Gaussian around the band center, rather than concentrating at a single optimal point. We propose Agent-G$^2$, a Gaussian guidance framework that draws the depth per task from a Gaussian whose center and spread are estimated online from rollouts already collected for policy optimization, requiring no probe rollouts or learned depth predictor. The center combines a global baseline with per-cluster difficulty, and the spread tracks within-cluster variance. We evaluate Agent-G$^2$ on ALFWorld and WebShop on Qwen2.5-1.5B / 7B-Instruct. Agent-G$^2$ outperforms the strongest hint-based, hint-free, and Aux-RL baselines on ALFWorld by 2.3 / 3.9 / 7.4 points at under one-third the rollout cost of per-sample probing.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "把hint深度建模为高斯分布而非标量，对长程agentic RL的guidance band给出有理论支持的设计",
-      "queued_at": "2026-08-25T03:02:10Z"
-    },
-    {
-      "id": "8b67e63400caabb2a7e1f379df373bcf210f3187",
-      "title": "Beyond the Stability-Exploration Dilemma: Environmental Regularization for LLM Policy Optimization [Xianlei Zhou, Xiangdi Meng, Yu He, Tianyu Qi, Shuyan Guan]",
-      "url": "http://arxiv.org/abs/2608.23311v1",
-      "source": "arxiv:cs.CL",
-      "published_at": "2026-08-24T14:30:59Z",
-      "raw_summary": "Policy optimization (PO) for Large Language Models faces a stability--exploration trade-off, currently mediated by an action-side Policy-KL regularizer. This puts practitioners in a double bind: keeping Policy-KL constrains response behavior and consumes the action-side exploration budget, while dropping it leaves the optimization without an explicit drift control. We argue for an alternative that breaks the dilemma by moving regularization to the input side. As training progresses, the distribution over training queries induced by the current policy drifts unchecked from its pre-RL reference distribution. Concretely, Environment-Regularized Policy Optimization (ERPO) introduces a Query-KL (QKL) term that bounds this query distribution shift, together with a dataset-static reference-derived per-query weight that biases each per-query update toward queries typical under the reference. The QKL gradient flows strictly through the query likelihood; the response score function used by policy-gradient estimators does not appear in the QKL term, so QKL exerts no direct gradient pressure on the response distribution---exploration is preserved. ERPO plugs into GRPO/PPO/REINFORCE-style pipelines without additional forward passes. On six mathematical reasoning benchmarks, ERPO replaces the standard Policy-KL regularizer while achieving effective control over query distribution drift, delivering stronger accuracy and substantially more stable behavior under high-temperature decoding and ",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "主张把Policy-KL正则化从action侧移到input侧，打破稳定-探索二难，给出明确框架",
       "queued_at": "2026-08-25T03:02:10Z"
     }
   ],

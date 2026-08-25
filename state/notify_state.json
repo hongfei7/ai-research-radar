@@ -1,42 +1,7 @@
 {
-  "morning_last_date": "2026-08-25",
+  "morning_last_date": "2026-08-26",
   "weekly_last_slot": "2026-W34",
   "breaking_fingerprints": [
-    {
-      "tickers": [
-        "Meta"
-      ],
-      "features": [
-        "ai",
-        "and",
-        "august",
-        "codenamed",
-        "docs",
-        "early",
-        "hatch",
-        "in",
-        "information",
-        "its",
-        "jyoti",
-        "late",
-        "latest",
-        "launch",
-        "mann",
-        "meta",
-        "model",
-        "october",
-        "of",
-        "openclaw",
-        "or",
-        "plans",
-        "september",
-        "the",
-        "to",
-        "version",
-        "watermelon"
-      ],
-      "sent_at": "2026-08-24T23:12:09Z"
-    },
     {
       "tickers": [
         "英伟达"
@@ -579,45 +544,80 @@
         "with"
       ],
       "sent_at": "2026-08-25T18:59:58Z"
+    },
+    {
+      "tickers": [
+        "台积电",
+        "苹果"
+      ],
+      "features": [
+        "m5",
+        "m6",
+        "mac",
+        "mini",
+        "studio",
+        "ultra",
+        "与和",
+        "亮相",
+        "出新",
+        "和芯",
+        "推出",
+        "新款",
+        "果推",
+        "款与",
+        "片亮",
+        "芯片",
+        "苹果"
+      ],
+      "sent_at": "2026-08-25T23:28:31Z"
     }
   ],
   "last_report": {
-    "date": "2026-08-25",
+    "date": "2026-08-26",
     "macro": {
-      "cycle": "扩张第三年向第四年过渡,头部四家云厂季度 capex 合计仍维持 900 亿美元以上、同比扩张 40% 以上,但本季环比斜率首次转平;同期阿里单季资本开支 676.78 亿元、同比 75%,远超市场预期 360 亿元,中美头部已共同进入营收兑现与回本框架约束并行的阶段",
+      "cycle": "扩张第三年向第四年过渡,头部四家云厂季度 capex 合计仍维持 900 亿美元以上、同比扩张 40% 以上,本季环比斜率首次转平;同期阿里单季资本开支 676.78 亿元、同比 75%,远超市场预期 360 亿元,中美头部已共同进入营收兑现与回本框架约束并行的阶段",
       "trajectory": {
         "past": "晶圆制程产能",
         "now": "HBM 容量与 CoWoS 双约束",
-        "next": "数据中心电力与单机柜功率",
-        "why_now": "B200/Rubin 单卡功耗跨过 1kW 之后,HBM 堆叠层数继续抬升封装热密度,CoWoS 又被 Google TPU、AMD MI 系列、博通 ASIC 多线争抢,味之素 ABF 基板对华削减 30% 供货进一步推高边际成本",
+        "next": "单机柜功率与电力接入",
+        "why_now": "B200/Rubin 单卡功耗跨过 1kW 之后,3D 堆叠结构下热量需穿过多层介电层,介电层导热率与封装热密度取代光刻精度成为良率主约束,CoWoS 又被 Google TPU、AMD MI 系列、博通 ASIC 多线争抢,味之素 ABF 基板对华削减 30% 供货进一步推高边际成本",
         "trigger": "若单机柜功率密度普遍突破 130kW,或北美超大规模园区电力接入审批成为交付主延迟项,即视为算力主约束完成向电力段的迁移"
       },
-      "shift": "trajectory 主轴维持晶圆-封装-电力三段,但在 check 段正式将电力从 next 预备段升格为 now 待溢出段,并新增 AVO 对智能体中间层价值链的判断",
+      "shift": "维持晶圆-封装-电力三段轨迹,但在 check 段正式将电力从 next 预备段升格为 now 待溢出段,并新增 AVO 对智能体中间层价值链的判断",
       "shift_kind": "adjust"
     },
     "calls": [
       {
-        "claim": "HBM 紧缺正通过产能虹吸效应向通用 DRAM 传导,存储三巨头议价权进入强势周期",
-        "falsifier": "若 2026Q4 海力士/三星/美光任一家季报披露的 DRAM 业务 ASP 环比涨幅低于 8%,或 2027Q1 Amazon 重新下调硬件终端零售价,本判断失效。",
-        "verify": "Amazon 硬件涨价 60% 归因内存紧缺"
+        "claim": "超大规模客户自研 ASIC 正从备选升格为主线配置,博通成为最大公约数受益方",
+        "falsifier": "若 2026Q4 博通 AI 收入同比增速低于 50%,或 OpenAI 在 2027Q1 公开采购名单中博通 ASIC 占比未达双位数,本判断失效",
+        "verify": "若 2026Q4 博通 AI 收入同比增速低于 50% 即证伪"
       },
       {
-        "claim": "英伟达在推理栈用 GPU+LPU 双轮巩固编排层主导权,定价权尚未被专用 ASIC 路径瓦解",
-        "falsifier": "若 2027Q1 头部四家云厂公布的 AI 服务器系统实际签单价低于英伟达涨价后报价 5% 以上,或 AMD MI400 量产版在 2026Q4 拿到独立于英伟达配额之外的 HBM4 长协,本判断失效。",
-        "verify": "Groq 3 LPX 量产 + 3,400 tok/s 基准"
+        "claim": "台积电 N2 节点稼动率与 CoWoS 排期在 2026H2 形成双引擎,M6 首发 Mac 是桌面 AI 推理优先级高于移动端的明确信号",
+        "falsifier": "若 2026Q4 台积电 N2 稼动率未超过 70%,或 M6 在 2027H1 仍未扩展至 iPad/iPhone 产品线,本判断失效",
+        "verify": "若 2026Q4 台积电 N2 稼动率未超过 70% 即证伪"
       },
       {
-        "claim": "封装段代际切换信号从私有协议向 UCIe 开放标准迁移,Intel 与台积电的封测订单再分配窗口打开",
-        "falsifier": "若 2027Q1 Intel 18A-P 良率未超过 50%,或 Diamond Rapids 量产版晶圆仍主要交由台积电 N3 制造,本判断失效。",
-        "verify": "Intel Diamond Rapids 以 UCIe-S 替代 EMIB"
+        "claim": "英伟达以 Vera CPU + SOCAMM2 切入 agentic 编排层,把全栈粘性从 GPU 延伸至 CPU 维度,定价权未被 ASIC 路径瓦解",
+        "falsifier": "若 2027Q1 头部四家云厂公布的 AI 服务器系统实际签单价低于英伟达涨价后报价 5% 以上,或 AMD MI400 量产版在 2026Q4 拿到独立于英伟达配额之外的 HBM4 长协,本判断失效",
+        "verify": "若 2027Q1 四家云厂 AI 服务器签单价低于 NVDA 涨价后报价 5% 即证伪"
+      },
+      {
+        "claim": "HBM 紧缺通过产能虹吸向通用 DRAM 传导,存储三巨头进入强势议价周期",
+        "falsifier": "若 2026Q4 海力士、三星、美光任一家季报披露的 DRAM 业务 ASP 环比涨幅低于 8%,或 2027Q1 Amazon 重新下调硬件终端零售价,本判断失效",
+        "verify": "若 2026Q4 三家任一 DRAM ASP 环比涨幅低于 8% 即证伪"
       }
     ]
   },
-  "morning_fallback": {
-    "date": "2026-08-26",
-    "attempts": 1
-  },
+  "morning_fallback": null,
   "blindspot_ledger": [
+    {
+      "key": "AMD|ASML|Anthropic|Intel|xAI|博通|台积电|戴尔|美光|英伟达|苹果|超微电脑",
+      "text": "台积电近 30 天有 371 条相关信息进入本库,但无一条来自其自有披露,对其产能与制程的判断全部依赖二手转述与同业外推;博通 244 条、美光 177 条、超微电脑 157 条、苹果 134 条、ASML 130 条、Intel 119 条、戴尔 100 条同样为零一手披露。换言之,本期所有关于代工产能、ASIC 良率、HBM 库存、CoWoS 排期的判断,均建立在一手通道缺位的二手转述之上。此外,英伟达、AMD、Anthropic、xAI 等关键主体的最新一手披露同样缺失,Jalapeño 性能数据未经第三方独立验证(E1/E5),报告中的对标基线 GB300 与尚未量产的 Rubin 同时出现,信息不对称风险需要明确",
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-08-26",
+      "times_seen": 1
+    },
     {
       "key": "AMD|ASML|Anthropic|Intel|Marvell|Meta|OpenAI|博通|台积电|美光|超微电脑",
       "text": "台积电近 30 天有 377 条相关信息进入本库,但无一条来自其自有披露,对其 N3/N2 排产节奏与 CoWoS 产能配比的判断全部依赖二手转述与同业外推;博通 249 条、Meta 175 条、美光 169 条、超微电脑 159 条、ASML 131 条、Intel 120 条同样为结构性零一手披露。本期涉及的关键算子——Anthropic 自研 ASIC、OpenAI Jalapeno 量产、AMD MI400 HBM4 长协、Marvell/Broadcom 定制 ASIC 受益度——均无主体直接发言,只能从云厂或台积电外侧信号反推,这是当前最容易被低估的不确定来源。",
