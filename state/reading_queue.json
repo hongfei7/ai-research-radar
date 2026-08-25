@@ -313,6 +313,19 @@
       "queued_at": "2026-08-25T16:56:50Z"
     },
     {
+      "id": "8cd2b344650534902292b4649d0d6f3b20d701dd",
+      "title": "How we built a SOTA search engine using PostgreSQL, pgvector, and Qwen3 embeddings [P]",
+      "url": "https://www.reddit.com/r/machinelearning/comments/1vxyrsr/how_we_built_a_sota_search_engine_using",
+      "source": "reddit:ml",
+      "published_at": "2026-08-25T12:42:36Z",
+      "raw_summary": "I wrote a technical breakdown of how search works on Papers with Code. The system combines keyword and semantic search, which produced better results than either approach alone. The stack includes: PostgreSQL with pgvector Qwen3-Embedding-0.6B for text embeddings Hugging Face Jobs with an NVIDIA L4 for batch embedding generation Hugging Face Buckets for storing artifacts A live embedding model served through Hugging Face Inference Endpoints The same infrastructure also powers the “related papers” recommendations shown on individual paper pages. Full write-up: How Hugging Face Inference Endpoints, Jobs, and Buckets Power Search on Papers with Code I’d be interested to hear how others are implementing hybrid search for research papers or similarly technical content. Disclosure: I work at Hugging Face and on Papers with Code. &#32; submitted by &#32; /u/NielsRogge [link] &#32; [comments]",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "用PostgreSQL+pgvector+Qwen3嵌入搭建SOTA级论文检索系统的完整工程拆解，含栈选型、混合检索策略与部署细节，可直接复现。",
+      "queued_at": "2026-08-25T17:37:00Z"
+    },
+    {
       "id": "91d8faa919e1a2b28b837e932e6b3a02a2311052",
       "title": "SWE Refactor Bench: Can Coding Agents Complete a Long-Horizon, Whole-Repository Stack Migration? [Deyao Hong, Yizhe Chi, Wenyi Li, Xiaoqiu Wang, Mingju Gao]",
       "url": "http://arxiv.org/abs/2608.23564v1",
@@ -505,19 +518,6 @@
       "angle": "research",
       "source_traceable": true,
       "why": "原力灵机DM0.5登顶RoboDojo且全开源，具身大模型benchmark新结果，值得看模型细节和实验设置。",
-      "queued_at": "2026-08-25T04:01:53Z"
-    },
-    {
-      "id": "7ed239a9764781dd306c8983e3dacd6c4cfc0443",
-      "title": "ReWorld: An Interactive World Model with Long-Horizon Memory",
-      "url": "https://arxiv.org/abs/2608.23565",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-23T20:00:00Z",
-      "raw_summary": "ReWorld separates short-horizon control and long-horizon memory during training, then bounds both at inference via mixed attention windows, a pose-indexed landmark bank, and distribution-matching LoRA distillation to enable real-time interactive world modeling with strong action fidelity and long-range recall.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "ReWorld交互式世界模型论文，混合注意力窗口+姿态索引地标库+LoRA蒸馏的工程方案有参考价值。",
       "queued_at": "2026-08-25T04:01:53Z"
     }
   ],
