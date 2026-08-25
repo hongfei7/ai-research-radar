@@ -324,6 +324,32 @@
       "source_traceable": false,
       "why": "明确提出世界模型是生成/模拟/动作策略三者耦合的闭环反馈系统，框架性观点有价值。",
       "queued_at": "2026-08-25T04:55:08Z"
+    },
+    {
+      "id": "3acc386b327f959e81b722338db9ff742a047e04",
+      "title": "Better Retrieval, Worse Robustness:How Multi-hop RAG Amplifies Upstream ASR Errors",
+      "url": "https://arxiv.org/abs/2608.22872",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-23T20:00:00Z",
+      "raw_summary": "Retrieval-augmented generation extensions amplify automatic speech recognition errors in spoken multi-hop question answering, primarily through corrupted query entities.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "明确指出多跳RAG会放大上游ASR错误并给出机制（query entity污染），结论反直觉且有论文支撑，对RAG+语音系统设计有直接指导意义。",
+      "queued_at": "2026-08-25T05:34:25Z"
+    },
+    {
+      "id": "0f3d2d8d04dee5cf8bc002111884fef0a9dec49d",
+      "title": "Spent a day seeing how far extreme MoE models can be pushed on a 4070 Ti + 32GB RAM. Kimi K3, DeepSeek V4 Flash, and Qwen3.5-122B results + research paper🔧",
+      "url": "https://www.reddit.com/r/localllama/comments/1vxoif0/spent_a_day_seeing_how_far_extreme_moe_models_can",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-25T03:28:19Z",
+      "raw_summary": "I’ve been experimenting with a custom inference/runtime research project called CRANE V2, mostly because I wanted to answer a stupid question: How far can you push absurdly large MoE models on an ordinary consumer Windows machine before physics actually wins? Hardware is nothing exotic: Ryzen 7 7800X3D RTX 4070 Ti 12GB 32GB DDR5 Lexar NQ700 2TB NVMe + Samsung 970 EVO Plus 1TB NVMe Windows 11 I tested three major targets so far: Kimi K3 (2.779T parameters / 711GB checkpoint), DeepSeek V4 Flash Q4 + Q3, and Qwen3.5-122B-A10B Q4. The paper is a 26-page evidence-locked writeup with the successful runs, failed branches, quality gates, hardware measurements, cache experiments, runtime changes, and claim boundaries. Important disclaimer before the funny numbers: the highest throughput results are NOT equivalent to running the original models at full capability. CRANE deliberately separates speed-wall experiments from quality-preserving experiments. Some of the fastest profiles change expert routing, precision, or shared-expert behavior and produce complete garbage. I’m specifically not claiming “2.8T Kimi runs normally at 9 tok/s” or “122B Qwen runs normally at 57 tok/s.” The paper keeps those numbers in separate ledgers for exactly that reason. The headline results so far: Kimi K3: canonical first-token control was 0.014459 tok/s. An intentionally altered speed-wall profile eventually reached 9.314978 tok/s over 64 tokens, but useful language was destroyed and quality restoration f",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "在4070Ti+32GB上极限压榨Kimi K3/DeepSeek V4/Qwen3.5巨量MoE的实测报告与26页技术论文，消费级硬件跑大模型有具体工程取舍与数字。",
+      "queued_at": "2026-08-25T05:34:25Z"
     }
   ],
   "digest_last_date": "2026-08-25"
