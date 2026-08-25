@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-25T01:49:55Z",
-  "text": "当前共有 12 个活跃事件。要点包括: 马斯克首次Cursor全员会承认Grok落后于AI竞赛; Amazon hikes hardware prices by 60 percent, blaming memory shortage; Meta最快8月底推出AI智能体Hatch，10月发布新模型Watermelon; 英伟达称Groq机架将在今年上线，此前以200亿美元完成收购; Intel Xeon 7 'Diamond Rapids' comes with up to 256 P-cores, 1.28 GB of last-level cache — next-gen 18A-P CPU also brings AVX 10.2 and uses UCIe-S instead of EMIB。",
-  "since": "2026-08-25T01:49:55Z",
-  "active_event_count": 12,
+  "generated_at": "2026-08-25T03:07:20Z",
+  "text": "当前共有 20 个活跃事件。要点包括: AI算力通胀时代：英伟达服务器涨价超15%，成本传导冲击云厂商利润率; 马斯克首次Cursor全员会承认Grok落后于AI竞赛; Amazon hikes hardware prices by 60 percent, blaming memory shortage; Meta最快8月底推出AI智能体Hatch，10月发布新模型Watermelon; 英伟达称Groq机架将在今年上线，此前以200亿美元完成收购。",
+  "since": "2026-08-25T03:07:20Z",
+  "active_event_count": 20,
   "key_themes": [
     "compute_demand",
     "chip_supply",
     "ai_monetization",
     "model_capability",
-    "domestic_substitution"
+    "edge_ai"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
   "cross_analysis": "【核心矛盾】\n中信证券看多美股半导体设备至2028年的乐观预期，与xAI坦承Grok落后、需通过收购Cursor补短板这一事实形成微妙张力——前者基于下游capex持续扩张，后者暗示头部AI玩家间技术差距正在拉大，capex兑现度存疑。长江存储以\"全球第三\"身份冲击科创板，但招股书未披露NAND价格策略，市场对其上市后是\"定价权重塑者\"还是\"价格战牺牲品\"存在分歧。小米宣称玄戒O100端侧AI性能\"超越传统旗舰SoC\"，缺乏第三方基准佐证，营销叙事与实际流片/制程信息不对称。\n\n【新兴趋势】\n**端侧AI芯片国产化加速**成为隐线：小米玄戒覆盖手机/汽车/机器人全生态、长江存储承接国产NAND替代，二者共同勾勒\"端侧算力+存储\"的国产化闭环。**AI算力供需矛盾**在多条报道中反复显性化：xAI收购补短板、设备厂按订单积极扩产、长江存储扩产背后均指向AI驱动的算力/存储持续紧缺。**国产半导体资本化提速**，长江存储3300亿估值+长鑫/中芯已上市或拟上市，A股半导体板块虹吸效应值得关注。\n\n【信息盲点】\nAMD在xAI算力采购叙事中仅一笔带过，MI300/MI350路线图及对英伟达的替代弹性未被独立分析。国内半导体设备标的（北方华创、中微公司、拓荆等）在\"国产替代\"主题下未被点名，与中信证券看多逻辑直接相关但缺位。Anthropic、OpenAI等AI编码赛道竞品及其模型迭代节奏未展开。长江存储上市对A股兆易创新、佰维存储、江波龙等已上市存储公司的估值压力与资金分流未具体测算。\n\n【跨标的联动】\n**长江存储 ↔ 三星/海力士/美光",
-  "trend_spotting": "存储芯片紧缺已实质传导至云厂商终端硬件，亚马逊硬件价格最高上调60%，说明DRAM/NAND供需失衡程度可能远超市场预期，存储三巨头（海力士、三星、美光）议价权进入强势周期。\n\nIntel Diamond Rapids采用UCIe-S替代EMIB，是chiplet封装从私有协议向开放标准迁移的早期信号，配合256核与1.28GB末级缓存，瞄准云厂商高密度CPU替换窗口，但18A-P制程良率与量产节奏仍是关键变量。\n\n被忽视的拐点在于：内存涨价正从上游芯片向整机硬件甚至云服务定价传导，若持续，将推高AI算力TCO，间接影响GPU/加速器配比决策；同时Intel以\"核心数+缓存容量+先进封装\"组合反击AMD EPYC Turin，可能引发数据中心CPU市场份额再分配。"
+  "trend_spotting": "存储芯片通胀正从HBM向全产业链扩散：英伟达服务器涨价超15%，亚马逊消费电子终端提价最高60%，传导链条已从云端算力下沉到消费端。长江存储一季度净利333.79亿元（日均3.7亿），印证NAND进入超级周期，国产存储\"双子星\"资本化加速将重塑全球供应格局。AMD在Hot Chips展示Helios MI400系统级架构，竞争从单芯片转向机架级方案，挑战英伟达系统护城河。Lambda以$12B估值、$15亿营收对应8倍PS，AI算力租赁估值膨胀但GPU回本周期成为隐性盲点。端侧AI出现新变量：小米端侧推理速度据称超iPhone，若第三方测评复现，将冲击苹果生态护城河并拉动高通/联发科端侧NPU需求。值得警惕的拐点：存储涨价持续性若超预期，云厂商cap"
 }
