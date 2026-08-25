@@ -246,6 +246,45 @@
       "source_traceable": true,
       "why": "指出 RAG 索引更新中的隐藏 answer churn 问题，提出兼容性审计的评测维度，对实际部署的 RAG 系统有直接指导意义。",
       "queued_at": "2026-08-25T03:02:10Z"
+    },
+    {
+      "id": "544651275f04695ed4ac24eaf93e72b28f337563",
+      "title": "具身大满贯还全开源！原力灵机DM0.5登顶RoboDojo，且clone且珍惜",
+      "url": "https://www.qbitai.com/2026/08/478791.html",
+      "source": "rss:qbitai",
+      "published_at": "2026-08-25T02:22:01Z",
+      "raw_summary": "",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "原力灵机DM0.5登顶RoboDojo且全开源，具身大模型benchmark新结果，值得看模型细节和实验设置。",
+      "queued_at": "2026-08-25T04:01:53Z"
+    },
+    {
+      "id": "7ed239a9764781dd306c8983e3dacd6c4cfc0443",
+      "title": "ReWorld: An Interactive World Model with Long-Horizon Memory",
+      "url": "https://arxiv.org/abs/2608.23565",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-23T20:00:00Z",
+      "raw_summary": "ReWorld separates short-horizon control and long-horizon memory during training, then bounds both at inference via mixed attention windows, a pose-indexed landmark bank, and distribution-matching LoRA distillation to enable real-time interactive world modeling with strong action fidelity and long-range recall.",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "ReWorld交互式世界模型论文，混合注意力窗口+姿态索引地标库+LoRA蒸馏的工程方案有参考价值。",
+      "queued_at": "2026-08-25T04:01:53Z"
+    },
+    {
+      "id": "7f544ddfd4ded72b0aca078c87ae42416e7aee50",
+      "title": "Prime Agent: A Self-Improving RLM Harness",
+      "url": "https://arxiv.org/abs/2608.23552",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-23T20:00:00Z",
+      "raw_summary": "Prime Agent is an open-source harness that uses recursive subagents, persistent computation, and agent-to-agent coordination to extend language models' long-horizon capabilities across coding and reasoning tasks.",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Prime Agent自改进RLM框架，递归子代理+持久计算+代理协作的可复现工程实现。",
+      "queued_at": "2026-08-25T04:01:53Z"
     }
   ],
   "digest_last_date": "2026-08-25"
