@@ -454,6 +454,58 @@
       "source_traceable": true,
       "why": "细菌晶体管、反铁电遗忘、高熵混合三项前沿器件研究简报，可作为论文线索索引。",
       "queued_at": "2026-08-25T07:59:25Z"
+    },
+    {
+      "id": "a1d10a73b38241a0eca098b6541078d825eb5bb0",
+      "title": "BIMSA 王雅晴：Scaling Law 触及天花板，「数据高效学习」指向 AI 的下一站｜IJCAI 2026",
+      "url": "https://www.leiphone.com/category/private/cv4bh7vxg4ldhwnt.html",
+      "source": "rss:leiphone",
+      "published_at": "2026-08-25T06:44:00Z",
+      "raw_summary": "真正的智能，在于能否基于有限的数据，实现可靠的泛化与迁移。&nbsp; &nbsp; 作者丨张璐&nbsp; &nbsp; 编辑丨岑峰 幸丽娟&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;高质量标注数据快用完了，算力贵得离谱，黑盒依然无解。大模型时代信奉的 Scaling Law，正在面临多重瓶颈。更麻烦的是另一件事：很多任务天生就没有大数据——药物研发、冷启动推荐、科学探索。这些不是技术的短板，是世界的常态。在IJCAI 2026大会的 Early Career Spotlight（早期职业焦点）环节，北京雁栖湖应用数学研究院（BIMSA）副教授王雅晴，给这些问题做出了系统回应。王雅晴长期从事小样本学习与&nbsp;AI for Science&nbsp;研究。她博士毕业于香港科技大学，曾任百度研究院资深研究员，现任北京雁栖湖应用数学研究院（BIMSA）副教授。贯穿其研究经历的一条主线是：如何提高&nbsp;AI&nbsp;对有限数据与经验的利用效率，使其在监督稀缺的场景下仍能实现可靠的泛化、适应与决策。她在题为《迈向高效数据智能：从少样本学习到智能体系统》（Toward Data-Efficient Intelligence: From Few-Shot Learning to Agentic Systems）的演讲中，梳理了从小样本学习、元学习、上下文学习，到最新提出的“数据高效智能体学习”（Data-Efficient Agentic Learning, DEAL）的完整演进脉络。她的核心洞察是：人类智能从极少样本中完成泛化，靠的是基因、文化与经验三重先验的支撑，而 AI 同样可以。更关键的是，她还从理论层面进一步证明了，在所研究的任务与模型设定下，In-Context Learning 可以被理解为一种数据依赖的元学习。Transformer通过自注意力机制，将传统元学习中显式的适配过程内化为隐式计算，从而实现了“殊途同归”。这一发现为大模型的少样本能力提供了坚实的理论解释。而当AI从单步预测走向多步交互与长程决策，数据稀缺问题变得更加严峻。她与合作者提出了 DEAL 框架，从经验增强、架构设计与高效学习范式三个方向，系统应对智能体面临的“数据沙漏”瓶颈。其中一条核心思路，就是利用结构化先验，让 AI 在有限经验中实现可靠和泛化，从而在真实世界走得更远。01科学与工业的现实：天然缺乏大数据的场景当下，Scaling Law几乎成为行业共识。在Transformer与监督学习范式下，行业已习惯这套路径：更大规模的数据、更多参数量，叠加持续增长的算力，即可推高模型的泛化上限。但这条规模扩张的路径，究竟还能走多远？以行业对GPT-4的估算为例，训练数据如果印成纸质书，排起来能",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "BIMSA王雅晴在IJCAI 2026对Scaling Law瓶颈与'数据高效学习'的论述，触及当前范式分歧，值得细读。",
+      "queued_at": "2026-08-25T08:53:54Z"
+    },
+    {
+      "id": "dc004c5ef24be752bf6da8af37ad2aa8ccdc1ee1",
+      "title": "From Generation to Simulation: How Far Are World Models from Being True Simulators?",
+      "url": "https://arxiv.org/abs/2608.23070",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-23T20:00:00Z",
+      "raw_summary": "Generative world models are evaluated against traditional simulators across eight capabilities, revealing gaps in physical guarantees, state feedback, and long-horizon stability despite progress in interaction and controllability.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "世界模型与传统仿真器在八项能力上的系统对比，明确指出物理保证与长程稳定性的差距，值得读原文。",
+      "queued_at": "2026-08-25T08:53:54Z"
+    },
+    {
+      "id": "9ef7923d308a46867869d3c9c036cd6a915d1f0d",
+      "title": "突破具身智能物理死角：IJCAI 2026 具身智能泛化与控制突破",
+      "url": "https://www.leiphone.com/category/private/5yb9zka19rhtgz0o.html",
+      "source": "rss:leiphone",
+      "published_at": "2026-08-25T06:42:00Z",
+      "raw_summary": "告别理想仿真，中国学术团队用物理工程方案回应落地挑战。&nbsp; &nbsp; 作者丨张璐&nbsp; &nbsp; 编辑丨岑峰&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;过去一年多里，具身智能似乎按下了快进键。从 Physical Intelligence 发布的π₀到开源社区追捧的OpenVLA，VLA大模型一路高歌猛进。在各种标准基准测试和精心搭建的实验室 Demo 中，机械臂叠衣服、拿取物品流畅得宛如人类，动辄刷出 90% 甚至 95% 以上的成功率。然而，当全行业都在欢呼“机器人的 GPT 时刻”到来时，前沿学术界与产业界却爆发了一场剧烈的反思：这些动辄数十亿参数的具身大模型，真的学会“举一反三”了吗？还是在“死记硬背”？在主流学术视角中，VLA 大模型像是给机器人装上了具备常识与规划能力的“大脑”。但要让机械体真正干好精细活，仅有一个聪明的大脑远远不够。最新实验数据表明，面对物品位置的随机挪动或新指令组合时，纯端到端大模型往往会受到“空间过拟合”的约束，末端执行成功率会出现剧烈衰减。这恰恰说明：具身智能要真正走出实验室，不仅需要大模型提供常识和高层决策，更需要扎实的工程技术去打造精准、稳健的“小脑”。下面雷峰网盘点入选&nbsp;IJCAI 2026&nbsp;的&nbsp;6 项中国团队成果。它们并非要替代大模型，而是从空间泛化、盲区感知到极端控制，为具身智能补齐了通往真实物理世界最关键的拼图。01解决死记硬背，大模型如何搞定未见场景具身智能的核心瓶颈之一在于真正的泛化能力。目前的VLA动辄拥有数十亿参数，但在面对没有见过的指令组合或场景变化时，表现往往大打折扣。▎泛化成功率跌破 21%：不重训模型，如何把成功率拉回 83%论文：《VLAs Are Confined yet Capable of Generalizing to Novel Tasks》作者：李全义（论文独立作者，一路从北邮本科、爱丁堡硕士深造至新加坡国立大学 CLeaR Lab 博士，现任 Oxa 高级应用科学家）论文链接：https://arxiv.org/pdf/2505.03500v5假设你给机器人下达了一道指令：“把奶酪放进柜子”。如果在训练数据里，这块奶酪总是摆在桌子左侧，那么当你在现实中把奶酪挪到桌子右侧时，会发生什么？在李全义博士最新的研究中，发生了令人啼笑皆非的一幕：主流 VLA 大模型依然会机械地伸向桌子左侧。模型根本没有理解什么是“奶酪”，它只是把词汇与训练集里的固定物理坐标进行了强行绑定。 &nbsp;无论是π₀、OpenVLA 还是 UniVLA，虽然它们在标准测试集里能刷出 95% 以上的超高成功率，但李全义博士专门构建了 20 个外推新任务的&nbsp;libero-",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "IJCAI 2026中国团队针对具身智能仿真-现实差距的物理工程方案综述，指向π₀/OpenVLA等VLA模型的落地边界。",
+      "queued_at": "2026-08-25T08:53:54Z"
+    },
+    {
+      "id": "0328a367bfcd463261e8ba97757933e7d96c267e",
+      "title": "RIBOSPAN: A Long-Context RNA Foundation Model for Versatile RNA Modeling",
+      "url": "https://arxiv.org/abs/2608.22849",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-23T20:00:00Z",
+      "raw_summary": "RIBOSPAN is a large bidirectional RNA foundation model pretrained on up to 10,240 nucleotides that enables high-resolution full-transcript modeling, strong long-context representations, and discrete-diffusion-based mRNA generation and redesign.",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "RIBOSPAN是支持10k核苷酸长上下文的RNA基础模型，对AI for Science的生物序列建模有方法论参考价值。",
+      "queued_at": "2026-08-25T08:53:54Z"
     }
   ],
   "digest_last_date": "2026-08-25"

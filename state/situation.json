@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-25T07:11:58Z",
-  "text": "当前共有 26 个活跃事件。要点包括: AI算力通胀时代：英伟达服务器涨价超15%，成本传导冲击云厂商利润率; 马斯克首次Cursor全员会承认Grok落后于AI竞赛; Sources: Nvidia-backed neocloud Lambda is in talks to raise up to $3B at a $12B+ valuation; its revenue this year is estimated to reach $1.5B+ (Bloomberg); AMD Helios MI400 System Architecture at Hot Chips 2026; 港股史上最大增发：阿里 800 亿港元押注 AI。",
-  "since": "2026-08-25T07:11:58Z",
-  "active_event_count": 26,
+  "generated_at": "2026-08-25T08:55:13Z",
+  "text": "截至 2026-08-25 16:55 HKT，本轮新增两条动态：马斯克透露星链大规模部署Grok语音于客服与销售，日均处理超1.5万通电话、每周完成3000+笔订单；综述文章梳理OpenAI、Anthropic、xAI、Google四大美国AI巨头格局，xAI借道与SpaceX合并实质进入公开市场，四家路径分化将重塑资本与算力供应链流向。",
+  "since": "2026-08-25T08:55:13Z",
+  "active_event_count": 25,
   "key_themes": [
-    "compute_demand",
     "ai_monetization",
+    "compute_demand",
     "chip_supply",
-    "edge_ai",
-    "model_capability"
+    "model_capability",
+    "edge_ai"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n台积电CoWoS封装良率受挫vs分析师看好Intel EMIB接单，矛盾点在于原文仅引用分析师观点而非Intel官方客户确认，且台积电自身也在加速CoWoS扩产，实际分流规模存疑。另需注意越疆自研VLA模型在LIBERO基准超越英伟达GR00T-N1.7，来源为越疆自身中报解读，存在选择性宣传嫌疑，需第三方复现验证。\n\n【新兴趋势】\n\"端侧/物理AI商业化兑现\"成为多条暗线交叉：科大讯飞座舱AI逆周期增长、越疆具身智能收入20倍放量、Intel EMIB瞄准HBM封装替代，均指向算力下沉与多元化封装两条主线。叠加公募电子仓位突破30%、调研量翻倍，显示内资对AI算力链的共识正在从云端训练向端侧+先进封装扩散。\n\n【信息盲点】\n本轮缺失：HBM三巨头（海力士、三星、美光）的实际产能与价格信号；光模块/PCB/服务器ODM等算力链中游标的；OpenAI、xAI、Meta等海外大模型厂商动态；机器人产业链上游（减速器、伺服电机、力矩传感器）；华为/小米车机AI生态；台积电扩产资本开支与Co",
+  "cross_analysis": "【核心矛盾】\n36kr报道（中等可信度）援引马斯克口径披露星链Grok语音日均15,000通咨询、周3,000+笔订单，为单方自述、缺乏独立验证；TMTpost则将xAI定性为\"借SpaceX合并实质进入公开市场\"，但与SpaceX同为非上市公司，合并并不等于真正公开化，两者叙事口径存在张力。\n\n【新兴趋势】\nAI语音正成为企业客服/销售场景的规模化落地切入口，xAI以Grok语音在星链内部闭环验证为模板，具备向政府、汽车等外溢复制的潜力；与此同时，四大AI巨头分化出\"IPO / 合并借道 / 平台上市\"三条退出路径，\"如何进入公开市场\"本身已成为竞争维度。\n\n【信息盲点】\n本轮报道未覆盖Meta、Microsoft、Amazon、Apple等北美大厂AI战略，也完全缺失中国AI玩家（百度/阿里/字节/智谱等）动态；TMTpost的\"so_what\"明确点名台积电、ASML、博通为算力链受益方，但这些标的未在采集条目中出现，存在标的覆盖断层。\n\n【跨标的联动】\nxAI↔SpaceX出现资本路径绑定（合并）与业务路径绑定（Grok语音嵌入星链）双重信号，AI能力与垂直场景的\"内部消化\"模式显现；四家AI巨头共同的算力军备需求将传导至上游芯片及设备链，xAI对OpenAI/Anthropic的企业级语音定价形成压制预期，竞合关系升温。",
   "trend_spotting": "美国AI算力扩张已实质改写电力结构，数据中心正反向锁定天然气发电路径，\"绿色AI\"叙事面临估值与ESG双重压力；存储短缺传导效应已开始量化——2026年FPD出货预计下滑4.7%，消费电子终端量价承压的二阶风险尚未被充分定价。\n\n早期信号有两个：豆包工作与阿里Meoo同步指向\"一句话生成可用应用\"，AI正从内容生成跨入任务交付闭环，token消耗与云capex的斜率可能再次陡峭；ACL论文显示通用模型（豆包、DeepSeek）在多语医疗任务上反超专用模型，垂直AI初创的价值锚或被通用大模型持续侵蚀。\n\n市场盲点在于：苹果库克下周卸任，叠加存储涨价对iPhone/PC链的压制，新CEO首份财报的AI叙事将面临真实需求验证，而非仅靠预期支撑。"
 }
