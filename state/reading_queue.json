@@ -235,6 +235,45 @@
       "queued_at": "2026-08-25T12:04:16Z"
     },
     {
+      "id": "142d134cdf5ffff0c6dd02adbc47a383109f1f80",
+      "title": "Hot Chips 2026: Intel's Diamond Rapids",
+      "url": "https://chipsandcheese.com/p/hot-chips-2026-intels-diamond-rapids",
+      "source": "hackernews",
+      "published_at": "2026-08-25T06:45:05Z",
+      "raw_summary": "Hot Chips 2026: Intel's Diamond Rapids",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Hot Chips 是芯片架构一手信息源，Intel Diamond Rapids 涉及核心数、内存层级与 AI 加速，值得读",
+      "queued_at": "2026-08-25T13:12:38Z"
+    },
+    {
+      "id": "cb9675247a6f7c5e28986585a007ee20e2bbe4d7",
+      "title": "Nvidia says its Groq 3 LPX is four times faster than Cerebras, but the math is more complicated",
+      "url": "https://the-decoder.com/nvidia-says-its-groq-3-lpx-is-four-times-faster-than-cerebras-but-the-math-is-more-complicated",
+      "source": "rss:the-decoder",
+      "published_at": "2026-08-25T12:27:57Z",
+      "raw_summary": "Nvidia is moving its Groq 3 LPX inference chip into full production and reports 3,400 tokens per second on Gemma 4 31B, four times faster than Cerebras. But the numbers don't tell the whole story. Nvidia needs at least 64 accelerators to get there, while Cerebras needs only one or two, according to The Register. How well the architecture scales with large MoE models remains an open question. The article Nvidia says its Groq 3 LPX is four times faster than Cerebras, but the math is more complicated appeared first on The Decoder.",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "对比 Groq 3 LPX 与 Cerebras 的 token/s/总成本和 MoE 扩展性，是推理芯片路线之争的好材料",
+      "queued_at": "2026-08-25T13:12:38Z"
+    },
+    {
+      "id": "0241589928815684b83e6b096fc16fb9e432edfd",
+      "title": "Hot Chips 2026: Micron warns HBM wafer penalty is widening with every generation — AI memory uses 3x more silicon than DDR5, company says memory wall is 'getting worse' as prices rise",
+      "url": "https://www.tomshardware.com/tech-industry/semiconductors/micron-says-the-silicon-gap-between-hbm-and-ddr5-is-widening-with-every-generation",
+      "source": "rss:tomshardware",
+      "published_at": "2026-08-25T12:19:38Z",
+      "raw_summary": "Micron Fellow Raghu Sreeramaneni told the Hot Chips 2026 conference that the silicon penalty HBM carries against DDR5 is growing with every generation.",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Micron Fellow在Hot Chips 2026给出HBM相对DDR5的硅面积惩罚逐代放大的具体数据，对评估AI算力成本与存储墙走向是稀缺的一手产业判断。",
+      "queued_at": "2026-08-25T13:12:38Z"
+    },
+    {
       "id": "91d8faa919e1a2b28b837e932e6b3a02a2311052",
       "title": "SWE Refactor Bench: Can Coding Agents Complete a Long-Horizon, Whole-Repository Stack Migration? [Deyao Hong, Yizhe Chi, Wenyi Li, Xiaoqiu Wang, Mingju Gao]",
       "url": "http://arxiv.org/abs/2608.23564v1",
@@ -480,45 +519,6 @@
       "source_traceable": false,
       "why": "明确提出世界模型是生成/模拟/动作策略三者耦合的闭环反馈系统，框架性观点有价值。",
       "queued_at": "2026-08-25T04:55:08Z"
-    },
-    {
-      "id": "0f3d2d8d04dee5cf8bc002111884fef0a9dec49d",
-      "title": "Spent a day seeing how far extreme MoE models can be pushed on a 4070 Ti + 32GB RAM. Kimi K3, DeepSeek V4 Flash, and Qwen3.5-122B results + research paper🔧",
-      "url": "https://www.reddit.com/r/localllama/comments/1vxoif0/spent_a_day_seeing_how_far_extreme_moe_models_can",
-      "source": "reddit:localllama",
-      "published_at": "2026-08-25T03:28:19Z",
-      "raw_summary": "I’ve been experimenting with a custom inference/runtime research project called CRANE V2, mostly because I wanted to answer a stupid question: How far can you push absurdly large MoE models on an ordinary consumer Windows machine before physics actually wins? Hardware is nothing exotic: Ryzen 7 7800X3D RTX 4070 Ti 12GB 32GB DDR5 Lexar NQ700 2TB NVMe + Samsung 970 EVO Plus 1TB NVMe Windows 11 I tested three major targets so far: Kimi K3 (2.779T parameters / 711GB checkpoint), DeepSeek V4 Flash Q4 + Q3, and Qwen3.5-122B-A10B Q4. The paper is a 26-page evidence-locked writeup with the successful runs, failed branches, quality gates, hardware measurements, cache experiments, runtime changes, and claim boundaries. Important disclaimer before the funny numbers: the highest throughput results are NOT equivalent to running the original models at full capability. CRANE deliberately separates speed-wall experiments from quality-preserving experiments. Some of the fastest profiles change expert routing, precision, or shared-expert behavior and produce complete garbage. I’m specifically not claiming “2.8T Kimi runs normally at 9 tok/s” or “122B Qwen runs normally at 57 tok/s.” The paper keeps those numbers in separate ledgers for exactly that reason. The headline results so far: Kimi K3: canonical first-token control was 0.014459 tok/s. An intentionally altered speed-wall profile eventually reached 9.314978 tok/s over 64 tokens, but useful language was destroyed and quality restoration f",
-      "score": 7,
-      "angle": "engineering",
-      "source_traceable": true,
-      "why": "在4070Ti+32GB上极限压榨Kimi K3/DeepSeek V4/Qwen3.5巨量MoE的实测报告与26页技术论文，消费级硬件跑大模型有具体工程取舍与数字。",
-      "queued_at": "2026-08-25T05:34:25Z"
-    },
-    {
-      "id": "499d6b68f1e267c09b3cfd5f64595e09e9e922f3",
-      "title": "TSMC’s HBM-Packaging Yield Issues Help Intel, Analysts Say",
-      "url": "https://www.eetimes.com/tsmcs-hbm-packaging-yield-issues-help-intel-analysts-say",
-      "source": "rss:eetimes",
-      "published_at": "2026-08-25T07:00:00Z",
-      "raw_summary": "TSMC’s CoWoS bottlenecks could hand Intel a foundry opening as AI chipmakers eye EMIB and new memory tech. The post TSMC’s HBM-Packaging Yield Issues Help Intel, Analysts Say appeared first on EE Times.",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "台积电CoWoS良率问题为Intel EMIB让出代工机会的分析师观点，直接关系HBM/先进封装竞争格局。",
-      "queued_at": "2026-08-25T07:09:26Z"
-    },
-    {
-      "id": "e277954ef875622118fec20d1895fbecebd1b98c",
-      "title": "Beyond Embedded: How DuckDB v2.0 Shifts Architecture Toward Distributed Network Capabilities",
-      "url": "https://www.infoq.com/news/2026/08/duckdb-v2-distributed",
-      "source": "rss:infoq",
-      "published_at": "2026-08-25T06:06:00Z",
-      "raw_summary": "DuckDB Labs has previewed DuckDB v2.0, codenamed \"Cyanoptera.\" This release includes over 10000 commits and introduces a client/server mode, enabling network connections. Improvements also encompass extension portability, advanced data types, and a new parser. Performance enhancements include asynchronous I/O and storage optimisations. General availability is expected in fall 2026. By Olimpiu Pop",
-      "score": 7,
-      "angle": "engineering",
-      "source_traceable": true,
-      "why": "DuckDB v2.0转向C/S架构支持分布式，是嵌入式OLAP引擎架构演变的实质工程进展。",
-      "queued_at": "2026-08-25T07:09:26Z"
     }
   ],
   "digest_last_date": "2026-08-25"
