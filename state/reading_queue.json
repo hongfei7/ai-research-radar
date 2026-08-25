@@ -183,6 +183,19 @@
       "queued_at": "2026-08-25T10:52:42Z"
     },
     {
+      "id": "d6760df5b5ee6583b89d684130d0c3ec0be859e8",
+      "title": "tencent/WeMM-Embedding 9B/4B/2B",
+      "url": "https://www.reddit.com/r/localllama/comments/1vxv1iv/tencentwemmembedding_9b4b2b",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-25T09:36:41Z",
+      "raw_summary": "WeMM-Embedding-9B is a universal multimodal embedding model built on Qwen3.5. It accepts text, images, videos, visual documents, and interleaved multimodal inputs, and returns a 4,096-dimensional L2-normalized embedding. Audio input is not supported. https://huggingface.co/tencent/WeMM-Embedding-9B https://huggingface.co/tencent/WeMM-Embedding-4B https://huggingface.co/tencent/WeMM-Embedding-2B https://github.com/Tencent/WeMM-Embedding/blob/main/assets/WeMM_Embedding_tech_report.pdf &#32; submitted by &#32; /u/jacek2023 [link] &#32; [comments]",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "腾讯开源WeMM多模态Embedding（2B/4B/9B三档），4096维L2归一化，附技术报告，含HF权重与GitHub链接，可直接复现。",
+      "queued_at": "2026-08-25T11:31:07Z"
+    },
+    {
       "id": "91d8faa919e1a2b28b837e932e6b3a02a2311052",
       "title": "SWE Refactor Bench: Can Coding Agents Complete a Long-Horizon, Whole-Repository Stack Migration? [Deyao Hong, Yizhe Chi, Wenyi Li, Xiaoqiu Wang, Mingju Gao]",
       "url": "http://arxiv.org/abs/2608.23564v1",
@@ -505,19 +518,6 @@
       "angle": "research",
       "source_traceable": true,
       "why": "IJCAI 2026中国团队针对具身智能仿真-现实差距的物理工程方案综述，指向π₀/OpenVLA等VLA模型的落地边界。",
-      "queued_at": "2026-08-25T08:53:54Z"
-    },
-    {
-      "id": "0328a367bfcd463261e8ba97757933e7d96c267e",
-      "title": "RIBOSPAN: A Long-Context RNA Foundation Model for Versatile RNA Modeling",
-      "url": "https://arxiv.org/abs/2608.22849",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-23T20:00:00Z",
-      "raw_summary": "RIBOSPAN is a large bidirectional RNA foundation model pretrained on up to 10,240 nucleotides that enables high-resolution full-transcript modeling, strong long-context representations, and discrete-diffusion-based mRNA generation and redesign.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "RIBOSPAN是支持10k核苷酸长上下文的RNA基础模型，对AI for Science的生物序列建模有方法论参考价值。",
       "queued_at": "2026-08-25T08:53:54Z"
     }
   ],

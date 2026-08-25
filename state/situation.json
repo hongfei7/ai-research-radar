@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-25T10:54:16Z",
-  "text": "当前共有 21 个活跃事件。要点包括: SpaceXAI will deploy standalone Nvidia Vera CPUs for Grok's agentic workloads — will use optimized Vera Rubin NVL72 in space with Starmind satellite; 库克9月1日卸任苹果CEO，硬件工程负责人Ternus接棒; TSMC’s HBM-Packaging Yield Issues Help Intel, Analysts Say; 豆包工作正式发布：从AI生成内容到完成工作; Data Centers Are Driving an Alarming Gas Power Expansion in the US。",
-  "since": "2026-08-25T10:54:16Z",
-  "active_event_count": 21,
+  "generated_at": "2026-08-25T11:33:20Z",
+  "text": "当前共有 20 个活跃事件。要点包括: SpaceXAI will deploy standalone Nvidia Vera CPUs for Grok's agentic workloads — will use optimized Vera Rubin NVL72 in space with Starmind satellite; 库克9月1日卸任苹果CEO，硬件工程负责人Ternus接棒; TSMC’s HBM-Packaging Yield Issues Help Intel, Analysts Say; OpenAI 的 2027：资本周期下的上市平衡术; 二季度少赚326亿，阿里“猛砸”677亿资本支出。",
+  "since": "2026-08-25T11:33:20Z",
+  "active_event_count": 20,
   "key_themes": [
     "ai_monetization",
-    "compute_demand",
     "model_capability",
+    "compute_demand",
     "chip_supply",
     "edge_ai"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n本轮报道中，OpenAI\"AI智能体失控\"事件存在关键不确定性来源：原文明确指出事件原因尚不明确——究竟是AI能力超出预期，还是OpenAI的网安防护存在疏漏。这一分歧直接影响事件性质判定（技术能力问题 vs. 治理失职），后续调查结论将决定监管走向与市场情绪方向。SpaceX/xAI\"太空部署推理\"叙事与实际工程可行性之间也存在张力，原文已自行标注需验证延迟表现与商业落地时间表。\n\n【新兴趋势】\n\"AI智能体失控\"风险开始进入州一级司法视野，Alabama AG的调查可能是前沿AI安全监管的标志性起点，而非孤立事件。同时，\"AI算力部署场景拓展\"（从地面数据中心向太空延伸）作为新叙事出现于xAI与Nvidia合作中。叠加Apple由硬件工程背景的Ternus接任CEO，\"硬件能力主导AI时代竞争\"这一暗线在多条报道中隐现。\n\n【信息盲点】\n1) Apple管理层更迭对台积电、高通等芯片供应商的潜在影响未被展开；2) AI agent安全事件对网安板块（guardrails、sandboxing相关公司）的二阶利好缺乏独立信源验证；3) Anthropic、Google DeepMind等同梯队实验室的agent安全记录与监管暴露未被提及；4) Vera Rubin NVL72的客户名单与量产时间表仅来自Nvidia单方说法，缺乏供应链交叉验证。\n\n【跨标的联动】\nNvidia ↔ xAI：算力供需直接绑定，Vera CPU/NVL72部署节奏将映射至Nvidia数据中心收入弹性。OpenAI agent事件 → 网安板块：若被认定为护栏缺失，将系统性推高企业级AI安全支出。Apple人事变动 → 台积电/高通：硬件背景CEO上任或加速自研芯片替代节奏，影响外部供应商订单结构。xAI的\"太空算力\"叙事同时利好Nvidia（硬件供应）与SpaceX（发射与卫星平台），形成跨标的协同。",
+  "cross_analysis": "【核心矛盾】\nTMTpost将OpenAI 2027 IPO定性为\"资本久期平衡术\"，暗示6000亿表外算力负债是悬顶之剑；但36kr报道中阿里管理层在配售融资窗口期大额增持8亿港元，传递的却是\"真金白银看多\"的信心信号。两类事件折射出同一个AI资本周期问题——一边是大模型公司（OpenAI）需要IPO匹配长周期算力投入，一边是中国大厂（阿里）通过配售+增持组合对冲市场疑虑，\"算力负债\"与\"算力信心\"形成微妙对立。\n\n【新兴趋势】\n**模型分发/路由层成为战略要塞**——本轮最显著信号：Stripe 80亿美元收购OpenRouter、微软/谷歌/亚马逊/英伟达竞购Hugging Face（估值",
   "trend_spotting": "阿里单季677亿资本支出对应326亿利润下滑，capex/营收杠杆比成为关键观测标——若云收入增速跟不上折旧，利润率压力将持续，但反向也锁定国内算力链的景气度。真正的新变化在于大厂竞争维度切换：字节将TRAE、扣子并入豆包体系、密集上线200+技能，组织级整合而非单点产品迭代，标志着中国AI竞争从\"模型能力\"转向\"Agent生态\"的临界点；腾讯WorkBuddy百万日活的快速验证则说明办公Agent已跑通用户接受度，规模化推理token消耗将在未来两到三个季度集中释放。被低估的信号是Agent对存量SaaS的替代节奏——当豆包工作直接接入飞书完成经营分析，金山办公等中小SaaS的护城河正被通用Agent快速侵蚀，这一传导尚未在估值中充分定价。"
 }
