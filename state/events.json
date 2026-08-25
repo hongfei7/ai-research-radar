@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-25T21:31:08Z",
+  "updated_at": "2026-08-25T22:02:59Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -49823,6 +49823,103 @@
         "英伟达": 1
       },
       "max_item_score": 7
+    },
+    "evt_a846f2c6b4e3": {
+      "event_id": "evt_a846f2c6b4e3",
+      "title": "According to Leo, OpenAI just finished its next >10T pretrain \"Bel\"",
+      "summary": "据Reddit用户转述OpenAI研究员Leo的消息，OpenAI刚完成了其下一轮规模超过10T tokens的预训练，代号\"Bel\"。原文为社区转述的内部人士说法，未提供官方确认链接或更多技术细节。值得关注点在于：若属实，说明OpenAI在GPT系列之后仍在大规模扩张预训练算力投入，反映前沿模型对算力的需求持续高增。",
+      "tickers": [
+        "OpenAI"
+      ],
+      "themes": [
+        "compute_demand",
+        "model_capability"
+      ],
+      "direction": {
+        "OpenAI": "positive"
+      },
+      "item_ids": [
+        "d4e31aed6b93873b92228dddcb5db6a69f1e8aa9"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-25T22:02:05Z",
+      "first_published_at": "2026-08-25T19:09:18Z",
+      "last_updated_at": "2026-08-25T22:02:05Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "OpenAI": 1
+      },
+      "max_item_score": 7
+    },
+    "evt_901f581913e5": {
+      "event_id": "evt_901f581913e5",
+      "title": "OpenAI blog post on their new custom inference chip",
+      "summary": "Reddit用户转载OpenAI博客关于其自研定制推理芯片的内容。原帖仅含标题与链接摘要，未披露芯片制程、代工方、量产时间或性能规格等关键信息。具体细节与原文链接尚不可见。值得关注的是，OpenAI作为超大AI算力需求方启动自研芯片，对GPU及AI加速器供应商格局存在潜在影响，但目前信息不足以下结论。",
+      "tickers": [
+        "OpenAI"
+      ],
+      "themes": [
+        "chip_supply",
+        "compute_demand",
+        "model_capability"
+      ],
+      "direction": {
+        "OpenAI": "neutral"
+      },
+      "item_ids": [
+        "f91182700adeef66206b4ad663079e938a9a1ea8"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-25T22:02:05Z",
+      "first_published_at": "2026-08-25T17:26:09Z",
+      "last_updated_at": "2026-08-25T22:02:05Z",
+      "is_active": true,
+      "significance": 8,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "OpenAI": 1
+      },
+      "max_item_score": 8
+    },
+    "evt_69c8fa937bb9": {
+      "event_id": "evt_69c8fa937bb9",
+      "title": "OpenAI's new chip is better than Vera rubin on benchmark",
+      "summary": "OpenAI发布其自研AI芯片Jalapeno的初步跑分结果，声称在特定基准测试中表现优于英伟达下一代Vera Rubin架构。原始链接指向openai.com官方页面。这是OpenAI首次公开披露自研芯片的基准性能数据，标志着其在算力自给方向上的重要进展，但目前仅限单一基准，结果尚待完整披露与第三方验证。",
+      "tickers": [
+        "AMD",
+        "OpenAI",
+        "英伟达"
+      ],
+      "themes": [
+        "chip_supply",
+        "compute_demand",
+        "model_capability"
+      ],
+      "direction": {
+        "OpenAI": "positive",
+        "英伟达": "negative"
+      },
+      "item_ids": [
+        "8afd301c72f6c5ceda5e408e43b5410e46d041a5"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-25T22:02:05Z",
+      "first_published_at": "2026-08-25T15:00:04Z",
+      "last_updated_at": "2026-08-25T22:02:05Z",
+      "is_active": true,
+      "significance": 8,
+      "status": "developing",
+      "deep_analysis": "1. **看多逻辑**\n\n第一，垂直整合提速，OpenAI首次公开自研芯片跑分标志着算力自给战略从概念走向落地。若Jalapeno性能属实，意味着头部模型厂商已具备绕开英伟达部分高端算力的能力，长期看将削弱NVDA定价权、加速定制芯片生态扩张，间接利好AMD、博通等具备定制设计能力的厂商。第二，基准超越\"下一代\"叙事具有强烈营销效应。即便单点跑分被证伪，OpenAI借此向英伟达释放议价信号——\"我们有能力自供\"的姿态将增强其在H200/Rubin采购谈判中的筹码，对OpenAI自身估值有支撑。第三，AI芯片竞争格局由\"英伟达一家独大\"向\"多极化\"演进，AMD MI400/450系列、博通ASIC方案在OpenAI生态内可能获得更明确的合作窗口，板块情绪整体受益。\n\n2. **看空风险**\n\n第一，原始信源可信度低。该基准由OpenAI单方发布、且原始链接为openai.com官方页面，缺乏第三方独立验证，存在\"选择性披露\"或\"调优过拟合\"嫌疑——NVDA Vera Rubin尚未完整公开规格，APU对比口径不明，超越结论存疑。第二，命名\"Jalapeno\"较为非传统，需警惕为市场情绪测试或营销事件，若后续详细跑分与PPT数据落差大，NVDA与AMD短线可能反而出现\"利空出尽\"反弹。第三，自研芯片威胁论在历史上多次被高估：谷歌TPU、亚马逊Trainium虽可用，但均未撼动英伟达在训练市场的份额，定制芯片多用于特定推理场景，对NVDA通用GPU替代率有限，AMD作为第三方GPU供应商反而可能因OpenAI内部消化需求而面临边缘化风险。\n\n3. **关键驱动因素**\n\n一是Jalapeno的完整基准披露及第三方复测结果，决定事件由\"传闻\"升级为\"事实\"还是回归噪音；二是代工方（推测台积电N3/N2节点）及量产时间表，将直接影响其替代英伟达算力的实际节奏。\n\n4. **市场影响评估**\n\n短期：NVDA情绪承压、AMD承压但弹性更大，市场倾向于\"定制芯片叙事\"驱动板块轮动；中期需视Jalapeno真实良率与规模而定，若2027年Q2前未能进入实际部署，事件催化将快速衰减。\n\n5. **时间线推断**\n\n未来3个月内可能披露完整SPEC与能效比数据；2026Q4–2027Q1有望透露代工方与小批量试产信息；2027年下半年",
+      "ticker_counts": {
+        "OpenAI": 1,
+        "英伟达": 1,
+        "AMD": 1
+      },
+      "max_item_score": 8
     }
   }
 }
