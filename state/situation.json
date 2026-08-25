@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-25T13:16:22Z",
-  "text": "当前共有 27 个活跃事件。要点包括: SpaceXAI will deploy standalone Nvidia Vera CPUs for Grok's agentic workloads — will use optimized Vera Rubin NVL72 in space with Starmind satellite; Hot Chips 2026: Nvidia breaks down 88-core Vera CPU — spatial multithreading benchmarked, 1.2 TB/s SOCAMM2 memory, agentic workloads detailed, and more; 库克9月1日卸任苹果CEO，硬件工程负责人Ternus接棒; OpenAI 的 2027：资本周期下的上市平衡术; Xiaomi unveils the Xring O100, a 6nm AI accelerator to boost its MiMo models when paired with its O3 mobile chip, and the 3nm Xring D100 for autonomous driving (Iris Deng/South China Morning Post)。",
-  "since": "2026-08-25T13:16:22Z",
-  "active_event_count": 27,
+  "generated_at": "2026-08-25T14:09:25Z",
+  "text": "截至 2026-08-25 22:09 HKT，本轮新增：苹果发布M6（2nm）与M5 Ultra（四芯3nm）芯片，新款Mac mini/Studio涨价100–200美元，主打端侧AI；OpenAI自研Jalapeño芯片宣称为竞品更快；Meta即将推出付费AI Agent Hatch及10月新模型Watermelon；Anthropic旗舰模型因价格高企，用户持续向廉价工具迁移。",
+  "since": "2026-08-25T14:09:25Z",
+  "active_event_count": 30,
   "key_themes": [
     "ai_monetization",
     "compute_demand",
@@ -13,6 +13,6 @@
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nNvidia Vera 采用 LPDDR5X/SOCAMM2 形态承载 1.2 TB/s 带宽，方向标注对美光、海力士均为\"中性\"，但该架构若量产将打开 LPDDR 进入数据中心的全新需求池，与\"中性\"判断存在张力；此外，小米自研 Xring O100/D100 路径直接挤压高通份额，但条目仅标注\"小米正面\"，未传导至高通/联发科的对立面方向，叙事完整性不足。\n\n【新兴趋势】\n三条暗线反复出现：①\"端侧 AI + 自研 SoC/加速器\"垂直整合模式（小米双芯、Nvidia Vera 押注 agentic 负载）；②先进产能紧缺外溢——二手半导体设备由滞销转抢手，与 Vera 提到的高带宽内存供应链紧张形成相互印证；③国产替代从消费电子向汽车/数据中心延伸（小米 D100、安世中国 330 天后管理层重组、腾讯云切入 L4 货运算力）。\n\n【信息盲点】\n①AMD、Intel 作为 Vera 最直接的服务器 CPU 竞品完全缺席，份额挤压逻辑未被定价；②HBM/eHBM、先进封装（CoWoS）虽与 Vera、二手设备叙事强相关却无单独条目；③小米 D100 量产涉及的国内代工/封测（中芯国际、长电）未被提及；④Nexperia 中国条目摘要为空，是重要信息缺口，需补查闻泰科技股权与汽车功率半导体国产化进展；⑤联发科在小米自研叙事下的边际影响被忽略。\n\n【跨标的联动】\nNvidia Vera ↔ 美光/海力士：SOCAMM2 供应分配决定业绩弹性；Nvidia Vera ↔ Intel/AMD：88 核+空间多线程对 x86 阵营形成架构级挑战。小米 Xring",
+  "cross_analysis": "【核心矛盾】\n苹果新款Mac mini涨价的原因存在分歧：The Verge将其归因于\"全球存储芯片短缺+AI需求推升\"，而爱范儿强调\"为AI造电脑\"的战略定位，两者反映成本驱动与产品定位的不同叙事。此外，OpenAI宣称自研Jalapeño芯片性能\"超越竞品\"，但未披露代工方、量产时间及与英伟达/博通现有合作的替代或补充关系，对算力链的真实冲击仍不明朗。\n\n【新兴趋势】\n先进封装（quad-die多芯片互连、CoWoS）从数据中心AI芯片向桌面端SoC扩散，M5 Ultra采用4.4TB/s+互连带宽是Apple Silicon首次。同时\"端侧AI\"叙事升温：苹果将Mac mini定位为\"首款AI个人电脑\"，叠加存储芯片短缺涨价、Meta推出付费AI Agent、Anthropic遭遇用户向廉价模型迁移——AI商业化正分化为\"高算力高端定价\"与\"低价走量\"两条路径。\n\n【信息盲点】\nAMD在全部条目中完全缺席，但作为AI芯片与独立GPU关键玩家应被覆盖；存储链（美光/海力士/三星）虽被Apple涨价间接提及，却无独立供给侧报道；中国AI芯片厂商（华为昇腾、寒武纪）及云厂商（AWS/Azure）动态缺失；Anthropic用户流失的具体数据未披露，难以量化对算力需求的边际影响。\n\n【跨标的联动】\nApple M5 Ultra的多芯片架构与GPU规模扩大，可能弱化Mac渠道对AMD/英伟达独立GPU的依赖，同时拉动台积电3nm/2nm及CoWoS产能；OpenAI自研芯片若放量，将直接重塑其与英伟达/博通/Marvell的供应关系；存储芯片短缺沿\"三星/海力士/美光→苹果终端涨价→Mac ASP与渠道库存\"链条传导，构成二阶定价压力。",
   "trend_spotting": "阿里单季677亿资本支出对应326亿利润下滑，capex/营收杠杆比成为关键观测标——若云收入增速跟不上折旧，利润率压力将持续，但反向也锁定国内算力链的景气度。真正的新变化在于大厂竞争维度切换：字节将TRAE、扣子并入豆包体系、密集上线200+技能，组织级整合而非单点产品迭代，标志着中国AI竞争从\"模型能力\"转向\"Agent生态\"的临界点；腾讯WorkBuddy百万日活的快速验证则说明办公Agent已跑通用户接受度，规模化推理token消耗将在未来两到三个季度集中释放。被低估的信号是Agent对存量SaaS的替代节奏——当豆包工作直接接入飞书完成经营分析，金山办公等中小SaaS的护城河正被通用Agent快速侵蚀，这一传导尚未在估值中充分定价。"
 }
