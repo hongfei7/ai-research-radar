@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-25T19:40:32Z",
+  "updated_at": "2026-08-25T20:03:28Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -49732,8 +49732,8 @@
     },
     "evt_837479492cf9": {
       "event_id": "evt_837479492cf9",
-      "title": "Sources: Chris Malone, who joined OpenAI as head of data centers in March 2025, left the company last week amid a broader exodus (Anissa Gardizy/Wall Street Journal)",
-      "summary": "OpenAI数据中心负责人Chris Malone于2025年3月入职，仅约5个月后于上周离职，成为近期一系列高管离职潮的最新一例。背景是OpenAI正推进IPO进程并大幅扩大算力capex投入，关键基础设施负责人短期内离职，可能影响数据中心建设节奏与执行连续性。",
+      "title": "OpenAI数据中心负责人离职",
+      "summary": "据报道，OpenAI数据中心负责人已于上周离职，距其2025年3月入职仅约5个月，成为公司近期高管离职潮的最新一例。OpenAI正处于大规模算力扩张期（Stargate等项目），关键基础设施岗位人事变动可能影响数据中心建设节奏与执行连续性。继任者人选及对已签约项目交付的影响有待进一步披露。",
       "tickers": [
         "OpenAI",
         "英伟达"
@@ -49746,21 +49746,22 @@
         "OpenAI": "negative"
       },
       "item_ids": [
-        "a15d2bf46e645397f84ca2727adce63d805a066d"
+        "a15d2bf46e645397f84ca2727adce63d805a066d",
+        "1885b3b01997e36757f66bd7e8a67aba9a701864"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "first_seen_at": "2026-08-25T19:39:55Z",
       "first_published_at": "2026-08-25T19:25:01Z",
-      "last_updated_at": "2026-08-25T19:39:55Z",
+      "last_updated_at": "2026-08-25T20:03:03Z",
       "is_active": true,
-      "significance": 7,
+      "significance": 8,
       "status": "developing",
       "deep_analysis": "1. **看多逻辑**\n\n第一，OpenAI算力需求的核心叙事未变。Stargate等超大规模数据中心计划对应的capex承诺已写入与Oracle、软银等的合作协议，订单链条上英伟达GB200/GB300、博通定制ASIC的需求确定性更多取决于OpenAI整体战略而非单一基础设施高管的去留。第二，5个月任期在高速扩张期的科技公司中虽不常见，但\"入职即高位\"的招聘本就存在文化适配风险，管理层主动调整反而可能降低后续摩擦成本。第三，OpenAI正处于IPO前的治理结构梳理期，关键岗位换血是资本市场化前的常规动作，市场对此类\"清洗式\"变动已形成一定容忍度。\n\n2. **看空风险**\n\n第一，\"broader exodus\"措辞指向系统性人才流失，而非孤立事件。若数据反映的是OpenAI在Scaling战略、内部文化或与微软/Azure协作模式上的深层摩擦，短期内补位难度大、过渡期执行效率打折的风险显著上升。第二，数据中心建设是典型的重资产、长周期工程，PMO级别的负责人空缺会直接传导至土地、电力、液冷供应链的排期节奏，对超微电脑、戴尔等集成商以及台积电CoWoS产能排产形成\"软延迟\"。第三，IPO前治理动荡可能压低估值锚定或推迟窗口期，进而影响OpenAI下一轮算力采购的支付节奏，对英伟达等供应商的预付款/长协兑现形成不确定性。\n\n3. **关键驱动因素**\n\n继任者的到位时间与背景（是否来自超大规模云厂商/Hyperscaler体系）是最直接的观察窗口；其次是Stargate一期项目的物理交付节点（首批MW级上线时点）能否按2025年原定路线图兑现，若延后超一个季度则需重新评估算力链2026H2出货节奏。\n\n4. **市场影响评估**",
       "ticker_counts": {
         "英伟达": 1,
-        "OpenAI": 1
+        "OpenAI": 2
       },
-      "max_item_score": 7
+      "max_item_score": 8
     },
     "evt_f7d0544a3dc1": {
       "event_id": "evt_f7d0544a3dc1",
@@ -49791,6 +49792,37 @@
         "Anthropic": 1
       },
       "max_item_score": 8
+    },
+    "evt_1650f84895a1": {
+      "event_id": "evt_1650f84895a1",
+      "title": "CNBC Television: Nvidia partner with Perplexity AI to run locally in DGX Spark.",
+      "summary": "英伟达宣布与AI搜索公司Perplexity AI合作，将Perplexity模型在英伟达DGX Spark设备上本地化运行。DGX Spark是英伟达面向开发者的桌面级AI工作站，旨在让用户在本机完成大模型推理任务。该合作标志着英伟达正将AI算力从云端数据中心向终端设备延伸，强化其在端侧AI生态的布局。",
+      "tickers": [
+        "英伟达"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand",
+        "edge_ai"
+      ],
+      "direction": {
+        "英伟达": "positive"
+      },
+      "item_ids": [
+        "b1c2cfab9c261d38fde1fb0a488698478fae3d4f"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-25T20:03:03Z",
+      "first_published_at": "2026-08-25T17:36:50Z",
+      "last_updated_at": "2026-08-25T20:03:03Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "英伟达": 1
+      },
+      "max_item_score": 7
     }
   }
 }
