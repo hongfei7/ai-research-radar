@@ -402,6 +402,58 @@
       "source_traceable": true,
       "why": "DuckDB v2.0转向C/S架构支持分布式，是嵌入式OLAP引擎架构演变的实质工程进展。",
       "queued_at": "2026-08-25T07:09:26Z"
+    },
+    {
+      "id": "d3fde7a8af05da8637726588dc3f496363b1f49c",
+      "title": "Beyond the Stability-Exploration Dilemma: Environmental Regularization for LLM Policy Optimization",
+      "url": "https://arxiv.org/abs/2608.23311",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-23T20:00:00Z",
+      "raw_summary": "ERPO replaces action-side policy regularization with input-side query distribution control to stabilize reinforcement learning for language models while preserving response exploration.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "ERPO用query分布正则替代action端KL来稳定LLM RL训练，直击稳定性-探索权衡，方法具体可复现。",
+      "queued_at": "2026-08-25T07:59:25Z"
+    },
+    {
+      "id": "2220cb68b458e7cb45f340cda7bea855b4e9b6b5",
+      "title": "EchoWM: Open and Enterable Omnimodal World Models",
+      "url": "https://arxiv.org/abs/2608.23189",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-23T20:00:00Z",
+      "raw_summary": "EchoWM is an omnimodal world model that generates synchronized high-resolution video, sound, music, and speech while following continuous 6-DoF navigation trajectories across first- and third-person views.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "首个支持6-DoF导航的多模态世界模型，同步生成视频/音/乐/语音，是具身智能基础模型方向的重要新工作。",
+      "queued_at": "2026-08-25T07:59:25Z"
+    },
+    {
+      "id": "be420a33f38ddc3e6de56a7a2d35bc2000b40bef",
+      "title": "Redefining Roles For Edge And Cloud AI",
+      "url": "https://semiengineering.com/redefining-roles-for-edge-and-cloud-ai",
+      "source": "rss:semiengineering",
+      "published_at": "2026-08-25T07:15:21Z",
+      "raw_summary": "The race is on for localized intelligence. The post Redefining Roles For Edge And Cloud AI appeared first on Semiconductor Engineering.",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": false,
+      "why": "Edge与Cloud AI的职责重新划分是当前重要范式议题，SemiEngineering通常会展开多位专家观点。",
+      "queued_at": "2026-08-25T07:59:25Z"
+    },
+    {
+      "id": "f82f60a44a9e2fd582e4673f369f1d4562948eca",
+      "title": "Research Bits: Aug. 25",
+      "url": "https://semiengineering.com/research-bits-aug-25",
+      "source": "rss:semiengineering",
+      "published_at": "2026-08-25T07:01:30Z",
+      "raw_summary": "Bacterial transistors; forgetful antiferroelectrics; high-entropy mixing. The post Research Bits: Aug. 25 appeared first on Semiconductor Engineering.",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "细菌晶体管、反铁电遗忘、高熵混合三项前沿器件研究简报，可作为论文线索索引。",
+      "queued_at": "2026-08-25T07:59:25Z"
     }
   ],
   "digest_last_date": "2026-08-25"
