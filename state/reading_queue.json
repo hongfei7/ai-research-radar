@@ -363,6 +363,45 @@
       "source_traceable": true,
       "why": "面向真实移动场景的规划Agent交互式基准，涉及工具调用、子Agent协作与记忆等核心能力评估，值得了解其评测设计。",
       "queued_at": "2026-08-25T06:04:32Z"
+    },
+    {
+      "id": "c5aedf5950a7084a54a21608918d9adf8f964c93",
+      "title": "One Polluted Page Is Enough: Evaluating Web Content Pollution in LLM Recommenders",
+      "url": "https://arxiv.org/abs/2606.13610",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-23T20:00:00Z",
+      "raw_summary": "Search-augmented LLM recommenders are highly vulnerable to web content polluted by generative engine optimization, frequently promoting fake products despite reasoning and defenses.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "论文明确指出search-augmented LLM推荐器受GEO污染内容攻击的漏洞，有可检验结论。",
+      "queued_at": "2026-08-25T07:09:26Z"
+    },
+    {
+      "id": "499d6b68f1e267c09b3cfd5f64595e09e9e922f3",
+      "title": "TSMC’s HBM-Packaging Yield Issues Help Intel, Analysts Say",
+      "url": "https://www.eetimes.com/tsmcs-hbm-packaging-yield-issues-help-intel-analysts-say",
+      "source": "rss:eetimes",
+      "published_at": "2026-08-25T07:00:00Z",
+      "raw_summary": "TSMC’s CoWoS bottlenecks could hand Intel a foundry opening as AI chipmakers eye EMIB and new memory tech. The post TSMC’s HBM-Packaging Yield Issues Help Intel, Analysts Say appeared first on EE Times.",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "台积电CoWoS良率问题为Intel EMIB让出代工机会的分析师观点，直接关系HBM/先进封装竞争格局。",
+      "queued_at": "2026-08-25T07:09:26Z"
+    },
+    {
+      "id": "e277954ef875622118fec20d1895fbecebd1b98c",
+      "title": "Beyond Embedded: How DuckDB v2.0 Shifts Architecture Toward Distributed Network Capabilities",
+      "url": "https://www.infoq.com/news/2026/08/duckdb-v2-distributed",
+      "source": "rss:infoq",
+      "published_at": "2026-08-25T06:06:00Z",
+      "raw_summary": "DuckDB Labs has previewed DuckDB v2.0, codenamed \"Cyanoptera.\" This release includes over 10000 commits and introduces a client/server mode, enabling network connections. Improvements also encompass extension portability, advanced data types, and a new parser. Performance enhancements include asynchronous I/O and storage optimisations. General availability is expected in fall 2026. By Olimpiu Pop",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "DuckDB v2.0转向C/S架构支持分布式，是嵌入式OLAP引擎架构演变的实质工程进展。",
+      "queued_at": "2026-08-25T07:09:26Z"
     }
   ],
   "digest_last_date": "2026-08-25"
