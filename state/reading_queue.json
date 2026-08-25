@@ -350,6 +350,19 @@
       "source_traceable": true,
       "why": "在4070Ti+32GB上极限压榨Kimi K3/DeepSeek V4/Qwen3.5巨量MoE的实测报告与26页技术论文，消费级硬件跑大模型有具体工程取舍与数字。",
       "queued_at": "2026-08-25T05:34:25Z"
+    },
+    {
+      "id": "452f10dff4e99eba663534158650a781099b0067",
+      "title": "MobilePA-Bench: Benchmarking Mobile Planner Agents on Complex Real-World Tasks",
+      "url": "https://arxiv.org/abs/2608.23035",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-23T20:00:00Z",
+      "raw_summary": "MobilePA-Bench is an interactive sandbox benchmark that evaluates mobile planning agents on tool-calling, sub-agent collaboration, memory usage, and composite skill invocation under real runtime constraints.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "面向真实移动场景的规划Agent交互式基准，涉及工具调用、子Agent协作与记忆等核心能力评估，值得了解其评测设计。",
+      "queued_at": "2026-08-25T06:04:32Z"
     }
   ],
   "digest_last_date": "2026-08-25"
