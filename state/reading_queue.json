@@ -170,6 +170,19 @@
       "queued_at": "2026-08-25T08:53:54Z"
     },
     {
+      "id": "57b0a5c500c12e8ea43885fafff8bb291e02091d",
+      "title": "SpaceXAI will deploy standalone Nvidia Vera CPUs for Grok's agentic workloads — will use optimized Vera Rubin NVL72 in space with Starmind satellite",
+      "url": "https://www.tomshardware.com/tech-industry/big-tech/spacexai-will-deploy-standalone-nvidia-vera-cpus-for-groks-agentic-workloads",
+      "source": "rss:tomshardware",
+      "published_at": "2026-08-25T10:41:54Z",
+      "raw_summary": "Nvidia claims the chip completes agentic, reinforcement learning, and data processing tasks up to 1.8 times faster than x86 processors.",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "SpaceXAI用Nvidia Vera CPU做agentic负载的部署案例，含具体性能数字与路线信息。",
+      "queued_at": "2026-08-25T10:52:42Z"
+    },
+    {
       "id": "91d8faa919e1a2b28b837e932e6b3a02a2311052",
       "title": "SWE Refactor Bench: Can Coding Agents Complete a Long-Horizon, Whole-Repository Stack Migration? [Deyao Hong, Yizhe Chi, Wenyi Li, Xiaoqiu Wang, Mingju Gao]",
       "url": "http://arxiv.org/abs/2608.23564v1",
@@ -506,19 +519,6 @@
       "source_traceable": true,
       "why": "RIBOSPAN是支持10k核苷酸长上下文的RNA基础模型，对AI for Science的生物序列建模有方法论参考价值。",
       "queued_at": "2026-08-25T08:53:54Z"
-    },
-    {
-      "id": "f506de15f0b2f5593480cf87cb01f4d44865c471",
-      "title": "字节AI 产品向豆包集结，Agent 时代第一场巨头战役打响",
-      "url": "http://www.geekpark.net/news/369344",
-      "source": "rss:geekpark",
-      "published_at": "2026-08-25T08:58:10Z",
-      "raw_summary": "&nbsp; 头图来源：视觉中国、ChatGPT 生成 8 月 25 日，字节做了一个大动作：正式发布面向生产力场景的 Agent 产品「豆包工作」。 它可以自主拆解任务、调用工具，完成文档、表格、PPT 及多媒体内容制作，并通过虚拟桌面操作电脑和浏览器；接入飞书后，还能调用企业的消息、文档、会议和权限等上下文，进一步完成周报、解决方案、风险识别与经营分析等复杂工作。 图片来源：「豆包工作」公众号 这次发布，也让字节近期密集的产品与组织调整有了一个明确落点。 一天前，字节完成了新一轮办公 AI 产品整合：TRAE、扣子团队整体并入豆包体系，相关产品与运营团队统一向豆包产品负责人赵祺汇报。 此次调整同时划出了一条产品边界。TRAE Work、扣子将与豆包整合工作场景下的产品能力；TRAE IDE 和 CLI 继续作为编程产品线发展，并被纳入豆包品牌。 此前一周，豆包已经用一轮密集更新提前展示了方向。 8 月 17 日到 21 日，豆包连续上线手机远程控制电脑、Windows 虚拟桌面、本地与云电脑双模式、侧边工作台，以及技能商店、连接器和工作伙伴。超过 200 个技能和连接器开始进入豆包，产品也逐渐形成一套完整的任务执行系统：它可以操作电脑，调用本地与云端环境，进入飞书、钉钉等办公系统，再由多个 Agent 分工推进任务。 这些更新指向了同一个变化：豆包正在努力从 Chatbot 变成一款能够接受任务、调用工具并交付结果的生产力产品。 与 7 月底飞书产品团队并入豆包相比，这一次调整更直接地指向产品收束。飞书补充的是企业协同、知识、权限和组织上下文；TRAE Work、扣子与豆包则在走向同一种产品形态&mdash;&mdash;一款面向普通用户、能够直接交付任务的办公 Agent。 虽然字节跳动并没有对外解释这个调整的逻辑。但前段时间，腾讯旗下的 WorkBuddy 跑出了百万级日活和千万级月访问量，可能是一个连锁反应的起点。虽然它尚未证明长期商业价值，却已经给出一个足以让其他大厂采取行动的信号：面向中国普通工作者，高度产品化的通用 Agent 可以获得规模化使用。 字节最近的这波动作，很可能正是对这个新现实的快速回应。 历史总是押韵而不是重复。而如果把时间拨回 2012 年，会发现字节曾经站在故事的另一边。 那一年，今日头条上线。网易、搜狐、腾讯等传统门户已经占据新闻客户端市场，一个没有内容积累的技术团队再次进入新闻市场，很容易被理解成「又一个新闻客户端」。 今日头条的用户增长很快，商业模式、内容版权和长期价值却仍有大量问题没有答案。也正是这些尚未被回答的问题，让它在非共识中获得了一段宝贵的发展时间。等到巨头真正理解算法分发的意义，今日头条已经建立起自己的规模和壁垒。 今天，字节站到了故事的另一边。 WorkBuddy 同样没有回答完所有问题，放在巨头的体量中，千万级月活也算不上一个压倒性的信号。但字节已经快速调整产品和组织，阿里也将分散的 Agent 能力整合进千问办公。与当年相比，巨头面对非共识产品的反应速度已经完全不同。 在 AI 时代，没有人敢再对非共识掉以轻心，没有人有资格去傲慢，大厂也是如此。 一、从分散的能力到统一的产品 字节此前并不缺 AI 生产力能力。 TRAE 从 AI 编程工具出发，积累了代码、本地环境和任务执行能力；TRAE Work 又从开发者场景向文档处理、资料研究和应用生成等普通工作延伸。扣子最初是一款 Agent 搭建平台，随后逐渐加入多 Agent 协作、项目空间、技能和本地设备。豆包则从通用聊天入口出发，不断增",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "字节豆包工作Agent产品发布+组织整合，覆盖产品边界、Agent技能生态与Agent时代巨头竞争格局，是国内Agent落地的重要信号。",
-      "queued_at": "2026-08-25T09:38:06Z"
     }
   ],
   "digest_last_date": "2026-08-25"
