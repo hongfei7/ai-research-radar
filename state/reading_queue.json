@@ -300,6 +300,19 @@
       "queued_at": "2026-08-25T16:01:35Z"
     },
     {
+      "id": "9921263ae1c83265abd1713354d7283563d61eab",
+      "title": "New: Llama.cpp adaptive speculation for faster inference",
+      "url": "https://www.reddit.com/r/localllama/comments/1vxxa9x/new_llamacpp_adaptive_speculation_for_faster",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-25T11:35:40Z",
+      "raw_summary": "We have been working on some performance optimisations for Qwen3.8 and other models. The main new feature that we introduced is adaptive speculation for Llama.cpp What is it? MTP and DFlash work well to speed up inference work, especially for dense models. However, different content types need different settings. Llama.cpp only supports a single value. This fork introduces adaptive speculation. You set the minimum and maximum and the engine will adjust the number of tokens that are suggested automatically. This leads to improvements in token generation by up to 50% over mainline, especially in Qwen3.8. On a Strix Halo this improved generation from 44t/s to 65t/s for structured content. Github: https://github.com/LaurentZuijdwijk/llama.cpp Release: https://github.com/LaurentZuijdwijk/llama.cpp/releases &#32; submitted by &#32; /u/Dutchnamn [link] &#32; [comments]",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "llama.cpp自适应speculation可提升推理速度达50%，是可动手复现的工程优化。",
+      "queued_at": "2026-08-25T16:56:50Z"
+    },
+    {
       "id": "91d8faa919e1a2b28b837e932e6b3a02a2311052",
       "title": "SWE Refactor Bench: Can Coding Agents Complete a Long-Horizon, Whole-Repository Stack Migration? [Deyao Hong, Yizhe Chi, Wenyi Li, Xiaoqiu Wang, Mingju Gao]",
       "url": "http://arxiv.org/abs/2608.23564v1",
@@ -505,19 +518,6 @@
       "angle": "research",
       "source_traceable": true,
       "why": "ReWorld交互式世界模型论文，混合注意力窗口+姿态索引地标库+LoRA蒸馏的工程方案有参考价值。",
-      "queued_at": "2026-08-25T04:01:53Z"
-    },
-    {
-      "id": "7f544ddfd4ded72b0aca078c87ae42416e7aee50",
-      "title": "Prime Agent: A Self-Improving RLM Harness",
-      "url": "https://arxiv.org/abs/2608.23552",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-23T20:00:00Z",
-      "raw_summary": "Prime Agent is an open-source harness that uses recursive subagents, persistent computation, and agent-to-agent coordination to extend language models' long-horizon capabilities across coding and reasoning tasks.",
-      "score": 7,
-      "angle": "engineering",
-      "source_traceable": true,
-      "why": "Prime Agent自改进RLM框架，递归子代理+持久计算+代理协作的可复现工程实现。",
       "queued_at": "2026-08-25T04:01:53Z"
     }
   ],
