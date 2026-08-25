@@ -613,7 +613,10 @@
       }
     ]
   },
-  "morning_fallback": null,
+  "morning_fallback": {
+    "date": "2026-08-26",
+    "attempts": 1
+  },
   "blindspot_ledger": [
     {
       "key": "AMD|ASML|Anthropic|Intel|Marvell|Meta|OpenAI|博通|台积电|美光|超微电脑",
