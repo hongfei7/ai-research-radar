@@ -27,6 +27,19 @@
       "queued_at": "2026-08-25T16:01:35Z"
     },
     {
+      "id": "ba06c58500bad33caa3c17b38eef98779e9a7c4d",
+      "title": "OpenAI’s 700W Jalapeño ASIC outpaces 1,400W Nvidia flagship GPU — claims up to 1.9x throughput per kilowatt and 3.6x lower latency, co-developed with Broadcom",
+      "url": "https://www.tomshardware.com/tech-industry/semiconductors/openai-says-its-jalapeno-chip-beats-nvidias-gb300-in-first-published-benchmarks",
+      "source": "rss:tomshardware",
+      "published_at": "2026-08-25T18:05:23Z",
+      "raw_summary": "OpenAI arrived at Hot Chips on Tuesday with benchmarks claiming its first in-house chip beats Nvidia's GB300.",
+      "score": 9,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "OpenAI自研Jalapeño ASIC在Hot Chips 2026公开对标GB300，1.9x perf/W与3.6x延迟是定制ASIC路线对抗NVIDIA的关键公开数据，路线之争意义重大。",
+      "queued_at": "2026-08-25T18:58:14Z"
+    },
+    {
       "id": "27be27fcb74f8301dab86ff57e70cc822dc80c07",
       "title": "How to Train a Critic Stably and Efficiently [Penghui Qi, Xiangxin Zhou, Wee Sun Lee]",
       "url": "http://arxiv.org/abs/2608.23566v1",
@@ -352,6 +365,19 @@
       "queued_at": "2026-08-25T18:04:58Z"
     },
     {
+      "id": "801089c7df072d15eb1a6267703c39042c3658ee",
+      "title": "Hot Chips 2026: Samsung makes LPDDR5X smart with logic unit in memory — LPDDR5X-PIM is 3.01x faster than LPDDR5X in AI inference with 8x the bandwidth",
+      "url": "https://www.tomshardware.com/pc-components/dram/hot-chips-2026-samsung-makes-lpddr5x-smart-with-logic-unit-in-memory-lpddr5x-pim-is-3-01x-faster-than-lpddr5x-in-ai-inference-with-8x-the-bandwidth",
+      "source": "rss:tomshardware",
+      "published_at": "2026-08-25T18:31:37Z",
+      "raw_summary": "Samsung detailed the industry's first LPDDR5X-PIM at Hot Chips 2026, adding logic directly to memory to speed up data-intensive workloads like AI inference.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Hot Chips 2026上三星LPDDR5X-PIM一手方案，含3.01x推理加速与8x带宽等具体数字，是存内计算路线的重要进展。",
+      "queued_at": "2026-08-25T18:58:14Z"
+    },
+    {
       "id": "91d8faa919e1a2b28b837e932e6b3a02a2311052",
       "title": "SWE Refactor Bench: Can Coding Agents Complete a Long-Horizon, Whole-Repository Stack Migration? [Deyao Hong, Yizhe Chi, Wenyi Li, Xiaoqiu Wang, Mingju Gao]",
       "url": "http://arxiv.org/abs/2608.23564v1",
@@ -492,32 +518,6 @@
       "angle": "research",
       "source_traceable": true,
       "why": "主张把Policy-KL正则化从action侧移到input侧，打破稳定-探索二难，给出明确框架",
-      "queued_at": "2026-08-25T03:02:10Z"
-    },
-    {
-      "id": "7b03a9df7a07547371eec1c783b37eca6f066d99",
-      "title": "Provably adaptive sampling with uniform and remasking discrete diffusion models [Daniil Dmitriev, Zhihan Huang, Yuting Wei]",
-      "url": "http://arxiv.org/abs/2608.23554v1",
-      "source": "arxiv:cs.LG",
-      "published_at": "2026-08-24T17:54:51Z",
-      "raw_summary": "Discrete diffusion models offer a promising alternative to autoregressive generation by enabling parallel updates, but their sampling efficiency can depend strongly on the choice of the forward process and the sampler. For the uniform forward process, existing lower bounds for the standard $τ$-leaping sampler scale linearly with the ambient dimension $d$, raising the question of whether this dependence is intrinsic to the forward process. We answer this question in the negative. We consider a first-order sampler based on the leave-one-out denoiser for uniform and remasking processes whose coordinate updates can be performed in parallel. In both cases, the sampler can correct denoising mistakes during the sampling process, which becomes necessary when many coordinates are updated together. Our main result establishes an adaptive sampling guarantee: up to logarithmic factors, $N = O(\\mathrm{DTC}(X_0) / \\varepsilon)$ discretization steps suffice to achieve sampling error $O(\\varepsilon_{\\mathrm{score}}+\\varepsilon)$, where $\\varepsilon_{\\mathrm{score}}$ is the error in score estimation. Thus, the sampling complexity is governed by the intrinsic dependence structure of the target distribution, as measured by its dual total correlation $\\mathrm{DTC}(X_0)$, rather than directly by the ambient dimension $d$. Our analysis proceeds through a Bayes-optimal auxiliary sampler that separates discretization error from score-estimation error. We also derive an exact information-theoretic re",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "对uniform和remasking离散扩散给出adaptive采样的理论保证，去掉与维度d的线性下界依赖",
-      "queued_at": "2026-08-25T03:02:10Z"
-    },
-    {
-      "id": "244bdc90ac68f4771bf09d9dc4c9b0498ad4634f",
-      "title": "Inertial Manifold Neural Operator for Dissipative Time-Dependent Partial Differential Equations [Xiaoyang Xie, Clarence W. Rowley]",
-      "url": "http://arxiv.org/abs/2608.23546v1",
-      "source": "arxiv:cs.LG",
-      "published_at": "2026-08-24T17:49:30Z",
-      "raw_summary": "In this paper, we introduce the Inertial Manifold Neural Operator (IMNO) for solving dissipative time-dependent partial differential equations (PDEs). The long-time dynamics of such systems often exhibit an effective low-dimensional structure due to dissipation. Unlike standard neural operator architectures such as the Fourier Neural Operator (FNO), IMNO explicitly leverages the low-dimensional structure to achieve better physical interpretability, accuracy, and stability in long-horizon autoregressive training and prediction for nonlinear dissipative PDEs. For shift-equivariant PDEs, we further introduce a shift-equivariant variant (IMNO-SE) of the proposed neural operator, ensuring that a spatial shift in the input induces the same spatial shift in the output. This symmetry-preserving inductive bias substantially improves its performance in shift-equivariant PDEs. Extensive benchmark experiments are presented to evaluate IMNO's performance numerically.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "Inertial Manifold Neural Operator利用耗散PDE低维结构，比FNO在长程自回归上更准更稳，给出shift-equivariant理论",
       "queued_at": "2026-08-25T03:02:10Z"
     }
   ],

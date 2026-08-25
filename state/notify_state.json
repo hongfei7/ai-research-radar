@@ -4,67 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "AMD",
-        "英伟达",
-        "谷歌"
-      ],
-      "features": [
-        "000-token",
-        "31b",
-        "an",
-        "analysis",
-        "artificial",
-        "benchmark",
-        "delivered",
-        "gemma",
-        "groq",
-        "in",
-        "input",
-        "its",
-        "lpx",
-        "nvidia",
-        "per",
-        "racks",
-        "register",
-        "running",
-        "says",
-        "second",
-        "sequence",
-        "the",
-        "tokens",
-        "with"
-      ],
-      "sent_at": "2026-08-24T16:48:29Z"
-    },
-    {
-      "tickers": [
-        "海力士",
-        "英伟达"
-      ],
-      "features": [
-        "775-micron",
-        "ai",
-        "as",
-        "bonding",
-        "ceiling",
-        "extends",
-        "firm",
-        "hbm5",
-        "hits",
-        "hybrid",
-        "hynix",
-        "memory",
-        "mr-muf",
-        "nvidia",
-        "pushes",
-        "rubin",
-        "sk",
-        "through"
-      ],
-      "sent_at": "2026-08-24T18:06:49Z"
-    },
-    {
-      "tickers": [
         "Meta"
       ],
       "features": [
@@ -607,6 +546,39 @@
         "xmx"
       ],
       "sent_at": "2026-08-25T16:04:55Z"
+    },
+    {
+      "tickers": [
+        "OpenAI",
+        "博通",
+        "英伟达"
+      ],
+      "features": [
+        "1.9x",
+        "3.6x",
+        "400w",
+        "700w",
+        "and",
+        "asic",
+        "broadcom",
+        "claims",
+        "co-developed",
+        "flagship",
+        "gpu",
+        "jalape",
+        "kilowatt",
+        "latency",
+        "lower",
+        "nvidia",
+        "openai",
+        "outpaces",
+        "per",
+        "throughput",
+        "to",
+        "up",
+        "with"
+      ],
+      "sent_at": "2026-08-25T18:59:58Z"
     }
   ],
   "last_report": {
