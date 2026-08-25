@@ -66,6 +66,110 @@
       "queued_at": "2026-08-25T03:02:10Z"
     },
     {
+      "id": "4861e179c239837075842377e3b43a1ec0107cb3",
+      "title": "Task-CoEvolve: Efficient Harness Optimization via Adaptive Validation Task Selection",
+      "url": "https://arxiv.org/abs/2608.20169",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-23T20:00:00Z",
+      "raw_summary": "Task-CoEvolve improves LLM harness optimization by adaptively selecting validation tasks and estimating full-set performance from partial evaluations, cutting evaluation costs by 80%.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "通过自适应验证任务选择降低LLM harness优化评估成本80%，方法具体且可复用。",
+      "queued_at": "2026-08-25T04:55:08Z"
+    },
+    {
+      "id": "3acc386b327f959e81b722338db9ff742a047e04",
+      "title": "Better Retrieval, Worse Robustness:How Multi-hop RAG Amplifies Upstream ASR Errors",
+      "url": "https://arxiv.org/abs/2608.22872",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-23T20:00:00Z",
+      "raw_summary": "Retrieval-augmented generation extensions amplify automatic speech recognition errors in spoken multi-hop question answering, primarily through corrupted query entities.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "明确指出多跳RAG会放大上游ASR错误并给出机制（query entity污染），结论反直觉且有论文支撑，对RAG+语音系统设计有直接指导意义。",
+      "queued_at": "2026-08-25T05:34:25Z"
+    },
+    {
+      "id": "452f10dff4e99eba663534158650a781099b0067",
+      "title": "MobilePA-Bench: Benchmarking Mobile Planner Agents on Complex Real-World Tasks",
+      "url": "https://arxiv.org/abs/2608.23035",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-23T20:00:00Z",
+      "raw_summary": "MobilePA-Bench is an interactive sandbox benchmark that evaluates mobile planning agents on tool-calling, sub-agent collaboration, memory usage, and composite skill invocation under real runtime constraints.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "面向真实移动场景的规划Agent交互式基准，涉及工具调用、子Agent协作与记忆等核心能力评估，值得了解其评测设计。",
+      "queued_at": "2026-08-25T06:04:32Z"
+    },
+    {
+      "id": "c5aedf5950a7084a54a21608918d9adf8f964c93",
+      "title": "One Polluted Page Is Enough: Evaluating Web Content Pollution in LLM Recommenders",
+      "url": "https://arxiv.org/abs/2606.13610",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-23T20:00:00Z",
+      "raw_summary": "Search-augmented LLM recommenders are highly vulnerable to web content polluted by generative engine optimization, frequently promoting fake products despite reasoning and defenses.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "论文明确指出search-augmented LLM推荐器受GEO污染内容攻击的漏洞，有可检验结论。",
+      "queued_at": "2026-08-25T07:09:26Z"
+    },
+    {
+      "id": "d3fde7a8af05da8637726588dc3f496363b1f49c",
+      "title": "Beyond the Stability-Exploration Dilemma: Environmental Regularization for LLM Policy Optimization",
+      "url": "https://arxiv.org/abs/2608.23311",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-23T20:00:00Z",
+      "raw_summary": "ERPO replaces action-side policy regularization with input-side query distribution control to stabilize reinforcement learning for language models while preserving response exploration.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "ERPO用query分布正则替代action端KL来稳定LLM RL训练，直击稳定性-探索权衡，方法具体可复现。",
+      "queued_at": "2026-08-25T07:59:25Z"
+    },
+    {
+      "id": "2220cb68b458e7cb45f340cda7bea855b4e9b6b5",
+      "title": "EchoWM: Open and Enterable Omnimodal World Models",
+      "url": "https://arxiv.org/abs/2608.23189",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-23T20:00:00Z",
+      "raw_summary": "EchoWM is an omnimodal world model that generates synchronized high-resolution video, sound, music, and speech while following continuous 6-DoF navigation trajectories across first- and third-person views.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "首个支持6-DoF导航的多模态世界模型，同步生成视频/音/乐/语音，是具身智能基础模型方向的重要新工作。",
+      "queued_at": "2026-08-25T07:59:25Z"
+    },
+    {
+      "id": "a1d10a73b38241a0eca098b6541078d825eb5bb0",
+      "title": "BIMSA 王雅晴：Scaling Law 触及天花板，「数据高效学习」指向 AI 的下一站｜IJCAI 2026",
+      "url": "https://www.leiphone.com/category/private/cv4bh7vxg4ldhwnt.html",
+      "source": "rss:leiphone",
+      "published_at": "2026-08-25T06:44:00Z",
+      "raw_summary": "真正的智能，在于能否基于有限的数据，实现可靠的泛化与迁移。&nbsp; &nbsp; 作者丨张璐&nbsp; &nbsp; 编辑丨岑峰 幸丽娟&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;高质量标注数据快用完了，算力贵得离谱，黑盒依然无解。大模型时代信奉的 Scaling Law，正在面临多重瓶颈。更麻烦的是另一件事：很多任务天生就没有大数据——药物研发、冷启动推荐、科学探索。这些不是技术的短板，是世界的常态。在IJCAI 2026大会的 Early Career Spotlight（早期职业焦点）环节，北京雁栖湖应用数学研究院（BIMSA）副教授王雅晴，给这些问题做出了系统回应。王雅晴长期从事小样本学习与&nbsp;AI for Science&nbsp;研究。她博士毕业于香港科技大学，曾任百度研究院资深研究员，现任北京雁栖湖应用数学研究院（BIMSA）副教授。贯穿其研究经历的一条主线是：如何提高&nbsp;AI&nbsp;对有限数据与经验的利用效率，使其在监督稀缺的场景下仍能实现可靠的泛化、适应与决策。她在题为《迈向高效数据智能：从少样本学习到智能体系统》（Toward Data-Efficient Intelligence: From Few-Shot Learning to Agentic Systems）的演讲中，梳理了从小样本学习、元学习、上下文学习，到最新提出的“数据高效智能体学习”（Data-Efficient Agentic Learning, DEAL）的完整演进脉络。她的核心洞察是：人类智能从极少样本中完成泛化，靠的是基因、文化与经验三重先验的支撑，而 AI 同样可以。更关键的是，她还从理论层面进一步证明了，在所研究的任务与模型设定下，In-Context Learning 可以被理解为一种数据依赖的元学习。Transformer通过自注意力机制，将传统元学习中显式的适配过程内化为隐式计算，从而实现了“殊途同归”。这一发现为大模型的少样本能力提供了坚实的理论解释。而当AI从单步预测走向多步交互与长程决策，数据稀缺问题变得更加严峻。她与合作者提出了 DEAL 框架，从经验增强、架构设计与高效学习范式三个方向，系统应对智能体面临的“数据沙漏”瓶颈。其中一条核心思路，就是利用结构化先验，让 AI 在有限经验中实现可靠和泛化，从而在真实世界走得更远。01科学与工业的现实：天然缺乏大数据的场景当下，Scaling Law几乎成为行业共识。在Transformer与监督学习范式下，行业已习惯这套路径：更大规模的数据、更多参数量，叠加持续增长的算力，即可推高模型的泛化上限。但这条规模扩张的路径，究竟还能走多远？以行业对GPT-4的估算为例，训练数据如果印成纸质书，排起来能",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "BIMSA王雅晴在IJCAI 2026对Scaling Law瓶颈与'数据高效学习'的论述，触及当前范式分歧，值得细读。",
+      "queued_at": "2026-08-25T08:53:54Z"
+    },
+    {
+      "id": "dc004c5ef24be752bf6da8af37ad2aa8ccdc1ee1",
+      "title": "From Generation to Simulation: How Far Are World Models from Being True Simulators?",
+      "url": "https://arxiv.org/abs/2608.23070",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-23T20:00:00Z",
+      "raw_summary": "Generative world models are evaluated against traditional simulators across eight capabilities, revealing gaps in physical guarantees, state feedback, and long-horizon stability despite progress in interaction and controllability.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "世界模型与传统仿真器在八项能力上的系统对比，明确指出物理保证与长程稳定性的差距，值得读原文。",
+      "queued_at": "2026-08-25T08:53:54Z"
+    },
+    {
       "id": "91d8faa919e1a2b28b837e932e6b3a02a2311052",
       "title": "SWE Refactor Bench: Can Coding Agents Complete a Long-Horizon, Whole-Repository Stack Migration? [Deyao Hong, Yizhe Chi, Wenyi Li, Xiaoqiu Wang, Mingju Gao]",
       "url": "http://arxiv.org/abs/2608.23564v1",
@@ -287,19 +391,6 @@
       "queued_at": "2026-08-25T04:01:53Z"
     },
     {
-      "id": "4861e179c239837075842377e3b43a1ec0107cb3",
-      "title": "Task-CoEvolve: Efficient Harness Optimization via Adaptive Validation Task Selection",
-      "url": "https://arxiv.org/abs/2608.20169",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-23T20:00:00Z",
-      "raw_summary": "Task-CoEvolve improves LLM harness optimization by adaptively selecting validation tasks and estimating full-set performance from partial evaluations, cutting evaluation costs by 80%.",
-      "score": 8,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "通过自适应验证任务选择降低LLM harness优化评估成本80%，方法具体且可复用。",
-      "queued_at": "2026-08-25T04:55:08Z"
-    },
-    {
       "id": "e15b9d1e6d7172386c1616ba536d4564e490ce73",
       "title": "通用模型竟然比医疗专用模型更懂医疗？一篇 ACL 论文的两个反直觉发现 | GAIR Paper 123",
       "url": "https://www.leiphone.com/category/academic/bwyxqu8pelb4tnjg.html",
@@ -326,19 +417,6 @@
       "queued_at": "2026-08-25T04:55:08Z"
     },
     {
-      "id": "3acc386b327f959e81b722338db9ff742a047e04",
-      "title": "Better Retrieval, Worse Robustness:How Multi-hop RAG Amplifies Upstream ASR Errors",
-      "url": "https://arxiv.org/abs/2608.22872",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-23T20:00:00Z",
-      "raw_summary": "Retrieval-augmented generation extensions amplify automatic speech recognition errors in spoken multi-hop question answering, primarily through corrupted query entities.",
-      "score": 8,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "明确指出多跳RAG会放大上游ASR错误并给出机制（query entity污染），结论反直觉且有论文支撑，对RAG+语音系统设计有直接指导意义。",
-      "queued_at": "2026-08-25T05:34:25Z"
-    },
-    {
       "id": "0f3d2d8d04dee5cf8bc002111884fef0a9dec49d",
       "title": "Spent a day seeing how far extreme MoE models can be pushed on a 4070 Ti + 32GB RAM. Kimi K3, DeepSeek V4 Flash, and Qwen3.5-122B results + research paper🔧",
       "url": "https://www.reddit.com/r/localllama/comments/1vxoif0/spent_a_day_seeing_how_far_extreme_moe_models_can",
@@ -350,32 +428,6 @@
       "source_traceable": true,
       "why": "在4070Ti+32GB上极限压榨Kimi K3/DeepSeek V4/Qwen3.5巨量MoE的实测报告与26页技术论文，消费级硬件跑大模型有具体工程取舍与数字。",
       "queued_at": "2026-08-25T05:34:25Z"
-    },
-    {
-      "id": "452f10dff4e99eba663534158650a781099b0067",
-      "title": "MobilePA-Bench: Benchmarking Mobile Planner Agents on Complex Real-World Tasks",
-      "url": "https://arxiv.org/abs/2608.23035",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-23T20:00:00Z",
-      "raw_summary": "MobilePA-Bench is an interactive sandbox benchmark that evaluates mobile planning agents on tool-calling, sub-agent collaboration, memory usage, and composite skill invocation under real runtime constraints.",
-      "score": 8,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "面向真实移动场景的规划Agent交互式基准，涉及工具调用、子Agent协作与记忆等核心能力评估，值得了解其评测设计。",
-      "queued_at": "2026-08-25T06:04:32Z"
-    },
-    {
-      "id": "c5aedf5950a7084a54a21608918d9adf8f964c93",
-      "title": "One Polluted Page Is Enough: Evaluating Web Content Pollution in LLM Recommenders",
-      "url": "https://arxiv.org/abs/2606.13610",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-23T20:00:00Z",
-      "raw_summary": "Search-augmented LLM recommenders are highly vulnerable to web content polluted by generative engine optimization, frequently promoting fake products despite reasoning and defenses.",
-      "score": 8,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "论文明确指出search-augmented LLM推荐器受GEO污染内容攻击的漏洞，有可检验结论。",
-      "queued_at": "2026-08-25T07:09:26Z"
     },
     {
       "id": "499d6b68f1e267c09b3cfd5f64595e09e9e922f3",
@@ -404,32 +456,6 @@
       "queued_at": "2026-08-25T07:09:26Z"
     },
     {
-      "id": "d3fde7a8af05da8637726588dc3f496363b1f49c",
-      "title": "Beyond the Stability-Exploration Dilemma: Environmental Regularization for LLM Policy Optimization",
-      "url": "https://arxiv.org/abs/2608.23311",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-23T20:00:00Z",
-      "raw_summary": "ERPO replaces action-side policy regularization with input-side query distribution control to stabilize reinforcement learning for language models while preserving response exploration.",
-      "score": 8,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "ERPO用query分布正则替代action端KL来稳定LLM RL训练，直击稳定性-探索权衡，方法具体可复现。",
-      "queued_at": "2026-08-25T07:59:25Z"
-    },
-    {
-      "id": "2220cb68b458e7cb45f340cda7bea855b4e9b6b5",
-      "title": "EchoWM: Open and Enterable Omnimodal World Models",
-      "url": "https://arxiv.org/abs/2608.23189",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-23T20:00:00Z",
-      "raw_summary": "EchoWM is an omnimodal world model that generates synchronized high-resolution video, sound, music, and speech while following continuous 6-DoF navigation trajectories across first- and third-person views.",
-      "score": 8,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "首个支持6-DoF导航的多模态世界模型，同步生成视频/音/乐/语音，是具身智能基础模型方向的重要新工作。",
-      "queued_at": "2026-08-25T07:59:25Z"
-    },
-    {
       "id": "be420a33f38ddc3e6de56a7a2d35bc2000b40bef",
       "title": "Redefining Roles For Edge And Cloud AI",
       "url": "https://semiengineering.com/redefining-roles-for-edge-and-cloud-ai",
@@ -456,32 +482,6 @@
       "queued_at": "2026-08-25T07:59:25Z"
     },
     {
-      "id": "a1d10a73b38241a0eca098b6541078d825eb5bb0",
-      "title": "BIMSA 王雅晴：Scaling Law 触及天花板，「数据高效学习」指向 AI 的下一站｜IJCAI 2026",
-      "url": "https://www.leiphone.com/category/private/cv4bh7vxg4ldhwnt.html",
-      "source": "rss:leiphone",
-      "published_at": "2026-08-25T06:44:00Z",
-      "raw_summary": "真正的智能，在于能否基于有限的数据，实现可靠的泛化与迁移。&nbsp; &nbsp; 作者丨张璐&nbsp; &nbsp; 编辑丨岑峰 幸丽娟&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;高质量标注数据快用完了，算力贵得离谱，黑盒依然无解。大模型时代信奉的 Scaling Law，正在面临多重瓶颈。更麻烦的是另一件事：很多任务天生就没有大数据——药物研发、冷启动推荐、科学探索。这些不是技术的短板，是世界的常态。在IJCAI 2026大会的 Early Career Spotlight（早期职业焦点）环节，北京雁栖湖应用数学研究院（BIMSA）副教授王雅晴，给这些问题做出了系统回应。王雅晴长期从事小样本学习与&nbsp;AI for Science&nbsp;研究。她博士毕业于香港科技大学，曾任百度研究院资深研究员，现任北京雁栖湖应用数学研究院（BIMSA）副教授。贯穿其研究经历的一条主线是：如何提高&nbsp;AI&nbsp;对有限数据与经验的利用效率，使其在监督稀缺的场景下仍能实现可靠的泛化、适应与决策。她在题为《迈向高效数据智能：从少样本学习到智能体系统》（Toward Data-Efficient Intelligence: From Few-Shot Learning to Agentic Systems）的演讲中，梳理了从小样本学习、元学习、上下文学习，到最新提出的“数据高效智能体学习”（Data-Efficient Agentic Learning, DEAL）的完整演进脉络。她的核心洞察是：人类智能从极少样本中完成泛化，靠的是基因、文化与经验三重先验的支撑，而 AI 同样可以。更关键的是，她还从理论层面进一步证明了，在所研究的任务与模型设定下，In-Context Learning 可以被理解为一种数据依赖的元学习。Transformer通过自注意力机制，将传统元学习中显式的适配过程内化为隐式计算，从而实现了“殊途同归”。这一发现为大模型的少样本能力提供了坚实的理论解释。而当AI从单步预测走向多步交互与长程决策，数据稀缺问题变得更加严峻。她与合作者提出了 DEAL 框架，从经验增强、架构设计与高效学习范式三个方向，系统应对智能体面临的“数据沙漏”瓶颈。其中一条核心思路，就是利用结构化先验，让 AI 在有限经验中实现可靠和泛化，从而在真实世界走得更远。01科学与工业的现实：天然缺乏大数据的场景当下，Scaling Law几乎成为行业共识。在Transformer与监督学习范式下，行业已习惯这套路径：更大规模的数据、更多参数量，叠加持续增长的算力，即可推高模型的泛化上限。但这条规模扩张的路径，究竟还能走多远？以行业对GPT-4的估算为例，训练数据如果印成纸质书，排起来能",
-      "score": 8,
-      "angle": "route",
-      "source_traceable": true,
-      "why": "BIMSA王雅晴在IJCAI 2026对Scaling Law瓶颈与'数据高效学习'的论述，触及当前范式分歧，值得细读。",
-      "queued_at": "2026-08-25T08:53:54Z"
-    },
-    {
-      "id": "dc004c5ef24be752bf6da8af37ad2aa8ccdc1ee1",
-      "title": "From Generation to Simulation: How Far Are World Models from Being True Simulators?",
-      "url": "https://arxiv.org/abs/2608.23070",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-23T20:00:00Z",
-      "raw_summary": "Generative world models are evaluated against traditional simulators across eight capabilities, revealing gaps in physical guarantees, state feedback, and long-horizon stability despite progress in interaction and controllability.",
-      "score": 8,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "世界模型与传统仿真器在八项能力上的系统对比，明确指出物理保证与长程稳定性的差距，值得读原文。",
-      "queued_at": "2026-08-25T08:53:54Z"
-    },
-    {
       "id": "9ef7923d308a46867869d3c9c036cd6a915d1f0d",
       "title": "突破具身智能物理死角：IJCAI 2026 具身智能泛化与控制突破",
       "url": "https://www.leiphone.com/category/private/5yb9zka19rhtgz0o.html",
@@ -506,6 +506,19 @@
       "source_traceable": true,
       "why": "RIBOSPAN是支持10k核苷酸长上下文的RNA基础模型，对AI for Science的生物序列建模有方法论参考价值。",
       "queued_at": "2026-08-25T08:53:54Z"
+    },
+    {
+      "id": "f506de15f0b2f5593480cf87cb01f4d44865c471",
+      "title": "字节AI 产品向豆包集结，Agent 时代第一场巨头战役打响",
+      "url": "http://www.geekpark.net/news/369344",
+      "source": "rss:geekpark",
+      "published_at": "2026-08-25T08:58:10Z",
+      "raw_summary": "&nbsp; 头图来源：视觉中国、ChatGPT 生成 8 月 25 日，字节做了一个大动作：正式发布面向生产力场景的 Agent 产品「豆包工作」。 它可以自主拆解任务、调用工具，完成文档、表格、PPT 及多媒体内容制作，并通过虚拟桌面操作电脑和浏览器；接入飞书后，还能调用企业的消息、文档、会议和权限等上下文，进一步完成周报、解决方案、风险识别与经营分析等复杂工作。 图片来源：「豆包工作」公众号 这次发布，也让字节近期密集的产品与组织调整有了一个明确落点。 一天前，字节完成了新一轮办公 AI 产品整合：TRAE、扣子团队整体并入豆包体系，相关产品与运营团队统一向豆包产品负责人赵祺汇报。 此次调整同时划出了一条产品边界。TRAE Work、扣子将与豆包整合工作场景下的产品能力；TRAE IDE 和 CLI 继续作为编程产品线发展，并被纳入豆包品牌。 此前一周，豆包已经用一轮密集更新提前展示了方向。 8 月 17 日到 21 日，豆包连续上线手机远程控制电脑、Windows 虚拟桌面、本地与云电脑双模式、侧边工作台，以及技能商店、连接器和工作伙伴。超过 200 个技能和连接器开始进入豆包，产品也逐渐形成一套完整的任务执行系统：它可以操作电脑，调用本地与云端环境，进入飞书、钉钉等办公系统，再由多个 Agent 分工推进任务。 这些更新指向了同一个变化：豆包正在努力从 Chatbot 变成一款能够接受任务、调用工具并交付结果的生产力产品。 与 7 月底飞书产品团队并入豆包相比，这一次调整更直接地指向产品收束。飞书补充的是企业协同、知识、权限和组织上下文；TRAE Work、扣子与豆包则在走向同一种产品形态&mdash;&mdash;一款面向普通用户、能够直接交付任务的办公 Agent。 虽然字节跳动并没有对外解释这个调整的逻辑。但前段时间，腾讯旗下的 WorkBuddy 跑出了百万级日活和千万级月访问量，可能是一个连锁反应的起点。虽然它尚未证明长期商业价值，却已经给出一个足以让其他大厂采取行动的信号：面向中国普通工作者，高度产品化的通用 Agent 可以获得规模化使用。 字节最近的这波动作，很可能正是对这个新现实的快速回应。 历史总是押韵而不是重复。而如果把时间拨回 2012 年，会发现字节曾经站在故事的另一边。 那一年，今日头条上线。网易、搜狐、腾讯等传统门户已经占据新闻客户端市场，一个没有内容积累的技术团队再次进入新闻市场，很容易被理解成「又一个新闻客户端」。 今日头条的用户增长很快，商业模式、内容版权和长期价值却仍有大量问题没有答案。也正是这些尚未被回答的问题，让它在非共识中获得了一段宝贵的发展时间。等到巨头真正理解算法分发的意义，今日头条已经建立起自己的规模和壁垒。 今天，字节站到了故事的另一边。 WorkBuddy 同样没有回答完所有问题，放在巨头的体量中，千万级月活也算不上一个压倒性的信号。但字节已经快速调整产品和组织，阿里也将分散的 Agent 能力整合进千问办公。与当年相比，巨头面对非共识产品的反应速度已经完全不同。 在 AI 时代，没有人敢再对非共识掉以轻心，没有人有资格去傲慢，大厂也是如此。 一、从分散的能力到统一的产品 字节此前并不缺 AI 生产力能力。 TRAE 从 AI 编程工具出发，积累了代码、本地环境和任务执行能力；TRAE Work 又从开发者场景向文档处理、资料研究和应用生成等普通工作延伸。扣子最初是一款 Agent 搭建平台，随后逐渐加入多 Agent 协作、项目空间、技能和本地设备。豆包则从通用聊天入口出发，不断增",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "字节豆包工作Agent产品发布+组织整合，覆盖产品边界、Agent技能生态与Agent时代巨头竞争格局，是国内Agent落地的重要信号。",
+      "queued_at": "2026-08-25T09:38:06Z"
     }
   ],
   "digest_last_date": "2026-08-25"
