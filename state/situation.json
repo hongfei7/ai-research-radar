@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-25T11:33:20Z",
-  "text": "当前共有 20 个活跃事件。要点包括: SpaceXAI will deploy standalone Nvidia Vera CPUs for Grok's agentic workloads — will use optimized Vera Rubin NVL72 in space with Starmind satellite; 库克9月1日卸任苹果CEO，硬件工程负责人Ternus接棒; TSMC’s HBM-Packaging Yield Issues Help Intel, Analysts Say; OpenAI 的 2027：资本周期下的上市平衡术; 二季度少赚326亿，阿里“猛砸”677亿资本支出。",
-  "since": "2026-08-25T11:33:20Z",
-  "active_event_count": 20,
+  "generated_at": "2026-08-25T12:06:58Z",
+  "text": "截至 2026-08-25 20:06 HKT，Hot Chips 2026上Nvidia详解88核Vera CPU架构，主打空间多线程与1.2 TB/s SOCAMM2内存，面向agentic负载；小米发布6nm AI加速器Xring O100与3nm自动驾驶芯片D100，推进端侧AI与自研SoC布局；AI算力紧缺下二手半导体设备由滞销转抢手，存量设备复用提速。",
+  "since": "2026-08-25T12:06:58Z",
+  "active_event_count": 23,
   "key_themes": [
     "ai_monetization",
-    "model_capability",
     "compute_demand",
+    "model_capability",
     "chip_supply",
     "edge_ai"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nTMTpost将OpenAI 2027 IPO定性为\"资本久期平衡术\"，暗示6000亿表外算力负债是悬顶之剑；但36kr报道中阿里管理层在配售融资窗口期大额增持8亿港元，传递的却是\"真金白银看多\"的信心信号。两类事件折射出同一个AI资本周期问题——一边是大模型公司（OpenAI）需要IPO匹配长周期算力投入，一边是中国大厂（阿里）通过配售+增持组合对冲市场疑虑，\"算力负债\"与\"算力信心\"形成微妙对立。\n\n【新兴趋势】\n**模型分发/路由层成为战略要塞**——本轮最显著信号：Stripe 80亿美元收购OpenRouter、微软/谷歌/亚马逊/英伟达竞购Hugging Face（估值",
+  "cross_analysis": "【核心矛盾】\nNvidia Vera 采用 LPDDR5X/SOCAMM2 形态承载 1.2 TB/s 带宽，方向标注对美光、海力士均为\"中性\"，但该架构若量产将打开 LPDDR 进入数据中心的全新需求池，与\"中性\"判断存在张力；此外，小米自研 Xring O100/D100 路径直接挤压高通份额，但条目仅标注\"小米正面\"，未传导至高通/联发科的对立面方向，叙事完整性不足。\n\n【新兴趋势】\n三条暗线反复出现：①\"端侧 AI + 自研 SoC/加速器\"垂直整合模式（小米双芯、Nvidia Vera 押注 agentic 负载）；②先进产能紧缺外溢——二手半导体设备由滞销转抢手，与 Vera 提到的高带宽内存供应链紧张形成相互印证；③国产替代从消费电子向汽车/数据中心延伸（小米 D100、安世中国 330 天后管理层重组、腾讯云切入 L4 货运算力）。\n\n【信息盲点】\n①AMD、Intel 作为 Vera 最直接的服务器 CPU 竞品完全缺席，份额挤压逻辑未被定价；②HBM/eHBM、先进封装（CoWoS）虽与 Vera、二手设备叙事强相关却无单独条目；③小米 D100 量产涉及的国内代工/封测（中芯国际、长电）未被提及；④Nexperia 中国条目摘要为空，是重要信息缺口，需补查闻泰科技股权与汽车功率半导体国产化进展；⑤联发科在小米自研叙事下的边际影响被忽略。\n\n【跨标的联动】\nNvidia Vera ↔ 美光/海力士：SOCAMM2 供应分配决定业绩弹性；Nvidia Vera ↔ Intel/AMD：88 核+空间多线程对 x86 阵营形成架构级挑战。小米 Xring",
   "trend_spotting": "阿里单季677亿资本支出对应326亿利润下滑，capex/营收杠杆比成为关键观测标——若云收入增速跟不上折旧，利润率压力将持续，但反向也锁定国内算力链的景气度。真正的新变化在于大厂竞争维度切换：字节将TRAE、扣子并入豆包体系、密集上线200+技能，组织级整合而非单点产品迭代，标志着中国AI竞争从\"模型能力\"转向\"Agent生态\"的临界点；腾讯WorkBuddy百万日活的快速验证则说明办公Agent已跑通用户接受度，规模化推理token消耗将在未来两到三个季度集中释放。被低估的信号是Agent对存量SaaS的替代节奏——当豆包工作直接接入飞书完成经营分析，金山办公等中小SaaS的护城河正被通用Agent快速侵蚀，这一传导尚未在估值中充分定价。"
 }

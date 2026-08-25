@@ -1,6 +1,19 @@
 {
   "candidates": [
     {
+      "id": "dfabc3fd9ed53f6b1d79a061f0d6ff79bc9763ae",
+      "title": "Hot Chips 2026: Nvidia breaks down 88-core Vera CPU — spatial multithreading benchmarked, 1.2 TB/s SOCAMM2 memory, agentic workloads detailed, and more",
+      "url": "https://www.tomshardware.com/pc-components/cpus/hot-chips-2026-nvidia-breaks-down-88-core-vera-cpu-spatial-multithreading-benchmarked-1-2-tb-s-socamm2-memory-agentic-workloads-detailed-and-more",
+      "source": "rss:tomshardware",
+      "published_at": "2026-08-25T11:53:48Z",
+      "raw_summary": "Nvidia has provided more color on its Vera CPU for agentic data centers at Hot Chips 2026, showcasing the benefits of spatial multithreading and the power benefits of the LPDDR5X memory system.",
+      "score": 9,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Hot Chips 2026上Nvidia 88核Vera CPU详解：空间多线程、SOCAMM2内存、agentic负载，是CPU架构与AI基础设施关键一手信息。",
+      "queued_at": "2026-08-25T12:04:16Z"
+    },
+    {
       "id": "27be27fcb74f8301dab86ff57e70cc822dc80c07",
       "title": "How to Train a Critic Stably and Efficiently [Penghui Qi, Xiangxin Zhou, Wee Sun Lee]",
       "url": "http://arxiv.org/abs/2608.23566v1",
@@ -194,6 +207,32 @@
       "source_traceable": true,
       "why": "腾讯开源WeMM多模态Embedding（2B/4B/9B三档），4096维L2归一化，附技术报告，含HF权重与GitHub链接，可直接复现。",
       "queued_at": "2026-08-25T11:31:07Z"
+    },
+    {
+      "id": "881265f18b997e7af0dd8742f8b55ca7408fceb7",
+      "title": "Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original",
+      "url": "https://huggingface.co/blog/multiversecomputingcai/quantization-aware-healing",
+      "source": "rss:hf-blog",
+      "published_at": "2026-08-25T11:39:24Z",
+      "raw_summary": "",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "4-bit量化后反超全精度模型的具体方法（Quantization-Aware Healing），HF博客通常含可复现细节，值得读。",
+      "queued_at": "2026-08-25T12:04:16Z"
+    },
+    {
+      "id": "71c632d646b2207b5c40dc5f80a9f4474de56339",
+      "title": "Xiaomi unveils the Xring O100, a 6nm AI accelerator to boost its MiMo models when paired with its O3 mobile chip, and the 3nm Xring D100 for autonomous driving (Iris Deng/South China Morning Post)",
+      "url": "https://www.techmeme.com/260825/p11#a260825p11",
+      "source": "rss:techmeme",
+      "published_at": "2026-08-25T11:40:08Z",
+      "raw_summary": "Iris Deng / South China Morning Post: Xiaomi unveils the Xring O100, a 6nm AI accelerator to boost its MiMo models when paired with its O3 mobile chip, and the 3nm Xring D100 for autonomous driving&nbsp; &mdash;&nbsp; Chinese tech giant's Xring O3 3nm AI processor scheduled to debut aboard folding smartphone in September",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "小米自研6nm AI加速器Xring O100与3nm D100（自动驾驶），国产端侧AI芯片重要节点。",
+      "queued_at": "2026-08-25T12:04:16Z"
     },
     {
       "id": "91d8faa919e1a2b28b837e932e6b3a02a2311052",
@@ -480,45 +519,6 @@
       "source_traceable": true,
       "why": "DuckDB v2.0转向C/S架构支持分布式，是嵌入式OLAP引擎架构演变的实质工程进展。",
       "queued_at": "2026-08-25T07:09:26Z"
-    },
-    {
-      "id": "be420a33f38ddc3e6de56a7a2d35bc2000b40bef",
-      "title": "Redefining Roles For Edge And Cloud AI",
-      "url": "https://semiengineering.com/redefining-roles-for-edge-and-cloud-ai",
-      "source": "rss:semiengineering",
-      "published_at": "2026-08-25T07:15:21Z",
-      "raw_summary": "The race is on for localized intelligence. The post Redefining Roles For Edge And Cloud AI appeared first on Semiconductor Engineering.",
-      "score": 7,
-      "angle": "route",
-      "source_traceable": false,
-      "why": "Edge与Cloud AI的职责重新划分是当前重要范式议题，SemiEngineering通常会展开多位专家观点。",
-      "queued_at": "2026-08-25T07:59:25Z"
-    },
-    {
-      "id": "f82f60a44a9e2fd582e4673f369f1d4562948eca",
-      "title": "Research Bits: Aug. 25",
-      "url": "https://semiengineering.com/research-bits-aug-25",
-      "source": "rss:semiengineering",
-      "published_at": "2026-08-25T07:01:30Z",
-      "raw_summary": "Bacterial transistors; forgetful antiferroelectrics; high-entropy mixing. The post Research Bits: Aug. 25 appeared first on Semiconductor Engineering.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "细菌晶体管、反铁电遗忘、高熵混合三项前沿器件研究简报，可作为论文线索索引。",
-      "queued_at": "2026-08-25T07:59:25Z"
-    },
-    {
-      "id": "9ef7923d308a46867869d3c9c036cd6a915d1f0d",
-      "title": "突破具身智能物理死角：IJCAI 2026 具身智能泛化与控制突破",
-      "url": "https://www.leiphone.com/category/private/5yb9zka19rhtgz0o.html",
-      "source": "rss:leiphone",
-      "published_at": "2026-08-25T06:42:00Z",
-      "raw_summary": "告别理想仿真，中国学术团队用物理工程方案回应落地挑战。&nbsp; &nbsp; 作者丨张璐&nbsp; &nbsp; 编辑丨岑峰&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;过去一年多里，具身智能似乎按下了快进键。从 Physical Intelligence 发布的π₀到开源社区追捧的OpenVLA，VLA大模型一路高歌猛进。在各种标准基准测试和精心搭建的实验室 Demo 中，机械臂叠衣服、拿取物品流畅得宛如人类，动辄刷出 90% 甚至 95% 以上的成功率。然而，当全行业都在欢呼“机器人的 GPT 时刻”到来时，前沿学术界与产业界却爆发了一场剧烈的反思：这些动辄数十亿参数的具身大模型，真的学会“举一反三”了吗？还是在“死记硬背”？在主流学术视角中，VLA 大模型像是给机器人装上了具备常识与规划能力的“大脑”。但要让机械体真正干好精细活，仅有一个聪明的大脑远远不够。最新实验数据表明，面对物品位置的随机挪动或新指令组合时，纯端到端大模型往往会受到“空间过拟合”的约束，末端执行成功率会出现剧烈衰减。这恰恰说明：具身智能要真正走出实验室，不仅需要大模型提供常识和高层决策，更需要扎实的工程技术去打造精准、稳健的“小脑”。下面雷峰网盘点入选&nbsp;IJCAI 2026&nbsp;的&nbsp;6 项中国团队成果。它们并非要替代大模型，而是从空间泛化、盲区感知到极端控制，为具身智能补齐了通往真实物理世界最关键的拼图。01解决死记硬背，大模型如何搞定未见场景具身智能的核心瓶颈之一在于真正的泛化能力。目前的VLA动辄拥有数十亿参数，但在面对没有见过的指令组合或场景变化时，表现往往大打折扣。▎泛化成功率跌破 21%：不重训模型，如何把成功率拉回 83%论文：《VLAs Are Confined yet Capable of Generalizing to Novel Tasks》作者：李全义（论文独立作者，一路从北邮本科、爱丁堡硕士深造至新加坡国立大学 CLeaR Lab 博士，现任 Oxa 高级应用科学家）论文链接：https://arxiv.org/pdf/2505.03500v5假设你给机器人下达了一道指令：“把奶酪放进柜子”。如果在训练数据里，这块奶酪总是摆在桌子左侧，那么当你在现实中把奶酪挪到桌子右侧时，会发生什么？在李全义博士最新的研究中，发生了令人啼笑皆非的一幕：主流 VLA 大模型依然会机械地伸向桌子左侧。模型根本没有理解什么是“奶酪”，它只是把词汇与训练集里的固定物理坐标进行了强行绑定。 &nbsp;无论是π₀、OpenVLA 还是 UniVLA，虽然它们在标准测试集里能刷出 95% 以上的超高成功率，但李全义博士专门构建了 20 个外推新任务的&nbsp;libero-",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "IJCAI 2026中国团队针对具身智能仿真-现实差距的物理工程方案综述，指向π₀/OpenVLA等VLA模型的落地边界。",
-      "queued_at": "2026-08-25T08:53:54Z"
     }
   ],
   "digest_last_date": "2026-08-25"
