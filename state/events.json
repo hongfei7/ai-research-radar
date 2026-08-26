@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-26T01:30:25Z",
+  "updated_at": "2026-08-26T02:55:16Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -49818,9 +49818,9 @@
       "first_seen_at": "2026-08-25T20:03:03Z",
       "first_published_at": "2026-08-25T17:36:50Z",
       "last_updated_at": "2026-08-25T20:03:03Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 7,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "",
       "ticker_counts": {
         "英伟达": 1
@@ -50175,6 +50175,288 @@
       "status": "developing",
       "deep_analysis": "**1. 看多逻辑**\n\n- **技术刚需确立**：AI算力密度提升驱动800VDC架构落地，超级电容在毫秒至秒级脉冲场景具备不可替代性，兼具备电功能形成\"锂电+超容\"复合方案，单机柜搭载量与渗透率有望同步攀升。\n\n- **供给紧缺叙事**：技术壁垒（材料一致性、模组管理）与认证壁垒（数据中心长周期验证）导致名义产能与大容量有效产能存在巨大gap，2027—2028供需缺口有望支撑价格弹性，头部厂商盈利预期可上修。\n\n- **AI Capex外溢受益**：北美超算客户（GB200/GB300/Rubin等）对瞬时功率补偿需求明确，国内AIDC跟进节奏若超预期，行业β弹性显著。\n\n**2. 看空风险**\n\n- **替代技术扰动**：混合电容器（锂离子电容器）、固态电池快充技术路线持续演进，若功率密度差距收窄，超容\"不可替代性\"叙事可能弱化；钛酸锂等电池路线亦可竞争秒级备电场景。\n\n- **时间窗口存疑**：中金自身标注\"非覆盖标的\"，2027—2028供需判断为卖方预测，800VDC实际渗透节奏受GPU出货、IDC配电改造周期制约，若推迟1—2年则产能紧缺逻辑不成立。\n\n- **估值与预期透支**：题材性标的（如江海股份、法拉电子）已部分定价供给紧缺预期，若产能扩张超预期或需求节奏不及预期，存在\"看对方向、错过时点\"风险。\n\n**3. 关键驱动因素**\n\n- **800VDC架构在海外CSP及国内超算客户的实际落地节奏**，决定超容单机搭载价值量何时放量；\n- **大容量超容有效产能扩张进度**（江海、法拉等厂商扩产公告及良率数据），验证紧缺周期判断。\n\n**4. 市场影响评估**\n\n- **短期**：题材催化为主，相关标的或维持高波动，但因属卖方研报驱动且非覆盖重点，持续性有限；\n- **中期（2026—2028）**：若800VDC按计划渗透且产能扩张滞后，行业有望从\"主题投资\"切换至\"业绩兑现\"，产业链中真正具备大容量量产能力的厂商将获得戴维斯双击。\n\n**5. 时间线推断**\n\n- **2026Q4—2027H1**：800VDC在头部CSP小批量验证，超容渗透率从0到1的关键观察窗口；\n- **2027H2—2028**：若产能扩张未跟上需求，供给紧缺兑现，量价齐升窗口；\n- **关键风险节点**：2026年若GPU功耗升级放缓",
       "ticker_counts": {},
+      "max_item_score": 5
+    },
+    "evt_3825f4b2c939": {
+      "event_id": "evt_3825f4b2c939",
+      "title": "NVIDIA Groq 3 LPX Now in Full Production With World-Class Speed for Agentic AI",
+      "summary": "资讯标题称英伟达（NVIDIA）Groq 3 LPX 已进入全面量产，定位为面向智能体（Agentic）AI 的高性能推理加速方案。原文仅提供标题，无具体性能数据、产能规模、客户或定价细节，信息密度极低。值得关注的原因：Groq 系英伟达已收购的推理芯片资产，若 LPX 量产属实，意味着英伟达在推理侧形成独立于 GPU 的专用加速产品线，对推理芯片市场竞争格局有潜在影响。",
+      "tickers": [
+        "英伟达"
+      ],
+      "themes": [
+        "advanced_packaging",
+        "chip_supply",
+        "compute_demand",
+        "model_capability"
+      ],
+      "direction": {
+        "英伟达": "positive"
+      },
+      "item_ids": [
+        "bd2a9fdb63a0217e40cfcb98a1a85b4fe9261232"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-26T02:53:01Z",
+      "first_published_at": "2026-08-26T01:55:45Z",
+      "last_updated_at": "2026-08-26T02:53:01Z",
+      "is_active": true,
+      "significance": 8,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "英伟达": 1
+      },
+      "max_item_score": 8
+    },
+    "evt_dbfafaacaf95": {
+      "event_id": "evt_dbfafaacaf95",
+      "title": "实测豆包工作：WorkBuddy迎来最强对手？",
+      "summary": "",
+      "tickers": [
+        "字节跳动",
+        "百度",
+        "腾讯",
+        "阿里巴巴"
+      ],
+      "themes": [
+        "ai_monetization",
+        "model_capability"
+      ],
+      "direction": {},
+      "item_ids": [
+        "c69154cb9f19a00fbb9e9042598d2a1e627c4b62"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-26T02:53:01Z",
+      "first_published_at": "2026-08-26T02:00:56Z",
+      "last_updated_at": "2026-08-26T02:53:01Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "豆包工作作为字节跳动面向企业级AI办公场景的重要产品，其与WorkBuddy（大概率指向阿里通义系或百度系同类产品）的正面较量，标志着国内大模型竞争从C端流量争夺向B端生产力工具的纵深推进。从多方视角看，字节跳动拥有豆包大模型底层能力迭代速度、三大AI产品（豆包/Cici/即梦）积累的亿级用户数据反馈闭环，以及飞书天然的B端入口优势，这些都是其抢占企业工作流AI化的关键筹码。若产品实测体验确实形成差异化（如同类Notion+Copilot的深度集成体验），短期有望带动字节系生态（飞书、抖音电商客服）协同放量，并在AI订阅制付费场景中率先跑通商业模式，对百度文心、阿里通义、腾讯混元的同类产品形成挤压。\n\n但空方风险同样不容忽视：第一，企业级AI办公的核心壁垒不在模型本身，而在于工作流数据沉淀与生态绑定。字节缺乏传统ERP、OA领域积累，在面对钉钉（阿里）和企业微信（腾讯）数亿级企业用户基础时，渠道渗透和迁移成本极高；第二，AI工作助手目前同质化严重，WorkBuddy等产品如果先发优势已形成用户习惯，豆包后发追赶需要持续的算力与补贴投入，ROI存疑；第三，企业级SaaS付费意愿受宏观经济影响显著，若2026年企业IT支出收紧，变现节奏可能远低于预期。\n\n关键需跟踪的变量有二：一是豆包工作正式上线后的定价策略与免费试用规模，这直接决定用户获取速度；二是飞书与豆包工作的深度集成进展，以及与钉钉、企业微信在API生态层面的竞争态势。\n\n短期（1-3个月）影响有限，更多是市场情绪催化字节跳动估值预期及港股科技板块整体beta；中期（6-12个月）若实测数据持续验证产品力，可能触发行业价格战，加速AI办公赛道格局重塑，对百度、阿里、腾讯的同类业务线估值产生压制。\n\n后续关键节点：预计2026年Q4将迎来豆包工作正式商用发布及企业版定价披露；2027年Q1-Q2将进入首批B端大客户落地验证期，可作为商业模式是否跑通的核心观察窗口。",
+      "ticker_counts": {
+        "字节跳动": 1,
+        "阿里巴巴": 1,
+        "腾讯": 1,
+        "百度": 1
+      },
+      "max_item_score": 7
+    },
+    "evt_31d997846b58": {
+      "event_id": "evt_31d997846b58",
+      "title": "“十五五”时期我国将加快培育“人工智能+”“机器人+”等重大应用场景",
+      "summary": "国新办发布会透露，“十五五”期间我国将加快培育“人工智能+”“机器人+”等重大应用场景，包括5G、工业互联网、北斗等赛道。工信部将建立标志性项目遴选、新技术新产品新场景清单发布、供需对接等机制，推动创新成果在真实场景中完成测试验证、迭代升级、产业化落地与大规模应用。此举明确了AI应用场景的国家级推进路径，对算力、模型及终端应用产业链有系统性拉动意义。",
+      "tickers": [
+        "中科曙光",
+        "浪潮信息",
+        "百度",
+        "阿里巴巴"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand",
+        "domestic_substitution",
+        "policy_export"
+      ],
+      "direction": {},
+      "item_ids": [
+        "59291547fd80f2e47ecd4b4d315a068b7c4df90c"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-26T02:53:01Z",
+      "first_published_at": "2026-08-26T02:27:46Z",
+      "last_updated_at": "2026-08-26T02:53:01Z",
+      "is_active": true,
+      "significance": 5,
+      "status": "developing",
+      "deep_analysis": "看多逻辑：\n1. 政策从\"鼓励导向\"升级为\"机制化推进\"，工信部建立项目遴选",
+      "ticker_counts": {
+        "中科曙光": 1,
+        "阿里巴巴": 1,
+        "浪潮信息": 1,
+        "百度": 1
+      },
+      "max_item_score": 5
+    },
+    "evt_e828bc0b5f9f": {
+      "event_id": "evt_e828bc0b5f9f",
+      "title": "工信部：加快新一代通信网、算力网规划建设，加强6G技术研发",
+      "summary": "8月26日国新办新闻发布会上，工信部介绍\"十五五\"规划实施相关情况，表示将加快新一代通信网、算力网规划建设，推动5G、工业互联网规模化应用，加强6G技术研发，增强网络与数据安全保障，巩固信息通信业竞争优势。值得关注的是，算力网被列入\"十五五\"重点建设方向，6G研发提速有望带动通信设备、芯片及终端产业链。",
+      "tickers": [
+        "中科曙光",
+        "工业富联",
+        "浪潮信息",
+        "海光信息"
+      ],
+      "themes": [
+        "chip_supply",
+        "compute_demand",
+        "datacenter_power",
+        "policy_export"
+      ],
+      "direction": {},
+      "item_ids": [
+        "445759b7539cc5ed46ead0690e3235cdbdfd76d8"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-26T02:53:01Z",
+      "first_published_at": "2026-08-26T02:17:53Z",
+      "last_updated_at": "2026-08-26T02:53:01Z",
+      "is_active": true,
+      "significance": 5,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "中科曙光": 1,
+        "海光信息": 1,
+        "工业富联": 1,
+        "浪潮信息": 1
+      },
+      "max_item_score": 5
+    },
+    "evt_b66abdd48c6a": {
+      "event_id": "evt_b66abdd48c6a",
+      "title": "Alibaba and ByteDance Exit Gaming Assets as Capital Shifts Toward AI",
+      "summary": "阿里巴巴同意将灵犀游戏业务以超15亿美元售予私募基金Trustar Capital；字节跳动此前已将Mobile Legends发行商沐瞳以约60亿美元出售给沙特背景的Savvy Games。两笔交易合计超75亿美元，反映中国互联网集团内部正进行资本再配置，将资源从游戏业务转向AI领域，而非简单的战略撤退。",
+      "tickers": [
+        "字节跳动",
+        "腾讯",
+        "阿里巴巴"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand"
+      ],
+      "direction": {
+        "阿里巴巴": "neutral",
+        "字节跳动": "neutral"
+      },
+      "item_ids": [
+        "4c7e34cda8ebbd37cb4a6a11416d94476060e6e7"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-26T02:53:01Z",
+      "first_published_at": "2026-08-26T01:53:03Z",
+      "last_updated_at": "2026-08-26T02:53:01Z",
+      "is_active": true,
+      "significance": 5,
+      "status": "developing",
+      "deep_analysis": "看多逻辑：\n1. 75亿美元资金回流，本质是\"游戏→AI\"资本再配置，而非战略退缩。管理层主动剥离成熟但低增长资产，叠加近期AI capex表态积极，资本配置效率提升，估值切换叙事强化。\n2. 释放的现金与组织资源直接利好国产AI算力链：阿里可加速平头哥ASIC迭代与阿里云AI基建投入，字节可将资源集中于豆包等C端AI产品；国产芯片、先进封装、HBM国产替代等环节获得间接订单与生态支撑。\n3. 腾讯作为国内游戏龙头，在两大对手退出后市场份额有望进一步集中，叠加其混元大模型与游戏AI化协同，形成\"现金牛反哺AI",
+      "ticker_counts": {
+        "阿里巴巴": 1,
+        "字节跳动": 1,
+        "腾讯": 1
+      },
+      "max_item_score": 5
+    },
+    "evt_c0cd3be7121e": {
+      "event_id": "evt_c0cd3be7121e",
+      "title": "数据中心人去楼空！网友曝特斯拉FSD入华无望：博主称6.4万白花了；道路交通法新草案：自动驾驶出事故车企负责！马云买入阿里超6亿港元",
+      "summary": "多条国内科技/AI资讯汇总：1）特斯拉为FSD入华筹备的上海数据中心人去楼空，对接团队全撤，FSD几年内或无缘中国市场，此前花6.4万元选购FSD包的车主权益或受损；2）道路交通安全法修订草案首次将自动驾驶写入法律，明确事故责任由车企承担；3）马云连日增持阿里港股逾6亿港元；4）海力士淘宝旗舰店因品牌授权到期下架全部产品；5）字节发布\"豆包工作\"，与飞书深度打通；6）9车企召回超427万辆车；7）苹果发布Mac mini，涨价2500元、首搭2纳米芯片。",
+      "tickers": [
+        "海力士",
+        "苹果",
+        "阿里巴巴"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand",
+        "edge_ai",
+        "policy_export"
+      ],
+      "direction": {
+        "阿里巴巴": "positive"
+      },
+      "item_ids": [
+        "25bf90387e3e1128a8d6280a12c028cd9cbbc0aa"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-26T02:53:01Z",
+      "first_published_at": "2026-08-26T00:21:00Z",
+      "last_updated_at": "2026-08-26T02:53:01Z",
+      "is_active": true,
+      "significance": 6,
+      "status": "developing",
+      "deep_analysis": "**1. 看多逻辑**\n\n① **FSD入华搁置，国内智驾链受益最为直接**。特斯拉上海数据中心人员撤离、团队解散，意味着外资L2+/L3方案短期内难以通过国内数据合规审查，腾出的高端智驾市场空间将被华为（乾崑ADS）、小鹏（XNGP/XOS）、理想（端到端+VLM）等本土玩家快速瓜分，国产激光雷达、域控、HUD等Tier1供应商订单确定性增强。\n\n② **自动驾驶立法明确车企责任，长期利好头部**。《道路交通安全法》修订草案首次将自动驾驶纳入法律框架，事故责任由车企承担，短期内会抬升合规成本，但中长期将出清技术能力薄弱、合规体系不健全的中小厂商，加速行业向头部集中，类似于\"新国标\"对新能源车的洗牌效应。\n\n③ **马云增持+字节豆包工作落地+苹果2nm Mac mini**，分别指向三类催化：阿里内部信心信号（且6亿港元规模可观）、AI企业级变现路径打通、先进制程芯片需求强劲，三者共振强化AI/半导体赛道β。\n\n**2. 看空风险**\n\n① **9车企召回427万辆车**信号负面，可能预示监管对智驾/智能座舱的审查趋严，叠加立法明确车企责任，未来涉智驾功能的OTA升级、数据安全审计成本将系统性上升，压制中小车企利润空间。\n\n② **海力士淘宝旗舰店下架**虽可能仅为品牌授权常规调整，但若反映存储渠道库存压力或国产替代加速，将对HBM/DRAM价格形成下行预期，与近期\"compute_demand\"主题形成对冲。\n\n③ **苹果Mac mini涨价2500元**虽搭载2nm芯片凸显技术领先，但涨价幅度超市场预期，在PC需求疲软环境下，恐抑制销量爬坡，2nm初期良率与产能爬坡风险需关注；且该事件对A股苹果链偏负面。\n\n**3. 关键驱动因素**\n\n① **《道路交通安全法》修订草案最终版本与落地时间**——责任界定细则、L3/L4准入试点城市名单将决定智驾产业链估值修复幅度。\n\n② **阿里后续港股回购/增持力度及电商+云业务基本面**——马云个人增持若延伸为公司层面回购，将形成持续资金面催化，需跟踪下一份季报中云收入与AI相关GMV占比。\n\n**4. 市场影响评估**\n\n**短期（1-3个月）**：国内智驾整车与Tier1（华为链、地平线、禾赛、速腾聚创）情绪修复，阿里港股获增持信号支撑，苹果链偏",
+      "ticker_counts": {
+        "阿里巴巴": 1,
+        "海力士": 1,
+        "苹果": 1
+      },
+      "max_item_score": 6
+    },
+    "evt_cbee3855c69b": {
+      "event_id": "evt_cbee3855c69b",
+      "title": "小鹏机器人，站在了C位",
+      "summary": "小鹏机器人完成首轮超9亿美元融资，投后估值约63亿美元（人民币约430亿元），刷新中国具身智能行业单轮私募融资纪录。IDG资本领投，高榕参投，腾讯、阿里作为战略投资者同时入局，为其在具身智能领域最大单笔投资之一。同日小鹏Q2财报显示汽车毛利率下滑、净亏损扩大，但市场关注度集中在机器人业务——分析师问题高度聚焦人形机器人量产规划与定价。430亿估值已超小鹏集团其他业务市值（约280亿）总和，行业横向看仅次于宇树科技。",
+      "tickers": [
+        "腾讯",
+        "阿里巴巴"
+      ],
+      "themes": [
+        "ai_monetization",
+        "edge_ai"
+      ],
+      "direction": {
+        "阿里巴巴": "positive",
+        "腾讯": "positive"
+      },
+      "item_ids": [
+        "a53c1cfddbcafb398941f0f2b566e6ba9c80de9c"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-26T02:53:01Z",
+      "first_published_at": "2026-08-26T01:26:00Z",
+      "last_updated_at": "2026-08-26T02:53:01Z",
+      "is_active": true,
+      "significance": 5,
+      "status": "developing",
+      "deep_analysis": "1. 看多逻辑\n\n- 顶级资本+战略协同共振：IDG领投、腾讯阿里同时入局，远超一般财务投资。互联网巨头将具身智能视为AI模型走出屏幕的物理出口，小鹏则同时具备整车制造、自动驾驶算法（视觉/规划/控制）和供应链能力，技术复用路径清晰，具备稀缺的\"软硬一体\"禀赋。\n\n- 行业卡位与赛道空间：投后估值仅次于宇树科技，稳居国内第一梯队。当前人形机器人仍处产业化早期，类比2014年前后电动车格局，先发者享有估值溢价和生态主导权，430亿估值若绑定未来2-3年量产预期并非离谱。\n\n2. 看空风险\n\n- 估值严重透支基本面：430亿估值已超过小鹏集团其他业务",
+      "ticker_counts": {
+        "阿里巴巴": 1,
+        "腾讯": 1
+      },
+      "max_item_score": 5
+    },
+    "evt_b648f8acc473": {
+      "event_id": "evt_b648f8acc473",
+      "title": "Expectation, Backlash, Recovery, and Excitement: How Model Releases Shape Reddit Perceptions of Conversational AI Systems [Vahid Rahimzadeh, Yury Zhauniarovich, Savvas Zannettou]",
+      "summary": "arXiv论文基于Reddit长期大规模讨论，分析了Anthropic、OpenAI、xAI（Grok）、DeepSeek四大对话式AI厂商在模型发布、特性更新、安全干预及访问策略变化下的用户感知动态。研究采用情感分类与主题概念分析，发现：Anthropic凭Claude Code及产品-模型契合度呈最清晰正面发布形象；OpenAI在GPT-5/5.1经历反弹与修复；Grok-3受厂商身份与政治议题影响；DeepSeek-R1获工程赞誉但伴随审查、访问与可靠性担忧。结论：模型发布实质上是面向用户的干预事件，重塑公众讨论。",
+      "tickers": [
+        "Anthropic",
+        "DeepSeek",
+        "OpenAI",
+        "xAI"
+      ],
+      "themes": [
+        "ai_monetization",
+        "model_capability",
+        "policy_export"
+      ],
+      "direction": {
+        "Anthropic": "positive",
+        "OpenAI": "neutral",
+        "xAI": "negative",
+        "DeepSeek": "neutral"
+      },
+      "item_ids": [
+        "23c1668ff1e52b83e9879f908f0e059bee94716a"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-26T02:53:01Z",
+      "first_published_at": "2026-08-25T15:00:44Z",
+      "last_updated_at": "2026-08-26T02:53:01Z",
+      "is_active": true,
+      "significance": 5,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "OpenAI": 1,
+        "Anthropic": 1,
+        "xAI": 1,
+        "DeepSeek": 1
+      },
       "max_item_score": 5
     }
   }
