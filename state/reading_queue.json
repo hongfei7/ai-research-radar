@@ -222,6 +222,19 @@
       "queued_at": "2026-08-26T11:14:56Z"
     },
     {
+      "id": "27602a118a5fab576579e1cd521eef47c817723d",
+      "title": "ECCV 2026｜4步去噪实现12.66 FPS，清华、港科大提出实时流式视频编辑框架LiveEdit",
+      "url": "https://www.leiphone.com/category/private/qrcx7pem5vt7uoym.html",
+      "source": "rss:leiphone",
+      "published_at": "2026-08-26T09:20:00Z",
+      "raw_summary": "来源：机器之心原文链接：https://mp.weixin.qq.com/s/HT6AMtSUoKPSpEKI2TLy5Q文本指令驱动的视频编辑技术正在从离线内容生产走向直播特效、视频会议和增强现实等在线交互场景。然而，高质量的视频扩散模型的通常依赖于对完整视频进行双向时空注意力处理，即模型需要等待未来帧到齐，再对整段视频进行联合处理。这种范式能够获得较好的编辑结果，却难以满足低延迟、持续输入与即时输出的要求。近日，清华大学与香港科技大学的研究团队提出 LiveEdit，一种面向通用文本指令的实时流式视频编辑框架。该方法以因果、分块的方式处理持续到来的视频，在 4 步 / 视频块的推理条件下实现 12.66 FPS 的流式编辑，并能保持被编辑区域的准确性以及未编辑区域的一致性。论文标题：LiveEdit: Towards Real-Time Diffusion-Based Streaming Video Editing论文链接：https://arxiv.org/abs/2606.26740开源代码：https://github.com/cp-cp/LiveEdit目前，该工作已被计算机视觉顶级会议 ECCV 2026 接收，其训练、测试代码和模型均已开源。迈向实时视频编辑的两道门槛流式视频编辑与常规视频生成任务存在差异：视频生成可以从高斯噪声中自由地合成新的内容，而编辑任务需要在改变目标区域的同时，尽可能保持原始视频中的人物结构、背景纹理、光照和运动轨迹。因此，直接复用面向生成的流式框架，往往会带来背景闪烁、结构漂移或编辑范围失控。1. 从双向注意力到因果注意力，会发生分布偏移双向视频扩散模型通常能够同时访问过去帧和未来帧，并利用邻近帧的双向信息维持结构稳定。进入流式场景后，未来帧尚未到来，模型只能查看当前与历史内容。论文观察到，如果直接截断未来帧，原本集中于邻近帧的注意力会被摊薄到更长的历史范围，破坏预训练阶段形成的局部时序先验。最终表现为模型对原始视频结构的「遗忘」，并在长时间编辑中出现闪烁或漂移。2. 未编辑区域的重复计算，成为实时推理的主要负担在多数编辑任务中，真正发生语义变化的区域只占画面的一部分。背景、结构和大量静态纹理在相邻视频块之间高度相似，但标准视频扩散模型仍会让所有空间 Token 反复通过 Self-Attention、Cross-Attention 和 FFN。对这些未编辑区域进行密集重计算，不仅浪费算力，也可能让本应保持不变的内容被模型反复「重画」。LiveEdit：先迁移编辑能力，再压缩为 4 步因果推理LiveEdit 设计了渐进式的三阶段蒸馏流程。其基础模型建立在 Wan2.1-T2V-1.3B 之上，训练数据由从现有的视频编辑数据集 Ditto-1M 筛选得到的两万组高质量数据对。阶段一：Foundation Tuning，建立高质量双向编辑先验第一阶段保留完整的双向 DiT 结构，让模型充分学习从原始视频、编辑指令到编辑结果的复杂映射。为了避免序列长度进一步增长带来的计算开销，在输入端将原始视频潜变量与噪声潜变量沿通道维度注入，而不是在时空序列维度追加 Token。该阶段的目标不是追求流式推理，而是先获得稳定、准确的编辑能力。阶段二：Teacher Forcing，对齐分块因果注意力第二阶段引入块状因果注意力（chunk-wise causal attention）。每个视频块只能访问当前块和历史块，时间块大小设置为 3 个潜空间帧。通过教师强制（Teacher Forcing），模型在明确的因果约束下学习复",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "清华+港科大的ECCV 2026论文，有明确架构（因果分块、4步去噪、12.66 FPS）、可复现的arXiv和GitHub链接，对实时视频扩散模型的工程边界认知有实质增量。",
+      "queued_at": "2026-08-26T11:49:56Z"
+    },
+    {
       "id": "44c3327efe59b41893d70a05a81536fdb8eae95e",
       "title": "Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses [Zhaochen Yu, Yingcheng Wu, Zhenfei Yin, Kaiyuan Chen, Zhe Zhao]",
       "url": "http://arxiv.org/abs/2608.24876v1",
@@ -506,19 +519,6 @@
       "source_traceable": true,
       "why": "智能眼镜作为第一人称智能平台的综述，涉及感知-状态-交互-动作闭环，可了解该方向研究边界与硬件约束。",
       "queued_at": "2026-08-26T03:55:36Z"
-    },
-    {
-      "id": "53a77ed83d119e526ebd2b19a5fa0a6e754f4e37",
-      "title": "Catching bugs in scikit-learn [D]",
-      "url": "https://www.reddit.com/r/machinelearning/comments/1vym6cn/catching_bugs_in_scikitlearn_d",
-      "source": "reddit:ml",
-      "published_at": "2026-08-26T03:57:42Z",
-      "raw_summary": "sklearn 1.9 fixed a bug in how BayesianRidge computes its uncertainty. We traced predict on 1.8 and 1.9 and compared the two formulas it actually computes, see if you can spot what changed before the notebook tells you. https://github.com/aadya940/scikit-verify/blob/master/examples/sklearn_bug_hunting.ipynb &#32; submitted by &#32; /u/Lost-Dragonfruit-663 [link] &#32; [comments]",
-      "score": 7,
-      "angle": "engineering",
-      "source_traceable": true,
-      "why": "sklearn 1.9修复BayesianRidge不确定性计算bug的实测分析，有notebook可复现，对ML工程实践有直接启发。",
-      "queued_at": "2026-08-26T04:42:11Z"
     }
   ],
   "digest_last_date": "2026-08-26"
