@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-26T08:03:58Z",
-  "text": "当前共有 30 个活跃事件。要点包括: Indian AI infrastructure company AM Intelligence orders 9,000 Nvidia Vera Rubin systems and plans to offer 1GW of computing capacity as part of an $8B project (Saritha Rai/Bloomberg); NVIDIA Groq 3 LPX Now in Full Production With World-Class Speed for Agentic AI; OpenAI「辣椒芯」干翻英伟达！老黄股价不跌反涨; 软银考虑为OpenAI融资发行高达200亿美元的债券; Anthropic Readies Two New Claude Checkpoints for Release as Early as This Week。",
-  "since": "2026-08-26T08:03:58Z",
-  "active_event_count": 30,
+  "generated_at": "2026-08-26T09:06:44Z",
+  "text": "截至 2026-08-26 17:06 HKT，阿里800亿港元配售获2200亿超购、管理层增持超8亿，募资全数投向全栈AI基建；IDC预警全球内存紧缺或延至2027；上海接连发布集成电路产业能级提升与\"芯—模—云\"AI生态政策；百度股东会通过双重主要上市决议，有望近期纳入港股通；前华为王云鹤创办基元律动，押注多模型Harness赛道。",
+  "since": "2026-08-26T09:06:44Z",
+  "active_event_count": 28,
   "key_themes": [
     "compute_demand",
     "ai_monetization",
-    "model_capability",
     "chip_supply",
+    "model_capability",
     "domestic_substitution"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
   "cross_analysis": "【核心矛盾】\nDeepSeek 2026年前7月财务数据存在解读分歧：36kr/新浪财经(medium)与The Information/techmeme(low)报出的营收(4.75亿元≈$70.7M)与亏损(7.15亿≈$106M)数字完全一致，但方向判断相反——前者标\"positive\"(9倍增长叙事)，后者标\"neutral\"(亏损未明显收窄)。分歧核心在于\"高增长是否足以覆盖持续高额亏损\"：DeepSeek 2025全年净亏$139M，2026前7月已达$106M，全年亏损大概率扩大，国内大模型\"算力投入-商业化\"剪刀差叙事仍存争议。\n\n【新兴趋势】\n1)开源模型与国产/非英伟达硬件协同成多源共振信号：阿里Qwen3.8-Flash-Next发布(Reddit)+千问办公国际版公测(36kr)+Qwen3.6-35B-A3B在AMD MI350X上跑出vLLM 2.16倍吞吐(Reddit)，显示Qwen系从模型层、应用层到硬件适配层全线推进；2)AI数据中心融资端风险首次被FT专题报道，银行/保险/承销机构正在主动限制敞口；3)Semi Engineering博客综述集中提及CPO量产、scale-up网络、on-device AI",
-  "trend_spotting": "端侧AI的\"内存墙拐点\"已至。小米O100的1.22TB/s近存带宽+330 Token/s推理、D100支持200B参数本地部署，意味着消费级终端首次摸到\"可独立运行大模型\"的门槛。这不是渐进式提升——200B本地化是质变临界点：一旦模型权重+KV cache能塞进终端，边缘推理将开始实质侵蚀云端推理份额。\n\n三个被低估的信号：\n\n一、3D WoW近存计算从论文走向量产芯片，说明\"内存墙\"已替代\"FLOPS\"成为算力竞赛的主战场。后续台积电先进封装、海力士HBM之外的定制存储方案将受益。\n\n二、3nm先进制程下沉到车载（D100），汽车SoC正式跨入\"数据中心级\"工艺节点，智驾芯片与手机SoC开始共享同一代工艺平台——传统车规芯片厂商（Mobileye、英伟达Orin/Thor）的护城河被国产玩家直接绕开。\n\n三、OpenAI自研ASIC若量产，将释放GPU供给形成\"意外宽松\"——但更深层信号是，超大规模客户集体去"
+  "trend_spotting": "【新兴趋势】阿里\"由轻变重\"标志着港股AI基建融资范式切换——800亿港币配售价22个月最大单，超购近2倍且获卡塔尔、挪威主权基金等长线机构背书，三大管理层48小时内个人增持超8亿港币，4700亿现金储备+3800亿三年AI预算落地近半，本质是用股权融资提前锁死算力与HBM供给，AI Capex货币化周期开始替代轻资产估值逻辑。\n\n【早期信号】多模型路由（Harness）层正成为被低估的中间件赛道。Stripe以约75亿美元（5月估值仅13亿）收购OpenRouter，国内TokenRhythm单日Token调用量已超5000亿、5.4万用户、GitHub Stars 6600+——模型聚合层从\"技术中间件\"向\"流量入口+定价权\"演化，国内大厂（阿里、字节）若不卡位，将重演支付通道被收编的历史。\n\n【市场盲点】内存紧缺持续至2027年、价格2028年触顶的判断被严重低估其通胀传导效应。亚马逊/苹果/微软/戴尔已集体涨价，这不是短期事件，而是AI算力对存储产能的虹吸将形成中期硬件成本通胀，AI PC与AI手机渗透曲线将因此被压制至少两个季度。\n\n【拐点】9月3日考察日前百度双重上市能否生效、9月7日能否纳入港股通——若兑现，将触发港股AI标的流动性与估值修复的横向扩散（阿里、腾讯、金山、联想等可比标的），是当前最近的一个确定性事件型窗口。"
 }

@@ -131,6 +131,45 @@
       "queued_at": "2026-08-26T08:01:00Z"
     },
     {
+      "id": "0f6b0a7be4d163ca808b8761333830e32ea2e8e9",
+      "title": "上海：构建“芯—模—云”生态体系，建设通用人工智能主导科学研究基座平台和人工智能测评基础设施",
+      "url": "https://36kr.com/newsflashes/3956113781554313?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-08-26T08:47:02Z",
+      "raw_summary": "36氪获悉，上海市人民政府办公厅印发《上海市战略性新兴产业发展“十五五”规划》。其中提到，构建“芯—模—云”生态体系。打造全栈技术试验验证平台，基于领域专用语言开发统一中间层软件栈，建设通用人工智能主导科学研究基座平台和人工智能测评基础设施。重点发展：1.大模型和智能体。推动大模型在超长上下文、原生多模态等方面持续迭代，攻关高质量语料处理和合成技术，打造可自主学习和高效协作的通用智能体基座，深化政务、专业服务业等领域智能化应用，培养前沿部署工程师（FDE）团队。2.科学智能（AI for Science）。构建跨学科、多模态知识推理的通专融合科学模型，在生命、材料、物理等多学科领域实现科学发现全流程加速。3.具身智能。攻坚长程规划、灵巧操作等大小脑核心算法，构建高因果性与物理规律适配的世界模型和物理AI算法体系，打造虚实融合具身实训场。4.智算产业体系。攻克光电混合通讯、存算协同优化、预填充-解码分离等技术，打造云智融合的词元（Token）云服务产业体系。",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "上海\"十五五\"规划明确列出\"芯—模—云\"、AI for Science、具身智能、Token云等方向，是判断国内算力与AI产业政策走向的一手材料。",
+      "queued_at": "2026-08-26T09:03:32Z"
+    },
+    {
+      "id": "5e8487215946f4d2e132111fa29bb57833ea6807",
+      "title": "上海：进一步全面提升集成电路产业能级，加快高端芯片研发和产业化",
+      "url": "https://36kr.com/newsflashes/3956110763982212?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-08-26T08:43:58Z",
+      "raw_summary": "36氪获悉，上海市人民政府办公厅印发《上海市战略性新兴产业发展“十五五”规划》。其中提到，聚焦重点领域加强前瞻布局，进一步全面提升集成电路产业能级。重点发展：1.高端芯片和人工智能（AI）赋能设计。加快高端芯片研发和产业化；搭建芯片设计垂类模型和智能体，通过AI赋能实现设计流程重塑和仿真加速。2.先进封装。推进先进封装等新技术研发和量产应用，支持封装用设备、材料等研发。3.新型器件和新架构芯片。支持二维材料等新材料器件研发，推动三维堆叠架构芯片设计和流片。",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "上海\"十五五\"集成电路规划明确点出先进封装、3D堆叠、二维材料器件和AI赋能设计，是国内半导体路线一手政策信号。",
+      "queued_at": "2026-08-26T09:03:32Z"
+    },
+    {
+      "id": "27d3ce594807d200f8e27f9650a2702bcb783d26",
+      "title": "IJCAI 2026 专访：动作指挥计算，VLA 加速不降准 | GAIR Paper 125",
+      "url": "https://www.leiphone.com/category/private/hj6idm4nimdu3590.html",
+      "source": "rss:leiphone",
+      "published_at": "2026-08-26T06:09:00Z",
+      "raw_summary": "将动作从输出端搬到调度端，推理速度提升1.79倍。&nbsp; &nbsp; 作者丨邓哲敏&nbsp; &nbsp; 编辑丨齐铖湧&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;机器人想要真正走进千行百业、千家万户，有一道绕不开的坎：它得足够快。不说快到能打羽毛球那，至少得快到让人觉得这玩意儿能用。一个机械臂每动一下都要停顿两三秒，哪怕成功率再高，在工业场景里算下来的投入产出比也很难说服人。VLA 模型是当前具身智能领域最受关注的技术路线之一。它把视觉感知、语言理解和动作生成整合进一套模型，让机器人能够依据语言指令完成复杂操作任务。但 VLA 模型有一个部署层面的老大难问题：推理太慢。每个控制时刻，模型都要把一个庞大的视觉语言骨干网络跑一遍，计算量极大，导致延迟居高不下，实时控制频率难以保证。这个问题并不新鲜，学界已经有不少人在尝试解决。今年 IJCAI 收录的一篇论文认为，现有的大多数方案都走偏了一步。AI科技评论（雷峰网公众号）联系到一作于闻达，围绕高效 VLA 方法进行交流。论文原文：https://arxiv.org/abs/2601.1963401大家都在剪视觉，但问题真的在这儿吗现有的高效 VLA 方法，主流路线是在视觉侧做文章，剪掉“不重要”的视觉 token，跳过一些 Transformer 层，或者直接复用上一帧的计算结果。逻辑上听起来合理：视觉信息最占计算，减掉多余的视觉计算，自然就快了。但这里有一个被忽视的矛盾。在机械臂执行任务的过程中，视觉上的复杂程度和操作上需要的精度，并不总是同步的。机械臂接近目标的阶段，画面可能非常简单，但这时候恰好需要全力计算，因为精细的夹取动作容不得误差；反过来，大幅移动阶段画面变化激烈，但其实不需要太多计算资源。换句话说，视觉复杂度不等于控制难度。以视觉信号来决定这一帧算多少，天然就抓错了对象。AC²-VLA 一作于闻达告诉AI科技评论（雷峰网公众号），团队在调研文献时发现了这个矛盾，并意识到 VLA 模型闭环控制过程中，真正能反映当前时刻需要多少计算的，是机器人的动作状态，而不是视觉画面。这个判断很直观，和 VLA 的逻辑也很吻合——V是视觉，L是语言，A是动作，既然VLA的最终产出是动作序列，那用动作来指导计算分配，才是真正贴近这类模型本质的做法。基于这个出发点，他们提出了 AC²-VLA，全称是Action-Context-Aware Adaptive Computation for VLA models，即动作上下文感知的自适应计算框架。两个 AC，一个代表Action Context（动作上下文），一个代表Adaptive Computation（自适应计算），名字里藏着双关。02让动作来“拍板”AC²-VLA 的框架主",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "IJCAI 2026论文把动作从输出端搬到调度端，推理速度提升1.79倍，是VLA加速的具体可验证主张。",
+      "queued_at": "2026-08-26T09:03:32Z"
+    },
+    {
       "id": "44c3327efe59b41893d70a05a81536fdb8eae95e",
       "title": "Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses [Zhaochen Yu, Yingcheng Wu, Zhenfei Yin, Kaiyuan Chen, Zhe Zhao]",
       "url": "http://arxiv.org/abs/2608.24876v1",
@@ -480,45 +519,6 @@
       "source_traceable": true,
       "why": "面向世界模型训练的游戏视频UI去除框架，有具体方法与对比实验，对视频世界模型数据管线有参考价值。",
       "queued_at": "2026-08-26T06:00:17Z"
-    },
-    {
-      "id": "c74ce43aaa91df9848ec62044f6d0c14ca756115",
-      "title": "腾讯高管回应“腾讯做AI慢了”质疑",
-      "url": "https://36kr.com/newsflashes/3955952173644930?f=rss",
-      "source": "rss:36kr",
-      "published_at": "2026-08-26T06:02:39Z",
-      "raw_summary": "腾讯集团高级执行副总裁、云与智慧产业事业群CEO汤道生在腾讯内部刊物发文，提到外界对“腾讯做AI慢了”的质疑。他回应称，一点不焦虑是不可能的，“混元大模型进行了多次重构，混元Hy3在同等参数的大模型中效果突出，但由于公司整体算力严重不足，拖慢了模型训练与产品发展，产生了比较大的影响。” 汤道生称，起得早也许不是最关键的，AI下半场才刚开始。熬得久才有机会抓住持续出现的新机遇。（一财）",
-      "score": 7,
-      "angle": "route",
-      "source_traceable": true,
-      "why": "汤道生首次公开承认腾讯算力不足拖慢混元训练，是国内大厂关键人物的路线自白，含一手表态与策略转向信号。",
-      "queued_at": "2026-08-26T07:03:58Z"
-    },
-    {
-      "id": "591827221b81e55da96dc97cc5606ddc55029855",
-      "title": "India’s OSAT-ATMP Build-Out: From Legacy Packages to 2.5D",
-      "url": "https://www.eetimes.com/indias-osat-atmp-build-out-from-legacy-packages-to-2-5d",
-      "source": "rss:eetimes",
-      "published_at": "2026-08-26T07:00:00Z",
-      "raw_summary": "ASIP Technologies has begun construction of an OSAT facility in Visakhapatnam, Andhra Pradesh, with Korean partner APACT. The post India’s OSAT-ATMP Build-Out: From Legacy Packages to 2.5D appeared first on EE Times.",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "印度OSAT-ATMP建厂与向2.5D先进封装演进的一手产业信息，对全球半导体供应链判断有价值。",
-      "queued_at": "2026-08-26T07:03:58Z"
-    },
-    {
-      "id": "53f5422882fc0fed6a9ed6b7df9fe68cf71dd01b",
-      "title": "The US AI data center buildout is posing complex challenges to major lenders as they stretch themselves to finance, insure, and underwrite a novel asset class (Financial Times)",
-      "url": "https://www.techmeme.com/260826/p9#a260826p9",
-      "source": "rss:techmeme",
-      "published_at": "2026-08-26T07:05:15Z",
-      "raw_summary": "Financial Times: The US AI data center buildout is posing complex challenges to major lenders as they stretch themselves to finance, insure, and underwrite a novel asset class&nbsp; &mdash;&nbsp; Wall Street players extending themselves to underwrite this colossal new asset class are looking to limit exposure.",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "FT报道AI数据中心建设对金融体系的挑战，反映算力基础设施的资本端风险，有产业判断价值。",
-      "queued_at": "2026-08-26T08:01:00Z"
     }
   ],
   "digest_last_date": "2026-08-26"
