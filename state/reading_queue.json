@@ -1,6 +1,19 @@
 {
   "candidates": [
     {
+      "id": "9f55a96ec3a7a043e00cf864f0adbc13437c4abe",
+      "title": "英伟达Vera Rubin的Agent吞吐暴涨最高提升30倍，却不只靠GPU | Hot Chips 2026",
+      "url": "https://www.leiphone.com/category/chips/liubrhlszczlyhwv.html",
+      "source": "rss:leiphone",
+      "published_at": "2026-08-26T07:46:00Z",
+      "raw_summary": "在Agent推理上，英伟达又把性能往前推了一大步。Hot Chips 2026期间，英伟达披露了Vera Rubin NVL72最新Agent工作负载测试结果：在DeepSeek V4-Pro、单用户每秒160 Token的测试条件下，相比GB300 NVL72，每兆瓦吞吐最高提升30倍。&nbsp;但比30倍更值得关注的是，英伟达这次提升Agent推理效率，已经不再只依赖一颗更快的GPU。&nbsp;面对长上下文、低延迟Token生成、工具调用和数据交互同时出现的Agent工作负载，英伟达正在把一次推理拆成不同类型的计算任务：Vera Rubin NVL72承担大规模模型计算，Groq 3 LPX专攻低延迟Token生成，Vera CPU处理工具编排、代码执行和数据处理，Spectrum-X则负责把这些计算、数据和存储资源连接起来。&nbsp;换句话说，Agent工作负载让性能问题不再停留在一次模型计算内部，而是沿着上下文、生成、工具执行和基础设施访问继续向外扩展。从GPU、CPU到专用推理芯片和网络，英伟达在Hot Chips展示的已经不只是一代芯片的性能提升，而是一套针对Agent工作负载重新划分计算边界的系统架构。超长上下文实测，Rubin把Agent推理拉进真实长任务这次Hot Chips上，英伟达给出了一组更贴近Agent工作流的Rubin实测数据。英伟达此次测试采用SemiAnalysis AgentX工作负载。AgentX基于真实Agent编程会话的流量轨迹，在去除原始 prompt、代码、工具参数和结果后，保留请求长度、上下文增长、工具暂停、子任务依赖和时序等负载特征。此次测试的中位输入上下文超过 14 万 Token。按照英伟达测得、目前仍待SemiAnalysis审核的结果，在DeepSeek V4-Pro工作负载、单用户每秒160 Token的交互速度下，Vera Rubin NVL72相较GB300 NVL72最高实现30倍的每兆瓦吞吐。Vera Rubin 在 160 交互性下，每兆瓦的吞吐量提高了 30 倍。（图源：英伟达技术博客）英伟达HPC与AI超大规模基础设施解决方案高级总监Dion Harris指出，传统推理基准通常围绕“单一、可预测的请求”设计：输入和输出相对确定，因此可以比较Token生成速度、吞吐量等指标。但Agent任务会跨越多轮操作，而且每一步的工作负载都可能变化。Harris续指，传统推理负载可以使用8K甚至32K的输入序列进行测试，但到了递归式、多轮Agent任务中，Prefill需要处理的上下文会随着每一次迭代持续增长，因此平台评估需要开始考虑数十万Token级别的输入。&nbsp;原因在于，Agent完成一项任务时，模型可能不断读取文件、调用工具、执行代码，再把新的结果写回上下文，进入下一轮推理。AgentX 测的是推理服务基础设施面对 Agent 流量形态时的表现，不是测 Agent 任务完成质量。&nbsp;这也是此次Rubin测试采用超过14万Token上下文的意义。换言之，14万Token的意义并不只是“输入更长”，而是测试对象开始从静态prompt转向动态任务轨迹。它试图回答的不再只是“一次模型推理能够跑多快”，而是在更接近Agent实际运行轨迹的长链路负载下，系统还能维持怎样的性能。与此同时，英伟达把两个指标放在了同一张性能曲线上：横轴是单个用户每秒获得的Token数量，即交互速度；纵轴则是固定电力预算下整套系统能够处理的Token数量，即每兆瓦吞吐。在多轮代理会话中，每轮对话所",
+      "score": 9,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "Hot Chips 2026一手解读：英伟达Vera Rubin Agent推理30倍提升背后是GPU+Groq LPX+Vera CPU+网络的系统级重构，是Agent时代算力架构重要范式信号",
+      "queued_at": "2026-08-26T09:58:26Z"
+    },
+    {
       "id": "de9e77ff7d3a07691c2ae39e7a1204226ca4ebb8",
       "title": "SPO++: Stream-Aligned Policy Optimization for Asynchronous Agentic RL [Kai Ruan, Jinghao Lin, Qianshan Wei, Ziqi Zhou, Zihe Huang]",
       "url": "http://arxiv.org/abs/2608.24870v1",
@@ -505,19 +518,6 @@
       "angle": "industry",
       "source_traceable": true,
       "why": "印度公司订购9000套Vera Rubin系统、1GW算力、$8B项目，反映Vera Rubin需求与新兴市场算力建设实况。",
-      "queued_at": "2026-08-26T06:00:17Z"
-    },
-    {
-      "id": "e802a7c0380912b3e5c94f4ffe7997d76c865dc0",
-      "title": "Game2World Engine: Unlocking In-the-Wild Gameplay Videos for World Model Training",
-      "url": "https://arxiv.org/abs/2608.24680",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-24T20:00:00Z",
-      "raw_summary": "A framework for removing gameplay UI from videos enables cleaner training data for video world models, improving reward metrics and outperforms mask-based removal methods.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "面向世界模型训练的游戏视频UI去除框架，有具体方法与对比实验，对视频世界模型数据管线有参考价值。",
       "queued_at": "2026-08-26T06:00:17Z"
     }
   ],

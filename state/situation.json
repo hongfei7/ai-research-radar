@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-26T09:06:44Z",
-  "text": "截至 2026-08-26 17:06 HKT，阿里800亿港元配售获2200亿超购、管理层增持超8亿，募资全数投向全栈AI基建；IDC预警全球内存紧缺或延至2027；上海接连发布集成电路产业能级提升与\"芯—模—云\"AI生态政策；百度股东会通过双重主要上市决议，有望近期纳入港股通；前华为王云鹤创办基元律动，押注多模型Harness赛道。",
-  "since": "2026-08-26T09:06:44Z",
-  "active_event_count": 28,
+  "generated_at": "2026-08-26T10:00:58Z",
+  "text": "当前共有 30 个活跃事件。要点包括: Indian AI infrastructure company AM Intelligence orders 9,000 Nvidia Vera Rubin systems and plans to offer 1GW of computing capacity as part of an $8B project (Saritha Rai/Bloomberg); 英伟达Vera Rubin的Agent吞吐暴涨最高提升30倍，却不只靠GPU | Hot Chips 2026; OpenAI自研「辣椒芯片」首测超越英伟达; 软银考虑为OpenAI融资发行高达200亿美元的债券; Anthropic Readies Two New Claude Checkpoints for Release as Early as This Week。",
+  "since": "2026-08-26T10:00:58Z",
+  "active_event_count": 30,
   "key_themes": [
     "compute_demand",
     "ai_monetization",
@@ -13,6 +13,6 @@
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nDeepSeek 2026年前7月财务数据存在解读分歧：36kr/新浪财经(medium)与The Information/techmeme(low)报出的营收(4.75亿元≈$70.7M)与亏损(7.15亿≈$106M)数字完全一致，但方向判断相反——前者标\"positive\"(9倍增长叙事)，后者标\"neutral\"(亏损未明显收窄)。分歧核心在于\"高增长是否足以覆盖持续高额亏损\"：DeepSeek 2025全年净亏$139M，2026前7月已达$106M，全年亏损大概率扩大，国内大模型\"算力投入-商业化\"剪刀差叙事仍存争议。\n\n【新兴趋势】\n1)开源模型与国产/非英伟达硬件协同成多源共振信号：阿里Qwen3.8-Flash-Next发布(Reddit)+千问办公国际版公测(36kr)+Qwen3.6-35B-A3B在AMD MI350X上跑出vLLM 2.16倍吞吐(Reddit)，显示Qwen系从模型层、应用层到硬件适配层全线推进；2)AI数据中心融资端风险首次被FT专题报道，银行/保险/承销机构正在主动限制敞口；3)Semi Engineering博客综述集中提及CPO量产、scale-up网络、on-device AI",
-  "trend_spotting": "【新兴趋势】阿里\"由轻变重\"标志着港股AI基建融资范式切换——800亿港币配售价22个月最大单，超购近2倍且获卡塔尔、挪威主权基金等长线机构背书，三大管理层48小时内个人增持超8亿港币，4700亿现金储备+3800亿三年AI预算落地近半，本质是用股权融资提前锁死算力与HBM供给，AI Capex货币化周期开始替代轻资产估值逻辑。\n\n【早期信号】多模型路由（Harness）层正成为被低估的中间件赛道。Stripe以约75亿美元（5月估值仅13亿）收购OpenRouter，国内TokenRhythm单日Token调用量已超5000亿、5.4万用户、GitHub Stars 6600+——模型聚合层从\"技术中间件\"向\"流量入口+定价权\"演化，国内大厂（阿里、字节）若不卡位，将重演支付通道被收编的历史。\n\n【市场盲点】内存紧缺持续至2027年、价格2028年触顶的判断被严重低估其通胀传导效应。亚马逊/苹果/微软/戴尔已集体涨价，这不是短期事件，而是AI算力对存储产能的虹吸将形成中期硬件成本通胀，AI PC与AI手机渗透曲线将因此被压制至少两个季度。\n\n【拐点】9月3日考察日前百度双重上市能否生效、9月7日能否纳入港股通——若兑现，将触发港股AI标的流动性与估值修复的横向扩散（阿里、腾讯、金山、联想等可比标的），是当前最近的一个确定性事件型窗口。"
+  "cross_analysis": "【核心矛盾】\nOpenAI\"辣椒芯片\"首测超越英伟达（ifanr，中等可信度）与Hot Chips 2026披露的Vera Rubin NVL72在Agent负载下每兆瓦吞吐提升30倍（雷锋网，中等可信度）形成直接叙事冲突：分歧点不在\"GPU性能谁强\"，而在护城河归属——芯片级算力看似可被自研替代（OpenAI案、ASIC案），但系统级异构协同（Groq 3 LPX+Vera CPU+Spectrum-X）仍由英伟达定义。需关注SemiAnalysis对实测数据的审核结果以判断哪条叙事占优。\n\n【新兴趋势】\n两条暗线反复出现：①**异构计算架构成为AI基础设施新范式**——Vera Rubin内嵌Groq推理加速单元、工业富联ASIC机柜同比增3倍、OpenAI自研推理芯片，三条独立路径共同指向\"GPU一家独大\"叙事松动；②**中国大模型变现路径分化**——商汤首次IFRS盈利且经常性收入占比39.3%、智谱Ox Alpha以零成本登顶OpenRouter、Kimi K",
+  "trend_spotting": "【新兴趋势】算力架构正从\"单一GPU堆叠\"转向\"异构协同\"。英伟达Vera Rubin NVL72在Agent负载下实现每兆瓦30倍吞吐，关键不在GPU本身，而在于拆解出Groq 3 LPX负责Token生成、Vera CPU做工具编排、Spectrum-X负责互联的异构分工。工业富联ASIC机柜同比增3倍、CPO样机已交货，印证定制芯片+光互联正在侵蚀通用GPU份额。\n\n【早期信号】中国大模型变现路径出现两条新分支：一是Z.AI（智谱）Ox Alpha登顶OpenRouter后采取\"开源权重+零成本API\"策略，绕过价格战直接做用户规模；二是月之暗面Kimi K3与微软/亚马逊/谷歌谈判收入分成（最高30%），模型层开始向云层反向议价，重塑MaaS价值分配。两者均为72小时内新动向。\n\n【市场盲点】市场仍在以\"英伟达=GPU\"框架估值，但Hot Chips披露的Vera Rubin显示其已演变为系统级平台，Groq LPX等被纳入英伟达体系后，AMD/博通在Agent长上下文场景的能效差距可能被重新评估。此外，商汤首次IF"
 }
