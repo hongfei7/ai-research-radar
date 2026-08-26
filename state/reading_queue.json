@@ -183,6 +183,19 @@
       "queued_at": "2026-08-26T09:03:32Z"
     },
     {
+      "id": "adaec0b657e910b8e55744041346a5fe8b4a5743",
+      "title": "一台GPU用了三年，为什么租金反而更贵了？",
+      "url": "https://www.leiphone.com/category/chips/ikmv7nhgx4flab4v.html",
+      "source": "rss:leiphone",
+      "published_at": "2026-08-26T08:00:00Z",
+      "raw_summary": "在AI芯片快速迭代的今天，上一代GPU并没有像传统硬件一样迅速贬值。“我们2023年部署的那批H100芯片，如今出租价格甚至高于最初上线时。”近日，云服务商Lambda联合创始人兼CTO Stephen Balaban在播客节目The MAD Podcast中表示。这并不是某代芯片的“传奇故事”。过去，人们曾期待GPU算力最终会像传统云计算资源一样，随着供应增加和硬件迭代逐渐标准化、商品化：性能越来越高，价格越来越低，不同供应商之间的差异也越来越小。但AI算力并没有完全沿着这条路径发展。一张GPU能够提供多少价值，越来越取决于它被放进怎样的系统、如何与其他GPU协同，以及这些昂贵设备能否持续被利用。芯片性能仍然重要，但它已经很难单独解释一套AI基础设施能够交付多少算力。那么，为什么GPU供应越来越多、产品迭代越来越快，算力却还没有像电力或带宽一样成为真正标准化的商品？01算力不是加法题，超节点难在协同前沿大模型正在改变的，并不是算力如何计价，而是算力在什么层级上被商品化。在最上层，AI服务正在把模型输出逐渐标准化为Token，并按Token计费。从这个意义上看，客户最终购买的计算结果，已经具备越来越明显的商品属性。但在这些Token背后，生产它们的算力系统却远没有实现同样程度的标准化。原因之一是，前沿AI任务已经很难由一张GPU独立完成。模型参数、计算任务和数据需要被拆分到多张GPU甚至多台服务器上，一次训练或推理能否顺利向前，不再只取决于单张芯片算得有多快，还取决于这些GPU之间能否快速交换数据。这让AI算力出现了一个和传统标准化计算资源不同的问题：同样数量、同样型号的GPU，并不一定能够交付同样的计算能力。如果GPU之间通信效率不足，芯片就可能花更多时间等待数据；网络拓扑、内存、存储以及软件组织方式的差异，也都会影响最终能够发挥出的算力。新增一张GPU，因此并不意味着系统就能获得一张GPU标称性能对应的新增产出。也正是在这种背景下，超节点开始成为AI Infra的重要形态。所谓超节点，并不是简单增加GPU数量，而是通过高速互联，把多颗GPU组织成一个紧密协同的计算单元，尽量降低GPU之间交换数据的成本，让它们像一台更大的机器一样工作。Balaban以英伟达GB300 NVL72为例，一个机架内的72颗GPU通过NVLink高速互联；多个机架进一步扩展时，则通过InfiniBand或高速以太网连接。Lambda建设的大型GPU集群还会采用尽量减少网络阻塞的架构，让不同GPU之间获得足够的通信带宽。这种系统能力首先服务于大规模训练，但前沿推理也越来越依赖多GPU协同。Balaban提到，小型、经过压缩的模型可以放进单张GPU；更大的模型则可能需要跨多颗GPU、服务器甚至机架运行。因此，GPU型号和数量仍然决定了一套系统拥有多少计算资源，却越来越难单独代表这些资源最终能够交付多少算力。这也是AI算力系统难以迅速变成标准商品的关键：芯片本身可以标准化，但芯片如何被组织起来，以及最终能够发挥多少性能，仍然高度依赖整套系统。02GPU的三套时钟：换代、折旧与经济寿命如果AI算力系统不是一种标准商品，那么“一张GPU值多少钱”，也很难只由芯片型号决定。Balaban称，在一个GPU小时的成本中，占比最大的是设备折旧。GPU、服务器和网络设备采购后会使用多年，最初的投入需要被分摊到后续每一个实际使用小时中。这背后是一门典型的重资产生意。按照Balaban的估算，一座千兆瓦级AI工厂中，发电设施需要约20亿至30亿美元，数据中心本体约100亿至150亿美元，而",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Lambda CTO讲述H100老卡租金反涨、超节点协同与算力商品化逻辑，给出有数据支撑的反直觉产业判断。",
+      "queued_at": "2026-08-26T10:44:13Z"
+    },
+    {
       "id": "44c3327efe59b41893d70a05a81536fdb8eae95e",
       "title": "Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses [Zhaochen Yu, Yingcheng Wu, Zhenfei Yin, Kaiyuan Chen, Zhe Zhao]",
       "url": "http://arxiv.org/abs/2608.24876v1",
@@ -506,19 +519,6 @@
       "source_traceable": true,
       "why": "YMTC目标2027年成为最大NAND供应商是FT爆料的一手信息，对存储产业格局判断有直接价值。",
       "queued_at": "2026-08-26T05:17:51Z"
-    },
-    {
-      "id": "462c5927bdb72403429fdf247d4f38bf6a685fa7",
-      "title": "Indian AI infrastructure company AM Intelligence orders 9,000 Nvidia Vera Rubin systems and plans to offer 1GW of computing capacity as part of an $8B project (Saritha Rai/Bloomberg)",
-      "url": "https://www.techmeme.com/260826/p3#a260826p3",
-      "source": "rss:techmeme",
-      "published_at": "2026-08-26T05:25:02Z",
-      "raw_summary": "Saritha Rai / Bloomberg: Indian AI infrastructure company AM Intelligence orders 9,000 Nvidia Vera Rubin systems and plans to offer 1GW of computing capacity as part of an $8B project&nbsp; &mdash;&nbsp; AM Intelligence, an Indian AI infrastructure company, has ordered 9,000 Nvidia Corp. Vera Rubin systems, seeking to become &hellip;",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "印度公司订购9000套Vera Rubin系统、1GW算力、$8B项目，反映Vera Rubin需求与新兴市场算力建设实况。",
-      "queued_at": "2026-08-26T06:00:17Z"
     }
   ],
   "digest_last_date": "2026-08-26"
