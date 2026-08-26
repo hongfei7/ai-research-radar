@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-26T13:00:36Z",
+  "updated_at": "2026-08-26T13:59:46Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -50854,9 +50854,9 @@
       "first_seen_at": "2026-08-26T07:04:55Z",
       "first_published_at": "2026-08-26T06:52:04Z",
       "last_updated_at": "2026-08-26T07:04:55Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 7,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "",
       "ticker_counts": {
         "中科曙光": 1
@@ -50884,9 +50884,9 @@
       "first_seen_at": "2026-08-26T07:04:55Z",
       "first_published_at": "2026-08-26T06:00:02Z",
       "last_updated_at": "2026-08-26T07:04:55Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 8,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "**看多逻辑：**\n1. **制程反攻信号明确**：18A-P首发于旗舰至强平台，若良率达标将证明Intel在先进制程上重回第一梯队，重塑客户与资本市场对Intel代工业务（Intel Foundry）的信心，对长期估值修复有正面意义。\n2. **规格具备HPC竞争力**：256核+22 chiplet配置在HPC高端市场属头部水准，chiplet架构延续可摊薄制造成本并加快迭代节奏，有助于Intel在超算/AI数据中心细分领域稳住基本盘。\n3. **生态护城河仍存**：x86在HPC软件生态、编译器优化上的积累非ARM短期可复制，Xeon 7搭配oneAPI/AVX-10等指令集扩展对传统HPC客户仍有粘性。\n\n**看空风险：**\n1. **2027时间窗口过长**：距今约1.5–2年，AMD EPYC Turin已192核并计划Zen6路线图，2027年对手大概率突破256核甚至更高，Intel届时将面临规格被反超风险，\"首发红利\"可能被稀释。\n2. **18A-P良率与执行风险**：Intel近年制造端多次延期（7nm/4nm均有过跳票），18A-P作为全新节点叠加16颗计算die集成，良率爬坡与封装良率任一环节出问题即可能延期或影响毛利率。\n3. **客户信任仍在修复中**：Granite Rapids/Sierra Forest市场反馈不及预期，云厂商持续向ARM/自研芯片倾斜，Xeon 7仅靠规格难以扭转份额流失趋势。\n\n**关键驱动因素：**\n1. 18A-P良率爬坡曲线及2026年风险量产节点，是判断Xeon 7能否如期交付与盈利能力的核心。\n2. AMD EPYC Zen6及ARM Neoverse V3/V4同期产品规格、价格与客户拓展进展。\n\n**市场影响评估：**\n- **短期（3–6个月）**：事件偏前瞻，情绪影响有限，股价更多受财报与18A进展催化。\n- **中期（1–2年）**：决定Intel数据中心份额能否止跌及代工业务能否兑现客户承诺，是估值切换的关键节点。\n\n**时间线推断：**\n- 2025Q4–2026H1：18A/18A-P风险量产，良率数据首次披露\n- 2026H2：Xeon 7可能出样片，对标产品（AMD Turin/ARM V3）将进入下一代发布窗口\n- 2027年：Xeon 7正式量产并放量爬坡，与AMD/ARM旗舰正面交锋\n- 2027Q2–Q3：若良率不及预期或延期，市场对Intel制造端信心将再次承压",
       "ticker_counts": {
         "Intel": 1
@@ -50914,9 +50914,9 @@
       "first_seen_at": "2026-08-26T07:04:55Z",
       "first_published_at": "2026-08-26T06:02:39Z",
       "last_updated_at": "2026-08-26T07:04:55Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 7,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "",
       "ticker_counts": {
         "腾讯": 1
@@ -52267,6 +52267,69 @@
         "商汤": 1
       },
       "max_item_score": 8
+    },
+    "evt_2fee972a58c5": {
+      "event_id": "evt_2fee972a58c5",
+      "title": "Hot Chips 2026: High Bandwidth Flash promises massive bandwidth and capacity, but its usability is extremely limited — new memory format strikes a balance between HBM and NAND flash",
+      "summary": "Hot Chips 2026大会上，OXMIQ展示其高带宽闪存（HBF）技术应用场景。HBF定位介于HBM与NAND闪存之间，兼具大容量与高带宽优势，但适用场景极为有限，仅在特定工作负载下才具备性价比与性能优势。",
+      "tickers": [
+        "三星电子",
+        "海力士",
+        "美光"
+      ],
+      "themes": [
+        "advanced_packaging",
+        "chip_supply"
+      ],
+      "direction": {},
+      "item_ids": [
+        "e6c98e1692dea9ce16ccdd0dfe43e3bcf303c33a"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-26T13:59:13Z",
+      "first_published_at": "2026-08-26T13:00:00Z",
+      "last_updated_at": "2026-08-26T13:59:13Z",
+      "is_active": true,
+      "significance": 6,
+      "status": "developing",
+      "deep_analysis": "1. **看多逻辑**：①HBF定位HBM与NAND之间的新内存层级，丰富AI基础设施栈，短期更可能作为补充而非替代，缓解市场对HBM增长见顶的担忧；②\"适用场景极为有限\"意味着对HBM三巨头核心AI训练市场（NVIDIA/AMD高端GPU）冲击有限，当前HBM供需缺口仍由推理与训练需求主导；③新内存形态推动先进封装需求增长，对封测产业链（如台积电CoWoS供应链）形成增量利好。\n\n2. **看空风险**：①OXMIQ等新进入者背后往往有大厂技术路线试探意味，若三星/美光跟进HBF，可能加速HBM在非核心场景被分流；②HBF在成本/容量带宽比上的优势若被验证，将率先侵蚀HBM在推理和边缘AI的低端市场，长期压制HBM量价空间；③HBM三巨头资本开支高度集中于HBM产线，若路线被分叉，存在产能错配与折旧风险。\n\n3. **关键驱动因素**：①NVIDIA、AMD等头部AI芯片厂商是否在下一代产品中引入HBF作为辅助内存方案；②海力士/三星/美光是否将HBF纳入官方技术路线图，或继续押注HBM4/HBM5迭代。\n\n4. **市场影响评估**：短期（3-6个月）HBF仍属概念验证阶段，对HBM供应链股价影响有限，更多是叙事扰动；中期（12-24个月）若头部芯片厂采纳，可能引发HBM需求结构重估，但完全替代概率低，HBM仍锁定高端训练市场。\n\n5. **时间线推断**：2026下半年-2027上半年关注OXMIQ与代工厂/封测厂的流片合作进展；2027年Hot Chips或ISSCC可能出现HBF量产规格披露；2028年前后为关键商用节点，若届时仍无大厂采用，则HBF大概率停留在小众方案。",
+      "ticker_counts": {
+        "三星电子": 1,
+        "海力士": 1,
+        "美光": 1
+      },
+      "max_item_score": 6
+    },
+    "evt_298d25bcbbfb": {
+      "event_id": "evt_298d25bcbbfb",
+      "title": "Hot Chips 2026: Fujitsu's Monaka CPU stacks its entire cache on a separate 5nm die and narrows to 256-bit SVE2 — 350W and 500W SKUs due in 2027",
+      "summary": "Hot Chips 2026上，Fujitsu披露144核Arm服务器CPU Monaka细节：采用chiplet架构，将完整缓存置于独立5nm die上；SVE2向量宽度从前代A64FX的512-bit缩窄至双256-bit；功耗分350W与500W两档，预计2027年出货。值得关注的是，缓存单独成die的设计暗示对先进封装与高带宽互连的依赖。",
+      "tickers": [
+        "ARM"
+      ],
+      "themes": [
+        "advanced_packaging",
+        "chip_supply",
+        "compute_demand"
+      ],
+      "direction": {
+        "ARM": "positive"
+      },
+      "item_ids": [
+        "98e9b8cd6d47fd5cd1fcdcf5fb578e66c08706ef"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-26T13:59:13Z",
+      "first_published_at": "2026-08-26T13:30:00Z",
+      "last_updated_at": "2026-08-26T13:59:13Z",
+      "is_active": true,
+      "significance": 5,
+      "status": "developing",
+      "deep_analysis": "1. **看多逻辑**：\n①**chiplet架构验证先进封装路径**：将完整缓存置于独立5nm die，对CoWoS/2.5D等先进封装形成刚性需求，间接利好台积电、日月光等封测厂商，也强化Arm在模块化设计中的生态主导力，ARM作为IP授权方长期受益。\n②**切入主流云厂功耗区间**：350W/500W双SKU定位与主流双路/多路服务器TDP匹配，144核规模在云原生与AI推理负载下具备竞争力，延续从A64FX超级计算向通用云市场渗透的路径，扩大Arm服务器CPU TAM。\n③**日系超算迭代需求提供基本盘**：Fujitsu为日本国策级超算供应商，政府/科研订单可消化初期产能，降低产品失败风险，为ARM生态背书。\n\n2. **看空风险**：\n①**SVE2缩窄是核心能力退化**：从A64FX 512-bit降至双256-bit，意味着单周期向量吞吐减半，对HPC与AI训练负载竞争力存疑；Monaka定位若偏向通用云而非超算，恐削弱Fugaku后继产品的差异化叙事。\n②**2027年量产时间表偏晚**：同期面临NVIDIA Grace/Vera、AMD Turin/Dense、超大规模厂商自研Arm CPU（AWS Graviton4、Axion等）围剿，技术红利窗口收窄，生态采纳速度存疑。\n③**封装供应链瓶颈**：缓存独立die高度依赖先进封装产能，全球CoWoS已被AI GPU挤占，Monaka若排队靠后，2027年出货节奏可能进一步推迟。\n\n3. **关键驱动因素**：\n①封装方案与流片节点是否在2026Q4前确认，CoWoS-S/L/InFO的具体选用将决定量产成本与良率；\n②是否有超大规模云厂商以白盒/OEM形式给出PoC承诺，验证350W档SKU的市场需求。\n\n4. **市场影响评估**：\n短期（3-6个月）事件情绪偏正面但落地有限，ARM股价以主题催化为主，难有持续行情；中期（12-18个月）若2027年如期出货并获云厂采纳，ARM服务器IP授权价值将获得二次确认，先进封装与5nm代工供需也将边际收紧。\n\n5. **时间线推断**：\n- **2026Q",
+      "ticker_counts": {
+        "ARM": 1
+      },
+      "max_item_score": 5
     }
   }
 }
