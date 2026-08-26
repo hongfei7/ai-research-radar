@@ -4,154 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "Anthropic",
-        "OpenAI",
-        "阿里巴巴"
-      ],
-      "features": [
-        "个自",
-        "于阿",
-        "出首",
-        "千问",
-        "基于",
-        "大模",
-        "推出",
-        "模型",
-        "研大",
-        "社推",
-        "自研",
-        "路透",
-        "透社",
-        "里千",
-        "问路",
-        "阿里",
-        "首个"
-      ],
-      "sent_at": "2026-08-25T13:16:48Z"
-    },
-    {
-      "tickers": [
-        "三星电子",
-        "海力士",
-        "美光"
-      ],
-      "features": [
-        "3x",
-        "ai",
-        "as",
-        "chips",
-        "company",
-        "ddr5",
-        "every",
-        "generation",
-        "getting",
-        "hbm",
-        "hot",
-        "is",
-        "memory",
-        "micron",
-        "more",
-        "penalty",
-        "prices",
-        "rise",
-        "says",
-        "silicon",
-        "than",
-        "uses",
-        "wafer",
-        "wall",
-        "warns",
-        "widening",
-        "with",
-        "worse"
-      ],
-      "sent_at": "2026-08-25T13:17:03Z"
-    },
-    {
-      "tickers": [
-        "英伟达"
-      ],
-      "features": [
-        "but",
-        "cerebras",
-        "complicated",
-        "faster",
-        "four",
-        "groq",
-        "is",
-        "its",
-        "lpx",
-        "math",
-        "more",
-        "nvidia",
-        "says",
-        "than",
-        "the",
-        "times"
-      ],
-      "sent_at": "2026-08-25T13:17:22Z"
-    },
-    {
-      "tickers": [
-        "Marvell",
-        "OpenAI",
-        "博通"
-      ],
-      "features": [
-        "ai",
-        "can",
-        "chip",
-        "competition",
-        "faster",
-        "its",
-        "jalape",
-        "openai",
-        "power",
-        "responses",
-        "says",
-        "than",
-        "the"
-      ],
-      "sent_at": "2026-08-25T14:09:38Z"
-    },
-    {
-      "tickers": [
-        "台积电",
-        "苹果"
-      ],
-      "features": [
-        "12-core",
-        "2nm",
-        "32gb",
-        "and",
-        "apple",
-        "chip",
-        "cpu",
-        "fastest",
-        "gpu",
-        "it",
-        "jay",
-        "m6",
-        "memory",
-        "of",
-        "performance",
-        "peters",
-        "provides",
-        "saying",
-        "single-threaded",
-        "the",
-        "to",
-        "unified",
-        "unveils",
-        "up",
-        "verge",
-        "with",
-        "world"
-      ],
-      "sent_at": "2026-08-25T14:09:51Z"
-    },
-    {
-      "tickers": [
         "Marvell",
         "OpenAI",
         "博通"
@@ -879,6 +731,60 @@
         "首度"
       ],
       "sent_at": "2026-08-26T13:01:44Z"
+    },
+    {
+      "tickers": [
+        "AMD",
+        "ASML",
+        "台积电"
+      ],
+      "features": [
+        "allows",
+        "approach",
+        "benefits",
+        "budgets",
+        "center",
+        "chips",
+        "compute",
+        "data",
+        "dsx",
+        "fixed",
+        "for",
+        "from",
+        "hot",
+        "its",
+        "management",
+        "maxlps",
+        "more",
+        "nvidia",
+        "of",
+        "power",
+        "site",
+        "tech",
+        "touts"
+      ],
+      "sent_at": "2026-08-26T14:57:12Z"
+    },
+    {
+      "tickers": [
+        "Meta"
+      ],
+      "features": [
+        "16b",
+        "addiction",
+        "agrees",
+        "for",
+        "media",
+        "meta",
+        "settle",
+        "social",
+        "states",
+        "suit",
+        "to",
+        "up",
+        "with"
+      ],
+      "sent_at": "2026-08-26T14:57:44Z"
     }
   ],
   "last_report": {
