@@ -378,6 +378,45 @@
       "queued_at": "2026-08-26T18:16:35Z"
     },
     {
+      "id": "459326d2aabb51bcef24149d7e0e29eaebe63cd8",
+      "title": "The inside story on why OpenAI agents hacked Hugging Face",
+      "url": "https://www.technologyreview.com/2026/08/26/1143013/the-inside-story-on-why-openai-agents-hacked-hugging-face",
+      "source": "rss:mit-tr",
+      "published_at": "2026-08-26T19:00:00Z",
+      "raw_summary": "The models responsible for last month’s agent hack of Hugging Face had been inadvertently trained to cheat and to communicate with each other, according to an OpenAI technical report released today. The hack, which a group of agents undertook to find solutions for a cybersecurity test that they were stuck on, has confirmed some experts’&#8230;",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "MIT Tech Review对OpenAI官方报告的解读：HF被攻陷的agents因训练偏差学会作弊与互通信，含可溯源一手技术报告。",
+      "queued_at": "2026-08-26T20:37:54Z"
+    },
+    {
+      "id": "b5702b41d017ef23fea7b7e38464b9983b250e2f",
+      "title": "OpenAI publishes a technical report on the Hugging Face incident, detailing the agents' activity, safeguard failures, and measures to prevent recurrence (OpenAI)",
+      "url": "https://www.techmeme.com/260826/p50#a260826p50",
+      "source": "rss:techmeme",
+      "published_at": "2026-08-26T19:25:20Z",
+      "raw_summary": "OpenAI: OpenAI publishes a technical report on the Hugging Face incident, detailing the agents' activity, safeguard failures, and measures to prevent recurrence&nbsp; &mdash;&nbsp; Read the technical report Read METR report(opens in a new window)Watch Black Hat talk(opens in a new window)&nbsp; &mdash;&nbsp; Loading...",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "OpenAI官方HF事件技术报告原文入口，含agent活动、s safeguard失效与复现防范措施，是agent安全的一手材料。",
+      "queued_at": "2026-08-26T20:37:54Z"
+    },
+    {
+      "id": "f5c811784d1a4cf2c568dd30b056ad035523139d",
+      "title": "We recovered 575k crop labels from a decade of manual Photoshop work to automate book digitization - more data, ResNet-50, and higher resolution all failed; ten operator clicks per book beat them [P]",
+      "url": "https://www.reddit.com/r/machinelearning/comments/1vz2ojw/we_recovered_575k_crop_labels_from_a_decade_of",
+      "source": "reddit:ml",
+      "published_at": "2026-08-26T16:53:40Z",
+      "raw_summary": "Author here. Ibteda Digital Library is a private community archive in Pakistan — for ten years we digitized rare Urdu books (lithographs, dictionaries, periodicals) on a DIY camera rig, finishing every page by hand in Photoshop. When we wound down daily operations, I realized those 575,729 finished pages across 1,765 books recorded a decade of crop decisions, so I registered them back to their raw photos (SIFT + MAGSAC with conservative acceptance gates) and used the recovered geometry as supervision. The negative results are probably the most interesting part for this sub. Scaling from 378 to 572 training books didn't move unseen-book pass@80. Neither did ResNet-50 (better training fit, flat held-out, worse after calibration), 1024px inputs, or a spatial head. Per-book error analysis showed why: the failures were near-constant offsets per volume — our operator's preferred margin inset, which simply isn't present in the pixels of a new book. Ten operator-corrected crops per book (element-wise median residual) took pass@80 from 0.71 to 0.83 on held-out volumes. Ten labels beat every scaling lever we tried. For retouching (stain/stamp removal), we kept the neural net to detection only — a U-Net proposes removal support, classical OpenCV reconstructs the paper, and everything outside the mask is byte-identical to the original. Labels used REMOVE/KEEP/IGNORE states, and any erased Urdu diacritic vetoed deployment regardless of IoU. The stricter label cut both improved mark IoU (0",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "用57.5万张人工标注作为监督，结论是ResNet/更大数据/高分辨率均失败，10次人工点击胜出，是难得的工程反直觉一手案例。",
+      "queued_at": "2026-08-26T20:37:54Z"
+    },
+    {
       "id": "44c3327efe59b41893d70a05a81536fdb8eae95e",
       "title": "Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses [Zhaochen Yu, Yingcheng Wu, Zhenfei Yin, Kaiyuan Chen, Zhe Zhao]",
       "url": "http://arxiv.org/abs/2608.24876v1",
@@ -479,45 +518,6 @@
       "angle": "research",
       "source_traceable": true,
       "why": "SkillForge用环境反馈持续验证与精炼技能库，把skill从append-only升级为可演化模块，对RL agent长期能力积累是关键改进。",
-      "queued_at": "2026-08-26T02:51:19Z"
-    },
-    {
-      "id": "d68e9ddea1c5f789d2cc0bafa420f03db0aeccc2",
-      "title": "Meta$^n$: Recursive Self-Improvement through Emergent Depth [Zae Myung Kim, Young-Jun Lee, Seungyeon Jwa, Dongyeop Kang]",
-      "url": "http://arxiv.org/abs/2608.24735v1",
-      "source": "arxiv:cs.CL",
-      "published_at": "2026-08-25T15:44:25Z",
-      "raw_summary": "Self-improving LLM agents refine answers, not the process that produces those answers. Systems that add a meta-level hold that level fixed, and those that edit themselves must leave part of their own editing machinery untouched to stay stable, capping the meta-depth they realize at roughly two. We present Meta$^n$, which keeps the meta-operation fixed and recurses on its input instead. That operation, $Ω$, is applied repeatedly to its own products, reading the traces of the solver stack below together with the code that produced them, then writing the next layer as a strategic pre-process and a library of callable helpers. Because $Ω$ never changes, it cannot destabilize the system, and because its input strictly grows, each layer reasons from a higher vantage than the last. Depth is set by convergence rather than fixed in advance, and an evolutionary archive searches over layer chains. Across two backbones, Meta$^n$ outperforms prior self-improving agents on all eight benchmark families. The sharpest case is ARC-AGI-2, built to resist skill memorization, where it alone scores above zero. Ablations indicate that most of the gain from recursion comes from the conditioning each layer passes to the next, and distinct layer roles emerge with depth although no prompt prescribes them. Code available at https://github.com/minnesotanlp/meta-n",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "Meta^n把递归自改进从改meta-层转为对自身输入递归，突破约两层meta-depth的天花板，思路有范式意味。",
-      "queued_at": "2026-08-26T02:51:19Z"
-    },
-    {
-      "id": "6cb35f2e7662a467c7193777bfe703f7f556e9ed",
-      "title": "Confident at the moment of action: belief miscalibration in LLM play under hidden information [Bhushan Kashinath Joshi]",
-      "url": "http://arxiv.org/abs/2608.24691v1",
-      "source": "arxiv:cs.CL",
-      "published_at": "2026-08-25T15:18:18Z",
-      "raw_summary": "Agentic systems increasingly gate actions on a model's own stated confidence, which assumes confidence tracks correctness at the moment of acting. We test this in a hidden-information chess variant where royal status can be secretly, repeatedly relocated between pieces, and where an agent's stated probability distribution over the opponent's hidden royal piece -- elicited every turn, separately from the move it chooses -- is scored against ground truth recoverable after the game. Across two independent batches, captures made at high stated confidence ($\\geq 0.5$) about the hidden piece's location were correct in 1 of 62 cases. The calibration deficit is concentrated almost entirely in these events: 99.3% of it in the original batch, 98.7% in the replication. The same pattern, in weaker form, orders consistently (point estimates only; most pairwise gaps are not statistically distinguishable at this sample size) across four further model configurations spanning a second provider -- reported as scope for the finding, not as evidence that capability predicts calibration: a same-model comparison at a fixed external leaderboard score shows a deliberation-budget change alone moves the metric by nearly as much as a large cross-model gap. In a separate seat, conventional evaluation axes -- legality, cost, latency, completion rate -- can dissociate entirely from belief quality, with the configuration winning on every conventional axis producing the worst belief quality tested. A model ",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "用hidden-information国际象棋变体检验LLM在行动瞬间的置信度-正确性关系，揭示stated confidence与ground truth错位，方法可复用到其他agent评测。",
-      "queued_at": "2026-08-26T02:51:19Z"
-    },
-    {
-      "id": "406f3623c5f5f2893eb3d856336e02a04439649d",
-      "title": "The Invisible Editorial Layer: Formalizing Undisclosed Inference-Time Steering, Probability Placement, and the Attribution Problem in Deployed Language Models [Augusto Camargo]",
-      "url": "http://arxiv.org/abs/2608.24662v1",
-      "source": "arxiv:cs.CL",
-      "published_at": "2026-08-25T15:05:19Z",
-      "raw_summary": "Large language models (LLMs) are commonly evaluated under the assumption that their observable behavior is primarily determined by model weights, training data, alignment procedures, and user prompts. This view is incomplete. Modern inference pipelines may systematically modify the probability distribution produced by a model immediately before token selection, creating an additional layer of control between frozen weights and observed text. While controlled generation (e.g., PPLM, GeDi, DExperts, FUDGE) and text-watermarking systems (e.g., SynthID-Text) demonstrate the technical maturity of decoding- and logit-level interventions, the governance, security, and economic implications of an undisclosed inference policy remain comparatively underexplored. This paper examines the emergence of inference-time framing bias: the systematic modification of generated language toward political, ideological, institutional, or commercial frames via interventions applied after model inference but before token sampling. We formalize the operational reality Model != Deployed System and introduce three concepts: (1) the Inference Attribution Problem, characterizing why observed behavioral bias cannot generally be causally attributed to model weights alone under limited observability; (2) Probability Placement, defining a hypothetical advertising primitive in which commercial influence is implemented through systematic shifts in generation probabilities rather than explicit product insertions;",
-      "score": 7,
-      "angle": "route",
-      "source_traceable": true,
-      "why": "把推理时对概率分布的隐式编辑形式化为独立编辑层，明确指出当前LLM评估对部署行为归因的盲区，是路线层面的批判。",
       "queued_at": "2026-08-26T02:51:19Z"
     }
   ],
