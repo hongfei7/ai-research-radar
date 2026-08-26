@@ -389,6 +389,32 @@
       "source_traceable": true,
       "why": "YMTC目标2027年成为最大NAND供应商是FT爆料的一手信息，对存储产业格局判断有直接价值。",
       "queued_at": "2026-08-26T05:17:51Z"
+    },
+    {
+      "id": "462c5927bdb72403429fdf247d4f38bf6a685fa7",
+      "title": "Indian AI infrastructure company AM Intelligence orders 9,000 Nvidia Vera Rubin systems and plans to offer 1GW of computing capacity as part of an $8B project (Saritha Rai/Bloomberg)",
+      "url": "https://www.techmeme.com/260826/p3#a260826p3",
+      "source": "rss:techmeme",
+      "published_at": "2026-08-26T05:25:02Z",
+      "raw_summary": "Saritha Rai / Bloomberg: Indian AI infrastructure company AM Intelligence orders 9,000 Nvidia Vera Rubin systems and plans to offer 1GW of computing capacity as part of an $8B project&nbsp; &mdash;&nbsp; AM Intelligence, an Indian AI infrastructure company, has ordered 9,000 Nvidia Corp. Vera Rubin systems, seeking to become &hellip;",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "印度公司订购9000套Vera Rubin系统、1GW算力、$8B项目，反映Vera Rubin需求与新兴市场算力建设实况。",
+      "queued_at": "2026-08-26T06:00:17Z"
+    },
+    {
+      "id": "e802a7c0380912b3e5c94f4ffe7997d76c865dc0",
+      "title": "Game2World Engine: Unlocking In-the-Wild Gameplay Videos for World Model Training",
+      "url": "https://arxiv.org/abs/2608.24680",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-24T20:00:00Z",
+      "raw_summary": "A framework for removing gameplay UI from videos enables cleaner training data for video world models, improving reward metrics and outperforms mask-based removal methods.",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "面向世界模型训练的游戏视频UI去除框架，有具体方法与对比实验，对视频世界模型数据管线有参考价值。",
+      "queued_at": "2026-08-26T06:00:17Z"
     }
   ],
   "digest_last_date": "2026-08-26"
