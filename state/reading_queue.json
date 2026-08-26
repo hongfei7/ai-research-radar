@@ -40,6 +40,97 @@
       "queued_at": "2026-08-26T02:51:19Z"
     },
     {
+      "id": "1e4fc6f05502ed6a386e7b5862d2de8fb967f9a6",
+      "title": "LAION-BVD: A 10-Million-Hour Open Video Dataset for Multimodal Pre-training",
+      "url": "https://arxiv.org/abs/2608.24845",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-24T20:00:00Z",
+      "raw_summary": "LAION-BVD is a large-scale open video dataset enabling multimodal pre-training across video, audio, and image modalities with synthetic captions and strong benchmark performance.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "1000万小时级开放视频数据集LAION-BVD，用于多模态预训练，对了解大规模视频预训练数据构建范式有直接价值。",
+      "queued_at": "2026-08-26T03:55:36Z"
+    },
+    {
+      "id": "bb51971d45c74d6400e216e2ef53bfacfadb8cb2",
+      "title": "WeMM-Embedding: WeChat Multi-Modal Embedding Technical Report",
+      "url": "https://arxiv.org/abs/2608.24053",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-24T20:00:00Z",
+      "raw_summary": "WeMM-Embedding is a family of universal multimodal embedding models that align text, images, videos, and interleaved inputs in a shared space, achieving state-of-the-art retrieval and recommendation performance across public benchmarks and large-scale WeChat applications.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "微信多模态Embedding技术报告，覆盖文本/图像/视频/交错输入对齐，含微信大规模应用验证，对多模态检索与推荐工程有参考。",
+      "queued_at": "2026-08-26T03:55:36Z"
+    },
+    {
+      "id": "9844e8650cd93ccb5464ce70efd28e4485947ac8",
+      "title": "Intel reveals that Xeon 7, aimed at HPC and debuting in 2027, will support up to 256 cores and 22 chiplets, with 16 built on its bleeding-edge 18A-P process (Tobias Mann/The Register)",
+      "url": "https://www.techmeme.com/260826/p5#a260826p5",
+      "source": "rss:techmeme",
+      "published_at": "2026-08-26T06:00:02Z",
+      "raw_summary": "Tobias Mann / The Register: Intel reveals that Xeon 7, aimed at HPC and debuting in 2027, will support up to 256 cores and 22 chiplets, with 16 built on its bleeding-edge 18A-P process&nbsp; &mdash;&nbsp; Delayed, flawed, yet still beautiful&nbsp; &mdash;&nbsp; DEEP DIVE Intel's Xeon 7 platform, better known by its codename Diamond Rapids &hellip;",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Intel Xeon 7核心架构与18A-P制程的深度技术披露，含chiplet设计、核心数等具体工程取舍，值得读。",
+      "queued_at": "2026-08-26T07:03:58Z"
+    },
+    {
+      "id": "458c02ad72acceb0d6ffe84d75e2d600c577636d",
+      "title": "Hot Chips 2026: Fujitsu's Monaka CPU",
+      "url": "https://chipsandcheese.com/p/hot-chips-2026-fujitsus-monaka-cpu",
+      "source": "hackernews",
+      "published_at": "2026-08-26T01:24:15Z",
+      "raw_summary": "Hot Chips 2026: Fujitsu's Monaka CPU",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Hot Chips上的Fujitsu Monaka CPU技术细节披露，可了解富士通最新CPU架构与制程选择。",
+      "queued_at": "2026-08-26T08:01:00Z"
+    },
+    {
+      "id": "5bf8daec0c14d5b8a1fcc0d0a8f3df674dd05076",
+      "title": "DeepSeek前7月营收4.75亿元，较2025全年增长9倍",
+      "url": "https://36kr.com/newsflashes/3956065075756418?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-08-26T07:57:30Z",
+      "raw_summary": "据两名知悉该公司财务数据的人士透露，2026年前7个月，DeepSeek实现营收约4.75亿元人民币（折合7070万美元），约为其2025全年营收的十倍（即增长9倍）。两位知情人士补充称，今年1‑7月DeepSeek净亏损约7.15亿元人民币，而2025全年净亏损为9.35亿元。公司正与现有投资人及新投资人就本轮融资展开磋商，计划募资500亿元人民币，目标估值5000亿元人民币。（新浪财经）",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "DeepSeek半年营收与亏损数据曝光，10x增长但仍在亏损，对理解大模型商业化阶段有价值。",
+      "queued_at": "2026-08-26T08:01:00Z"
+    },
+    {
+      "id": "77e8fb430be314da5b5be4ac6936ec6f192b857b",
+      "title": "Sources: DeepSeek generated $70.7M in revenue and posted a $106M net loss in the first seven months of 2026, ~10x its full-year 2025 revenue on a $139M net loss (The Information)",
+      "url": "https://www.techmeme.com/260826/p10#a260826p10",
+      "source": "rss:techmeme",
+      "published_at": "2026-08-26T07:55:00Z",
+      "raw_summary": "The Information: Sources: DeepSeek generated $70.7M in revenue and posted a $106M net loss in the first seven months of 2026, ~10x its full-year 2025 revenue on a $139M net loss&nbsp; &mdash;&nbsp; DeepSeek generated about 475 million yuan ($70.7 million) in revenue in the first seven months of this year &hellip;",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "DeepSeek详细财务数据披露，可了解头部大模型公司在快速放量阶段的成本与收入结构。",
+      "queued_at": "2026-08-26T08:01:00Z"
+    },
+    {
+      "id": "e177fa65792031466620519b68c9219aa508a8d7",
+      "title": "Open Source Kernel in Qwen3.6-35B-A3B for AMD MI350X: 78,498 output tok/s on 8 GPUs",
+      "url": "https://www.reddit.com/r/localllama/comments/1vymha8/open_source_kernel_in_qwen3635ba3b_for_amd_mi350x",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-26T04:12:07Z",
+      "raw_summary": "So here's the thing, almost everyone use NVIDIA to run their LLMs, we also do the same, a lot of people we've met use like RTX PRO 6000 or even H100, B300 It seems like everyone eyes is looking at NVIDIA. However we do the math that the raw power alone on AMD GPU MI350X is higher than NVIDIA B200. So what give? Apparently its the software, ROCM is not as mature as CUDA, their software stack is still lacking behind as well. However, few weeks ago we've got a handful of MI350X to experiment and develop, and what we did is optimizing AMD tech stack until kernel level for Qwen 3.6 35B A3B and the results we got is much comparable to NVIDIA counterpart Based on our benchmark, we got: 1x MI350X: 11,161 output tok/s 8x MI350X: 81,331 output tok/s peak with 78,498.66 output tok/s mean This is 2.16x vLLM throughput on the 8-GPU benchmark We've decided to open source our kernel and stuff at our github https://github.com/NetraRuntime/netra-kernel And also write the blog behind the things we do https://netraruntime.com/blog/qwen36-amd-mi350x-sglang-vllm-benchmark However, we're not done yet. One thing we learned: once the kernels got fast enough, the bottlenecks moved into scheduling, graph coverage, recurrent state, routing, and even HTTP serialization. &#32; submitted by &#32; /u/SmilingGen [link] &#32; [comments]",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "AMD MI350X上对Qwen3.6-35B-A3B进行kernel级优化达到78k tok/s，有具体工程数字与栈对比，AMD vs NVIDIA算力路线有参考价值。",
+      "queued_at": "2026-08-26T08:01:00Z"
+    },
+    {
       "id": "44c3327efe59b41893d70a05a81536fdb8eae95e",
       "title": "Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses [Zhaochen Yu, Yingcheng Wu, Zhenfei Yin, Kaiyuan Chen, Zhe Zhao]",
       "url": "http://arxiv.org/abs/2608.24876v1",
@@ -287,32 +378,6 @@
       "queued_at": "2026-08-26T02:51:19Z"
     },
     {
-      "id": "1e4fc6f05502ed6a386e7b5862d2de8fb967f9a6",
-      "title": "LAION-BVD: A 10-Million-Hour Open Video Dataset for Multimodal Pre-training",
-      "url": "https://arxiv.org/abs/2608.24845",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-24T20:00:00Z",
-      "raw_summary": "LAION-BVD is a large-scale open video dataset enabling multimodal pre-training across video, audio, and image modalities with synthetic captions and strong benchmark performance.",
-      "score": 8,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "1000万小时级开放视频数据集LAION-BVD，用于多模态预训练，对了解大规模视频预训练数据构建范式有直接价值。",
-      "queued_at": "2026-08-26T03:55:36Z"
-    },
-    {
-      "id": "bb51971d45c74d6400e216e2ef53bfacfadb8cb2",
-      "title": "WeMM-Embedding: WeChat Multi-Modal Embedding Technical Report",
-      "url": "https://arxiv.org/abs/2608.24053",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-24T20:00:00Z",
-      "raw_summary": "WeMM-Embedding is a family of universal multimodal embedding models that align text, images, videos, and interleaved inputs in a shared space, achieving state-of-the-art retrieval and recommendation performance across public benchmarks and large-scale WeChat applications.",
-      "score": 8,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "微信多模态Embedding技术报告，覆盖文本/图像/视频/交错输入对齐，含微信大规模应用验证，对多模态检索与推荐工程有参考。",
-      "queued_at": "2026-08-26T03:55:36Z"
-    },
-    {
       "id": "b1fbd57ee3d97e4162960f5e8205ccbd7db0fe8d",
       "title": "小米低调发布三个芯片，不止瞄准AI手机｜最前线",
       "url": "https://36kr.com/p/3955789065158018?f=rss",
@@ -417,19 +482,6 @@
       "queued_at": "2026-08-26T06:00:17Z"
     },
     {
-      "id": "9844e8650cd93ccb5464ce70efd28e4485947ac8",
-      "title": "Intel reveals that Xeon 7, aimed at HPC and debuting in 2027, will support up to 256 cores and 22 chiplets, with 16 built on its bleeding-edge 18A-P process (Tobias Mann/The Register)",
-      "url": "https://www.techmeme.com/260826/p5#a260826p5",
-      "source": "rss:techmeme",
-      "published_at": "2026-08-26T06:00:02Z",
-      "raw_summary": "Tobias Mann / The Register: Intel reveals that Xeon 7, aimed at HPC and debuting in 2027, will support up to 256 cores and 22 chiplets, with 16 built on its bleeding-edge 18A-P process&nbsp; &mdash;&nbsp; Delayed, flawed, yet still beautiful&nbsp; &mdash;&nbsp; DEEP DIVE Intel's Xeon 7 platform, better known by its codename Diamond Rapids &hellip;",
-      "score": 8,
-      "angle": "engineering",
-      "source_traceable": true,
-      "why": "Intel Xeon 7核心架构与18A-P制程的深度技术披露，含chiplet设计、核心数等具体工程取舍，值得读。",
-      "queued_at": "2026-08-26T07:03:58Z"
-    },
-    {
       "id": "c74ce43aaa91df9848ec62044f6d0c14ca756115",
       "title": "腾讯高管回应“腾讯做AI慢了”质疑",
       "url": "https://36kr.com/newsflashes/3955952173644930?f=rss",
@@ -454,6 +506,19 @@
       "source_traceable": true,
       "why": "印度OSAT-ATMP建厂与向2.5D先进封装演进的一手产业信息，对全球半导体供应链判断有价值。",
       "queued_at": "2026-08-26T07:03:58Z"
+    },
+    {
+      "id": "53f5422882fc0fed6a9ed6b7df9fe68cf71dd01b",
+      "title": "The US AI data center buildout is posing complex challenges to major lenders as they stretch themselves to finance, insure, and underwrite a novel asset class (Financial Times)",
+      "url": "https://www.techmeme.com/260826/p9#a260826p9",
+      "source": "rss:techmeme",
+      "published_at": "2026-08-26T07:05:15Z",
+      "raw_summary": "Financial Times: The US AI data center buildout is posing complex challenges to major lenders as they stretch themselves to finance, insure, and underwrite a novel asset class&nbsp; &mdash;&nbsp; Wall Street players extending themselves to underwrite this colossal new asset class are looking to limit exposure.",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "FT报道AI数据中心建设对金融体系的挑战，反映算力基础设施的资本端风险，有产业判断价值。",
+      "queued_at": "2026-08-26T08:01:00Z"
     }
   ],
   "digest_last_date": "2026-08-26"

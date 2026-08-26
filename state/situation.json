@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-26T07:06:13Z",
-  "text": "截至 2026-08-26 15:06 HKT，本轮新增动态：Intel披露Xeon 7（代号Diamond Rapids）2027年发布，256核+22颗chiplet，16",
-  "since": "2026-08-26T07:06:13Z",
+  "generated_at": "2026-08-26T08:03:58Z",
+  "text": "当前共有 30 个活跃事件。要点包括: Indian AI infrastructure company AM Intelligence orders 9,000 Nvidia Vera Rubin systems and plans to offer 1GW of computing capacity as part of an $8B project (Saritha Rai/Bloomberg); NVIDIA Groq 3 LPX Now in Full Production With World-Class Speed for Agentic AI; OpenAI「辣椒芯」干翻英伟达！老黄股价不跌反涨; 软银考虑为OpenAI融资发行高达200亿美元的债券; Anthropic Readies Two New Claude Checkpoints for Release as Early as This Week。",
+  "since": "2026-08-26T08:03:58Z",
   "active_event_count": 30,
   "key_themes": [
     "compute_demand",
     "ai_monetization",
-    "chip_supply",
     "model_capability",
+    "chip_supply",
     "domestic_substitution"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n腾讯对自身AI能力存在叙事矛盾：高管一方面坦承\"算力严重不足\"拖累混元发展、\"一点不焦虑是不可能的\"，另一方面又宣称Hy3\"效果突出\"，内外部认知存在温差。中科曙光将存储定位为\"推理中间结果的管理与复用\"核心，与传统存储的\"被动物\"角色认知形成反差，实际落地效果存疑。Intel Xeon 7押注18A-P制程与AMD/ARM阵营竞争，制程良率是核心争议点但来源（The Register）可信度较低。\n\n【新兴趋势】\n\"推理侧算力全链条紧缺\"成为隐线——腾讯承认算力不足、中科曙光聚焦推理存储优化，均指向推理负载正在独立消耗大量资源，而非简单依附于训练侧。AI To B主战场从C端流量转向办公协同（阿里千问办公、腾讯WorkBuddy、字节豆包），三家齐头并进，背景是C端商业化（Kimi、元宝）不及预期。先进封装（2.5D）从台积电CoWoS向印度等新兴产能扩散。\n\n【信息盲点】\nHBM/高带宽存储（如兆易创新、长鑫）、光模块（中际旭创）、国产AI芯片（寒武纪、海光）在AI To B办公浪潮中的实际受益逻辑未被覆盖。华为盘古及昇腾相关进展缺失。英伟达/AMD在本轮大厂AI采购中的份额变化也未提及。金山办公的竞争壁垒仅一笔带过，缺乏深度。\n\n【跨标的联动】\n中科曙光推理存储与腾讯算力焦虑形成呼应，若推理优化跑通，利好浪潮、海光等国产算力链。Intel Xeon 7的2027节奏直接对标AMD EPYC与ARM Neoverse，影响Intel代工业务连带预期。AI办公大战对金山办公形成替代/补位压力，付费转化率与ARPU为关键变量。印度OSAT若推进2.5D，将与日月光、长电科技、台积电形成产能补充或分流关系。",
+  "cross_analysis": "【核心矛盾】\nDeepSeek 2026年前7月财务数据存在解读分歧：36kr/新浪财经(medium)与The Information/techmeme(low)报出的营收(4.75亿元≈$70.7M)与亏损(7.15亿≈$106M)数字完全一致，但方向判断相反——前者标\"positive\"(9倍增长叙事)，后者标\"neutral\"(亏损未明显收窄)。分歧核心在于\"高增长是否足以覆盖持续高额亏损\"：DeepSeek 2025全年净亏$139M，2026前7月已达$106M，全年亏损大概率扩大，国内大模型\"算力投入-商业化\"剪刀差叙事仍存争议。\n\n【新兴趋势】\n1)开源模型与国产/非英伟达硬件协同成多源共振信号：阿里Qwen3.8-Flash-Next发布(Reddit)+千问办公国际版公测(36kr)+Qwen3.6-35B-A3B在AMD MI350X上跑出vLLM 2.16倍吞吐(Reddit)，显示Qwen系从模型层、应用层到硬件适配层全线推进；2)AI数据中心融资端风险首次被FT专题报道，银行/保险/承销机构正在主动限制敞口；3)Semi Engineering博客综述集中提及CPO量产、scale-up网络、on-device AI",
   "trend_spotting": "端侧AI的\"内存墙拐点\"已至。小米O100的1.22TB/s近存带宽+330 Token/s推理、D100支持200B参数本地部署，意味着消费级终端首次摸到\"可独立运行大模型\"的门槛。这不是渐进式提升——200B本地化是质变临界点：一旦模型权重+KV cache能塞进终端，边缘推理将开始实质侵蚀云端推理份额。\n\n三个被低估的信号：\n\n一、3D WoW近存计算从论文走向量产芯片，说明\"内存墙\"已替代\"FLOPS\"成为算力竞赛的主战场。后续台积电先进封装、海力士HBM之外的定制存储方案将受益。\n\n二、3nm先进制程下沉到车载（D100），汽车SoC正式跨入\"数据中心级\"工艺节点，智驾芯片与手机SoC开始共享同一代工艺平台——传统车规芯片厂商（Mobileye、英伟达Orin/Thor）的护城河被国产玩家直接绕开。\n\n三、OpenAI自研ASIC若量产，将释放GPU供给形成\"意外宽松\"——但更深层信号是，超大规模客户集体去"
 }

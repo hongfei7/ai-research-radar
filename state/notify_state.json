@@ -4,24 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "ASML",
-        "Intel",
-        "台积电"
-      ],
-      "features": [
-        "analysts",
-        "hbm-packaging",
-        "help",
-        "intel",
-        "issues",
-        "say",
-        "tsmc",
-        "yield"
-      ],
-      "sent_at": "2026-08-25T07:12:24Z"
-    },
-    {
-      "tickers": [
         "xAI",
         "英伟达"
       ],
@@ -664,6 +646,58 @@
         "xeon"
       ],
       "sent_at": "2026-08-26T07:06:28Z"
+    },
+    {
+      "tickers": [
+        "DeepSeek",
+        "阿里巴巴"
+      ],
+      "features": [
+        "106m",
+        "10x",
+        "139m",
+        "70.7m",
+        "and",
+        "deepseek",
+        "first",
+        "full-year",
+        "generated",
+        "in",
+        "information",
+        "its",
+        "loss",
+        "months",
+        "net",
+        "of",
+        "on",
+        "posted",
+        "revenue",
+        "seven",
+        "sources",
+        "the"
+      ],
+      "sent_at": "2026-08-26T08:04:26Z"
+    },
+    {
+      "tickers": [
+        "AMD",
+        "英伟达"
+      ],
+      "features": [
+        "amd",
+        "for",
+        "gpus",
+        "in",
+        "kernel",
+        "mi350x",
+        "on",
+        "open",
+        "output",
+        "qwen3.6-35b-a3b",
+        "source",
+        "tok"
+      ],
+      "sent_at": "2026-08-26T08:04:48Z"
     }
   ],
   "last_report": {
