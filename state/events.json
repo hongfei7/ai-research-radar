@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-26T16:22:18Z",
+  "updated_at": "2026-08-26T18:19:13Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -51619,9 +51619,9 @@
       "first_seen_at": "2026-08-26T10:45:32Z",
       "first_published_at": "2026-08-26T10:30:02Z",
       "last_updated_at": "2026-08-26T10:45:32Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 8,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "1. **看多逻辑**\n   - **国产AI算力出海破冰**：若950系列成功落地埃及，意味着华为乃至中国AI算力首次绕过美国出口管制体系打入中东/北非市场，打开千亿级海外增量空间，对中芯国际（代工）、海光信息/寒武纪（国产替代叙事）形成估值催化。\n   - **地缘技术联盟信号**：埃及属\"一带一路\"关键节点，若项目落地可形成\"中国芯片+中东算力\"的替代生态示范效应，后续沙特、阿联酋等国可能跟进，主权AI市场需求加速兑现。\n   - **950系列性能背书**：能在国际政府客户场景中标，等同于对昇腾生态的一次国际化压力测试，有望强化国产AI芯片在性能与生态成熟度上的市场认知。\n\n2. **看空风险**\n   - **外交拦截概率高**：美国极可能通过国务院或商务部向埃及施压，援引《瓦森纳协定》或次级制裁条款冻结交易；埃及在IMF援助及对美关系考量下抗压能力有限，项目落地不确定性大（信源可信度仅为\"low\"）。\n   - **产能与交付能力存疑**：950系列依赖中芯先进制程，目前国产产能仍优先供应国内大客户，海外交付的良率、产能分配及售后体系尚未验证。\n   - **地缘合规与支付风险**：埃及外汇储备紧张，结算路径、美元清算可能触发美方金融制裁监控，存在合同签了但无法实际执行的可能。\n\n3. **关键驱动因素**\n   - 埃及政府正式回应（接受/拒绝/谈判）及美方外交动作（抗议/默许/制裁预警）是核心变量；此外，中芯对950系列的产能爬坡进度决定供给端能否支撑。\n\n4. **市场影响评估**\n   - **短期（1-2月）**：主题情绪驱动，国产AI芯片概念股（寒武纪、海光、中芯）可能出现脉冲式炒作，但因落地存疑，幅度有限。\n   - **中期（3-6月）**：若项目实际签约，将形成\"中国AI算力出海\"主题共振，国产芯片估值锚有望上修；若美方强硬拦截，则情绪迅速回落，且可能引发对第三国转出口的更严苛管制，反而压制国产替代节奏。\n\n5. **时间线推断**\n   - **",
       "ticker_counts": {},
       "max_item_score": 8
@@ -51649,9 +51649,9 @@
       "first_seen_at": "2026-08-26T10:45:32Z",
       "first_published_at": "2026-08-26T10:28:44Z",
       "last_updated_at": "2026-08-26T11:16:08Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 8,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "1. 看多逻辑：DeepSeek已建立先发优势与品牌认知，开源生态存在显著的开发者锁定效应与社区惯性，新模型短期难以撼动其根基；面对竞争压力，DeepSeek大概率加速下一代模型迭代，以技术代差维持领先；智",
       "ticker_counts": {
         "DeepSeek": 2
@@ -51685,9 +51685,9 @@
       "first_seen_at": "2026-08-26T10:45:32Z",
       "first_published_at": "2026-08-26T10:00:00Z",
       "last_updated_at": "2026-08-26T10:45:32Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 7,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "1. **看多逻辑**\n- 端侧AI算力分发层正在重构：Apple自研芯片持续迭代，Mac Mini/Studio切入AI工作流，若开发者生态（Core ML、MLX框架）形成正向循环，将分流对云端GPU的推理依赖，利好Apple Silicon及ARM生态链。\n- OpenAI\"辣椒\"项目若落地自研ASIC，意味着头部模型厂商开始绕过英伟达通用GPU，垂直整合趋势确立，利好合作方博通（ASIC设计）、台积电（先进制程代工），长期削弱NVDA定价权。\n- 算力供给侧多元化对AI应用普及是净利好，模型成本下降将推动端侧Agent、本地化推理场景爆发，扩大整体AI蛋糕。\n\n2. **看空风险**\n- 端侧AI推理受限于内存带宽与模型规模，当前主流千亿级模型仍依赖数据中心NVDA集群，Mac Studio级算力仅能覆盖中小模型，离真正分流NVDA核心收入仍有3-5年距离，叙事溢价大于实质冲击。\n- OpenAI自研芯片即使落地，单代产品良率与软件栈（CUDA替代）成熟度存疑，英伟达凭借每年一代架构升级和生态锁定，护城河远未被动摇。\n- Apple AI功能当前在中国市场合规受限，全球开发者采用率受Siri质量拖累，Mac Studio AI定位\"工作站\"客单价高、销量基数小，对NVDA威胁可量化空间有限。\n\n3. **关键驱动因素**\n- OpenAI\"辣椒\"项目是否官宣合作方与制程节点，以及Apple MLX框架在Hugging Face等主流平台的模型适配数量与下载量。\n- 英伟达Blackwell Ultra/Rubin代际性能跃升幅度，能否继续拉开与ASIC方案的单token成本差距。\n\n4. **市场影响评估**\n- 短期（1-3个月）：事件驱动型博弈，英伟达承压、ARM/博通受消息提振，但实际财报影响有限，波动率主导。\n- 中期（6-12个月）：若OpenAI芯片流片成功并启动小规模部署，将首次在头部厂商层面验证ASIC替代路径，是NVDA估值锚的关键观察点。\n\n5. **时间线推断**\n- 2026Q4–2027Q1：Apple Mac Studio AI工作流开发者基准测试与第三方跑分数据出炉，是检验自研芯片AI能力的首个硬验证窗口。\n- 2027年中：OpenAI\"辣椒\"项目预计进入流片/小批量试产阶段，若同期博通财报披露相关ASIC营收，将是产业链确认信号。",
       "ticker_counts": {
         "OpenAI": 1,
@@ -51798,9 +51798,9 @@
       "first_seen_at": "2026-08-26T10:45:32Z",
       "first_published_at": "2026-08-26T08:00:00Z",
       "last_updated_at": "2026-08-26T10:45:32Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 7,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "**1. 看多逻辑**\n\n①系统级壁垒被重新定价，护城河远比想象中深。事件揭示AI算力的有效产出由超节点拓扑决定，而非单卡spec，72颗GPU通过NVLink+InfiniBand紧耦合形成\"算力单元\"，标称性能无法独立解释系统产出。这意味着英伟达的真正壁垒是系统级工程能力（含封装、互联、软件栈），AMD、英特尔乃至国产替代需要复制的不是芯片，而是一整套scale-out架构，时间窗口被显著拉长。\n\n②重资产、长寿命强化定价权。H100服役三年仍能涨价，证明GPU作为\"生产资料\"具备类基础设施属性，折旧周期长于市场普遍假设。结合千兆瓦AI工厂100-150亿美元资本支出和20-30亿美元发电设施投入，云厂商议价能力被锁定，英伟达硬件溢价具有结构性持续性，B100/B200/GB300代际定价权得以延展。\n\n**2. 看空风险**\n\n①ASIC分流加速。超节点叙事恰好暴露了GPU的\"过度配置\"特征，谷歌TPU、亚马逊Trainium、博通定制方案可在特定工作负载中以更低TCO实现等效产出，长远看将压缩通用GPU溢价空间。\n\n②\"涨价\"现象可能存在幸存者偏差。Lambda公开的样本属头部H100集群（满载+稀缺），整体市场中H100租赁价格已较2023年峰值显著回落（部分型号降幅超30%），三年涨价不代表行业普遍规律。\n\n③下一代产品切换将抵消既有溢价。Blackwell/Rubin周期启动后，云厂商会通过新旧代际替代而非持续加价来优化成本，H100的\"逆涨价\"不必然外推至B300。\n\n**3. 关键驱动因素**\n\n①超节点（NVL72及以上）渗透率与每节点互联价值量（NVLink switch、InfiniBand端口数）的环比变化，直接验证英伟达系统级定价能力的可持续性。\n\n②云厂商租赁价格指数及H100/B200/GB300代际价差结构，若新代际溢价收窄，则\"长寿命\"逻辑不成立。\n\n**4. 市场影响评估**\n\n短期（1-3个月）：事件为英伟达提供\"硬件折旧慢、定价权强\"的增量叙事，叠加GB300出货预期，股价催化偏多。\n\n中期（6-12个月）：真正考验在于B200/GB300能否延续H100的\"逆涨价\"曲线，以及超节点架构在推理工作负载中的边际效用能否维持高溢价；若ASIC规模化部署提速，叙事将受挑战。\n\n**5. 时间线推断**\n\n①近期（1-2个月内）：GB300 NVL72大规模出货爬坡数据、超节点订单可见度。\n\n②2026Q4-2027Q1：云厂商（微软、谷歌、Meta、CoreWeave）新一轮资本开支指引，验证千兆瓦AI工厂落地节奏",
       "ticker_counts": {
         "英伟达": 1
@@ -51863,9 +51863,9 @@
       "first_seen_at": "2026-08-26T11:16:08Z",
       "first_published_at": "2026-08-26T11:00:00Z",
       "last_updated_at": "2026-08-26T11:16:08Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 7,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "**1. 看多逻辑**\n\nArm此次公开AGI服务器CPU架构细节，标志其从IP授权向\"参考设计+生态绑定\"延伸的战略升级。双70核chiplet共136核的规模、2 TB/s UCIe互连、12通道内存控制器等规格，瞄准的是AI训练/推理对高带宽、低延迟的硬性需求，对应云厂自研Arm CPU（如AWS Graviton、Microsoft Cobalt）的痛点。若Arm AGI能在能效比上对标甚至超越x86（Emerald Rapids/Turin）及英伟达Grace，将进一步打开\"非自研阵营\"客户采用Arm架构的口子，IP授权费与版税基础持续扩大。对台积电而言，136核N3P大芯片是先进制程的\"重负载\"应用场景，叠加UCIe先进封装需求，对N3P产能与CoWoS配套形成增量支撑。\n\n**2. 看空风险**\n\n第一，性能数据完全缺席，这是最大的不确定性——核心数不等于性能，IPC、能效比、编译器生态（尤其是AI框架的Arm优化成熟度）才是决定胜负的关键，AMD Epyc与英伟达Grace在软件栈上仍具显著优势。第二，\"通用AI服务器CPU\"定位模糊：当前AI算力市场正快速向GPU+专用加速器分化，传统CPU市场本身在被压缩，AGI名称虽响亮但缺乏清晰差异化场景，与Ampere、富士通MONAKA、英伟达Grace等同类产品形成红海。第三，chiplet+UCIe的2 TB/s带宽对封装良率、散热及电源管理提出极高要求，实际量产成本与可靠性存疑，N3P产能紧张背景下排产优先级可能让位于苹果、英伟达等大客户。\n\n**3. 关键驱动因素**\n\n（1）首批客户落地与性能基准数据：是否能在2026Q4-2027Q1公布SPEC/MLPerf跑分及实际云厂订单，决定叙事能否兑现。（2）软件生态成熟度：Arm Neoverse平台对PyTorch/JAX/Triton等AI关键框架的支持深度，将直接决定客户迁移意愿。\n\n**4. 市场影响评估**\n\n短期看，Hot Chips演讲更多是\"叙事催化\"，对ARM股价带动有限，但会强化AI基础设施概念情绪；TSMC因N3P/CoWoS订单可见性已高，事件边际影响中性。中期（6-12个月），若2027年首批客户量产并公布基准，ARM将迎来版税上调与设计服务费双轮驱动，TSMC则受益于大尺寸chiplet的封装与制程需求。\n\n**5. 时间线推断**\n\n关键节点：（1）2026Q4预计Arm将披露完整微架构与性能数据；（2）2027年上半年首批流片客户（潜在云厂或超算客户）公布采用计划；（3）2027年下半年到2028年初进入量产爬坡期，与AMD Turin-Next、英特尔Diamond Rapids形成正面交锋。需密切跟踪Hot Chips后续Q&A披露的功耗与频率目标，这是验证产品竞争力的最直接信号。",
       "ticker_counts": {
         "ARM": 1,
@@ -51896,9 +51896,9 @@
       "first_seen_at": "2026-08-26T11:16:08Z",
       "first_published_at": "2026-08-26T10:50:15Z",
       "last_updated_at": "2026-08-26T11:16:08Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 7,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "**1. 看多逻辑**\n\n① **中国AI商业化加速验证平台价值**：MiniMax 2026H1营收同比283%（$116.6M），增速较2025全年159%进一步加速，说明中国企业级AI付费意愿和API消耗正快速放量。百度（文心）、阿里（通义/百炼）、腾讯（混元）作为平台型生态主导者，将受益于行业总盘扩张而非单家份额竞争。\n\n② **算力需求二阶传导**：模型迭代与商业化并行必然拉动推理算力消耗，叠加国产替代逻辑，对阿里云、腾讯云及国产芯片（寒武纪、海光）形成持续利好。MiniMax这类创业公司往往租用云算力，其放量直接贡献云厂商收入。\n\n③ **生态分层强化巨头护城河**：基础模型层激烈竞争（MiniMax vs 智谱 vs DeepSeek）反而使下游应用层更依赖平台分发与算力调度，利好字节（豆包/扣子）、腾讯（微信生态）、阿里（钉钉/淘宝",
       "ticker_counts": {
         "百度": 1,
@@ -52033,9 +52033,9 @@
       "first_seen_at": "2026-08-26T11:50:47Z",
       "first_published_at": "2026-08-26T11:25:00Z",
       "last_updated_at": "2026-08-26T11:50:47Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 8,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "",
       "ticker_counts": {
         "Anthropic": 1,
@@ -52594,6 +52594,140 @@
       "deep_analysis": "",
       "ticker_counts": {
         "英伟达": 1
+      },
+      "max_item_score": 7
+    },
+    "evt_c72e80a45ba2": {
+      "event_id": "evt_c72e80a45ba2",
+      "title": "Sources: Anthropic has agreed to pay Nscale $45B over six years to rent about 460MW of power at a West Virginia data center using Nvidia's Vera Rubin chips (Brody Ford/Bloomberg)",
+      "summary": "Anthropic同意在六年内向Nscale支付约450亿美元，租用其位于西弗吉尼亚州的数据中心约460兆算力容量，部署英伟达Vera Rubin芯片。该项目是迄今AI云算力租赁最大单笔交易之一，凸显头部模型厂商对算力供给的长期锁定需求及数据中心电力资源的关键性。",
+      "tickers": [
+        "Anthropic",
+        "英伟达"
+      ],
+      "themes": [
+        "chip_supply",
+        "compute_demand",
+        "datacenter_power",
+        "model_capability"
+      ],
+      "direction": {
+        "Anthropic": "positive",
+        "英伟达": "positive"
+      },
+      "item_ids": [
+        "23a12b6669397d651bd08b729de694e5e143d66c"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-26T18:17:54Z",
+      "first_published_at": "2026-08-26T17:30:02Z",
+      "last_updated_at": "2026-08-26T18:17:54Z",
+      "is_active": true,
+      "significance": 9,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "英伟达": 1,
+        "Anthropic": 1
+      },
+      "max_item_score": 9
+    },
+    "evt_9fccd9e7d122": {
+      "event_id": "evt_9fccd9e7d122",
+      "title": "Sam Altman says OpenAI will have AGI by the end of 2026 if you accept his definition",
+      "summary": "OpenAI CEO Sam Altman 在接受 TIME 采访时表示，按其对 AGI 的定义，OpenAI 有望在2026年底前实现 AGI。首席科学家 Jakub Pachocki 称即将发布的 Astra 模型已具备自动化研究实习生的能力，Altman 预期 Astra 将成为首个真正能发明有影响力新事物的模型。值得关注的是，Altman 同时强调其对 AGI 的定义有别于行业共识。",
+      "tickers": [
+        "OpenAI"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand",
+        "model_capability"
+      ],
+      "direction": {
+        "OpenAI": "positive"
+      },
+      "item_ids": [
+        "765367ba79377c3a522016ae8e1bb1d966ffdeae"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-26T18:17:54Z",
+      "first_published_at": "2026-08-26T17:30:29Z",
+      "last_updated_at": "2026-08-26T18:17:54Z",
+      "is_active": true,
+      "significance": 8,
+      "status": "developing",
+      "deep_analysis": "**1. 看多逻辑**\n① **能力跃迁叙事兑现**：Pachocki 将 Astra 定位为\"自动化研究实习生\"——若其在多步推理、工具调用、自主假设验证上确实突破现有 SOTA，将首次实现 AI 从\"信息检索\"到\"知识创造\"的质变，直接打开 AI for Science 的千亿级市场空间。② **算力需求再催化**：能力跃迁必然推升训练/推理算力消耗，叠加 OpenAI 万亿参数级路线图，英伟达、台积电、ASML 的算力链叙事在 2026 年内将获得持续验证窗口。③ **竞争壁垒强化**：若 Astra 率先实现\"发明有影响力新事物\"，将拉开与 Anthropic Claude、xAI Grok 的能力代差，巩固 OpenAI 在融资估值（传闻 5000 亿+）和商业化定价权上的领先地位。\n\n**2. 看空风险**\n① **定义稀释+营销博弈**：Altman 主动强调\"按我的定义\"——这是典型对冲话术，AGI 标准本身缺乏共识，历史上 Altman 多次修正时间表（2025/2024/2026），执行力可信度打折扣。② **自我背书无独立验证**：\"自动化研究实习生\"系内部科学家评价，缺乏第三方基准（如 FrontierMath、ARC-AGI）佐证，不排除发布会前刻意抬预期管理市场。③ **商业化与安全双重掣肘**：即便能力达标，监管审批（EU AI Act、FTC 关注）、对齐安全问题可能延迟部署，能力≠收入，2026 年内变现路径仍模糊。\n\n**3. 关键驱动因素**\n① **Astra 实际发布与独立评测成绩**——尤其在长链条科研任务、工具使用自主性上的表现，是验证叙事真伪的核心标尺。② **OpenAI 算力 capex 与融资节奏**——新一轮融资估值及与英伟达/甲骨文的算力采购协议将量化兑现路径。\n\n**4. 市场影响评估**\n短期（1-3 月）：情绪驱动型，AI 算力链（NVDA、TSM）及云厂 capex 预期再获催化，OpenAI 关联概念股（包括软银、Oracle）获估值溢价。中期（6-12 月）：若 Astra 实测兑现，看多逻辑扎实，AI 主线有望从\"基础设施\"扩散至\"应用变现\"；若不及预期，叙事溢价回吐，板块将经历\"去伪存真\"式分化。\n\n**5. 时间线推断**\n- 2026 Q1-Q2：Astra 正式发布及第三方 benchmark 陆续出炉，为核心验证窗口；\n- 2026 Q2-Q3：OpenAI 下一轮融资/估值重定价，算力采购合同披露节点；\n- 2026 Q4：若 AGI 时间表被部分证实，将触发行业级范式重估，反之则",
+      "ticker_counts": {
+        "OpenAI": 1
+      },
+      "max_item_score": 8
+    },
+    "evt_f8abb02cbe1d": {
+      "event_id": "evt_f8abb02cbe1d",
+      "title": "Hot Chips 2026: Nvidia presents Groq 3 LPX architecture and unveils its first third-party inference benchmark — LP30-based rack already in production, company says",
+      "summary": "Hot Chips 2026大会上，英伟达VP Igor Arsovski展示Groq 3 LPX机架架构，并发布该硬件的首个第三方推理基准。英伟达表示基于LP30的LPX机架已进入量产。该事件标志英伟达整合Groq技术后的推理产品正式落地，并首次以第三方基准向行业展示性能数据。",
+      "tickers": [
+        "英伟达"
+      ],
+      "themes": [
+        "chip_supply",
+        "compute_demand",
+        "model_capability"
+      ],
+      "direction": {
+        "英伟达": "positive"
+      },
+      "item_ids": [
+        "d09a630159e3663671a5e3876df6bcf1c3582b79"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-26T18:17:54Z",
+      "first_published_at": "2026-08-26T16:23:37Z",
+      "last_updated_at": "2026-08-26T18:17:54Z",
+      "is_active": true,
+      "significance": 8,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "英伟达": 1
+      },
+      "max_item_score": 8
+    },
+    "evt_1943fb252c5f": {
+      "event_id": "evt_1943fb252c5f",
+      "title": "神秘「牛来」模型果然是智谱！GLM首个原生多模态，还用的国产卡",
+      "summary": "智谱AI确认其此前被猜测的神秘「牛来」模型为其首个原生多模态大模型GLM，区别于以往后加多模态的方案。模型训练使用了国产AI芯片，是国内大模型厂商在算力侧推进国产替代的标志性事件，反映国产芯片已具备支撑头部大模型训练的能力。",
+      "tickers": [
+        "商汤",
+        "寒武纪",
+        "科大讯飞"
+      ],
+      "themes": [
+        "chip_supply",
+        "compute_demand",
+        "domestic_substitution",
+        "model_capability"
+      ],
+      "direction": {
+        "商汤": "neutral",
+        "寒武纪": "positive"
+      },
+      "item_ids": [
+        "26ffecbc1265e153f1e58969b1686e709c5dd278"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-26T18:17:54Z",
+      "first_published_at": "2026-08-26T16:48:12Z",
+      "last_updated_at": "2026-08-26T18:17:54Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "**1. 看多逻辑**\n\n第一，国产算力替代的标志性背书。智谱作为国内一线大模型厂商，其GLM训练采用国产AI芯片，意味着国产芯片已具备支撑头部模型从预训练到对齐的完整工程能力，是对寒武纪、海光、华为昇腾等国产算力链最强的需求侧验证。一旦头部模型形成示范效应，字节、阿里、DeepSeek等厂商跟进采用国产算力的概率显著提升，国产AI芯片的TAM预期有望上修。\n\n第二，原生多模态架构释放模型能力跃迁信号。区别于\"后加\"多模态的拼接方案，原生多模态意味着底层表征统一，推理时延与跨模态理解能力有望对标GPT-4o级别。这强化了商汤、科大讯飞等具备视觉/语音多模态数据沉淀厂商的差异化壁垒，尤其商汤在视觉大模型上的积累有望借GLM生态获得二次估值催化。\n\n第三，算力国产化叙事在出口管制升级背景下具有不可逆性。即便短期性能仍有差距，地缘约束下国产芯片从\"能用\"走向\"必用\"已是产业共识，事件本身强化了这一趋势的确定性。\n\n**2. 看空风险**\n\n第一，\"国产卡\"具体型号与规模未披露，信号意义大于实际意义。若仅是百卡级验证集群或采用阉割版国产芯片，对寒武纪等厂商的营收贡献几乎可忽略；市场若将其简单外推为全栈替代，存在预期透支风险。\n\n第二，训练能力≠推理部署能力。国产芯片在大规模推理侧的能耗比、生态成熟度（CUDA替代）仍存短板，GLM若最终商用仍依赖英伟达推理集群，则本次事件仅是\"训练侧单点突破\"，对国产芯片厂商的业绩弹性有限。\n\n第三，模型实测能力存疑。原生多模态架构虽先进，但智谱GLM与GPT-4o、Claude 3.5、Gemini 2.5的代差尚未被基准测试充分验证；若实测能力低于市场预期，反向冲击国产算力\"训练出好模型\"的逻辑链。\n\n**3. 关键驱动因素**\n\n一是国产芯片厂商归属与型号的官方披露（预计1-2周内可通过供应链交叉验证），将直接决定寒武纪/海光/华为链的受益排序与弹性大小。二是GLM多模态版本在第三方基准（如MMBench、MMMU、AudioBench）的实测分数，验证\"国产卡+原生多模态\"组合的实际竞争力。\n\n**4. 市场影响评估**\n\n短期（1-2周）：事件驱动情绪升温，寒武纪等国产芯片标的获主题资金关注，板块存在脉冲式上涨；但因具体细节未明，持续性存疑。商汤、科大讯飞受益于多模态叙事，但弹性弱于芯片端。中期（1-3个月）：若实测能力对标GPT-4o级别，且芯片归属明确（尤其指向寒武纪），将触发国产算力链业绩与估值双修复；反之若信息迟迟不落地或性能不及预期，主题热度将快速衰减。\n\n**5. 时间线推断**\n\n未来1-2周：智谱预计正式发布GLM多模态版本，伴随技术报告与benchmark数据披露，这是验证逻辑最关键的窗口。1个月内：供应链与行业媒体大概率曝光所用国产芯片型号及集群规模。Q4-2026：",
+      "ticker_counts": {
+        "寒武纪": 1,
+        "商汤": 1,
+        "科大讯飞": 1
       },
       "max_item_score": 7
     }

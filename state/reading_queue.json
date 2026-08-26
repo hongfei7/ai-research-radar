@@ -14,6 +14,19 @@
       "queued_at": "2026-08-26T09:58:26Z"
     },
     {
+      "id": "d09a630159e3663671a5e3876df6bcf1c3582b79",
+      "title": "Hot Chips 2026: Nvidia presents Groq 3 LPX architecture and unveils its first third-party inference benchmark — LP30-based rack already in production, company says",
+      "url": "https://www.tomshardware.com/tech-industry/semiconductors/nvidia-presents-groq-3-lpx-architecture-and-unveils-its-first-third-party-inference-benchmark",
+      "source": "rss:tomshardware",
+      "published_at": "2026-08-26T16:23:37Z",
+      "raw_summary": "Igor Arsovski, now Nvidia's VP of hardware, presented the Groq 3 LPX rack's architecture and published the first third-party benchmark of the hardware.",
+      "score": 9,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Hot Chips 2026 上 Nvidia 公布 Groq 3 LPX 架构细节与第三方推理基准，且 LP30 机柜已量产，一手架构信息密度极高。",
+      "queued_at": "2026-08-26T18:16:35Z"
+    },
+    {
       "id": "de9e77ff7d3a07691c2ae39e7a1204226ca4ebb8",
       "title": "SPO++: Stream-Aligned Policy Optimization for Asynchronous Agentic RL [Kai Ruan, Jinghao Lin, Qianshan Wei, Ziqi Zhou, Zihe Huang]",
       "url": "http://arxiv.org/abs/2608.24870v1",
@@ -339,6 +352,32 @@
       "queued_at": "2026-08-26T16:20:17Z"
     },
     {
+      "id": "26ffecbc1265e153f1e58969b1686e709c5dd278",
+      "title": "神秘「牛来」模型果然是智谱！GLM首个原生多模态，还用的国产卡",
+      "url": "https://www.qbitai.com/2026/08/479919.html",
+      "source": "rss:qbitai",
+      "published_at": "2026-08-26T16:48:12Z",
+      "raw_summary": "",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "智谱 GLM 首个原生多模态模型且使用国产卡，揭示中国多模态路线与算力自主化进展，值得深读。",
+      "queued_at": "2026-08-26T18:16:35Z"
+    },
+    {
+      "id": "23a12b6669397d651bd08b729de694e5e143d66c",
+      "title": "Sources: Anthropic has agreed to pay Nscale $45B over six years to rent about 460MW of power at a West Virginia data center using Nvidia's Vera Rubin chips (Brody Ford/Bloomberg)",
+      "url": "https://www.techmeme.com/260826/p46#a260826p46",
+      "source": "rss:techmeme",
+      "published_at": "2026-08-26T17:30:02Z",
+      "raw_summary": "Brody Ford / Bloomberg: Sources: Anthropic has agreed to pay Nscale $45B over six years to rent about 460MW of power at a West Virginia data center using Nvidia's Vera Rubin chips&nbsp; &mdash;&nbsp; Anthropic PBC has agreed to spend $45 billion to rent AI cloud computing power from Nscale's flagship data center development in West Virginia &hellip;",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Anthropic 6 年 450 亿美元租 Nscale 460MW、采用 Vera Rubin，是观察算力供需与 Vera Rubin 商用节奏的关键信号。",
+      "queued_at": "2026-08-26T18:16:35Z"
+    },
+    {
       "id": "44c3327efe59b41893d70a05a81536fdb8eae95e",
       "title": "Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses [Zhaochen Yu, Yingcheng Wu, Zhenfei Yin, Kaiyuan Chen, Zhe Zhao]",
       "url": "http://arxiv.org/abs/2608.24876v1",
@@ -479,45 +518,6 @@
       "angle": "route",
       "source_traceable": true,
       "why": "把推理时对概率分布的隐式编辑形式化为独立编辑层，明确指出当前LLM评估对部署行为归因的盲区，是路线层面的批判。",
-      "queued_at": "2026-08-26T02:51:19Z"
-    },
-    {
-      "id": "25f7bc6690b735961ae8d540bbb80dbb62567a16",
-      "title": "What FID Hides: Detecting, Ranking, and Diagnosing Deviations in Generative Evaluation [Hao Chen]",
-      "url": "http://arxiv.org/abs/2608.24881v1",
-      "source": "arxiv:cs.LG",
-      "published_at": "2026-08-25T17:58:46Z",
-      "raw_summary": "Generative models are commonly ranked by Fréchet Inception Distance (FID) and Kernel Inception Distance (KID), yet FID's first-two-moment summary can miss distributional differences, and a reported scalar gap alone is not a calibrated test against sampling variation. FID's moment restriction has concrete consequences: on ImageNet, visually unrecognizable images optimized only to match the reference Inception mean and covariance obtain FID $24.7$ versus $58.6$ for held-out real images (lower is better). Moreover, FID and KID are scalar discrepancies that are unchanged when the two samples are exchanged and therefore do not encode the direction of a dispersion change: under-dispersion, as can occur in mode collapse, versus over-dispersion. We introduce \\textbf{ZID} (\\emph{Z-resolved Integrated Diagnostic}), which combines six standardized location- and dispersion-sensitive arms from a rank graph (RISE) and Gaussian kernels (GPK at two bandwidths). Rather than asking one scalar to serve incompatible roles, ZID reports three linked outputs: an index for ranking departure magnitude, a permutation $p$-value for testing distributional equality, and a signed dispersion readout for diagnosis. In controlled experiments, ZID detects a broad range of departures, and its score tracks increasing severity along the corresponding sweeps, including cases in which FID is flat or reversed. On DiT-XL/2 and SiT-XL/2 guidance sweeps, ZID detects departure from real data, and its signed readout lab",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "用具体反例说明FID的二阶矩摘要会严重失真(如FID 24.7的乱真图像)，并提出分布级检测与诊断方法，对生成模型评估范式有修正意义。",
-      "queued_at": "2026-08-26T02:51:19Z"
-    },
-    {
-      "id": "526c24e6ceab6fc57bab39200dbdfcba3c5fa085",
-      "title": "Bellman Calibration for Marginalized Importance Weighting in Offline Reinforcement Learning [Lars van der Laan, Nathan Kallus]",
-      "url": "http://arxiv.org/abs/2608.24858v1",
-      "source": "arxiv:cs.LG",
-      "published_at": "2026-08-25T17:44:02Z",
-      "raw_summary": "Marginalized importance weighting evaluates a target policy by reweighting offline state-action samples with its discounted occupancy ratio, characterized by an adjoint Bellman equation. Existing minimax, primal-dual, and fitted fixed-point estimators can leave residual occupancy-balance violations because of function-class approximation, regularization, or incomplete optimization. These violations are difficult to diagnose and reduce because the objectives generally lack a direct supervised validation loss for hyperparameter tuning, model selection, and early stopping. We introduce isotonic Bellman calibration, a one-dimensional, model-agnostic post-processing method that reduces these violations while preserving the ranking information in any initial occupancy-ratio estimate. The method corrects the estimate's scale and shape by applying fitted occupancy-ratio evaluation (FORE) over a one-dimensional class of nondecreasing transformations. We characterize Bellman calibration as a conditional fixed-point property equivalent to occupancy-balance against every test function of the calibrated ratio. More generally, we derive a calibration-refinement bound showing that any fitted ratio with small calibration error performs nearly as well as the best post-processing based on its fitted values. For isotonic Bellman calibration, we establish finite-sample calibration guarantees and a KL oracle inequality relative to the best monotone transformation of the initial estimate. Conseque",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "用isotonic Bellman calibration对离线RL中的occupancy-balance残差做有监督诊断与修正，直接补齐重要性加权方法缺validation loss的痛点。",
-      "queued_at": "2026-08-26T02:51:19Z"
-    },
-    {
-      "id": "90371b5b64839b715c525796315ffce755b9fb6c",
-      "title": "Best Practice Critic Optimization",
-      "url": "https://arxiv.org/abs/2608.23566",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-24T20:00:00Z",
-      "raw_summary": "BPCO stabilizes critic-based reinforcement learning for language models by combining bounded value predictions, Monte Carlo targets, and adaptive advantage estimation, matching group-based methods with single-response sampling.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "BPCO用有界值预测+MC目标+自适应优势估计稳定critic-based RL，方法具体可追溯。",
       "queued_at": "2026-08-26T02:51:19Z"
     }
   ],
