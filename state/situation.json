@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-26T11:51:25Z",
-  "text": "截至 2026-08-26 19:51 HKT，阿里800亿港元配售于今日正式完成，每股112.7港元、净额约797亿港元，募资全数投入AI与算力基础设施。SemiAnalysis创始人Dylan Patel最新研判指出，2024-2029年全球AI资本开支累计将达11万亿美元量级，Anthropic与OpenAI将主导全球算力控制权，中国算力路径受地缘与供应链制约。",
-  "since": "2026-08-26T11:51:25Z",
-  "active_event_count": 28,
+  "generated_at": "2026-08-26T13:00:36Z",
+  "text": "当前共有 30 个活跃事件。要点包括: 英伟达Vera Rubin的Agent吞吐暴涨最高提升30倍，却不只靠GPU | Hot Chips 2026; 月之暗面与微软、亚马逊、谷歌洽谈Kimi K3托管; 阿里千问Qwen3.8-Flash发布并开源; OpenAI自研「辣椒芯片」首测超越英伟达; Intel reveals that Xeon 7, aimed at HPC and debuting in 2027, will support up to 256 cores and 22 chiplets, with 16 built on its bleeding-edge 18A-P process (Tobias Mann/The Register)。",
+  "since": "2026-08-26T13:00:36Z",
+  "active_event_count": 30,
   "key_themes": [
     "compute_demand",
+    "model_capability",
     "ai_monetization",
     "chip_supply",
-    "model_capability",
-    "datacenter_power"
+    "advanced_packaging"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nDylan Patel（低可信度播客来源）预测2024-2029年全球AI capex累计达11万亿美元，核心判断是算力向Anthropic/OpenAI等少数玩家集中；而阿里巴巴在同日完成约800亿港元大额配售，呈现\"中国独立算力路径\"的另一条逻辑——不依赖美国巨头、自建云与智算。两者并非直接矛盾，但叙事方向相反：集中化vs.分散化。需注意11T为单一来源预测，且播客形式缺乏财报验证。\n\n【新兴趋势】\n\"AI基础设施资本开支军备竞赛\"是本轮最显著的反复主题——无论美国（11T预测）还是中国（阿里800亿配售），capex叙事均处上行通道。数据中心电力瓶颈（datacenter_power）在两条素材中均被点出，叠加成为隐性主线。\n\n【信息盲点】\n1）阿里800亿港元募资具体用途未披露，无法判断capex/并购/股东回报比例；2）上游直接受益方——英伟达、AMD、台积电（先进封装）、SMIC、寒武纪均未被覆盖，但属于本轮逻辑链条上的关键标的；3）电力/电力设备（核电、燃气轮机、变压器）作为datacenter_power瓶颈的解决方案方未提及；4）四大云厂最新季报capex指引未出现，无法交叉验证11T假设。\n\n【跨标的联动】\n核心联动信号是\"AI capex→芯片→电力\"的传导链。阿里配售如用于算力建设，将同时利好云厂商自身及上游芯片与IDC合作伙伴，与Dylan Patel所描述的全球capex浪潮形成共振，强化全球芯片、电力设备板块的β。但中美算力路径分化意味着：阿里更可能向国产芯片倾斜，间接利好国产替代主线而非英伟达。",
-  "trend_spotting": "72小时内最值得关注的不是单一事件，而是三条趋势线同时收敛：\n\n**【新趋势】中国AI算力\"双向出海\"破冰。** 华为昇腾950试探埃及政府数据中心是硬件出口，月之暗面Kimi K3与美三大云谈30%收入分成是模型入口，两条路径若同时落地，意味着中国AI产业链首次形成\"芯片+模型\"双轨外溢，对英伟达中东份额与OpenAI/Anthropic的API定价权形成实质压力。\n\n**【早期信号】算力定价权的反直觉证据。** Lambda披露2023年部署的H100集群当前租金反而高于首发价，根源是GB300 NVL72这类超节点让\"单卡算力\"叙事失效——NVLink+InfiniBand互联拓扑、内存墙、软件栈共同决定有效产出。这预示英伟达的硬件溢价将随超节点渗透率而非单卡性能继续走强，AI capex的折旧周期可能比市场预期更长。\n\n**【市场盲点】美国EPA取消数据中心空气许可的公众评议环节。** 这是被淹没在地缘新闻里的关键政策松绑，直接降低AI基建环境准入门槛，若叠加州层面反弹不足，将实质性加速MSFT/AMZN/GOOGL/META的capex落地节奏。\n\n**【拐点提示】物理AI路线分化。** 世界机器人大会信号明确：AI汽车（端侧≥500 TOPS、大模型上车）正抢在人形机器人之前实现人机深度协作，具身智能的真正入口可能在车端而非工厂端，国产智驾芯片与端侧大模型蒸馏链将率先吃到红利。"
+  "cross_analysis": "【核心矛盾】\n36kr称Qwen3.8-Flash为\"千亿总参数仅激活60亿\"，而Bloomberg转述版则写明\"125B参数、基于Qwen 4架构\"，两份报道在参数规模与架构命名上存在表述差异，需以官方技术报告为准。此外，\"性能超越Claude Opus4.6\"这一关键声明目前仅来自厂商自述，缺乏独立benchmark验证，需警惕\"对标叙事\"与实际能力之间的落差。OpenAI自研芯片条目虽得分较高(8)，但cn_summary为空，信号强度被高估。\n\n【新兴趋势】\n\"推理侧极致降本\"是多条线索的共同方向：Qwen3.8-Flash将推理价压至1元/3元/百万token、商汤MFU提升2.5倍、d-Matrix 3D DRAM绕过HBM以100TB/s带宽",
+  "trend_spotting": "72小时内最显著的边际变化是推理成本曲线被再次暴力重写：Qwen3.8-Flash以125B总参数/60B激活、训练成本较前代下降近90%、API定价压至输入1元/输出3元/百万tokens——约为DeepSeek-V4-Flash的1/3。这意味着每百万token的有效算力成本正以季度为单位塌方，模型层\"白菜价\"竞赛已经触达产业可承受的下限附近。\n\n两条尚未被充分定价的早期信号值得警惕：一是d-Matrix在Hot Chips 2026展示的3D DRAM+台积电4nm面对面键合方案，单卡100TB/s带宽绕开HBM依赖，36微米间距已具备工程化特征，对SK海力士/美光/三星的HBM定价权形成5年视角的替代威胁；二是Moonshot AI与三大美云洽谈托管分成，一旦落地将是中国前沿模型首次进入AWS/Azure/GCP渠道，叠加OpenAI九个月自研芯片，行业垂直整合速度明显加快。\n\n被市场低估的事实是商汤上半年首次盈利6.2亿、Token工厂日均2.4万亿tokens（同比22倍），说明国产算力-模型-商业化闭环已跑通，这对寒武纪、海光等国产AI芯片是需求侧的真实验证，而非概念叙事。\n\n潜在拐点：API价格"
 }

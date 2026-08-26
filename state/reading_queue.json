@@ -235,6 +235,19 @@
       "queued_at": "2026-08-26T11:49:56Z"
     },
     {
+      "id": "7d2540c3c46cb789b5287d142bd4533fc9888723",
+      "title": "Hot Chips 2026: d-Matrix stacks AI accelerator directly on custom DRAM for 100 TB/s per card — TSMC 4nm compute die bonded face-to-face at a 36-micron pitch on top of a custom-designed die",
+      "url": "https://www.tomshardware.com/tech-industry/semiconductors/d-matrix-stacks-its-ai-accelerator-directly-on-custom-dram-for-100-tbs-per-card",
+      "source": "rss:tomshardware",
+      "published_at": "2026-08-26T12:00:00Z",
+      "raw_summary": "d-Matrix presented Raptor, which it calls the first 3D DRAM accelerator for generative inference, showing a TSMC 4nm compute die bonded face-to-face at a 36-micron pitch on top of a custom-designed DRAM die.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "d-Matrix在Hot Chips 2026公开Raptor：4nm计算die与自研DRAM 3D face-to-face堆叠，36μm pitch，每卡100TB/s，是值得读原presentation的存算/近存算具体方案。",
+      "queued_at": "2026-08-26T12:57:21Z"
+    },
+    {
       "id": "44c3327efe59b41893d70a05a81536fdb8eae95e",
       "title": "Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses [Zhaochen Yu, Yingcheng Wu, Zhenfei Yin, Kaiyuan Chen, Zhe Zhao]",
       "url": "http://arxiv.org/abs/2608.24876v1",
@@ -505,19 +518,6 @@
       "angle": "industry",
       "source_traceable": true,
       "why": "小米玄戒三颗3nm芯片的研发历程与战略解读，含晶体管数、生态布局与端侧AI设计取舍，对国产SoC路线有参考价值。",
-      "queued_at": "2026-08-26T03:55:36Z"
-    },
-    {
-      "id": "b6affebe21a369e33535ee1b36bb1d3ceb44e04e",
-      "title": "From Seeing to Acting: Smart Glasses as First-Person Intelligence Platforms",
-      "url": "https://arxiv.org/abs/2608.24877",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-24T20:00:00Z",
-      "raw_summary": "Smart glasses are surveyed as unified first-person intelligence platforms requiring sustained perception-state-interaction-action loops across constrained hardware and diverse applications.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "智能眼镜作为第一人称智能平台的综述，涉及感知-状态-交互-动作闭环，可了解该方向研究边界与硬件约束。",
       "queued_at": "2026-08-26T03:55:36Z"
     }
   ],

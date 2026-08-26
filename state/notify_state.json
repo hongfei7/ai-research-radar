@@ -4,75 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "海力士",
-        "美光",
-        "英伟达"
-      ],
-      "features": [
-        "88-core",
-        "agentic",
-        "and",
-        "benchmarked",
-        "breaks",
-        "chips",
-        "cpu",
-        "detailed",
-        "down",
-        "hot",
-        "memory",
-        "more",
-        "multithreading",
-        "nvidia",
-        "socamm2",
-        "spatial",
-        "tb",
-        "vera",
-        "workloads"
-      ],
-      "sent_at": "2026-08-25T12:07:22Z"
-    },
-    {
-      "tickers": [
-        "小米",
-        "高通"
-      ],
-      "features": [
-        "3nm",
-        "6nm",
-        "accelerator",
-        "ai",
-        "and",
-        "autonomous",
-        "boost",
-        "china",
-        "chip",
-        "d100",
-        "deng",
-        "driving",
-        "for",
-        "iris",
-        "its",
-        "mimo",
-        "mobile",
-        "models",
-        "morning",
-        "o100",
-        "o3",
-        "paired",
-        "post",
-        "south",
-        "the",
-        "to",
-        "unveils",
-        "when",
-        "with",
-        "xiaomi",
-        "xring"
-      ],
-      "sent_at": "2026-08-25T12:07:47Z"
-    },
-    {
-      "tickers": [
         "Anthropic",
         "OpenAI",
         "阿里巴巴"
@@ -863,6 +794,91 @@
         "with"
       ],
       "sent_at": "2026-08-26T11:51:55Z"
+    },
+    {
+      "tickers": [
+        "DeepSeek",
+        "阿里巴巴"
+      ],
+      "features": [
+        "qwen3.8-flash",
+        "千问",
+        "发布",
+        "布并",
+        "并开",
+        "开源",
+        "里千",
+        "问发",
+        "阿里"
+      ],
+      "sent_at": "2026-08-26T13:01:09Z"
+    },
+    {
+      "tickers": [
+        "三星电子",
+        "台积电",
+        "海力士"
+      ],
+      "features": [
+        "36-micron",
+        "4nm",
+        "accelerator",
+        "ai",
+        "at",
+        "bonded",
+        "card",
+        "chips",
+        "compute",
+        "custom",
+        "custom-designed",
+        "d-matrix",
+        "die",
+        "directly",
+        "dram",
+        "face-to-face",
+        "for",
+        "hot",
+        "of",
+        "on",
+        "per",
+        "pitch",
+        "stacks",
+        "tb",
+        "top",
+        "tsmc"
+      ],
+      "sent_at": "2026-08-26T13:01:24Z"
+    },
+    {
+      "tickers": [
+        "商汤"
+      ],
+      "features": [
+        "上半",
+        "与毛",
+        "亿元",
+        "元经",
+        "入与",
+        "利亿",
+        "利率",
+        "半年",
+        "商汤",
+        "常性",
+        "年首",
+        "度盈",
+        "性收",
+        "持续",
+        "提升",
+        "收入",
+        "毛利",
+        "汤上",
+        "率持",
+        "盈利",
+        "经常",
+        "续提",
+        "首度"
+      ],
+      "sent_at": "2026-08-26T13:01:44Z"
     }
   ],
   "last_report": {
