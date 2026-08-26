@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-26T06:02:10Z",
+  "updated_at": "2026-08-26T07:06:13Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -50830,6 +50830,165 @@
         "海力士": 1
       },
       "max_item_score": 5
+    },
+    "evt_9a2d9daf46a5": {
+      "event_id": "evt_9a2d9daf46a5",
+      "title": "中科曙光：即将发布推理相关存储新技术",
+      "summary": "中科曙光将在数博会发布新一代词元加速方案，让存储参与推理中间结果的管理与复用，以提升推理效率。赛迪顾问报告显示，曙光在AI、教育、具身智能、自动驾驶四个细分市场位居中国分布式存储市场第一。该方案聚焦推理场景下存储与计算的协同优化，是存储侧针对推理负载的技术升级。",
+      "tickers": [
+        "中科曙光"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand",
+        "domestic_substitution"
+      ],
+      "direction": {
+        "中科曙光": "positive"
+      },
+      "item_ids": [
+        "9c21211bdde4384496ea36c418e3bcb8191b6dcf"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-26T07:04:55Z",
+      "first_published_at": "2026-08-26T06:52:04Z",
+      "last_updated_at": "2026-08-26T07:04:55Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "中科曙光": 1
+      },
+      "max_item_score": 7
+    },
+    "evt_9ac5177a584b": {
+      "event_id": "evt_9ac5177a584b",
+      "title": "Intel reveals that Xeon 7, aimed at HPC and debuting in 2027, will support up to 256 cores and 22 chiplets, with 16 built on its bleeding-edge 18A-P process (Tobias Mann/The Register)",
+      "summary": "Intel披露面向HPC的下一代至强平台Xeon 7（代号Diamond Rapids），计划2027年发布，单处理器最高支持256核、22颗chiplet，其中16颗采用Intel 18A-P先进制程。该平台延续chiplet架构并依赖Intel自家最先进制程，是Intel在数据中心高端市场对标AMD/ARM阵营的关键产品，落地节奏与良率决定其竞争力。",
+      "tickers": [
+        "Intel"
+      ],
+      "themes": [
+        "chip_supply",
+        "compute_demand"
+      ],
+      "direction": {
+        "Intel": "neutral"
+      },
+      "item_ids": [
+        "9844e8650cd93ccb5464ce70efd28e4485947ac8"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-26T07:04:55Z",
+      "first_published_at": "2026-08-26T06:00:02Z",
+      "last_updated_at": "2026-08-26T07:04:55Z",
+      "is_active": true,
+      "significance": 8,
+      "status": "developing",
+      "deep_analysis": "**看多逻辑：**\n1. **制程反攻信号明确**：18A-P首发于旗舰至强平台，若良率达标将证明Intel在先进制程上重回第一梯队，重塑客户与资本市场对Intel代工业务（Intel Foundry）的信心，对长期估值修复有正面意义。\n2. **规格具备HPC竞争力**：256核+22 chiplet配置在HPC高端市场属头部水准，chiplet架构延续可摊薄制造成本并加快迭代节奏，有助于Intel在超算/AI数据中心细分领域稳住基本盘。\n3. **生态护城河仍存**：x86在HPC软件生态、编译器优化上的积累非ARM短期可复制，Xeon 7搭配oneAPI/AVX-10等指令集扩展对传统HPC客户仍有粘性。\n\n**看空风险：**\n1. **2027时间窗口过长**：距今约1.5–2年，AMD EPYC Turin已192核并计划Zen6路线图，2027年对手大概率突破256核甚至更高，Intel届时将面临规格被反超风险，\"首发红利\"可能被稀释。\n2. **18A-P良率与执行风险**：Intel近年制造端多次延期（7nm/4nm均有过跳票），18A-P作为全新节点叠加16颗计算die集成，良率爬坡与封装良率任一环节出问题即可能延期或影响毛利率。\n3. **客户信任仍在修复中**：Granite Rapids/Sierra Forest市场反馈不及预期，云厂商持续向ARM/自研芯片倾斜，Xeon 7仅靠规格难以扭转份额流失趋势。\n\n**关键驱动因素：**\n1. 18A-P良率爬坡曲线及2026年风险量产节点，是判断Xeon 7能否如期交付与盈利能力的核心。\n2. AMD EPYC Zen6及ARM Neoverse V3/V4同期产品规格、价格与客户拓展进展。\n\n**市场影响评估：**\n- **短期（3–6个月）**：事件偏前瞻，情绪影响有限，股价更多受财报与18A进展催化。\n- **中期（1–2年）**：决定Intel数据中心份额能否止跌及代工业务能否兑现客户承诺，是估值切换的关键节点。\n\n**时间线推断：**\n- 2025Q4–2026H1：18A/18A-P风险量产，良率数据首次披露\n- 2026H2：Xeon 7可能出样片，对标产品（AMD Turin/ARM V3）将进入下一代发布窗口\n- 2027年：Xeon 7正式量产并放量爬坡，与AMD/ARM旗舰正面交锋\n- 2027Q2–Q3：若良率不及预期或延期，市场对Intel制造端信心将再次承压",
+      "ticker_counts": {
+        "Intel": 1
+      },
+      "max_item_score": 8
+    },
+    "evt_6fe30996e4ac": {
+      "event_id": "evt_6fe30996e4ac",
+      "title": "腾讯高管回应“腾讯做AI慢了”质疑",
+      "summary": "腾讯集团高级执行副总裁汤道生发文回应'腾讯做AI慢了'质疑，承认公司整体算力严重不足拖慢混元大模型训练与产品发展，并称混元Hy3在同等参数模型中效果突出，但坦言'一点不焦虑是不可能的'，强调AI下半场刚开始，起得早不如熬得久。",
+      "tickers": [
+        "腾讯"
+      ],
+      "themes": [
+        "compute_demand",
+        "model_capability"
+      ],
+      "direction": {
+        "腾讯": "negative"
+      },
+      "item_ids": [
+        "c74ce43aaa91df9848ec62044f6d0c14ca756115"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-26T07:04:55Z",
+      "first_published_at": "2026-08-26T06:02:39Z",
+      "last_updated_at": "2026-08-26T07:04:55Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "腾讯": 1
+      },
+      "max_item_score": 7
+    },
+    "evt_46da24d07e50": {
+      "event_id": "evt_46da24d07e50",
+      "title": "India’s OSAT-ATMP Build-Out: From Legacy Packages to 2.5D",
+      "summary": "印度OSAT/ATMP产能扩张持续推进：ASIP Technologies已在安得拉邦维沙卡帕特南启动OSAT工厂建设，韩国合作伙伴APACT参与。印度正从传统封装向2.5D等先进封装升级，旨在完善本土半导体后端制造能力。",
+      "tickers": [
+        "日月光"
+      ],
+      "themes": [
+        "advanced_packaging",
+        "chip_supply",
+        "policy_export"
+      ],
+      "direction": {},
+      "item_ids": [
+        "591827221b81e55da96dc97cc5606ddc55029855"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-26T07:04:55Z",
+      "first_published_at": "2026-08-26T07:00:00Z",
+      "last_updated_at": "2026-08-26T07:04:55Z",
+      "is_active": true,
+      "significance": 5,
+      "status": "developing",
+      "deep_analysis": "看多逻辑：1）印度本土封测生态扩张为日月光带来客户与产能协同机会，日月光已有印度据点，可借势完善全球后端制造网络布局。2）2.5D先进封装是CoWoS紧缺赛道的有益补充，若印度项目逐步导入先进制程，有望缓解全球AI芯片封装瓶颈，间接利好掌握2.5D/3DIC技术的日月光的溢出订单。3）地缘政治驱动客户多元化布局",
+      "ticker_counts": {
+        "日月光": 1
+      },
+      "max_item_score": 5
+    },
+    "evt_2081c9fd7d6a": {
+      "event_id": "evt_2081c9fd7d6a",
+      "title": "大厂AI To B大战，这回战场为什么是办公？",
+      "summary": "腾讯、阿里、字节三家大厂近一个多月集中将AI资源投向办公场景，开启AI To B大战。腾讯WorkBuddy付费用户毛利率与腾讯云整体相当；阿里将千问办公写入最新季度财报，整合QoderWork、悟空、MuleRun能力作为B端主力；字节7月底整合豆包、飞书、火山引擎，豆包定位为核心抓手。导火索是上半年AI To C商业化不及预期——Kimi买量效果差、元宝砸60亿未建护城河，豆包6月底推出专业版迈向企业服务。",
+      "tickers": [
+        "字节跳动",
+        "腾讯",
+        "金山办公",
+        "阿里巴巴"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand"
+      ],
+      "direction": {
+        "腾讯": "positive",
+        "阿里巴巴": "positive",
+        "字节跳动": "positive",
+        "金山办公": "neutral"
+      },
+      "item_ids": [
+        "83460e92ebbd0645cd8302fe58d275ddb15f3b90"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-26T07:04:55Z",
+      "first_published_at": "2026-08-26T03:58:00Z",
+      "last_updated_at": "2026-08-26T07:04:55Z",
+      "is_active": true,
+      "significance": 6,
+      "status": "developing",
+      "deep_analysis": "1. **看多逻辑**：①办公场景是当前AI商业化\"最优解\"，付费意愿明确、企业客户ARPU天花板高，三大厂集中投入验证B端付费跑通路径；②大厂凭借\"模型+云+协作套件\"的全栈能力可对中小企业形成降维打击，腾讯WorkBuddy毛利率对标云业务、阿里千问办公进财报，意味着已具备规模化收入贡献；③若AI办公规模化，将形成\"算力消耗—推理需求—云收入\"的正向飞轮，二阶利好云计算与推理算力链条。\n\n2. **看空风险**：①上半年AI To C已证伪（Kimi买量失效、元宝60亿未建护城河），转向B端能否跳出\"赔本赚吆喝\"仍存疑，付费转化率与续费率未公开验证；②金山办公深耕政企渠道二十余年，客户黏性与本地化部署能力是大厂SaaS模式的天然短板，竞争壁垒未必被削弱；③国内企业IT预算趋紧，多家大厂同时涌入同质化场景，可能演变为价格战与算力军备竞赛，毛利率难以持续。\n\n3. **关键驱动因素**：①各厂AI办公产品的付费转化率、ARPU与续费率（季度财报披露节奏）；②飞书AI与千问办公正式商业化时间点及单季度B端营收贡献。\n\n4. **市场影响评估**：短期看，B端预期催化叠加财报叙事利好腾讯、阿里云估值修复，字节非上市但其算力采购链（光模块、国产芯片）受益；中期看，金山办公需关注其AI订阅（WPS AI）能否守住存量用户，否则面临估值中枢下移风险。\n\n5. **时间线推断**：①9-10月阿里新财季披露千问办公商业化进展；②年底前飞书AI或推出独立付费方案；③2026年Q1观察首批企业续费率数据，验证模式可持续性。",
+      "ticker_counts": {
+        "金山办公": 1,
+        "字节跳动": 1,
+        "阿里巴巴": 1,
+        "腾讯": 1
+      },
+      "max_item_score": 6
     }
   }
 }

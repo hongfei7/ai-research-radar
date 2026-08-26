@@ -415,6 +415,45 @@
       "source_traceable": true,
       "why": "面向世界模型训练的游戏视频UI去除框架，有具体方法与对比实验，对视频世界模型数据管线有参考价值。",
       "queued_at": "2026-08-26T06:00:17Z"
+    },
+    {
+      "id": "9844e8650cd93ccb5464ce70efd28e4485947ac8",
+      "title": "Intel reveals that Xeon 7, aimed at HPC and debuting in 2027, will support up to 256 cores and 22 chiplets, with 16 built on its bleeding-edge 18A-P process (Tobias Mann/The Register)",
+      "url": "https://www.techmeme.com/260826/p5#a260826p5",
+      "source": "rss:techmeme",
+      "published_at": "2026-08-26T06:00:02Z",
+      "raw_summary": "Tobias Mann / The Register: Intel reveals that Xeon 7, aimed at HPC and debuting in 2027, will support up to 256 cores and 22 chiplets, with 16 built on its bleeding-edge 18A-P process&nbsp; &mdash;&nbsp; Delayed, flawed, yet still beautiful&nbsp; &mdash;&nbsp; DEEP DIVE Intel's Xeon 7 platform, better known by its codename Diamond Rapids &hellip;",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Intel Xeon 7核心架构与18A-P制程的深度技术披露，含chiplet设计、核心数等具体工程取舍，值得读。",
+      "queued_at": "2026-08-26T07:03:58Z"
+    },
+    {
+      "id": "c74ce43aaa91df9848ec62044f6d0c14ca756115",
+      "title": "腾讯高管回应“腾讯做AI慢了”质疑",
+      "url": "https://36kr.com/newsflashes/3955952173644930?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-08-26T06:02:39Z",
+      "raw_summary": "腾讯集团高级执行副总裁、云与智慧产业事业群CEO汤道生在腾讯内部刊物发文，提到外界对“腾讯做AI慢了”的质疑。他回应称，一点不焦虑是不可能的，“混元大模型进行了多次重构，混元Hy3在同等参数的大模型中效果突出，但由于公司整体算力严重不足，拖慢了模型训练与产品发展，产生了比较大的影响。” 汤道生称，起得早也许不是最关键的，AI下半场才刚开始。熬得久才有机会抓住持续出现的新机遇。（一财）",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "汤道生首次公开承认腾讯算力不足拖慢混元训练，是国内大厂关键人物的路线自白，含一手表态与策略转向信号。",
+      "queued_at": "2026-08-26T07:03:58Z"
+    },
+    {
+      "id": "591827221b81e55da96dc97cc5606ddc55029855",
+      "title": "India’s OSAT-ATMP Build-Out: From Legacy Packages to 2.5D",
+      "url": "https://www.eetimes.com/indias-osat-atmp-build-out-from-legacy-packages-to-2-5d",
+      "source": "rss:eetimes",
+      "published_at": "2026-08-26T07:00:00Z",
+      "raw_summary": "ASIP Technologies has begun construction of an OSAT facility in Visakhapatnam, Andhra Pradesh, with Korean partner APACT. The post India’s OSAT-ATMP Build-Out: From Legacy Packages to 2.5D appeared first on EE Times.",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "印度OSAT-ATMP建厂与向2.5D先进封装演进的一手产业信息，对全球半导体供应链判断有价值。",
+      "queued_at": "2026-08-26T07:03:58Z"
     }
   ],
   "digest_last_date": "2026-08-26"
