@@ -300,6 +300,45 @@
       "queued_at": "2026-08-26T14:53:48Z"
     },
     {
+      "id": "d193baa07b9cb48f881758407e8e8845841e07a4",
+      "title": "Qwen3.8-Flash-Next Technical Report [pdf]",
+      "url": "https://github.com/qwenlm/qwen3.8-flash-next/blob/main/tech_report.pdf",
+      "source": "hackernews",
+      "published_at": "2026-08-26T13:01:58Z",
+      "raw_summary": "Qwen3.8-Flash-Next Technical Report [pdf]",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Qwen3.8-Flash-Next 技术报告 PDF，宣称新架构与极致成本效率，值得直接读原文看架构细节。",
+      "queued_at": "2026-08-26T16:20:17Z"
+    },
+    {
+      "id": "64158da05bab8d7a2bcdb960b6ec3fd45547cb49",
+      "title": "Qwen3.8-Flash-Next: A New Architecture, Towards Ultimate Cost-Efficiency",
+      "url": "https://qwen.ai/blog?id=qwen3.8-lash-next",
+      "source": "hackernews",
+      "published_at": "2026-08-26T12:49:56Z",
+      "raw_summary": "Qwen3.8-Flash-Next: A New Architecture, Towards Ultimate Cost-Efficiency",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "Qwen3.8-Flash-Next 新架构解读，'Towards Ultimate Cost-Efficiency' 暗示架构选型路线之争，值得读。",
+      "queued_at": "2026-08-26T16:20:17Z"
+    },
+    {
+      "id": "b6547263b00edbf3c31c5fe9dbd62c3068cf8570",
+      "title": "[Megathread] GLM-5.3-Flash - former ox-alpha",
+      "url": "https://www.reddit.com/r/localllama/comments/1vyzzxu/megathread_glm53flash_former_oxalpha",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-26T15:17:48Z",
+      "raw_summary": "Megathread for discussing the release of GLM-5.3-Flash. Quants Fine-Tunes &amp; Abliterations Chat Templates Inference Server Support &amp; Configuration Experiences, Benchmarks &amp; Model Comparisons We'll try to clean up future duplicates around the release and point them here. Highlights GLM-5.3-Flash is the first natively multimodal model in the GLM-5 series, and the first open-weight release of the glm5_next architecture. Z.ai's pitch: outperforms GLM-5.2 at one-tenth the price while approaching Claude Opus 4.8 on coding and agentic benchmarks. It introduces: Hybrid Sparse + Linear Attention: 45 layers laid out as repeating blocks of 3x KDA linear attention followed by 1x DeepSeek-style sparse attention (34 linear / 11 sparse layers). The sparse layers use a lightning indexer (32 heads, dim 128) with a top-k budget of 2048 tokens, sharply reducing long-context serving cost. Manifold-Constrained Hyper-Connections (mHC): widened residual streams with manifold-constrained mixing between layers, adopted to further improve scaling efficiency. Natively Multimodal: a 24-layer ViT (448px, patch 14, 2x2 spatial merge) with temporal patching, so image and video tokens are in the vocabulary. Trained on a 30T-token multimodal corpus. MTP head shipped in the weights: 1 next-N prediction layer; the official vLLM recipe uses it with 5 speculative tokens. FP8 first: the main repo is FP8 (e4m3, dynamic activation scaling). A separate official BF16 repo exists. Model Overview Type: Causa",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "GLM-5.3-Flash首个多模态开放权重模型，引入Hybrid Sparse+Linear Attention新架构，值得读benchmark与架构细节。",
+      "queued_at": "2026-08-26T16:20:17Z"
+    },
+    {
       "id": "44c3327efe59b41893d70a05a81536fdb8eae95e",
       "title": "Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses [Zhaochen Yu, Yingcheng Wu, Zhenfei Yin, Kaiyuan Chen, Zhe Zhao]",
       "url": "http://arxiv.org/abs/2608.24876v1",
@@ -479,45 +518,6 @@
       "angle": "research",
       "source_traceable": true,
       "why": "BPCO用有界值预测+MC目标+自适应优势估计稳定critic-based RL，方法具体可追溯。",
-      "queued_at": "2026-08-26T02:51:19Z"
-    },
-    {
-      "id": "984d620016f185976906e25da984ed66d2e06069",
-      "title": "On-policy Distillation with Verifiable Reward",
-      "url": "https://arxiv.org/abs/2608.24696",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-24T20:00:00Z",
-      "raw_summary": "OPDVR integrates on-policy distillation with verifiable rewards via a ReLU-gated implicit reward reformulation, improving reasoning performance without extra hyperparameters.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "OPDVR将on-policy蒸馏与可验证奖励结合，ReLU门控隐式奖励重参数化，方法清晰。",
-      "queued_at": "2026-08-26T02:51:19Z"
-    },
-    {
-      "id": "61c58b5d0495b0c101f27fd2541b8683d6b00839",
-      "title": "On-Policy Self-Distillation in Diffusion Models",
-      "url": "https://arxiv.org/abs/2608.24646",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-24T20:00:00Z",
-      "raw_summary": "DiffusionOPSD uses on-policy self-distillation to turn image-level rewards into explicit intermediate targets for diffusion models, improving alignment efficiency and enabling separate analysis of target construction and policy fitting.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "DiffusionOPSD把图像级奖励转为扩散模型的显式中间目标，框架可拆解分析。",
-      "queued_at": "2026-08-26T02:51:19Z"
-    },
-    {
-      "id": "6dad0b39edcb88a1dd115b3aa9738e259f71a38c",
-      "title": "Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses",
-      "url": "https://arxiv.org/abs/2608.24876",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-24T20:00:00Z",
-      "raw_summary": "Recuris introduces a recursive memory architecture that tracks progress and guides skill selection to improve long-horizon agent success through localized, validation-gated updates.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "Recuris提出递归记忆架构+局部验证门控更新，针对长horizon agent的可操作设计。",
       "queued_at": "2026-08-26T02:51:19Z"
     }
   ],
