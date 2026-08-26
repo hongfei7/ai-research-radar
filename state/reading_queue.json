@@ -285,6 +285,71 @@
       "source_traceable": true,
       "why": "CAFE让搜索agent与critic共享参数学习轨迹内纠错反馈，减少幻觉。",
       "queued_at": "2026-08-26T02:51:19Z"
+    },
+    {
+      "id": "1e4fc6f05502ed6a386e7b5862d2de8fb967f9a6",
+      "title": "LAION-BVD: A 10-Million-Hour Open Video Dataset for Multimodal Pre-training",
+      "url": "https://arxiv.org/abs/2608.24845",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-24T20:00:00Z",
+      "raw_summary": "LAION-BVD is a large-scale open video dataset enabling multimodal pre-training across video, audio, and image modalities with synthetic captions and strong benchmark performance.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "1000万小时级开放视频数据集LAION-BVD，用于多模态预训练，对了解大规模视频预训练数据构建范式有直接价值。",
+      "queued_at": "2026-08-26T03:55:36Z"
+    },
+    {
+      "id": "bb51971d45c74d6400e216e2ef53bfacfadb8cb2",
+      "title": "WeMM-Embedding: WeChat Multi-Modal Embedding Technical Report",
+      "url": "https://arxiv.org/abs/2608.24053",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-24T20:00:00Z",
+      "raw_summary": "WeMM-Embedding is a family of universal multimodal embedding models that align text, images, videos, and interleaved inputs in a shared space, achieving state-of-the-art retrieval and recommendation performance across public benchmarks and large-scale WeChat applications.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "微信多模态Embedding技术报告，覆盖文本/图像/视频/交错输入对齐，含微信大规模应用验证，对多模态检索与推荐工程有参考。",
+      "queued_at": "2026-08-26T03:55:36Z"
+    },
+    {
+      "id": "b1fbd57ee3d97e4162960f5e8205ccbd7db0fe8d",
+      "title": "小米低调发布三个芯片，不止瞄准AI手机｜最前线",
+      "url": "https://36kr.com/p/3955789065158018?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-08-26T03:21:00Z",
+      "raw_summary": "小米发布三款芯片 作者｜肖漫 编辑｜斯来 无线上直播，雷军也并未到场，仅用了40分钟，小米便发布了三款芯片。 2026 年 8 月 24 日，小米一口气发布了三款玄戒芯片，分别是AI 旗舰 SoC 玄戒O3、 AI 加速芯片玄戒O100，以及智驾高算力 AI 芯片玄戒D100。 过去几年，手机厂商自研芯片通常集中在影像、通信、电源管理等细分领域。但随着大模型开始进入手机、汽车和机器人，端侧AI能力正成为手机厂商自研芯片的投入重点。 AI 模型正在变大，如何提供更高的 AI 算力，同时解决模型运行过程中的“内存墙”问题，正在成为新一代芯片设计的核心命题。 玄戒O3是小米自主研发设计的第二款旗舰SoC，延续了3nm工艺制程，总晶体管数量由上一代190亿提升至240亿。 玄戒 O3 一个明显的变化是进一步强化了 AI 计算能力。除了专门处理 AI 任务的 NPU，小米还在芯片的多个主要模块中部署 AI 加速单元，用于处理不同规模的 AI 任务，避免轻量级AI需求频繁访问NPU造成的运行效率下降和功耗浪费。 据透露，玄戒O3 将在今年 9 月随 Xiaomi 18 Fold 首发上市。 相比 O3，玄戒 O100 更能体现当前 AI 芯片设计正在发生的变化。过去几年，芯片竞争最常见的指标是算力。但随着大模型参数规模不断增长，限制模型运行速度的并不只是计算能力。 计算单元的性能提升速度越来越快，需要不断从内存中读取模型参数和中间数据，如果数据传输速度跟不上，计算单元就只能等待。这也是 AI 芯片领域越来越明显的一种“剪刀差”——算力持续增长，但内存带宽和数据传输能力成为新的瓶颈。 无论是苹果、华为，还是小米，都开始尝试从芯片架构层面解决这一问题。 苹果持续提升统一内存的容量和带宽，让 CPU、GPU 和神经网络引擎能够共享数据；华为也在 AI 芯片中不断强化高带宽存储能力。 小米自主研发设计的AI加速芯片玄戒O100采用端侧AI近存计算架构，在芯片设计上通过将计算单元与存储单元垂直堆叠或拉近物理距离，以大幅减少数据搬运延迟。 该芯片采用了3D Wafer On Wafer 立体堆叠，通过 Hybrid Bonding 技术，将 2 层 DRAM 晶圆和 1 层 NPU 计算晶圆高温键合在一起。 玄戒 O100 的内存带宽达到 1.22TB/s，内部还集成了 14 核大模型专用 NPU。内部计算单元与存储单元间超高密度的互联通路，端侧大模型推理速度可达最高 330 Token/s。 小米在现场展示了搭载玄戒 O100和玄戒 O3的原型机，在离线模式下，通过小米内置的MIMO大模型，基本可以做到无延时输出。 随着越来越多 AI 任务开始尝试直接在终端设备上完成，手机、PC、汽车等终端载体对实时性、隐私和离线能力提出更高要求。 就在小米芯片发布的次日，苹果也推出了新一代 M6 和 M5 Ultra 中，M6 首次采用 2nm 制程，面向日常办公、开发、创作和端侧 AI 任务；M5 Ultra 则通过新的多芯片封装架构，进一步提高桌面芯片的性能、内存容量和本地 AI 能力。 面向汽车业务，小米也推出了自研的3nm高算力智驾AI芯片玄戒D100，内部包含20核CPU和强大的16核高算力NPU。单芯片最高支持160GB内存容量，最大可支持200B以上参数量本地模型部署。 玄戒D100还支持多芯片融合计算，可在本地为个人用户提供超高AI算力，实现复杂人工智能任务处理，亦可应用于汽车领域，实现智驾算法的运行。 这是小米自2016年开始自研芯片以来发力最猛的一次。 一开始，",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "小米发布三款3nm自研芯片（O3/O100/D100），披露晶体管数、内存墙设计思路和端侧AI架构，对端侧AI芯片路线有参考价值。",
+      "queued_at": "2026-08-26T03:55:36Z"
+    },
+    {
+      "id": "92e5f4b76055b7f6e9c0961b208b9c0ce0415515",
+      "title": "小米玄戒，磨剑十二年",
+      "url": "https://www.leiphone.com/category/chips/pcfxrvfrvthcfsml.html",
+      "source": "rss:leiphone",
+      "published_at": "2026-08-26T01:40:00Z",
+      "raw_summary": "《天龙八部》里，有一章精彩片段，写的是鸠摩智独闯少林。鸠摩智当着少林僧众的面接连使出拈花指、无相劫指等七十二绝技，招式劲力乃至神韵都足以乱真，满座高僧无人能解。只有虚竹和扫地僧看出了关窍。鸠摩智真正依仗的是逍遥派小无相功，以此作内力根基，再套上少林绝技的招式，但“皮”越练越多，化戾气的“本”却一点没有，强练下去，大难已在旦夕之间。后来果然应验，鸠摩智强练易筋经走火入魔，武功尽失。真正的高手，最后拼的都不是招式，而是内功。练武如此，科技研发亦是如此。而芯片，就是科技时代的顶级内功。过去十几年，能站上高端市场顶端的公司，没有一家不掌握自己的核心芯片，苹果如此，华为也如此，三星和 Google 多年来也未曾放弃对自研芯片的投入。现在，小米在修炼多年后，也初见成效。8月24日，小米发布玄戒O3、玄戒O100和玄戒D100三颗3nm自研芯片，分别面向个人终端、端侧 AI 加速和高算力智能驾驶。至此，小米芯片覆盖了人车家全生态。造芯是小米的必答题AI时代，芯片决定了产品能力的边界。当小米的业务还主要集中在手机时，成熟的第三方芯片平台基本能够满足产品迭代需求。但随着手机、汽车和AIoT设备逐渐连成一套完整生态，小米面对的需求开始变得越来越复杂，也越来越难以完全依靠通用芯片解决。原因并不复杂。第三方芯片在交付给客户之前，计算架构、资源分配和功耗特性基本已经确定，厂商能够做的更多是围绕既有平台进行适配和优化。对于小米来说，这意味着很多产品能力从设计之初就受制于芯片平台，自身能够调整的空间有限。这个问题在汽车上表现得尤其明显。随着高端汽车的竞争因此进一步向智能化转移。辅助驾驶模型越来越大，座舱AI开始强调实时响应和本地计算，整车对算力、能效和芯片协同设计的要求持续提高。芯片也从一个通用零部件，逐渐变成了决定智能化体验上限的关键环节。此前就有不少车企迈上了自研芯片之路。特斯拉起步最早，2019年便在量产车型中启用了自研FSD芯片；国内头部新势力也在这两年集中进入收获期，蔚来神玑NX9031、小鹏图灵芯片先后完成量产上车，理想的马赫M100也在2026年随新一代L9正式落地。而小米，是其中走得最远的一位。玄戒D100是小米自主研发设计的智驾高算力AI芯片，从制程、架构到计算形态，实现了三层跃迁。首先是制程。D100采用3nm制程，是国内首款3nm智驾芯片，行业内其他玩家的智驾芯片普遍停留在4nm、5nm或7nm档位。在此之前，3nm只属于旗舰手机SoC，玄戒O1和O3就是这个级别的产品，D100的出现意味着小米的3nm设计能力完成了从手机向智驾场景的迁移。大多数厂商停留在成熟制程，并非车载场景用不到先进制程。恰恰相反，大模型上车对算力密度的渴求比手机更迫切，真正的拦路虎是3nm的设计难度和动辄数十亿元的投入。其次是架构。D100集成了20核高性能CPU与16核高算力NPU，单芯片最高支持160GB统一内存，最大可支持200B以上参数量的模型在本地部署。智能驾驶从规则代码走向端到端大模型后，智驾芯片的设计标准随之提高。过去的智驾芯片仅追求在更低功耗内跑完算法，而未来的智驾芯片要承载持续进化的大模型，内存带宽和容量的权重压过了单纯的算力指标。D100的新架构就是为这次变革而准备的。但单颗芯片再强，物理极限始终存在，D100给出的答案是跳出单芯片思维，这是第三个跃迁。D100支持多芯片融合计算，算力可以横向扩展。芯片由此不再是&quot;一颗定终身&quot;的硬件，买一颗芯片就锁定一款车整个生命周期算力上限的传统逻辑被打破，取而代之的是一个可持续升级的算力平台，为更高阶的智",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "小米玄戒三颗3nm芯片的研发历程与战略解读，含晶体管数、生态布局与端侧AI设计取舍，对国产SoC路线有参考价值。",
+      "queued_at": "2026-08-26T03:55:36Z"
+    },
+    {
+      "id": "b6affebe21a369e33535ee1b36bb1d3ceb44e04e",
+      "title": "From Seeing to Acting: Smart Glasses as First-Person Intelligence Platforms",
+      "url": "https://arxiv.org/abs/2608.24877",
+      "source": "huggingface:papers",
+      "published_at": "2026-08-24T20:00:00Z",
+      "raw_summary": "Smart glasses are surveyed as unified first-person intelligence platforms requiring sustained perception-state-interaction-action loops across constrained hardware and diverse applications.",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "智能眼镜作为第一人称智能平台的综述，涉及感知-状态-交互-动作闭环，可了解该方向研究边界与硬件约束。",
+      "queued_at": "2026-08-26T03:55:36Z"
     }
   ],
   "digest_last_date": "2026-08-26"
