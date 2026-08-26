@@ -350,6 +350,19 @@
       "source_traceable": true,
       "why": "智能眼镜作为第一人称智能平台的综述，涉及感知-状态-交互-动作闭环，可了解该方向研究边界与硬件约束。",
       "queued_at": "2026-08-26T03:55:36Z"
+    },
+    {
+      "id": "53a77ed83d119e526ebd2b19a5fa0a6e754f4e37",
+      "title": "Catching bugs in scikit-learn [D]",
+      "url": "https://www.reddit.com/r/machinelearning/comments/1vym6cn/catching_bugs_in_scikitlearn_d",
+      "source": "reddit:ml",
+      "published_at": "2026-08-26T03:57:42Z",
+      "raw_summary": "sklearn 1.9 fixed a bug in how BayesianRidge computes its uncertainty. We traced predict on 1.8 and 1.9 and compared the two formulas it actually computes, see if you can spot what changed before the notebook tells you. https://github.com/aadya940/scikit-verify/blob/master/examples/sklearn_bug_hunting.ipynb &#32; submitted by &#32; /u/Lost-Dragonfruit-663 [link] &#32; [comments]",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "sklearn 1.9修复BayesianRidge不确定性计算bug的实测分析，有notebook可复现，对ML工程实践有直接启发。",
+      "queued_at": "2026-08-26T04:42:11Z"
     }
   ],
   "digest_last_date": "2026-08-26"
