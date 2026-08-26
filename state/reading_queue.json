@@ -196,6 +196,32 @@
       "queued_at": "2026-08-26T10:44:13Z"
     },
     {
+      "id": "67348bbe6b4ae758b90bfcada658d76cfc589fcf",
+      "title": "Investigation: Meta explored slashing many teams by ~60% to become \"AI native\", but pulled back after staff revolted and data showed AI agents were ineffective (Katie Paul/Reuters)",
+      "url": "https://www.techmeme.com/260826/p21#a260826p21",
+      "source": "rss:techmeme",
+      "published_at": "2026-08-26T11:10:01Z",
+      "raw_summary": "Katie Paul / Reuters: Investigation: Meta explored slashing many teams by ~60% to become &ldquo;AI native&rdquo;, but pulled back after staff revolted and data showed AI agents were ineffective&nbsp; &mdash;&nbsp; To make its workforce &ldquo;AI native,&rdquo; Meta explored slashing the size of many teams across the company by as much as 60% in two waves, internal documents show.",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Reuters调查Meta内部AI原生裁员方案失败，含数据支撑（agent ineffective），是一手产业判断。",
+      "queued_at": "2026-08-26T11:14:56Z"
+    },
+    {
+      "id": "515da860404f26807a545cd853194ad313b45bd3",
+      "title": "Hot Chips 2026: Arm details AGI server CPU with two 70-core N3P chiplets — touts 2 TB/s UCIe fabric link and 12-channel memory controller",
+      "url": "https://www.tomshardware.com/pc-components/cpus/hot-chips-2026-arm-details-agi-server-cpu-with-two-70-core-n3p-chiplets-touts-2-tb-s-ucie-fabric-link-and-12-channel-memory-controller",
+      "source": "rss:tomshardware",
+      "published_at": "2026-08-26T11:00:00Z",
+      "raw_summary": "Arm reveals more details about its AGI processors with up to 136 cores, but fails to disclose performance.",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Hot Chips 2026上Arm AGI CPU的chiplet/UCIe/内存控制器细节，对理解AI服务器CPU路线有工程价值。",
+      "queued_at": "2026-08-26T11:14:56Z"
+    },
+    {
       "id": "44c3327efe59b41893d70a05a81536fdb8eae95e",
       "title": "Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses [Zhaochen Yu, Yingcheng Wu, Zhenfei Yin, Kaiyuan Chen, Zhe Zhao]",
       "url": "http://arxiv.org/abs/2608.24876v1",
@@ -493,32 +519,6 @@
       "source_traceable": true,
       "why": "sklearn 1.9修复BayesianRidge不确定性计算bug的实测分析，有notebook可复现，对ML工程实践有直接启发。",
       "queued_at": "2026-08-26T04:42:11Z"
-    },
-    {
-      "id": "b4447a150fc1ffa2d84224047c91d4208b7a8878",
-      "title": "330亿，长江存储背后有高人",
-      "url": "https://www.tmtpost.com/8116960.html",
-      "source": "rss:tmtpost",
-      "published_at": "2026-08-26T05:05:58Z",
-      "raw_summary": "长江存储科创板IPO获受理，拟募资330亿元创科创板纪录。董事长陈南翔临危受命，率队应对美国制裁与行业低谷，坚持研发与产能扩张，抓住AI机遇实现业绩爆发，2026年一季度净利334亿元，跃居全球NAND第三。但挑战仍在：份额、产品结构距顶尖尚有差距，上市只是新起点。",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "长江存储IPO募资330亿、冲击全球NAND第三，涉及中国存储产业链追赶与AI需求驱动的实质分析。",
-      "queued_at": "2026-08-26T05:17:51Z"
-    },
-    {
-      "id": "42171fab0aba16e7965b853673f8cc597077b60d",
-      "title": "Sources: YMTC, which seeks to raise $5B in an IPO, told investors in IPO prep meetings that it aims to become the largest NAND flash supplier by the end of 2027 (Financial Times)",
-      "url": "https://www.techmeme.com/260826/p2#a260826p2",
-      "source": "rss:techmeme",
-      "published_at": "2026-08-26T04:45:01Z",
-      "raw_summary": "Financial Times: Sources: YMTC, which seeks to raise $5B in an IPO, told investors in IPO prep meetings that it aims to become the largest NAND flash supplier by the end of 2027&nbsp; &mdash;&nbsp; YMTC sets out Nand production ambitions in investor meetings for $5bn Shanghai IPO&nbsp; &mdash;&nbsp; YMTC aims to overtake Samsung and SK Hynix &hellip;",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "YMTC目标2027年成为最大NAND供应商是FT爆料的一手信息，对存储产业格局判断有直接价值。",
-      "queued_at": "2026-08-26T05:17:51Z"
     }
   ],
   "digest_last_date": "2026-08-26"

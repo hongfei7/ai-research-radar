@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-26T10:47:38Z",
+  "updated_at": "2026-08-26T11:17:36Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -51352,9 +51352,9 @@
       "first_seen_at": "2026-08-26T09:04:56Z",
       "first_published_at": "2026-08-26T08:47:02Z",
       "last_updated_at": "2026-08-26T09:04:56Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 6,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "上海\"芯—模—云\"生态体系及AI测评基础设施建设，属于地方层面针对AI全栈的顶层设计，覆盖芯片、模型、云算力及评测环节，涉及标的横跨国产算力链（中科曙光、浪潮信息）、制造端（中芯国际）和模型云端（阿里巴巴），政策外溢范围较广。\n\n**看多逻辑：**第一，这是上海作为全国AI高地的系统性投入，明确将\"通用AI主导科学研究基座平台\"作为建设方向，意味着财政资金将以项目化方式注入，对中科曙光（高性能计算/服务器）、浪潮信息（AI服务器整机）形成直接算力订单催化，且中科曙光总部位于上海，区域订单获取优势明显。第二，AI测评基础设施是相对新颖且稀缺的细分需求，全国性统一标准尚未形成，上海率先布局有望吸引模型厂商（阿里通义、第三方模型公司）汇聚评测，形成\"模型→评测→迭代\"的飞轮，对阿里巴巴等兼具模型与云能力的厂商有生态绑定价值。第三，\"芯—模—云\"一体化强调国产化闭环，在当前国际算力受限背景下，中芯国际虽短期受设备约束，但政策对国产制程的扶持方向不变，长期需求确定性增强。\n\n**看空风险：**第一，政策从规划到落地存在较长传导周期，地方AI基础设施投资规模通常远低于市场初期预期，且多为分批拨付，对相关公司当期收入贡献有限。第二，中科曙光、浪潮信息同质化竞争激烈，服务器毛利率持续承压，即便获得上海订单，盈利能力改善程度存疑。第三，AI测评基础设施标准制定权存在不确定性，标准如未与国家层面（信通院等）协同，可能形成地方割据，反而限制生态扩展；中芯国际则受先进制程设备封锁影响，无法仅凭政策需求解决产能瓶颈。\n\n**关键驱动因素：**一是上海市2026年AI专项财政预算及首批招标项目落地节奏，预算规模和采购时间表直接决定受益公司的收入兑现速度；二是\"通用AI主导科学研究基座平台\"的具体技术路线和合作方，是否与名单中标的形成实质性绑定。\n\n**市场影响评估：**短期看，政策信号偏积极但缺乏具体金额和细则，预计催化情绪多于基本面，板块或现主题性脉冲行情；中期（3–6个月）需观察招标落地，若首批项目确认中科曙光/浪潮信息中标，则存在业绩上修空间。\n\n**时间线推断：**2026年Q1地方两会及财政预算发布期为首个观察窗口；预计Q2–Q3将出现首批基座平台与AI测评基础设施招标公告；2026年底前有望看到试点性评测结果与模型迭代反馈，届时可验证生态实际运行效率。",
       "ticker_counts": {
         "中科曙光": 1,
@@ -51627,32 +51627,35 @@
     },
     "evt_ee906d856d95": {
       "event_id": "evt_ee906d856d95",
-      "title": "Confirmed: Z.AI Made Ox Alpha Stealth Model That Rivals DeepSeek",
-      "summary": "智谱AI（Z.AI）确认此前以Ox Alpha为名低调发布的模型实为其GLM系列的新一代迭代版本，且性能可与DeepSeek对标。智谱表示应彭博社问询后将于当日晚间开源该模型权重。此举意味着中国大模型在开源生态中的竞争进一步加剧。",
+      "title": "智谱确认Ox Alpha为GLM新版本，当晚开源权重",
+      "summary": "智谱确认此前在OpenRouter上以Ox Alpha为名低调上线的模型为其GLM系列新一代版本，使用量已超DeepSeek两倍并跃居OpenRouter榜首。智谱应彭博问询后将于当晚开源模型权重，模型当前免费可用。此举将加剧开源大模型赛道竞争，挤压DeepSeek等同类开源模型份额，并对闭源模型API定价形成压制。",
       "tickers": [
         "DeepSeek"
       ],
       "themes": [
+        "ai_monetization",
+        "compute_demand",
         "model_capability"
       ],
       "direction": {
         "DeepSeek": "negative"
       },
       "item_ids": [
-        "0dc7be62e5ca96cde9b40269b0496b51c348fd0d"
+        "0dc7be62e5ca96cde9b40269b0496b51c348fd0d",
+        "ad8579004bb58e9eb49eaf0ddbb9d2a430121cb0"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "first_seen_at": "2026-08-26T10:45:32Z",
       "first_published_at": "2026-08-26T10:28:44Z",
-      "last_updated_at": "2026-08-26T10:45:32Z",
+      "last_updated_at": "2026-08-26T11:16:08Z",
       "is_active": true,
-      "significance": 7,
+      "significance": 8,
       "status": "developing",
       "deep_analysis": "1. 看多逻辑：DeepSeek已建立先发优势与品牌认知，开源生态存在显著的开发者锁定效应与社区惯性，新模型短期难以撼动其根基；面对竞争压力，DeepSeek大概率加速下一代模型迭代，以技术代差维持领先；智",
       "ticker_counts": {
-        "DeepSeek": 1
+        "DeepSeek": 2
       },
-      "max_item_score": 7
+      "max_item_score": 8
     },
     "evt_c3d9d7c7922b": {
       "event_id": "evt_c3d9d7c7922b",
@@ -51714,9 +51717,9 @@
       "first_seen_at": "2026-08-26T10:45:32Z",
       "first_published_at": "2026-08-26T10:02:39Z",
       "last_updated_at": "2026-08-26T10:45:32Z",
-      "is_active": true,
+      "is_active": false,
       "significance": 6,
-      "status": "developing",
+      "status": "resolved",
       "deep_analysis": "",
       "ticker_counts": {
         "Anthropic": 1
@@ -51834,6 +51837,173 @@
         "英伟达": 1,
         "字节跳动": 1
       },
+      "max_item_score": 5
+    },
+    "evt_94380d2722a6": {
+      "event_id": "evt_94380d2722a6",
+      "title": "Hot Chips 2026: Arm details AGI server CPU with two 70-core N3P chiplets — touts 2 TB/s UCIe fabric link and 12-channel memory controller",
+      "summary": "在Hot Chips 2026大会上，Arm公布了其AGI服务器CPU的更多细节：采用两颗基于N3P制程的70核chiplet设计（共136核），搭载2 TB/s UCIe互连fabric及12通道内存控制器。然而，Arm未披露任何性能数据。值得关注：这是Arm面向通用AI/数据中心服务器市场的重要产品布局，采用先进3nm级制程和高带宽互连，意在挑战x86及自研Arm CPU阵营。",
+      "tickers": [
+        "ARM",
+        "台积电"
+      ],
+      "themes": [
+        "chip_supply",
+        "compute_demand"
+      ],
+      "direction": {
+        "ARM": "positive",
+        "台积电": "neutral"
+      },
+      "item_ids": [
+        "515da860404f26807a545cd853194ad313b45bd3"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-26T11:16:08Z",
+      "first_published_at": "2026-08-26T11:00:00Z",
+      "last_updated_at": "2026-08-26T11:16:08Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "**1. 看多逻辑**\n\nArm此次公开AGI服务器CPU架构细节，标志其从IP授权向\"参考设计+生态绑定\"延伸的战略升级。双70核chiplet共136核的规模、2 TB/s UCIe互连、12通道内存控制器等规格，瞄准的是AI训练/推理对高带宽、低延迟的硬性需求，对应云厂自研Arm CPU（如AWS Graviton、Microsoft Cobalt）的痛点。若Arm AGI能在能效比上对标甚至超越x86（Emerald Rapids/Turin）及英伟达Grace，将进一步打开\"非自研阵营\"客户采用Arm架构的口子，IP授权费与版税基础持续扩大。对台积电而言，136核N3P大芯片是先进制程的\"重负载\"应用场景，叠加UCIe先进封装需求，对N3P产能与CoWoS配套形成增量支撑。\n\n**2. 看空风险**\n\n第一，性能数据完全缺席，这是最大的不确定性——核心数不等于性能，IPC、能效比、编译器生态（尤其是AI框架的Arm优化成熟度）才是决定胜负的关键，AMD Epyc与英伟达Grace在软件栈上仍具显著优势。第二，\"通用AI服务器CPU\"定位模糊：当前AI算力市场正快速向GPU+专用加速器分化，传统CPU市场本身在被压缩，AGI名称虽响亮但缺乏清晰差异化场景，与Ampere、富士通MONAKA、英伟达Grace等同类产品形成红海。第三，chiplet+UCIe的2 TB/s带宽对封装良率、散热及电源管理提出极高要求，实际量产成本与可靠性存疑，N3P产能紧张背景下排产优先级可能让位于苹果、英伟达等大客户。\n\n**3. 关键驱动因素**\n\n（1）首批客户落地与性能基准数据：是否能在2026Q4-2027Q1公布SPEC/MLPerf跑分及实际云厂订单，决定叙事能否兑现。（2）软件生态成熟度：Arm Neoverse平台对PyTorch/JAX/Triton等AI关键框架的支持深度，将直接决定客户迁移意愿。\n\n**4. 市场影响评估**\n\n短期看，Hot Chips演讲更多是\"叙事催化\"，对ARM股价带动有限，但会强化AI基础设施概念情绪；TSMC因N3P/CoWoS订单可见性已高，事件边际影响中性。中期（6-12个月），若2027年首批客户量产并公布基准，ARM将迎来版税上调与设计服务费双轮驱动，TSMC则受益于大尺寸chiplet的封装与制程需求。\n\n**5. 时间线推断**\n\n关键节点：（1）2026Q4预计Arm将披露完整微架构与性能数据；（2）2027年上半年首批流片客户（潜在云厂或超算客户）公布采用计划；（3）2027年下半年到2028年初进入量产爬坡期，与AMD Turin-Next、英特尔Diamond Rapids形成正面交锋。需密切跟踪Hot Chips后续Q&A披露的功耗与频率目标，这是验证产品竞争力的最直接信号。",
+      "ticker_counts": {
+        "ARM": 1,
+        "台积电": 1
+      },
+      "max_item_score": 7
+    },
+    "evt_e877b7206d06": {
+      "event_id": "evt_e877b7206d06",
+      "title": "Shanghai-based MiniMax reports H1 2026 revenue up 283% YoY to ~$116.6M, above 2025's 159% YoY growth, as its M3 model lags behind rivals like Z.ai's GLM-5.2 (Bloomberg)",
+      "summary": "据彭博报道，上海AI公司MiniMax（稀宇科技）2026年上半年营收同比增长283%至约1.166亿美元，增速高于2025年全年的159%。然而其M3模型在性能上落后于Z.ai（智谱）的GLM-5.2等竞品。营收高增反映中国AI初创公司商业化加速，但模型能力差距凸显竞争加剧。",
+      "tickers": [
+        "字节跳动",
+        "百度",
+        "腾讯",
+        "阿里巴巴"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand",
+        "model_capability"
+      ],
+      "direction": {},
+      "item_ids": [
+        "3df2082fa06a65b8fb727bfc882d26e14a4d4b25"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-26T11:16:08Z",
+      "first_published_at": "2026-08-26T10:50:15Z",
+      "last_updated_at": "2026-08-26T11:16:08Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "**1. 看多逻辑**\n\n① **中国AI商业化加速验证平台价值**：MiniMax 2026H1营收同比283%（$116.6M），增速较2025全年159%进一步加速，说明中国企业级AI付费意愿和API消耗正快速放量。百度（文心）、阿里（通义/百炼）、腾讯（混元）作为平台型生态主导者，将受益于行业总盘扩张而非单家份额竞争。\n\n② **算力需求二阶传导**：模型迭代与商业化并行必然拉动推理算力消耗，叠加国产替代逻辑，对阿里云、腾讯云及国产芯片（寒武纪、海光）形成持续利好。MiniMax这类创业公司往往租用云算力，其放量直接贡献云厂商收入。\n\n③ **生态分层强化巨头护城河**：基础模型层激烈竞争（MiniMax vs 智谱 vs DeepSeek）反而使下游应用层更依赖平台分发与算力调度，利好字节（豆包/扣子）、腾讯（微信生态）、阿里（钉钉/淘宝",
+      "ticker_counts": {
+        "百度": 1,
+        "阿里巴巴": 1,
+        "腾讯": 1,
+        "字节跳动": 1
+      },
+      "max_item_score": 7
+    },
+    "evt_cfd1a5b959c5": {
+      "event_id": "evt_cfd1a5b959c5",
+      "title": "联想，隐藏的供应链大师？",
+      "summary": "联想2026年8月13日发布被称\"史上最强\"季报，股价单日暴涨20%，高盛将目标价翻三倍。本文复盘其四十年供应链布局：在CES Tech World 2026上黄仁勋、苏姿丰、陈立武、Yusuf Mehdi齐聚联想展台；通过收购IBM PC、摩托罗拉、x86服务器业务及Infinidat构建\"想链\"；与Wintel、英伟达、AMD、美光、三星、SK海力士等深度绑定，从PC时代跨越至AI时代。",
+      "tickers": [
+        "AMD",
+        "Intel",
+        "微软",
+        "英伟达"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand",
+        "edge_ai"
+      ],
+      "direction": {
+        "英伟达": "positive",
+        "AMD": "positive",
+        "微软": "positive",
+        "Intel": "positive"
+      },
+      "item_ids": [
+        "58f70408cf88bc36b762779aec8812c7f13e2108"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-26T11:16:08Z",
+      "first_published_at": "2026-08-26T10:49:35Z",
+      "last_updated_at": "2026-08-26T11:16:08Z",
+      "is_active": false,
+      "significance": 6,
+      "status": "resolved",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "微软": 1,
+        "英伟达": 1,
+        "Intel": 1,
+        "AMD": 1
+      },
+      "max_item_score": 6
+    },
+    "evt_80758f598a33": {
+      "event_id": "evt_80758f598a33",
+      "title": "腾讯汤道生深度复盘WorkBuddy、元宝以及AI竞争：和AI一起长跑的这两年",
+      "summary": "腾讯CSIG CEO汤道生深度复盘过去两年AI实践，披露三大要点：①WorkBuddy源自降本增效期一度面临收缩的DevTools团队，从代码工具演进为AI Coding再到通用办公Agent；②坦言算力严重不足拖慢混元大模型训练与产品迭代，多次重构后Hy3架构化繁为简、靠数据质量取胜；③元宝在增长压力下走过弯路，强调模型与产品Co-Design，认为AI下半场马拉松才跑一公里，长跑比抢跑更重要。",
+      "tickers": [
+        "字节跳动",
+        "腾讯",
+        "阿里巴巴"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand",
+        "domestic_substitution",
+        "model_capability"
+      ],
+      "direction": {
+        "腾讯": "neutral"
+      },
+      "item_ids": [
+        "2c5e765abe6797eda38814e056d74db835f9b808"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-26T11:16:08Z",
+      "first_published_at": "2026-08-26T10:40:02Z",
+      "last_updated_at": "2026-08-26T11:16:08Z",
+      "is_active": false,
+      "significance": 6,
+      "status": "resolved",
+      "deep_analysis": "1. **看多逻辑**  \n① 汤道生坦诚算力不足但转向\"以数据质量取胜+Hy3架构化繁为简\"，体现工程理性而非盲目堆参数，与当前行业从预训练向Inference/Agent倾斜的趋势契合；② WorkBuddy从DevTools到通用办公Agent的演进路径明确，B端付费意愿和ARPU有支撑，腾讯CSIG企业渠道是天然分发优势；③\"长跑论\"虽显保守，但可降低过度资本开支风险，在估值层面反而提供安全边际。\n\n2. **看空风险**  \n① 算力短缺属结构性短板——字节（豆包）+阿里（通义）2024-2025年自建+采购节奏明显快于腾讯，混元迭代节奏滞后将持续侵蚀模型能力领先窗口；② 元宝\"走过弯路\"暗示C端产品力与增长路径仍未跑通，DAU/留存数据未披露前市场难以重估其入口价值；③ Agent商业化尚未形成SLA级标准，WorkBuddy面对金山办公（WPS AI）、飞书等存量客户黏性产品，转化效率存疑。\n\n3. **关键驱动因素**  \n① 腾讯算力补缺节奏（自建IDC+国产芯片采购份额）将直接决定混元下一版本迭代速度与Agent推理成本，是国产替代主题的核心边际变量；② WorkBuddy企业付费转化率与元宝MAU/留存数据，需通过后续季报或第三方监测验证。\n\n4. **市场影响评估**  \n短期（1-3月）：对腾讯股价中性偏正，叙事修正优于预期，但缺乏新催化；间接利好国产AI芯片标的（寒武纪、海光、燧原/壁仞），叙事催化B/C共振。中期（6-12月）：取决于Hunyuan 3.0/4.0能否缩窄与豆包、通义的差距，以及WorkBuddy企业ARR兑现度，否则市场将给予折价。\n\n5. **时间线推断**  \n2026 Q4：腾讯或披露新增算力订单/国产芯片采购规模，是验证自建+外采路径的关键节点；2027 H1：混元下一代大模型及Hy3完整版本发布，配合WorkBuddy企业版商业化数据，将决定市场对腾讯AI叙事的重估方向；同期需重点对比豆包DAU、元宝留存及阿里通义千问开源生态进展。",
+      "ticker_counts": {
+        "腾讯": 1,
+        "阿里巴巴": 1,
+        "字节跳动": 1
+      },
+      "max_item_score": 6
+    },
+    "evt_b8a2b2eda795": {
+      "event_id": "evt_b8a2b2eda795",
+      "title": "硅谷今日最热具身模型！不用后训练，看一遍就学会",
+      "summary": "",
+      "tickers": [],
+      "themes": [
+        "model_capability"
+      ],
+      "direction": {},
+      "item_ids": [
+        "dc8d22fc72bfae17a3eb66e6a399c155ffc6cfa1"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-26T11:16:08Z",
+      "first_published_at": "2026-08-26T10:07:09Z",
+      "last_updated_at": "2026-08-26T11:16:08Z",
+      "is_active": false,
+      "significance": 5,
+      "status": "resolved",
+      "deep_analysis": "1. **看多逻辑**\n   - 数据范式革命：一次性视觉学习(In-Context Learning)若规模化落地，具身智能将摆脱\"海量遥操数据+RLHF后训练\"重资产路径，训练边际成本或下降1-2个数量级，加速人形机器人在工业装配、仓储物流等结构化场景的渗透。\n   - AGI里程碑信号：\"看一遍即掌握\"是few-shot泛化的关键跃迁，类比2020年GPT-3开启文本scaling law，若该范式在物理世界复现，将定义具身基础模型的新标准，重塑产业链估值锚。\n   - 算力结构性外溢：模型仍依赖强backbone+大context，利好英伟达、边缘推理芯片及多模态传感器链条，A股机器人/减速器概念存在情绪映射机会。\n\n2. **看空风险**\n   - Demo-to-Production鸿沟：单次演示在长尾场景、Sim-to-Real、力控safety上几乎注定失败，工厂级可靠性要求与实验室\"看一眼\"之间存在数量级差距，短期不宜高估商用化速度。\n   - 数据护城河不可逾越：特斯拉Optim",
+      "ticker_counts": {},
       "max_item_score": 5
     }
   }
