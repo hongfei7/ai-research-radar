@@ -417,6 +417,45 @@
       "queued_at": "2026-08-26T20:37:54Z"
     },
     {
+      "id": "d265b61d5b7bc71999d04bba2b3caf164a67b715",
+      "title": "NVIDIA NVLink Fusion Expands With NVHBM Custom High-Bandwidth Memory",
+      "url": "https://blogs.nvidia.com/blog/nvlink-fusion-nvhbm-custom-high-bandwidth-memory",
+      "source": "rss:nvidia-blog",
+      "published_at": "2026-08-26T21:05:30Z",
+      "raw_summary": "The next wave of AI is placing new demands on infrastructure. As AI agents and trillion-parameter workloads become mainstream, the performance of AI infrastructure depends not only on compute, but on how compute, memory, storage, networking and software are designed together as a unified system. To help hyperscalers and AI innovators build the next generation [&#8230;]",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "NVIDIA官方博客详解NVLink Fusion + NVHBM定制HBM路线，揭示其对超算互联与定制内存生态的关键布局。",
+      "queued_at": "2026-08-27T00:15:57Z"
+    },
+    {
+      "id": "ac90c1fa7c434db3e7e99c22bd93acaba3876757",
+      "title": "英伟达称Vera Rubin已全面投产",
+      "url": "https://36kr.com/newsflashes/3957001849044355?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-08-26T23:50:26Z",
+      "raw_summary": "英伟达当地时间8月26日表示，Vera Rubin平台已全面投产，同时推进长期数据中心租赁模式，客户承诺订单环比由1190亿美元飙升至2790亿美元。（界面）",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "英伟达Vera Rubin全面投产+订单从1190亿飙至2790亿美元，AI算力路线与供应链关键一手数据。",
+      "queued_at": "2026-08-27T00:15:57Z"
+    },
+    {
+      "id": "eb2c3327ffec53e79cfcaba50138df06619e458b",
+      "title": "Nvidia custom 'NVHBM' promises 30% higher bandwidth, 15% lower power than commodity HBM4e — custom base die and PHY will be available to NVLink Fusion partners",
+      "url": "https://www.tomshardware.com/pc-components/dram/nvidia-custom-nvhbm-promises-30-percent-higher-bandwidth-15-percent-lower-power-than-commodity-hbm4e-custom-base-die-and-phy-will-be-available-to-nvlink-fusion-partners",
+      "source": "rss:tomshardware",
+      "published_at": "2026-08-26T22:45:22Z",
+      "raw_summary": "Nvidia has unveiled NVHBM, a custom high-bandwidth memory implementation that promises higher bandwidth and lower power for customers building chips within the NVLink Fusion partner program.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Nvidia自研NVHBM（带宽+30%/功耗-15%）是HBM路线的重要信号，自定义base die+PHY开放给NVLink Fusion伙伴将改变AI芯片互连生态格局。",
+      "queued_at": "2026-08-27T00:15:57Z"
+    },
+    {
       "id": "44c3327efe59b41893d70a05a81536fdb8eae95e",
       "title": "Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses [Zhaochen Yu, Yingcheng Wu, Zhenfei Yin, Kaiyuan Chen, Zhe Zhao]",
       "url": "http://arxiv.org/abs/2608.24876v1",
@@ -479,45 +518,6 @@
       "angle": "research",
       "source_traceable": true,
       "why": "CAFE将纠错反馈作为in-trajectory可学习的干预，形式化agent与critic共演化，触及搜索agent的核心失败模式。",
-      "queued_at": "2026-08-26T02:51:19Z"
-    },
-    {
-      "id": "3d33b469ecf7add8f50de3ff918f89b22fefd8eb",
-      "title": "BrowserForge: Scaling Web Episode via Parallel Browser Sandboxes [Fei Tang, Huawen Shen, Zhiqiong Lu, Zhengxi Lu, Pengyuan Lyu]",
-      "url": "http://arxiv.org/abs/2608.24848v1",
-      "source": "arxiv:cs.CL",
-      "published_at": "2026-08-25T17:35:42Z",
-      "raw_summary": "Web agents that act from rendered pixels avoid the fragility and heavy token cost of reading a page's HTML or accessibility tree, but training them depends on large amounts of high-quality interaction trajectories, and how to produce such data at scale remains an open problem. Public datasets typically contain only a few thousand trajectories drawn from a fixed and narrow set of websites, and even recent automated synthesis pipelines stay bound to predefined site lists or tutorial sources, so the number of distinct websites the agent ever sees barely grows. We present BrowserForge, a framework that generates web interaction data at scale by driving many browser sandboxes in parallel over the open web. BrowserForge couples three components: an open-web sourcing stage that exposes the agent to hundreds of thousands of real, openly reachable websites; a sandbox cluster manager that schedules hundreds of concurrent browsers with high utilization; and a Proposer-Solver dual-agent loop that turns a raw page into an executable task and then collects a verified trajectory for it. A rule-plus-model cleaning pipeline removes failed runs and rewrites the surviving reasoning into a single unified chain-of-thought style. Page structure such as the accessibility tree is used only as a synthesis-time signal; the agent we train and release acts purely from the screenshot. The resulting corpus contains 203,238 trajectories, each collected from a distinct website, larger and more diverse than ",
-      "score": 7,
-      "angle": "engineering",
-      "source_traceable": true,
-      "why": "BrowserForge用并行浏览器沙箱规模化生成网页交互轨迹，解决pixel-based web agent训练数据瓶颈，方案与数据规模都明确。",
-      "queued_at": "2026-08-26T02:51:19Z"
-    },
-    {
-      "id": "39deefe5a198cc953cd7c4c0ba1bd4a5112f2591",
-      "title": "Linear Probing Provides Robust and Efficient Detection of Machine-Generated Text [Gerrit Quaremba, Hanqi Yan, Elizabeth Black, Denny Vrandecic, Elena Simperl]",
-      "url": "http://arxiv.org/abs/2608.24780v1",
-      "source": "arxiv:cs.CL",
-      "published_at": "2026-08-25T16:21:24Z",
-      "raw_summary": "Distinguishing machine-generated text (MGT) from human-written text (HWT) becomes increasingly important due to potential misuse. However, most supervised detectors often degrade out-of-domain (OOD) and require large, diverse training sets. In this work, we analyze the linearity and quality of MGT representations and show that simple linear probes outperform a wide range of detectors while being substantially more sample-efficient. We first show that MGT and HWT latent representations are linearly separable in low-dimensional space, and provide a plausible explanation for this separability through systematic differences in their representation quality. Motivated by these insights, we train two variants of simple linear probes and evaluate them across 4 benchmarks against 16 baselines. Probes consistently improve OOD detection (+11 AUC), requiring solely ${<}100$ samples to reach near-peak performance. We show that this transferability arises because probes recover a shared latent MGT direction that generalizes across diverse settings. Finally, we demonstrate that probing vectors capture a continuous spectrum of ``machineness'', highlighting their potential for fine-grained estimation of AI-edited text. Overall, our work provides insights into latent-space differences between MGT and HWT and demonstrates the potential of linear probes as as robust and sample-efficient MGT detectors. We release our code on~\\href{https://github.com/gerritq/mgt_probes}{github}.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "在线性可分性假设下证明MGT/HWT在低维表示上可分，简单linear probe跨域性能超过大量监督检测器，是可复现的强基线。",
-      "queued_at": "2026-08-26T02:51:19Z"
-    },
-    {
-      "id": "b538275b1bcf1130bad924546b7630d4361076d0",
-      "title": "SkillForge: Evolving Verifiable Skills for Reinforcement Learning Agents [Shidong Yang, Ziyu Ma, Tongwen Huang, Xucong Wang, Renda Li]",
-      "url": "http://arxiv.org/abs/2608.24747v1",
-      "source": "arxiv:cs.CL",
-      "published_at": "2026-08-25T15:52:10Z",
-      "raw_summary": "Large language model (LLM) agents are trained with reinforcement learning (RL) for complex decision-making tasks. However, most RL-trained agents remain episodic and cannot accumulate reusable knowledge across episodes. Recent skill-based approaches, such as SkillRL, attempt to address this issue by extracting skills from raw trajectories, but treat the skill bank as an append-only repository without verifying whether stored skills remain effective. In this paper, we propose SkillForge, a framework for continuous skill evolution that enables skills to be verified and refined through environment interaction. By making skill usage explicit during agent interaction, RL can directly optimize both environment actions and skill invocation decisions. SkillForge further introduces evidence-based skill verification and multi-pathway skill induction, allowing the skill bank to continuously grow while maintaining its quality. Extensive experiments on ALFWorld, WebShop, and AppWorld show that SkillForge consistently outperforms SkillRL, demonstrating the effectiveness of continuously verified skills in training stronger LLM agents.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "SkillForge用环境反馈持续验证与精炼技能库，把skill从append-only升级为可演化模块，对RL agent长期能力积累是关键改进。",
       "queued_at": "2026-08-26T02:51:19Z"
     }
   ],
