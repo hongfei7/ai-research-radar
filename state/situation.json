@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-28T04:40:22Z",
-  "text": "当前共有 21 个活跃事件。要点包括: 英伟达拟129亿美元收购Hugging Face; 算力高增，回报待验，英伟达财报进入兑现窗口; Alphabet stock sheds $700B as AI bills climb; HuggingFace被曝卖身英伟达：129亿美元！全球最大AI开源平台改姓黄; First Benchmarks Revealed for Jalapeño, OpenAI’s Clean-Sheet General Purpose AI Accelerator ASIC。",
-  "since": "2026-08-28T04:40:22Z",
-  "active_event_count": 21,
+  "generated_at": "2026-08-28T17:06:41Z",
+  "text": "当前共有 25 个活跃事件。要点包括: Anthropic诉五角大楼黑名单案首胜诉; 美拟出新规封堵中国远程访问AI算力漏洞; EPA says power for data centers can sidestep pollution laws; Chinese memory chipmaker CXMT reports H1 revenue of ~$22.4B, more than double its 2025 sales, and ~$11.5B in profit, compared to a loss a year earlier (Bloomberg); Intel 14A defect density is dropping faster than the company expected — 'we have not seen this performance since 22nm,' says CFO。",
+  "since": "2026-08-28T17:06:41Z",
+  "active_event_count": 25,
   "key_themes": [
     "ai_monetization",
     "compute_demand",
-    "model_capability",
+    "policy_export",
     "chip_supply",
-    "policy_export"
+    "datacenter_power"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
   "cross_analysis": "【核心矛盾】\n英伟达129亿美元收购Hugging Face存在两源分歧：TMTPost以\"反垄断审查与社区独立性\"为框架给出neutral评级，强调交易不确定性；QbitAI标题\"全球最大AI开源平台改姓黄\"则侧重护城河强化，暗含积极信号。另一矛盾来自AI资本开支的二元解读——HackerNews报道Alphabet因capex飙升单日蒸发7000亿美元，与CNBC报道英伟达因营收指引超预期单日暴涨4400亿美元形成鲜明对照：同一趋势对算力供给方与需求方产生完全相反的估值冲击，揭示市场对\"AI投资回报\"正在分层定价。\n\n【新兴趋势】\n本轮最显著的反复信号是\"头部AI公司垂直整合算力栈\"：OpenAI自研Jalapeño ASIC首次披露benchmark、Anthropic洽谈70亿美元收购Mat",
-  "trend_spotting": "【新兴趋势】英伟达129亿美元收购Hugging Face将开源社区纳入CUDA生态，与OpenAI自研Jalapeño ASIC、Anthropic推Agent硬件标准共同指向\"模型厂商垂直整合算力+接口栈\"加速；Hugging Face若并入英伟达，中国开发者迁移成本将成国产开源平台(ModelScope/Paddle)的窗口期。\n\n【早期信号】英伟达毛利率下季度指引降至71-72%、客户提价15%对冲内存成本，叠加"
+  "trend_spotting": "过去72小时最值得追踪的三条新主线：①美国出口管制从\"芯片实体\"延伸至\"海外部署+"
 }
