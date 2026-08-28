@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-27T10:20:35Z",
-  "text": "当前共有 26 个活跃事件。要点包括: Nvidia revenue tops $96 billion as memory commitments soar to $160 billion — CEO Jensen Huang says AI 'has reached its inflection point'; 英伟达129亿美元收购Hugging Face; 报道：白宫正考虑对芯片征收新一轮关税; Nvidia snaps up Hugging Face for $12.9 billion as closed AI labs pull away; Sources: DeepSeek is set to soon raise $7.4B at a $74B valuation from existing and new investors to fund R&D and its expansion into computing infrastructure (Wall Street Journal)。",
-  "since": "2026-08-27T10:20:35Z",
-  "active_event_count": 26,
+  "generated_at": "2026-08-28T04:40:22Z",
+  "text": "当前共有 21 个活跃事件。要点包括: 英伟达拟129亿美元收购Hugging Face; 算力高增，回报待验，英伟达财报进入兑现窗口; Alphabet stock sheds $700B as AI bills climb; HuggingFace被曝卖身英伟达：129亿美元！全球最大AI开源平台改姓黄; First Benchmarks Revealed for Jalapeño, OpenAI’s Clean-Sheet General Purpose AI Accelerator ASIC。",
+  "since": "2026-08-28T04:40:22Z",
+  "active_event_count": 21,
   "key_themes": [
     "ai_monetization",
     "compute_demand",
     "model_capability",
     "chip_supply",
-    "datacenter_power"
+    "policy_export"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n英伟达FY2027 Q2营收超960亿美元并锁定1600亿美元HBM长约，凸显AI算力供需极度紧张，但同期美国民调显示数据中心遭遇跨党派社区阻力（电力涨价、噪音），落地端成本压力已显性化——\"上游抢算力\"与\"下游社区抗议\"形成剪刀差。另一组矛盾在于DeepSeek V4 Pro提价350%本应验证算力紧缺，但同日A股光模块龙头中际旭创(-7.4%)、天孚通信(-11%)领跌，市场对国产算力链的定价与基本面信号背离。Nvidia收购Hugging Face一事，两家来源解读分歧：techcrunch视为强化护城河与重返云的正向信号，the-decoder则担忧反垄断与闭源对手(OpenAI/Anthropic)自研芯片加速去英伟达化。\n\n【新兴趋势】\n\"Agent\"主题在多条报道中反复出现但未被作为单一事件：海光首发Agent to Token开放计算架构、阿里Qoder智能体工作台、字节火山引擎为飞鹤部署436个Agent、MiniMax企业Agent收入暴涨700%，构成Agent基础设施军备竞赛的横切面。HBM物理瓶颈（Hot Chips 2026披露堆叠层数、TSV热密度、良率问题）与英",
-  "trend_spotting": "【新兴趋势】算力采购呈现\"长协化+租赁化\"双轨加速：英伟达季度订单从1190亿环比翻倍至2790亿美元（+135%），同时推进数据中心租赁；AWS在2027-2028年累计部署300万颗GPU（200万+3月已宣布的100万），Anthropic再签450亿美元Nscale算力长协。算力锁定从\"季度采购\"升级为\"2-3年产能预占\"。\n\n【早期信号】NVHBM+NVLink Fusion组合标志英伟达从\"卖GPU\"转向\"卖系统\"——通过定制base die和PHY反向定义HBM标准，海力士/美光/三星被迫接受英伟达定制化"
+  "cross_analysis": "【核心矛盾】\n英伟达129亿美元收购Hugging Face存在两源分歧：TMTPost以\"反垄断审查与社区独立性\"为框架给出neutral评级，强调交易不确定性；QbitAI标题\"全球最大AI开源平台改姓黄\"则侧重护城河强化，暗含积极信号。另一矛盾来自AI资本开支的二元解读——HackerNews报道Alphabet因capex飙升单日蒸发7000亿美元，与CNBC报道英伟达因营收指引超预期单日暴涨4400亿美元形成鲜明对照：同一趋势对算力供给方与需求方产生完全相反的估值冲击，揭示市场对\"AI投资回报\"正在分层定价。\n\n【新兴趋势】\n本轮最显著的反复信号是\"头部AI公司垂直整合算力栈\"：OpenAI自研Jalapeño ASIC首次披露benchmark、Anthropic洽谈70亿美元收购Mat",
+  "trend_spotting": "【新兴趋势】英伟达129亿美元收购Hugging Face将开源社区纳入CUDA生态，与OpenAI自研Jalapeño ASIC、Anthropic推Agent硬件标准共同指向\"模型厂商垂直整合算力+接口栈\"加速；Hugging Face若并入英伟达，中国开发者迁移成本将成国产开源平台(ModelScope/Paddle)的窗口期。\n\n【早期信号】英伟达毛利率下季度指引降至71-72%、客户提价15%对冲内存成本，叠加"
 }
