@@ -220,6 +220,32 @@
       "source_traceable": true,
       "why": "SwarmWorld：基于语言模型智能体的斯泰格mergic技术进化研究，涉及多智能体协同范式，值得追踪。",
       "queued_at": "2026-08-29T17:19:42Z"
+    },
+    {
+      "id": "fd75f573ff2de539d37086d9e3b7046000807633",
+      "title": "Predicting Post-Route PPA from Macro and Standard-Cell Placements (U. of Alberta)",
+      "url": "https://semiengineering.com/predicting-post-route-ppa-from-macro-and-standard-cell-placements-u-of-alberta",
+      "source": "rss:semiengineering",
+      "published_at": "2026-08-29T17:00:22Z",
+      "raw_summary": "Researchers from University of Alberta published a technical paper titled “PPAPlace: Differentiable Cross-Stage Objectives for Chip Placement Optimization.” Abstract: “Macro placement significantly affects a chip&#8217;s post-route performance, power, and area (PPA). Most placement methods optimize half-perimeter wirelength (HPWL) as the primary objective. However, recent benchmarking shows a near-zero correlation between HPWL and post-route timing metrics... &#187; read more The post Predicting Post-Route PPA from Macro and Standard-Cell Placements (U. of Alberta) appeared first on Semiconductor Engineering.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "阿尔伯塔大学PPAPlace论文，用可微跨阶段目标优化macro placement，指出HPWL与post-route时序近零相关，对EDA有直接价值。",
+      "queued_at": "2026-08-29T19:56:01Z"
+    },
+    {
+      "id": "2555789944ab224dcaeebe1545840e842c725f3d",
+      "title": "“We’re not doing 30 bets a year”: Vijay Pande on betting small after running $4 billion at a16z",
+      "url": "https://techcrunch.com/2026/08/29/were-not-doing-30-bets-a-year-vijay-pande-on-betting-small-after-running-4-billion-at-a16z",
+      "source": "rss:techcrunch-ai",
+      "published_at": "2026-08-29T17:36:47Z",
+      "raw_summary": "Vijay Pande — who left a16z's roughly $4 billion biotech practice last year to start the much smaller, AI-native VZVC — talks about why biology is finally shifting from a \"discovery\" science to an \"engineering\" one, why clinical trials are still brutally expensive, and why he thinks open, shared datasets (not walled-off ones) are what will actually let AI transform medicine.",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "前a16z生物负责人谈AI for biology范式转变（discovery→engineering）、开放数据集立场，有清晰行业判断。",
+      "queued_at": "2026-08-29T19:56:01Z"
     }
   ],
   "digest_last_date": "2026-08-29"
