@@ -103,6 +103,71 @@
       "source_traceable": true,
       "why": "OpenAI切断对Cursor/SpaceX的模型供应，涉及AI模型分发与商业控制的重大路线事件。",
       "queued_at": "2026-08-29T07:44:08Z"
+    },
+    {
+      "id": "62f86472be6270097f67f2d0d9e6c4db9465b35e",
+      "title": "Google's WikiSkill gives AI agents a persistent memory of past mistakes to sharpen future performance",
+      "url": "https://the-decoder.com/google-gives-ai-agents-their-own-wiki-so-they-can-learn-from-mistakes-and-successes",
+      "source": "rss:the-decoder",
+      "published_at": "2026-08-29T12:51:24Z",
+      "raw_summary": "Google Research has introduced WikiSkill, a framework that gives AI agents a persistent knowledge base. Instead of discarding what they learned after each run, agents document both failures and successes in a wiki-like structure and use that knowledge to get better over time. Larger models benefit more, but smaller models with WikiSkill can match the performance of larger ones without it. The article Google&#039;s WikiSkill gives AI agents a persistent memory of past mistakes to sharpen future performance appeared first on The Decoder.",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Google WikiSkill给Agent加持久记忆失败库，有具体性能结论（小模型可追平大模型），可追溯到Google Research。",
+      "queued_at": "2026-08-29T13:23:23Z"
+    },
+    {
+      "id": "cdf1a6b89f54c458931c8a2c5161b9384282561c",
+      "title": "20ms把PDF变成Markdown！开源OCR神器快了近300倍",
+      "url": "https://www.qbitai.com/2026/08/481075.html",
+      "source": "rss:qbitai",
+      "published_at": "2026-08-29T12:26:49Z",
+      "raw_summary": "",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "开源OCR工具20ms转PDF为Markdown、比之前快300倍，有具体性能数据可复现验证。",
+      "queued_at": "2026-08-29T13:23:23Z"
+    },
+    {
+      "id": "16c2cda9e8da1bf05e8320f5bcdfcf6c0e48daae",
+      "title": "Presentation: Architecting the Data Layer for AI Agents: From Transactional Systems to MCP and Semantic Models",
+      "url": "https://www.infoq.com/presentations/enterprise-data-architecture-ai-agents",
+      "source": "rss:infoq",
+      "published_at": "2026-08-29T11:00:00Z",
+      "raw_summary": "Fabiane Nardon shares how TOTVS prepares enterprise data for token-hungry AI agents. She discusses balancing deterministic logic and non-deterministic LLMs across precision, security, and cost. Nardon details using data mesh, low-latency database architectures, semantic ontologies, and dynamic MCP tool selection to optimize context windows and reduce token overhead in transactional systems. By Fabiane Nardon",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "InfoQ演讲：AI Agent的数据层架构，涉及data mesh、MCP、语义模型选择以优化token开销，工程架构有借鉴价值。",
+      "queued_at": "2026-08-29T13:23:23Z"
+    },
+    {
+      "id": "1d14210ebbd78a4551e45d8bf9ee191129c243ad",
+      "title": "Terminal Bench 4.0 just dropped, GLM-5.3 is at the same level as Fable 5, accounting for margin of error",
+      "url": "https://www.reddit.com/r/localllama/comments/1w1fpxi/terminal_bench_40_just_dropped_glm53_is_at_the",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-29T07:17:09Z",
+      "raw_summary": "Announcement: https://www.tbench.ai/news/terminal-bench-4-0 Leaderboard: https://www.tbench.ai/ Imo the best aspect in their announcement is their focus on rapidly iterating on TerminalBench to keep the pace up with new model releases to fight benchmark saturation. On a similar note, what cheaper/smaller alternatives are there to benchmarking coding agents or your own harness? Large benchmarks like this take 5-10B tokens, which is not economically/computationally feasible for the vast majority of us. I'd love to objectively measure how my skills/harness/tools/etc change token usage and success probability on general coding tasks, there has to be a way to do this to at least give an idea or general direction, without requiring billions of tokens for each run. &#32; submitted by &#32; /u/SorosAhaverom [link] &#32; [comments]",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Terminal Bench 4.0 新基准发布，可直接链接排行榜和方法论，是评估 coding agent 的可溯源一手资源。",
+      "queued_at": "2026-08-29T13:23:23Z"
+    },
+    {
+      "id": "559a086467295a37ef48ff573cd2c133803071f2",
+      "title": "An official 1-bit quant for Hy4??? 👀",
+      "url": "https://www.reddit.com/r/localllama/comments/1w1kt83/an_official_1bit_quant_for_hy4",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-29T12:05:52Z",
+      "raw_summary": "Has anyone tried it? The results in their tweet look very promising! Sadly, I don’t have enough RAM yet… Accuracy barely moves vs BF16 📊 MCP Atlas 83.7→83.2 📊 SWE-Bench multi 82.9→81.3 📊 MRCR 81.3→81.1 📊 IFBench 73.5→72.5 https://x.com/TencentHunyuan/status/2093572224342954019 EDIT: Alright, 2.38-bit bpw, just labeled as Q1… My bad! &#32; submitted by &#32; /u/lakySK [link] &#32; [comments]",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "混元发布接近 1-bit 的极低比特量化（实际 2.38 bpw），附带多基准测试数据，对量化技术路线有参考价值。",
+      "queued_at": "2026-08-29T13:23:23Z"
     }
   ],
   "digest_last_date": "2026-08-29"

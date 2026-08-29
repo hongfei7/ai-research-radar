@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-29T07:48:22Z",
+  "updated_at": "2026-08-29T13:26:26Z",
   "events": {
     "evt_4bd355e83e08": {
       "event_id": "evt_4bd355e83e08",
@@ -55994,6 +55994,185 @@
         "海力士": 1,
         "三星电子": 1,
         "美光": 1
+      },
+      "max_item_score": 5
+    },
+    "evt_8051db05bf1b": {
+      "event_id": "evt_8051db05bf1b",
+      "title": "Google's WikiSkill gives AI agents a persistent memory of past mistakes to sharpen future performance",
+      "summary": "Google Research发布WikiSkill框架，为AI智能体提供维基式持久知识库。智能体可将每次运行中的失败与成功记录下来，形成结构化知识并复用于后续任务，从而实现性能持续提升。实验显示，大模型受益更显著，而搭载WikiSkill的小模型甚至能匹配无该框架的大模型表现。该技术有助于降低对超大算力模型的依赖。",
+      "tickers": [
+        "谷歌"
+      ],
+      "themes": [
+        "compute_demand",
+        "model_capability"
+      ],
+      "direction": {
+        "谷歌": "positive"
+      },
+      "item_ids": [
+        "62f86472be6270097f67f2d0d9e6c4db9465b35e"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-29T13:24:46Z",
+      "first_published_at": "2026-08-29T12:51:24Z",
+      "last_updated_at": "2026-08-29T13:24:46Z",
+      "is_active": true,
+      "significance": 5,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "谷歌": 1
+      },
+      "max_item_score": 5
+    },
+    "evt_c2594d9b5aea": {
+      "event_id": "evt_c2594d9b5aea",
+      "title": "Microsoft-backed AI data center faces backlash over 62 unpermitted gas turbines and 1.5M-gallon LNG tank — issues with $19.4B facility range from illegal construction to noise pollution",
+      "summary": "微软支持的新泽西Vineland DataOne数据中心遭社区反对，问题包括62台未获许可的燃气轮机、150万加仑LNG储罐以及非法施工、噪音污染等，总规模约194亿美元。该项目反映AI算力扩张下数据中心建设面临能源、环境及合规压力。",
+      "tickers": [
+        "微软"
+      ],
+      "themes": [
+        "compute_demand",
+        "datacenter_power",
+        "policy_export"
+      ],
+      "direction": {
+        "微软": "negative"
+      },
+      "item_ids": [
+        "5927391173383e0755d773e6f0d69743ab3b3d22"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-29T13:24:46Z",
+      "first_published_at": "2026-08-29T11:00:00Z",
+      "last_updated_at": "2026-08-29T13:24:46Z",
+      "is_active": true,
+      "significance": 6,
+      "status": "developing",
+      "deep_analysis": "**1. 看多逻辑**\n\n第一，194亿美元的规模本身是微软AI算力承诺的强信号。在Azure AI需求持续高增的背景下，公司选择承担高昂的合规摩擦成本推进项目，反映管理层对中长期算力供需缺口的判断未变，Capex叙事未受动摇。第二，燃气轮机+LNG的组合是面对美国电网排队（interconnect queue）长达数年的务实解法。微软选择\"先发电后并网\"的路径虽激进，但说明其正在通过分布式能源绕开基建瓶颈，实际上保障了投产时间表的弹性。第三，社区抗议在美国大型基建项目中极为常见，历史经验显示此类阻力多以补办许可、噪声补偿或围栏改造收场，项目整体被叫停的概率偏低。短期噪音不改长期落地。\n\n**2. 看空风险**\n\n第一，合规风险具备实质杀伤力。\"未经许可施工\"在美新泽西州可触发NJDEP及联邦EPA双重执法，包括施工禁令、日均罚款乃至强制拆除——62台涡轮机的沉没成本将即刻承压。第二，ESG叙事反噬效应明显。微软2030碳负承诺与化石燃料发电直接矛盾，机构投资者（尤其是ESG基金）可能据此重新评估其AI基础设施的\"绿色溢价\"，对估值倍数形成压制。第三，更深层风险在于\"传染效应\"。若新泽西州最终立法限制数据中心使用化石燃料备用电源，将直接影响全美超大规模数据中心的选址逻辑，推高AWS、Google的合规成本——但同时也可能拖累微软在其他州的项目节奏。\n\n**3. 关键驱动因素**\n\n变量一：新泽西州DEP",
+      "ticker_counts": {
+        "微软": 1
+      },
+      "max_item_score": 6
+    },
+    "evt_d1173a9312dc": {
+      "event_id": "evt_d1173a9312dc",
+      "title": "32GB大显存加持，英特尔锐炫Pro B70搞定AI漫剧创作",
+      "summary": "英特尔发布锐炫Pro B70显卡，主打32GB大显存，定位AI漫剧（AI漫画/动画）创作场景，面向内容创作者提供本地AI推理与生成算力。该产品依托英特尔消费级/专业级GPU路线，强化在边缘与工作站级AI创作市场的布局。",
+      "tickers": [
+        "Intel"
+      ],
+      "themes": [
+        "ai_monetization",
+        "edge_ai"
+      ],
+      "direction": {
+        "Intel": "neutral"
+      },
+      "item_ids": [
+        "d336ee548c907a5f5cf3db2d4650d363c1efd91f"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-29T13:24:46Z",
+      "first_published_at": "2026-08-29T11:35:57Z",
+      "last_updated_at": "2026-08-29T13:24:46Z",
+      "is_active": true,
+      "significance": 5,
+      "status": "developing",
+      "deep_analysis": "**1. 看多逻辑**\n\n- **差异化定位切入蓝海市场**：32GB大显存在本地AI推理/生成场景中具有明确优势，可一次性加载大模型参数，避免频繁CPU卸载。AI漫剧是2025-2026年快速兴起的细分创作场景，工作站级市场长期被Nvidia Quadro/RTX专业卡垄断，英特尔以\"显存规格+垂直场景\"切入，属于避开主流训练红海的明智选择。\n\n- **强化边缘AI战略卡位**：锐炫Pro B70延续英特尔\"边缘+工作站\"AI算力布局，与OpenVINO、oneAPI软件栈形成协同。若能获取内容创作者群体份额，将为英特尔在企业级AI PC、AI工作站等更大市场积累生态基础，验证Xe架构在非训练类AI负载下的可行性。\n\n- **缓解数据中心单一依赖**：数据中心业务面临Nvidia CUDA生态压制，客户端AI算力产品线若放量，可为英特尔AI收入结构提供对冲，提升估值想象空间。\n\n**2. 看空风险**\n\n- **赛道天花板过低**：AI漫剧创作属于小众垂直市场，全球年需求量级可能在数十万张卡以内，对英特尔GPU业务整体营收贡献有限，难以成为基本盘驱动力。\n\n- **软件生态劣势难以短期弥补**：锐炫系列前代产品曾因驱动稳定性、AI框架兼容性（尤其PyTorch/CUDA适配）问题影响口碑，CUDA护城河深达十数年积累，英特尔即使硬件规格领先，开发者迁移成本仍高。\n\n- **执行风险与资源分散**：英特尔当前面临制程追赶、IFS代工业务扭亏、CPU份额承压等多线作战，GPU业务能否获得持续投入存疑。历史上英特尔多次推出\"里程碑\"产品后迭代节奏放缓。\n\n**3. 关键驱动因素**\n\n- **首批实际出货量与创作者社区反馈**：需观察Q4 2026产品上市后，B70在影视/动画工作室、独立创作者中的实际装机量与口碑，这是验证\"32GB卖点\"是否真正形成需求的唯一标准。\n\n- **软件栈成熟度时间表**：OpenVINO对主流扩散模型（SDXL、ComfyUI工作流）、视频生成模型（Sora类）的优化进展，以及驱动稳定性BUG修复节奏，将决定该产品的真实可用性。\n\n**4. 市场影响评估**\n\n- **短期（1-3个月）**：对英特尔股价影响中性偏弱。该产品为专业卡细分品类，营收贡献预期小，更多是叙事层面提供\"AI边缘布局\"故事素材，可能在GTC/IFA类展会窗口带来轻微催化。\n\n- **中期（6-12个月）**：若Q1-Q2 2027出货量数据超预期并伴随软件生态突破，可能成为英特尔AI PC战略的重要支点；反之若重蹈Arc A系列\"叫好不叫座\"覆辙，将进一步削弱市场对英特尔GPU业务的信心，估值修复空间收窄。\n\n**5. 时间线推断**\n\n- 2026年Q4：锐炫Pro B70正式开售，第三方评测与拆机数据发布。\n- 2027年Q1：首批创作者社区实测反馈与软件",
+      "ticker_counts": {
+        "Intel": 1
+      },
+      "max_item_score": 5
+    },
+    "evt_528c7cd959eb": {
+      "event_id": "evt_528c7cd959eb",
+      "title": "收入暴涨20倍，壁仞科技杀疯了",
+      "summary": "港股GPU第一股壁仞科技发布上市后首份中报：2026年上半年营收12.36亿元，同比增近20倍超2025年全年；亏损3.8亿元同比减亏76%；毛利率42.7%同比升10.8pct。智能计算解决方案贡献11.68亿元（占比95%），软件收入从近零增至6517万元。增长来自互联网大客户供应商认证落地及千卡级集群规模化交付。截至8/28收盘市值约1017亿港元，仍低于A股科创板上市的摩尔线程、沐曦股份。",
+      "tickers": [
+        "寒武纪",
+        "海光信息"
+      ],
+      "themes": [
+        "ai_monetization",
+        "compute_demand",
+        "domestic_substitution"
+      ],
+      "direction": {},
+      "item_ids": [
+        "111ba2ad5862be3e97a44f613590bafa9e8aa4b1"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-29T13:24:46Z",
+      "first_published_at": "2026-08-29T07:50:48Z",
+      "last_updated_at": "2026-08-29T13:24:46Z",
+      "is_active": true,
+      "significance": 7,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "海光信息": 1,
+        "寒武纪": 1
+      },
+      "max_item_score": 7
+    },
+    "evt_4ce7e5a05b59": {
+      "event_id": "evt_4ce7e5a05b59",
+      "title": "WPS多维表格“灵感应用”首次亮相：一句自然语言搭出业务应用",
+      "summary": "",
+      "tickers": [
+        "金山办公"
+      ],
+      "themes": [
+        "ai_monetization"
+      ],
+      "direction": {},
+      "item_ids": [
+        "5abc42ef06900da685cfb75408f8a55cfafcd338"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-29T13:24:46Z",
+      "first_published_at": "2026-08-29T08:15:03Z",
+      "last_updated_at": "2026-08-29T13:24:46Z",
+      "is_active": true,
+      "significance": 6,
+      "status": "developing",
+      "deep_analysis": "1. **看多逻辑**\n\nWPS多维表格\"灵感应用\"将自然语言生成应用（NL2App）能力内嵌至高频办公场景，实质是金山办公AI商业化路径上的里程碑事件。核心论点有三：其一，金山坐拥国内数亿级WPS用户基数，AI功能具备天然分发优势，自然语言搭建应用的低门槛特性有望显著提升用户粘性与使用频次；其二，灵感应用可驱动用户从\"表格工具\"向\"业务应用平台\"迁移，强化企业级付费场景（企业版/团队版订阅），打开ARPU上行空间；其三，相较微软Copilot的高定价与海外生态门槛，金山的\"中文自然语言+本土化模板\"路线在国产替代叙事下具备差异化卡位价值。\n\n2. **看空风险**\n\n首要风险在于该功能目前仅为\"首次亮相\"，距大规模商业化变现尚有距离，落地效果与付费转化率均待验证。其次，国内办公赛道竞争白热化——飞书多维表格、钉钉文档及腾讯文档均在加速AI能力整合，金山在企业协同市场的份额并不占优，差异化护城河可能不及预期。再次，AI概念在金山办公估值中已部分兑现，PE长期处于高位，若Q3/Q4财报无法兑现AI对收入端的实质拉动，估值消化压力将增大。\n\n3. **关键驱动因素**\n\n一是\"灵感应用\"正式上线后的付费转化率与AI功能DAU渗透率，这是衡量AI变现成色的核心指标；二是WPS企业版/超级会员的续费率及客单价变化，验证产品力对客单价的拉动效应。\n\n4. **市场影响评估**\n\n短期（1-2周）：事件型催化偏正面，但因已处于\"developing\"阶段且未公布商业化细节，股价弹性有限。中期（3-6个月）：关键看Q3财报中AI相关收入披露及企业订阅数据，若数据超预期则有望催化估值修复；反之将面临\"利好兑现即利空\"风险。\n\n5. **时间线推断**\n\n近期需跟踪产品正式开放使用的时间点及定价策略；2026年三季报（预计10-11月披露）将是首个验证窗口；中长期需关注金山是否将AI能力打包为独立SKU或上调会员价格，以衡量变现深度。",
+      "ticker_counts": {
+        "金山办公": 1
+      },
+      "max_item_score": 6
+    },
+    "evt_9d8189d70c6e": {
+      "event_id": "evt_9d8189d70c6e",
+      "title": "Anthropic wants to do for physical hardware what its Model Context Protocol did for software",
+      "summary": "Anthropic推出Model Hardware Standard（MHS），为AI Agent接入机械臂、实验仪器等物理设备提供统一接口，类比其此前为软件互操作制定的MCP协议。早期测试显示设备集成时间从数周降至数小时，但Claude对物理因果关系的理解仍有不足，因此短期内人类监督仍不可缺。值得关注的是，Anthropic正试图将Agent能力从纯数字世界扩展至物理世界，若标准化进程推进，有望成为具身智能领域的底层协议层。",
+      "tickers": [
+        "Anthropic"
+      ],
+      "themes": [
+        "ai_monetization",
+        "model_capability"
+      ],
+      "direction": {
+        "Anthropic": "positive"
+      },
+      "item_ids": [
+        "68a5fe2f912bb1a6f3bd0565ce1e98a2c1dca7f9"
+      ],
+      "source_count": 1,
+      "first_seen_at": "2026-08-29T13:24:46Z",
+      "first_published_at": "2026-08-29T09:14:30Z",
+      "last_updated_at": "2026-08-29T13:24:46Z",
+      "is_active": true,
+      "significance": 5,
+      "status": "developing",
+      "deep_analysis": "",
+      "ticker_counts": {
+        "Anthropic": 1
       },
       "max_item_score": 5
     }
