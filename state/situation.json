@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-28T17:06:41Z",
-  "text": "当前共有 25 个活跃事件。要点包括: Anthropic诉五角大楼黑名单案首胜诉; 美拟出新规封堵中国远程访问AI算力漏洞; EPA says power for data centers can sidestep pollution laws; Chinese memory chipmaker CXMT reports H1 revenue of ~$22.4B, more than double its 2025 sales, and ~$11.5B in profit, compared to a loss a year earlier (Bloomberg); Intel 14A defect density is dropping faster than the company expected — 'we have not seen this performance since 22nm,' says CFO。",
-  "since": "2026-08-28T17:06:41Z",
-  "active_event_count": 25,
+  "generated_at": "2026-08-29T00:58:24Z",
+  "text": "当前共有 8 个活跃事件。要点包括: Google’s Marvell Deal Shows Custom Silicon Spreading Beyond the TPU; Lambda融资10亿美元债务采购英伟达GPU租赁微软; Google Deepmind's AI Co-Scientist now plans experiments, runs lab equipment, and writes scientific papers; An Anthropic researcher just gave us a peek at self-improving AI; 联邦法官裁定特朗普黑名单Anthropic违法。",
+  "since": "2026-08-29T00:58:24Z",
+  "active_event_count": 8,
   "key_themes": [
     "ai_monetization",
-    "compute_demand",
-    "policy_export",
     "chip_supply",
-    "datacenter_power"
+    "compute_demand",
+    "model_capability",
+    "policy_export"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n英伟达129亿美元收购Hugging Face存在两源分歧：TMTPost以\"反垄断审查与社区独立性\"为框架给出neutral评级，强调交易不确定性；QbitAI标题\"全球最大AI开源平台改姓黄\"则侧重护城河强化，暗含积极信号。另一矛盾来自AI资本开支的二元解读——HackerNews报道Alphabet因capex飙升单日蒸发7000亿美元，与CNBC报道英伟达因营收指引超预期单日暴涨4400亿美元形成鲜明对照：同一趋势对算力供给方与需求方产生完全相反的估值冲击，揭示市场对\"AI投资回报\"正在分层定价。\n\n【新兴趋势】\n本轮最显著的反复信号是\"头部AI公司垂直整合算力栈\"：OpenAI自研Jalapeño ASIC首次披露benchmark、Anthropic洽谈70亿美元收购Mat",
-  "trend_spotting": "过去72小时最值得追踪的三条新主线：①美国出口管制从\"芯片实体\"延伸至\"海外部署+"
+  "cross_analysis": "【核心矛盾】\n同一事件存在来源分歧：Lambda 10亿美元债务融资交易中，TechCrunch 将微软方向标为\"中性\"（暗示租赁不如自购），Techmeme 则标为\"正面\"（认为锁定产能有效），分歧点在于云厂租赁GPU的资本效率正负面解读。此外，Marvell 出现两条信息温差——一边是 Google 合作扩张的利好叙事（EETimes），一边是仅知10-Q提交、业绩数据缺失（SEC），缺乏实际数字验证ASIC增长是否兑现。\n\n【新兴趋势】\n\"私募信贷+芯片租赁\"模式在多条线索中反复出现：Lambda 案例显示 AI 算力融资已从股权/传统债券向短期私募债务扩散，反映 GPU 仍是卖方市场、超大规模云厂愿为锁定产能支付溢价。另一暗线是定制芯片从计算单元向数据中心全栈（内存、网络、存储）外溢（Google-Marvell），意味着 ASIC 供应商的客户绑定正在加深而非泛化。AI Agent 从\"内容生成\"走向\"实体操作\"（DeepMind Co-Scientist 操控实验设备）也是跨多条报道的能力跃迁信号。\n\n【信息盲点】\n本轮严重缺位的是台积电（所有定制芯片与 Nvidia GPU 的唯一代工）、AMD（Nvidia 主要替代品）、SK海力士/美光（HBM 内存瓶颈）、博通（Marvell 直接竞品）以及电力/散热供应商（Vertiv、Monolithic Power）。Oracle、Arista 等次级超大规模/网络标的也未出现。AI",
+  "trend_spotting": "【新兴趋势】超大规模云厂自研芯片从计算单元向内存、网络、存储全栈扩散，谷歌与Marvell合作标志着定制硅片进入数据中心全栈替代阶段，传统芯片商尤其博通面临结构性挤压。\n\n【早期信号】DeepMind AI Co-Scientist已能自主规划实验、操作设备并撰写论文，Anthropic同步展示针对"
 }

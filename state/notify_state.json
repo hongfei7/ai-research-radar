@@ -4,76 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "三星电子",
-        "海力士",
-        "美光"
-      ],
-      "features": [
-        "ai",
-        "as",
-        "billion",
-        "ceo",
-        "commitments",
-        "has",
-        "huang",
-        "inflection",
-        "its",
-        "jensen",
-        "memory",
-        "nvidia",
-        "point",
-        "reached",
-        "revenue",
-        "says",
-        "soar",
-        "to",
-        "tops"
-      ],
-      "sent_at": "2026-08-27T10:21:01Z"
-    },
-    {
-      "tickers": [
-        "英伟达"
-      ],
-      "features": [
-        "acquisition",
-        "closes",
-        "face",
-        "hugging",
-        "in",
-        "nvidia",
-        "on"
-      ],
-      "sent_at": "2026-08-27T10:21:23Z"
-    },
-    {
-      "tickers": [
-        "AMD",
-        "Intel",
-        "台积电"
-      ],
-      "features": [
-        "一轮",
-        "关税",
-        "宫正",
-        "对芯",
-        "征收",
-        "报道",
-        "收新",
-        "新一",
-        "正考",
-        "片征",
-        "白宫",
-        "考虑",
-        "芯片",
-        "虑对",
-        "轮关",
-        "道白"
-      ],
-      "sent_at": "2026-08-27T10:21:33Z"
-    },
-    {
-      "tickers": [
         "英伟达"
       ],
       "features": [
@@ -147,6 +77,83 @@
         "revealed"
       ],
       "sent_at": "2026-08-28T04:41:36Z"
+    },
+    {
+      "tickers": [
+        "谷歌"
+      ],
+      "features": [
+        "ai",
+        "and",
+        "co-scientist",
+        "deepmind",
+        "equipment",
+        "experiments",
+        "google",
+        "lab",
+        "now",
+        "papers",
+        "plans",
+        "runs",
+        "scientific",
+        "writes"
+      ],
+      "sent_at": "2026-08-29T00:58:44Z"
+    },
+    {
+      "tickers": [
+        "Marvell",
+        "谷歌"
+      ],
+      "features": [
+        "beyond",
+        "custom",
+        "deal",
+        "google",
+        "marvell",
+        "shows",
+        "silicon",
+        "spreading",
+        "the",
+        "tpu"
+      ],
+      "sent_at": "2026-08-29T00:59:07Z"
+    },
+    {
+      "tickers": [
+        "微软",
+        "英伟达"
+      ],
+      "features": [
+        "1b",
+        "ai",
+        "be",
+        "bloomberg",
+        "by",
+        "cloud",
+        "computing",
+        "debt",
+        "emily",
+        "finance",
+        "gpus",
+        "graffeo",
+        "lambda",
+        "leased",
+        "microsoft",
+        "nvidia",
+        "of",
+        "private",
+        "provider",
+        "purchase",
+        "raised",
+        "short-dated",
+        "sources",
+        "the",
+        "to",
+        "which",
+        "will"
+      ],
+      "sent_at": "2026-08-29T00:59:28Z"
     }
   ],
   "last_report": {
@@ -182,7 +189,7 @@
     ]
   },
   "morning_fallback": {
-    "date": "2026-08-28",
+    "date": "2026-08-29",
     "attempts": 1
   },
   "blindspot_ledger": [
