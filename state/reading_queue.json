@@ -168,6 +168,58 @@
       "source_traceable": true,
       "why": "混元发布接近 1-bit 的极低比特量化（实际 2.38 bpw），附带多基准测试数据，对量化技术路线有参考价值。",
       "queued_at": "2026-08-29T13:23:23Z"
+    },
+    {
+      "id": "2c681c8290eb42fa825ac5e1e8ce436a2836ab3a",
+      "title": "AI本地部署不如官方版的元凶找到了：734个依赖包，每一个都可能坑",
+      "url": "https://www.qbitai.com/2026/08/481372.html",
+      "source": "rss:qbitai",
+      "published_at": "2026-08-29T13:11:08Z",
+      "raw_summary": "推理软件栈的微小差异，就能改变输出token",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "734个推理依赖包差异导致本地部署与官方版输出不一致——是真正可动手排查的工程问题，对推理复现者高价值。",
+      "queued_at": "2026-08-29T17:19:42Z"
+    },
+    {
+      "id": "9764c79bea7cd185edda2c5535617d25b11f0392",
+      "title": "Nvidia’s AI advantage is moving beyond the GPU",
+      "url": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu",
+      "source": "rss:techcrunch-ai",
+      "published_at": "2026-08-29T13:00:00Z",
+      "raw_summary": "The new generation of data center systems is increasing efficiency with smarter traffic control instead of just more processor cycles.",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": false,
+      "why": "Nvidia从GPU算力转向网络与流量控制的数据中心系统趋势解读，对算力/竞争格局判断有实质价值。",
+      "queued_at": "2026-08-29T17:19:42Z"
+    },
+    {
+      "id": "9a1fe220f0d741405d00e552137793946721b4c6",
+      "title": "Claude开始训练Claude！4美元一小时，跑赢150美元人类研究员",
+      "url": "https://www.qbitai.com/2026/08/481223.html",
+      "source": "rss:qbitai",
+      "published_at": "2026-08-29T12:50:31Z",
+      "raw_summary": "",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": false,
+      "why": "AI训练AI（$4/小时 vs $150人类）的成本对比，涉及RLAIF/自演化范式，若给数据则值得读。",
+      "queued_at": "2026-08-29T17:19:42Z"
+    },
+    {
+      "id": "861149cecd8c156951de3a9f5b2cc0832e26eeba",
+      "title": "SwarmWorld: Stigmergic technological evolution in societies of language-model agents",
+      "url": "https://www.reddit.com/r/singularity/comments/1w1pn6j/swarmworld_stigmergic_technological_evolution_in",
+      "source": "reddit:singularity",
+      "published_at": "2026-08-29T15:34:13Z",
+      "raw_summary": "&#32; submitted by &#32; /u/coldbeers [link] &#32; [comments]",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "SwarmWorld：基于语言模型智能体的斯泰格mergic技术进化研究，涉及多智能体协同范式，值得追踪。",
+      "queued_at": "2026-08-29T17:19:42Z"
     }
   ],
   "digest_last_date": "2026-08-29"
