@@ -246,6 +246,71 @@
       "source_traceable": true,
       "why": "前a16z生物负责人谈AI for biology范式转变（discovery→engineering）、开放数据集立场，有清晰行业判断。",
       "queued_at": "2026-08-29T19:56:01Z"
+    },
+    {
+      "id": "73be14de88e613110eae34abaeaa400f25d81e85",
+      "title": "Canonical-basis realignment for Transformer LLMs: every hidden axis becomes independently measurable and controllable",
+      "url": "https://github.com/todotge/canonical-basis",
+      "source": "rss:lobsters",
+      "published_at": "2026-08-29T20:16:54Z",
+      "raw_summary": "The code essentially gives you a way to rotate a Transformer's internal coordinate system into a canonical basis that aligns with its own weight matrices in a lossless way. By absorbing the normalization gains directly into the adjacent weights and using orthogonal matrices built from the singular vectors of the model, you can transform architectures like Qwen or Pythia without altering their outputs or perplexity scores. Applying this transform reveals the actual hidden geometric structures operating inside the network. Once the model is rotated into this new perspective, you can see its internal mechanisms that were previously opaque. The authors found things like a bipolar oscillator where specific axes form inhibitory pairs that fire against each other in perfect opposition. They also observed a kind of rhythmic respiration across layers where the model alternates between absorbing knowledge and filtering it. On top of that, it exposed a homeostatic defense mechanism that aggressively erases any localized perturbations within just a couple of layers. Practically speaking, researchers now have a powerful lens for mapping out how models actually do reasoning. For example, it turns out that the effective rank of the correlation matrix in a half billion parameter model might be as low as eleven independent patterns. Reframing how we look at the internal activations of language models provides a standardized way to study their underlying architecture. Comments",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "提出Transformer隐藏空间canonical basis对齐方法，可无损旋转并暴露内部几何结构，对模型可解释性有实质贡献。",
+      "queued_at": "2026-08-29T22:30:20Z"
+    },
+    {
+      "id": "efae554343d6d7a0d68d600b49d531b4fedff547",
+      "title": "(NInfer Fork) I wanted to have a 1M context Qwen-3.8 27B, tp2, dual 5090s",
+      "url": "https://www.reddit.com/r/localllama/comments/1w1txyk/ninfer_fork_i_wanted_to_have_a_1m_context_qwen38",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-29T18:24:17Z",
+      "raw_summary": "Hey! I forked NInfer (a from-scratch C++20/CUDA inference engine for Qwen models) and added two things: tensor-parallel across two GPUs, and YaRN ×4 rope scaling. Together they let Qwen3.8-27B NVFP4 run a 1,048,576-token context on two consumer 5090s — 27.4 GB per card, no NVLink. Numbers (single stream, 500 W per GPU cap): Decode at 653k context: 119 tok/s with MTP speculative decoding, 57 without. vLLM on the same prompts: 42 tok/s. Why: past its native 262k window, vLLM's MTP acceptance drops to exactly zero (0 of 1,533 drafts accepted) — it keeps paying for the drafter. NInfer's acceptance stays ~55–60% out to 1M. Prefill is where vLLM wins: 1.2–1.3× faster. A full 1M prompt takes ~18 minutes on NInfer. That's the untuned part. At 1M: 48 tok/s decode, ~100 with MTP. vLLM's fp8 KV cache tops out at ~759k tokens on this hardware; NInfer's INT8 KV fits 1,048,576 in less memory. Two GPUs are also just faster than one: 75 vs 54 tok/s at 250k, because weights and KV traffic halve per card and the ~128 cross-GPU reductions per token cost only ~0.2 ms under CUDA graphs. Fork Performance &#32; submitted by &#32; /u/Littlepharaoh [link] &#32; [comments]",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "双5090实现1M context Qwen3.8-27B推理，详述vLLM MTP失效与自研引擎的接受率对比，工程细节扎实。",
+      "queued_at": "2026-08-29T22:30:20Z"
+    },
+    {
+      "id": "e6cc5ca4171c22263b03aade40689795cefc5201",
+      "title": "What GLM-5.3 Flash running on Chinese hardware actually means",
+      "url": "https://martinalderson.com/posts/glm-5-3-flash-chinese-hardware",
+      "source": "rss:lobsters",
+      "published_at": "2026-08-29T20:44:36Z",
+      "raw_summary": "",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": false,
+      "why": "分析GLM-5.3 Flash在国产硬件上的运行意义，涉及中国AI算力自主化的产业判断，值得读。",
+      "queued_at": "2026-08-29T22:30:20Z"
+    },
+    {
+      "id": "87f76ac7d0cfbeec18eb8ffe5b19df96e2bb365a",
+      "title": "Job listings and other indicators: SpaceX is working on a Bastrop, TX foundry to build blades for large gas turbines, which could ease its AI power crunch (Ann Davis Vaughan/The Information)",
+      "url": "https://www.techmeme.com/260829/p14#a260829p14",
+      "source": "rss:techmeme",
+      "published_at": "2026-08-29T20:05:06Z",
+      "raw_summary": "Ann Davis Vaughan / The Information: Job listings and other indicators: SpaceX is working on a Bastrop, TX foundry to build blades for large gas turbines, which could ease its AI power crunch&nbsp; &mdash;&nbsp; Elon Musk intends to bypass the power supply chain for AI data centers in a way others assumed was impossible, by making highly complex components himself.",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": false,
+      "why": "SpaceX自建燃气轮机叶片铸造以缓解AI电力瓶颈，揭示AI算力供应链的关键瓶颈与非常规解决方案。",
+      "queued_at": "2026-08-29T22:30:20Z"
+    },
+    {
+      "id": "0864c3c32034eafe51955652ffb8d455d7ee1bac",
+      "title": "This finance-model benchmark card is more useful for what it discloses than for who \"wins\"",
+      "url": "https://www.reddit.com/r/localllama/comments/1w1tfkc/this_financemodel_benchmark_card_is_more_useful",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-29T18:04:08Z",
+      "raw_summary": "The official benchmark card for Ling-3.0-flash-Fin is a useful reminder that the unit being tested is rarely just “the model.” The release says most runs used temperature 1, top_p 0.95 and the highest available reasoning effort. FinFIRST and FinSearchComp Verified used a common ReAct scaffold with Web Search, Visit and Python. SpreadsheetBench used Claude Code 2.1.173 with LibreOffice 25.8.7, Search disabled, 120 or 300 maximum interaction turns and a three-hour task timeout; Ling used temperature 0.6 there. The chart also mixes evidence types. Some results come from official or externally published scores, while others are internal runs. FinSearchComp Verified is an internal 145-question set with expert-revised answers and a GPT-5 judge. FinCRAFT is internal. FinFIRST is announced as “coming soon,” not public today. None of that makes the chart useless. It makes the claim narrower: these are reported results under several specific agent systems, tool budgets and evaluation pipelines—not a clean intrinsic ranking of raw checkpoints. The finance weights are also not public yet; the team says they are due next week. Once they land, the most valuable follow-up would be the exact harnesses, prompts, tool adapters, per-run variance and failure traces. Until then, the bars are a test plan, not an independent reproduction. &#32; submitted by &#32; /u/niacolhealth [link] &#32; [comments]",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": false,
+      "why": "拆解金融模型benchmark卡片的方法论，揭示benchmark本身的设计偏差与可比性问题，对评估研究有方法论价值。",
+      "queued_at": "2026-08-29T22:30:20Z"
     }
   ],
   "digest_last_date": "2026-08-29"
