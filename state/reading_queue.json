@@ -1,4 +1,109 @@
 {
-  "candidates": [],
+  "candidates": [
+    {
+      "id": "8df9d88f64a128b19f9d25060a3bcab04e5de6bc",
+      "title": "长鑫科技宣布LPDDR6量产，峰值速率达12800Mbps",
+      "url": "https://36kr.com/newsflashes/3960031907315076?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-08-29T04:00:39Z",
+      "raw_summary": "长鑫科技宣布自主研发的新一代低功耗内存LPDDR6实现量产，并将首批搭载于小米18 Fold折叠旗舰手机。据悉，这是全球LPDDR6产品首次落地商用，标志着国内存储企业首次在高端内存标准上实现全球首发量产跨越。据长鑫半年报披露，长鑫LPDDR6芯片通过架构创新及数据传输优化技术，充分释放数据传输潜力，峰值速率达12800Mbps，芯片最高容量 16GB。",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "长鑫LPDDR6全球首发量产、12800Mbps峰值速率+16GB容量，国内存储首次在高端标准上领跑，是内存路线/产业格局重要信号。",
+      "queued_at": "2026-08-29T07:44:08Z"
+    },
+    {
+      "id": "616616b2913a2433d5b750eb8a3bc08461d365e4",
+      "title": "腾讯猛踩油门，混元追赶的127天",
+      "url": "https://www.tmtpost.com/8121424.html",
+      "source": "rss:tmtpost",
+      "published_at": "2026-08-29T04:46:25Z",
+      "raw_summary": "文 | 深流研究所，作者 |&nbsp; 吴绛枫8 月 28 日，腾讯混元发布并开源 Hy4 preview。从今年 2 月重建预训练与强化学习基建算起，混元把大版本的迭代周期，压缩到两个月左右。这已经接近 Anthropic、OpenAI、智谱等头部模型厂商的更新频率。差别在于，腾讯是在重建地基的同时跑出了这个速度。版本间隔在缩短，混元能力跃升的幅度也在持续变大。Hy4 preview 总参数达到 770B，是 Hy3 的 2.6 倍；激活参数从 21B 提升到 49B，上下文从 256K 扩展到 1M。图注：Hy4 preview在各项benchmark的评分表现7 月初，Hy3 在软件工程实战基准 DeepSWE 上拿到 28.0 分，同期 Claude Opus 4.8 是 58.0。不到两个月，Hy4 preview 在同一项测试上拿到 64.3，超过 DeepSeek V4 Pro 的 62.7。同一天公布的Terminal-Bench 2.1 上，Hy4 preview 拿到 85.4 分，与 Claude Opus 5 持平。如果把 Hy3 preview 以来的三个版本放在一起看，混元在多项主流 benchmark 上都画出了一条显著上升的曲线。总的来说，混元整体仍在追赶阶段。但在更接近真实生产力的任务上，混元实打实追赶上来了，尤其是长上下文任务、代码库重构、专业科学推理等方面。那么，猛踩油门的腾讯混元，它的&ldquo;加速度&rdquo;究竟从何而来？1、每一次发布，都是实战Hy4 preview 发布当天，WorkBuddy 和 CodeBuddy 同步开启两周免费体验。混元团队在说明中提到：&ldquo;如同 Hy3 preview，我们希望通过 Hy4 preview 的尽快发布获得广泛的真实反馈，从而显著提升 Hy4 正式版。&rdquo;同一套流程，混元已经走过一遍。4 月 23 日，Hy3 preview 开源上线，同时接入元宝、WorkBuddy、CodeBuddy、ima 和 QQ 等多个业务产品。三个月后，Hy3 正式版发布。团队表示，Hy3 preview 已在 50 多个业务中获得广泛反馈，修复了大量体验问题；正式版在此基础上，进一步提升后训练数据的质量与多样性，并扩大了强化学习的算力规模。变化体现在核心指标上。对比preview版，Hy3 正式版的幻觉率从 12.5% 降到 5.4%，常识错误率从 25.4% 降到 12.7%，多轮对话问题率从 17.4% 降到 7.9%。这不是单靠增加参数就能解决的。模型在真实任务里会犯一些非常具体的错误。比如忘记用户几轮前提出的限制，工具调用失败后盲目重试，任务已经完成却不知道什么时候该停等等。只有把模型放进产品，让它持续面对真实用户，再把失败过程拆开，找到问题发生在哪一步，补充正确的任务轨迹和判断标准，错误才可能被一条条纠正。Preview 不是一个版本标签，而是将真实使用纳入模型研发的行业机制。早在 2022 年，OpenAI 就把 ChatGPT 作为 research preview 推向公众，希望借此收集用户反馈，了解模型在真实世界中的优势与局限。后来的 o1-preview、GPT-4.5，也延续了相似的发布方式。OpenAI 将其称为&ldquo;迭代式部署&rdquo;：不是等系统在实验室里变得完美再推出，而是让一个仍有不足的版本受控地进入真实世界，再根据实际使用不断修正。如今，分阶段开放、早期测试和 preview-first，已经成为前沿模型常",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "混元127天迭代轨迹+DeepSWE/Terminal-Bench对标数据，清晰呈现腾讯在大模型竞争中的追赶路径与工程取舍。",
+      "queued_at": "2026-08-29T07:44:08Z"
+    },
+    {
+      "id": "6c369bf4bdfe2f699d285f7bc7ef8c39e194e5c3",
+      "title": "FreeToken Unlocks Frontier MoE Inference on Consumer Hardware via Dynamic Co-Execution",
+      "url": "https://www.infoq.com/news/2026/08/freetoken-local-inference",
+      "source": "rss:infoq",
+      "published_at": "2026-08-29T05:05:00Z",
+      "raw_summary": "Researchers from UC Berkeley and MIT have developed FreeToken, an open-source inference engine that enhances the utility of Mixture-of-Experts models on consumer hardware. By implementing a dynamic scheduling policy and optimising weight management, FreeToken improves decoding speeds and execution efficiency in edge AI applications, fostering self-hosted reasoning systems. By Olimpiu Pop",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "UC Berkeley/MIT的FreeToken开源推理引擎，在消费级硬件上高效运行MoE模型，有具体技术方案。",
+      "queued_at": "2026-08-29T07:44:08Z"
+    },
+    {
+      "id": "89f237ab221aba2e91645a1d9f43e9d946bde97f",
+      "title": "Rowhammer Backdoor Injection Attack During Inference (Northeastern)",
+      "url": "https://semiengineering.com/rowhammer-backdoor-injection-attack-during-inference-northeastern",
+      "source": "rss:semiengineering",
+      "published_at": "2026-08-29T07:01:49Z",
+      "raw_summary": "Researchers from Northeastern University published a technical paper titled “ROBBIN: Rowhammer-Based Backdoor Injection during Inference.” Abstract excerpt: &#8220;This work presents ROBBIN, a hardware-aware Rowhammer-based backdoor injection attack that integrates the device-specific vulnerability into the backdoor construction process. ROBBIN first characterizes the bit-flip patterns of a target DRAM and uses this information to iteratively select DRAM... &#187; read more The post Rowhammer Backdoor Injection Attack During Inference (Northeastern) appeared first on Semiconductor Engineering.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "东北大学ROBBIN论文，Rowhammer在推理阶段注入硬件后门的攻击方法，对AI安全有重要参考价值。",
+      "queued_at": "2026-08-29T07:44:08Z"
+    },
+    {
+      "id": "ab4909667307d24a94521070d798cd0732615184",
+      "title": "美加关系持续恶化 加拿大开始从美国顶尖高校“挖人",
+      "url": "https://36kr.com/newsflashes/3960089418284423?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-08-29T05:45:06Z",
+      "raw_summary": "据美国有线电视新闻网（CNN）、英国广播公司（BBC）等媒体8月28日报道，随着加拿大与美国的关系持续恶化，加拿大正在从哈佛大学等美国顶尖研究机构挖走数十名研究人员。CNN称，加拿大工业部长梅拉妮·乔利27日宣布，加拿大将聘用64名学者，并将在加拿大多所大学为他们提供为期八年、总额超过5亿加元（约合3.5亿美元）的资金支持。报道提到，这64名学者中的48名来自美国各高校，包括哈佛大学、康奈尔大学和麻省理工学院，专业领域涵盖医学、工程学和气候科学等多个学科。",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "加拿大8年5亿加元从美国顶尖高校挖64名学者，反映美国科研人才政策的实质性变化，对研究者职业路径和地缘格局有参考。",
+      "queued_at": "2026-08-29T07:44:08Z"
+    },
+    {
+      "id": "196a0ee5dc749014ba381f0fc5dd4a388715fe8d",
+      "title": "腾讯重金投入 AI 之后，混元 Hy4 preview 交出了什么答卷",
+      "url": "http://www.geekpark.net/news/369550",
+      "source": "rss:geekpark",
+      "published_at": "2026-08-29T05:58:53Z",
+      "raw_summary": "&nbsp; 8 月 28 日，腾讯发布并开源混元 Hy4 preview。 这是继 Hy3 正式版之后，腾讯推出的新一代大模型：总参数从 295B 增加到 770B，激活参数从 21B 增加到 49B，上下文长度也从 256K 扩展至 1M。模型已经同步进入 WorkBuddy、CodeBuddy、元宝和 ima，并可通过腾讯云 TokenHub 及 OpenRouter 调用。 此外，Hy4 preview 继续走普惠的高性价比路线。根据公布的价格信息，Hy4 preview 输入 6 元/百万 tokens，输出 18 元/百万 tokens，缓存命中 0.3 元/百万 tokens。 Hy3 此前已经替腾讯验证过一次产品化路径。它在 7 月发布后迅速进入腾讯的办公、编程和内容产品；腾讯披露，其 API 调用量在发布一周后达到上一代模型的 68 倍以上。Hy3 的优势是实用和高性价比：降低幻觉与常识错误，改善工具调用和多轮承接，让网页、表格、代码和文档从「能生成」变得「基本可用」。 Hy4 preview 要回答的，是下一道题。 相比 Hy3，Hy4 preview 把优化重点进一步推向软件工程、办公分析、游戏开发和科学研究等生产力任务。它要处理的是更长的工作链：理解需求、拆分步骤、调用工具、验证结果，并在出现报错、信息冲突或交付问题时继续修改。 腾讯内部组织了 163 名专家，对 203 个工程任务进行盲测。按照腾讯公布的数据，Hy4 preview 平均得分为 2.99/4，略高于 Kimi K3 的 2.94 和 GLM 5.3 的 2.92。 图片来源：腾讯 还有一个细节是，腾讯称，Hy4 preview 首次参与了自身训练方法、数据策略、评估体系和底层算子的优化，并通过多轮实验将推理吞吐相较基线提升 31.8%。 这种「发现问题&mdash;运行实验&mdash;根据结果继续修改」的能力，是否也能出现在普通用户的任务里？ 我们给 Hy4 preview 准备了三项测试：在多份材料中完成费用审核、使用原生 Canvas 制作网页小游戏，以及从一句话开始开发一款 Three.js 3D 竞速游戏。看当任务变长、代码报错、交付物打不开时，它是否能不能把事情继续做下去。 一、先让 AI 审 6 笔账 在做游戏和 3D 场景之前，我们先给 Hy4 preview 派了一项更像真实办公室工作、也更难靠「看起来很聪明」蒙混过关的任务。 一个模拟费用材料包里放着 6 笔申请、两版费用制度、预算台账和 3 封审批邮件。客户餐叙要算人均限额，晚间交通要找活动证明，酒店有城市住宿上限，软件订阅则要判断 IT 是否真的批准。模型需要自己翻完 12 份材料，再给出「全额通过」、「核减后通过」或「退回补件」的结论。 Hy4 preview 用了 3 分 27 秒完成任务，生成了一份 Markdown 格式的《费用审核报告》：先给出汇总表，再逐笔写明依据、计算过程和后续待办。6 笔申请总额 5364 元，模型最终核准 4294 元，核减 230 元，另有 840 元退回补件，账是平的。 它还会主动去找申请单之外的证据。 比如 RB-003 是一笔 86 元的晚间交通费。申请单里只有行程记录，没有直接附活动证明。Hy4 preview 没有就此退回，而是翻到了邮件附件：项目负责人 21:32 发邮件要求申请人在会场完成供应商确认后再离开，邮件中还写明会议预计 22:15 结束；行程记录则显示，申请人 22:28 从会场返回公司。人物、地点和时间都对得上，模型采信",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "混元Hy4 preview开源，770B/49B激活、1M上下文、DeepSWE 64.3分等数据具体，定位为生产力任务追赶Claude。",
+      "queued_at": "2026-08-29T07:44:08Z"
+    },
+    {
+      "id": "22301fc692269fbf0c5f6e55d02345e64e4259d6",
+      "title": "Xiaomi and CXMT say the Xiaomi 18 Fold smartphone will debut CXMT's LPDDR6 DRAM chips, alongside Xiaomi's in-house 3nm Xring O3 SoC, launching in September (Summer Zhen/Reuters)",
+      "url": "https://www.techmeme.com/260829/p4#a260829p4",
+      "source": "rss:techmeme",
+      "published_at": "2026-08-29T05:35:00Z",
+      "raw_summary": "Summer Zhen / Reuters: Xiaomi and CXMT say the Xiaomi 18 Fold smartphone will debut CXMT's LPDDR6 DRAM chips, alongside Xiaomi's in-house 3nm Xring O3 SoC, launching in September&nbsp; &mdash;&nbsp; China's top memory chipmaker, CXMT (688825.SS), will supply its latest LPDDR6 DRAM chips for Xiaomi's upcoming flagship folding phone, the companies said on Saturday.",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "小米18 Fold首搭CXMT LPDDR6 DRAM和3nm自研SoC，国产存储和先进制程里程碑事件。",
+      "queued_at": "2026-08-29T07:44:08Z"
+    },
+    {
+      "id": "2cbeac6492df94ede6f6b4da31374f61d79cee55",
+      "title": "OpenAI says it plans to stop providing its models to Cursor from November 12, as \"we cannot be confident that SpaceX will use our technology within our ToS\" (OpenAI)",
+      "url": "https://www.techmeme.com/260828/p28#a260828p28",
+      "source": "rss:techmeme",
+      "published_at": "2026-08-29T02:01:42Z",
+      "raw_summary": "OpenAI: OpenAI says it plans to stop providing its models to Cursor from November 12, as &ldquo;we cannot be confident that SpaceX will use our technology within our ToS&rdquo;&nbsp; &mdash;&nbsp; Today, we notified SpaceX that we intend to wind down our contract providing OpenAI models to Cursor, with a proposed shutoff date of November 12, 2026.",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "OpenAI切断对Cursor/SpaceX的模型供应，涉及AI模型分发与商业控制的重大路线事件。",
+      "queued_at": "2026-08-29T07:44:08Z"
+    }
+  ],
   "digest_last_date": "2026-08-29"
 }

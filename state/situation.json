@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-29T00:58:24Z",
-  "text": "当前共有 8 个活跃事件。要点包括: Google’s Marvell Deal Shows Custom Silicon Spreading Beyond the TPU; Lambda融资10亿美元债务采购英伟达GPU租赁微软; Google Deepmind's AI Co-Scientist now plans experiments, runs lab equipment, and writes scientific papers; An Anthropic researcher just gave us a peek at self-improving AI; 联邦法官裁定特朗普黑名单Anthropic违法。",
-  "since": "2026-08-29T00:58:24Z",
-  "active_event_count": 8,
+  "generated_at": "2026-08-29T07:48:22Z",
+  "text": "截至 2026-08-29 15:48 HKT，本轮活跃事件出现显著轮换。国内层面，2026数博会上国家数据局定调\"词元\"为数据要素价值释放新路径，强调Token调用量爆发式增长，并披露全国智算总规模达245万PFLOPS、八大枢纽承载超85%产能。腾讯8月28日开源混元Hy4 preview，总参数扩至770B、上下文扩至1M，DeepSWE与Terminal-Bench表现追平甚至反超Claude Opus 5、DeepSeek V4 Pro，标志头部大厂迭代节奏进一步收窄。存储链出现两条重要动向：SK海力士40亿美元印第安纳HBM先进封装工厂破土，量产延至2029H2；长鑫LPDDR6实现全球首发量产，峰值12800Mbps。海外方面，OpenAI宣布11月12日起停止向Cursor供应模型，反映模型供应商对终端合规管控趋紧；UC Berkeley/MIT开源FreeToken引擎降低MoE消费级硬件部署门槛。终端侧，影石创新H1扣非净利润由盈转亏，受存储涨价与大疆价格战双重挤压。",
+  "since": "2026-08-29T07:48:22Z",
+  "active_event_count": 9,
   "key_themes": [
     "ai_monetization",
-    "chip_supply",
     "compute_demand",
+    "policy_export",
     "model_capability",
-    "policy_export"
+    "chip_supply"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n同一事件存在来源分歧：Lambda 10亿美元债务融资交易中，TechCrunch 将微软方向标为\"中性\"（暗示租赁不如自购），Techmeme 则标为\"正面\"（认为锁定产能有效），分歧点在于云厂租赁GPU的资本效率正负面解读。此外，Marvell 出现两条信息温差——一边是 Google 合作扩张的利好叙事（EETimes），一边是仅知10-Q提交、业绩数据缺失（SEC），缺乏实际数字验证ASIC增长是否兑现。\n\n【新兴趋势】\n\"私募信贷+芯片租赁\"模式在多条线索中反复出现：Lambda 案例显示 AI 算力融资已从股权/传统债券向短期私募债务扩散，反映 GPU 仍是卖方市场、超大规模云厂愿为锁定产能支付溢价。另一暗线是定制芯片从计算单元向数据中心全栈（内存、网络、存储）外溢（Google-Marvell），意味着 ASIC 供应商的客户绑定正在加深而非泛化。AI Agent 从\"内容生成\"走向\"实体操作\"（DeepMind Co-Scientist 操控实验设备）也是跨多条报道的能力跃迁信号。\n\n【信息盲点】\n本轮严重缺位的是台积电（所有定制芯片与 Nvidia GPU 的唯一代工）、AMD（Nvidia 主要替代品）、SK海力士/美光（HBM 内存瓶颈）、博通（Marvell 直接竞品）以及电力/散热供应商（Vertiv、Monolithic Power）。Oracle、Arista 等次级超大规模/网络标的也未出现。AI",
+  "cross_analysis": "【核心矛盾】\n两条信号存在张力：①国家数据局强调词元需求\"爆发式增长\"、智算规模245万PFLOPS，云端推理算力需求强劲；②FreeToken开源项目却证明MoE模型可在消费级硬件高效运行，可能分流云端推理需求，对GPU/HBM产业链形成中长期利空。此外，OpenAI停止向Cursor供货的理由\"无法确信SpaceX在ToS内使用\"逻辑存疑（Cursor母公司实为Anysphere），来源credibility为low，需警惕信息失真。\n\n【新兴趋势】\n\"词元（Token）\"作为AI服务的计量、定价、结算标尺，正在国家数据局政策、腾讯混元定价、长鑫LPDDR6首发等多个事件中反复出现，标志AI商业化计价单位进入标准化阶段。同时，\"算电协同\"与八大国家算力枢纽集中度超85%、国产存储LPDDR6全球首发量产、腾讯大模型127天完成追赶，揭示国产算力—存储—模型正同步加速闭环。\n\n【信息盲点】\nAMD在多条条目中作为相关标的被提及（推理算力、SK Hynix客户、FreeToken消费卡），但",
   "trend_spotting": "【新兴趋势】超大规模云厂自研芯片从计算单元向内存、网络、存储全栈扩散，谷歌与Marvell合作标志着定制硅片进入数据中心全栈替代阶段，传统芯片商尤其博通面临结构性挤压。\n\n【早期信号】DeepMind AI Co-Scientist已能自主规划实验、操作设备并撰写论文，Anthropic同步展示针对"
 }
