@@ -116,6 +116,58 @@
       "source_traceable": true,
       "why": "EPFL GaN-on-Si功率器件超结结构论文，宽禁带半导体+硅基集成方向有产业意义。",
       "queued_at": "2026-08-30T11:31:17Z"
+    },
+    {
+      "id": "efa40ed9fc93006a29f6250ef90c72b5e6558a10",
+      "title": "Qwen3.8-Flash-Next NVFP4 2xDGX Spark config: 50t/s decode, 2,900t/s prefill",
+      "url": "https://www.reddit.com/r/localllama/comments/1w2inlp/qwen38flashnext_nvfp4_2xdgx_spark_config_50ts",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-30T14:12:41Z",
+      "raw_summary": "After a couple of days of faffing around, here's my current config in case it helps anyone out. Some of this is also valuable for a single Spark. Benchmarks: Dual-Spark TP2, eager + MTP k=3, 262k context (warmed medians, exact tokenizer counts): ┌─────────┬──────────────────┬───────────────────┬─────────────────────────────────┐ │ Streams │ Decode aggregate │ Decode per-stream │ Prefill aggregate (10k prompts) │ ├─────────┼──────────────────┼───────────────────┼─────────────────────────────────┤ │ 1 │ 45.9 t/s │ 45.9 t/s │ 2,940 t/s │ ├─────────┼──────────────────┼───────────────────┼─────────────────────────────────┤ │ 4 │ 120.2 t/s │ 30.0 t/s │ 2,524 t/s │ ├─────────┼──────────────────┼───────────────────┼─────────────────────────────────┤ │ 8 │ 222.2 t/s │ 27.8 t/s │ 3,098 t/s │ ├─────────┼──────────────────┼───────────────────┼─────────────────────────────────┤ │ 13 │ 265.9 t/s │ 20.5 t/s │ 2,960 t/s │ └─────────┴──────────────────┴───────────────────┴─────────────────────────────────┘ Prefill vs prompt depth (single stream, exact tokens): ┌─────────────┬───────────┐ │ Prompt size │ Prefill │ ├─────────────┼───────────┤ │ 11k │ 2,875 t/s │ ├─────────────┼───────────┤ │ 100k │ 2,655 t/s │ ├─────────────┼───────────┤ │ 200k │ 2,463 t/s │ └─────────────┴───────────┘ AI slop below for you to read and paste into your own agent :) Stack vLLM PR #53896 (release/qwen38next branch) — NOT main; main doesn't have the model, and the recipe image's vLLM commit isn't in the public repo",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Qwen3.8-Flash-Next在双DGX Spark NVFP4 + MTP配置下50t/s decode、2900t/s prefill的具体benchmark与配置表，对边缘/小集群部署是高价值一手数据。",
+      "queued_at": "2026-08-30T15:28:42Z"
+    },
+    {
+      "id": "3822ffe9c6205bb0708c6b57b1ad50f068ebd183",
+      "title": "SpaceX starts in-house turbine blade manufacturing to boost gas-powered generator output for Elon's AI data centers — new manufacturing strategy cuts generator delays by 18 months",
+      "url": "https://www.tomshardware.com/tech-industry/data-centers/spacex-starts-in-house-turbine-blade-manufacturing-to-boost-gas-powered-generator-output-for-elons-ai-data-centers-new-manufacturing-strategy-cuts-generator-delays-by-18-months",
+      "source": "rss:tomshardware",
+      "published_at": "2026-08-30T14:49:50Z",
+      "raw_summary": "Turbine blades and vanes are among the most complicated turbine engine parts to build, with processes taking as long as 60 to 90 weeks. Because of this, Musk wants to bring their manufacturing in-house at SpaceX.",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "SpaceX自研涡轮叶片为AI数据中心供能，60-90周交期被压缩18个月，反映AI算力对供应链的倒逼，产业判断具体且有数字。",
+      "queued_at": "2026-08-30T15:28:42Z"
+    },
+    {
+      "id": "7b531fb1d351888f699f5cf1ffa299ecfa9e6fe4",
+      "title": "I fine-tuned a 0.8B local model for dictation cleanup. It matched a hosted frontier model on this narrow task",
+      "url": "https://www.reddit.com/r/localllama/comments/1w2elkb/i_finetuned_a_08b_local_model_for_dictation",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-30T11:03:04Z",
+      "raw_summary": "I built SpeakoFlow Mini, an Apache-2.0 fine-tune of Qwen3.5-0.8B for dictation cleanup. It is not a chat model or a general rewriter. It takes speech-to-text output, applies corrections the speaker actually made, and leaves everything else alone. That last part is harder than it sounds. General models often polish text that was already correct, but in dictation an unnecessary improvement is still a wrong edit. For example: Input: The deadline is Monday. Scratch that. The deadline is Wednesday. Output: The deadline is Wednesday. On my specialized English-only benchmark, SpeakoFlow Mini scored 70.7% and GPT-5.6 Luna scored 65.0%. Both used the same fixed short prompt, with reasoning disabled. The gap was +5.8 points, but the 95% interval was [-1.5, +12.9], so this is a statistical tie, not a win. That setup matters. It is the low-overhead configuration this model was trained for. With a longer prompt and a reasoning budget, Luna does better. It is also the better model for unusual cases outside the narrow patterns covered here. The claim is narrower. Under one fixed short prompt with no reasoning budget, a 0.8B model running locally matched a hosted frontier model on this task. The controlled comparison is against the untuned Qwen3.5-0.8B base. Fine-tuning moved the score from 47.3% to 70.7%, a gain of +23.4 points with a 95% interval of [+16.3, +30.3]. The second image shows that comparison. The Q8_0 build is 833 MB and runs fully offline. The Hugging Face card has the model f",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "0.8B模型微调做口述文本清理，在专有benchmark上匹配前沿模型，附数据集/方法/对比细节，是可复现的工程实践报告。",
+      "queued_at": "2026-08-30T15:28:42Z"
+    },
+    {
+      "id": "e1f11b48105b3a0c05f3296a5966c35bb650c63c",
+      "title": "{INTRESTING PAPER BASED ON HBF}2607.10186] FlashAccel: Leveraging High-Bandwidth Flash (HBF) for High-Throughput LLM Inference",
+      "url": "https://www.reddit.com/r/localllama/comments/1w2gmn5/intresting_paper_based_on_hbf260710186_flashaccel",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-30T12:45:10Z",
+      "raw_summary": "HBF gives 8x - 16x more capacity than HBM at same cost, and with bandwidth till 3 tb/s. &#32; submitted by &#32; /u/9r4n4y [link] &#32; [comments]",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "指向 arXiv 2607.10186 论文，提出用高带宽闪存替代 HBM 做 LLM 推理的具体容量/带宽数据，值得读原文看其方法与实验边界。",
+      "queued_at": "2026-08-30T15:28:42Z"
     }
   ],
   "digest_last_date": "2026-08-30"
