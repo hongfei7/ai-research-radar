@@ -168,6 +168,19 @@
       "source_traceable": true,
       "why": "指向 arXiv 2607.10186 论文，提出用高带宽闪存替代 HBM 做 LLM 推理的具体容量/带宽数据，值得读原文看其方法与实验边界。",
       "queued_at": "2026-08-30T15:28:42Z"
+    },
+    {
+      "id": "a08708b66fd6e25e0d77f205fe3bc8e6697d27a2",
+      "title": "Sources: OpenAI bought tens of thousands of Macs for RL, Anthropic rents them, Nvidia sees Apple as its main local AI rival as Macs gain traction with AI devs (Aaron Tilley/The Information)",
+      "url": "https://www.techmeme.com/260830/p8#a260830p8",
+      "source": "rss:techmeme",
+      "published_at": "2026-08-30T16:20:02Z",
+      "raw_summary": "Aaron Tilley / The Information: Sources: OpenAI bought tens of thousands of Macs for RL, Anthropic rents them, Nvidia sees Apple as its main local AI rival as Macs gain traction with AI devs&nbsp; &mdash;&nbsp; The hottest products at Apple right now are not the iPhone, the iPad or a buzzy new show on the company's streaming service.",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "OpenAI/Anthropic/Nvidia对Apple Silicon在RL与本地AI推理上的战略态度，是端侧AI与算力竞争格局的实质信号。",
+      "queued_at": "2026-08-30T18:46:00Z"
     }
   ],
   "digest_last_date": "2026-08-30"
