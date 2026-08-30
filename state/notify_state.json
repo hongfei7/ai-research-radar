@@ -198,7 +198,10 @@
       }
     ]
   },
-  "morning_fallback": null,
+  "morning_fallback": {
+    "date": "2026-08-30",
+    "attempts": 1
+  },
   "blindspot_ledger": [
     {
       "key": "Anthropic|OpenAI|博通|台积电|微软|谷歌",

@@ -311,6 +311,45 @@
       "source_traceable": false,
       "why": "拆解金融模型benchmark卡片的方法论，揭示benchmark本身的设计偏差与可比性问题，对评估研究有方法论价值。",
       "queued_at": "2026-08-29T22:30:20Z"
+    },
+    {
+      "id": "260b60ba33166bafb70b78b5547d08ef98bb520a",
+      "title": "Introducing Hy4 Preview",
+      "url": "https://simonwillison.net/2026/aug/29/hy4",
+      "source": "rss:simonwillison",
+      "published_at": "2026-08-29T23:53:13Z",
+      "raw_summary": "Introducing Hy4 Preview New open weight text input (no vision) LLM from Chinese company Tencent today: 770B total parameters, 49B active parameters, 1M token context window, 1.56TB on Hugging Face. This is a big size increase from their previous Hy3 in July, which was 295B, 21B active, 256,000 context, 598GB. I recently started using model chat templates to better understand their capabilities. Here's Hy4's chat_template.jinja on Hugging Face, which includes this section: {%- if not reasoning_effort is defined %} {%- set reasoning_effort = 'high' %} {%- elif reasoning_effort not in ['high', 'no_think'] %} {%- if reasoning_effort is none %} {{- raise_exception('reasoning_effort error : None, should be no_think/high') }} {%- else %} {{- raise_exception('reasoning_effort error : ' + reasoning_effort + ', should be no_think/high') }} {%- endif %} {%- endif %} So it looks like there are just two reasoning effort levels: \"high\" (the default) and \"no_think\" (reason by disabled). I tried my \"Generate an SVG of a pelican riding a bicycle\" prompt with the default high reasoning via OpenRouter and got this: Quoting the reasoning trace: [...] Let's maybe add a helmet? It could improve riding theme, but may obscure head. Maybe a small cycling cap or helmet? The user didn't ask; can add red helmet? Might be cute. But pelican with big beak; a helmet might obscure. Better maybe no. Maybe add sunglasses? no. Maybe add water? no. It's interesting how the reasoning trace uses slightly truncated",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "腾讯混元Hy4预览版发布摘要：770B总参/49B激活、1M上下文，并附其chat_template细节，可直接对照HF仓库评估其架构与推理行为。",
+      "queued_at": "2026-08-30T00:39:04Z"
+    },
+    {
+      "id": "42e3e751d86de9aada0db9e9abe43445b4078bcf",
+      "title": "Nemotron-3.5-Lightning at 11.77 GiB, a 16 GB option for a model that didn't have one",
+      "url": "https://www.reddit.com/r/localllama/comments/1w21d86/nemotron35lightning_at_1177_gib_a_16_gb_option",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-29T23:27:11Z",
+      "raw_summary": "TL;DR: Every public low-bit GGUF of this model is secretly ~4.70 bpw. Shim the rows to 256 and it becomes a real 3.07 bpw / 11.77 GiB file that runs 262K context on 16GB. Needs patched llama.cpp — not LM Studio or Ollama. In the AtomicChat HuggingFace repo it says &quot;There is currently no good 16 GB option for this model, from anyone.&quot; That was true, I wanted to figure out why, and it's a quantizer problem, not a model problem. k-quants and i-quants need the row width to divide by 256. Nemotron's don't, so about 99% of its parameters can't legally take one. llama-quantize swaps in a 32 block type instead and keeps the filename you asked for, which is why every low bit quant of this model comes out around 4.70 bpw regardless of its label. If you saw my census post yesterday, same bug, Nemotron is just the worst case I found. Smallest usable build anyone shipped was ~18 GiB. ShimQuant shims each affected row out to the next multiple of 256 so the low bit types actually apply, then slices the activations back at inference. That gets it to 3.07 bpw, 11.77 GiB, 262,144 context on a 16 GB card. So far I've measured it two ways, KL divergence against a Q8_0 reference and HumanEval. Against stock IQ2_M it's 6.2 GiB smaller and less divergent. On HumanEval it ties AtomicChat's 19.65 GB build at 91.5% while being 7 GB smaller. More benchmarks are running, I'll update the card as they land. It does not beat stock IQ3_XXS on divergence. That one is 6.2 GiB bigger and three times ",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "深入剖析GGUF低比特量化在Nemotron-3.5上为何失效（行宽非256倍数导致k-quant/i-quant不合法），并给出3.07bpw/11.77GiB的自制方案与llama.cpp补丁路径。",
+      "queued_at": "2026-08-30T00:39:04Z"
+    },
+    {
+      "id": "4ed6972ad2f9abc17b1c0d56f1a3d0139c546571",
+      "title": "Humaneval benchmark for Deepseek V4 Flash 0731 vs GLM5.3 Flash on 2x DGX Spark setup",
+      "url": "https://www.reddit.com/r/localllama/comments/1w215qm/humaneval_benchmark_for_deepseek_v4_flash_0731_vs",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-29T23:18:13Z",
+      "raw_summary": "I have a 2 DGX Spark setup recently and I have been happily running Deepseek V4 Flash 0731. Since the release of GLM5.3 Flash and Qwen 3.8 Flash Next this week, a lot of folks are still waiting to see what model to run given their own hardware situations. I am very interested in running a GLM model locally and looks like nvfp4 would be a good option for my setup, but I have been hearing a lot of conflicting opinions (mostly negative) about GLM5.3 Flash on nvfp4 quant which gave me pause. So I decided to do a simple benchmark myself and hopefully this is useful for folks with the same setup: Deepseek V4 Flash 0731 recipe : official checkpoint, fp8 kv, 1M context, 4 concurrent streams GLM 5.3 Flash recipe : NVFP4 quant &amp; Dflash2 drafter, fp8_e4m3 kv, 256k context, 6C Model Thinking Mode HumanEval Pass@1 (Base) HumanEval+ (Adversarial Edge Cases) Total Benchmark Run Time Local Stream Speed GLM-5.3-Flash NVFP4 Thinking Enabled (high) 97.0% (159 / 164) 92.1% (151 / 164) 20m 52s ~50 tok/s (DFlash2) DeepSeek-V4-Flash-0731 Thinking Enabled (high) 94.5% (155 / 164) 88.4% (145 / 164) 38m 16s ~70 tok/s (MTP-5) GLM-5.3-Flash NVFP4 Direct Zero-Shot (off) 93.3% (153 / 164) 89.6% (147 / 164) 23m 32s ~50 tok/s (DFlash2) DeepSeek-V4-Flash-0731 Direct Zero-Shot (off) 92.7% (152 / 164) 87.8% (144 / 164) 14m 52s ~70 tok/s (MTP-5) So raw numbers tell you GLM 5.3f is a decent upgrade over DSv4f 0731 especially with thinking enabled. Unsloth saying their Q4 quant has around 92% accuracy but loo",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "作者用2×DGX Spark实测Deepseek V4 Flash 0731与GLM5.3 Flash在HumanEval上的对比，附硬件/量化设置，对本地部署选型有直接参考价值。",
+      "queued_at": "2026-08-30T00:39:04Z"
     }
   ],
   "digest_last_date": "2026-08-29"
