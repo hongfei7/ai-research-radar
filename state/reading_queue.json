@@ -1,4 +1,122 @@
 {
-  "candidates": [],
+  "candidates": [
+    {
+      "id": "36b11de73d65b10085577f62d443983c149b035f",
+      "title": "OpenAI 芯片实测跑分揭晓，「为模型造芯片」时代来了",
+      "url": "http://www.geekpark.net/news/369555",
+      "source": "rss:geekpark",
+      "published_at": "2026-08-30T10:53:09Z",
+      "raw_summary": "9 个月之后，OpenAI 的首款芯片成绩单终于揭晓了。 8 月 25 日，在 Hot Chips 大会上，OpenAI 硬件负责人 Richard Ho 站上讲台，公布了 Jalape&ntilde;o 芯片的第一份公开跑分。 在 SemiAnalysis 的 InferenceX 基准测试中，这颗 OpenAI 与博通联合打造的推理芯片，在「每用户 token 数」和「每千瓦吞吐量」两项关键指标上，双双超过了当下市面上最先进的推理处理器英伟达 Blackwell 系统。 具体而言，OpenAI 用 SemiAnalysis 的公开基准工具 InferenceX，在 GPT-OSS 120B、DeepSeek R1 670B 和 Kimi K2.5 1T 三款公开大模型上，与英伟达对测。结果显示，三款模型上，Jalape&ntilde;o 的峰值每瓦吞吐量是英伟达系统的 1.5 至 1.9 倍，用同样电量 Jalape&ntilde;o 能多干近一倍的活。 三款模型峰值每千瓦吞吐对比｜图片来源：OpenAI 低延迟场景差距更大，跑 DeepSeek R1 时，单用户生成速度最高约 700 token/s，而英伟达 GB300 只有约 169 token/秒。换算下来，Jalape&ntilde;o 的速度是后者的 4.9 倍，意味着用户等待时间缩短了将近四分之三。 Jalape&ntilde;o 与英伟达 GB300 运行 DeepSeek R1 的吞吐-延迟曲线对比｜图片来源：OpenAI 「Jalape&ntilde;o 能够在单位功耗下处理更多 AI 任务，同时还能更快地返回响应。Jalape&ntilde;o 采用单一架构能完成更高的吞吐量和更低的延迟，而现有硬件系统通常需要在两者之间做出权衡。」OpenAI 在官方博客中这样总结。按计划，这颗芯片 2026 年底才会以「极小规模」部署，真正上量要等到 2027 年。 但这款芯片的独特之处，不只是跑得更强。它是头部模型厂商自研芯片落地的第一步，是一颗专为模型而生的芯片。过去二十年，行业的默认秩序是「为芯片适配模型」，英伟达发布什么，大家适配什么；而这一次，顺序倒了过来。这颗为模型而生的芯片，究竟有何不同？ 一、AI 造芯，只需 9 个月 Jalape&ntilde;o 主要由 OpenAI 负责架构设计，博通参与实现、网络和连接，Celestica 负责板卡与机架集成。 目前，该芯片设定在额定功耗 700W，搭载 HBM4，单封装内存带宽约 15.4TB/s，配独立 I/O 芯片处理机架内外通信；B0 版的 MXFP4 理论算力为 13.4 PFLOPS。 从初始设计到完成流片，Jalape&ntilde;o 只用了 9 个月。如果从 2025 年 10 月 OpenAI 与博通官宣合作算起，到今天拿出完整的第三方见证跑分，满打满算也不到一年。 而芯片行业的正常节奏是什么？一颗高性能 ASIC 从架构定义、RTL 设计、验证、物理实现到流片，常规周期是 18 到 24 个月起步。这个周期几十年来压缩得极其缓慢，它往往受制于工程师读懂需求、写出代码、跑完验证的速度。 谷歌 TPU、亚马逊 Trainium 第一代用两年才走完所有流程。OpenAI 作为一个从未造过芯片的公司，第一次出手就把周期砍掉了一半以上。 飞速造芯的背后，是 AI 在给造芯这件事本身加速。据介绍，在 GPT-OSS 的部分 attention 和 MoE 模块中，AI 生成的 kernel 比此前人工专家编写的版本快 ",
+      "score": 9,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Hot Chips公开的OpenAI Jalapeño芯片跑分详解，给出与Blackwell在多模型上的具体对比数据，是稀缺的芯片一手信息。",
+      "queued_at": "2026-08-30T11:31:17Z"
+    },
+    {
+      "id": "713a1d2b413f9f1d33ded737afc056d840e6434e",
+      "title": "Xcena and Samsung's Near Memory Compute CXL Device",
+      "url": "https://chipsandcheese.com/p/hot-chips-2026-xcena-and-samsungs",
+      "source": "hackernews",
+      "published_at": "2026-08-30T07:35:41Z",
+      "raw_summary": "Xcena and Samsung's Near Memory Compute CXL Device",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Xcena与三星的CXL近内存计算设备，触及存算一体/内存语义层关键方向，值得了解产品形态与厂商路线",
+      "queued_at": "2026-08-30T11:31:17Z"
+    },
+    {
+      "id": "7783e96c455109a21a42dcb121b2f2ee6b0b6b29",
+      "title": "沐曦股份：上半年营收超过13亿元并实现扭亏，GPU产品出货量提升带动业绩持续增长",
+      "url": "https://36kr.com/newsflashes/3961845303065993?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-08-30T09:57:27Z",
+      "raw_summary": "36氪获悉，8月30日，沐曦股份披露2026年半年度报告。上半年公司实现营业收入13.24亿元，同比增长44.67%;归母净利润6.12亿元，实现扭亏。分季度看，二季度实现收入7.62亿元，单季扣非归母净利润0.54亿元,环比亦由亏转盈。上半年毛利率57.2%，同比提升1.1个百分点。公告称，随着公司产品及服务持续获得下游客户的广泛认可与采购，GPU产品出货量显著提升，带动收入规模较上年同期实现显著增加。",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "沐曦股份半年报：营收13.24亿、扭亏6.12亿、毛利率57.2%，国内GPU出货量提升，国产AI芯片商业化关键节点",
+      "queued_at": "2026-08-30T11:31:17Z"
+    },
+    {
+      "id": "93d138229c8db7acad4f1237a6e1a6a5c8da89c8",
+      "title": "Hybrid HBM-HBF Architecture in LLM Inference (University of Oxford)",
+      "url": "https://semiengineering.com/hybrid-hbm-hbf-architecture-in-llm-inference-university-of-oxford",
+      "source": "rss:semiengineering",
+      "published_at": "2026-08-30T07:06:37Z",
+      "raw_summary": "Researchers at the University of Oxford published a technical paper titled “Hardware-Managed Heterogeneous High-Bandwidth Memory and Flash in LLM Inference Systems.” Abstract Excerpt: “ High-Bandwidth Flash (HBF) offers a denser alternative, providing 16x more capacity per stack at comparable bandwidth. In this work, we show that while replacing HBM with HBF can address the capacity... &#187; read more The post Hybrid HBM-HBF Architecture in LLM Inference (University of Oxford) appeared first on Semiconductor Engineering.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "牛津HBM-HBF混合架构论文，HBF替代HBM的容量优势(16x)对LLM推理内存层级有实质参考价值。",
+      "queued_at": "2026-08-30T11:31:17Z"
+    },
+    {
+      "id": "4d91a79699fae63a5782b282ae5aab3db7534265",
+      "title": "Cycle-Level Simulator for Distributed GPUs For AI Workloads (Purdue)",
+      "url": "https://semiengineering.com/cycle-level-simulator-for-distributed-gpus-for-ai-workloads-purdue",
+      "source": "rss:semiengineering",
+      "published_at": "2026-08-30T07:02:05Z",
+      "raw_summary": "Researchers from Purdue University published a technical paper titled “Architecting the Next Generation of Asynchronous, Distributed GPUs for the AI Era.” Abstract Excerpt: The paper presents a “cycle-level simulation framework” for modern GPU generations including Ampere, Hopper, and Blackwell. It also reports validation against physical silicon, including a “99% Pearson correlation coefficient” on H100 GPU... &#187; read more The post Cycle-Level Simulator for Distributed GPUs For AI Workloads (Purdue) appeared first on Semiconductor Engineering.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Purdue分布式GPU周期级仿真器，覆盖Ampere/Hopper/Blackwell并对H100有99%验证，对架构研究工具链有直接价值。",
+      "queued_at": "2026-08-30T11:31:17Z"
+    },
+    {
+      "id": "c563de0edd4ce06cdf9702aee70ef565b4f8aa0e",
+      "title": "AI agents have no sense of time and are not aware of it",
+      "url": "https://the-decoder.com/ai-agents-have-no-sense-of-time-and-are-not-aware-of-it",
+      "source": "rss:the-decoder",
+      "published_at": "2026-08-30T10:41:36Z",
+      "raw_summary": "AI coding assistants like Claude Code and Codex have no sense of time, according to a new study. Both systematically overestimate how long tasks will take. Codex is off by as much as ten times the actual duration. They also rate their own work about 20 percentage points too high. For long, autonomous tasks, that creates a real problem with oversight. The article AI agents have no sense of time and are not aware of it appeared first on The Decoder.",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "AI agent对任务时长与自身表现的系统性高估，Codex偏差达10倍，对agent可观测性研究有参考价值",
+      "queued_at": "2026-08-30T11:31:17Z"
+    },
+    {
+      "id": "0620f79b66d94a0dbe7116e021d6a182243e507f",
+      "title": "Prompt Injection in Claude Code Opus 5 Auto Mode",
+      "url": "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode",
+      "source": "rss:lobsters",
+      "published_at": "2026-08-30T05:36:51Z",
+      "raw_summary": "",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Claude Code Opus 4.5 auto mode下prompt injection实际案例，对agent安全与工程化部署有直接参考意义",
+      "queued_at": "2026-08-30T11:31:17Z"
+    },
+    {
+      "id": "ddbdd3cdfa6acc94cad0c4e7cf7b2ee9dd9927f1",
+      "title": "M3D 6T SRAM With BEOL Pass-Gates at 2nm (Georgia Tech, Synopsys)",
+      "url": "https://semiengineering.com/m3d-6t-sram-with-beol-pass-gates-at-2nm-georgia-tech-synopsys",
+      "source": "rss:semiengineering",
+      "published_at": "2026-08-30T07:04:34Z",
+      "raw_summary": "Researchers from Georgia Institute of Technology and Synopsys published a technical paper titled “A Process-Aware Hybrid Si/IGO Monolithic-3D 6T SRAM with BEOL Pass-Gates for the 2nm Node.” Abstract Excerpt: The paper proposes “a monolithic-3D (M3D) 6T SRAM at the 2nm node” that integrates BEOL IGO pass-gates with an all-silicon nanosheet latch, buried power rails, and... &#187; read more The post M3D 6T SRAM With BEOL Pass-Gates at 2nm (Georgia Tech, Synopsys) appeared first on Semiconductor Engineering.",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Georgia Tech+Synopsys 2nm M3D SRAM论文，BEOL pass-gates+buried power rails是前沿存储器件方向。",
+      "queued_at": "2026-08-30T11:31:17Z"
+    },
+    {
+      "id": "edff72b6426df259ec2a7231ba02037d41186087",
+      "title": "Intrinsic Polarization Superjunctions Boost GaN-On-Silicon Power Devices (EPFL)",
+      "url": "https://semiengineering.com/intrinsic-polarization-superjunctions-boost-gan-on-silicon-power-devices-epfl",
+      "source": "rss:semiengineering",
+      "published_at": "2026-08-30T07:03:28Z",
+      "raw_summary": "Researchers from École Polytechnique Fédérale de Lausanne (EPFL) published a technical paper titled “Intrinsic polarization superjunctions in III-nitride heterostructures for efficient power electronics.” Abstract Excerpt: &#8220;III-nitride semiconductors combine a wide bandgap with low sheet resistance and, thus, can be used for efficient power electronics. Their lateral architecture also enables monolithic integration on cost-effective silicon. However,... &#187; read more The post Intrinsic Polarization Superjunctions Boost GaN-On-Silicon Power Devices (EPFL) appeared first on Semiconductor Engineering.",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "EPFL GaN-on-Si功率器件超结结构论文，宽禁带半导体+硅基集成方向有产业意义。",
+      "queued_at": "2026-08-30T11:31:17Z"
+    }
+  ],
   "digest_last_date": "2026-08-30"
 }

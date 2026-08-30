@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-30T05:55:23Z",
-  "text": "截至 2026-08-30 13:55 HKT，本轮新增：华尔街日报称中国机器人厂商深度依赖英伟达芯片与软件，其\"物理AI\"业务年营收约100亿美元；a16z机器时代基金完成11亿美元募资，投向芯片与机器人等硬件；OpenAI拟终止向Cursor提供模型服务，马斯克已公开回应；八大科技巨头AI万亿投注版图分析引发关注。",
-  "since": "2026-08-30T05:55:23Z",
-  "active_event_count": 5,
+  "generated_at": "2026-08-30T11:34:57Z",
+  "text": "当前共有 12 个活跃事件。要点包括: Industry insiders say Chinese robot makers currently rely on Nvidia silicon and software; Nvidia's physical AI business generates ~$10B in annual revenue (Raffaele Huang/Wall Street Journal); OpenAI 芯片实测跑分揭晓，「为模型造芯片」时代来了; Sony and Warner sue Anthropic over \"one of the largest and most blatant ongoing thefts of intellectual property in history\"; 谁在给 AI 付账单：八大科技巨头的万亿投注版图; OpenAI将终止向Cursor提供模型服务，马斯克回应。",
+  "since": "2026-08-30T11:34:57Z",
+  "active_event_count": 12,
   "key_themes": [
+    "ai_monetization",
     "compute_demand",
     "model_capability",
-    "ai_monetization",
-    "edge_ai",
-    "datacenter_power"
+    "datacenter_power",
+    "chip_supply"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nTMTPost将八大巨头划分为\"金主/铲子/入口\"三类，但同一批巨头同时自研芯片和大模型，正从英伟达/AMD的大客户变成竞争对手——角色边界正在模糊。此外，WSJ报道中国机器人厂商深度绑定英伟达算力，而a16z同期大举加码硬件投资，资本流向与产业链依附格局之间存在张力：是强化英伟达护城河，还是培育替代势力？OpenAI切断Cursor服务与a16z重投硬件形成方向性背离，平台层收权与基础设施层扩张同时发生。\n\n【新兴趋势】\n\"物理AI/具身智能\"在WSJ（英伟达百亿美元营收）和a16z（机器人/家用AI设备投资）两条线索中反复出现，正从概念走向营收兑现。一级市场硬件VC回暖信号明确（a16z机器时代基金11亿美元单期体量），AI投资重心从纯软件向\"芯片+内存+网络+整机\"全栈硬件迁移。\n\n【信息盲点】\n本轮对HBM/存储链（SK海力士、三星、美光）完全缺位，HBM紧缺程度与AI需求最直接挂钩却被忽略；能源侧（核电、燃气轮机、电网设备）和台积电/ASML制造端也未出现。苹果在\"八大巨头\"叙事中被遗漏，Meta资本开支指引同样缺席。中国侧标的仅有英伟达被提及，寒武纪、海光、景嘉微等仅在so_what中被点名而无原始报道支撑。\n\n【跨标的联动**\n英伟达对中国机器人产业链是上游算力垄断者，存在出口管制升级双向风险；微软/谷歌与英伟达/AMD既是最大采购",
-  "trend_spotting": "腾讯Hy4 Preview在开源大模型赛道呈现出三个值得关注的边际变化：\n\n一、MoE规模化加速。770B总参/49B激活相对今年7月Hy3（295B/21B），总参数扩张2.6倍、激活参数2.3倍，节奏快于多数美国开源模型迭代速度，标志中国头部互联网公司在参数军备竞赛中进入\"半年一代\"节奏。\n\n二、长上下文作为差异化锚点。上下文从25.6万token跃升至100万token，是同期Llama等主流开源模型（12.8万-20万）的5-8倍。结合纯文本路线，腾讯选择避开视觉多模态混战，主攻长文档/代码/企业知识库场景，与阿里Qwen、百度文心的多模态路线形成产品分层。\n\n三、推理成本拐点信号。\"no_think\"档位的引入暗示业界开始正视推理强度可配置化的需求，未来推理算力消耗将更依赖任务路由而非模型自身固定深度，这一架构选择对推理芯片的弹性供给提出新要求。\n\n盲点：1.56TB权重文件的分发、加载、量化部署成本被低估，若进入腾讯云对外服务，对存储与网络基础设施的拉动可能超过模型本身。"
+  "cross_analysis": "【核心矛盾】\n国产GPU厂商出现显著分化：沐曦股份H1营收+44.67%、毛利率57.2%且实现扣非扭亏，被描述为\"出货量提升带动业绩\"；而天数智芯虽也\"盈利\"，但毛利率从50.1%骤降至17.2%，盈利来自非主营。两家来源（36kr vs tmtpost）描述的\"国产替代景气\"叙事存在质量差异，反映板块内部并非普涨。另一争议点是OpenAI Jalapeño跑分（来源为geekpark转述Hot Chips官方材料，由OpenAI主导），对英伟达形成强负面信号，但跑分基于SemiAnalysis自有基准且由利益方发布，需独立验证。\n\n【新兴趋势】\n三条线索在多源反复出现：①**自研推理芯片**对英伟达的分流预期（OpenAI Jalapeño实测数据+Meta数据中心机器人暗示算力定制化方向）；②**AI版权与合规风险**升级（Anthropic遭索尼/华纳起诉叠加此前15亿美元和解）；③**数据中心基础设施侧**——液冷订单排至年底、Meta试点机器人运维，两条均指向AI算力扩张正催生散热与运维自动化新需求。\n\n【信息盲点】\n多家关键标的在本轮缺席：Google（TPU/Gemini进展）、AMD（MI300/MI400）、台积电/海力士/美光（虽在so_what中提及HBM4与CoWoS，但无独立条目）、微软（GitHub Copilot）、Oracle、Dell/超微（液冷服务器配套）。此外，Anthropic连续两条负面（版权诉讼+Claude Code限额下调）后",
+  "trend_spotting": "【新兴趋势】OpenAI Jalapeño推理芯片实现1.5–1.9倍每瓦吞吐/4.9倍单用户速度(700 vs GB300的169 token/s)，2026年底试点+2027放量，标志\"模型厂自研芯片\"正式落地，博通联合设计+海力士HBM4/台积电CoWoS链确定性增强。\n\n【早期信号】Meta在数据中心用机器人替代人工技师，浸没式液冷方舱完成四种冷却液兼容性测试——前者若验证将形成\"AI+机器人\"运维新需求池，后者意味着液冷从冷板向浸没迭代加速。\n\n【市场"
 }
