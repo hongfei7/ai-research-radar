@@ -194,6 +194,58 @@
       "source_traceable": true,
       "why": "NPR对主流AI聊天机器人和AI Overview在15条俄中伊虚假信息上回应的系统测评，给出可核查数据，对AI安全与对齐研究有参考价值。",
       "queued_at": "2026-08-30T21:51:13Z"
+    },
+    {
+      "id": "49934062aac93d3dcea6496081c1e1fc8ee87a17",
+      "title": "Understanding ChatGPT Work",
+      "url": "https://simonwillison.net/2026/aug/30/understanding-chatgpt-work",
+      "source": "rss:simonwillison",
+      "published_at": "2026-08-30T23:59:47Z",
+      "raw_summary": "OpenAI announced ChatGPT Work on July 9th, and have been furiously iterating on it ever since. It is an extraordinarily confusing and very powerful product. Here's what I've figured out about it so far. ChatGPT Work is actually two products The more interesting version of ChatGPT Work is the one that runs in the cloud. This can be accessed via chatgpt.com or through the ChatGPT mobile apps. Let's call it Work Cloud. If you install the ChatGPT desktop app - the app that used to be called Codex - you gain access to a thing called ChatGPT Work that can access files and run programs directly on your computer. Let's call that one Work Local. This one feels more like regular Codex re-skinned to be less intimidating to non-software-developers. For the rest of this article I'm going to talk exclusively about Work Cloud. Work is for paid subscribers only Right now, ChatGPT Work (in both flavors) is available only to $20/month and up subscribers. Free users and $8/month Go users do not have access. Work has features that aren't available in Chat The interface for accessing Work is a tab selector, which presents it as an alternative to Chat: The obvious question is when should I use Chat, and when should I use Work? OpenAI's official answer to that question is: Use Chat when you want an answer, explanation, brainstorm, or short draft. Use ChatGPT Work when you want ChatGPT to complete a task with a clear outcome, such as a brief, deck, analysis, recurring update, workflow, or file you c",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Simon Willison对ChatGPT Work（云端+桌面双形态）的拆解，含具体能力边界和使用方式，是少有的产品深度解析",
+      "queued_at": "2026-08-31T00:17:12Z"
+    },
+    {
+      "id": "67c66324dd32fcac9dbb8790b0eb3b7ad533d125",
+      "title": "Parallel O(sqrt n) Overhead LSD Radix Sort",
+      "url": "https://arxiv.org/abs/2607.05302",
+      "source": "rss:lobsters",
+      "published_at": "2026-08-30T21:57:28Z",
+      "raw_summary": "",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "O(sqrt n)并行LSD基数排序是经典算法问题的实质推进，摘要虽空但标题已指向有论文支撑的结果",
+      "queued_at": "2026-08-31T00:17:12Z"
+    },
+    {
+      "id": "f49ce602e812828829099a58ed1ee596dcd887b0",
+      "title": "We used HFlow to evaluate the latest open weights VLMs for processing egocentric data",
+      "url": "https://www.reddit.com/r/localllama/comments/1w2r6v8/we_used_hflow_to_evaluate_the_latest_open_weights",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-30T19:40:15Z",
+      "raw_summary": "We used HFlow to evaluate the latest open weights VLMs for processing egocentric data. This was based on Build AI's Egocentric-10k evaluation, which used Gemini 2.5 Flash to measure hand visibility and active manipulation. We kept the same prompts and the same dataset, only varying the model. How much each model agreed with the original results: Gemini 2.5 Flash: 91.65% (baseline) GLM 5.3 Flash: 91.00% Gemma 4 26B-A4B: 90.87% Qwen 3.8 27B: 90.79% Inkling Small: 85.21% Gemma was the standout. Its results were on par with Gemini while being 19x cheaper. Both Gemma and Qwen models are practical to self-host, enabling private processing without data egress. This suggests modern open weights VLMs are becoming good enough for large-scale egocentric data processing. The main differentiators are increasingly cost, throughput, output reliability, and ease of self-hosting. If you're optimizing multimodal processing for egocentric data, you can run this evaluation yourself with any prompt and model using Hflow. https://github.com/Hebbian-Robotics/hflow git clone https://github.com/Hebbian-Robotics/hflow.git cd hflow/examples/build_ai_evaluation &#32; submitted by &#32; /u/kuaythrone [link] &#32; [comments]",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "用HFlow对开源VLM做egocentric benchmark，给出与Gemini 2.5 Flash的agreement百分比，含Gemma性价比数据。",
+      "queued_at": "2026-08-31T00:17:12Z"
+    },
+    {
+      "id": "062467ab2dfa3a0e872daa0a090254a29068993d",
+      "title": "Qwen3.8-Flash-Next turns 4xR9700 into a local AI powerhouse! 120 t/s TG and 12k t/s PP single request with optimized vLLM",
+      "url": "https://www.reddit.com/r/localllama/comments/1w2my8q/qwen38flashnext_turns_4xr9700_into_a_local_ai",
+      "source": "reddit:localllama",
+      "published_at": "2026-08-30T17:00:57Z",
+      "raw_summary": "If you own 4xR9700 and were waiting for the model to make them shine, then I have some good news for you! It's running at 80-120 tokens/second for generation and 12k token/second prefill for a single request, using tcclaviger's MXFP4-FP8 quant and custom vLLM image docker.io/tcclaviger/vllm:DevQwenNextFlash optimized for R9700. Total context (shared across all parallel requests) in this setup is 700k tokens. Here is the full command: podman run --rm -it \\ --init \\ --network host \\ -v /models:/models:ro \\ -v ~/.vllm-cache:/cache \\ -e VLLM_PLE_CPU_OFFLOAD=1 \\ -e VLLM_ROCM_USE_AITER=0 \\ -e ROCR_VISIBLE_DEVICES=0,1,2,3 \\ -e VLLM_CACHE_ROOT=/cache/vllm \\ -e TORCHINDUCTOR_CACHE_DIR=/cache/inductor \\ -e TRITON_CACHE_DIR=/cache/triton \\ --device /dev/kfd \\ --device /dev/dri \\ --group-add keep-groups \\ --annotation run.oci.keep_original_groups=1 \\ --security-opt label=disable \\ --security-opt seccomp=unconfined \\ --shm-size 8g \\ docker.io/tcclaviger/vllm:DevQwenNextFlash \\ /models/tcclaviger/Qwen3.8-Flash-Next-MXFP4-FP8 \\ --served-model-name Qwen3.8-Flash-Next \\ --tensor-parallel-size 4 \\ --reasoning-parser qwen3 \\ --tool-call-parser qwen3_coder \\ --enable-auto-tool-choice \\ --max-num-seqs 16 \\ --enable-prefix-caching \\ --enable-chunked-prefill \\ --kv-cache-dtype fp8 \\ --max-num-batched-tokens 4096 \\ --gpu-memory-utilization 0.96 \\ --mm-processor-cache-gb 4.0 \\ --override-generation-config '{&quot;max_tokens&quot;: 65536, &quot;temperature&quot;: 1.0, &quot;top_p&quot;: 0.95, &quot;to",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "4xR9700跑Qwen3.8-Flash-Next的具体token/s和MXFP4-FP8量化、定制vLLM镜像可复现，工程价值较高。",
+      "queued_at": "2026-08-31T00:17:12Z"
     }
   ],
   "digest_last_date": "2026-08-30"

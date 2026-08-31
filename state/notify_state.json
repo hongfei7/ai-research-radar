@@ -166,7 +166,10 @@
       }
     ]
   },
-  "morning_fallback": null,
+  "morning_fallback": {
+    "date": "2026-08-31",
+    "attempts": 1
+  },
   "blindspot_ledger": [
     {
       "key": "ASML|博通|台积电|寒武纪|微软|景嘉微|苹果|超微电脑",
