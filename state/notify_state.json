@@ -4,40 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "英伟达"
-      ],
-      "features": [
-        "10b",
-        "ai",
-        "and",
-        "annual",
-        "business",
-        "chinese",
-        "currently",
-        "generates",
-        "huang",
-        "in",
-        "industry",
-        "insiders",
-        "journal",
-        "makers",
-        "nvidia",
-        "on",
-        "physical",
-        "raffaele",
-        "rely",
-        "revenue",
-        "robot",
-        "say",
-        "silicon",
-        "software",
-        "street",
-        "wall"
-      ],
-      "sent_at": "2026-08-30T05:55:43Z"
-    },
-    {
-      "tickers": [
         "OpenAI",
         "博通",
         "英伟达"
@@ -127,6 +93,62 @@
         "with"
       ],
       "sent_at": "2026-08-30T18:47:59Z"
+    },
+    {
+      "tickers": [
+        "OpenAI"
+      ],
+      "features": [
+        "demo",
+        "gpt-6",
+        "刷屏",
+        "发布",
+        "周四",
+        "四发",
+        "在即",
+        "屏周",
+        "布在",
+        "测刷",
+        "灰测"
+      ],
+      "sent_at": "2026-08-31T06:02:39Z"
+    },
+    {
+      "tickers": [
+        "Intel",
+        "英伟达"
+      ],
+      "features": [
+        "alleging",
+        "an",
+        "and",
+        "as",
+        "asia",
+        "authorities",
+        "cheng",
+        "china-made",
+        "illegally",
+        "in",
+        "intel",
+        "it",
+        "labeled",
+        "made",
+        "maker",
+        "nikkei",
+        "nvidia",
+        "of",
+        "office",
+        "parts",
+        "pcb",
+        "raided",
+        "supplier",
+        "taiwan",
+        "taiwanese",
+        "the",
+        "ting-fang",
+        "unimicron"
+      ],
+      "sent_at": "2026-08-31T06:02:55Z"
     }
   ],
   "last_report": {
@@ -168,7 +190,7 @@
   },
   "morning_fallback": {
     "date": "2026-08-31",
-    "attempts": 1
+    "attempts": 2
   },
   "blindspot_ledger": [
     {
