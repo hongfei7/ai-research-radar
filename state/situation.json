@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-31T13:33:39Z",
-  "text": "当前共有 22 个活跃事件。要点包括: 英伟达35亿美元投资联发科 联发科AI芯片营收预计20亿美元; DeepSeek-V4-Flash-Vision-Exp; 欣兴电子涉嫌原产地洗标遭台检方搜查，或面临40%美国关税; OpenAI says its ad business has hit $1B in annualized revenue run rate and is expanding globally, as it touts its \"diversified business model\" ahead of an IPO (Ashley Capoot/CNBC); 博通发布AgentMinder企业级AI Agent治理平台。",
-  "since": "2026-08-31T13:33:39Z",
-  "active_event_count": 22,
+  "generated_at": "2026-08-31T19:42:06Z",
+  "text": "当前共有 16 个活跃事件。要点包括: China's CXMT makes its first HBM3E chips, closing the AI memory gap; OpenAI says its ChatGPT ad business hits a $1 billion annual run rate; Nvidia’s $3.5B MediaTek bet reveals its plan for tackling Big Tech’s AI chip buildout; 超微电脑 (SMCI) files 10-K — 2026-08-31; 特朗普警告拒绝数据中心社区将\"落后贫困\"。",
+  "since": "2026-08-31T19:42:06Z",
+  "active_event_count": 16,
   "key_themes": [
     "compute_demand",
-    "model_capability",
+    "policy_export",
     "ai_monetization",
-    "chip_supply",
-    "edge_ai"
+    "datacenter_power",
+    "chip_supply"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n英伟达-联发科交易对AMD影响存在分歧：36kr来源判为\"中性\"，Techmeme/Bloomberg来源判为\"负面\"——分歧源于对英伟达资本绑定下游IC设计伙伴的排他性强弱判断不同。此外，OpenAI一边高调宣布广告业务$1B ARR（IPO叙事利好），一边内部Agent失控暴露安全隐患（治理负面），两条信号同步释放但指向矛盾。MiniMax营收+283%与毛利率从33.7%骤降至17.9%并存，揭示规模与盈利难以兼得。\n\n【新兴趋势】\n\"AI Agent治理\"成多源共现主题：博通连发AgentMinder/VMware AI Factory/Tanzu三款治理产品，OpenAI内部Agent失控事件，以及模型CoT可解释性退化研究，叠加形成企业级AI安全/治理需求主线。\"端侧AI推理\"亦反复出现：苹果Mac Mini被AI实验室抢购、CXMT LPDDR6首发、StartLux-27B本地运行、DeepSeek-V4-Flash-Vision，多条线索共同验证推理算力向端侧分散。\n\n【信息盲点】\n台积电、ASML、HBM先进封装链仅作为二阶关联被提及而无独立覆盖；Meta、Oracle、阿里、百度等大模型/云基础设施主体在本轮几乎缺位；电力/公用事业作为AI数据中心瓶颈未被讨论；中芯国际、海光、寒",
+  "cross_analysis": "【核心矛盾】\n特朗普力推数据中心建设的同一事件，Politico（低可信度）与Tom's Hardware（中等可信度）报道口径基本一致，但Politico额外强调\"11月期中选举前两党反对声浪增长\"的国内政治背景，Tom's Hardware则侧重\"联邦对州/地方施压以加速算力扩张\"的政策传导解读，两者落脚点不同——前者强调民意阻力、后者强调行政推动力。另一处分歧在欧盟DSA监管：the-decoder称ChatGPT被归类为\"超大型在线搜索引擎\"，arstechnica系列则定性为\"超大型在线平台(VLOP)\"，且the-decoder自身也指出\"法律专家对欧委会是否有权要求获取训练数据存在分歧\"，说明分类与权限边界尚未定论。\n\n【新兴趋势】\nHBM寡头格局受到双向挑战：CXMT小批量产出HBM3E从供给端突破，华为/ETH/华科FLINT论文提出HBF替代方案从需求端解构，对SK海力士/三星/美光定价权构成中长期压力。AI商业化路径同步多元化——OpenAI广告业务10亿美元年化运行率、OpenAI结果计费模式、博通VMware Private AI Cloud，三条变现路径并行推进，指向推理算力需求持续放量。美国算力需求外溢信号明确：Together AI与沙特Humain合作绕开本土阻力，与特朗普国内力推形成\"内外分流\"格局。\n\n【信息盲点】\n本轮报道未覆盖核心硬件供应链关键节点：台积电（先进制程产能）、ASML（E",
   "trend_spotting": "【新兴趋势】OpenAI将结果付费（outcome-based pricing）推向大客户，与GPT-6周四发布形成\"能力+定价\"双轮升级；更关键的是，数万台Mac被OpenAI纳入强化学习训练环节，Apple Silicon借统一内存架构切入RL高吞吐场景，AI算力从纯GPU向异构化加速演进，这是72小时内最实质的架构变化。\n\n【早期信号】SB Energy拟以50-70亿美元IPO并向OpenAI授予55亿美元认股权证，能源-算力闭环首次以独立资本形态浮出水面；台检方突袭欣兴电子，揭出AI PCB供应链\"陆产贴标\"合规风险，可能蔓延至华通、南亚电路板等台系载板厂；StartLux-27B等本地大模型开始正面对抗云端模型，边缘AI拐点临近。\n\n【市场盲点】市场聚焦GPT-6能力飞跃，却低估outcome-based pricing对算力消耗节奏的结构性压低效应——按结果付费天然抑制token浪费；苹果在AI算力叙事中的角色被严重低估，MLX在RL场景的T"
 }
