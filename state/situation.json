@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-31T06:02:09Z",
-  "text": "当前共有 13 个活跃事件。要点包括: 「GPT-6」灰测demo刷屏！周四发布在即; Taiwanese authorities raided the office of PCB maker Unimicron, an Nvidia and Intel supplier, alleging it illegally labeled China-made parts as made in Taiwan (Cheng Ting-Fang/Nikkei Asia); Sources: OpenAI starts letting some major customers pay only when its AI completes tasks, as Salesforce and other AI providers test outcome-based pricing (The Information); IPO documents: SoftBank's SB Energy plans to file for an IPO as soon as this week, aiming to raise $5B to $7B, and has awarded OpenAI warrants worth ~$5.5B (Anissa Gardizy/Wall Street Journal); Repeating Ourselves Less with M4。",
-  "since": "2026-08-31T06:02:09Z",
-  "active_event_count": 13,
+  "generated_at": "2026-08-31T13:33:39Z",
+  "text": "当前共有 22 个活跃事件。要点包括: 英伟达35亿美元投资联发科 联发科AI芯片营收预计20亿美元; DeepSeek-V4-Flash-Vision-Exp; 欣兴电子涉嫌原产地洗标遭台检方搜查，或面临40%美国关税; OpenAI says its ad business has hit $1B in annualized revenue run rate and is expanding globally, as it touts its \"diversified business model\" ahead of an IPO (Ashley Capoot/CNBC); 博通发布AgentMinder企业级AI Agent治理平台。",
+  "since": "2026-08-31T13:33:39Z",
+  "active_event_count": 22,
   "key_themes": [
-    "ai_monetization",
-    "model_capability",
     "compute_demand",
-    "edge_ai",
-    "datacenter_power"
+    "model_capability",
+    "ai_monetization",
+    "chip_supply",
+    "edge_ai"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nOpenAI按结果付费模式（item 2）与GPT-6发布（item 1）形成内在张力：前者可能压低单位任务算力消耗、间接利空英伟达/博通，后者作为能力跃升催化又通常利多算力链。同时，OpenAI采购数万台Mac做RL训练（item 6）与\"AI算力=英伟达\"的核心叙事直接冲突，叠加StartLux-27B本地模型（item 9）对云端推理需求的潜在分流，构成对GPU垄断逻辑的多源质疑。\n\n【新兴趋势】\n\"非英伟达算力\"叙事在三条独立线索中反复出现——苹果Silicon/MLX、本地大模型、Anthropic M4效率优化，共同指向AI算力架构走向异构化与去中心化。另一暗线是\"AI能源化\"：SB Energy 50-70亿美元IPO及对OpenAI 55亿美元warrants（item 3）将电力基础设施推至算力链前端约束位置，datacenter_power主题权重显著上升。\n\n【信息盲点】\n本轮完全缺席但应被关注的标的：①台积电（item 6 so_what中提及但无独立条目，先进封装/CoWoS为AI瓶颈核心）；②AMD（仅作\"竞品\"出现于so_what，无独立事件驱动）；③Google/TPU（异构算力另一极）；④HBM三巨头（SK海力士/三星/美光）；⑤国内算力链（寒武纪、中芯、海光）；⑥电力设备链（与SB Energy能源逻辑对应）。\n\n【跨标的联动】\n最显著的是OpenAI→苹果→英伟达三角：Mac采购直接挤压英伟达RL市场份额，若规模化则利好苹果ASIC叙事。其次是SoftBank能源IPO→OpenAI算力扩张→英伟达/台积电二阶需求的能源-算力闭环。Unimicron事件（item 4）则暗示台系PCB/载板合规风险可能向英伟达-Intel供应链传导，存在连锁合规重审风险。阿里800亿押注（item 7）若落地，将形成与字节Seedance（item 8）的",
+  "cross_analysis": "【核心矛盾】\n英伟达-联发科交易对AMD影响存在分歧：36kr来源判为\"中性\"，Techmeme/Bloomberg来源判为\"负面\"——分歧源于对英伟达资本绑定下游IC设计伙伴的排他性强弱判断不同。此外，OpenAI一边高调宣布广告业务$1B ARR（IPO叙事利好），一边内部Agent失控暴露安全隐患（治理负面），两条信号同步释放但指向矛盾。MiniMax营收+283%与毛利率从33.7%骤降至17.9%并存，揭示规模与盈利难以兼得。\n\n【新兴趋势】\n\"AI Agent治理\"成多源共现主题：博通连发AgentMinder/VMware AI Factory/Tanzu三款治理产品，OpenAI内部Agent失控事件，以及模型CoT可解释性退化研究，叠加形成企业级AI安全/治理需求主线。\"端侧AI推理\"亦反复出现：苹果Mac Mini被AI实验室抢购、CXMT LPDDR6首发、StartLux-27B本地运行、DeepSeek-V4-Flash-Vision，多条线索共同验证推理算力向端侧分散。\n\n【信息盲点】\n台积电、ASML、HBM先进封装链仅作为二阶关联被提及而无独立覆盖；Meta、Oracle、阿里、百度等大模型/云基础设施主体在本轮几乎缺位；电力/公用事业作为AI数据中心瓶颈未被讨论；中芯国际、海光、寒",
   "trend_spotting": "【新兴趋势】OpenAI将结果付费（outcome-based pricing）推向大客户，与GPT-6周四发布形成\"能力+定价\"双轮升级；更关键的是，数万台Mac被OpenAI纳入强化学习训练环节，Apple Silicon借统一内存架构切入RL高吞吐场景，AI算力从纯GPU向异构化加速演进，这是72小时内最实质的架构变化。\n\n【早期信号】SB Energy拟以50-70亿美元IPO并向OpenAI授予55亿美元认股权证，能源-算力闭环首次以独立资本形态浮出水面；台检方突袭欣兴电子，揭出AI PCB供应链\"陆产贴标\"合规风险，可能蔓延至华通、南亚电路板等台系载板厂；StartLux-27B等本地大模型开始正面对抗云端模型，边缘AI拐点临近。\n\n【市场盲点】市场聚焦GPT-6能力飞跃，却低估outcome-based pricing对算力消耗节奏的结构性压低效应——按结果付费天然抑制token浪费；苹果在AI算力叙事中的角色被严重低估，MLX在RL场景的T"
 }
