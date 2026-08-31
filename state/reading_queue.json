@@ -311,6 +311,19 @@
       "source_traceable": true,
       "why": "DoorDash Flux平台30天自动化13万工程任务，给出Firecracker microVM、MCP网关等具体工程细节与数据。",
       "queued_at": "2026-08-31T19:35:50Z"
+    },
+    {
+      "id": "550253c242834bdab03439a9f7a4136450c7bb2b",
+      "title": "英伟达投资联发科",
+      "url": "https://36kr.com/newsflashes/3964051628514567?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-08-31T23:21:50Z",
+      "raw_summary": "根据本次交易协议，英伟达与联发科将展开合作，共同开发面向消费级个人电脑的下一代英伟达 Spark 系列芯片。英伟达表示，已斥资 35 亿美元认购中国台湾芯片厂商联发科发行的可转换债券，这是两家企业深化合作的最新信号。联发科将正式代工生产英伟达 NVLink Fusion 芯片小芯片、交换芯片以及定制内存，这套硬件可以把非英伟达的 GPU、CPU 以及其他专用芯片互相连接起来。（新浪财经）",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "英伟达35亿美元认购联发科可转债并合作开发Spark芯片及NVLink Fusion小芯片，直接影响消费级AI PC芯片格局与NVLink互联生态，值得细读。",
+      "queued_at": "2026-08-31T23:25:38Z"
     }
   ],
   "digest_last_date": "2026-08-31"
