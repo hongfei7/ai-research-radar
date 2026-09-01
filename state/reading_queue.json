@@ -274,6 +274,32 @@
       "queued_at": "2026-09-01T17:14:04Z"
     },
     {
+      "id": "309be27bdcfe3156d3369d0a4cf6b27fb7f7b99f",
+      "title": "Path to Astra: critical capabilities and frontier safeguards",
+      "url": "https://openai.com/index/path-to-astra",
+      "source": "hackernews",
+      "published_at": "2026-09-01T20:20:41Z",
+      "raw_summary": "Path to Astra: critical capabilities and frontier safeguards",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "OpenAI关于Astra模型关键能力/前沿防护的官方发布，涉及网络安全能力评估与防护框架，值得读原文看其分级标准与对策。",
+      "queued_at": "2026-09-01T22:32:30Z"
+    },
+    {
+      "id": "cf95b97b16f37f59e6f34fbd759cd8e78684777f",
+      "title": "DeepSeek-V3: From Roofline to Reality",
+      "url": "https://deepseek-v3.ezyang.com/index.html",
+      "source": "hackernews",
+      "published_at": "2026-09-01T19:42:14Z",
+      "raw_summary": "DeepSeek-V3: From Roofline to Reality",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "DeepSeek-V3从Roofline模型到落地的解读，含硬件/算力/性能权衡细节，对训练系统研究者价值高。",
+      "queued_at": "2026-09-01T22:32:30Z"
+    },
+    {
       "id": "24b43cbd45a45651a954578b458ddcf580f3f737",
       "title": "SUN: Persistent Programs For Language-Grounded Control-to-Learning-to-Real Policies [Weiqi Wang, Zhi Li, Yudong Lei, David Martinez, Xiaofeng Gao]",
       "url": "http://arxiv.org/abs/2608.31167v1",
@@ -492,32 +518,6 @@
       "angle": "route",
       "source_traceable": true,
       "why": "TUM研究者关于强化学习交通控制为何难落地的判断，触及学术-真实数据gap与可解释性瓶颈的范式讨论。",
-      "queued_at": "2026-09-01T07:43:07Z"
-    },
-    {
-      "id": "cb80c744c59903ea3f5d997e1ca46ca2476fbe42",
-      "title": "独家丨地瓜机器人扩招NPU研发团队，或将强化下一代芯片布局",
-      "url": "https://www.leiphone.com/category/yanxishe/lcot3afjymcnxzvr.html",
-      "source": "rss:leiphone",
-      "published_at": "2026-09-01T02:27:00Z",
-      "raw_summary": "雷峰网独家获悉，机器人通用底座厂商地瓜机器人近期积极招聘芯片人才，全面补齐自研NPU芯片研发能力，在猎聘等招聘软件搜索地瓜机器人芯片关键词，亦可查询到大量招聘信息。地瓜机器人的发展与CEO王丛深度绑定。公开履历显示，王丛本科毕业于北京工业大学，后赴美取得莱特州立大学博士学位；职业初期入职阿里巴巴，随后联合创办文因互联。2018年王丛正式加入地平线，2022年，王丛带领团队切入尚处蓝海的机器人赛道，原AIoT部门升级为机器人事业部，王丛出任事业部总经理；2024年该业务板块完成独立拆分，地瓜机器人正式独立运营。长期以来，地瓜始终遵循“不碰终端硬件本体”的延伸战略，芯片自研环节尚在起步阶段，机器人算力方案此前以外部采购为主。有知情人士表示，地瓜此举或意味着其后续产品的算力选择将更加多元及自主。此前雷峰网独家报道，前海思鲲鹏总经理、地平线芯片总裁、征程6系列总设计师陈鹏已于今年4月从地平线离职创业，成立新公司深圳市九万里未来科技有限公司（简称“九万里”），短短两月完成高额种子轮融资，公司整体保密级别极高，并有部分地平线老兵加入。结合陈鹏创业前的履历，当前产品需求，以及未来计算技术趋势，其创业方向大概率和端侧芯片或机器人有关，或将成为地瓜机器人最大竞争对手。地瓜若完成自研NPU落地，既能打通软硬件全栈优化，也能构建区别于竞品的技术护城河，对冲“九万里”等新入局公司带来的竞争压力，而具身智能芯片赛场未来也或将迎来地瓜机器人与“九万里”新一轮激烈赛事。欢迎添加微信 lionceau2046 了解更多机器人与芯片行业内幕故事。▼推荐阅读▼都叫3D芯片，为什么是三门不同的生意？2026-08-05一个请求错配了GPU，AI推理可能慢100倍2026-08-14",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "地瓜机器人自研NPU与陈鹏创业九万里的独家信息，能补齐机器人SoC竞争格局的拼图。",
-      "queued_at": "2026-09-01T07:43:07Z"
-    },
-    {
-      "id": "ae5d7b81dc721d08b0dae294f2a53b5d42b56e35",
-      "title": "自进化WAM来了！清华AIR联手域变换提出具身In-Context Causal Learning",
-      "url": "https://www.qbitai.com/2026/09/482337.html",
-      "source": "rss:qbitai",
-      "published_at": "2026-09-01T05:12:30Z",
-      "raw_summary": "",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "清华AIR具身In-Context Causal Learning工作，触及WAM自进化方向，值得追踪原文。",
       "queued_at": "2026-09-01T07:43:07Z"
     }
   ],
