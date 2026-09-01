@@ -14,6 +14,19 @@
       "queued_at": "2026-09-01T12:47:42Z"
     },
     {
+      "id": "f227f5acd57fb81cbd9a439f2c437032425a6ca8",
+      "title": "Nvidia pours $3.5 billion into MediaTek — company will adopt NVLink Fusion for its custom AI accelerators",
+      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-pours-usd3-5-billion-into-mediatek-company-will-adopt-nvlink-fusion-for-its-custom-ai-accelerators",
+      "source": "rss:tomshardware",
+      "published_at": "2026-09-01T14:42:22Z",
+      "raw_summary": "Nvidia invests $3.5 billion in MediaTek as the companies expand their partnership into custom AI infrastructure with NVLink Fusion, local AI computing, and automotive platforms.",
+      "score": 9,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "英伟达35亿美元投资联发科并采用NVLink Fusion，是AI加速器互连生态扩张和定制芯片赛道的重大产业事件。",
+      "queued_at": "2026-09-01T17:14:04Z"
+    },
+    {
       "id": "136a38b11d247b7f9828aded6f71fd2882a39179",
       "title": "LLM Post-Training as Brownfield Maintenance: An Industrial Perspective on Dataware Engineering [Gopi Krishnan Rajbahadur, Amir M. Ebrahimi, Boyuan Chen, Ahmed E. Hassan]",
       "url": "http://arxiv.org/abs/2608.31102v1",
@@ -233,6 +246,32 @@
       "source_traceable": true,
       "why": "Stratechery谈Nvidia财报与dollars-per-gigawatt框架，讨论Nvidia如何用全栈策略防止算力世界被整合化，是少有的范式层判断。",
       "queued_at": "2026-09-01T12:47:42Z"
+    },
+    {
+      "id": "6c4c62438da1e3d3f06a3d425bb25c421db7cff2",
+      "title": "Show HN: Running 104GB Qwen3.8-Flash-Next on 48GB Mac with at ~12 tok/s",
+      "url": "https://github.com/carloslfu/slotstream",
+      "source": "hackernews",
+      "published_at": "2026-09-01T16:42:46Z",
+      "raw_summary": "Show HN: Running 104GB Qwen3.8-Flash-Next on 48GB Mac with at ~12 tok/s. I built slotstream, a way to run Qwen3.8-Flash-Next 4-bit on a low-memory mac starting from 16GB, a 125B parameter model that would need 100GB+ memory&#x2F;RAM, thanks to expert-offloading&#x2F;ssd-streaming. Easy to install&#x2F;update, and mac-native using MLX and Swift.<p>It ships with auto-mode, which makes a good tradeoff between memory usage and speed. I&#x27;ll be implementing and porting the MTP module for speculative decoding next",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "用SSD流式卸载在低内存Mac上跑125B MoE模型，给出~12 tok/s实测数据，对消费级设备部署大模型有可复现参考价值。",
+      "queued_at": "2026-09-01T17:14:04Z"
+    },
+    {
+      "id": "cdfa2b6592fd9d68c0cfba825074a393b3ad75bc",
+      "title": "I audited 112 real RL post-training environments for reward-hacking vulnerabilities — 54 flagged, 0 false positives [OC, tool] [P]",
+      "url": "https://www.reddit.com/r/machinelearning/comments/1w4h6c1/i_audited_112_real_rl_posttraining_environments",
+      "source": "reddit:ml",
+      "published_at": "2026-09-01T16:34:58Z",
+      "raw_summary": "RL post-training (RLHF/RLAIF/GRPO) agents optimize strictly for whatever the verifier rewards. If the verifier has logic flaws, the agent learns to hack the grader instead of solving the task — recent work has catalogued this at scale (Terminal Wrench found 331 hackable environments and 15%+ of standard benchmark tasks bypassable; a SWE-bench Verified audit found 28.5% Docker-verified hackability). I built ratctl, a static + dynamic auditor that scans RL environments (OpenEnv, Prime Intellect verifiers-spec, Gymnasium) for these patterns before you ship them for training: Test/assertion tampering (file deletion, pytest hook hijacking) Grader manipulation (stack frame inspection, __eq__/__bool__ overloading) Premature termination (sys.exit(0), signal suppression) Environment hijacking (golden solution leaks via .git log, env var leaks) Reward skipping (bare except: swallowing failures, hardcoded max rewards) LLM-judge bias (verbosity/sycophancy over correctness) Empirical results across 112 real environments (OpenEnv Hub, verifiers-spec, Gymnasium, SWE-bench): Metric Result Vulnerabilities flagged 54 Precision 100% (0 false positives on 43 clean controls) Recall 78.3% (54/69 known exploit patterns caught) Static analysis (AST-based) runs with zero heavy dependencies; there's an optional dynamic mode that red-teams the verifier with a local LLM (Ollama, free) or a frontier API. Ships as a CLI, a GitHub Action for CI gating (--fail-on 'gameability&gt;0.3'), and a Claude/Cursor/C",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "审计112个RL后训练环境、发现54个reward-hacking漏洞，0误报，给出具体工具和数字，并引用Terminal Wrench等对比基线，一手研究价值高。",
+      "queued_at": "2026-09-01T17:14:04Z"
     },
     {
       "id": "24b43cbd45a45651a954578b458ddcf580f3f737",
@@ -479,45 +518,6 @@
       "angle": "research",
       "source_traceable": true,
       "why": "清华AIR具身In-Context Causal Learning工作，触及WAM自进化方向，值得追踪原文。",
-      "queued_at": "2026-09-01T07:43:07Z"
-    },
-    {
-      "id": "48c2a289064a5fd940fd8e9e2c671007aa650e80",
-      "title": "英伟达算力账本：一场800亿算力承诺背后的杠杆博弈",
-      "url": "https://www.tmtpost.com/8124138.html",
-      "source": "rss:tmtpost",
-      "published_at": "2026-09-01T04:21:56Z",
-      "raw_summary": "AI时代的次贷危机，也许不是房贷，而是算力贷。",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": false,
-      "why": "英伟达800亿算力承诺的杠杆与算力贷类比，能从财务/资本结构角度看AI算力供需失衡。",
-      "queued_at": "2026-09-01T07:43:07Z"
-    },
-    {
-      "id": "c65c918f3f788f89f1c2ea2c6927ec1789397eae",
-      "title": "Research Bits: Sep. 1",
-      "url": "https://semiengineering.com/research-bits-sep-1",
-      "source": "rss:semiengineering",
-      "published_at": "2026-09-01T07:01:15Z",
-      "raw_summary": "Gallium nitride: High voltage; low resistance; diamond interposer. The post Research Bits: Sep. 1 appeared first on Semiconductor Engineering.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "GaN高压低阻、金刚石interposer等多条前沿器件线汇总，浓缩了解最新一手研究动态。",
-      "queued_at": "2026-09-01T07:43:07Z"
-    },
-    {
-      "id": "0267babea324bf57b305230b42132dd414624e17",
-      "title": "WebWorld: The Browser as a World Model for Self-Improving Web Code",
-      "url": "https://arxiv.org/abs/2608.30530",
-      "source": "huggingface:papers",
-      "published_at": "2026-08-30T20:00:00Z",
-      "raw_summary": "WebWorld uses a browser as an executable world model to certify web code repairs via interaction contracts, enabling autonomous VLM self-improvement with verified supervision.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "用浏览器作为世界模型来验证VLM自改进，提出可执行交互合约这一新范式，有清晰的工程与研究价值。",
       "queued_at": "2026-09-01T07:43:07Z"
     }
   ],
