@@ -4,28 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "三星电子",
-        "中芯国际",
-        "海力士"
-      ],
-      "features": [
-        "ai",
-        "china",
-        "chips",
-        "closing",
-        "cxmt",
-        "first",
-        "gap",
-        "hbm3e",
-        "its",
-        "makes",
-        "memory",
-        "the"
-      ],
-      "sent_at": "2026-08-31T19:42:25Z"
-    },
-    {
-      "tickers": [
         "英伟达"
       ],
       "features": [
@@ -312,6 +290,57 @@
         "will"
       ],
       "sent_at": "2026-09-01T17:18:21Z"
+    },
+    {
+      "tickers": [
+        "Anthropic"
+      ],
+      "features": [
+        "and",
+        "anthropic",
+        "available",
+        "claude",
+        "cybersecurity",
+        "fable",
+        "for",
+        "generally",
+        "is",
+        "life",
+        "mythos",
+        "partners",
+        "safeguards",
+        "sciences",
+        "trusted",
+        "unveils",
+        "which",
+        "with"
+      ],
+      "sent_at": "2026-09-01T20:04:14Z"
+    },
+    {
+      "tickers": [
+        "Anthropic"
+      ],
+      "features": [
+        "fable",
+        "is",
+        "out"
+      ],
+      "sent_at": "2026-09-01T20:04:41Z"
+    },
+    {
+      "tickers": [
+        "Anthropic",
+        "亚马逊",
+        "微软"
+      ],
+      "features": [
+        "and",
+        "claude",
+        "fable",
+        "mythos"
+      ],
+      "sent_at": "2026-09-01T20:05:02Z"
     }
   ],
   "last_report": {

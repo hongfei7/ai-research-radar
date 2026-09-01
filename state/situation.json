@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-01T17:17:57Z",
-  "text": "当前共有 30 个活跃事件。要点包括: 三星公布下一代存储器战略：HBM5性能目标提升至HBM4E两倍; Nvidia pours $3.5 billion into MediaTek — company will adopt NVLink Fusion for its custom AI accelerators; Hot Chips 2026: Samsung reveals a three-phase HBM roadmap that puts logic and compute inside memory — zHBM ultimately stacks DRAM directly on top of the processor; DeepSeek V4 多模态开源，我们把它的视觉链路拆了一遍; CXMT reportedly begins risk production of HBM3E memory in breakthrough for Chinese DRAM production — company could be in mass production in 2027。",
-  "since": "2026-09-01T17:17:57Z",
-  "active_event_count": 30,
+  "generated_at": "2026-09-01T20:03:53Z",
+  "text": "截至 2026-09-02 04:03 HKT，Anthropic 发布 Fable 5.1 与 Mythos 5.1，典型负载推理成本较前代降 25%、Agentic 场景最高降 45%，头部厂商开启效率竞赛；LLM Token 均价跌至 0.97 美元/百万 token，较 5 月 2.07 美元高点近乎腰斩；李飞飞 World Labs 推出多",
+  "since": "2026-09-01T20:03:53Z",
+  "active_event_count": 25,
   "key_themes": [
+    "ai_monetization",
     "compute_demand",
     "model_capability",
-    "ai_monetization",
-    "chip_supply",
-    "advanced_packaging"
+    "edge_ai",
+    "datacenter_power"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n关于SB Energy递交IPO：Techmeme(CNBC)侧重\"对OpenAI存在重大依赖\"这一客户集中度风险信号，而36kr则完全从正面叙事\"AI算力外溢至电力基建\"切入，同一事件的风险/机遇解读存在分歧。此外，DeepMind新任负责人高调宣称\"100%确信达前沿\"却未给出任何具体路线图或技术突破，\"表态\"与\"实质\"之间存在明显落差。\n\n【新兴趋势】\n1）NVLink生态外延——英伟达35亿美元投资联发科将其纳入NVLink Fusion体系，是继与多家ASIC公司合作后的又一扩张信号，显示英伟达正将互连标准从自有GPU扩展至第三方加速器；2）AI算力需求向电力基础设施溢出——SB Energy IPO由软银/OpenAI/英伟达三方背书，电力成为继芯片之后的下一阶瓶颈；3）存储景气延长——兆易创新判断DRAM/NAND供应紧张至少延续至2027年，存储周期被拉长。\n\n【信息盲点】\n本轮AMD、TSMC、AWS/Azure及苹果均未被单独覆盖；国内AI芯片标的（寒武纪、海光）仅在专利报道中一笔带过；液冷、电力设备、智能电网等SB Energy二阶受益方向未给出具体标的；存储涨价对服务器OEM及云厂商成本端的具体影响链条也未涉及。\n\n【跨标的联动】\n英伟达↔联发科：NVLink Fusion合作深化，但同时挤压博通/Marvell在定制ASIC互连领域的议价空间，形成\"英伟达收编\"与\"ASIC竞争对手承压\"的此消彼长；存储三巨头(美光/海力士/三星)↔算力链：2027年供应紧张若兑现，将向上抬升英伟达/AMD及服务器OEM的BOM成本；谷歌Gemini多模态/智能体能力↔OpenAI/Anthropic：企业级AI商业化竞争节奏趋紧。",
+  "cross_analysis": "【核心矛盾】\n模型命名严重混乱：多条来源称\"Claude Fable 5.1/Mythos 5.1\"，但AWS源已质疑为笔误（Anthropic现役无Fable系列），另有Reddit源将\"Fable\"归为视频/多模态生成模型，与Anthropic LLM定位冲突。截至本轮，无来源给出确凿的命名确认或厂商归属，建议在验证前对所有\"Fable 5.1\"相关信息降权处理。\n\n【新兴趋势】\n（1）Token价格快速下行：单百万Token均价从5月28日$2.07跌至$0.97，叠加Fable 5.1官方降价25-45%，成本/效率竞赛已明确取代纯能力竞赛成为头部厂商主战场。（2）企业数据主权成为标配：Anthropic推出Enterprise Frontier Safeguards，应对B端合规反馈。（3）AI垂直行业落地加速：OpenAI ChatGPT Health接入Epic，谷歌Pics以prompt替代设计，均标志AI从通用工具向行业工作流嵌入。\n\n【信息盲点】\nOracle、Meta、TSMC、博通等算力链关键标的本轮零覆盖；DeepSeek及中国大模型厂商缺失；苹果Apple Intelligence无更新；CSP厂商（微软/谷歌/亚马逊/Meta）Capex节奏与单位Token毛利变化未涉及，但恰是Token降价潮下最关键的二阶变量。\n\n【跨标的联动】\nAnthropic降价→算力需求增速预期承压（NVDA/AMD），但AWS Bedrock渠道承接利好AMZN；OpenAI ChatGPT Health对微软Dax Copilot形成侧翼竞争；Google Pics直接冲击Adobe/Canva估值逻辑；FTC广告诉讼若落地将压制AMZN广告利润率，反向利好合规更优的谷歌/Meta广告业务。",
   "trend_spotting": "英伟达重启Rubin CPX标志推理硬件进入\"场景细分\"阶段：预填充（prefill）与decode走向不同硬件路径，168GB HBM4+2300W的单卡规格显示预填充场景对显存容量/带宽的极致需求。这与Qwen3.8-Flash-Next采用off-accelerator n-gram嵌入、卸载长上下文存储的设计形成共振——上下游都在为\"长上下文预填充\"重新定义硬件与模型边界。\n\n早期信号：博伦智汇千万天使轮押注\"万卡异构纳管+梯级Token输出\"，说明国产AI算力落地的真实路径不是单卡性能追赶，而是在调度与变现层先跑通。推理从\"卖卡时\"转向\"卖Token时\"，调度平台成为新的卡脖子环节。\n\n市场盲点：推理预填充与decode的解耦，将催生专用服务器/网络拓扑（如预填充节点配高带宽内存、decode节点配高主频CPU），现有数据中心架构面临重构。"
 }
