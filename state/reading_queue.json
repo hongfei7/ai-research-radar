@@ -441,6 +441,71 @@
       "source_traceable": true,
       "why": "Fable 5.1 vs 5 在 MineBench 上推理时间、token 成本、JSON 大小的实测对比，给了具体数字和长推理导致涨价的解释，工程价值高。",
       "queued_at": "2026-09-02T17:43:59Z"
+    },
+    {
+      "id": "13c4ef2164623689d1482ebe148627e71ea089e7",
+      "title": "OpenAI’s new reasoning technique alarms AI safety experts",
+      "url": "https://techcrunch.com/2026/09/02/openais-new-reasoning-technique-alarms-ai-safety-experts",
+      "source": "rss:techcrunch-ai",
+      "published_at": "2026-09-02T20:19:14Z",
+      "raw_summary": "OpenAI’s new Astra model will use “recurrent depth,” a technique that allows the model to operate outside of the sequential thinking that characterizes most reasoning models.",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "OpenAI Astra使用\"recurrent depth\"技术，偏离传统sequential reasoning，是值得关注的技术路线变化。",
+      "queued_at": "2026-09-02T22:39:56Z"
+    },
+    {
+      "id": "f531fc7c57ff84fb3037a10e874f567708746096",
+      "title": "Broadcom reports Q3 revenue up 86% YoY to $29.59B, vs. $29.36B est., AI semiconductor revenue up 221% to $16.7B, and forecasts Q4 revenue below estimates (Jordan Novet/CNBC)",
+      "url": "https://www.techmeme.com/260902/p40#a260902p40",
+      "source": "rss:techmeme",
+      "published_at": "2026-09-02T20:45:20Z",
+      "raw_summary": "Jordan Novet / CNBC: Broadcom reports Q3 revenue up 86% YoY to $29.59B, vs. $29.36B est., AI semiconductor revenue up 221% to $16.7B, and forecasts Q4 revenue below estimates&nbsp; &mdash;&nbsp; Broadcom shares dropped 5% in extended trading on Wednesday after the chipmaker issued disappointing guidance for the current quarter.",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Broadcom Q3 AI半导体收入$16.7B同比增221%，是AI算力供应链关键一手数据。",
+      "queued_at": "2026-09-02T22:39:56Z"
+    },
+    {
+      "id": "7226a709366529bfc34593629eca1b826c8b020f",
+      "title": "Confirmed bolting Q8 NGram into IQ4 Qwen no speed degradation",
+      "url": "https://www.reddit.com/r/localllama/comments/1w5isz3/confirmed_bolting_q8_ngram_into_iq4_qwen_no_speed",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-02T18:32:00Z",
+      "raw_summary": "This came from another thread or comment. I forgot exactly where, but the basic idea was to replace the 51B N-gram layer in Qwen 3.8 Next with a much higher precision version. Someone running a 5090 replaced the N-gram portion of their Qwen 3.8 UD Q4 model with BF16. Since I'm already running IQ4_XS, I wanted to try something similar. I don't have enough storage for the BF16 N-gram weights right now, so I replaced the lower-precision N-gram portion with Q8 instead. I'm still testing whether it improves the actual model output, but in terms of inference speed, the difference appears to be very small. Before bolting on the Q8 N-gram: n_gen = 2588, tg = 8.82 t/s, tg_3s = 8.81 t/s n_gen = 2616, tg = 8.82 t/s, tg_3s = 9.19 t/s n_gen = 2645, tg = 8.83 t/s, tg_3s = 9.37 t/s n_gen = 2675, tg = 8.84 t/s, tg_3s = 9.78 t/s n_gen = 2704, tg = 8.84 t/s, tg_3s = 9.50 t/s n_gen = 2732, tg = 8.85 t/s, tg_3s = 9.06 t/s n_gen = 2761, tg = 8.85 t/s, tg_3s = 9.32 t/s n_gen = 2790, tg = 8.86 t/s, tg_3s = 9.50 t/s n_gen = 2819, tg = 8.86 t/s, tg_3s = 9.39 t/s n_gen = 2847, tg = 8.87 t/s, tg_3s = 9.22 t/s n_gen = 2875, tg = 8.87 t/s, tg_3s = 9.15 t/s With the Q8 N-gram bolted onto IQ4_XS: n_gen = 263, tg = 10.76 t/s, tg_3s = 11.04 t/s n_gen = 294, tg = 10.70 t/s, tg_3s = 10.18 t/s n_gen = 329, tg = 10.76 t/s, tg_3s = 11.32 t/s n_gen = 361, tg = 10.73 t/s, tg_3s = 10.46 t/s n_gen = 395, tg = 10.76 t/s, tg_3s = 11.11 t/s n_gen = 430, tg = 10.81 t/s, tg_3s = 11.37 t/s n_gen = 460, tg = 10.75 t/s, tg_3",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Qwen 3.8 NGram层精度提升实验，有具体量化方案和性能对比，是实用工程优化。",
+      "queued_at": "2026-09-02T22:39:56Z"
+    },
+    {
+      "id": "e9b00eafecda60231c39c92ee813f143eb4dc9c0",
+      "title": "Qwen3.8 Flash AP Quants",
+      "url": "https://www.reddit.com/r/localllama/comments/1w5ow8w/qwen38_flash_ap_quants",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-02T22:10:14Z",
+      "raw_summary": "Quite surprised to be beating other high quality quants. It took a lot of benchmarking to get here and we are quite pleased with these, hope they are useful to the community. It required a modified way of measuring KLD with a new dataset, since the NGRAM got in the way by remembering basically all of wikipedia. We tried to not only go for high precision, but also keep prefill performance in mind. Full model card here https://huggingface.co/agentionai/Qwen3.8-Flash-Next-AP-GGUF Let us know if there are any issues. https://preview.redd.it/nq48xxtxj6nh1.png?width=1800&amp;format=png&amp;auto=webp&amp;s=5059384113868ed2717e04b24603a5fbb7d9908c &#32; submitted by &#32; /u/Dutchnamn [link] &#32; [comments]",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Qwen3.8 Flash AP Quants发布，含改进的KLD测量方法和预fill性能优化思路，有模型卡可查。",
+      "queued_at": "2026-09-02T22:39:56Z"
+    },
+    {
+      "id": "aa1af6321fd6e5dce43c98d993f81df3f90f0856",
+      "title": "博通 (AVGO) 8-K: Broadcom Inc. Announces Third Quarter Fiscal Year 2026 Financial Resul",
+      "url": "https://www.sec.gov/archives/edgar/data/1730168/000173016826000076/avgo-20260902.htm",
+      "source": "sec_edgar:8-K",
+      "published_at": "2026-09-02T00:00:00Z",
+      "raw_summary": "Broadcom Inc. Announces Third Quarter Fiscal Year 2026 Financial Results and Quarterly Dividend\n•\nRevenue of $29.6 billion for the third quarter, up 86 percent from the prior year period\n•\nGAAP operating income of $16.0 billion for the third quarter; Non-GAAP operating income of $20.1 billion for the third quarter\n•\nGAAP diluted EPS of $2.68 for the third quarter; Non-GAAP diluted EPS of $3.32 for the third quarter\n•\nCash from operations of $14.2 billion for the third quarter, less capital expenditures of $0.5 billion, resulted in $13.7 billion of free cash flow, or 46 percent of revenue\n•\nQuarterly common stock dividend of $0.65 per share\n•\nFourth quarter fiscal year 2026 revenue guidance of approximately $34.8 billion, an increase of 93 percent from the prior year period\n•\nFourth quarter fiscal year 2026 Non-GAAP operating income guidance of approximately 66 percent of projected revenue\n(1)\nPALO ALTO, Calif. –\nSeptember 2, 2026\n–\nBroadcom Inc. (Nasdaq: AVGO), a global technology leader that designs, develops and supplies semiconductor and infrastructure software solutions, today reported financial results for its third quarter of fiscal year 2026, ended August 2, 2026, provided guidance for its fourth quarter of fiscal year 2026 and announced its quarterly dividend.\n“Demand for our custom AI accelerators and networking continues to be very strong. Q3 AI semiconductor revenue of $16.7 billion grew 221% year-over-year, and 54% quarter-over-quarter,” said Hock Tan, President and CEO of Broadcom Inc. “In Q4 the momentum continues, and we expect AI semiconductor revenue to accelerate to $21.7 billion, up 236% year-over-year.”\n“Broadcom achieved record revenue, operating profit and free cash flow in Q3. We delivered non-GAAP operating income growth of 92% year-over-year, as consolidated revenue grew 86% year-over-year to $29.6 billion,” said Amie Thuener, CFO of Broadcom Inc. “Q4 consolidated revenue growth is forecasted to increase 93% year-over-year to $34.8 billion, and we expect to maintain our non-GAAP operating margin at 66%, flat from a year ago.”\n(1)\nThe Company is not readily able to provide a reconciliation of projected non-GAAP financial measures presented to the relevant projected GAAP measures without unreasonable effort.\nThird Quarter Fiscal Year 2026 Financial Highlights\nGAAP\nNon-GAAP\n(Dollars in millions, except per share data)\nQ3 26\nQ3 25\nChange\nQ3 26\nQ3 25\nChange\nNet revenue\n$\n29,591\n$\n15,952\n+86\n%\n$\n29,591\n$\n15,952\n+86\n%\nOperating income\n$\n15,955\n$\n5,887\n+171\n%\n$\n20,095\n$\n10,455\n+92\n%\nNet income\n$\n13,088\n$\n4,140\n+216\n%\n$\n16,372\n$\n8,404\n+95\n%\nEarnings per common share - diluted\n$\n2.68\n$\n0.85\n+215\n%\n$\n3.32\n$\n1.69\n+96\n%\n(Dollars in millions)\nQ3 26\nQ3 25\nChange\nCash flow from operations\n$\n14,197\n$\n7,166\n+98\n%\nFree cash flow\n$\n13,665\n$\n7,024\n+95\n%\nNet revenue by segment\n(Dollars in millions)\nQ3 26\nQ3 25\nChange\nSemiconductor solutions\n$\n20,839\n%\n$\n9,166\n%\n+127\n%\nInfrastructure software\n8,752\n6,786\n+29\n%\nTotal net revenue\n$\n29,591\n%\n$\n15,",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Broadcom Q3 FY26财报原始8-K，含完整财务数据，AI半导体营收$16.7B+221%是算力市场一手数据。",
+      "queued_at": "2026-09-02T22:39:56Z"
     }
   ],
   "digest_last_date": "2026-09-02"
