@@ -300,6 +300,32 @@
       "queued_at": "2026-09-01T22:32:30Z"
     },
     {
+      "id": "23bdbfdbd061867c154a8cc168f33e8b0e0e2b8e",
+      "title": "BenchMIRT: What are LLM benchmarks actually measuring?",
+      "url": "https://huggingface.co/blog/allenai/benchmirt",
+      "source": "rss:hf-blog",
+      "published_at": "2026-09-01T21:39:07Z",
+      "raw_summary": "",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "直接审视主流LLM benchmark到底在测量什么，对评估方法论有元层面的认知价值。",
+      "queued_at": "2026-09-02T00:33:31Z"
+    },
+    {
+      "id": "dabed5084c0d4f0f2a5472eeb3a2ac7cc549dddc",
+      "title": "EvoUndo: Recoverability-Constrained Self-Evolution for LLM Agent Harnesses [R]",
+      "url": "https://www.reddit.com/r/machinelearning/comments/1w4m0hq/evoundo_recoverabilityconstrained_selfevolution",
+      "source": "reddit:ml",
+      "published_at": "2026-09-01T19:17:00Z",
+      "raw_summary": "LLM agents increasingly modify their own prompts, tools, middleware, resources, and execution harnesses at runtime. Such self-evolution can improve capability, but a successful mutation may leave persistent effects that cannot be safely reversed in states different from the one in which it was created. We introduce EvoUndo, a framework for representing, synthesizing, diagnosing, and independently verifying recoverability of model-generated self-modifications across counterfactual states. Across 600 unseen one-shot self-evolution tasks, we identify 197 capability-improving mutations that fail recoverability verification. Under the original recovery representation, conventional repair strategies recover 0/197 of these natural failures. Deterministic oracle analysis recovers 48/197 under the original recovery language L0, while the extended recovery calculus increases empirical oracle recovery to 191/197. A protocol-locked 2×2 grounding-by-expressivity intervention then separates two bottlenecks: exact state-address grounding increases successful recovery from 0/48 to 38/48 (79.2%) when the original language is sufficient, while extending the recovery language enables recovery on 142/143 (99.3%) failures in the oracle-defined S1 stratum. On the primary gpt-oss-120b backbone, adding exact-address diagnostics to the richer language reduces recovery to 133/143 (93.0%); a Qwen3.8-27B replication preserves the grounding and expressivity effects but not this negative interaction, indi",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "提出EvoUndo框架解决LLM agent自演化中的可恢复性问题，定义了600个任务并发现197个能力提升但可恢复性失败的突变，研究设计完整且有具体数据。",
+      "queued_at": "2026-09-02T00:33:31Z"
+    },
+    {
       "id": "24b43cbd45a45651a954578b458ddcf580f3f737",
       "title": "SUN: Persistent Programs For Language-Grounded Control-to-Learning-to-Real Policies [Weiqi Wang, Zhi Li, Yudong Lei, David Martinez, Xiaofeng Gao]",
       "url": "http://arxiv.org/abs/2608.31167v1",
@@ -492,32 +518,6 @@
       "angle": "industry",
       "source_traceable": false,
       "why": "异构GPU算力调度平台融资与痛点分析，直击\"纸面算力≠可用算力\"的工程瓶颈，对算力供应链判断有参考价值。",
-      "queued_at": "2026-09-01T07:43:07Z"
-    },
-    {
-      "id": "93ce07e44f4edac6342753bf7c434afa51db439e",
-      "title": "郭明錤：英伟达重启推理预填充优化芯片Rubin CPX项目",
-      "url": "https://36kr.com/newsflashes/3964542034844934?f=rss",
-      "source": "rss:36kr",
-      "published_at": "2026-09-01T07:40:42Z",
-      "raw_summary": "9月1日，天风国际证券分析师郭明錤发布产业调查显示，英伟达已重启人工智能推理预填充加速GPU“Rubin CPX” 项目，不过其设计得到了大幅度的调整，预计2027年Q1开始生产。在芯片级别，新Rubin CPX拥有接近标准Rubin GPU的算力，预填充性能进一步提升，单体最高功耗同为2300W，配备168GB HBM4内存。（界面）",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "郭明錤对Rubin CPX重启的具体规格（168GB HBM4、2300W、2027Q1量产），对英伟达推理产品路线有明确信息增量。",
-      "queued_at": "2026-09-01T07:43:07Z"
-    },
-    {
-      "id": "aae6bce033d1b929e4690f327a83ef071829d879",
-      "title": "TUM 黎子玥：模型这么大这么强，为什么还是「上不了路」？| IJCAI 2026",
-      "url": "https://www.leiphone.com/category/academic/cvdmfzhq2dcqxoh8.html",
-      "source": "rss:leiphone",
-      "published_at": "2026-09-01T02:54:00Z",
-      "raw_summary": "学术数据和真实数据完全是两回事；可解释性成落地“生死线”。&nbsp; &nbsp; 作者丨幸丽娟&nbsp; &nbsp; 编辑丨岑 &nbsp; 峰&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;三年前，正值大模型爆发之年，麦肯锡就曾对全球交通与工业领域的从业者做了一项调研，问题很朴素：距离真正的智能化，还有多远？答案出乎意料地悲观：还要10到20年。而把时间线拉到现在，模型越来越大、智能体越来越多、时空数据挖掘的论文层出不穷。现实依旧是，全球没有一座城市长期部署了基于强化学习的交通信号控制系统。那些在顶会上“超越所有SOTA”的预测模型，真正到了城市交通部门手里，他们的答案往往是：“这个方案，我不敢放手用。”问题的症结在哪里？在刚刚结束的 IJCAI 2026 Early Career Spotlight（早期职业焦点）演讲中，慕尼黑工业大学 (TUM) W2 教授黎子玥（Ziyue Li）给出了他的答案：第一，学术研究长期停留在“干净数据”的舒适区，而公共部门面对的，永远是不完整、不规整、不可控的真实数据；第二，可解释性不是论文里的加分项，而是从实验室走向城市落地的“生死线”。黎子玥的履历横跨学界与工业界：香港科技大学工业工程与决策分析系博士，现任慕尼黑工业大学W2教授，此前任科隆大学W1教授；曾在斯图加特贝尔实验室、香港地铁、商汤科技辗转于科研与产品之间。他既在KDD、IJCAI、ICLR、NeurIPS等顶会发表大量研究成果，也亲手将研究推向真实部署，亲历过从论文到产品的每一道坎。他在演讲中，进一步用自己在学界与工业界之间摸爬滚打的经历，凝练出一个他称之为“PDE三角”的框架——感知（Perception）、决策（Decision）、解释性（Explanation），试图弥合学术研究与公共部门落地之间的那道鸿沟。同时，他还描绘了一条从人工主导走向自动化的技术路径：描述性分析（发生了什么）到诊断性分析（为什么发生），再到预测性分析（将要发生什么），最终抵达规范性分析（应该怎么做）。这条技术路径，也是一份写给整个AI研究社区的“诊断”指南：当你的模型在基准测试上排名第一，但城市管理者依然不敢按下那个开关时，问题不全在城市管理者身上，也不全在研究社区身上，而在于两者之间缺乏有效的转化机制。以下是黎子玥教授的演讲分享，AI科技评论根据其演讲内容进行了不改原意的编辑：TrafficPDE: A Guidebook to Deployable AI-Driven Transportation Systems——Through the Perception-Decision-Explanation Triangle（TrafficPDE：可部署AI驱动交通系统指南——基于感知-决策-",
-      "score": 7,
-      "angle": "route",
-      "source_traceable": true,
-      "why": "TUM研究者关于强化学习交通控制为何难落地的判断，触及学术-真实数据gap与可解释性瓶颈的范式讨论。",
       "queued_at": "2026-09-01T07:43:07Z"
     }
   ],
