@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-02T17:51:42Z",
-  "text": "当前共有 30 个活跃事件。要点包括: Claude Fable 5.1发布：跑分翻倍是面子，思考块\"上锁\"才是里子; Researchers fear safety disaster ahead of OpenAI&#8217;s Astra release; 谷歌三周内再发Gemini 3.8 Flash，定价低于$1/百万输入tokens; 谷歌发布Gemini 3.8 Flash及网络安全专用版3.8 Flash Cyber; Google launches Gemini 3.8 Flash Cyber for partners in its new Fairwind Program and says Gemini 3.8 Flash beats Claude Opus 5 and GPT-5.6 Sol on some benchmarks (Google)。",
-  "since": "2026-09-02T17:51:42Z",
-  "active_event_count": 30,
+  "generated_at": "2026-09-02T20:11:35Z",
+  "text": "当前共有 24 个活跃事件。要点包括: Researchers fear safety disaster ahead of OpenAI&#8217;s Astra release; 美司法部提交意见书支持OpenAI，主张AI训练属合理使用; 谷歌三周内再发Gemini 3.8 Flash，定价低于$1/百万输入tokens; 谷歌发布Gemini 3.8 Flash及网络安全专用版3.8 Flash Cyber; Google launches Gemini 3.8 Flash Cyber for partners in its new Fairwind Program and says Gemini 3.8 Flash beats Claude Opus 5 and GPT-5.6 Sol on some benchmarks (Google)。",
+  "since": "2026-09-02T20:11:35Z",
+  "active_event_count": 24,
   "key_themes": [
-    "ai_monetization",
     "model_capability",
-    "compute_demand",
+    "ai_monetization",
     "policy_export",
+    "compute_demand",
     "chip_supply"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n中国EUV光刻进展存在舆论与事实的明显分歧：市场长期流传中国可量产浸没式光刻机的说法，但Tom's Hardware援引分析师判断称中国EUV仅相当于ASML 2004年水平、与西方差距显著，无实证支撑量产传闻。另一矛盾在Anthropic与开源生态之间——Anthropic通过Messages API新规在协议层封堵模型蒸馏，但Ollama v0.33.0随即以本地代理方式绕过，Claude Desktop可直接调用Qwen、DeepSeek等开源模型，闭源\"防蒸馏\"与开源\"换模型\"呈持续拉锯。\n\n【新兴趋势】\n\"推理基础设施化\"信号密集出现：Equinix联合英伟达、Together AI推出分布式推理交换平台（2027Q1上线），OpenAI公开GPT-Live实时语音推理架构，Anthropic缓存读取",
+  "cross_analysis": "【核心矛盾】\n- DOJ支持AI训练合理使用 vs 美国版权办公室此前的相反结论，The Decoder明确指出这一矛盾（版权办主任在报告发布后被解职），Wired则未提分歧，仅呈现\"政府站台\"叙事，读者易忽略内部政策撕裂。\n- Google Gemini路线出现分裂信号：Pro线疑似暂停、Flash六周三迭代——两条Ars报道方向一至，但一条解读为\"竞争重心转移\"，另一条更接近\"被动调整\"，反映外部观察者尚未形成共识。\n\n【新兴趋势】\n- 大模型竞争从\"追求SOTA\"全面转向\"推理性价比\"：Meta加量不加价、Google Flash高频迭代、开源权重释放，三条独立报道共同指向同一主题，定价权正在被系统性重塑。\n- 美国AI政策环境对头部厂商系统性偏友好：DOJ支持fair use + 版权办主任被解职 + AI安全审查不透明诉讼，三条政策线共同降低前沿厂商合规摩擦，形成连贯的政策利好组合。\n\n【信息盲点】\n- 算力链标的（NVDA/AVGO/AMD/台积电）在本轮零直接报道，但模型迭代加速与低价推理策略暗示推理侧算力需求结构性上行，二阶传导值得关注。\n- 中国大模型厂商（阿里、字节、DeepSeek等）本轮完全缺席，但Google/Meta的低价开源策略对其出海和国内竞争均构成压力，未被讨论。\n- 企业级AI采用率、API调用量、云份额（Azure vs GCP vs AWS）等关键经营数据缺失，无法验证\"性价比\"叙事对收入端的实际拉动。\n\n【跨标的联动】\n- Meta开源+低价 → 压制OpenAI/Anthropic闭源定价权 → 同时分流AWS/Azure/GCP推理收入，形成\"模型厂商压价→云厂收入承压\"链条。\n- 所有大模型厂商迭代加速 + 政策合规成本下行 → 算力采购需求边际增强，利好NVDA/AVGO",
   "trend_spotting": "72小时内，Qwen3.8-Max-0902以1691分登顶LMArena Code Arena WebDev，首次在编程基准上反超Claude Opus 5（3分），叠加混合定价$5/MToken，标志着中国前沿模型从\"追赶\"切换至\"局部领跑\"，且定价压力正向海外传导。同期谷歌六周内连推三款Flash轻量模型，3.8 Flash虽单价未涨但单任务输出token增加约30%，实际单任务成本不降反升——这是被广泛忽视的\"token价格战幻觉\"：表观降价掩盖推理算力消耗的结构性抬升。\n\n早期信号两条：Astra被OpenAI自评首个\"critical\"级网络能力系统，同时承认思维链监控不可靠，能力跃升与可解释性崩塌同步发生，这是AI安全防线松动的拐点；HBM5预告4096-bit接口、单堆栈4TB/s，内存带宽而非算力正成为新一轮架构瓶颈。司法层面，DoJ首次以法庭之友支持\"训练即合理使用\"，若被援"
 }
