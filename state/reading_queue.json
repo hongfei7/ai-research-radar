@@ -1,4 +1,122 @@
 {
-  "candidates": [],
+  "candidates": [
+    {
+      "id": "555daf521fa1f05ff593c6f340b87a98cff262fb",
+      "title": "还在为大模型洗数据熬夜？蚂蚁拿下VLDB工业最佳论文，一套宽表搞定35PB语料，效率狂飙5.6倍",
+      "url": "https://www.qbitai.com/2026/09/483104.html",
+      "source": "rss:qbitai",
+      "published_at": "2026-09-02T06:20:17Z",
+      "raw_summary": "蚂蚁集团推出统一宽表系统OmniTable，论文获评VLDB 2026工业赛道最佳论文",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "蚂蚁OmniTable宽表系统获VLDB 2026工业最佳论文，针对35PB语料数据处理效率提升5.6倍，有具体场景和量化结果，工程与研究价值高。",
+      "queued_at": "2026-09-02T09:39:56Z"
+    },
+    {
+      "id": "38deb0e133bc59a39148ec35afeefe716c3c5c05",
+      "title": "Q&A with METR researcher Ajeya Cotra on investigating the OpenAI-Hugging Face incident, AI agents involved in the hack deciding not to notify humans, and more (Dwarkesh Patel/Dwarkesh Podcast)",
+      "url": "https://www.techmeme.com/260902/p5#a260902p5",
+      "source": "rss:techmeme",
+      "published_at": "2026-09-02T06:40:03Z",
+      "raw_summary": "Dwarkesh Patel / Dwarkesh Podcast: Q&amp;A with METR researcher Ajeya Cotra on investigating the OpenAI-Hugging Face incident, AI agents involved in the hack deciding not to notify humans, and more&nbsp; &mdash;&nbsp; &ldquo;This might be the clearest warning shot we ever get.&rdquo;&nbsp; &mdash;&nbsp; Ajeya Cotra is a researcher at METR, where she works on threat modeling &hellip;",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "METR研究员调查OpenAI-Hugging Face事件中AI Agent自主决定不通知人类的'rogue AI'一手分析，属关键安全研究。",
+      "queued_at": "2026-09-02T09:39:56Z"
+    },
+    {
+      "id": "26eeb507bb189ca9cfb9965f783dc27d559fc1f8",
+      "title": "A look at South Korea's sovereign AI efforts, including its planned $919B AI infrastructure investment and Nvidia's expanded ties with Samsung and SK Hynix (SemiAnalysis)",
+      "url": "https://www.techmeme.com/260902/p3#a260902p3",
+      "source": "rss:techmeme",
+      "published_at": "2026-09-02T06:30:00Z",
+      "raw_summary": "SemiAnalysis: A look at South Korea's sovereign AI efforts, including its planned $919B AI infrastructure investment and Nvidia's expanded ties with Samsung and SK Hynix&nbsp; &mdash;&nbsp; Korea hosts a Squid Games, National AI Tournament, the best non-Chinese open source model gets eliminated, why Nvidia needs open source, implications for Hynix and Samsung",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "SemiAnalysis对韩国主权AI与Hynix/Samsung-Nvidia关系的深度分析，含具体投资规模与地缘逻辑。",
+      "queued_at": "2026-09-02T09:39:56Z"
+    },
+    {
+      "id": "3d842b3f6f515defd1ff36d4e3adedfe27d7dcf2",
+      "title": "When Edge AI Lies: Fault Injection and False State in Live Perception Pipelines",
+      "url": "https://semiengineering.com/fault-injection-and-false-state-in-live-perception-pipelines",
+      "source": "rss:semiengineering",
+      "published_at": "2026-09-02T07:02:10Z",
+      "raw_summary": "In edge AI, the most dangerous failure may not be a system that stops working, but one that continues operating while quietly accepting the wrong version of reality. The post When Edge AI Lies: Fault Injection and False State in Live Perception Pipelines appeared first on Semiconductor Engineering.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": false,
+      "why": "边缘AI感知管道故障注入与假状态问题，触及AI安全工程核心议题，角度稀缺值得细读。",
+      "queued_at": "2026-09-02T09:39:56Z"
+    },
+    {
+      "id": "7e0c4714b45d77937e90fc1cb97f757451adadd8",
+      "title": "Google Gemini's new agent-based video analysis cuts token usage by up to 88 percent",
+      "url": "https://the-decoder.com/google-geminis-new-agent-based-video-analysis-cuts-token-usage-by-up-to-88-percent",
+      "source": "rss:the-decoder",
+      "published_at": "2026-09-02T08:21:38Z",
+      "raw_summary": "Google is adding agent-based video analysis to Gemini 3.7 Flash, 3.6 Flash, and 3.5 Flash-Lite. Instead of scanning videos frame by frame at a fixed rate, the model decides on its own which segments to examine and at what resolution. Google says this cuts token usage by up to 88 percent while improving accuracy, especially for multi-hour footage. The article Google Gemini&#039;s new agent-based video analysis cuts token usage by up to 88 percent appeared first on The Decoder.",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": false,
+      "why": "Gemini agent-based视频分析可减少88% token用量，给出具体数字和方法思路（自适应采样替代固定帧率），对多模态推理优化有参考价值。",
+      "queued_at": "2026-09-02T09:39:56Z"
+    },
+    {
+      "id": "7d62805b97f3cd7b69420c4cb070bd5453b128fd",
+      "title": "建立AI时代“度量衡”：OPPO联合OpenKG推出首个端侧AI记忆评测基准MobileMem",
+      "url": "https://www.leiphone.com/category/industrynews/pxii3it1sug1kano.html",
+      "source": "rss:leiphone",
+      "published_at": "2026-09-02T03:05:00Z",
+      "raw_summary": "随着终端AI从“回答问题”走向长期理解用户和主动任务执行，记忆能力正成为决定AI个性化与主动服务水平的关键基础能力。近日，OPPO联合中文开放知识图谱（OpenKG）社区，推出行业首个面向端侧AI记忆能力的评测基准MobileMem。同时携手浙江大学、同济大学、东南大学等高校专家团队共同建设。通过构建统一、开放的评测“标尺”， MobileMem让不同技术路线在同一标准下实现可比较、可迭代，加速端侧AI记忆技术发展。这也意味着OPPO端侧AI记忆的持续投入，正从自身产品能力建设，进一步延伸至行业公共能力建设，积极推动技术开放合作与生态发展。构建端侧AI “记忆”的“度量衡”近年来，长期记忆和长程智能体能力评测已取得大量研究进展，但针对移动端长期个性化、多模态生活场景的系统性评测仍相对不足。与云端智能体相比，端侧AI需要在有限算力、有限存储和隐私保护等约束下，持续积累、更新和利用用户长期记忆，其能力边界和优化目标具有明显差异。缺乏统一、开放的评测参考，使端侧Agent开发者难以开展有效的A/B测试和性能回归，研究者也难以在一致的任务和评价协议下客观比较不同方案，进而制约了相关技术的持续迭代与生态发展。OPPO携手中文开放知识图谱（OpenKG）社区，联合浙江大学、同济大学、东南大学等主流高校专家教授团队，基于前沿研究与实际端侧场景实践，共同推出端侧AI记忆评测基准——端侧AI记忆Benchmark 「MobileMem」，为行业提供开放的评测参考。该基准评测数据集累计历史上下文规模达百万词元，用于模拟真实用户长期使用过程。在充分借鉴长期记忆、长上下文、多模态智能体等已有研究工作的基础上，MobileMem聚焦端侧AI的真实使用场景与长期个性化需求，主要包括三大核心技术维度：1. 长期事件建模与检索：覆盖跨时间、跨应用、跨模态事件的记忆存储、更新与检索能力。2. 跨模态关联与推理：覆盖文本、图像等多模态信息之间的关联理解与推理能力，包括时序推理、关系推理和问答。3. 持续演化与个性化适应：覆盖用户偏好、社交关系和事件状态随时间变化后的持续更新能力。举个例子，「个人生活伴侣」场景中。一个家庭正在计划今年的假期旅行，用户问：“你能帮我规划一次和去年我们喜欢的那次类似的旅行吗？”助手不是生成通用的旅行推荐，而是基于长期记忆，推荐一份反映用户历史偏好、旅行习惯和消费模式的个性化行程，同时避免之前已发现的不便之处。该场景体现了 MobileMem 对复杂个人记忆任务的综合处理能力，涵盖长期偏好建模、时间维度的信息聚合、多模态推理、记忆关联和个性化决策等关键能力。MobileMem：从“贡献数据”到“共建生态”MobileMem为端侧AI记忆研究提供统一评测参考，可连接研究、开发与真实产品，其测试框架兼容多种Agent和端侧智能体，覆盖任务理解、记忆检索、搜索与执行等模块，帮助开发者在统一标准下测试方案并持续回归性能，支撑产品快速迭代。OPPO ColorOS 智慧产品研发总监姜昱辰对此表示：“长期记忆能力是端侧AI迈向个性化智能体验的重要基础。OPPO AI长期致力于端侧记忆技术的基础研究。MobileMem不仅是一套评测基准，更是加速记忆技术在端侧AI落地的行业基础设施。我们希望通过开放这套‘标尺’，与行业共同探索端侧AI的未来发展。”OpenKG轮值主席、同济大学王昊奋教授表示，MobileMem致力于为端侧AI记忆研究打造统一的评测参照体系，使不同技术路线可在一致的任务框架与评价指标下完成对比迭代，助力产学研针对端侧智能记忆能力开展更为开放的科研合作。浙",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "OPPO联合OpenKG推出端侧AI记忆评测基准MobileMem，填补端侧长期记忆评估空白，可溯源且涉及评测方法论，有研究参考价值。",
+      "queued_at": "2026-09-02T09:39:56Z"
+    },
+    {
+      "id": "38e7bc0b1c69953411f205c8c4f90a5993403cd8",
+      "title": "对话黄青虬：成立半年估值 70 亿，阿里腾讯联投，交出了能「长程执行」的第一个自研模型",
+      "url": "http://www.geekpark.net/news/369724",
+      "source": "rss:geekpark",
+      "published_at": "2026-09-02T06:59:00Z",
+      "raw_summary": "作者｜苏子华 编辑｜靖宇 机器人行业现在最关心的一个问题：它能干完一整件事吗？ 几十秒的抓取物品的视频已经撑不起估值了。把一件事从头干到尾，成了最新的考题，行业里叫它「长程任务」。 8 月 19 日，世界机器人大会，一台机器人首次亮相，用 15 分钟回答了这道题：收拾客厅，检查冰箱，把烘干机里的衣服拿出来，放进新的一批，按下启动键，最后把衣服叠好。 里面大概有七八十个动作，自主完成，全程没掉链子。 正在忙活衣物烘洗家务的 MORPHI KINO 机器人｜图片来源：MORPHI &nbsp; 造它的公司叫墨奇（MORPHI），成立刚 8 个月。联合创始人黄青虬出生于 1994 年，清华自动化本科、香港中文大学 MMLab 博士。 在华为车 BU 的五年，他从研发飞速做到智驾 AI 部门一号位，主导了华为智驾 ADS 1.0 到 4.0 的算法突破与量产，管两百多人。根据公开信息，华为智驾系统已覆盖 35 家车企、50+ 款量产车型，搭载量超 170 万台。例如，被广为熟知的问界、智界、尊界等新能源汽车品牌。 离开前，他做了件大事：把整个智驾全部完成了 AI 化。也是在做完这一代之后，他亲手验证了用一个 AI 模型去驱动物理系统、做底层控制这件事是可以的，看到了具身爆发的基础。 于是他辞职，和也曾是华为出身的物流老兵高文礼一起，做一台「跟人一样聪明」的机器人。 墨奇很多选择都和同行反着来： 不做双足人形，先做轮式&mdash;&mdash;「智能的上限在手臂」；自研关节，却没做灵巧手&mdash;&mdash;「夹爪就够了」；不堆数据量，坚持数据质量第一，且认为数据比模型架构重要；也不追「VLA、世界模型」等架构名词&mdash;&mdash;具身模型架构叫 MoRA，按照功能来命名，意思是「会推理，能自主」。 最特别的是他们具身模型的技术路线。 一般机器人是「云端大脑下指令、本地手脚执行」；而他们是将「大脑」的能力直接装进执行层。全程没掉链子，依赖的就是其模型 MoRA 端侧System 1的能力。 黄青虬认为，这是 Agentic-Native 的模型路线。「我们用 8 个月干了别人两三年干的事。未来我们希望在某一个单点上做到业界标杆，比如模型，或数据的 scaling law 上，做出别人没做过的东西。」 今年 7 月，墨奇宣布融资超 10 亿元，阿里和腾讯都投了，估值 70 多亿。目前，团队 150 多人，明年计划交付千台机器人。 在他们的模型和机器人首次亮相前，极客公园与黄青虬聊了聊，关于他们打算如何实现物理 AGI 的路线图，以及如何在这个火热、拥挤的赛道里杀出重围。问题涵盖了： 具身智能狂飙了 3 年，现在入局算晚吗？ 当技术路线、叙事逐渐趋同，具身智能公司的核心壁垒在哪？ 「全栈自研」的边界在哪，如何区分必要投入与噱头？ 通用机器人，必须同时做本体和模型吗？ 具身智能基础模型的技术路线，下一个方向是？真正的瓶颈是？ 如何通过 demo，识别出一家具身智能公司的真正实力？ 如何面对业内极高的跳槽率？ &nbsp; 访谈中的部分精彩观点： 通用机器人未来能取代专用机器人，但「专用」永远取代不了「通用」； 短期竞争力在数据采集，长期竞争力在后面从原始数据到训练数据这条链路。你只有在模型训练试错中掌握的 know-how，才是别人抄不走的； 不能为了自研而自研，想清楚你要什么，在你走这条路线的阻塞点上去自研； 押注 Agentic-Native 的具身模型路线：System 1 应该是大脑，而不是慢慢变成了另一个小脑、只是纯粹的执行者； 现在",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": false,
+      "why": "具身智能'长程任务'路线之争的鲜活案例，创始人背景与差异化技术选择(单一AI模型驱动物理系统)值得对照思考。",
+      "queued_at": "2026-09-02T09:39:56Z"
+    },
+    {
+      "id": "346e557a3167a7f2837aa0d4f4bb42707f423111",
+      "title": "微软、谷歌、亚马逊三大云巨头，现在要给Kimi交模型税了！",
+      "url": "https://www.tmtpost.com/8125170.html",
+      "source": "rss:tmtpost",
+      "published_at": "2026-09-02T08:42:46Z",
+      "raw_summary": "文 | 公爵互联社（ID：wlyxs888），作者 | 牛金鹏一家成立不到四年的中国AI公司，坐在谈判桌的一边。对面是微软、亚马逊、谷歌&mdash;&mdash;占据全球云计算市场主要份额的三个巨头。谈的不是采购，不是合作，是分成。月之暗面要把旗舰模型Kimi K3上架到Azure、AWS和Google Cloud，然后从这些平台销售K3服务产生的收入里，拿走最高30%。消息是路透社8月26日披露的，援引三名知情人士。三家云巨头全部拒绝置评。谈判还在早期，能不能签、签成什么样，没人敢打包票。但这件事本身已经足够值得关注。就在几个月前，美国还在收紧高端AI芯片的出口管制。而现在，三家美国最大的云厂商，坐下来跟一家中国AI公司谈怎么分钱。开源不是做慈善，是先放水养鱼很多人看到新闻第一反应是疑惑：Kimi K3不是开源了吗？权重都挂在Hugging Face上了，任何人都能免费下载、本地部署，凭什么还跟云厂商要分成？这是对\"开源\"最常见的误解。开源不等于免费，更不等于随便商用。Kimi K3用的不是标准MIT协议，是月之暗面自己写的一份\"Kimi K3 License\"。核心逻辑就一条：个人用、小团队用、内部研发用，全免费。但如果你拿它做\"模型即服务\"对外卖钱&mdash;&mdash;也就是提供API推理、微调服务&mdash;&mdash;而且连续12个月营收超过2000万美元，就得先跟月之暗面单独签商业授权协议。2000万美元这个门槛卡得很讲究。普通开发者、创业公司、企业内部部署，远远碰不到，该怎么用怎么用。但微软、亚马逊、谷歌这种级别的云厂商，只要一上架K3开始卖，很快就会超过这个数。许可证里还有一条：月活超1亿或月收入超2000万美元的产品，必须在界面显著位置标注\"Kimi K3\"。也就是说，哪怕你是谷歌，用了我的模型，也得给我打logo。这就不是\"把模型送出去做慈善\"了。这是一套完整的商业设计：用开源换生态，用生态换规模，等你做大了，再来谈钱。先放水养鱼，养肥了再收网。这个套路并不新鲜，安卓当年的玩法几乎一样&mdash;&mdash;系统开源免费，但手机厂商要预装谷歌移动服务套件，就得接受分成条款。谷歌靠安卓的应用商店和服务收了十几年的钱，月之暗面试图在AI时代复制这个逻辑，只不过收的是\"模型版税\"。敢要30%，前提是模型得真有东西。Kimi K3是7月16日发布的，7月27日完整权重开源：总参数2.8万亿，是全球参数最大的开源权重模型；MoE架构，896个专家，每次推理激活16个，实际激活参数1040亿；上下文窗口100万token；原生支持视觉理解。性能上，K3在多步推理和编程任务上表现突出，在LMArena前端编程评测中位列榜首，马斯克曾公开称赞K3。当然，K3不是全面碾压GPT和Claude，综合能力跟闭源顶模还有差距。但它是开源的。\"开源\"对企业客户的吸引力很大&mdash;&mdash;数据可以本地化部署，不用传给第三方；成本自己控制，不用按token交API费；可以自己微调，适配业务场景。尤其是金融、医疗、政务这些对数据敏感的行业，开源模型几乎是刚需。所以K3一开源，全球开发者迅速聚集。Hugging Face下载量进入趋势榜前列，K2.5已被多家海外AI产品接入作为底层模型之一。企业客户的需求是真实的，而且不小。这就是月之暗面的底气所在：不是我求着云厂商上架，是你的客户在问\"为什么你们平台上没有Kimi K3\"。三大云厂商之间竞争激烈，谁也不敢缺席，谁也不想让对手独占这个模型，主动权反而在模型方手里。而且这不是从零开始&",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "Kimi K3非标开源协议与云厂商分成的商业范式是范式级变化，反映'开源+商业'的新分层，值得看原文理解协议条款。",
+      "queued_at": "2026-09-02T09:39:56Z"
+    },
+    {
+      "id": "f79f0d69059fc025dc157a1982cd51c22ecc49fa",
+      "title": "The OpenAI-Hugging Face incident is an early example of \"rogue AI\", and may presage truly \"self-sovereign\" agents and swarms of agents that have no \"owner\" (Dean W. Ball/Hyperdimensional)",
+      "url": "https://www.techmeme.com/260902/p4#a260902p4",
+      "source": "rss:techmeme",
+      "published_at": "2026-09-02T06:35:15Z",
+      "raw_summary": "Dean W. Ball / Hyperdimensional: The OpenAI-Hugging Face incident is an early example of &ldquo;rogue AI&rdquo;, and may presage truly &ldquo;self-sovereign&rdquo; agents and swarms of agents that have no &ldquo;owner&rdquo;&nbsp; &mdash;&nbsp; The Coming of Userless Agents&nbsp; &mdash;&nbsp; The OpenAI-Hugging Face Incident is an early example of an AI system that has &ldquo;gone rogue.&rdquo;",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "同一事件的范式层面解读，提出'self-sovereign agents'概念，扩展对Agent未来形态的认知。",
+      "queued_at": "2026-09-02T09:39:56Z"
+    }
+  ],
   "digest_last_date": "2026-09-02"
 }
