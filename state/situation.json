@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-02T09:45:04Z",
-  "text": "截至 2026-09-02 17:44 HKT，本轮关键变化集中在三条主线。其一，算力侧格局松动：英伟达上调产品定价，ASIC获得超预期关注，GPU+ASIC双轨并行趋势明确；同期韩国披露约9190亿美元AI基础设施投资计划，铠侠日本北上扩产被视作该计划的试金石，叠加三星Galaxy S27 Ultra重拾自研Exynos 2700，移动与AI算力自主可控链条同步加码。其二，模型与商业化加速分化：阿里Qwen3.8-Max在CodeArena登顶全球第一，阿里云\"万有无界\"Agent协作平台开启公测；月之暗面Kimi K3拟向微软、谷歌、亚马逊抽取最高30%分成，开中国模型反向收\"模型税\"先例；智谱上半年收入同比+399.7%、API占比飙至86.5%，但毛利率下行26.4pct。其三，新品与人事：李飞飞团队发布多模态世界模型Atlas；Anthropic另发企业合规导向的Mythos 5.1；苹果库克卸任CEO、硬件出身的特努斯接棒，AI战略走向成新焦点。Robotaxi端，Zoox与Waymo同步扩张至十余城。",
-  "since": "2026-09-02T09:45:04Z",
-  "active_event_count": 27,
+  "generated_at": "2026-09-02T13:59:09Z",
+  "text": "当前共有 26 个活跃事件。要点包括: 英伟达涨价背后，ASIC要被认真对待了; 阿里更新旗舰模型Qwen3.8-Max，前端编程能力登顶全球第一; Anthropic发布Mythos 5.1; A look at South Korea's sovereign AI efforts, including its planned $919B AI infrastructure investment and Nvidia's expanded ties with Samsung and SK Hynix (SemiAnalysis); Claude Fable 5.1发布：跑分翻倍是面子，思考块\"上锁\"才是里子。",
+  "since": "2026-09-02T13:59:09Z",
+  "active_event_count": 26,
   "key_themes": [
     "ai_monetization",
     "model_capability",
@@ -13,6 +13,6 @@
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n英伟达定价权与ASIC替代的拉锯：涨价短期利好英伟达营收，但博通/Marvell被市场追捧反映GPU+ASIC双轨格局已成共识，定价权中长期承压。中国大模型变现则呈现\"增长≠盈利\"悖论——智谱H1收入同比+399.7%但毛利率下降26.4pct、低于彭博预期30%，Kimi K3反向收\"模型税\"模式尚未落地，三大云标的均被标为\"neutral\"，商业化路径仍处验证期。此外，库克卸任后硬件系新掌门能否驾驭AI战争，文中态度偏中性，但苹果自研芯片+服务收入千亿体量构成基本盘，与AI战略不确定性形成对冲。\n\n【新兴趋势】\nAgent化能力正成为下一波主战场：Google Gemini基于Agent的视频分析可降88% token消耗、阿里\"万有无界\"主打PMO Agent+多角色协作、腾讯WorkBuddy以Agent基座打通软硬件生态，三条独立线索共同指向Agent从概念走向平台化落地。中国大模型\"反向出海\"与商业化提速也是反复出现的次",
+  "cross_analysis": "【核心矛盾】\n中国EUV光刻进展存在舆论与事实的明显分歧：市场长期流传中国可量产浸没式光刻机的说法，但Tom's Hardware援引分析师判断称中国EUV仅相当于ASML 2004年水平、与西方差距显著，无实证支撑量产传闻。另一矛盾在Anthropic与开源生态之间——Anthropic通过Messages API新规在协议层封堵模型蒸馏，但Ollama v0.33.0随即以本地代理方式绕过，Claude Desktop可直接调用Qwen、DeepSeek等开源模型，闭源\"防蒸馏\"与开源\"换模型\"呈持续拉锯。\n\n【新兴趋势】\n\"推理基础设施化\"信号密集出现：Equinix联合英伟达、Together AI推出分布式推理交换平台（2027Q1上线），OpenAI公开GPT-Live实时语音推理架构，Anthropic缓存读取",
   "trend_spotting": "Anthropic Fable 5.1缓存价砍75%、Agent任务降45%，叠加Qwen3.8-Max每百万Token均价仅5美元，Token单价正以\"季度级\"速度坍塌，单位推理成本曲线已从线性下移进入指数级压缩通道；同时OpenAI Astra的\"循环深度\"架构让模型\"静默思考\"——单次请求算力上升但可见Token减少，直接重塑推理芯片对HBM容量与互联带宽的需求结构，这一变化尚未被市场充分定价。\n\n被忽视的拐点：Anthropic 9月底至10月初的IPO将首次为未上市的OpenAI、xAI及国内大模型标的提供公开估值锚，届时披露的ARR与客户结构将引发整个AI价值链重估。Cognition 4个月估值从260亿飙至470亿美元、超额认购10倍，印证AI Coding正从\"功能模块\"升级为独立资产类别。\n\n早期信号：李飞飞多模态世界模型将生成式AI从二维视频推向三维仿真，与Google DeepMind Genie形成路线分化，具身智能/物理AI的算力入口正在向英伟达Cosmos平台倾斜；大模型厂商自研芯片虽流片未至，但已对博通/Marvell的ASIC订单预期形成边际压制。\n\n盲点：Anthropic\"反蒸馏机制\"直接剑指DeepSeek等开源蒸馏生态，可能触发开源阵营的合规与技术反制；Google重金求购好莱坞版权，则暗示头部大厂训练数据成本正进入通胀周期。"
 }
