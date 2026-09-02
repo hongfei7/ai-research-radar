@@ -4,99 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "OpenAI",
-        "亚马逊",
-        "苹果"
-      ],
-      "features": [
-        "ai",
-        "mac",
-        "mini",
-        "openai",
-        "万台",
-        "全拿",
-        "几万",
-        "去训",
-        "台全",
-        "吨囤",
-        "囤几",
-        "拿去",
-        "按吨",
-        "曝按",
-        "被曝",
-        "训了"
-      ],
-      "sent_at": "2026-09-01T02:03:54Z"
-    },
-    {
-      "tickers": [
-        "Anthropic",
-        "英伟达"
-      ],
-      "features": [
-        "中心",
-        "伟达",
-        "供应",
-        "克萨",
-        "向得",
-        "将向",
-        "州数",
-        "应芯",
-        "得克",
-        "心供",
-        "据中",
-        "数据",
-        "斯州",
-        "芯片",
-        "英伟",
-        "萨斯",
-        "达将"
-      ],
-      "sent_at": "2026-09-01T02:04:13Z"
-    },
-    {
-      "tickers": [
-        "Anthropic",
-        "微软",
-        "英伟达"
-      ],
-      "features": [
-        "35b",
-        "and",
-        "anissa",
-        "anthropic",
-        "built",
-        "by",
-        "center",
-        "chips",
-        "cloud",
-        "data",
-        "deal",
-        "gardizy",
-        "has",
-        "hold",
-        "hut",
-        "journal",
-        "lambda",
-        "lease",
-        "nvidia",
-        "nvidia-backed",
-        "on",
-        "signed",
-        "sources",
-        "street",
-        "supply",
-        "texas",
-        "the",
-        "to",
-        "wall",
-        "will",
-        "with"
-      ],
-      "sent_at": "2026-09-01T02:04:30Z"
-    },
-    {
-      "tickers": [
         "英伟达"
       ],
       "features": [
@@ -431,6 +338,54 @@
         "the"
       ],
       "sent_at": "2026-09-02T00:38:46Z"
+    },
+    {
+      "tickers": [
+        "OpenAI"
+      ],
+      "features": [
+        "astra",
+        "depth",
+        "openai",
+        "recurrent",
+        "silently",
+        "think",
+        "to",
+        "uses"
+      ],
+      "sent_at": "2026-09-02T05:14:26Z"
+    },
+    {
+      "tickers": [
+        "OpenAI"
+      ],
+      "features": [
+        "another",
+        "breakthrough",
+        "has",
+        "if",
+        "made",
+        "o1-level",
+        "openai",
+        "true"
+      ],
+      "sent_at": "2026-09-02T05:14:53Z"
+    },
+    {
+      "tickers": [
+        "Anthropic",
+        "OpenAI"
+      ],
+      "features": [
+        "anthropic",
+        "fable",
+        "了再",
+        "再秀",
+        "来了",
+        "秀肌",
+        "肌肉"
+      ],
+      "sent_at": "2026-09-02T05:15:15Z"
     }
   ],
   "last_report": {
