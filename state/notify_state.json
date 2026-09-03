@@ -4,73 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "Marvell",
-        "博通",
-        "英伟达"
-      ],
-      "features": [
-        "asic",
-        "价背",
-        "伟达",
-        "后要",
-        "对待",
-        "待了",
-        "涨价",
-        "真对",
-        "背后",
-        "英伟",
-        "被认",
-        "要被",
-        "认真",
-        "达涨"
-      ],
-      "sent_at": "2026-09-02T09:45:21Z"
-    },
-    {
-      "tickers": [
-        "Anthropic"
-      ],
-      "features": [
-        "anthropic",
-        "mythos",
-        "发布"
-      ],
-      "sent_at": "2026-09-02T09:45:45Z"
-    },
-    {
-      "tickers": [
-        "三星电子",
-        "海力士",
-        "英伟达"
-      ],
-      "features": [
-        "919b",
-        "ai",
-        "and",
-        "at",
-        "efforts",
-        "expanded",
-        "hynix",
-        "including",
-        "infrastructure",
-        "investment",
-        "its",
-        "korea",
-        "look",
-        "nvidia",
-        "planned",
-        "samsung",
-        "semianalysis",
-        "sk",
-        "south",
-        "sovereign",
-        "ties",
-        "with"
-      ],
-      "sent_at": "2026-09-02T09:45:55Z"
-    },
-    {
-      "tickers": [
         "Anthropic",
         "OpenAI",
         "亚马逊"
@@ -253,6 +186,91 @@
         "砍到"
       ],
       "sent_at": "2026-09-03T05:20:42Z"
+    },
+    {
+      "tickers": [
+        "Meta",
+        "OpenAI",
+        "xAI"
+      ],
+      "features": [
+        "against",
+        "ai",
+        "altman",
+        "amrith",
+        "and",
+        "at",
+        "elon",
+        "g20",
+        "heavy",
+        "huang",
+        "in",
+        "jensen",
+        "joined",
+        "journal",
+        "lobbying",
+        "mark",
+        "musk",
+        "officials",
+        "policymakers",
+        "ramkumar",
+        "regulations",
+        "sam",
+        "street",
+        "summit",
+        "the",
+        "trump",
+        "wall",
+        "zuckerberg"
+      ],
+      "sent_at": "2026-09-03T09:58:45Z"
+    },
+    {
+      "tickers": [
+        "海力士"
+      ],
+      "features": [
+        "sk",
+        "仁和",
+        "光州",
+        "力士",
+        "同步",
+        "和光",
+        "在龙",
+        "士正",
+        "州同",
+        "息称",
+        "投资",
+        "推进",
+        "正考",
+        "步推",
+        "海力",
+        "消息",
+        "称海",
+        "考虑",
+        "虑在",
+        "进投",
+        "龙仁"
+      ],
+      "sent_at": "2026-09-03T09:59:07Z"
+    },
+    {
+      "tickers": [
+        "Anthropic",
+        "英伟达"
+      ],
+      "features": [
+        "anthropic",
+        "billion",
+        "claude",
+        "deal",
+        "infrastructure",
+        "lambda",
+        "ramps",
+        "up",
+        "with"
+      ],
+      "sent_at": "2026-09-03T09:59:21Z"
     }
   ],
   "last_report": {

@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-03T05:19:42Z",
-  "text": "当前共有 26 个活跃事件。要点包括: Microsoft will start disclosing Azure quarterly revenue as part of a shift in its reporting structure, under which Azure revenue grew 42% YoY to $29.42B in Q4 (Jordan Novet/CNBC); 最强模型Fable 5.1发布，Anthropic要用降价换IPO; 谷歌发布Gemini 3.8 Flash，定价不变但单任务成本上升; 微软重组报告分部为两个：Agents and Infra与Devices and Consumer; Claude把“回忆”砍到2毛5，OpenAI的万亿参数正在失去护城河。",
-  "since": "2026-09-03T05:19:42Z",
-  "active_event_count": 26,
+  "generated_at": "2026-09-03T09:58:21Z",
+  "text": "截至 2026-09-03 17:58 HKT，本轮新增重要变化集中于算力侧与监管/资本侧两条主线。算力侧：SK海力士拟在龙仁与光州同步推进投资，澜起科技CXL 3.2 MXC芯片率先导入三星、SK海力士，CXL生态落地加速；Anthropic与Lambda签下350亿美元算力大单，印证头部实验室对GPU的持续重投入。监管与资本侧：G20期间黄仁勋、扎克伯格、奥特曼、马斯克联手游说反对强AI监管；OpenAI代号Astra的生产流程被政府审查，监管介入走向具体产品。产业层面：阿里配售800亿港元押注Token经济，旗下Qwen3.8-Max编程榜登顶并低价发布，腾讯同日上线WorkBuddy开放平台，\"模型卷价格、平台卷生态\"格局成型；智谱与MiniMax中报验证中国大模型SaaS化路径分化；台湾六年查办166起涉陆资伪装挖角芯片人才案件，叠加苹果CEO交接，板块格局进一步重塑。",
+  "since": "2026-09-03T09:58:21Z",
+  "active_event_count": 30,
   "key_themes": [
     "ai_monetization",
-    "compute_demand",
     "model_capability",
+    "compute_demand",
     "edge_ai",
-    "chip_supply"
+    "domestic_substitution"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n微软财报披露调整存在叙事差异：CNBC（条目1）聚焦Azure独立披露+42%同比高增长，WSJ（条目3）则强调\"Agents and Infra\"新分部命名背后的战略转向——前者是增长数据，后者是定位信号，但均指向同一逻辑。真正的矛盾在跨厂商对比：微软Azure 42%增速亮眼，而谷歌Gemini 3.8 Flash（条目4）被评价\"干活勤快但没开窍\"，反映两家在AI商业化路径上\"重算力基建 vs. 轻量模型迭代\"的策略分歧。Waymo（条目5）高溢价（500bp+）举债与Pimco/黑石踊跃认购并存，显示一级机构对L4 Robotaxi的长期信心与短期定价风险之间的拉扯。\n\n【新兴趋势】\n\"存力\"接棒\"算力\"成多源共振主题：条目2明确指出AI智能体推动存储成为主战场，叠加条目1中Azure 42%增长所暗示的算力持续扩张，存储/内存（美光、海力士、三星）从配角转为主线。此外，\"Agent\"概念从产品名升级为微软财报分部命名（条目3），标志AI Agent正从技术叙事走向财报结构层面，成为可被独立计量和估值的业务类别。\n\n【信息盲点】\n本轮报道严重缺失算力链条核心标的：英伟达、AMD、TSMC、台积电供应链、博通/Arista等网络互联标的均未单独出现，尽管\"compute_demand\"被反复提及。苹果、Meta、OpenAI完全缺席。Oracle等非头部云厂商也未涉及。电力/冷却等AI基建瓶颈侧无任何报道。存储链条仅有标题级提及，缺少价格、库存、稼动率等关键运营数据。\n\n【跨标的联动】\n三重联动信号显著：①微软Azure独立披露",
+  "cross_analysis": "【核心矛盾】\nG20峰会上黄仁勋、扎克伯格、Altman、马斯克联手游说反对强监管（45bfa935），但同日Altman又透露政府正在审查Astra大模型生产流程（75cd6497），科技高管\"反监管游说\"与\"被监管审查\"同时发生，监管方向存在内外错位。另一矛盾：TI年内第三轮涨价（76d72a66）反映模拟芯片供需偏紧，但AI主线叙事集中在算力/模型层，模拟链的传导路径在原文未被充分展开。\n\n【新兴趋势】\n①Token经济/SaaS化定价成为中美AI公司共同主线——智谱MaaS ARR 16亿美元、Token调用量年初至今增40倍（49c5254d），阿里800亿港元配售明确投向Token经济（8951edb10），叠加Anthropic-Lambda 350亿美元算力大单（1021c51e）、Qwen 5美元/百万tokens低价（4059206b），token消耗驱动推理算力的逻辑在多条线索中被反复印证；②端侧/边端AI硬件化加速——腾讯WorkBuddy联合Plaud/Rokid/科大讯飞（4059206b）、后摩M50存算一体切入AI PC与机器人（f8ad2a69）、苹果换帅后AI账悬念（649c56c5），端云协同成为新叙事；③CXL 3.2生态落地（744c0b33）首次从纸面进入头部内存厂导入阶段。\n\n【信息盲点】\n台积电CoWoS/SoIC先进封装扩产节奏未单独出现，但SK海力士HBM扩产、澜起CXL导入、Anthropic算力大",
   "trend_spotting": "72小时内，Qwen3.8-Max-0902以1691分登顶LMArena Code Arena WebDev，首次在编程基准上反超Claude Opus 5（3分），叠加混合定价$5/MToken，标志着中国前沿模型从\"追赶\"切换至\"局部领跑\"，且定价压力正向海外传导。同期谷歌六周内连推三款Flash轻量模型，3.8 Flash虽单价未涨但单任务输出token增加约30%，实际单任务成本不降反升——这是被广泛忽视的\"token价格战幻觉\"：表观降价掩盖推理算力消耗的结构性抬升。\n\n早期信号两条：Astra被OpenAI自评首个\"critical\"级网络能力系统，同时承认思维链监控不可靠，能力跃升与可解释性崩塌同步发生，这是AI安全防线松动的拐点；HBM5预告4096-bit接口、单堆栈4TB/s，内存带宽而非算力正成为新一轮架构瓶颈。司法层面，DoJ首次以法庭之友支持\"训练即合理使用\"，若被援"
 }
