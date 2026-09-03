@@ -131,6 +131,19 @@
       "queued_at": "2026-09-03T14:15:04Z"
     },
     {
+      "id": "d772e4159d28b3e29ba8c36d91d1c1ce99c3bc00",
+      "title": "Qwen3.8-Flash-Next MTP merged in ik_llama.cpp (integrated head or separate -md file)... 45 → 90 tok/s on a 5090 + 128GB, works down to a 12GB 4070",
+      "url": "https://www.reddit.com/r/localllama/comments/1w6ccgs/qwen38flashnext_mtp_merged_in_ik_llamacpp",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-03T16:30:00Z",
+      "raw_summary": "ik_llama.cpp merged qwen4exp MTP support yesterday (PR #2369, mine, reviewed and tested by four other people on their own hardware). It's on main now, no fork or patch needed. Posting since the last couple threads had people saying MTP for this model only exists as an unsloth fork PR... there's another path. Flash-Next ships a 2.6B MTP head that the public converters were dropping. With it loaded the model drafts its own next tokens and then verifies them, so output is identical to running without it. On code I get 93-99% draft acceptance, prose more like 60-65%. Numbers, decode tok/s, no MTP → MTP. My 5090 + 128GB DDR5, experts on CPU: 45 → 90 on coding traffic with ngram-mod chained in front. treo on an RTX Pro 6000: 85 → 113 on code, but story went 83 → 59, so not a free win on prose yet. joelfarthing on a 12GB 4070: 9.5 → 12.5 on code at n_max=1. Caveats: single slot for now (-np 1), and --jinja lowers acceptance because the template turns thinking on by default and reasoning text drafts like prose. Stock CUDA build, then: llama-server -m Qwen3.8-Flash-Next-MXFP4-ngramQ8-NextN.gguf -ngl 999 -ncmoe 38 -fa 1 -c 196608 -ub 512 -ctk q8_0 -ctv q8_0 -np 1 -t 24 -tb 32 --jinja --spec-type ngram-mod:n_min=4 --spec-type mtp:n_max=4 --spec-ckpt-mode gpu-fallback -rtr -muge Already have an unsloth or other quant? The separate head route works on the same code, no re-pull: -md &lt;head&gt;.gguf --spec-type mtp:n_max=4. dzannotti's and ji-farthing's heads were both tested during revie",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "ik_llama.cpp合并MTP支持，给出5090+128GB从45→90 tok/s、12GB 4070可跑、93-99% draft接受率等具体数据，PR #2369可查。",
+      "queued_at": "2026-09-03T17:54:38Z"
+    },
+    {
       "id": "5c97d052216084d76dc441408dfa37fd53dffb58",
       "title": "Discriminative World Models for Web Agents [Kelvin Li, Dhruv Pendharkar, Anish Pahilajani, Chuyi Shang, Leon Oks]",
       "url": "http://arxiv.org/abs/2609.02885v1",
@@ -505,19 +518,6 @@
       "angle": "engineering",
       "source_traceable": false,
       "why": "800VDC AI数据中心的电弧/火灾/热失效风险工程分析，对AI基础设施设计有参考价值。",
-      "queued_at": "2026-09-03T09:53:34Z"
-    },
-    {
-      "id": "5b45af547bd65bc52edc01dc4dd3e41a002748ef",
-      "title": "VibeVoice-ASR-Streaming Technical Report",
-      "url": "https://arxiv.org/abs/2609.02812",
-      "source": "huggingface:papers",
-      "published_at": "2026-09-01T20:00:00Z",
-      "raw_summary": "A streaming, LLM-based end-to-end model unifies speaker-attributed speech recognition and diarization for low-latency real-time applications.",
-      "score": 7,
-      "angle": "engineering",
-      "source_traceable": true,
-      "why": "技术报告形式，端到端LLM统一实现说话人归属的语音识别+说话人日志化，且面向流式低延迟场景，架构和工程取舍细节可作为实时多说话人语音系统的参考实现。",
       "queued_at": "2026-09-03T09:53:34Z"
     }
   ],
