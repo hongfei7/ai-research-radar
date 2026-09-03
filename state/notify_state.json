@@ -4,35 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "Anthropic",
-        "OpenAI",
-        "亚马逊"
-      ],
-      "features": [
-        "claude",
-        "fable",
-        "上锁",
-        "倍是",
-        "分翻",
-        "发布",
-        "块上",
-        "子思",
-        "布跑",
-        "思考",
-        "才是",
-        "是里",
-        "是面",
-        "翻倍",
-        "考块",
-        "跑分",
-        "里子",
-        "锁才",
-        "面子"
-      ],
-      "sent_at": "2026-09-02T13:59:37Z"
-    },
-    {
-      "tickers": [
         "博通"
       ],
       "features": [
@@ -271,6 +242,77 @@
         "with"
       ],
       "sent_at": "2026-09-03T09:59:21Z"
+    },
+    {
+      "tickers": [
+        "英伟达"
+      ],
+      "features": [
+        "8-k",
+        "nvda",
+        "of",
+        "or",
+        "pursuant",
+        "section",
+        "to",
+        "伟达",
+        "英伟"
+      ],
+      "sent_at": "2026-09-03T14:22:26Z"
+    },
+    {
+      "tickers": [
+        "ASML",
+        "台积电",
+        "英伟达"
+      ],
+      "features": [
+        "64b",
+        "ai",
+        "amid",
+        "capex",
+        "demand",
+        "doubles",
+        "equipment",
+        "fab",
+        "in",
+        "months",
+        "nearly",
+        "pushes",
+        "shortages",
+        "six",
+        "surge",
+        "tool",
+        "toward",
+        "tsmc"
+      ],
+      "sent_at": "2026-09-03T14:22:54Z"
+    },
+    {
+      "tickers": [
+        "Anthropic"
+      ],
+      "features": [
+        "anthropic",
+        "claude",
+        "不睡",
+        "后正",
+        "在终",
+        "型论",
+        "小时",
+        "拆解",
+        "时不",
+        "模型",
+        "正在",
+        "的背",
+        "睡觉",
+        "终结",
+        "结模",
+        "背后",
+        "觉的",
+        "解小"
+      ],
+      "sent_at": "2026-09-03T14:23:21Z"
     }
   ],
   "last_report": {
