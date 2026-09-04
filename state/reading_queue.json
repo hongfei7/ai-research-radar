@@ -1,6 +1,19 @@
 {
   "candidates": [
     {
+      "id": "805737c915e38eb98b4d88928267c8e99e483903",
+      "title": "Anthropic says Claude worked \"largely autonomously\" over 11 days to formalize the proof of Fermat's Last Theorem in the Lean programming language (Anthropic)",
+      "url": "https://www.techmeme.com/260904/p28#a260904p28",
+      "source": "rss:techmeme",
+      "published_at": "2026-09-04T20:35:10Z",
+      "raw_summary": "Anthropic: Anthropic says Claude worked &ldquo;largely autonomously&rdquo; over 11 days to formalize the proof of Fermat's Last Theorem in the Lean programming language&nbsp; &mdash;&nbsp; We are sharing the first complete computer-checked proof of Fermat's Last Theorem.&nbsp; Claude worked largely autonomously over 11 days &hellip;",
+      "score": 9,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Anthropic用Claude自主形式化Fermat大定理证明，对AI推理能力边界有重要认知增量，附带11天执行过程的一手材料。",
+      "queued_at": "2026-09-04T22:12:56Z"
+    },
+    {
       "id": "7390d092b1d2b146e6797faf8a66743d11778939",
       "title": "Clean Engineering, Unstable Measurement: A Preregistered Reliability Failure of Black-Box LLM Observers on Shared Endpoints [Haoyaun Zhu, Jie Zhang]",
       "url": "http://arxiv.org/abs/2609.04198v1",
@@ -505,19 +518,6 @@
       "angle": "research",
       "source_traceable": true,
       "why": "统一多模态框架联合建模物理/几何/外观做3D世界生成与闭环探索，值得了解范式与实验设置。",
-      "queued_at": "2026-09-04T05:39:40Z"
-    },
-    {
-      "id": "7856371ac58bd3cff33ea7c2e871dd7a94c7d452",
-      "title": "Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning",
-      "url": "https://arxiv.org/abs/2609.03430",
-      "source": "huggingface:papers",
-      "published_at": "2026-09-02T20:00:00Z",
-      "raw_summary": "Random eviction of reasoning tokens matches selective KV cache compression because reasoning traces are self-protecting through redundancy, making scoring unnecessary once prompts are preserved.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "提出推理trace自带冗余保护，随机驱逐可匹敌精细打分，对KV cache策略有反直觉结论。",
       "queued_at": "2026-09-04T05:39:40Z"
     }
   ],
