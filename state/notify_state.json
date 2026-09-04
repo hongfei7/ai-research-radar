@@ -4,87 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "Anthropic"
-      ],
-      "features": [
-        "anthropic",
-        "fable",
-        "ipo",
-        "价换",
-        "发布",
-        "型发",
-        "布要",
-        "强模",
-        "最强",
-        "模型",
-        "用降",
-        "要用",
-        "降价"
-      ],
-      "sent_at": "2026-09-03T05:20:06Z"
-    },
-    {
-      "tickers": [
-        "三星电子",
-        "海力士"
-      ],
-      "features": [
-        "46.65b",
-        "according",
-        "accounting",
-        "august",
-        "cnbc",
-        "country",
-        "exports",
-        "for",
-        "goods",
-        "hui",
-        "in",
-        "jie",
-        "korean",
-        "lim",
-        "of",
-        "officials",
-        "record",
-        "semiconductor",
-        "south",
-        "surged",
-        "the",
-        "to",
-        "yoy"
-      ],
-      "sent_at": "2026-09-03T05:20:29Z"
-    },
-    {
-      "tickers": [
-        "Anthropic",
-        "OpenAI"
-      ],
-      "features": [
-        "claude",
-        "openai",
-        "万亿",
-        "亿参",
-        "到毛",
-        "去护",
-        "参数",
-        "回忆",
-        "在失",
-        "城河",
-        "失去",
-        "忆砍",
-        "把回",
-        "护城",
-        "数正",
-        "正在",
-        "毛的",
-        "的万",
-        "砍到"
-      ],
-      "sent_at": "2026-09-03T05:20:42Z"
-    },
-    {
-      "tickers": [
         "Meta",
         "OpenAI",
         "xAI"
@@ -462,6 +381,63 @@
         "with"
       ],
       "sent_at": "2026-09-04T00:54:52Z"
+    },
+    {
+      "tickers": [
+        "AMD",
+        "Intel",
+        "三星电子"
+      ],
+      "features": [
+        "业集",
+        "代工",
+        "体涨",
+        "圆代",
+        "工业",
+        "晶圆",
+        "涨涨",
+        "集体"
+      ],
+      "sent_at": "2026-09-04T05:45:27Z"
+    },
+    {
+      "tickers": [
+        "三星电子",
+        "海力士",
+        "美光"
+      ],
+      "features": [
+        "hbm",
+        "产产",
+        "产能",
+        "光计",
+        "内大",
+        "划年",
+        "大幅",
+        "幅扩",
+        "年内",
+        "扩产",
+        "有望",
+        "望翻",
+        "美光",
+        "翻倍",
+        "能有",
+        "计划"
+      ],
+      "sent_at": "2026-09-04T05:45:51Z"
+    },
+    {
+      "tickers": [
+        "OpenAI",
+        "微软",
+        "英伟达"
+      ],
+      "features": [
+        "gpt-6",
+        "is",
+        "released"
+      ],
+      "sent_at": "2026-09-04T05:46:16Z"
     }
   ],
   "last_report": {
