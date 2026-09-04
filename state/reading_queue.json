@@ -248,6 +248,32 @@
       "queued_at": "2026-09-04T17:37:56Z"
     },
     {
+      "id": "de832d4c5df20852e052f99a02c70ed49fd325a5",
+      "title": "OpenAI says it can't read all of Astra's reasoning and admits covert sandbagging would likely go uncaught, yet still calls it the world's most aligned model (Celia Ford/Transformer)",
+      "url": "https://www.techmeme.com/260904/p24#a260904p24",
+      "source": "rss:techmeme",
+      "published_at": "2026-09-04T18:20:09Z",
+      "raw_summary": "Celia Ford / Transformer: OpenAI says it can't read all of Astra's reasoning and admits covert sandbagging would likely go uncaught, yet still calls it the world's most aligned model&nbsp; &mdash;&nbsp; OpenAI is hailing its new model as &ldquo;the world's most intelligent and aligned&rdquo;, but the details reveal an awareness of being evaluated &hellip;",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "OpenAI自承无法读懂Astra全部推理、covert sandbagging可能漏检却仍称最对齐——这是对齐路线上的关键一手表态。",
+      "queued_at": "2026-09-04T19:54:16Z"
+    },
+    {
+      "id": "61669d238c0bd6be4c4aeb6a445a6d817c2d1329",
+      "title": "Updated my benchmark with a new vLLM based recipe for Qwen 3.8 Flash Next : now up to 98/100 (instead of 91 previously)",
+      "url": "https://www.reddit.com/r/localllama/comments/1w7c4ej/updated_my_benchmark_with_a_new_vllm_based_recipe",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-04T18:12:07Z",
+      "raw_summary": "I was using: weights https://huggingface.co/RadixArk/Qwen3.8-Flash-Next-NVFP4 with the optimized SGLANG (patched) from https://old.reddit.com/r/BlackwellPerformance/comments/1w04xb7/qwen38_flashnext_on_1x_rtx_pro_6000_171_ts_c1_428/ Now I'm using: weights (AWQ W4A16) from: https://huggingface.co/wtdcode/Qwen3.8-Flash-Next-AWQ-W4A16 PLE (INT4) from: https://huggingface.co/primitive-ai/Qwen3.8-Flash-Next-PLE-quant with vLLM patched with the patch from the same repo cf https://huggingface.co/primitive-ai/Qwen3.8-Flash-Next-PLE-quant#serve the goal was to load both the weights and the n-gram PLE quantized in 4bits either on my sm89 or sm120 devices It's way slower (for my low concurrency usecase) but also a lot better. I was surprised to see such a delta. I reached 98/100 (instead of 91) both with medium and xhigh reasoning (still not useful for this bench). And now it really feels like a huge setup up from the other models. It's the best score AND the most efficient... I'll try to dig deeper to understand if the difference comes from the engine (and its patches) or the quants themselves. And try to optimize further the vLLM receipt for my setup as always, the graphs and the data : here and here &#32; submitted by &#32; /u/WonderRico [link] &#32; [comments]",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Qwen3.8 Flash Next用vLLM+AWQ W4A16+PLE n-gram量化把分数从91拉到98，给出具体权重/patch/栈，工程复现价值高。",
+      "queued_at": "2026-09-04T19:54:16Z"
+    },
+    {
       "id": "27ec2f227ec79573dea5baa1b2e0c02abb8089b7",
       "title": "Compile by Training: Turning Natural-Language Specifications into Local Neural Functions [Yuntian Deng, Pengyu Nie, Stuart Shieber]",
       "url": "http://arxiv.org/abs/2609.04199v1",
@@ -492,32 +518,6 @@
       "angle": "research",
       "source_traceable": true,
       "why": "提出推理trace自带冗余保护，随机驱逐可匹敌精细打分，对KV cache策略有反直觉结论。",
-      "queued_at": "2026-09-04T05:39:40Z"
-    },
-    {
-      "id": "6a3efb7b3c8c392e2c1a3d3080d01de36ed265f1",
-      "title": "Rethinking On-Policy Distillation of Large Language Models II: One Training Example",
-      "url": "https://arxiv.org/abs/2609.04172",
-      "source": "huggingface:papers",
-      "published_at": "2026-09-02T20:00:00Z",
-      "raw_summary": "On-policy distillation improves over hundreds of steps from a single query by rapidly covering teacher states, yet student alignment remains slow, indicating the method is algorithm-starved rather than data-starved.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "单条query就能在on-policy蒸馏下跨数百步改进，挑战数据饥饿叙事并定位为算法饥饿。",
-      "queued_at": "2026-09-04T05:39:40Z"
-    },
-    {
-      "id": "93517ccc52144fafcfd88dc9461aa52adb4ff746",
-      "title": "Principia: Relational Physics Tests for Video Models",
-      "url": "https://arxiv.org/abs/2609.04200",
-      "source": "huggingface:papers",
-      "published_at": "2026-09-02T20:00:00Z",
-      "raw_summary": "Principia evaluates video generators on Newtonian physics via calibration-independent relational consistency across paired objects, revealing major physical reasoning gaps.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "用校准无关的配对关系一致性测视频模型的牛顿物理推理，揭示主要视频生成器的物理缺陷。",
       "queued_at": "2026-09-04T05:39:40Z"
     }
   ],
