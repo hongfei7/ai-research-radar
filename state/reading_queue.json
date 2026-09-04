@@ -144,6 +144,45 @@
       "queued_at": "2026-09-04T09:58:09Z"
     },
     {
+      "id": "61f0e366fc61d3d7c58591beffbf05fa0ce418b5",
+      "title": "Sources: DeepSeek plans to use 160K+ of Huawei's Ascend 950DT chips at an Inner Mongolia data center, which would create one of the largest Huawei chip clusters (Mackenzie Hawkins/Bloomberg)",
+      "url": "https://www.techmeme.com/260904/p6#a260904p6",
+      "source": "rss:techmeme",
+      "published_at": "2026-09-04T10:30:20Z",
+      "raw_summary": "Mackenzie Hawkins / Bloomberg: Sources: DeepSeek plans to use 160K+ of Huawei's Ascend 950DT chips at an Inner Mongolia data center, which would create one of the largest Huawei chip clusters&nbsp; &mdash;&nbsp; DeepSeek plans to deploy at least 160,000 of Huawei Technologies Co.'s top accelerators at a massive data center it's building &hellip;",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "DeepSeek用16万+颗华为昇腾950DT建集群，是国产AI算力替代路线的关键信号，值得细读。",
+      "queued_at": "2026-09-04T14:12:30Z"
+    },
+    {
+      "id": "d2f500aac13886843094695fd117f056079090d0",
+      "title": "We open-sourced Paddock, our Rust/C++ inference engine with its own CUDA kernels (MIT/Apache-2.0)",
+      "url": "https://www.reddit.com/r/localllama/comments/1w6z9oh/we_opensourced_paddock_our_rustc_inference_engine",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-04T09:15:33Z",
+      "raw_summary": "I'm one of the developers. We said in August it would go open source in September and it did last night. MIT or Apache-2.0, pick one. The repo you see is our internal repo, kernels included, so from now on everything happens in public. It's an inference engine in Rust and C++ with our own CUDA kernels. One binary with OpenAI and Anthropic style APIs, loads GGUF and safetensors. We run about 300B tokens a year through it at work. Some numbers: Qwen3.8-27B FP8 on one RTX PRO 6000, spec decoding off on every engine: vs vLLM faster in 13 of 13 cells, 1.02x to 1.19x (so not huge) vs SGLang faster in 10 of 13, behind in 2, level in 1 vs llama.cpp Q8_0 faster in 13 of 13, 1.5x to 37x 32 clients at 1024 in / 1024 out: 1062 tok/s, vLLM 958, SGLang 844 Full board with the losses: https://truespar.com/paddock/benchmarks/qwen38-27b What it does not do yet: CUDA only, Windows and Linux. Validated on Blackwell (5090, RTX PRO 4500/5000/6000, B200) and Ampere (an A6000 was the bring-up card, 30-series works). Ada kernels ship but nobody has run a board on them so the engine refuses to start unless you set PADDOCK_UNVALIDATED_ARCH=1. Hopper and A100 kernels are in the tree without a board. No Mac, no ROCm, no Vulkan. One model per GPU, no tensor parallel. https://github.com/truespar/paddock Thankful for any help and input! &#32; submitted by &#32; /u/saltexx [link] &#32; [comments]",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Paddock Rust/C++推理引擎开源，含自研CUDA kernel，并给出vs vLLM/SGLang的实测对比，工程价值高。",
+      "queued_at": "2026-09-04T14:12:30Z"
+    },
+    {
+      "id": "6731abf9efe05a682d994d030265078ffdd3d056",
+      "title": "Select, Compress, Reinvest: A Controlled Study of Visual-Token Allocation in Long-Video MLLMs",
+      "url": "https://arxiv.org/abs/2609.03820",
+      "source": "huggingface:papers",
+      "published_at": "2026-09-02T20:00:00Z",
+      "raw_summary": "Frame selection dominates accuracy in long-video language models, while spatial compression is nearly free if savings are reinvested into more frames, and a unified harness is needed to compare selectors fairly.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "长视频MLLM中视觉token分配的受控研究，明确给出帧选择优于空间压缩的结论，可直接指导相关系统设计。",
+      "queued_at": "2026-09-04T14:12:30Z"
+    },
+    {
       "id": "27ec2f227ec79573dea5baa1b2e0c02abb8089b7",
       "title": "Compile by Training: Turning Natural-Language Specifications into Local Neural Functions [Yuntian Deng, Pengyu Nie, Stuart Shieber]",
       "url": "http://arxiv.org/abs/2609.04199v1",
@@ -479,45 +518,6 @@
       "angle": "engineering",
       "source_traceable": true,
       "why": "ACE自研音乐生成基础模型给出与Suno v5.5的具体对比指标和1/5成本，垂直AI模型路线有参考价值。",
-      "queued_at": "2026-09-04T09:58:09Z"
-    },
-    {
-      "id": "ca2374f24a365d283ce3202c4aa1f9e5583702d5",
-      "title": "ScienceDiscovery实现树搜索驱动RSI，加速科学发现，小时级写出通用积分器，低成本找出物理科学规律",
-      "url": "https://www.qbitai.com/2026/09/484293.html",
-      "source": "rss:qbitai",
-      "published_at": "2026-09-04T08:57:14Z",
-      "raw_summary": "",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "树搜索驱动的科学发现自动化（RSI）报道，涉及通用积分器与物理规律挖掘的具体进展，值得追踪一手论文。",
-      "queued_at": "2026-09-04T09:58:09Z"
-    },
-    {
-      "id": "391916d2b60cf72ef54aa14153a231e91dcbe8a1",
-      "title": "对话 Sharpa 李一帆：通用机器人要么全能，要么无能",
-      "url": "http://www.geekpark.net/news/369851",
-      "source": "rss:geekpark",
-      "published_at": "2026-09-04T08:37:04Z",
-      "raw_summary": "具身智能现在太吵了。 行业里的人各自笃定，声音大的先被听见。最响的那些声音，往往离真实的进展最远。 真正在往前推的人，看的是谁在践行非共识，什么在真的往前走，以及谁心里有一张完整的图，而不是走一步看一步。 这些东西不会上热搜，但它们决定这个行业的下一步。 我们一直探寻这些。如果你也是&mdash;&mdash; 欢迎来到极客公园 In The Loop。👇 &nbsp; &nbsp; &nbsp; 作者｜Li Yuan &nbsp; &nbsp; 过去一年，上海静安区最醒目的队伍之一，在兴业太古汇北广场上。114.5 米长的路易威登「路易号」，像是一艘巨轮驶入南京西路，引起游人纷纷拍照。 很快，隔着石门一路，对面可能会出现一个新的排队打卡点。 8 月 29 日，吴江路 169 号的一家 DQ 将重新开门。柜台后面，多了一名机器人店员。 机器人做冰淇淋，乍听并不新鲜。过去几年，类似的机器已经作为噱头出现过不少：一套专门为机器人设计的冰淇淋机完成大部分流程，机械臂只需要接住杯子，再把它递给顾客。与其说机器人学会了做冰淇淋，不如说人们重新造了一台更适合机器人操作的机器。 这一次不太一样。 Sharpa 的机器人做的是一杯大家熟悉的 DQ 暴风雪，从取杯、出料、加料到搅拌，全都按照 DQ 原有的步骤完成，包括取用杯圈时，像店员一样拉开为人手设计的柜门，加小料时打开小料盖子用小勺盛起来，以及根据视觉和触觉反馈，搅拌冰淇淋。 最后还要通过招牌式的倒杯检验&mdash;&mdash;把杯子倒过来，冰淇淋不能掉。 这个项目很快就要在店里直接进行每日 12 小时稳定运营，直接接受每一个到店顾客的检验&mdash;&mdash;DQ 大家太熟悉了。一杯暴风雪做得好不好、倒过来会不会掉，几乎一眼就能判断。 这台机器人来自 Sharpa，成立于 2024 年，过去几乎总被视作一家灵巧手公司：它推出的 Sharpa Wave 灵巧手拥有 22 个自由度和触觉感知能力和很强的可靠性，表现太抢眼，以至于机械臂、整机和 AI 反而被藏在了后面。 DQ 项目是 Sharpa 第一次把这些部分同时推到台前&mdash;&mdash;灵巧手不再只是一个单独出售的零部件，而是装在机器人身上，连续完成制作一杯暴风雪所需的 55 个步骤。 过去一年，机器人行业被问得最多的问题之一，就是到底有没有真正落地、有没有走到商业化。 按照真实门店、真实订单和连续运营这些标准，DQ 项目或许已经是离这个答案比较近的一次尝试。不过，如果按照当下的商业账来算，它显然还没有完全成立：项目目前只在一家门店试运营，只能制作有限的品类，做一杯冰淇淋仍然慢于人工，第一代整机的成本也远高于人工。 Sharpa 联合创始人李一帆把这次 DQ 试运营看作一场必须「真诚」面对结果的测试。 他把问题分成了两层。 第一层是「到底能不能做」。不改造环境，不用人为降低任务难度，而是把机器人直接交给真实运营来检验：它能否可靠地跑完 55 个步骤？能否连续工作 12 个小时？如果最终每天都「鸡飞狗跳」，就说明这条路线还没有跑通，只能承认失败&mdash;&mdash;用李一帆的话说，就是「真诚地失败」。 第二层才是「能不能做得更快、更便宜」。在李一帆看来，只要先跨过「能做」这条能力线，提速和降本就是两件「100%确定会做、并且 100%会成功的事」。他有理由这么说。李一帆的上一次创业是禾赛&mdash;&mdash;激光雷达从早年几十万元一台，降到今天的千元级，这条曲线他自己走过一遍。 在这里，「真诚」这个词显得格外扎眼。 这与机器人",
-      "score": 7,
-      "angle": "route",
-      "source_traceable": true,
-      "why": "Sharpa创始人关于通用机器人路线（全能vs无能）的非共识判断，DQ冰淇淋店是真实验证场景，提供了具身智能落地的具体观点。",
-      "queued_at": "2026-09-04T09:58:09Z"
-    },
-    {
-      "id": "0a76092b8c1a6e0a7102a8995b4d428002b297f7",
-      "title": "Nvidia becomes a leading global strategic tech backer, with the value of its equity investments up 10x in the past year to $99B, as it bolsters the AI sector (Kai Nicol-Schwarz/CNBC)",
-      "url": "https://www.techmeme.com/260904/p4#a260904p4",
-      "source": "rss:techmeme",
-      "published_at": "2026-09-04T09:45:02Z",
-      "raw_summary": "Kai Nicol-Schwarz / CNBC: Nvidia becomes a leading global strategic tech backer, with the value of its equity investments up 10x in the past year to $99B, as it bolsters the AI sector&nbsp; &mdash;&nbsp; Nvidia has become one of the world's largest corporate backers of tech companies as the value of its equity investments soared &hellip;",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "Nvidia从芯片公司转型为战略科技投资人，990亿美元股权布局对理解AI产业权力结构很重要。",
       "queued_at": "2026-09-04T09:58:09Z"
     }
   ],

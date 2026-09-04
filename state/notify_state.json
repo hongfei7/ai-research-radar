@@ -4,91 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "Meta",
-        "OpenAI",
-        "xAI"
-      ],
-      "features": [
-        "against",
-        "ai",
-        "altman",
-        "amrith",
-        "and",
-        "at",
-        "elon",
-        "g20",
-        "heavy",
-        "huang",
-        "in",
-        "jensen",
-        "joined",
-        "journal",
-        "lobbying",
-        "mark",
-        "musk",
-        "officials",
-        "policymakers",
-        "ramkumar",
-        "regulations",
-        "sam",
-        "street",
-        "summit",
-        "the",
-        "trump",
-        "wall",
-        "zuckerberg"
-      ],
-      "sent_at": "2026-09-03T09:58:45Z"
-    },
-    {
-      "tickers": [
-        "海力士"
-      ],
-      "features": [
-        "sk",
-        "仁和",
-        "光州",
-        "力士",
-        "同步",
-        "和光",
-        "在龙",
-        "士正",
-        "州同",
-        "息称",
-        "投资",
-        "推进",
-        "正考",
-        "步推",
-        "海力",
-        "消息",
-        "称海",
-        "考虑",
-        "虑在",
-        "进投",
-        "龙仁"
-      ],
-      "sent_at": "2026-09-03T09:59:07Z"
-    },
-    {
-      "tickers": [
-        "Anthropic",
-        "英伟达"
-      ],
-      "features": [
-        "anthropic",
-        "billion",
-        "claude",
-        "deal",
-        "infrastructure",
-        "lambda",
-        "ramps",
-        "up",
-        "with"
-      ],
-      "sent_at": "2026-09-03T09:59:21Z"
-    },
-    {
-      "tickers": [
         "英伟达"
       ],
       "features": [
@@ -438,6 +353,101 @@
         "released"
       ],
       "sent_at": "2026-09-04T05:46:16Z"
+    },
+    {
+      "tickers": [
+        "DeepSeek"
+      ],
+      "features": [
+        "160k",
+        "950dt",
+        "an",
+        "ascend",
+        "at",
+        "bloomberg",
+        "center",
+        "chip",
+        "chips",
+        "clusters",
+        "create",
+        "data",
+        "deepseek",
+        "hawkins",
+        "huawei",
+        "inner",
+        "largest",
+        "mackenzie",
+        "mongolia",
+        "of",
+        "one",
+        "plans",
+        "sources",
+        "the",
+        "to",
+        "use",
+        "which",
+        "would"
+      ],
+      "sent_at": "2026-09-04T14:19:37Z"
+    },
+    {
+      "tickers": [
+        "OpenAI"
+      ],
+      "features": [
+        "agi",
+        "astra",
+        "gpt-6",
+        "openai",
+        "一次",
+        "不可",
+        "不懂",
+        "代的",
+        "可读",
+        "型来",
+        "官宣",
+        "宣时",
+        "思维",
+        "懂的",
+        "控者",
+        "时代",
+        "来了",
+        "模型",
+        "次不",
+        "的思",
+        "的模",
+        "监控",
+        "看不",
+        "第一",
+        "维第",
+        "者看",
+        "读监"
+      ],
+      "sent_at": "2026-09-04T14:20:05Z"
+    },
+    {
+      "tickers": [
+        "Anthropic",
+        "OpenAI"
+      ],
+      "features": [
+        "agi",
+        "arc-agi-3",
+        "astra",
+        "benchmarks",
+        "but",
+        "chollet",
+        "disagree",
+        "efficiency",
+        "forecast",
+        "forward",
+        "gpt-6",
+        "human-beating",
+        "its",
+        "on",
+        "pulls"
+      ],
+      "sent_at": "2026-09-04T14:20:30Z"
     }
   ],
   "last_report": {
