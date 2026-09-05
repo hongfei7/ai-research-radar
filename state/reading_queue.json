@@ -220,6 +220,19 @@
       "source_traceable": true,
       "why": "GPT-6 发布24小时内被 jailbreak，且攻击者需扩展原始 TIP 技术才成功，说明模型安全对齐的攻防在升级，对模型安全研究者有直接参考价值。",
       "queued_at": "2026-09-05T19:22:30Z"
+    },
+    {
+      "id": "e2964291380af579c19dcd374f402ef43d6c26c6",
+      "title": "Qwen3.8 Flash Next - Templates Comparison",
+      "url": "https://www.reddit.com/r/localllama/comments/1w84mod/qwen38_flash_next_templates_comparison",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-05T16:02:24Z",
+      "raw_summary": "I was running into a lot of posts that praised both the Fixed template and the Sharp template in comparison to the stock one, so I put them to the test. It's not as extensive as it should be for a paper-grade analysis, but it gives out the point of each template. Test setup I used SWE-bench Verified with mini-SWE-agent 2.4.6, slice 0:100 (the identical 100 tasks for all runs) Hardware CPU: Ryzen 9 9900X RAM: 128 GB DDR5-5600 GPU: RTX PRO 6000 WS Runtime I containerized jpezzulli/sglang-rtxpro6000 and ran Flash Next with RadixArk/Qwen3.8-Flash-Next-NVFP4 on CUDA 13.3. Full 262K context BF16 KV 51.2 GB FP8 n-gram embedding table pinned in RAM 32 GB HiCache pinned in RAM I ran all templates at both medium and xhigh reasoning efforts. Results Metric Stock (medium) Stock (xhigh) Stock Δ Fixed (medium) Fixed (xhigh) Fixed Δ Sharp (medium) Sharp (xhigh) Sharp Δ Resolved 91 99 +8 87 98 +11 94 94 +0 Resolution rate 91% 99% +8 pts 87% 98% +11 pts 94% 94% +0 pts Median output tokens 5,691 13,855 +143.5% 6,956 14,819 +113.0% 8,596 12,008 +39.7% Median reasoning tokens 3,050 8,759 +187.2% 3,809 9,063 +137.9% 5,437 7,967 +46.5% Median wall time 38s 1m 46s +180.4% 43s 1m 47s +152.3% 1m 1m 32s +53.4% Total wall time 1h 47m 1s 4h 31m 22s +153.6% 1h 59m 53s 4h 4m 52s +104.3% 2h 29m 18s 3h 11m 36s +28.3% https://preview.redd.it/02geu81o8qnh1.png?width=1152&amp;format=png&amp;auto=webp&amp;s=ad851853e5171288af8cb07b1d16fdb62e6e986d https://preview.redd.it/v2mt6mgo8qnh1.png?width=1152&amp;format=",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "给出Qwen3.8 Flash Next在固定/锐利prompt模板下的SWE-bench复现数据与硬件设置，可复用的推理优化实验",
+      "queued_at": "2026-09-05T21:33:21Z"
     }
   ],
   "digest_last_date": "2026-09-05"
