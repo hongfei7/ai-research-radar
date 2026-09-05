@@ -4,101 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "DeepSeek"
-      ],
-      "features": [
-        "160k",
-        "950dt",
-        "an",
-        "ascend",
-        "at",
-        "bloomberg",
-        "center",
-        "chip",
-        "chips",
-        "clusters",
-        "create",
-        "data",
-        "deepseek",
-        "hawkins",
-        "huawei",
-        "inner",
-        "largest",
-        "mackenzie",
-        "mongolia",
-        "of",
-        "one",
-        "plans",
-        "sources",
-        "the",
-        "to",
-        "use",
-        "which",
-        "would"
-      ],
-      "sent_at": "2026-09-04T14:19:37Z"
-    },
-    {
-      "tickers": [
-        "OpenAI"
-      ],
-      "features": [
-        "agi",
-        "astra",
-        "gpt-6",
-        "openai",
-        "一次",
-        "不可",
-        "不懂",
-        "代的",
-        "可读",
-        "型来",
-        "官宣",
-        "宣时",
-        "思维",
-        "懂的",
-        "控者",
-        "时代",
-        "来了",
-        "模型",
-        "次不",
-        "的思",
-        "的模",
-        "监控",
-        "看不",
-        "第一",
-        "维第",
-        "者看",
-        "读监"
-      ],
-      "sent_at": "2026-09-04T14:20:05Z"
-    },
-    {
-      "tickers": [
-        "Anthropic",
-        "OpenAI"
-      ],
-      "features": [
-        "agi",
-        "arc-agi-3",
-        "astra",
-        "benchmarks",
-        "but",
-        "chollet",
-        "disagree",
-        "efficiency",
-        "forecast",
-        "forward",
-        "gpt-6",
-        "human-beating",
-        "its",
-        "on",
-        "pulls"
-      ],
-      "sent_at": "2026-09-04T14:20:30Z"
-    },
-    {
-      "tickers": [
         "OpenAI",
         "微软",
         "英伟达"
@@ -351,6 +256,26 @@
         "with"
       ],
       "sent_at": "2026-09-05T12:12:17Z"
+    },
+    {
+      "tickers": [
+        "OpenAI"
+      ],
+      "features": [
+        "astra",
+        "blocklist",
+        "for",
+        "gpt-6",
+        "including",
+        "of",
+        "openai",
+        "prompting",
+        "shares",
+        "slop",
+        "tips",
+        "words"
+      ],
+      "sent_at": "2026-09-05T15:17:23Z"
     }
   ],
   "last_report": {

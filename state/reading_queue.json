@@ -168,6 +168,45 @@
       "source_traceable": true,
       "why": "台湾调查局查处非法陆资半导体企业 166 起/36 起的具体数据，揭示两岸人才与技术外流路径",
       "queued_at": "2026-09-05T12:07:18Z"
+    },
+    {
+      "id": "68791d26aaf4f082fce2975d5e82b2317c745f18",
+      "title": "NInfer vs llama.cpp vs vLLM: quality + speed comparison for Qwen3.8-27B NVFP4 on RTX 5090",
+      "url": "https://www.reddit.com/r/localllama/comments/1w821fg/ninfer_vs_llamacpp_vs_vllm_quality_speed",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-05T14:20:25Z",
+      "raw_summary": "I've been running Qwen3.8-27B as a local inference server for a production content intelligence pipeline (HVAC industry stuff, lots of long-context retrieval and structured extraction). I have been watching other redditors post their custom configurations, and I wanted to share what I tested to optimize for a single RTX 5090. I was on llama.cpp (Q5\\_K\\_M GGUF, q5\\_1 KV, 262K context, MTP), but it's limited to parallel=1 and I wanted concurrent serving. So I tested vLLM and NInfer as NVFP4 replacements and did a proper quality evaluation instead of just vibes. Hardware - RTX 5090 32GB (eGPU, OCuLink Gen4 x4) (yes, it's in an eGPU dock 😂 but that only affects model loading) - Ryzen 7 7840HS, 32 GB DDR5 - Ubuntu 26.04, nvidia driver 610.43.02 (open) ## Engine configs **llama.cpp*\\* **vLLM*\\* **NInfer*\\* Quant Q5\\_K\\_M GGUF NVFP4 NVFP4 KV cache q8\\_0 FP8 FP8 Context 196K 262K 240K MTP On (gate failed) None MTP3 (76% acceptance) Concurrency parallel=1 Continuous batch x2 lanes VRAM 31.6 GB 29.6 GB 30.5 GB How the eval worked I built a custom harness with 6 tiers, 50 items each, all from my actual production workload (not generic benchmarks): **Relevance classification*\\* - is this industry relevant? (binary, 50 labeled deals) **Needle retrieval*\\* - planted facts in real industry podcast/video transcripts at 64K/128K/192K/240K context **Multi-transcript QA*\\* - questions across 3-4 concatenated diarized transcripts, 120K+ tokens, including unanswerable controls **Reasoning with th",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "NInfer/vLLM/llama.cpp在RTX 5090上跑Qwen3.8-27B的NVFP4推理对比，含质量评估、具体配置和性能数字，是可复现的工程基准。",
+      "queued_at": "2026-09-05T15:15:52Z"
+    },
+    {
+      "id": "a87f75fe696647df2fd03aeb4b7e40b0a84ac13f",
+      "title": "Title: MLX-DLSS: NVIDIA's DLSS 5 neural renderer and frame generator, running on a Mac (and in PyTorch anywhere)",
+      "url": "https://www.reddit.com/r/localllama/comments/1w7y5qr/title_mlxdlss_nvidias_dlss_5_neural_renderer_and",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-05T11:25:43Z",
+      "raw_summary": "NVIDIA ships two neural networks inside DLSS: the DLSS 5 renderer that makes game frames look more photoreal, and the frame generator. Both only run on RTX cards inside games that call DLSS. I pulled them out and made them run on stills and video, on Apple Silicon through MLX/Metal, and on any machine through PyTorch. Nothing proprietary is in the repo. The weight tool reads your own nvngx\\_dlssnr.dll and libnvidia-ngx-dlssg.so and extracts the tensors locally. The renderer is within 0.005 MAE of the DLL on real game renders; the frame generator matches the library at 59.9 dB and stays within 0.03 dB of it on whole clips. On an M2 Max frame generation takes 6 ms per 540p frame, the renderer about 11 fps at 512×448. The library runs in FP8 and half precision, uses an approximate softmax and a hash-based noise generator, and a single ulp of difference anywhere shows up in the picture. Most of the recovery was matching rounding, checked against per-kernel captures from the real thing. Left out: DLSS Super Resolution. Measured it, and without engine motion vectors it loses to plain Lanczos. Not worth porting. Repo: https://github.com/iamwavecut/MLX-DLSS. Contributions are welcome! &#32; submitted by &#32; /u/WaveCut [link] &#32; [comments]",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "从NVIDIA DLSS DLL中提取权重并在MLX/PyTorch中复现神经渲染器，给出MAE和PSNR指标，逆向工程细节扎实。",
+      "queued_at": "2026-09-05T15:15:52Z"
+    },
+    {
+      "id": "b6be2e2332069c2dec677f3f868b7090602b03bb",
+      "title": "gfx906-llama-cpp: New PP/TG gains for MI50/MI60/Radeon VII/AMD GCN",
+      "url": "https://www.reddit.com/r/localllama/comments/1w82kpd/gfx906llamacpp_new_pptg_gains_for_mi50mi60radeon",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-05T14:42:21Z",
+      "raw_summary": "Time for another update! We have been busy and managed to improve the gains substantially (mostly from exploring existing llama cpp PRs and adopting relevant things). Among other things the README.md was also appended to provide a better overall picture of what’s in the fork, why and from whom. metric upstream t/s fork t/s gain prefill PP16384 332.5 ~410 +23% 120k deep fill 231.4 ~264 +14% TG 13.6 ~15.1 +11% (parity pre-mirror) context cannot fit 250k on 40 GB tight-fit machinery outputs - - bit-identical (sha + token-for-token) https://github.com/milpster/gfx906-llama-cpp/blob/master/README.md (Yes i made this with AI) &#32; submitted by &#32; /u/milpster [link] &#32; [comments]",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "gfx906 (AMD GCN) llama.cpp fork的PP/TG实测增益，含具体token/s和bit-identical验证，对旧AMD卡推理有工程价值。",
+      "queued_at": "2026-09-05T15:15:52Z"
     }
   ],
   "digest_last_date": "2026-09-05"
