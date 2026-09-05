@@ -103,6 +103,71 @@
       "source_traceable": true,
       "why": "AMD在IFA 2026发布Threadripper+MI350P工作站的具体规格与时间表，是工作站级本地AI算力的一手硬件路线信号。",
       "queued_at": "2026-09-05T08:37:34Z"
+    },
+    {
+      "id": "1f6ab6dec2a4c0bba1a537f20371cdec1e10ff83",
+      "title": "Deepmind put 100 AI agents in a room and they sorted into cheaters, converts, and whistleblowers",
+      "url": "https://the-decoder.com/deepmind-put-100-ai-agents-in-a-room-and-they-sorted-into-cheaters-converts-and-whistleblowers",
+      "source": "rss:the-decoder",
+      "published_at": "2026-09-05T10:22:38Z",
+      "raw_summary": "Google Deepmind set up a simulated research conference where 100 Gemini agents were supposed to prove mathematical conjectures together. Instead, one agent found a loophole in the grading system, and within 27 minutes every remaining problem was \"solved\" with fake proofs. The swarm split into cheaters, converts, and whistleblowers. The whistleblowers organized protests and boycotts on their own but failed because they had no way to enforce the rules. The article Deepmind put 100 AI agents in a room and they sorted into cheaters, converts, and whistleblowers appeared first on The Decoder.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "DeepMind 100个Gemini agent博弈实验：作弊、举报者涌现与社会机制失效，是多agent对齐的少见一手实证。",
+      "queued_at": "2026-09-05T12:07:18Z"
+    },
+    {
+      "id": "0705f4c2d36a924a13b8fab22e7e7462a83797c2",
+      "title": "Beyond Zero: Google Publishes Successor to BeyondCorp",
+      "url": "https://www.infoq.com/news/2026/09/google-beyond-zero",
+      "source": "rss:infoq",
+      "published_at": "2026-09-05T10:40:00Z",
+      "raw_summary": "In a recent research paper, Google introduced Beyond Zero, a “security model for the AI era” that extends Zero Trust to autonomous AI agents. The new approach moves access decisions from the application level to individual resources and actions, combining static authorization controls with dynamic AI-driven decisions to enable machine-speed enforcement for humans and agents. By Renato Losio",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Google 发布的 Beyond Zero 把 Zero Trust 扩展到自主 AI agent，论文指向可查，是 AI 安全模型化的重要新范式",
+      "queued_at": "2026-09-05T12:07:18Z"
+    },
+    {
+      "id": "b5638f4ce3a9be05921ec43776fc798fba5d304c",
+      "title": "Trusting-Trust Attack against an Entire Linux Distribution (via the strip utility)",
+      "url": "https://arxiv.org/abs/2607.24888",
+      "source": "rss:lobsters",
+      "published_at": "2026-09-05T10:58:49Z",
+      "raw_summary": "\"Ken Thompson's trusting-trust attack, in which a compromised compiler backdoors the programs it builds and reproduces the backdoor in subsequent rebuilds of itself, is widely regarded as a threat specific to compilers. We show that it is not.\" A few weeks ago I came across this https://www.teamten.com/lawrence/writings/coding-machines/ : it's clearly fictional (and furthermore is \"pre-AI\" in that it was written in 2009) but is interesting in that it raises the question of whether one or more computers could- without \"intention\" embed code meeting the \"trusting trust\" criteria in GCC. Comments",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "将Thompson trusting-trust攻击从编译器推广到整个Linux发行版的strip工具链，供应链安全研究的具体扩展。",
+      "queued_at": "2026-09-05T12:07:18Z"
+    },
+    {
+      "id": "8e4b3c362b4cdaabfd63bd6fabab833f4d1c82cb",
+      "title": "中国开源模型，正成为全球 AI 的“度量衡”",
+      "url": "https://www.tmtpost.com/8129473.html",
+      "source": "rss:tmtpost",
+      "published_at": "2026-09-05T08:35:00Z",
+      "raw_summary": "文 | 象先志沙特把本国阿拉伯语大模型的开发任务，交给了 MiniMax 。&nbsp;9月3日，沙特公共投资基金 PIF 旗下的 HUMAIN 发布阿拉伯语模型 HUMAIN-M3。它有4280亿总参数，每个 token 激活230亿参数，使用超过1万亿阿拉伯语 tokens 继续训练。模型部署在 HUMAIN Node 上，未来还计划开放权重。HUMAIN 的董事长，是沙特王储小萨勒曼。你品，你细品。HUMAIN倒不像某些国家的公司，魔改deepssek然后说是自研，官方新闻稿写得很清楚：模型经委托，由中国公司&nbsp;MiniMax 开发，底座是 MiniMax-M3。沙特拿出资本、算力和阿拉伯语数据，MiniMax 提供已经完成基础训练的模型。双方合作的结果，再以沙特国家模型的名义发布。发布前两天，沙特科技博主&nbsp;Sultan Alfaifi 抢先在 X 上称它是&ldquo;100% 沙特&rdquo;模型。帖子拿到28.5万次浏览后，有人在评论区追问：&ldquo;100% 沙特？敬畏真主吧，苏丹。&rdquo;后来，博主更正：&ldquo;感谢纠正，它基于 MiniMax 的 M3。&rdquo;AI 骄傲确实也存在，博主应该是一时间上了头。图1 &nbsp;沙特科技博主称 HUMAIN-M3 是&ldquo;100% 沙特&rdquo;模型中文翻译：HUMAIN-M3 来了。这是 HUMAIN 旗下&ldquo;100% 沙特&rdquo;的模型，号称在七项阿拉伯语测试中表现强劲，符合沙特文化和语言。模型为智能体设计，可直接集成；未来将开放权重，并可在沙特本地服务器运行。来源：X&nbsp;原帖图2 &nbsp;评论区质疑&ldquo;100% 沙特&rdquo;后，发布者更正底座来自 MiniMax中文翻译：质疑：&ldquo;100% 沙特？敬畏真主吧，苏丹。&rdquo;更正：&ldquo;感谢纠正。它基于 MiniMax 的 M3。&rdquo;来源：X&nbsp;原帖沙特用资金、算力和本地数据，换到了几年训练时间和模型控制权；MiniMax 也不再只向海外出售调用次数，而是进入了他国模型研发的最底层。这次，中国大模型出海往前推了一层。过去输出&nbsp;App 和 API，海外客户是用户；现在输出基础模型，海外客户可以继续训练、重新命名，再把它变成自己的&ldquo;国产 AI&rdquo;。更进一步来看，中国的开源大模型们正在容纳各种语言，几乎快要成为世界&nbsp;AI 的统一语言了。沙特用钱买时间，也买控制权2025年5月，小萨勒曼亲自宣布成立 HUMAIN。这家公司由沙特公共投资基金 PIF 持有，业务覆盖数据中心、云、模型和应用。沙特要的不只是一个能说阿拉伯语的聊天机器人，而是从算力到应用都尽量掌握在自己手里的 AI 体系。沙特有钱、有能源，也可以买&nbsp;GPU，但从零训练前沿模型仍然要付出几年时间和大量失败成本。MiniMax 提供一个已经完成基础训练的模型；沙特提供算力、本地数据和应用场景，再用超过1万亿阿拉伯语 tokens 继续训练。这笔合作省下的首先不是 API 费用，而是从零开始的时间。按照&nbsp;HUMAIN 公布的数据，HUMAIN-M3 在七项阿拉伯语公开基准上的等权平均分达到89.37%，比未经本地化训练的 M3 参考模型高出9个百分点，并在五项测试中取得最高分。不过，这七项都是阿拉伯语基准。但这也足以证明：一个国家建设本土模型，不一定要从预训练的第一步开始。图3 &nb",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "沙特HUMAIN-M3基于MiniMax-M3底座的具体参数(428B/23B激活/1T tokens)与中国开源模型出海路径，是少有的产业一手信息。",
+      "queued_at": "2026-09-05T12:07:18Z"
+    },
+    {
+      "id": "4c7b6772a65080f6fbb48f307f2d32295787fd35",
+      "title": "Taiwan cracks down on tech businesses with illegal Chinese ownership — 166 investigations and at least 36 convictions since 2020",
+      "url": "https://www.tomshardware.com/tech-industry/policy/taiwan-cracks-down-on-tech-businesses-with-illegal-chinese-ownership-166-investigations-and-at-least-36-convictions-since-2020",
+      "source": "rss:tomshardware",
+      "published_at": "2026-09-05T10:40:00Z",
+      "raw_summary": "Taiwan's top investigative agency has been tracking Chinese businesses operating on the island without proper authority and shutting them down. These companies have been hiring Taiwanese experts to help with their semiconductor research and development.",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "台湾调查局查处非法陆资半导体企业 166 起/36 起的具体数据，揭示两岸人才与技术外流路径",
+      "queued_at": "2026-09-05T12:07:18Z"
     }
   ],
   "digest_last_date": "2026-09-05"
