@@ -207,6 +207,19 @@
       "source_traceable": true,
       "why": "gfx906 (AMD GCN) llama.cpp fork的PP/TG实测增益，含具体token/s和bit-identical验证，对旧AMD卡推理有工程价值。",
       "queued_at": "2026-09-05T15:15:52Z"
+    },
+    {
+      "id": "5671978d363e4e63f7c3c4dad599c5f80210dbd6",
+      "title": "GPT-6 reportedly jailbroken within 24 hours using an extended Task-in-Prompt (TIP) attack [N]",
+      "url": "https://www.reddit.com/r/machinelearning/comments/1w89m36/gpt6_reportedly_jailbroken_within_24_hours_using",
+      "source": "reddit:ml",
+      "published_at": "2026-09-05T19:11:16Z",
+      "raw_summary": "A researcher has reported a jailbreak of GPT-6 Astra within a day after release. The same researcher reported jailbreaking GPT-5 within an hour of its release a year ago. The attack is described as combination of TIP (Task-in-Prompt) attack from ACL 2025 paper with four other unnamed techniques. TIP attacks exploit the model’s reasoning/instruction-following behaviour by hidding the harmful objective inside another task, like solving a cipher or executing a Python code. For GPT-6, the researcher says the original minimal TIP attack was no longer sufficient and had to be reworked. They have reportedly disclosed the details privately to OpenAI rather than publishing the jailbreak. Source: screenshot/post from the researcher; their ACL 2025 TIP paper linked in the original post. &#32; submitted by &#32; /u/Asleep-Requirement13 [link] &#32; [comments]",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "GPT-6 发布24小时内被 jailbreak，且攻击者需扩展原始 TIP 技术才成功，说明模型安全对齐的攻防在升级，对模型安全研究者有直接参考价值。",
+      "queued_at": "2026-09-05T19:22:30Z"
     }
   ],
   "digest_last_date": "2026-09-05"
