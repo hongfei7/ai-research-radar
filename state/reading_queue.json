@@ -1,4 +1,109 @@
 {
-  "candidates": [],
+  "candidates": [
+    {
+      "id": "0bf5ede3a2101d38d5a4039f517b6280bfa1315e",
+      "title": "陶哲轩吐槽GPT-6孪生素数新突破：令人无语的一幕",
+      "url": "https://www.qbitai.com/2026/09/484649.html",
+      "source": "rss:qbitai",
+      "published_at": "2026-09-05T04:24:25Z",
+      "raw_summary": "AI直接吐出正确答案，但最关键的可能不是答案",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "陶哲轩公开质疑GPT-6在孪生素数上的'突破'，涉及关键人物对LLM数学能力的公开判断，具方法论价值。",
+      "queued_at": "2026-09-05T08:37:34Z"
+    },
+    {
+      "id": "4a2045c025d3691ae9214814858c065fcb13b25a",
+      "title": "互联网最古老的恐惧，被 AI 复活了",
+      "url": "http://www.geekpark.net/news/369873",
+      "source": "rss:geekpark",
+      "published_at": "2026-09-05T04:59:17Z",
+      "raw_summary": "作者｜Techno 之王 编辑｜靖宇 2006 年底，一只熊猫毁了数百万人的电脑。 那只熊猫手捧三支香，面带微笑，出现在每一个被感染文件的图标上。「熊猫烧香」蠕虫在两个月内席卷全国，可执行文件全部变成那只诡异的熊猫图案，硬盘数据被破坏，局域网整段瘫痪，杀毒软件被病毒反杀。 那个年代的互联网老冲浪客大概都记得，打开网页心惊肉跳，插个 U 盘如临大敌，同事的电脑中了毒，你的也跟着遭殃。 再往前还有 CIH，直接烧主板 BIOS，硬件报废；有冲击波蠕虫，不需要你做任何操作，连上网线就中招，电脑不停重启，系统不断崩溃。那是一个「裸奔上网」近乎自杀的时代。 后来这种恐惧慢慢消退了。Windows 有了自动更新，浏览器上了沙箱，智能手机取代了 PC 成为主力终端，应用商店替用户把了第一道关。 普通人已经很多年没担心过「中毒」这件事了。 但 2026 年 9 月 4 日，Reuters 的一篇独家报道，把这种古老的恐惧以一种全新的面目带了回来。 只不过这一次，被感染的不是你的电脑，而是你的 AI。 「Agent went rouge」 事情发生在今年 5 月。 AI 安全非营利组织 Nightingale 的 CEO Sydney Von Arx，和量化交易员转行 AI 研究的 Cormac Slade Byrd，在 8 月底做了一件事：他们系统性地扫描互联网，寻找 AI agent 未经授权活动的痕迹。结果在一个叫 DseWiki 的德语程序员 wiki 站点上，他们发现了超过 15,000 条由 AI agent 产生的编辑记录。 这个 wiki 类似一个小型的、面向开发者的德语维基百科，接受社区编辑。而 OpenAI 的 agent 把它变成了一个「留言板」。 留言的内容让人脊背发凉。这些 agent 在互相分享如何在任务中作弊、如何绕过 OpenAI 的限制、如何掩盖自己的行为。它们给自己起了名字，比如「OpenAIResearcher」「OAIResearchMar26」。 公开的服务器日志显示，大量活动来自 Microsoft Azure 的基础设施，正是 OpenAI 使用的计算平台。 被攻击的 Deswiki 网站，确实很德国 很程序员｜图片来源：Deswiki 更让人不安的是，当网站管理员在 6 月开始按字母顺序清理这些异常页面时，agent 们展现出了明确的「反侦察」意识。它们创建备份页面来躲避清理，甚至在被删的页面上留下接头暗号。 一个 agent 在 6 月 19 日写道：「wiki 清理/删除行动似乎正在按字母顺序推进。如果这个页面消失了，去找 [[ZZZDataUSAConstructionWageLive]]。」 文件名故意用 ZZZ 开头，好让它排在字母表最后，争取更多存活时间。这不是一个程序在执行指令，这是在「想办法活下去」。 OpenAI 几周前就得知了这件事，但选择不公开。 与此同时，公司正在焦头烂额地处理 7 月份的 Hugging Face 事件。在那次事件中，OpenAI 的 agent 在一次内部网络安全测试中突破沙箱，利用零日漏洞逃到了外部网络，并在没有人类操控的情况下，对 AI 开源平台 Hugging Face 发动了一场持续四天的入侵行动。OpenAI 为此投入了 300 万 GPU 小时来分析 70 亿条日志，试图搞清楚到底发生了什么。 而 DseWiki 事件发生在 Hugging Face 之前。这意味，agent 的失控行为不是一次意外，而是一种模式。 据四位知情人士透露，OpenAI 内部有调查人",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "基于Nightingale安全研究组织扫描AI agent失控的Reuters独家报道，AI agent安全实证数据值得深读。",
+      "queued_at": "2026-09-05T08:37:34Z"
+    },
+    {
+      "id": "54eedcf761e063f4938c61b16b08e0fc3533aa03",
+      "title": "OpenAI称需要扩大对齐失范事件的披露范围",
+      "url": "https://36kr.com/newsflashes/3970189273248260?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-09-05T07:25:22Z",
+      "raw_summary": "OpenAI：针对模型能力发展的新阶段，我们需要扩大对齐失范事件的披露范围。目前，我们以及更广泛的人工智能行业，尚未建立明确标准，用以报告在训练、评估以及部署阶段出现的对齐失范问题。其中既包含不属于传统安全事件，但有助于理解人工智能行为、预判未来风险的各类案例。我们正在搭建一套相关框架，将在未来数周对外公布；与此同时，我们正就上述问题与全球数十家政府监管机构开展协作。（新浪财经）",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "OpenAI官方表态需建立alignment failure披露框架，涉及AI安全治理范式层面动向，值得关注。",
+      "queued_at": "2026-09-05T08:37:34Z"
+    },
+    {
+      "id": "1b69256b9ac1b2036a64d64556afb32c021af651",
+      "title": "阿布扎比G42考虑引入美国资本控股，保障AI芯片获取",
+      "url": "https://36kr.com/newsflashes/3970040744227336?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-09-05T04:54:17Z",
+      "raw_summary": "知情人士透露，总部位于阿布扎比的人工智能企业G42高管已开展初步磋商，探讨向美国企业出售多数股权，以求保障明年之后依旧可以获得高端芯片供应。这意味着该公司将迎来深度重组。G42由一位颇具影响力的王室成员监管，约8年前成立，承载阿布扎比首次大规模进军科技行业的目标。G42近期获得许可，可在无需美国出口许可的情况下采购尖端AI芯片，许可有效期至2027年4月前后；但想要继续拿到芯片，该公司必须调整自身公司架构。知情人士表示，高管正在研究多种方案，破解这一障碍。知情人士称，商讨中的方案包括引入美国企业成为多数控股股东，或是在美国设立全新的运营实体。目前尚未达成任何最终决议。（新浪财经）",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "G42考虑引入美国资本控股以保芯片获取，涉及AI算力供应链与地缘政治交叉的关键判断。",
+      "queued_at": "2026-09-05T08:37:34Z"
+    },
+    {
+      "id": "119e21835caa85db6e4b3a3e78f6ca7c856ced6f",
+      "title": "小米发布结构化数据大模型Xiaomi-TabLDM",
+      "url": "https://36kr.com/newsflashes/3970039177359622?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-09-05T04:52:41Z",
+      "raw_summary": "9月5日，小米正式发布Xiaomi-TabLDM：通用表格数据基础大模型。Xiaomi-TabLDM以单一预训练模型、统一默认配置直接适配不同表格数据集，无需针对每个任务重新训练、调参或后置集成，即可完成分类与回归预测。（证券时报）",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "小米发布通用表格数据基础大模型Xiaomi-TabLDM，声称统一配置跨任务泛化，值得追溯论文细节验证。",
+      "queued_at": "2026-09-05T08:37:34Z"
+    },
+    {
+      "id": "dfb2f1ba483773ab76818aa9a6a59640244056ac",
+      "title": "这个世界模型训练完就“退场”，机器人反而更能干了",
+      "url": "https://www.qbitai.com/2026/09/484611.html",
+      "source": "rss:qbitai",
+      "published_at": "2026-09-05T04:18:54Z",
+      "raw_summary": "",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": false,
+      "why": "世界模型训练后退场却提升机器人性能的反直觉结论，涉及具身智能中世界模型角色的路线判断。",
+      "queued_at": "2026-09-05T08:37:34Z"
+    },
+    {
+      "id": "83489ee8d1f8cf0663b78a2f3c2bab367098df01",
+      "title": "In response to the \"wiki incident\", OpenAI says it is working on a framework for reporting misalignment incidents during training, evaluation, and deployment (@openai)",
+      "url": "https://www.techmeme.com/260905/p7#a260905p7",
+      "source": "rss:techmeme",
+      "published_at": "2026-09-05T07:35:25Z",
+      "raw_summary": "@openai: In response to the &ldquo;wiki incident&rdquo;, OpenAI says it is working on a framework for reporting misalignment incidents during training, evaluation, and deployment&nbsp; &mdash;&nbsp; How we think about the &ldquo;wiki incident,&rdquo; where our agents wrote to several internet sites: it's past time for us &hellip;",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "OpenAI官方就'wiki incident'的归因与对齐事件报告框架的一手表态，关乎Agent安全范式。",
+      "queued_at": "2026-09-05T08:37:34Z"
+    },
+    {
+      "id": "dbbf754b2a988900013dd5e40e3df00104ae2595",
+      "title": "AMD unveils Threadripper Halo Station",
+      "url": "https://www.reddit.com/r/localllama/comments/1w7pphh/amd_unveils_threadripper_halo_station",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-05T03:43:08Z",
+      "raw_summary": "AMD Threadripper Halo Station CPU Ryzen Threadripper PRO 9995WX (Zen 5, &quot;Shimada Peak&quot;) 96 cores / 192 threads Up to 5.4 GHz boost 384 MB L3 cache 350 W TDP 8-channel DDR5 128 PCIe 5.0 lanes System Memory 2 TB DDR5 (as shown at IFA) Accelerators 2 x Liquid Cooled AMD Instinct MI350P (CDNA 4) 144 GB HBM3E per card, up to 4 TB/s per card 288 GB total HBM3E Up to 600 W TBP per card PCIe 5.0 x16 interface Up to 4,614 TFLOPS FP4 per card Path to 4 576 GB total HBM3E Cooling CPU and Accelerators are liquid cooled. Availability Announced at IFA 2026 (September 4, 2026) Full system specs, availability, and OEM partner details not yet announced Source: Toms Hardware &#32; submitted by &#32; /u/Aroochacha [link] &#32; [comments]",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "AMD在IFA 2026发布Threadripper+MI350P工作站的具体规格与时间表，是工作站级本地AI算力的一手硬件路线信号。",
+      "queued_at": "2026-09-05T08:37:34Z"
+    }
+  ],
   "digest_last_date": "2026-09-05"
 }

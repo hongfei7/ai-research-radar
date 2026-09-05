@@ -4,63 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "AMD",
-        "Intel",
-        "三星电子"
-      ],
-      "features": [
-        "业集",
-        "代工",
-        "体涨",
-        "圆代",
-        "工业",
-        "晶圆",
-        "涨涨",
-        "集体"
-      ],
-      "sent_at": "2026-09-04T05:45:27Z"
-    },
-    {
-      "tickers": [
-        "三星电子",
-        "海力士",
-        "美光"
-      ],
-      "features": [
-        "hbm",
-        "产产",
-        "产能",
-        "光计",
-        "内大",
-        "划年",
-        "大幅",
-        "幅扩",
-        "年内",
-        "扩产",
-        "有望",
-        "望翻",
-        "美光",
-        "翻倍",
-        "能有",
-        "计划"
-      ],
-      "sent_at": "2026-09-04T05:45:51Z"
-    },
-    {
-      "tickers": [
-        "OpenAI",
-        "微软",
-        "英伟达"
-      ],
-      "features": [
-        "gpt-6",
-        "is",
-        "released"
-      ],
-      "sent_at": "2026-09-04T05:46:16Z"
-    },
-    {
-      "tickers": [
         "DeepSeek"
       ],
       "features": [
@@ -329,6 +272,31 @@
         "真的"
       ],
       "sent_at": "2026-09-05T04:36:49Z"
+    },
+    {
+      "tickers": [
+        "OpenAI",
+        "微软"
+      ],
+      "features": [
+        "astra",
+        "at",
+        "chatgpt",
+        "gpt-5.6",
+        "gpt-6",
+        "half",
+        "of",
+        "openai",
+        "out",
+        "plans",
+        "rate",
+        "rolls",
+        "sol",
+        "the",
+        "to",
+        "top-tier"
+      ],
+      "sent_at": "2026-09-05T08:42:37Z"
     }
   ],
   "last_report": {
