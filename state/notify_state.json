@@ -1,24 +1,7 @@
 {
-  "morning_last_date": "2026-09-04",
+  "morning_last_date": "2026-09-05",
   "weekly_last_slot": "2026-W35",
   "breaking_fingerprints": [
-    {
-      "tickers": [
-        "OpenAI"
-      ],
-      "features": [
-        "agi",
-        "gpt-6",
-        "openai",
-        "光总",
-        "总裁",
-        "曝光",
-        "来了",
-        "裁说",
-        "说来"
-      ],
-      "sent_at": "2026-09-03T22:52:37Z"
-    },
     {
       "tickers": [
         "OpenAI"
@@ -328,42 +311,123 @@
         "gpt-6"
       ],
       "sent_at": "2026-09-04T22:15:27Z"
+    },
+    {
+      "tickers": [
+        "Anthropic"
+      ],
+      "features": [
+        "and",
+        "anthropic",
+        "before",
+        "complete",
+        "days",
+        "echo",
+        "elections",
+        "expected",
+        "in",
+        "ipo",
+        "is",
+        "its",
+        "late",
+        "listing",
+        "make",
+        "midterm",
+        "november",
+        "prospectus",
+        "public",
+        "reuters",
+        "september",
+        "sources",
+        "the",
+        "to",
+        "us",
+        "wang"
+      ],
+      "sent_at": "2026-09-05T00:12:09Z"
+    },
+    {
+      "tickers": [
+        "AMD",
+        "微软",
+        "英伟达"
+      ],
+      "features": [
+        "ai",
+        "and",
+        "bessent",
+        "chen",
+        "china",
+        "discuss",
+        "during",
+        "for",
+        "laurie",
+        "leading",
+        "mid-september",
+        "planned",
+        "reuters",
+        "risks",
+        "safety",
+        "scott",
+        "secretary",
+        "side",
+        "sources",
+        "talks",
+        "the",
+        "treasury",
+        "us",
+        "will",
+        "with"
+      ],
+      "sent_at": "2026-09-05T00:12:20Z"
     }
   ],
   "last_report": {
-    "date": "2026-09-04",
+    "date": "2026-09-05",
     "macro": {
-      "cycle": "扩张第三年向第四年过渡, 头部四家云厂季度 capex 合计仍超 900 亿美元, 微软 Azure 单季 294.2 亿美元、同比 +42% (E1) 与博通 AI 半导体单季 167 亿美元、同比 +221% (E2) 同向印证下游算力扩张未触顶, 但环比斜率已从陡升转为高位平台",
+      "cycle": "扩张第三年向第四年过渡,头部四家云厂季度 capex 合计仍超 900 亿美元,微软 Azure 单季 294.2 亿美元、同比 +42%,博通 AI 半导体单季 167 亿美元、同比 +221%,同向印证下游算力扩张未触顶,但环比斜率已从陡升转为高位平台,边际增量开始被 token 效率与封装产能瓜分",
       "trajectory": {
         "past": "晶圆制程产能",
         "now": "HBM 与 CoWoS 先进封装",
         "next": "云端电力与机柜级热密度",
-        "why_now": "HBM5 接口已规划至 4096-bit、单堆栈 4TB/s, 内存带宽而非浮点算力正成为新一轮架构瓶颈, 而 TSMC 混合键合已推进至 6 微米铜对铜互连, 物理良率与键合间距成为堆叠层数继续抬升的硬约束",
-        "trigger": "若单机柜功率密度项目级突破 130kW, 或北美新建园区电力接入审批成为主要延迟项"
+        "why_now": "HBM5 接口已规划至 4096-bit、单堆栈 4TB/s,内存带宽而非浮点算力成为新一轮架构瓶颈,叠加 GPT-6 Astra 潜空间推理单次任务可运行约 30 分钟,推理侧 token 消耗的位元密度首次逼近内存墙",
+        "trigger": "若单机柜功率密度项目级突破 130kW,或北美新建园区电力接入审批成为主要延迟项,即可视为电力与热密度接管封装成为新主约束"
       },
-      "shift": "维持晶圆—封装—电力三段轨迹, 把 Astra 训练规模与定价持平 (E2、E7) 纳入 now 段佐证, 并在 check 段补入三大厂同步宕机所暗示的共享故障域这一新增维度",
+      "shift": "维持晶圆-封装-电力三段轨迹,now 段补入 Astra 潜空间推理带来的内存位元密度压力作为与 HBM/CoWoS 平行的物理约束,并在 check 段加入 token 效率对算力总量曲线的对冲维度",
       "shift_kind": "adjust"
     },
     "calls": [
       {
-        "claim": "英伟达吞下 Hugging Face 标志着芯片、平台、社区垂直整合闭环成型, AMD 与 Intel 在开源适配层的腾挪空间被结构性压缩",
-        "falsifier": "若 2026Q4 HF Top 50 推理榜单中, 部署在 AMD 与 Intel 硬件上的模型数环比增长超过 30%, 或 AMD ROCm 在 HF Transformers 仓库成为合并 PR 数最多的后端之一, 则平台中立承诺被验证、闭环叙事破裂",
-        "verify": "HF 开发者月活环比下行或 AMD ROCm 上线 HF Top 50 模型"
+        "claim": "GPT-6 Astra 拉开前沿模型分层变现序幕,杰文斯悖论从总量命题升级为价×量×效率的三因子结构,纯量增逻辑开始失效",
+        "falsifier": "若 2026Q4 OpenAI 在 API 文档中将 GPT-6 Astra 调低至 5 美元/百万 token 区间、或戴尔 AI 服务器订单交付节奏环比放缓超过 10%,杰文斯悖论三因子结构退化为单一量增,本判断失效",
+        "verify": "Astra 单任务成本连续两季低于 GPT-5.6"
       },
       {
-        "claim": "GPT-6 Astra 在德州 Stargate 用 10 万 + GPU 完成训练, 推理定价与 Claude Fable 5.1 完全持平, 杰文斯悖论在 Agent 时代被进一步坐实, 算力链看空缺乏微观证据",
-        "falsifier": "若 2026Q4 戴尔 AI 服务器订单交付节奏环比放缓超 10%, 或积压订单覆盖期从 5-6 季度降至 3 季度以下, 则杰文斯悖论在 Agent 时代的微观证据链断裂",
-        "verify": "戴尔 AI 积压订单覆盖期缩至 3 季度内"
+        "claim": "HBM 与先进封装在 2026 年底前仍是物理硬约束,美光翻倍式扩产与三星提价同时出现,验证瓶颈正向更上游的存储与封装迁移",
+        "falsifier": "若 2026Q4 海力士或三星财报披露 HBM4 12 层 ASP 环比下滑超 5%,或 TSMC 法说会把 CoWoS 报价指引下调,本判断失效",
+        "verify": "美光 HBM 月产能未在 Q4 突破 10 万片"
       },
       {
-        "claim": "三大前沿模型商同步宕机暴露 AI 基础设施存在共享故障域, 此前关于 HBM 与电力是单点瓶颈的判断需要补充一个多租户共依赖层",
-        "falsifier": "若任一头部云厂在 2026Q4 财报或 10-Q 中明确披露本次故障为单一客户侧配置错误, 共享故障域假设破裂, 信用重估逻辑失效",
-        "verify": "任一头部云厂披露共享上游根因"
+        "claim": "智能体自主行为的安全护栏已明显落后于能力迭代,Astra 的可解释性危机与 Wiki 智能体互通事件叠加,可能成为下一轮监管介入的切入口",
+        "falsifier": "若 2026Q4 美国商务部或 NIST 出台明确的前沿模型第三方审计强制令、或欧盟 AI Act 修订案把 agent 互操作性纳入高风险类别,本判断提前兑现;若 Anthropic 招股书未把安全审计作为估值溢价点,本判断弱化",
+        "verify": "美国或欧盟 Q4 启动 Agent 强制第三方审计"
+      },
+      {
+        "claim": "欧洲算力本土化从口号进入资本落地,英伟达以股权绑定超算客户的新模式可能形成芯片厂-客户估值的循环收入结构",
+        "falsifier": "若 Nscale 招股书披露英伟达股权附带 GPU 优先回购或销量对赌条款,实质上是变相融资租赁,股权绑定叙事破裂;若华为 950DT 2026Q4 交付不及 8 万颗,国产替代节奏证伪",
+        "verify": "英伟达后续两个季度再以股权方式绑定超算客户"
       }
     ]
   },
   "morning_fallback": null,
   "blindspot_ledger": [
+    {
+      "key": "ARM|ASML|Anthropic|Intel|Meta|台积电|苹果|高通",
+      "text": "coverage_audit 显示台积电、Meta、苹果、Intel、ASML、高通、ARM 均为 structural 级别,即有 SEC EDGAR 直连通道但近 30 天无任何自有披露进入本库:台积电 212 条、Meta 130 条、苹果 106 条、Intel 89 条、ASML 83 条、高通 62 条、ARM 43 条均为二手转述与同业外推。本期对 Google Gemini/DeepMind 迭代、Meta 开源生态、苹果端侧 AI、Amazon-AWS 与 Anthropic 绑定深度均无独立报道,Anthropic IPO 一手招股书尚不可得;Groq、Cerebras 等推理芯片新势力与 TSMC 先进制程产能节奏同样缺位,意味着本期内参对算力侧的所有判断都建立在二手转述之上",
+      "first_seen": "2026-09-05",
+      "last_seen": "2026-09-05",
+      "times_seen": 1
+    },
     {
       "key": "ARM|ASML|Intel|Meta|台积电|苹果",
       "text": "台积电近 30 天有 233 条相关信息进入本库, 全部为二手转述与同业外推, 自身 8-K 或法说会一手披露零产出; Meta 近 30 天 135 条、苹果 107 条、Intel 91 条同样无任何自有披露; ASML 89 条、Qualcomm 68 条、ARM 48 条均为同一状态。换言之, 对本轮周期最关键的几家供给侧标的, 我们的所有判断都建立在转载链上, 一旦原文出处失真, 自上而下的结论将整体下移一档可信度",
@@ -439,13 +503,6 @@
       "text": "库内对头部硬件标的的覆盖呈典型结构性失衡。台积电近 30 天有 391 条相关信息进入本库,但无一条来自其自有披露,对其 CoWoS 产能与 HBM 客户结构的判断全部依赖二手转述与同业外推;博通 258 条、超微电脑 162 条、ASML 134 条同样全部为二手,意味着当前关于先进封装、定制 ASIC 与 EUV 节奏的判断都建立在间接观察之上;微软虽近 30 天有 337 条信息,但 days_since_own_disclosure 已达 20 天,处于 thin 级别,Azure 资本开支结构与 OpenAI 算力承诺的最新口径需要 8 月底财报季才能补齐",
       "first_seen": "2026-08-24",
       "last_seen": "2026-08-24",
-      "times_seen": 1
-    },
-    {
-      "key": "ARM|ASML|Intel|Meta|博通|台积电|微软|戴尔|美光|苹果|超微电脑",
-      "text": "本库近 30 天有 413 条涉及台积电、274 条涉及博通、194 条涉及 Meta、169 条涉及超微电脑、168 条涉及美光的条目进入归档, 但其中台积电、博通、Meta、超微电脑、美光、ASML、苹果、Intel、戴尔、ARM 均无任何一手自有披露(直连通道返回为空), 对其产能与订单节奏的判断完全依赖二手转述与同业外推; 微软虽有 354 条、31 个信源, 但最近一次自有披露已是 19 天前。算力链最大权重的几家晶圆、封测、ODM 与内存原厂, 实际上正处在一手信源最稀薄的状态。",
-      "first_seen": "2026-08-23",
-      "last_seen": "2026-08-23",
       "times_seen": 1
     }
   ]
