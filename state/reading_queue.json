@@ -233,6 +233,19 @@
       "source_traceable": true,
       "why": "给出Qwen3.8 Flash Next在固定/锐利prompt模板下的SWE-bench复现数据与硬件设置，可复用的推理优化实验",
       "queued_at": "2026-09-05T21:33:21Z"
+    },
+    {
+      "id": "6c12f03eaabb8d8cfb02b6c40c002ce3f693601a",
+      "title": "NInfer fork: 555k context@fp4 for 5090 with YARN, reliable kv host cacheing, monitoring, jinja, opened model support",
+      "url": "https://www.reddit.com/r/localllama/comments/1w8f8fa/ninfer_fork_555k_contextfp4_for_5090_with_yarn",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-05T22:58:42Z",
+      "raw_summary": "Hiya, NInfer is amazng for Qwen, but lacking for real-world-use. As adoption of issues/pr's was not really what I needed, I created a fork and hit it for this week with 3 concurrent claude code session until it didn't break any longer. Hope you like it. NVFP4 KV cache (from scratch) I implemented a 4-bit KV cache for QIn3.8-27B from the ground up. Upstream has since added their own NVFP4 path, but ours differs architecturally: Custom MMA kernel (mma_nvfp4_e4m3, m16n8k64) with hardware E4M3 block scales for the QK matmul. Both Q and K are quantized to NVFP4; V is dequantized to BF16 for the PV matmul via a dedicated decode kernel. Hadamard rotation applied to K (and Q) pre-quantization for outlier suppression, with V left unrotated. Upstream uses fp16 V storage instead — no outlier suppression. Fused append: the decode kernel quantizes current K/V to NVFP4 in-place during generation — no separate quantization pass. Custom scale layout: natural row-major for KV scales (not the M128x4 swizzle used for weight MMA), because KV access patterns differ from weight access patterns. Result: 144 bytes/token/KV-head (vs 264 for int8, 512 for bf16) — 45% VRAM reduction with no quality loss (LongBench 45% matching int8, AIME 96.7%, needle-in-haystack 100%). YaRN context extension QIn3.8-27B's RoPE config (theta=1e7, 25% rotary dims, 48/64 GDN layers with no RoPE) makes linear scaling sufficient — full NTK-by-parts is unnecessary. I extend native 262k to 555k (c=3+vision) or 600k (c=1) on a",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "NVFP4 KV cache从零实现含自定义MMA kernel和硬件E4M3块缩放，有具体架构取舍和工程细节，对FP4推理栈有认知增量。",
+      "queued_at": "2026-09-05T23:21:21Z"
     }
   ],
   "digest_last_date": "2026-09-05"
