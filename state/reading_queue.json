@@ -103,6 +103,58 @@
       "source_traceable": true,
       "why": "针对vLLM KV cache eviction真实压力的验证工具与协议，对本地/边缘部署的cache管理问题很有价值。",
       "queued_at": "2026-09-06T11:15:53Z"
+    },
+    {
+      "id": "2bacf80b5cd117ed47ac54eb595c5612736ed496",
+      "title": "Google Mantis: An Agentic Vulnerability Scanning Harness for Reducing False Positives",
+      "url": "https://www.infoq.com/news/2026/09/google-mantis-vulnerability-scan",
+      "source": "rss:infoq",
+      "published_at": "2026-09-06T12:00:00Z",
+      "raw_summary": "Google has open-sourced Mantis, an AI-agent framework designed to automate the software vulnerability lifecycle, from identifying and validating vulnerabilities to reproducing and fixing them. Google says it developed Mantis to address the high rate of false positives and hallucinated vulnerabilities produced by conventional AI-powered code scanning. By Sergio De Simone",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Google 开源 Mantis 框架，专门解决 AI 漏洞扫描的假阳性/幻觉问题，有可对照的工程问题域与一手开源材料。",
+      "queued_at": "2026-09-06T14:14:39Z"
+    },
+    {
+      "id": "c9370cabf5ad09acf6795654330d3ccf1bce2d23",
+      "title": "Chatbots built an \"echo chamber of one\" and now psychiatry has to decide if \"AI psychosis\" exists",
+      "url": "https://the-decoder.com/chatbots-built-an-echo-chamber-of-one-and-now-psychiatry-has-to-decide-if-ai-psychosis-exists",
+      "source": "rss:the-decoder",
+      "published_at": "2026-09-06T11:57:12Z",
+      "raw_summary": "Researchers at King's College London and other institutions are examining whether \"AI-associated psychosis\" should become a clinical diagnosis. By OpenAI's own self-reported numbers, about 560,000 users show signs of psychosis or mania each week. Sycophantic chatbots can create an \"echo chamber of one\" that reinforces delusions. The article Chatbots built an &quot;echo chamber of one&quot; and now psychiatry has to decide if &quot;AI psychosis&quot; exists appeared first on The Decoder.",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "KCL 等机构对'AI 精神病'是否成为临床诊断的探讨，引用 OpenAI 自报 56 万/周数据，涉及 AI 安全与对齐的边界。",
+      "queued_at": "2026-09-06T14:14:39Z"
+    },
+    {
+      "id": "49811bcefa222986fd7f6efa60201bc38b3c9f8d",
+      "title": "具身ICL来了创业玩家！上下文成Scaling新赛道",
+      "url": "https://www.qbitai.com/2026/09/484897.html",
+      "source": "rss:qbitai",
+      "published_at": "2026-09-06T11:44:21Z",
+      "raw_summary": "让机器人学会利用更长的多模态Context",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "具身 ICL 把多模态 context 作为新的 scaling 轴，是与'模型参数 scaling'并列的路线之争，值得跟进技术细节。",
+      "queued_at": "2026-09-06T14:14:39Z"
+    },
+    {
+      "id": "976bcf4b39110019c63dc530300064c609528104",
+      "title": "Applying Sliding Window Attention to pretrained LLMs at inference time [P]",
+      "url": "https://www.reddit.com/r/machinelearning/comments/1w8repz/applying_sliding_window_attention_to_pretrained",
+      "source": "reddit:ml",
+      "published_at": "2026-09-06T09:23:59Z",
+      "raw_summary": "I've been working on a practical implementation of Sliding Window Attention (SWA) for pretrained Hugging Face causal LLMs. The idea is simple: instead of allowing every generated token to attend to the complete historical KV cache, maintain a bounded cache consisting of: attention sinks + recent sliding window I implemented this as a reusable inference layer rather than modifying or retraining the model. GitHub: https://github.com/oraby8/SWA The implementation currently includes: bounded KV cache circular/ring-buffer storage attention sinks streaming prefill chunked attention masking autoregressive decoding Full Attention vs SWA benchmarking TTFT / TPOT / throughput measurements KV-cache memory measurements One interesting result from my Qwen2.5-7B experiment: Context Full KV SWA-64 16K ~923 MB ~3.5 MB 32K ~1.84 GB ~3.5 MB 64K OOM ~3.5 MB At 16K, SWA-64 also reduced TPOT from ~38.4 ms to ~30.5 ms in this setup. However, there is an important trade-off: tasks requiring information far outside the active window can degrade. I'm currently investigating how much of this is inherent to SWA versus implementation/model-specific behavior. I'm sharing the implementation mainly to get feedback from people working on LLM inference, KV-cache optimization, and long-context models. I'd be particularly interested in: Which model architectures should I validate next? What failure cases should I benchmark? What would make this useful for existing HF inference workflows? Are there cache/attent",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "在预训练 HF 因果 LM 上做 SWA 推理层，不改权重即可降低 KV 显存与长文推理成本，给出可复现实现，工程参考价值高。",
+      "queued_at": "2026-09-06T14:14:39Z"
     }
   ],
   "digest_last_date": "2026-09-06"
