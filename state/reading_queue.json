@@ -1,4 +1,57 @@
 {
-  "candidates": [],
+  "candidates": [
+    {
+      "id": "258f3966ca0c2ef7af831f98cc5daa25ee493dfb",
+      "title": "OpenAI quietly updates its evaluation metrics for GPT-6 Astra, making changes that appear to favor Astra and continuing to revise other metrics after launch (Emily Forlini/Fortune)",
+      "url": "https://www.techmeme.com/260906/p1#a260906p1",
+      "source": "rss:techmeme",
+      "published_at": "2026-09-06T04:40:01Z",
+      "raw_summary": "Emily Forlini / Fortune: OpenAI quietly updates its evaluation metrics for GPT-6 Astra, making changes that appear to favor Astra and continuing to revise other metrics after launch&nbsp; &mdash;&nbsp; OpenAI has changed several evaluation benchmarks for its GPT-6 Astra model since first publishing a blog post announcement mid-afternoon on Sept. 3.",
+      "score": 9,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "OpenAI在GPT-6 Astra发布后静默修改评估基准使其有利，Fortune点名质疑——涉及评测方法论可信度，必须读。",
+      "queued_at": "2026-09-06T06:23:06Z"
+    },
+    {
+      "id": "5373dcbd55543b21a5d77b02f4635bf849c30a47",
+      "title": "AGI来没来不好说，但GPT-6真把Token省下来了",
+      "url": "https://www.tmtpost.com/8129798.html",
+      "source": "rss:tmtpost",
+      "published_at": "2026-09-06T03:22:30Z",
+      "raw_summary": "文｜光锥智能，作者 | 魏琳华&nbsp;，编辑｜刘俊宏&nbsp;多年以后，人类或许会想起AGI时代的到来，是在一个平平无奇的夜晚。9月3日，整个AI圈可能都没睡好。先是晚间全球AI大宕机，就当所有人准备洗洗睡的时候，9月4日凌晨三点半，GPT-6 Astra亮相了。虽然发布会上OpenAI宣布还只对部分企业用户开放，不过好在它没让我们等太久。9月5日，OpenAI全量推送了GPT-6 Astra，让付费用户们及时体验上了新模型。&ldquo;欢迎来到AGI时代。&rdquo;在介绍GPT-6 Astra时，OpenAI总裁Greg Brockman说。和前几代大模型相比，OpenAI交出的新模型成绩上确实相当耀眼，正如模型的名字&ldquo;星辰&rdquo;，它在多个关键基准上跑出了&ldquo;饱和&rdquo;的成绩，把编程、长程任务的能力往上拔了一截。但&ldquo;会刷题&rdquo;算不得什么，能干活才真有用。实际干活时，GPT-6 Astra能做到&ldquo;又快又省&rdquo;&mdash;&mdash;交付质量更高的同时，它单次任务的Token消耗和任务耗时都明显低于上一代。Perplexity在自家AI研究智能体评估框架中甚至测出，Astra的单次任务花销低于Fable 5.1。发布不到一周，Anthropic的新模型Fable 5.1就被GPT-6 Astra抢去了风头。现场演示和网友实测里，各种复杂的活儿都被丢给了它：操作电脑、填表单、建网站，甚至把电子原理图排成可投产的PCB、在Blender里建好房间模型，再转进虚幻引擎，让用户可以在建模场景中走动查看房屋细节。支撑这一跃迁的，是又一次&ldquo;大力出奇迹&rdquo;：据外媒报道，GPT-6 Astra的训练动用了10万 GPU 的集群，是OpenAI迄今最大规模的一次训练。那么，这一代模型到底变了什么？所谓AGI时刻到底是真的，还是只是又一次宣言？性能&ldquo;饱和&rdquo;的GPT-6 Astra，成色几何？这次GPT-6 Astra没有&ldquo;见光死&rdquo;，实际体验和演示效果差距不大。昨天，GPT-6 Astra已经正式全量向所有订阅用户开放使用。早上晒出的一众测评案例中，有人惊叹它干活的交付质量，有人提到它跑任务更省Token、成本低。具体到能力表现层面，GPT-6 Astra在一些特定领域跑出了接近满分的极限分数。人类的考卷已经快&ldquo;考不下&rdquo;了。比如，它在研究级数学基准FrontierMath Tier 4跑到98，官方形容为&ldquo;饱和&rdquo;，也就是它的分数已经达到了测试的上限；在强调陌生环境中学习与抽象推理的ARC-AGI-3上，GPT-6 Astra从上一代GPT-5.6 Sol的7.8%直接跳到99.9%。可以说是直接实现了&ldquo;从0到100&rdquo;的突破；漏洞利用测试ExploitBench则直接满分100%，GPT-5.6 Sol为78.5%。最夸张的是ARC-AGI-3，它相当于把大模型扔进一个陌生环境，不给规则说明，看它能不能自己摸索规则并做出正确决策。这个测试对人类来说并不难，100分轻轻松松，但AI之前一直搞不定，徘徊在不及格的区间。然后，GPT-6 Astra就满分了。三个月时间，AI就进化成人类了？用ARC Prize Foundation的Greg Kamradt的话来说：&ldquo;在96%的测试层级上，Astra超越了我们的人类行为效率基线，实",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "GPT-6 Astra发布后实测：Perplexity评估Astra单次成本低于Fable 5.1，含第三方可核查数据。",
+      "queued_at": "2026-09-06T06:23:06Z"
+    },
+    {
+      "id": "e92065dbe73db214dcd918d328e479c03a2bae39",
+      "title": "机构：2026年二季度全球DRAM市场营收同比上升385%",
+      "url": "https://36kr.com/newsflashes/3971241600184835?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-09-06T01:22:46Z",
+      "raw_summary": "研究机构Counterpoint Research发布的全球DRAM市场分析报告显示，2026年二季度全球DRAM市场总营收同比上升385%，环比增长57%。从具体厂商表现来看，三星电子（38%）、SK海力士（25%）、美光（24%）份额仍占据着全球DRAM市场前三。（财联社）",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Counterpoint Q2 DRAM营收+385%与三家份额，给出明确数字与可溯源报告。",
+      "queued_at": "2026-09-06T06:23:06Z"
+    },
+    {
+      "id": "8b46832a6a3ff5c1791e770baeee644a008dfe7c",
+      "title": "2026动力电池新叙事：电驱万物，AI赋能，固态仍需耐心丨行业风向标",
+      "url": "https://www.tmtpost.com/8129971.html",
+      "source": "rss:tmtpost",
+      "published_at": "2026-09-06T04:40:33Z",
+      "raw_summary": "9月初的宜宾，依然炎热，一如2026世界动力电池大会的热度。9月3日-4日，超800位电池产业链人士齐聚长江第一城，共话行业发展。在连续两日高强度的信息轰炸和沟通交流中，笔者发现，当国内新能源汽车单月渗透率突破60%，动力电池产业的叙事也正发生微妙的切换：它不再仅仅是新能源汽车的配套零部件，正走向电驱万物，向人形机器人、低空飞行器、船舶等多元场景快速渗透；AI已经走出概念，在电池研发、制造、全生命周期管理等全产业链赋能；而连续三年热度爆表的全固态电池，业界对其商业化时间表明显回归理性，与此同时，钠离子电池快步走上产业舞台，成为产业重要的补充力量。电&ldquo;生&rdquo;万物经过近三十年的发展，我国已经建成了全球规模最大、最为完整的动力电池产业体系，培育了一批具备较强的竞争力的领军企业，关键核心技术的水平位居全球前列，产销规模连续多年持续成为世界第一。数据显示，2025年，中国锂离子电池总出货量突破1800GWh，全球占比超80%；全球动力电池装机前十企业中，中国企业占据六席，规模优势稳固。但增量，已经不只是来自新能源汽车和蓬勃的储能。走进本届大会的展览现场，这种变化更为直观。具身智能几乎占据了展区的半壁江山，银河通用、优必选（09880.HK）等多家企业带来样机现场演示：人形机器人在展台来回穿梭，完成搬运、码垛、分拣等动作，也有机器人现场进行制作咖啡、冰淇淋等实操演示，吸引大量参会者驻足观看。（展会现场机器人演示）笔者从银河通用现场工作人员处了解到，其现场展示的一款重载机器人采用磷酸铁锂电池，充电一次连续工作8小时，支持自主换电，双臂最大负载50KG，已经在宁德时代（300750.SH、03750.HK）工厂常态化使用。另一边，低空经济同样吸睛。岷山星河（宜宾）通用航空服务有限公司（亿航智能在四川的代理商）展区，全球首款可商业化运营的驾驶载人eVTOL航空器亿航智能EH216S，连同站姿载人飞行器一同亮相，打卡拍照者众。该公司相关负责人告诉笔者，&ldquo;现场展出的三款设备均搭载固液混合电池，兼顾稳定性与续航，支持换电模式。其中，EH216S实际续航25-30分钟，该产品已经实现量产、销售、交付，可开展商业化收费运营，全国已交付数百台。&rdquo;此外，电动船舶、工程机械、农业机械等的电池解决方案也集中亮相。多位产业大拿也在会上表达相同判断。奇瑞控股集团董事长尹同跃表示，&ldquo;电池已经不再只是汽车的&lsquo;心脏&rsquo;，更是驱动千行百业的源头活水，是平台和底座。&rdquo;中国科学院院士、清华大学教授欧阳明高也谈到，电芯在新能源革命当中的地位，相当于芯片之于人工智能时代，是诸多新场景发展的根基，电&ldquo;生&rdquo;万物的时代已经到来。实际上，中国汽车动力电池产业创新联盟早在今年6月末发布的《锂电池产业&ldquo;十五五&rdquo;发展规划报告》中就明确提出要构建锂电池&ldquo;7+1&rdquo;领域融合生态，其中&ldquo;7&rdquo;是7个动力电池领域应用，包括深化动力电池在汽车领域的应用、赋能低空经济、具身智能、内河船舶、工程机械、农业机械，以及两轮车等电动化转型。且根据该联盟测算，到2030年，这些新兴领域将带来至少500GWh以上的增量市场。值得一提的是，宁德时代首席科学家吴凯和尹同跃均在会上提出，电车不仅是交通工具，也是分布式能源载体。吴凯就建议，能否把停在车库的电车发展成一个个&ldquo;分散式AI Token运算节点&rdquo;。固态电池商业化时间表回归理性不过，随",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "动力电池大会一手观察：固态理性化、钠电上台、电池向机器人/低空扩散，含1800GWh等具体数据。",
+      "queued_at": "2026-09-06T06:23:06Z"
+    }
+  ],
   "digest_last_date": "2026-09-06"
 }
