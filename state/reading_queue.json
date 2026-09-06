@@ -51,6 +51,58 @@
       "source_traceable": true,
       "why": "动力电池大会一手观察：固态理性化、钠电上台、电池向机器人/低空扩散，含1800GWh等具体数据。",
       "queued_at": "2026-09-06T06:23:06Z"
+    },
+    {
+      "id": "82667954563968e9144c075f1fcdb1e5f04c007e",
+      "title": "Terence Tao on “prematurely solving [a maths] problem by purely AI-powered methods”",
+      "url": "https://mathstodon.xyz/@tao/117207856734787448",
+      "source": "rss:lobsters",
+      "published_at": "2026-09-06T07:45:24Z",
+      "raw_summary": "I recommend reading the whole thread, but I linked to the part I found the most relevant. I believe the same is true for programming. Comments",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "陶哲轩对AI纯方法解题过早收敛的判断，属顶级研究者对AI for Math路线的一手表态，值得读。",
+      "queued_at": "2026-09-06T11:15:53Z"
+    },
+    {
+      "id": "b7d1c5daed8ac4ba2624d34eff5714711456b0a2",
+      "title": "韩国出口额破纪录",
+      "url": "https://36kr.com/newsflashes/3971553339535879?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-09-06T06:32:58Z",
+      "raw_summary": "韩国关税厅最新统计显示，截至9月5日下午1时，韩国今年累计出口额为7094亿美元，超过去年全年的7093亿美元历史最高纪录。据韩国方面消息称，今年尽管面临中东局势等严峻外部环境，但在半导体带动下，韩国主要出口品类保持增长。今年前8个月，韩国半导体出口额为2812亿美元，同比增长169.6%。半导体在整体出口中所占比重达到40.6%。（证券时报）",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "韩国半导体出口同比+169.6%且占出口40.6%，是观察全球半导体周期与HBM/存储景气度的重要一手数据。",
+      "queued_at": "2026-09-06T11:15:53Z"
+    },
+    {
+      "id": "e98b3a760b772a141fc1560d8e6486a4bb88a3b8",
+      "title": "How Figma Uses AI Agents for Security",
+      "url": "https://www.infoq.com/news/2026/09/figma-security-agents",
+      "source": "rss:infoq",
+      "published_at": "2026-09-06T06:59:00Z",
+      "raw_summary": "The engineering team at software company Figma recently documented how they built AI agents to help their security team investigate alerts, search past incidents, check company systems, and even prepare code fixes. The agents learn from previous investigations, reducing repetitive work and helping engineers resolve complex alerts about 70% faster. By Renato Losio",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Figma把AI Agent用于安全告警调查的工程实践，给出了70%加速这类具体数字和系统设计思路，可借鉴。",
+      "queued_at": "2026-09-06T11:15:53Z"
+    },
+    {
+      "id": "58876024e15f38edcf9f259e7c0446c9dcdb9c32",
+      "title": "Validate your local LLM advertised KV cache against real pressure; see exactly how old contexts get evicted from cache",
+      "url": "https://www.reddit.com/r/localllama/comments/1w8rnyi/validate_your_local_llm_advertised_kv_cache",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-06T09:38:49Z",
+      "raw_summary": "Hello, I'm a bit obsessed with cache management on local LLMs. For the last few days I've been working on cache management on vLLM with my 2x DGX Spark and DeepSeek v4 Flash 0731. I felt something was off so I investigated, found issues, fixed them, but needed a way to validate the fixes. That led me to create a tool with a simple protocol that allows you to pinpoint how well the cache is actually managed on your deployment: Runs a probe to calibrate the expectations (what's a cache hit vs a cache miss in your setup) Hydrates X stable contexts of Y tokens each in order to completely fill the cache Runs cache-hit validation on the reverse order (last added is the first validated) until a cache-miss is found It's better to let this run alone to get a real value. Understand this will evict all your current cached context, so don't do it alongside real work. My results This is the result from my A/B test, control (my previous prod) vs my fixed prod. aidendle94/sparkrun-vllm-ds4-gb10:production-3.7-reffix-schedfix (pre-fix image, retention 4096): ── Retention under pressure ── capacity: 2,023,924 tokens retained contexts: 27/80 retained tokens: 1,052,025 retained % capacity: 51.98% oldest evicted: context #52 (older contexts evicted) With the dedupe + boundfix patches applied (retention 0): ── Retention under pressure ── capacity: 2,047,043 tokens retained contexts: 77/80 retained tokens: 3,000,048 retained % capacity: 146.56% oldest evicted: context #2 (older contexts evicted) Ho",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "针对vLLM KV cache eviction真实压力的验证工具与协议，对本地/边缘部署的cache管理问题很有价值。",
+      "queued_at": "2026-09-06T11:15:53Z"
     }
   ],
   "digest_last_date": "2026-09-06"
