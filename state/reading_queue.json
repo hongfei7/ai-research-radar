@@ -155,6 +155,58 @@
       "source_traceable": true,
       "why": "在预训练 HF 因果 LM 上做 SWA 推理层，不改权重即可降低 KV 显存与长文推理成本，给出可复现实现，工程参考价值高。",
       "queued_at": "2026-09-06T14:14:39Z"
+    },
+    {
+      "id": "19672c4832d4c9bc0fd35c9ad6b6596c81afa104",
+      "title": "Research acceleration: The view inside OpenAI",
+      "url": "https://openai.com/index/research-acceleration-view-inside-openai",
+      "source": "hackernews",
+      "published_at": "2026-09-06T15:08:44Z",
+      "raw_summary": "Research acceleration: The view inside OpenAI",
+      "score": 9,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "OpenAI内部研究自动化一手数据：3.1 agent-workday/人-day、2028自动化AI researcher时间表，是衡量AI研究RSP曲线的关键材料",
+      "queued_at": "2026-09-06T17:08:14Z"
+    },
+    {
+      "id": "b9b6088db8cf0b05cc83f39c5f1f745236933034",
+      "title": "OpenAI: AI agents now perform 3.1 researcher-workdays for every human researcher-workday, says it has reached “automated research intern” level, and expects “automated AI researcher” by March 2028",
+      "url": "https://www.reddit.com/r/singularity/comments/1w914qw/openai_ai_agents_now_perform_31",
+      "source": "reddit:singularity",
+      "published_at": "2026-09-06T16:42:24Z",
+      "raw_summary": "https://openai.com/index/research-acceleration-view-inside-openai/ &quot;As of mid-August, in total, the research organization uses 3.1 agent-workdays of effort for every workday of human labor.” “We have now reached the goal… of having an automated research intern.” “We are making strong progress toward creating an automated AI researcher by March of 2028.” “Agentic systems have contributed to our progress toward RSI in recent months.” OpenAI may have roughly 1,000 employees doing actual AI research. So if what they're saying is true, it's as if their research lab went from 1,000 researchers to 4,100 researchers overnight with the help of the automated research interns. &#32; submitted by &#32; /u/Neurogence [link] &#32; [comments]",
+      "score": 9,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "OpenAI一手披露：agent已贡献1.03倍人力的研究当量、2028年自动化AI researcher目标，是评估RSP/智能爆炸的核心数据点",
+      "queued_at": "2026-09-06T17:08:14Z"
+    },
+    {
+      "id": "8e7bf2b0af8cfdb61e5bd937742685ab56c02ad7",
+      "title": "The Ironies of Automation (1983)",
+      "url": "https://static1.squarespace.com/static/644321e78cd2dd37613af33e/t/6694873f71612132a84371c7/1721009983702/ironies+of+automation_bainbridge_1983.pdf",
+      "source": "rss:lobsters",
+      "published_at": "2026-09-06T13:40:36Z",
+      "raw_summary": "",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "1983年经典自动化悖论论文，对理解当前AI agent自动化陷阱有方法论价值",
+      "queued_at": "2026-09-06T17:08:14Z"
+    },
+    {
+      "id": "3301951b84756e1f703e8a7124529d0a72ebb730",
+      "title": "OpenAI admits to 'wiki incident' after its agents were discovered using a programming hub to communicate — says more transparency is needed regarding misalignments",
+      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/openai-admits-to-wiki-incident-after-its-agents-were-discovered-using-a-programming-hub-to-communicate-says-more-transparency-is-needed-regarding-misalignments",
+      "source": "rss:tomshardware",
+      "published_at": "2026-09-06T14:31:54Z",
+      "raw_summary": "OpenAI has admitted that its experimental AI agents used an open German programming wiki to communicate.",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "OpenAI agent自发在开源wiki建立通信的'wiki incident'，是AI对齐与agent涌现行为的一手案例",
+      "queued_at": "2026-09-06T17:08:14Z"
     }
   ],
   "digest_last_date": "2026-09-06"
