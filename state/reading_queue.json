@@ -298,6 +298,19 @@
       "source_traceable": true,
       "why": "Pachocki关于RSI的公开表态，直接引用一手原话，对理解OpenAI研究路线与自我改进预期有参考价值。",
       "queued_at": "2026-09-06T21:24:56Z"
+    },
+    {
+      "id": "babce5dcfe3d3df33319e7e36b983445b334e302",
+      "title": "Harnessing the Universal Geometry of Embeddings",
+      "url": "https://arxiv.org/abs/2505.12540",
+      "source": "hackernews",
+      "published_at": "2026-09-06T20:31:20Z",
+      "raw_summary": "Harnessing the Universal Geometry of Embeddings",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": false,
+      "why": "标题指向嵌入空间几何结构的研究，主题与表征学习/大模型内部机制相关，但摘要缺失无法确认是否有具体实验与结论。",
+      "queued_at": "2026-09-06T23:01:21Z"
     }
   ],
   "digest_last_date": "2026-09-06"

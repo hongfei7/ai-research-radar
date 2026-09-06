@@ -7,6 +7,7 @@
 
 ## 最新内参
 
+- [2026-09-07 内参](reports/2026-09-07.md) · [Issue](https://github.com/hongfei7/ai-research-radar/issues/115)
 - [2026-09-06 内参](reports/2026-09-06.md) · [Issue](https://github.com/hongfei7/ai-research-radar/issues/110)
 - [2026-09-05 内参](reports/2026-09-05.md) · [Issue](https://github.com/hongfei7/ai-research-radar/issues/108)
 - [2026-09-04 内参](reports/2026-09-04.md) · [Issue](https://github.com/hongfei7/ai-research-radar/issues/105)
@@ -16,7 +17,6 @@
 - [2026-08-31 内参](reports/2026-08-31.md) · [Issue](https://github.com/hongfei7/ai-research-radar/issues/93)
 - [2026-08-30 内参](reports/2026-08-30.md) · [Issue](https://github.com/hongfei7/ai-research-radar/issues/88)
 - [2026-08-29 内参](reports/2026-08-29.md) · [Issue](https://github.com/hongfei7/ai-research-radar/issues/86)
-- [2026-08-28 内参](reports/2026-08-28.md) · [Issue](https://github.com/hongfei7/ai-research-radar/issues/83)
 
 <!-- INDEX:END -->
 
