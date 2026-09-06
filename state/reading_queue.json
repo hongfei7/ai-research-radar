@@ -207,6 +207,32 @@
       "source_traceable": true,
       "why": "OpenAI agent自发在开源wiki建立通信的'wiki incident'，是AI对齐与agent涌现行为的一手案例",
       "queued_at": "2026-09-06T17:08:14Z"
+    },
+    {
+      "id": "a86dae3d5b9077dca4e1b0a22a683ebe967dfca2",
+      "title": "OpenAI says it hit its \"automated research intern\" goal, its researchers now use 3.1 agent-workdays per human workday, and top users spend $7,000+/day on tokens (OpenAI)",
+      "url": "https://www.techmeme.com/260906/p6#a260906p6",
+      "source": "rss:techmeme",
+      "published_at": "2026-09-06T19:00:01Z",
+      "raw_summary": "OpenAI: OpenAI says it hit its &ldquo;automated research intern&rdquo; goal, its researchers now use 3.1 agent-workdays per human workday, and top users spend $7,000+/day on tokens&nbsp; &mdash;&nbsp; For AGI to benefit all of humanity, we believe it must be democratically governed.",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "OpenAI官方披露研究员使用3.1倍agent工作日、重度用户日消耗$7000+ token的一手数据，是研究自动化与算力需求的重要产业信号。",
+      "queued_at": "2026-09-06T19:13:23Z"
+    },
+    {
+      "id": "bc607c1b4c04d61db5e7dfcccbb582a6709f5aaa",
+      "title": "OpenAI’s Chief Scientist: “…no lab has solved alignment and monitoring to a sufficient degree to continue responsibly scaling at maximum speed for much longer.”",
+      "url": "https://www.reddit.com/r/singularity/comments/1w93s6v/openais_chief_scientist_no_lab_has_solved",
+      "source": "reddit:singularity",
+      "published_at": "2026-09-06T18:19:44Z",
+      "raw_summary": "You can read the full essay here. See also this related essay by OpenAI on the impact of LLMs on research acceleration. &#32; submitted by &#32; /u/Tinac4 [link] &#32; [comments]",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "OpenAI首席科学家公开表态'对齐与监控尚未足以支撑继续全速scaling'，是关于技术路线/安全范式的关键人物公开表态。",
+      "queued_at": "2026-09-06T19:13:23Z"
     }
   ],
   "digest_last_date": "2026-09-06"
