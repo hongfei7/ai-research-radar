@@ -233,6 +233,71 @@
       "source_traceable": true,
       "why": "OpenAI首席科学家公开表态'对齐与监控尚未足以支撑继续全速scaling'，是关于技术路线/安全范式的关键人物公开表态。",
       "queued_at": "2026-09-06T19:13:23Z"
+    },
+    {
+      "id": "50b2af3d3876c39d6b9683c514b8145ba4fa65c0",
+      "title": "OpenAI Chief Scientist Jakub Pachocki says no lab has solved alignment enough to keep scaling at maximum speed, and hopes voluntary slowdowns become commonplace (OpenAI)",
+      "url": "https://www.techmeme.com/260906/p8#a260906p8",
+      "source": "rss:techmeme",
+      "published_at": "2026-09-06T20:25:00Z",
+      "raw_summary": "OpenAI: OpenAI Chief Scientist Jakub Pachocki says no lab has solved alignment enough to keep scaling at maximum speed, and hopes voluntary slowdowns become commonplace&nbsp; &mdash;&nbsp; Author: Jakub Pachocki, Chief Scientist at OpenAI&nbsp; &mdash;&nbsp; In mid-2023, within the &ldquo;RLSlow&rdquo; research project &hellip;",
+      "score": 9,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "OpenAI首席科学家一手发文，公开承认对齐问题未解并主张自愿减速，是关于scaling路线分歧的关键人物表态，含具体研究项目RLSlow背景。",
+      "queued_at": "2026-09-06T21:24:56Z"
+    },
+    {
+      "id": "2666218d4b59d830a194c89dbaa4cf9fd1eed073",
+      "title": "Hot Chips 2026: Irrational Recap",
+      "url": "https://irrationalanalysis.substack.com/p/hot-chips-2026-irrational-recap",
+      "source": "hackernews",
+      "published_at": "2026-09-06T16:19:49Z",
+      "raw_summary": "Hot Chips 2026: Irrational Recap",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Hot Chips 2026是芯片架构/算力路线核心会议，Irrational Recap通常汇总关键芯片发布的架构与性能细节，对算力格局判断价值高。",
+      "queued_at": "2026-09-06T21:24:56Z"
+    },
+    {
+      "id": "a555df401523b3f816f71c54e6d3ed221acfe1e3",
+      "title": "Analysis: since October, Anthropic has entered into agreements for at least 14.8 GW of compute capacity and may spend as much as $517B over the next decade (Valida Pau/The Information)",
+      "url": "https://www.techmeme.com/260906/p7#a260906p7",
+      "source": "rss:techmeme",
+      "published_at": "2026-09-06T19:30:01Z",
+      "raw_summary": "Valida Pau / The Information: Analysis: since October, Anthropic has entered into agreements for at least 14.8 GW of compute capacity and may spend as much as $517B over the next decade&nbsp; &mdash;&nbsp; Anthropic in the last year has scrambled to line up cloud computing deals with SpaceX, Google and others to meet the skyrocketing demand &hellip;",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Anthropic算力采购规模与十年支出估算，给出14.8GW和$517B具体数字，对理解前沿模型公司资本与算力格局有实质参考。",
+      "queued_at": "2026-09-06T21:24:56Z"
+    },
+    {
+      "id": "7cd9cbd432cc2b9b7ac4f6b0bc810fdfc028c5d0",
+      "title": "Have the frontier labs mixed up AI safety and security?",
+      "url": "https://martinalderson.com/posts/ai-safety-vs-security",
+      "source": "rss:lobsters",
+      "published_at": "2026-09-06T20:47:52Z",
+      "raw_summary": "",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": false,
+      "why": "前沿实验室是否混淆AI safety与security的路线之争，涉及安全研究范式分歧，值得了解主流实验室定位。",
+      "queued_at": "2026-09-06T21:24:56Z"
+    },
+    {
+      "id": "99cb3c6e8bc61b52969c8a6e5d8217dd3cf6386f",
+      "title": "OpenAI Chief Scientist: “Based on internal results, I have a strong expectation that this speed of progress could be sustained into recursive self-improvement”",
+      "url": "https://www.reddit.com/r/singularity/comments/1w959f0/openai_chief_scientist_based_on_internal_results",
+      "source": "reddit:singularity",
+      "published_at": "2026-09-06T19:13:29Z",
+      "raw_summary": "“Based on internal results, I have a strong expectation that this speed of progress could be sustained into recursive self-improvement. “If AI development continues along its current path, the systems we’ll see in the next few years are likely to represent further capability jumps of equal or larger magnitude, and to increasingly drive their own development.” “Machine intelligence playing a larger and larger role in its own development process is a natural conclusion of sustained technological progress.” “We focus OpenAI research towards RSI as we believe it is the only way to remain at the frontier of AI research moving forward.” “Undertakings that would have taken thousands of experts now will be achievable by a few people operating a large computer.” This is a time that calls for extreme caution. I am concerned no one is prepared for the consequences of a continued rapid rise in machine intelligence. OpenAI will continue to seek technical solutions to alignment and monitoring, to build defensive systems and unilaterally withhold further scaling as needed; however, I believe broader interventions are required. In line with Ray Kurzweil’s predictions from the end of the XXth century, we now find ourselves at the moment in history of computing where machine intelligence is starting to exceed that of humans in transformative ways. Currently I believe that no lab has solved alignment and monitoring to a sufficient degree to continue responsibly scaling at maximum speed for much",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "Pachocki关于RSI的公开表态，直接引用一手原话，对理解OpenAI研究路线与自我改进预期有参考价值。",
+      "queued_at": "2026-09-06T21:24:56Z"
     }
   ],
   "digest_last_date": "2026-09-06"
