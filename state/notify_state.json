@@ -4,75 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "Anthropic"
-      ],
-      "features": [
-        "and",
-        "anthropic",
-        "before",
-        "complete",
-        "days",
-        "echo",
-        "elections",
-        "expected",
-        "in",
-        "ipo",
-        "is",
-        "its",
-        "late",
-        "listing",
-        "make",
-        "midterm",
-        "november",
-        "prospectus",
-        "public",
-        "reuters",
-        "september",
-        "sources",
-        "the",
-        "to",
-        "us",
-        "wang"
-      ],
-      "sent_at": "2026-09-05T00:12:09Z"
-    },
-    {
-      "tickers": [
-        "AMD",
-        "微软",
-        "英伟达"
-      ],
-      "features": [
-        "ai",
-        "and",
-        "bessent",
-        "chen",
-        "china",
-        "discuss",
-        "during",
-        "for",
-        "laurie",
-        "leading",
-        "mid-september",
-        "planned",
-        "reuters",
-        "risks",
-        "safety",
-        "scott",
-        "secretary",
-        "side",
-        "sources",
-        "talks",
-        "the",
-        "treasury",
-        "us",
-        "will",
-        "with"
-      ],
-      "sent_at": "2026-09-05T00:12:20Z"
-    },
-    {
-      "tickers": [
         "Anthropic",
         "OpenAI",
         "xAI"
@@ -203,6 +134,38 @@
         "words"
       ],
       "sent_at": "2026-09-05T15:17:23Z"
+    },
+    {
+      "tickers": [
+        "OpenAI"
+      ],
+      "features": [
+        "after",
+        "agent",
+        "astra",
+        "beats",
+        "benchmarks",
+        "days",
+        "gpt-6",
+        "just",
+        "on",
+        "release",
+        "search"
+      ],
+      "sent_at": "2026-09-06T01:17:41Z"
+    },
+    {
+      "tickers": [
+        "OpenAI"
+      ],
+      "features": [
+        "astra",
+        "developers",
+        "for",
+        "gpt-6",
+        "introducing"
+      ],
+      "sent_at": "2026-09-06T01:17:56Z"
     }
   ],
   "last_report": {
