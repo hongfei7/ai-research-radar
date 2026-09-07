@@ -402,6 +402,45 @@
       "source_traceable": true,
       "why": "Ling MTP推测解码的n=1/2/3实测，给出具体tok/s和CUDA graphs对照实验，方法论透明。",
       "queued_at": "2026-09-07T21:17:53Z"
+    },
+    {
+      "id": "98f4e2b874d7aed76bd327dc2b832eca0a2ebb58",
+      "title": "Quoting Jakub Pachocki",
+      "url": "https://simonwillison.net/2026/sep/7/jakub-pachocki",
+      "source": "rss:simonwillison",
+      "published_at": "2026-09-07T22:26:25Z",
+      "raw_summary": "The strongest argument I see for continuing to train much smarter models quickly is the need to build defensive systems against the dangers posed by other AI. [...] We will need powerful, aligned AI for defense; to secure infrastructure, to protect against rogue agents in real time, and to invent entirely new protective measures. This will be a primary focus of OpenAI’s deployment efforts. At the same time, even with the uncertainty that comes from anticipated broad AI progress and the need to build defensive systems, we must not let that become an excuse for recklessness. The idea of racing forward at all costs seems absurd once one internalizes the seriousness of the stakes. &mdash; Jakub Pachocki, Chief Scientist at OpenAI Tags: ai-ethics, openai, ai",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "OpenAI首席科学家Jakub Pachocki关于继续训练更强模型必要性的核心表态，涉及AI安全与能力的路线之争",
+      "queued_at": "2026-09-07T23:40:27Z"
+    },
+    {
+      "id": "40e01c814703334668484fdab957138cfc26fc8a",
+      "title": "英特尔CPU传再涨价10%，高通、联发科趁隙抢攻IPC、IoT空缺",
+      "url": "https://36kr.com/newsflashes/3973973547086338?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-09-07T23:34:56Z",
+      "raw_summary": "据报道，供应链人士透露，2025年底以降，英特尔（Intel）PC用CPU持续涨价，2026年10月5日，再传出英特尔的PC CPU预估“再涨10%”。同时，毛利率偏低的Small Core产品线，恐走向EOL（End of Life），藉由缩减低毛利产品改善整体获利，这些都是英特尔执行长陈立武的策略调整。而业界也估计，Arm阵营的高通（Qualcomm）、联发科，将有机会抢进工业电脑（IPC）、物联网（IoT）晶片领域。供应链业者表示，因整体供应链成本攀升及部分产品需求强劲，英特尔PC CPU自2025年底以来接连涨价，2026年第1季调涨约10%，7月再调涨部分消费级及服务器级CPU，涨幅从数十美元至逾千美元。（新浪财经）",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Intel PC CPU持续涨价与Arm阵营（高通/联发科）抢攻IPC/IoT，直接反映x86 vs Arm在边缘与嵌入式市场的竞争格局变化",
+      "queued_at": "2026-09-07T23:40:27Z"
+    },
+    {
+      "id": "fb10606525d65d97116d7b2728132de91b17a86f",
+      "title": "雷军：玄戒O100和玄戒D100明年正式商用",
+      "url": "https://36kr.com/newsflashes/3973520289985028?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-09-07T23:17:40Z",
+      "raw_summary": "36氪获悉，9月7日，小米秋季旗舰新品发布会在京举办。小米集团创始人、董事长兼CEO雷军正式发布两款搭载玄戒O3的旗舰产品：小米18 Fold和小米平板9 Pro Max。小米18 Fold搭载小米自主研发设计的玄戒O3 AI旗舰处理器、小米澎湃OS 4和小米MiMo端侧大模型，这是小米芯片、AI、OS三大自研技术首次在一款终端上集结。雷军还披露，玄戒O100和玄戒D100也将于明年正式商用。",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "小米自研玄戒O3/O100/D100芯片路线图及端侧大模型集成，反映国产SoC与端侧AI的产业化进展",
+      "queued_at": "2026-09-07T23:40:27Z"
     }
   ],
   "digest_last_date": "2026-09-07"

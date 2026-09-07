@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-07T21:19:06Z",
-  "text": "当前共有 11 个活跃事件。要点包括: GPT-6 Astra自主通关《Portal》; Nvidia Acquires HuggingFace for $12.9B; Anthropic reportedly signs $517 billion in compute deals after Dario Amodei warned rivals about reckless risk; 燧原科技发行结果出炉！募资61.19亿元，国产AI芯片龙头即将登陆科创板; Astra working with Blender via computer use feels like magic, showing computer use could be the fourth demand wave after chatbots, reasoning, and agentic coding (Tae Kim/Key Context)。",
-  "since": "2026-09-07T21:19:06Z",
-  "active_event_count": 11,
+  "generated_at": "2026-09-07T23:42:05Z",
+  "text": "截至2026-09-08 07:42 HKT，本轮新增三条动态：①英特尔PC用CPU传10月5日再涨10%，低毛利Small Core或EOL，高通、联发科借Arm架构抢攻IPC与IoT空缺；②雷军披露玄戒O100、D100将于2027年商用，叠加玄戒O3+MiMo+澎湃OS 4首次同机落地，自研SoC迈入多代际布局；③关税揣测推动伦铜突破14533美元/吨历史新高，AI算力与电网用铜长期缺口逻辑延续。",
+  "since": "2026-09-07T23:42:05Z",
+  "active_event_count": 14,
   "key_themes": [
     "compute_demand",
     "model_capability",
     "ai_monetization",
     "datacenter_power",
-    "domestic_substitution"
+    "edge_ai"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nAnthropic CEO Dario Amodei年初曾警告行业投资节奏过快、风险失控，但Anthropic自身却在11个月内签下5170亿美元算力合同，\"说与做\"存在明显背驰。同时，Sam Altman批评新云厂商capex\"愚蠢且不可持续\"，而OpenAI自身7500亿美元的算力建设计划规模更大，批评与自身行为亦存在矛盾。两组言行反差提示头部AI实验室的capex竞赛已脱离理性边界。\n\n【新兴趋势】\n算力capex规模被持续上修（千亿美元级），且\"巨额算力合同\"正在成为头部AI实验室之间的标准军备竞赛形态，capex可持续性也从行业边缘话题升级为核心争议。数据中心电力瓶颈与\"新云厂商\"角色（区别于三大公有云）正在成为产业链的关键变量。\n\n【信息盲点】\n本轮仅覆盖Anthropic/OpenAI及NVDA/AVGO/AMD的间接传导，电力公用事业（如VST、CEG、NRG）、冷却/液冷（CDU厂商）、光通信/网络（Arista、Coherent）、HBM/存储（Micron、SK Hynix）、台积电CoWoS产能、以及新云厂商（CoreWeave、Nebius、Lambda）均未在原文中出现，但均为算力capex扩张的直接受益/承压环节，应重点补采。\n\n【跨标的联动】\nAnthropic与OpenAI的算力军备竞赛直接拉动NVDA/AVGO/AMD的订单结构升级，竞争烈度决定三类芯片在AI实验室中的份额分配。\"新云厂商\"作为新参与者，其capex可持续性同时是上游芯片厂商（NVDA等）的需求支撑与风险来源——若新云融资断裂，可能引发对芯片厂商订单可见度的连锁质疑。",
+  "cross_analysis": "【核心矛盾】\n本轮三条报道之间未出现明显的来源间矛盾。Intel涨价消息来源为\"供应链人士\"，10月5日10%涨幅属市场传闻而非官方确认，存在落地不及预期可能；铜价新高则系\"关税揣测\"推动，政策尚未落地，行情带有情绪驱动成分。两则共同呈现\"预期先行、事实滞后\"的特征，需警惕传闻证伪风险。\n\n【新兴趋势】\nx86",
   "trend_spotting": "Anthropic 11个月内锁定5170亿美元算力合同、逼近OpenAI 2030年7500亿美元路线图，意味着头部两家AI实验室累计算力承诺已向1.3万亿美元量级迁移——这不再是\"增长故事\"，而是接近准主权级别的资本动员。\n\n【新兴趋势】算力capex的复合增速正在脱离收入曲线，呈现\"先签合同、再找客户\"的类基建逻辑。Anthropic自家CEO年初刚警告\"鲁莽风险\"，转头就签下5170亿，说明竞争压力已压过风控本能。\n\n【早期信号】Sam Altman罕见公开批评新云厂商capex\"不可持续的愚蠢\"——同业龙头对同行的capex公开唱空极为罕见，这是一级市场对算力需求定价分歧的外化信号，可能预示未来12-18个月出现算力合同重估或延期。\n\n【市场盲点】市场仍在用\"AI软件公司\"框架给实验室估值，但合同结构显示其本质已偏向\"AI重资产基建运营商\"。同时，电力与电网审批周期（通常3-7年）才是真正的硬约束，而非芯片产能或资本——这点在二级市场讨论中严重缺位。\n\n【值得关注的拐点】当算力合同签约速度持续超过电力并网速度时，\"签了用不上\"的交付风险将集中暴露；下一个关键观察窗口是2027年前后首批大单的首次capex拨付节点。"
 }
