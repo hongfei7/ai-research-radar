@@ -4,38 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "OpenAI"
-      ],
-      "features": [
-        "after",
-        "agent",
-        "astra",
-        "beats",
-        "benchmarks",
-        "days",
-        "gpt-6",
-        "just",
-        "on",
-        "release",
-        "search"
-      ],
-      "sent_at": "2026-09-06T01:17:41Z"
-    },
-    {
-      "tickers": [
-        "OpenAI"
-      ],
-      "features": [
-        "astra",
-        "developers",
-        "for",
-        "gpt-6",
-        "introducing"
-      ],
-      "sent_at": "2026-09-06T01:17:56Z"
-    },
-    {
-      "tickers": [
         "Anthropic",
         "OpenAI",
         "英伟达"
@@ -199,6 +167,76 @@
         "view"
       ],
       "sent_at": "2026-09-07T01:05:07Z"
+    },
+    {
+      "tickers": [
+        "AMD",
+        "ASML",
+        "台积电"
+      ],
+      "features": [
+        "ai-directed",
+        "and",
+        "asia",
+        "at",
+        "china",
+        "controls",
+        "cyberattacks",
+        "discuss",
+        "expected",
+        "export",
+        "is",
+        "likely",
+        "nikkei",
+        "preventing",
+        "revisit",
+        "september",
+        "sources",
+        "talks",
+        "the",
+        "to",
+        "us",
+        "us-china",
+        "will"
+      ],
+      "sent_at": "2026-09-07T06:14:03Z"
+    },
+    {
+      "tickers": [
+        "三星电子",
+        "海力士",
+        "美光"
+      ],
+      "features": [
+        "ai",
+        "as",
+        "chip",
+        "consumer",
+        "drains",
+        "electronics",
+        "hits",
+        "ramageddon",
+        "supply"
+      ],
+      "sent_at": "2026-09-07T06:14:29Z"
+    },
+    {
+      "tickers": [
+        "英伟达"
+      ],
+      "features": [
+        "agi",
+        "arrived",
+        "artificial",
+        "ceo",
+        "general",
+        "has",
+        "huang",
+        "intelligence",
+        "jensen",
+        "says"
+      ],
+      "sent_at": "2026-09-07T06:14:58Z"
     }
   ],
   "last_report": {

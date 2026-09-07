@@ -1,4 +1,109 @@
 {
-  "candidates": [],
+  "candidates": [
+    {
+      "id": "c97c9a9d8aa16e7c077c1a88d8cf1fcc73df5a7c",
+      "title": "王兴兴上市后首次公开演讲：机器人真正爆发要等两个「80%时刻」丨WRC 2026",
+      "url": "https://www.leiphone.com/category/robot/qtdf8ihmqe2onmh0.html",
+      "source": "rss:leiphone",
+      "published_at": "2026-09-07T02:55:00Z",
+      "raw_summary": "8月19日，宇树科技正式登陆科创板。上市后的答谢午宴上，宇树科技创始人王兴兴首次提出“物理AI机器人的自进化”，希望利用基础大模型，将论文检索、代码生成、仿真训练、真机测试和评价反馈串成闭环，让机器人研发逐步从高度依赖人工转向持续自我迭代。一天后的2026世界机器人大会主论坛上，王兴兴再次谈到了这一方向。相比说明机器人跑得多快、跳得多高，他把更多时间留给了一个没那么“炫技”、却更决定具身智能产业胜似的问题——机器人什么时候才能真正走进工厂和家庭？在王兴兴看来，答案的关键已经不是本体能否完成一个动作，而是“换一个房间、物体、任务之后，它还能不能完成”的泛化能力。基于此，他不仅给出了具身智能行业大爆发的量化临界点，即两个80%（在80%的陌生场景中，通过语音或文字指令，机器人能够顺利完成约80%任务），更给出了一个明确的路径：物理AI机器人的自进化——与其让人类工程师微调机器人的“最后一厘米”，不如把研发、仿真、测试的闭环交给AI。以下为王兴兴在WRC 2026上的演讲精编，雷峰网在不改变原意的基础上进行编辑和整理。01泛化能力：真正的关键点过去一年，我们在硬件和动作表现上取得了不少突破，比较有代表性的，还有我们马年春晚上表演的节目《武BOT》，融合中国传统功夫文化与AI训练，让机器人在舞台上做出了极具观赏性的复杂动作，我觉得这是一个很好的科技和文化交流案例。随后，我们还在天坛做了一个50台机器人的震撼表演。但过去几年，我们公司其实一直在推动另一件更重要的事情，就是让机器人真正走进生活、去工厂干活。2024年，我们就开始和汽车工厂合作，在汽车生产线上做一些落地应用，包括我们自己也在工厂部署机器人，进行一些简单测试和落地。目前公司绝大部分AI团队，都在做机器人真正进入家庭或者工厂干活这件事情。但为什么现在机器人还没有被大规模推广？最主要的原因，就是目前机器人的效率和泛用性还不够。简单来说，虽然目前机器人已经能够做一些简单的装配，但它的效率和人相比还是更低一些。另外，每次有新的任务过来，还需要重新进行训练，整个部署效率也比较低。所以我们还是希望把技术的泛化能力做得更好以后，再进行大规模推广。这也是目前全球共同面临的最大瓶颈。今年4月份，我们也在百米测试中跑出了约10米/秒（36km/h）的峰值速度，刷新了人形机器人奔跑速度的世界纪录。这款机器人是基于我们第一代人形机器人H1改制的，后面我们也可以在上面安装轮子，让它更加灵活。大家也知道，目前机器人基本都是AI驱动，而AI目前又基本是数据驱动。有多少数据，尤其有多少高质量的数据，很大程度上决定了AI能够做到什么程度。所以我们也在自己采集数据，或者和第三方公司合作，给大家使用，也给我们自己使用。数据驱动仍然是非常重要的一件事情。我个人认为，真正的AI机器人训练数据，还是需要海量的真人数据或者互联网数据作为主要的预训练数据，再加上一部分真机数据。这是两类非常刚需的数据。如果从数据量的角度来说，真人数据可能会更多或者更加重要一些。但真实的真机数据也非常重要，因为我们需要让机器人真正和物理世界进行匹配。今年5月份，我们还发布了一款应该是全球第一款量产级的载人机甲。这款机器人也非常有意思，身高大概3米多，载人以后重量大约500千克。它有点像一辆越野车，并不是给在家庭或者城市里面使用的；很多情况下，比如户外徒步，或者在一些非常复杂的环境下进行运输，就可以使用它。它还可以变形成四条腿的模式，这样稳定性会更好一些，越障能力也非常强。02从提前训练到实时生成，AI开始接管机器人的动作前几个月，我们还演示了一个基于多模态和端到",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "王兴兴提出'两个80%'泛化临界点和'物理AI自进化'路径，是具身智能路线层面的明确主张，可读到产业判断框架。",
+      "queued_at": "2026-09-07T06:08:25Z"
+    },
+    {
+      "id": "a9683880dd2a5d9a5fe93c6f1d62b52a153aea91",
+      "title": "Terence Tao says AI labs’ race to beat math benchmarks is starting to hurt the field. He wants them to compete on new insights instead.",
+      "url": "https://www.reddit.com/r/singularity/comments/1w99zj0/terence_tao_says_ai_labs_race_to_beat_math",
+      "source": "reddit:singularity",
+      "published_at": "2026-09-06T22:15:59Z",
+      "raw_summary": "On Aug. 31, Stadlmann posted a preprint lowering the bound on gaps between primes from 246 to 240. Within days, several AI labs were posting their own improvements on social media. Tao responded with an eight-post thread explaining why he finds this worrying. His point is that the number itself was never what mattered most. Going from 246 to 240, or even from 70 million to 246, does little for the rest of mathematics on its own. What mattered was everything developed along the way: Zhang (who was working in a sandwich shop at the time) bringing neglected work on equidistribution back into use, Maynard developing a sieve that became a standard tool, and Polymath8 showing what open collaboration could accomplish. Those advances had applications well beyond the original problem. Tao imagines how things might have played out if today’s AI labs had been around in 2005, when GPY published their near-miss. The labs pour millions into compute, push the bound into the low hundreds, then move on once progress slows. Mathematicians decide the problem has been picked over and look elsewhere. Nobody writes a proper paper or turns the arguments into something people can learn from. An idea like Maynard’s sieve ends up buried in hundreds of pages of AI output that nobody reads. Zhang never gets his moment; Maynard leaves the field. In that scenario, the bound improves faster, but mathematics loses out. It’s a Goodhart’s law problem: the number becomes the target, and the reasons anyone care",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "陶哲斐批评AI lab刷数学benchmark的竞赛文化，涉及研究评价体系的重要路线分歧。",
+      "queued_at": "2026-09-07T06:08:25Z"
+    },
+    {
+      "id": "f071cbd53267fba777466646f1ec0c4f35400975",
+      "title": "'RAMageddon' hits consumer electronics as AI drains chip supply",
+      "url": "https://www.ft.com/content/ea9a9dcc-b1df-49b0-b80c-f320161b9efa",
+      "source": "hackernews",
+      "published_at": "2026-09-07T04:07:19Z",
+      "raw_summary": "'RAMageddon' hits consumer electronics as AI drains chip supply",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": false,
+      "why": "AI挤占存储芯片供应对消费电子的连锁影响，涉及供应链格局实质分析。",
+      "queued_at": "2026-09-07T06:08:25Z"
+    },
+    {
+      "id": "dfe18295f55a650f001844d9b360e6dad7b35852",
+      "title": "Gotham Silicon: 1μ CMOS process that will ship custom chips for –$100 in <24hrs",
+      "url": "https://gothamsilicon.com/",
+      "source": "hackernews",
+      "published_at": "2026-09-06T22:53:23Z",
+      "raw_summary": "Gotham Silicon: 1μ CMOS process that will ship custom chips for –$100 in <24hrs",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "1μm CMOS工艺+24小时内交付定制芯片的低成本MPW方案，对芯片设计/制造链路有参考。",
+      "queued_at": "2026-09-07T06:08:25Z"
+    },
+    {
+      "id": "d330cefee9c544b19808b9600764cee250adb75d",
+      "title": "90后AR连续创业者用半导体工艺造光学芯片，完成超亿元B轮融资丨36氪首发",
+      "url": "https://36kr.com/p/3972748115980809?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-09-07T02:48:37Z",
+      "raw_summary": "图源/企业 本文约2100字，建议阅读4分钟 作者丨欧雪 编辑丨袁斯来 硬氪获悉，阿法龙控股（北京）有限公司（下称“阿法龙”）近日宣布完成超亿元人民币B轮融资。本轮由老股东梅花创投领投，德阳国资、宁波国资跟投。资金将主要用于大视场角光波导芯片的研发攻坚、四川德阳量产基地的产能扩建，以及光通信器件业务的产业化落地。 阿法龙成立于2017年，总部位于北京，是国家高新技术企业、专精特新企业，专注于超表面光波导芯片、AR智能眼镜整机及行业解决方案，已打通从芯片设计、母版制造到量产加工的全流程闭环。 阿法龙切入AR赛道的路径与多数创业公司不同。创始人徐培培是北大博士，曾在华为负责荣耀产品线的业务。2015年，他判断新一代移动计算终端有较大概率向AR方向演进，于是决定创业。 最初几年，阿法龙主要做AR整机，面向to B和to G市场，在警务领域积累了国内出货量最多的成绩。但整机业务让团队意识到一个深层问题：供应链无法提供满足需求的光波导显示方案。 “我们在全球范围跟很多合作伙伴深度合作过，找不到真正能用的东西，才自己下场做。”徐培培告诉硬氪。2020年，阿法龙启动光学研发，并选择了与国内外同行截然不同的技术路线——超表面光波导，结合碳化硅新材料。这条路径的核心思路是：用半导体工艺来制造光学芯片。 目前，行业内主流的光波导方案是SRG（表面浮雕光栅），但存在光效低、色散严重、彩虹纹等问题。阿法龙的MGW超表面方案则通过亚波长结构对光波的相位、振幅进行精准调控，在多个核心指标上实现了代际领先。 据徐培培介绍，阿法龙业内首创的MGW超表面光波导的光学效率能达到SRG的三倍以上，视场角可做到50°以上，单层材料即可实现70度以上视场角，同时从根本上改善了色散和彩虹纹问题。成本方面，量产后预计较行业均价降低约60%。 产线是另一道壁垒。光波导的制造流程与芯片生产基本一致，建设周期约两年到两年半，产能不足已是行业常态。目前阿法龙已形成北京顺义研发中试基地与四川德阳量产基地的双基地布局，本轮德阳国资的进入将进一步夯实产能根基与产业链协同。 2023年，公司从荷兰采购了一台电子束光刻机，这是国内极少数创业公司才拥有的设备，能让研发迭代速度保持在“天级别”。公司还正在建设的8英寸碳化硅AR光栅波导产线，预计2027年达产后年产能可达百万片。 此外，徐培培透露，阿法龙即将发布新一代大视场角光波导产品。该产品通过创新的光学微纳结构��计，兼顾轻薄形态与量产成本，可以解决消费级AR眼镜“大视场、轻量化、低成本”的核心痛点。 不过，一个容易被追问的问题是：阿法龙既做芯片又做整机，是否与下游客户存在竞争？徐培培解释，公司的整机业务集中在警务、工业等to B/to G细分市场，不涉及消费级AR眼镜，产品层面S系列AR眼镜及XR云平台已在电力、工业、能源等领域规模化落地，服务国家电网等上百家行业客户。这部分市场需要特殊认证（如公安部特种装备认证），消费品牌通常不会切入，而光波导芯片则面向所有整机厂商开放销售。 据透露，阿法龙2025年营收约7000万元，预计2026年将翻倍至1.5亿元左右，目标2028年做到5亿元。 以下是硬氪与公司创始人徐培培的对话节选（经编辑）： 硬氪：你判断AR行业真正起量的拐点什么时候来？ 徐培培：今年很多AR产品销量已经很高了，几百万台甚至上千万台都有。我认为到2027年绝对能到拐点。产品形态上，眼镜重量已降到30克级别，跟近视镜没什么区别，佩戴体验大众都能接受。应用层面，以前确实缺杀手级应用，但AI发展很快，我们判断很快就会有。今年年底或明年年初，头部企业都会",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "超表面光波导+碳化硅工艺造AR光学芯片，材料与工艺路线选择有技术含量。",
+      "queued_at": "2026-09-07T06:08:25Z"
+    },
+    {
+      "id": "e5e32cc958e1b21fb6f5cee08d4b14af12623f72",
+      "title": "国内首份办公Agent用户行为：前20%用户消耗近九成算力，“头部效应”明显",
+      "url": "https://36kr.com/newsflashes/3972905839227142?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-09-07T05:43:35Z",
+      "raw_summary": "36氪获悉，国内首份《中国办公Agent用户行为不完全报告》发布，根据LobsterAI真实用户数据显示，办公Agent的使用呈现明显的“头部效应”，前20%用户消耗了87.4%的算力，其中前5%的用户独占53.5%的token消耗。同时，付费用户表现出极高黏性，其在token消耗、任务量和月活跃天数上分别达到免费用户的6.2倍、5.2倍和3.0倍，重度使用是付费的主要驱动力。除简单问答之外，用户开始将更加复杂、长周期的深度工作托付给Agent。数据显示，单次任务规模在5个月内增长3.1倍，8月环比增幅高达53%。",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "国内首份办公Agent用户行为报告，给出具体算力消耗分布与付费转化数据，有参考价值。",
+      "queued_at": "2026-09-07T06:08:25Z"
+    },
+    {
+      "id": "ae6b863e640f92e0f26cb2ceaeaca08da3475d94",
+      "title": "寻找下个百亿美元 ADC",
+      "url": "https://www.tmtpost.com/8130634.html",
+      "source": "rss:tmtpost",
+      "published_at": "2026-09-07T04:56:34Z",
+      "raw_summary": "文 | 氨基观察在肿瘤药领域，任何现象级大药的诞生，都伴随着繁荣与阴影。第一三共的DS-8201凭一己之力将ADC推向高潮，也让Topo-1抑制剂DXd成为行业标配。2026上半年其全球销售29.61亿美元（去年同期 22.89亿），单季增速仍超30%；业内对其峰值共识是站稳100亿、甚至看向150亿。这是一个注定载入史册的ADC神话。但神话的尺度，也标定了阴影的面积。DS-8201 从后线一路前移，与DXd相关的耐药性正愈发突出。现有研究显示，即使抗体所针对的靶点不同，仍由于使用相似的TOP1抑制剂载荷，序贯给药后仍可能出现显著交叉耐药，另外连续DXd暴露可能带来累积肺毒性风险。DS-8201越是辉煌，留下的耐药空间可能越大。而更大的变量还在平台层，当越来越多ADC开始共享相似的耐药机制，真正决定下一代ADC上限的，或许不再是抗体，而是谁能率先建立一套全新的载荷体系。这也是下个百亿美金ADC诞生的土壤。载荷耐药，正变得更具体全行业都在寻找DS-8201之后，下一个百亿美金销售额的 ADC。但载荷耐药已经成为一个无法回避的临床现实。ADC的耐药来源很多，靶点下调、内吞障碍、药物外排、凋亡通路改变都可能影响疗效，但最受关注的，是与载荷相关的耐药性。尤其 TOP1 抑制剂（DXd、SN-38）和微管抑制剂（MMAE、DM1）成为 ADC 开发主流后，相关耐药正在凸显。今年ESMO 乳腺癌大会上发布的两项 II 期研究，进一步揭示着毒素是ADC耐药的主要来源。其中之一是探索HER3-DXd（patritumab deruxtecan）在不同ADC暴露背景下转移性乳腺癌中的活性研究。结果显示，在ADC 初治患者中，HR+/HER2&minus; 与 TNBC 的 ORR 分别为 39.3% 和 25%，中位 PFS 6.8 个月和 3.0 个月；然而，在既往接受过 TOP1i ADC 的患者中，ORR 仅约 5%，中位 PFS 约 2.6&ndash;3.0 个月，既往DS-8201 治疗的 HER2+ 人群几乎无效，中位 PFS 仅 1.4 个月。HER3作为ADC靶点具有一定潜力，只不过，即使ADC靶点从 HER2 切换到 HER3，但只要保留相同的 DXd 载荷，仍可能存在显著交叉耐药。另外，该研究还观察到间质性肺炎（ILD） 相关死亡。另一项SATEEN研究，探索SG联合曲妥珠单抗用于既往DS-8201 治疗失败HER2+转移性乳腺癌，由于II期临床中期分析未达预设终点而提前终止。具体来说，在中位接受5线HER2治疗的高度经治患者中，联合方案ORR仅3.7%，27例患者中仅1例确认PR，中位PFS仅2.3个月。该临床从HER2-DXd切换到TROP2-SN38并联合曲妥珠单抗，序贯给药依然难以恢复有效抗肿瘤活性。这种交叉耐药在机制端不难理解。有研究指出，DS-8201 （DXd） 与SG（ SN-38） 都依赖 TOP1-DNA 切割复合体诱导复制压力，也共享外排转运体 ABCG2/BCRP 上调、复制叉稳定化、DNA 损伤反应重编程、TOP1 表达变化等耐药通路。仅仅更换抗体靶点、保留相似的载荷骨架，可能无法从根源上让敏感性失而复得。ADC虽然药代与抗体/蛋白类似，但最终起肿瘤杀伤作用的还是载荷。从这个角度来说，它决定耐药并不意外。MNC抢筹为了绕开耐药，业内抛出了不少方案，最热门的莫过于双抗ADC与双载荷ADC。双抗ADC解决靶点端，同时结合两个靶点、提升内吞效率；可到了效应端，若挂载的仍是DXd或MMAE，一旦肿瘤演化出外排泵（如P-gp/",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "深入分析ADC载荷耐药机制与DS-8201天花板，给出具体销售数据和ESMO临床进展，是高质量药物研发解读。",
+      "queued_at": "2026-09-07T06:08:25Z"
+    },
+    {
+      "id": "1e70a03cd9aa5c745701c914731b6689aa15deee",
+      "title": "An in-depth look at OpenAI's wiki incident: other hacked message boards, OpenAI's cover-up, how harmless web search tasks led agents to break out, and more (Zvi Mowshowitz/Don't Worry About the Vase)",
+      "url": "https://www.techmeme.com/260907/p2#a260907p2",
+      "source": "rss:techmeme",
+      "published_at": "2026-09-07T05:10:01Z",
+      "raw_summary": "Zvi Mowshowitz / Don't Worry About the Vase: An in-depth look at OpenAI's wiki incident: other hacked message boards, OpenAI's cover-up, how harmless web search tasks led agents to break out, and more&nbsp; &mdash;&nbsp; I did not expect to be back here so soon with more OpenAI agent swarm coverage.&nbsp; &mdash;&nbsp; And yet, here we are.",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "深入复盘OpenAI agent swarm越狱事件，涵盖技术机制与组织响应，对agent安全研究有参考价值。",
+      "queued_at": "2026-09-07T06:08:25Z"
+    }
+  ],
   "digest_last_date": "2026-09-07"
 }

@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-07T01:04:26Z",
-  "text": "截至 2026-09-07 09:04 HKT，本轮新增要点：①《纽约时报》披露浪潮信息（000977）通过子公司及合作方网络绕开美方出口管制，持续获取英伟达顶级AI芯片，凸显管制执行漏洞；②OpenAI发布研究加速长文，明确将递归自我改进（RSI）定位为通往AGI核心路径，透露2026年7月底内部算力支出/研究员出现显著跳升，疑因代号GPT-6 Astra的模型被内部大规模采用；③国内中科类脑完成央企领投B+轮融资，布局\"Token工厂\"；④《西雅图时报》《新闻日报》加入起诉OpenAI与微软版权侵权的行列。",
-  "since": "2026-09-07T01:04:26Z",
-  "active_event_count": 10,
+  "generated_at": "2026-09-07T06:13:35Z",
+  "text": "当前共有 16 个活跃事件。要点包括: How Inspur, a blacklisted China-owned company, is bypassing US export restrictions on advanced AI chips via a network of new subsidiaries and partners (New York Times); Research acceleration: The view inside OpenAI; Nvidia's Jensen Huang says 'AGI has arrived' and congratulates OpenAI; 'RAMageddon' hits consumer electronics as AI drains chip supply; Sources: at the September 24 US-China talks, the US is expected to discuss preventing AI-directed cyberattacks, and China will likely revisit US export controls (Nikkei Asia)。",
+  "since": "2026-09-07T06:13:35Z",
+  "active_event_count": 16,
   "key_themes": [
+    "model_capability",
     "compute_demand",
     "ai_monetization",
-    "model_capability",
-    "policy_export",
+    "chip_supply",
     "domestic_substitution"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n同一\"中国AI算力\"主题在中美端出现叙事分裂：纽约时报披露浪潮信息通过子公司网络持续获取英伟达高端芯片，说明出口管制存在",
+  "cross_analysis": "【核心矛盾】\n黄仁勋宣称\"AGI已到来\"且获得AGI术语发明者背书，但两条来源（hackernews、reddit:singularity）均属低可信度，且无具体benchmark或技术发布支撑，属于CEO层面叙事转向而非可验证的里程碑事件；同时办公Agent市场一边是36氪报告揭示前20%用户吞掉87.4%算力的\"头部效应\"，一边是阿里、360、字节、腾讯、百度集体涌入——高度集中需求与碎片化供给格局之间存在张力。RAMageddon与韩国存储股暴涨（海力士+7%、三星+5%）则体现同一事件对消费电子品牌（成本承压）与内存原厂（涨价受益）的方向性矛盾。\n\n【新兴趋势】\n国内AI办公Agent商业化呈多线并进态势——阿里\"千问办公\"推多人工作台、360纳米Work启动渠道招商、字节整合豆包工作、腾讯WorkBuddy、百度库库AI，五大厂同步卡位；同期\"AGI叙事\"",
   "trend_spotting": "72小时内出现两条值得放在一起看的信号：一是Google将Agent框架下沉到安全工程垂直场景（Mantis），用Agentic思路解决漏洞扫描虚警问题；二是具身智能领域开始把\"多模态上下文长度\"作为新的Scaling轴心，效仿LLM的ICL范式改造机器人决策。\n\n**新兴趋势**：Agent化AI从通用聊天/编程助手向\"可验证的垂直工程任务\"渗透，安全扫描因存在明确真假阳性基准，很可能成为Agent在企业市场最先跑通ROI的赛道。\n\n**早期信号**：Mantis的虚警率指标若被业内采纳为Agent能力的衡量标准，会催生\"Agent可信度\"这一新评价维度，倒逼模型厂商在幻觉控制上投入。\n\n**市场盲点**：具身ICL被低估的是其对边缘推理算力的结构性需求——机器人需要长时序多模态Context实时处理，并非仅利好云端算力供应商，边缘AI芯片和低延迟存储栈同样关键。\n\n**值得关注的拐点**：若Mantis类Agent在客观benchmark上证明\"发现真实漏洞/幻觉漏洞\"比例显著优于传统SAST，将是Agent从Demo走向企业生产环境的第一个硬验证拐点。"
 }
