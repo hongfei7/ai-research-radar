@@ -376,6 +376,32 @@
       "source_traceable": true,
       "why": "Netflix的Flink operator级自动扩缩容实践，给出58%成本下降和$1.1M年节省的具体数据，对大规模流式系统部署有借鉴价值。",
       "queued_at": "2026-09-07T17:55:52Z"
+    },
+    {
+      "id": "09f466e518b1af88482ff2e013208063a440806d",
+      "title": "Anthropic reportedly signs $517 billion in compute deals after Dario Amodei warned rivals about reckless risk",
+      "url": "https://the-decoder.com/anthropic-reportedly-signs-517-billion-in-compute-deals-after-dario-amodei-warned-rivals-about-reckless-risk",
+      "source": "rss:the-decoder",
+      "published_at": "2026-09-07T18:12:41Z",
+      "raw_summary": "Anthropic signed compute contracts worth up to $517 billion in eleven months but still trails OpenAI's $750 billion plan through 2030. In early 2026, CEO Dario Amodei warned against investing too fast. Now Anthropic is racing to catch up, while Sam Altman warns about \"unsustainable silliness\" in the compute buildout, especially from neo-cloud providers. The article Anthropic reportedly signs $517 billion in compute deals after Dario Amodei warned rivals about reckless risk appeared first on The Decoder.",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Anthropic签5170亿美元算力合同，含Dario与Altman的公开表态及算力竞赛对比，可读出算力供需路线分歧。",
+      "queued_at": "2026-09-07T21:17:53Z"
+    },
+    {
+      "id": "417b9996aa22aef119ce2cfc30e94cd1f9b7bb4b",
+      "title": "Higher acceptance length, slower prose: Ling’s n=1/2/3 MTP test on one Spark",
+      "url": "https://www.reddit.com/r/localllama/comments/1w9v4yz/higher_acceptance_length_slower_prose_lings_n123",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-07T15:23:25Z",
+      "raw_summary": "The missing control is visible in sudoingX’s Ling-3.0-flash benchmark graphics. The earlier table leaves Ling’s no-speculation baseline as “not measured.” The later code/prose graphic fills it in: about 23 tok/s without the drafter, against 40.9 on code and 38.7 on prose with MTP n=1, at short prompts. That makes the tuning claim easier to inspect. The later graphic compares short code and prose workloads with and without drafting. A separate correction in the repository isolates CUDA graphs: the earlier “two flags” result changed graphs and multi-token prediction (MTP) together, so it could not tell you which change produced the gain. The corrected August 22 measurements on one 128GB DGX Spark, using the official INT4 checkpoint and the vendor’s vLLM fork, were: Configuration Reported tok/s, short coding task Eager execution, MTP off 20.8 CUDA graphs, MTP off 22.9 CUDA graphs, MTP n=1 40.9 That is roughly 10% more throughput from graphs relative to the eager baseline, followed by roughly 79% more from MTP relative to the graph baseline. Those percentages have different denominators. Then comes the setting that is tempting to turn up. Here n is num_speculative_tokens: how many draft tokens are proposed per step. vLLM’s documented acceptance-length metric includes a bonus token per verification step, so an average above 1 with n=1 is possible. The creator reports the metric from a vendor fork; its exact historical counting implementation is not supplied. MTP setting n=1 n=2 n=",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Ling MTP推测解码的n=1/2/3实测，给出具体tok/s和CUDA graphs对照实验，方法论透明。",
+      "queued_at": "2026-09-07T21:17:53Z"
     }
   ],
   "digest_last_date": "2026-09-07"

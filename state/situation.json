@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-07T17:59:55Z",
-  "text": "当前共有 30 个活跃事件。要点包括: GPT-6 Astra自主通关《Portal》; Nvidia Acquires HuggingFace for $12.9B; DeepSeek千兆瓦雄心，遭遇电力现实; GPT-6不只Astra！Sol内测结果曝光，速度快6倍; GPT-6 发布后，OpenAI 又自曝「外星思维」，AGI 真的来了？。",
-  "since": "2026-09-07T17:59:55Z",
-  "active_event_count": 30,
+  "generated_at": "2026-09-07T21:19:06Z",
+  "text": "当前共有 11 个活跃事件。要点包括: GPT-6 Astra自主通关《Portal》; Nvidia Acquires HuggingFace for $12.9B; Anthropic reportedly signs $517 billion in compute deals after Dario Amodei warned rivals about reckless risk; 燧原科技发行结果出炉！募资61.19亿元，国产AI芯片龙头即将登陆科创板; Astra working with Blender via computer use feels like magic, showing computer use could be the fourth demand wave after chatbots, reasoning, and agentic coding (Tae Kim/Key Context)。",
+  "since": "2026-09-07T21:19:06Z",
+  "active_event_count": 11,
   "key_themes": [
-    "model_capability",
     "compute_demand",
+    "model_capability",
     "ai_monetization",
-    "edge_ai",
+    "datacenter_power",
     "domestic_substitution"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n1）GPT-6\"速度提升6倍\"（量子位）与OpenAI\"外星思维\"AGI叙事（爱范儿）形成效率与能力曲线的张力——若效率属实，推理算力需求或被压缩；若能力突破，算力需求可能反向扩大。2）华为声称麒麟9050 Pro\"完全不受美国限制\"（Nikkei/极客公园）与Techmeme低可信度标注存在信息真伪分歧，需以代工路径验证。3）阿里Qoder IDE与千问办公产品定位高度重叠（钛媒体），反映内部AI赛道赛马未收口，与\"千问办公推出多人工作台\"（雷峰网）形成内部协调性矛盾。\n\n【新兴趋势】\n端侧AI成为多条线索的交汇主线：小米18 Fold玄戒O3+长鑫LPDDR6、华为Mate XT2端侧30B模型、千亿模型装进笔记本（爱范儿）、Qwen 4B+GLM端云协同方案、AMD联合国产模型推AI PC（爱范儿），叠加三星人形机器人跨界，端侧算力叙事持续强化。Kioxia CXL Flash-for-DRAM是新兴的存储架构变量，潜在大容量DRAM/HBM需求结构。\n\n【信息盲点】\n中芯国际、寒武纪、海光、浪潮信息、中科曙光等国产算力链标的均为间接提及，无独立报道；联想/戴尔/惠普等AI PC OEM厂商完全缺席；DeepSeek\"千兆瓦电力现实\"原文摘要缺失，电力瓶颈具体细节不明；HBM及先进封装产能爬坡节奏缺独立信源。\n\n【跨标的联动】\n三星电子形成\"存储+代工+机器人\"跨界协同（条目多源验证）；华为麒麟9050 Pro对高通/联发科高端SoC形成挤压，并联动寒武纪/海光国产替代主线；Kioxia CXL方案对三星/海力士/美光DRAM定价构成边际压力；微软Azure亚太拆分（雷峰网）二阶传导至浪潮/中科曙光订单结构；AMD端侧芯片与",
-  "trend_spotting": "72小时内出现两条值得放在一起看的信号：一是Google将Agent框架下沉到安全工程垂直场景（Mantis），用Agentic思路解决漏洞扫描虚警问题；二是具身智能领域开始把\"多模态上下文长度\"作为新的Scaling轴心，效仿LLM的ICL范式改造机器人决策。\n\n**新兴趋势**：Agent化AI从通用聊天/编程助手向\"可验证的垂直工程任务\"渗透，安全扫描因存在明确真假阳性基准，很可能成为Agent在企业市场最先跑通ROI的赛道。\n\n**早期信号**：Mantis的虚警率指标若被业内采纳为Agent能力的衡量标准，会催生\"Agent可信度\"这一新评价维度，倒逼模型厂商在幻觉控制上投入。\n\n**市场盲点**：具身ICL被低估的是其对边缘推理算力的结构性需求——机器人需要长时序多模态Context实时处理，并非仅利好云端算力供应商，边缘AI芯片和低延迟存储栈同样关键。\n\n**值得关注的拐点**：若Mantis类Agent在客观benchmark上证明\"发现真实漏洞/幻觉漏洞\"比例显著优于传统SAST，将是Agent从Demo走向企业生产环境的第一个硬验证拐点。"
+  "cross_analysis": "【核心矛盾】\nAnthropic CEO Dario Amodei年初曾警告行业投资节奏过快、风险失控，但Anthropic自身却在11个月内签下5170亿美元算力合同，\"说与做\"存在明显背驰。同时，Sam Altman批评新云厂商capex\"愚蠢且不可持续\"，而OpenAI自身7500亿美元的算力建设计划规模更大，批评与自身行为亦存在矛盾。两组言行反差提示头部AI实验室的capex竞赛已脱离理性边界。\n\n【新兴趋势】\n算力capex规模被持续上修（千亿美元级），且\"巨额算力合同\"正在成为头部AI实验室之间的标准军备竞赛形态，capex可持续性也从行业边缘话题升级为核心争议。数据中心电力瓶颈与\"新云厂商\"角色（区别于三大公有云）正在成为产业链的关键变量。\n\n【信息盲点】\n本轮仅覆盖Anthropic/OpenAI及NVDA/AVGO/AMD的间接传导，电力公用事业（如VST、CEG、NRG）、冷却/液冷（CDU厂商）、光通信/网络（Arista、Coherent）、HBM/存储（Micron、SK Hynix）、台积电CoWoS产能、以及新云厂商（CoreWeave、Nebius、Lambda）均未在原文中出现，但均为算力capex扩张的直接受益/承压环节，应重点补采。\n\n【跨标的联动】\nAnthropic与OpenAI的算力军备竞赛直接拉动NVDA/AVGO/AMD的订单结构升级，竞争烈度决定三类芯片在AI实验室中的份额分配。\"新云厂商\"作为新参与者，其capex可持续性同时是上游芯片厂商（NVDA等）的需求支撑与风险来源——若新云融资断裂，可能引发对芯片厂商订单可见度的连锁质疑。",
+  "trend_spotting": "Anthropic 11个月内锁定5170亿美元算力合同、逼近OpenAI 2030年7500亿美元路线图，意味着头部两家AI实验室累计算力承诺已向1.3万亿美元量级迁移——这不再是\"增长故事\"，而是接近准主权级别的资本动员。\n\n【新兴趋势】算力capex的复合增速正在脱离收入曲线，呈现\"先签合同、再找客户\"的类基建逻辑。Anthropic自家CEO年初刚警告\"鲁莽风险\"，转头就签下5170亿，说明竞争压力已压过风控本能。\n\n【早期信号】Sam Altman罕见公开批评新云厂商capex\"不可持续的愚蠢\"——同业龙头对同行的capex公开唱空极为罕见，这是一级市场对算力需求定价分歧的外化信号，可能预示未来12-18个月出现算力合同重估或延期。\n\n【市场盲点】市场仍在用\"AI软件公司\"框架给实验室估值，但合同结构显示其本质已偏向\"AI重资产基建运营商\"。同时，电力与电网审批周期（通常3-7年）才是真正的硬约束，而非芯片产能或资本——这点在二级市场讨论中严重缺位。\n\n【值得关注的拐点】当算力合同签约速度持续超过电力并网速度时，\"签了用不上\"的交付风险将集中暴露；下一个关键观察窗口是2027年前后首批大单的首次capex拨付节点。"
 }
