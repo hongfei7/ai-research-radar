@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-07T06:13:35Z",
-  "text": "当前共有 16 个活跃事件。要点包括: How Inspur, a blacklisted China-owned company, is bypassing US export restrictions on advanced AI chips via a network of new subsidiaries and partners (New York Times); Research acceleration: The view inside OpenAI; Nvidia's Jensen Huang says 'AGI has arrived' and congratulates OpenAI; 'RAMageddon' hits consumer electronics as AI drains chip supply; Sources: at the September 24 US-China talks, the US is expected to discuss preventing AI-directed cyberattacks, and China will likely revisit US export controls (Nikkei Asia)。",
-  "since": "2026-09-07T06:13:35Z",
-  "active_event_count": 16,
+  "generated_at": "2026-09-07T12:43:56Z",
+  "text": "当前共有 20 个活跃事件。要点包括: DeepSeek千兆瓦雄心，遭遇电力现实; GPT-6不只Astra！Sol内测结果曝光，速度快6倍; GPT-6 发布后，OpenAI 又自曝「外星思维」，AGI 真的来了？; 千问办公业内首发多人工作台，支持百人协同; DeepSeek、千问、智谱轮番登场，PC 厂商终于等到了它们的弹药。",
+  "since": "2026-09-07T12:43:56Z",
+  "active_event_count": 20,
   "key_themes": [
-    "model_capability",
+    "edge_ai",
     "compute_demand",
-    "ai_monetization",
-    "chip_supply",
-    "domestic_substitution"
+    "model_capability",
+    "domestic_substitution",
+    "ai_monetization"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n黄仁勋宣称\"AGI已到来\"且获得AGI术语发明者背书，但两条来源（hackernews、reddit:singularity）均属低可信度，且无具体benchmark或技术发布支撑，属于CEO层面叙事转向而非可验证的里程碑事件；同时办公Agent市场一边是36氪报告揭示前20%用户吞掉87.4%算力的\"头部效应\"，一边是阿里、360、字节、腾讯、百度集体涌入——高度集中需求与碎片化供给格局之间存在张力。RAMageddon与韩国存储股暴涨（海力士+7%、三星+5%）则体现同一事件对消费电子品牌（成本承压）与内存原厂（涨价受益）的方向性矛盾。\n\n【新兴趋势】\n国内AI办公Agent商业化呈多线并进态势——阿里\"千问办公\"推多人工作台、360纳米Work启动渠道招商、字节整合豆包工作、腾讯WorkBuddy、百度库库AI，五大厂同步卡位；同期\"AGI叙事\"",
+  "cross_analysis": "【核心矛盾】\n1）GPT-6\"速度提升6倍\"（量子位）与OpenAI\"外星思维\"AGI叙事（爱范儿）形成效率与能力曲线的张力——若效率属实，推理算力需求或被压缩；若能力突破，算力需求可能反向扩大。2）华为声称麒麟9050 Pro\"完全不受美国限制\"（Nikkei/极客公园）与Techmeme低可信度标注存在信息真伪分歧，需以代工路径验证。3）阿里Qoder IDE与千问办公产品定位高度重叠（钛媒体），反映内部AI赛道赛马未收口，与\"千问办公推出多人工作台\"（雷峰网）形成内部协调性矛盾。\n\n【新兴趋势】\n端侧AI成为多条线索的交汇主线：小米18 Fold玄戒O3+长鑫LPDDR6、华为Mate XT2端侧30B模型、千亿模型装进笔记本（爱范儿）、Qwen 4B+GLM端云协同方案、AMD联合国产模型推AI PC（爱范儿），叠加三星人形机器人跨界，端侧算力叙事持续强化。Kioxia CXL Flash-for-DRAM是新兴的存储架构变量，潜在大容量DRAM/HBM需求结构。\n\n【信息盲点】\n中芯国际、寒武纪、海光、浪潮信息、中科曙光等国产算力链标的均为间接提及，无独立报道；联想/戴尔/惠普等AI PC OEM厂商完全缺席；DeepSeek\"千兆瓦电力现实\"原文摘要缺失，电力瓶颈具体细节不明；HBM及先进封装产能爬坡节奏缺独立信源。\n\n【跨标的联动】\n三星电子形成\"存储+代工+机器人\"跨界协同（条目多源验证）；华为麒麟9050 Pro对高通/联发科高端SoC形成挤压，并联动寒武纪/海光国产替代主线；Kioxia CXL方案对三星/海力士/美光DRAM定价构成边际压力；微软Azure亚太拆分（雷峰网）二阶传导至浪潮/中科曙光订单结构；AMD端侧芯片与",
   "trend_spotting": "72小时内出现两条值得放在一起看的信号：一是Google将Agent框架下沉到安全工程垂直场景（Mantis），用Agentic思路解决漏洞扫描虚警问题；二是具身智能领域开始把\"多模态上下文长度\"作为新的Scaling轴心，效仿LLM的ICL范式改造机器人决策。\n\n**新兴趋势**：Agent化AI从通用聊天/编程助手向\"可验证的垂直工程任务\"渗透，安全扫描因存在明确真假阳性基准，很可能成为Agent在企业市场最先跑通ROI的赛道。\n\n**早期信号**：Mantis的虚警率指标若被业内采纳为Agent能力的衡量标准，会催生\"Agent可信度\"这一新评价维度，倒逼模型厂商在幻觉控制上投入。\n\n**市场盲点**：具身ICL被低估的是其对边缘推理算力的结构性需求——机器人需要长时序多模态Context实时处理，并非仅利好云端算力供应商，边缘AI芯片和低延迟存储栈同样关键。\n\n**值得关注的拐点**：若Mantis类Agent在客观benchmark上证明\"发现真实漏洞/幻觉漏洞\"比例显著优于传统SAST，将是Agent从Demo走向企业生产环境的第一个硬验证拐点。"
 }
