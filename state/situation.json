@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-08T01:28:18Z",
-  "text": "截至 2026-09-08 09:28 HKT，本轮新增：①三星计划将50%-60%的4nm产能倾斜至HBM4基础裸片，意在争夺对海力士的市场份额；②中金与银河证券同步看好超节点成为AI算力核心组织方式，国产超节点下半年预计加速交付，光模块、液冷、电源、连接器等环节有望受益；③OpenAI通过Firmus在马来西亚落地超900MW签约算力，东南亚布局再落一子；④LLM命令行工具0.35版本已支持OpenAI新模型gpt-6-astra。",
-  "since": "2026-09-08T01:28:18Z",
-  "active_event_count": 10,
+  "generated_at": "2026-09-08T06:28:41Z",
+  "text": "当前共有 21 个活跃事件。要点包括: 阿斯麦与台积电推动高NA EUV光罩向12英寸升级，计划2031年建立试产线; 消息称三星将超半数4纳米产能投入HBM4基础裸片生产; Intel surpasses one million High-NA EUV wafers processed, outpaces the rest of the industry combined — company also trailblazing giant 6×12 photomasks to speed production and lower costs; Mistral raised a €3B Series D led by Samsung at a €21B valuation, up from €11.7B a year ago, as it expands into data centers beyond developing AI models (Adam Satariano/New York Times); Sources: Huawei is investing in Chinese lithography companies and helping them secure deals with leading fabs like SMIC to reduce reliance on foreign suppliers (Financial Times)。",
+  "since": "2026-09-08T06:28:41Z",
+  "active_event_count": 21,
   "key_themes": [
-    "compute_demand",
-    "datacenter_power",
     "chip_supply",
+    "compute_demand",
     "advanced_packaging",
-    "ai_monetization"
+    "datacenter_power",
+    "domestic_substitution"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n中金与银河证券均看好\"超节点\"方向，但落脚点不同：中金聚焦海外Scale-up互联体系（NVLink/UBswitch、光互联），强调系统级瓶颈；银河证券则将重心放在国产超节点放量拐点与AI应用层价值重估，叙事锚点在政策催化与国产替代。两条逻辑并不互斥但隐含节奏分歧——海外超节点已进入工程交付期，国产超节点仍处\"预计加速\"阶段。此外，三星将超50% 4nm产能倾斜HBM4基础裸片，与海力士在HBM4上的领先地位形成直接竞争信号，但本轮报道未给出双方良率/客户验证的对照数据，三星此举是\"追赶\"还是\"过度押注\"存在不确定性。\n\n【新兴趋势】\n\"超节点（SuperPod）\"在两条独立研报中同时出现，是本轮最显著的主题共振，向上拉动交换芯片/光模块/液冷/高功率电源四类配套环节。其次是\"AI算力地理多元化\"——Firmus与OpenAI在马来西亚部署900MW+算力，提示东南亚正成为OpenAI对冲美国超大规模云厂依赖的边际增量。第三，叙事重心从\"模型竞赛\"向\"应用交付与基础设施传导\"切换（银河证券+中信建投），资本开支兑现路径成为后续定价主线。\n\n【信息盲点】\n本轮未见台积电CoWoS产能、苹果/谷歌/亚马逊自研ASIC进展、Marvell/Arista等网络标的的具体信息；电力主线（公用事业、燃气轮机、核电小堆）虽被多次暗示为约束变量，但无直接标的覆盖。Oracle、Meta、微软本季capex指引也未出现在本批素材中，但这些是验证\"算力景气延续\"的关键",
+  "cross_analysis": "【核心矛盾】\n36kr称ASML与台积电主导12英寸High-NA光罩2031年试产，Tom's Hardware则报道Intel已累计处理超100万片High-NA晶圆（超全行业总和）并率先推进6×12光罩，两条路径（12英寸 vs 6×12）并行且Intel在量产经验上反超叙事；同时Intel 18A尚未证明客户吸引力，\"产能领先\"与\"制程领先\"是否等价存疑。另一矛盾：苹果-Kioxia长协\"不设价格上限\"暗示",
   "trend_spotting": "Anthropic 11个月内锁定5170亿美元算力合同、逼近OpenAI 2030年7500亿美元路线图，意味着头部两家AI实验室累计算力承诺已向1.3万亿美元量级迁移——这不再是\"增长故事\"，而是接近准主权级别的资本动员。\n\n【新兴趋势】算力capex的复合增速正在脱离收入曲线，呈现\"先签合同、再找客户\"的类基建逻辑。Anthropic自家CEO年初刚警告\"鲁莽风险\"，转头就签下5170亿，说明竞争压力已压过风控本能。\n\n【早期信号】Sam Altman罕见公开批评新云厂商capex\"不可持续的愚蠢\"——同业龙头对同行的capex公开唱空极为罕见，这是一级市场对算力需求定价分歧的外化信号，可能预示未来12-18个月出现算力合同重估或延期。\n\n【市场盲点】市场仍在用\"AI软件公司\"框架给实验室估值，但合同结构显示其本质已偏向\"AI重资产基建运营商\"。同时，电力与电网审批周期（通常3-7年）才是真正的硬约束，而非芯片产能或资本——这点在二级市场讨论中严重缺位。\n\n【值得关注的拐点】当算力合同签约速度持续超过电力并网速度时，\"签了用不上\"的交付风险将集中暴露；下一个关键观察窗口是2027年前后首批大单的首次capex拨付节点。"
 }

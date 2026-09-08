@@ -4,76 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "AMD",
-        "ASML",
-        "台积电"
-      ],
-      "features": [
-        "ai-directed",
-        "and",
-        "asia",
-        "at",
-        "china",
-        "controls",
-        "cyberattacks",
-        "discuss",
-        "expected",
-        "export",
-        "is",
-        "likely",
-        "nikkei",
-        "preventing",
-        "revisit",
-        "september",
-        "sources",
-        "talks",
-        "the",
-        "to",
-        "us",
-        "us-china",
-        "will"
-      ],
-      "sent_at": "2026-09-07T06:14:03Z"
-    },
-    {
-      "tickers": [
-        "三星电子",
-        "海力士",
-        "美光"
-      ],
-      "features": [
-        "ai",
-        "as",
-        "chip",
-        "consumer",
-        "drains",
-        "electronics",
-        "hits",
-        "ramageddon",
-        "supply"
-      ],
-      "sent_at": "2026-09-07T06:14:29Z"
-    },
-    {
-      "tickers": [
-        "英伟达"
-      ],
-      "features": [
-        "agi",
-        "arrived",
-        "artificial",
-        "ceo",
-        "general",
-        "has",
-        "huang",
-        "intelligence",
-        "jensen",
-        "says"
-      ],
-      "sent_at": "2026-09-07T06:14:58Z"
-    },
-    {
-      "tickers": [
         "DeepSeek"
       ],
       "features": [
@@ -226,6 +156,116 @@
         "超半"
       ],
       "sent_at": "2026-09-08T01:28:43Z"
+    },
+    {
+      "tickers": [
+        "ASML",
+        "台积电"
+      ],
+      "features": [
+        "euv",
+        "na",
+        "与台",
+        "产线",
+        "光罩",
+        "划年",
+        "动高",
+        "升级",
+        "台积",
+        "向英",
+        "寸升",
+        "年建",
+        "建立",
+        "推动",
+        "斯麦",
+        "电推",
+        "积电",
+        "立试",
+        "级计",
+        "罩向",
+        "英寸",
+        "计划",
+        "试产",
+        "阿斯",
+        "高光",
+        "麦与"
+      ],
+      "sent_at": "2026-09-08T06:29:03Z"
+    },
+    {
+      "tickers": [
+        "ASML",
+        "中芯国际"
+      ],
+      "features": [
+        "and",
+        "chinese",
+        "companies",
+        "deals",
+        "fabs",
+        "financial",
+        "foreign",
+        "helping",
+        "huawei",
+        "in",
+        "investing",
+        "is",
+        "leading",
+        "like",
+        "lithography",
+        "on",
+        "reduce",
+        "reliance",
+        "secure",
+        "smic",
+        "sources",
+        "suppliers",
+        "them",
+        "times",
+        "to",
+        "with"
+      ],
+      "sent_at": "2026-09-08T06:29:27Z"
+    },
+    {
+      "tickers": [
+        "Anthropic",
+        "OpenAI",
+        "三星电子"
+      ],
+      "features": [
+        "11.7b",
+        "21b",
+        "3b",
+        "adam",
+        "ago",
+        "ai",
+        "as",
+        "at",
+        "beyond",
+        "by",
+        "centers",
+        "data",
+        "developing",
+        "expands",
+        "from",
+        "into",
+        "it",
+        "led",
+        "mistral",
+        "models",
+        "new",
+        "raised",
+        "samsung",
+        "satariano",
+        "series",
+        "times",
+        "up",
+        "valuation",
+        "year",
+        "york"
+      ],
+      "sent_at": "2026-09-08T06:29:39Z"
     }
   ],
   "last_report": {
