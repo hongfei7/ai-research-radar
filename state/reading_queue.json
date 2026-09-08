@@ -339,6 +339,45 @@
       "queued_at": "2026-09-08T21:40:58Z"
     },
     {
+      "id": "38ad840aa31f64aa71ac5be21234d554072c429e",
+      "title": "Tao: Open math problems being non-renewably mined by AI",
+      "url": "https://mathstodon.xyz/@tao/117237320796901560",
+      "source": "hackernews",
+      "published_at": "2026-09-08T21:00:52Z",
+      "raw_summary": "Tao: Open math problems being non-renewably mined by AI",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "陶哲轩提出开放数学问题正被AI不可再生地开采，是关于AI对前沿研究生态影响的一手权威表态。",
+      "queued_at": "2026-09-08T23:41:19Z"
+    },
+    {
+      "id": "c83792e2b191262465551fb0d30835a922b96d80",
+      "title": "高通与亚马逊达成协议，共同建设人工智能数据中心基础设施",
+      "url": "https://36kr.com/newsflashes/3975357845778948?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-09-08T23:09:56Z",
+      "raw_summary": "高通与亚马逊达成协议，共同建设人工智能数据中心基础设施，将合作开发高达1.6T的光互联解决方案。高通科技与亚马逊还将合作开发高性能光连接解决方案，以支持AI基础设施日益增长的规模和带宽需求。此次合作将利用高通技术先进的SerDes和光DSP技术。作为扩大合作的一部分，高通科技计划加深对AWS AI基础设施（包括亚马逊Bedrock）的应用，用于电子设计自动化（EDA）工作负载，目标是缩短芯片设计周期。（财联社）",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "高通与AWS联合开发1.6T光互联及EDA上云，是AI数据中心互联与芯片设计云化的重要产业动向。",
+      "queued_at": "2026-09-08T23:41:19Z"
+    },
+    {
+      "id": "c3d3533ebb42044c1b0d3dec155631e6c4d024bc",
+      "title": "OpenAI：计划在今年年底前开始部署与博通开发的AI芯片Jalapeño",
+      "url": "https://36kr.com/newsflashes/3975360004895236?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-09-08T23:05:19Z",
+      "raw_summary": "OpenAI称，计划在今年年底前开始部署与博通开发的AI芯片Jalapeño，同时与英伟达、AMD及其他合作伙伴的加速器协同推进。（新浪财经）",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "OpenAI与博通自研AI芯片Jalapeño年底部署，是AI芯片供应链去Nvidia化的关键里程碑。",
+      "queued_at": "2026-09-08T23:41:19Z"
+    },
+    {
       "id": "2245a3abf59638ca4604280d2ac9c0dffa439ff5",
       "title": "The VMs Powering Mobile Agents (Instinct, Claude Code)",
       "url": "https://rohanadwankar.github.io/posts/platforms.html",
@@ -480,45 +519,6 @@
       "source_traceable": false,
       "why": "GaN技术向中国转移的产经间谍事件，对理解GaN供应链地缘格局和中欧半导体竞争有实质信息。",
       "queued_at": "2026-09-08T11:38:26Z"
-    },
-    {
-      "id": "a5996f3eadaf9fab94e1537b01f1af51806beb11",
-      "title": "Chip Industry Technical Paper Roundup: Sept. 8",
-      "url": "https://semiengineering.com/chip-industry-technical-paper-roundup-sept-8-2",
-      "source": "rss:semiengineering",
-      "published_at": "2026-09-08T07:01:25Z",
-      "raw_summary": "HBF for LLM inference; M3D SRAM with BEOL pass-gates at 2nm; distributed GPU architectures; hybrid HBM-HBF memory; GaN-on-silicon polarization superjunctions; programmable silicon photonics; Al dopant activation in 4H-SiC. The post Chip Industry Technical Paper Roundup: Sept. 8 appeared first on Semiconductor Engineering.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "覆盖HBF用于LLM推理、2nm M3D SRAM、分布式GPU架构、GaN-on-Si超结、可编程硅光等热点论文速览，是高效跟踪前沿研究的方式。",
-      "queued_at": "2026-09-08T11:38:26Z"
-    },
-    {
-      "id": "00190a5f877bafa58b0305d5a4c913786a7c86a4",
-      "title": "ASML Gets TSMC and Samsung Excited about High-NA EUV",
-      "url": "https://www.techzine.eu/news/devices/144122/asml-gets-tsmc-and-samsung-excited-about-high-na-euv",
-      "source": "hackernews",
-      "published_at": "2026-09-08T14:51:43Z",
-      "raw_summary": "ASML Gets TSMC and Samsung Excited about High-NA EUV",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": false,
-      "why": "ASML High-NA EUV在TSMC/Samsung的最新采用进展，对先进制程路线判断有参考价值。",
-      "queued_at": "2026-09-08T15:21:15Z"
-    },
-    {
-      "id": "a4487491981792e26d95b4beef9d4430e1673b70",
-      "title": "Google DeepMind Maps 9 Billion Possible DNA Variants",
-      "url": "https://spectrum.ieee.org/alphagenome-atlas",
-      "source": "rss:ieee-spectrum-ai",
-      "published_at": "2026-09-08T14:00:05Z",
-      "raw_summary": "DNA is often explained as a codebook or set of instructions for producing proteins, and ultimately, life. Some stretches of DNA, called genes, code for proteins, but the vast majority of DNA is considered “non-coding.” Some of it has no known function, while other segments are critical to regulating gene activity. These regulatory elements can interact in complicated ways, and their effects can vary across different cells and tissues. Some also influence genes located far away in the genome. Understanding how changes in DNA affect this regulation “is fundamental to understanding most disease,” says Carl de Boer, a genomicist at the University of British Columbia. That’s why researchers are working to understand what every imaginable small variation in human DNA across the entire genome might mean for gene regulation. A recent AI tool built for that purpose from Google DeepMind, AlphaGenome, was originally announced in 2025. In January, a paper published in Nature provided more details, and the model was released for public non-commercial use. The AI model can compare an original DNA sequence with an altered one and predict how the change might affect gene expression and other regulatory activity. But researchers had to select the variants they wanted to test, write code and run the computationally demanding model themselves.Now DeepMind has done that work in advance for all 9 billion possible single-letter changes to a reference human genome. Today, on 8 September, DeepMind a",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "IEEE Spectrum对AlphaGenome的解读，侧重非编码调控区与疾病关联的科学价值。",
-      "queued_at": "2026-09-08T15:21:15Z"
     }
   ],
   "digest_last_date": "2026-09-08"
