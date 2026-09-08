@@ -40,6 +40,19 @@
       "queued_at": "2026-09-08T18:54:17Z"
     },
     {
+      "id": "30a555d0f8ec76b58fd5964e37d31c104d5d1417",
+      "title": "Pathway’s brain-inspired architecture development on Amazon SageMaker HyperPod",
+      "url": "https://aws.amazon.com/blogs/machine-learning/pathways-brain-inspired-architecture-development-on-amazon-sagemaker-hyperpod",
+      "source": "rss:aws-ml",
+      "published_at": "2026-09-08T19:12:51Z",
+      "raw_summary": "Pathway's Baby Dragon Hatchling (BDH) is a brain-inspired, post-transformer architecture that reasons in latent space instead of emitting chain-of-thought tokens. See how Pathway develops and scales BDH on Amazon SageMaker HyperPod, and how BDH-CQ set a new cost-efficiency mark on the ARC-AGI-1 benchmark.",
+      "score": 9,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Pathway的BDH是后Transformer、潜在空间推理的brain-inspired架构，在ARC-AGI-1创成本效率纪录，是值得关注的新范式。",
+      "queued_at": "2026-09-08T21:40:58Z"
+    },
+    {
       "id": "2618891dac9f7522e365bc3b9683c4f083056ee1",
       "title": "I tested 10 model/harness combinations on the same Three.js task",
       "url": "https://alvins82.github.io/hangar-harness-model-tests",
@@ -287,6 +300,45 @@
       "queued_at": "2026-09-08T18:54:17Z"
     },
     {
+      "id": "ce00418e542b578b89d28a29d1c9ef7cbb3005ef",
+      "title": "Top chipmakers embrace ASML’s $400M machines, agree to crucial chipmaking change",
+      "url": "https://arstechnica.com/gadgets/2026/09/top-chipmakers-embrace-asmls-400m-machines-agree-to-crucial-chipmaking-change",
+      "source": "rss:arstechnica",
+      "published_at": "2026-09-08T19:12:53Z",
+      "raw_summary": "Chipmaking changes could boost productivity of new ASML machines by 40 percent.",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Top芯片厂接受ASML $400M新机器及关键制程变化、生产力提升40%，是先进制程供应链实质信息。",
+      "queued_at": "2026-09-08T21:40:58Z"
+    },
+    {
+      "id": "ac7b9b35ef941a535d68adc7cd1d8723d95fa018",
+      "title": "Qwen/Qwen-Drive-1.0-4B · Hugging Face",
+      "url": "https://www.reddit.com/r/localllama/comments/1wauxg9/qwenqwendrive104b_hugging_face",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-08T17:27:16Z",
+      "raw_summary": "I don't think anyone posted about this here, but Qwen released a finetuned version of 3.5 4 for driving. The full Bf16 checkpoint is 9B. This is a very interesting development of Chinese AI labs tackle self driving next with open weight models. Edit: the HF repo links to the github repo, which in the citation links to a 40 page technical report. Here's the abstract: We present Qwen-Drive-1.0, an initial step towards a vision-language foundation model for autonomous driving. Qwen-Drive-1.0 retains the architecture of the pretrained vision-language model (VLM) and integrates 3D perception, visual question answering, and motion planning within a unified framework. An external bird’s-eye-view (BEV) perception head jointly performs 3D object detection, semantic occupancy prediction, and BEV map segmentation. It serves as a probe of the 3D information accessible from the shared representations and provides an explicit, inspectable interface to 3D scene structure. A Planning Expert conditions on shared VLM representations to generate future ego trajectories. A staged training recipe combines driving supervision with general-purpose vision-language data to acquire driving-specific competence while helping preserve broad visual understanding and instruction-following capabilities. Experiments demonstrate strong 3D perception and driving scene understanding while largely preserving general vision-language capability. Comprehensive evaluations across open-loop, pseudo-closed-loop, and c",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Qwen-Drive-1.0是阿里开源的自动驾驶VLM基础模型，附40页技术报告与3D感知集成，是端到端自动驾驶范式的具体进展。",
+      "queued_at": "2026-09-08T21:40:58Z"
+    },
+    {
+      "id": "f2bcbe6e416f216a718b96d7a92b00434a6ed925",
+      "title": "Qwen3.8-Flash-Next in llama.cpp vs SGLang vs FreeToken: 35s vs 258s to first token at full context. My findings on new PRs coming to engines.",
+      "url": "https://www.reddit.com/r/localllama/comments/1waydqj/qwen38flashnext_in_llamacpp_vs_sglang_vs",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-08T19:26:41Z",
+      "raw_summary": "Hey guys, After my CPU-only to 96GB VRAM test, I tested Qwen3.8-Flash-Next across llama.cpp, SGLang and FreeToken on the same workstation. This time I wanted to see what changes when you keep the hardware and model family fixed, but change the engine, weight format and memory placement. I also tested newer builds, PR patches and speculative decoding: llama.cpp's MTP fork, SGLang's Blackwell support patches, n-gram speculation and an experimental PLE read-path build. Short version: At the full 262K window, time to first token was 35.4s in SGLang, 80.4s in FreeToken, 210.2s in llama.cpp + MTP and 258.4s in the llama.cpp baseline. That is a 7.3x difference in waiting time between the fastest and slowest tested configurations. In the separate context sweep, llama.cpp decode fell from 101.9 to 20.2 tok/s. FreeToken stayed much flatter at 100.1 to 94.8 tok/s. On matched coding tests, llama.cpp MTP improved decode by 1.63x at 8K and 1.69x at 32K. GSM8K scores were 95.22–95.75%; MATH-500 was 92.20–93.00%. The paired tests did not detect a significant difference. Startup went the other way: llama.cpp reached an answer in 16s, SGLang in 108s, FreeToken in 126s. https://preview.redd.it/ztjuce0wfcoh1.png?width=1725&amp;format=png&amp;auto=webp&amp;s=fe8f9db72829e04d9f338e0cfab373129c049740 Setup GPU: NVIDIA RTX PRO 6000 Blackwell, 96GB VRAM CPU: AMD Ryzen 9 9950X System RAM: 96GB DDR5 OS: Ubuntu, CUDA 13, Docker Model: Qwen3.8-Flash-Next llama.cpp: UD-IQ4_XS GGUF; MTP tested on the qwen4",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Qwen3.8-Flash-Next在llama.cpp/SGLang/FreeToken三引擎下的TTFT对比及MTP、推测解码等PR实测，给出可复现的工程数据。",
+      "queued_at": "2026-09-08T21:40:58Z"
+    },
+    {
       "id": "2245a3abf59638ca4604280d2ac9c0dffa439ff5",
       "title": "The VMs Powering Mobile Agents (Instinct, Claude Code)",
       "url": "https://rohanadwankar.github.io/posts/platforms.html",
@@ -466,58 +518,6 @@
       "angle": "research",
       "source_traceable": true,
       "why": "IEEE Spectrum对AlphaGenome的解读，侧重非编码调控区与疾病关联的科学价值。",
-      "queued_at": "2026-09-08T15:21:15Z"
-    },
-    {
-      "id": "335660014b7a7e3ee9c8f8b480b850487193f3da",
-      "title": "Qualcomm signs a deal with Amazon to provide \"multiple generations of customized silicon\" to help build AWS' AI infrastructure for inference; QCOM jumps ~5% (Ari Levy/CNBC)",
-      "url": "https://www.techmeme.com/260908/p17#a260908p17",
-      "source": "rss:techmeme",
-      "published_at": "2026-09-08T13:35:01Z",
-      "raw_summary": "Ari Levy / CNBC: Qualcomm signs a deal with Amazon to provide &ldquo;multiple generations of customized silicon&rdquo; to help build AWS' AI infrastructure for inference; QCOM jumps ~5%&nbsp; &mdash;&nbsp; Qualcomm shares rose 4% on Tuesday after the company announced a data center infrastructure partnership with Amazon Web Services &hellip;",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "Qualcomm与AWS达成多代定制芯片合作进入AI推理基础设施，是高通从端侧向数据中心扩展的关键战略信号，值得关注对AI芯片竞争格局影响。",
-      "queued_at": "2026-09-08T15:21:15Z"
-    },
-    {
-      "id": "1e17e81fe224c0f0ae8153445e4f44d305f6b62a",
-      "title": "Fields medalist Jacob Tsimerman, set to join OpenAI later in September, launches the Mathematical AI Safety Institute to apply higher math to AI safety problems (Siobhan Roberts/New York Times)",
-      "url": "https://www.techmeme.com/260908/p14#a260908p14",
-      "source": "rss:techmeme",
-      "published_at": "2026-09-08T12:25:02Z",
-      "raw_summary": "Siobhan Roberts / New York Times: Fields medalist Jacob Tsimerman, set to join OpenAI later in September, launches the Mathematical AI Safety Institute to apply higher math to AI safety problems&nbsp; &mdash;&nbsp; Jacob Tsimerman, a recent recipient of the Fields Medal, believes that higher mathematics can help curb the dangers of runaway artificial intelligence.",
-      "score": 7,
-      "angle": "route",
-      "source_traceable": true,
-      "why": "菲尔兹奖得主Tsimerman加入OpenAI并创立Mathematical AI Safety Institute，标志顶级数学家正式介入AI安全范式之争，路线信号强烈。",
-      "queued_at": "2026-09-08T15:21:15Z"
-    },
-    {
-      "id": "280855ff3b2c1a22b21abde94059d6e0b1ac4fcc",
-      "title": "TSMC to start using High-NA EUV lithography in 2030 — A10 or A11 technology prime candidates for use",
-      "url": "https://www.tomshardware.com/tech-industry/semiconductors/tsmc-to-start-using-high-na-euv-lithography-in-2030-a10-or-a11-technology-prime-candidates-for-use",
-      "source": "rss:tomshardware",
-      "published_at": "2026-09-08T15:00:00Z",
-      "raw_summary": "TSMC discloses plans to use High-NA EUV lithography in 2030, 6×12-inch photomasks with new scanners in 2033.",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "TSMC高数值孔径EUV和6×12英寸光罩的量产时间表(2030/2033)，是先进制程路线的重要节点信息。",
-      "queued_at": "2026-09-08T15:21:15Z"
-    },
-    {
-      "id": "8a1fe7439609ea2e6dcd82d247e67fc5dc770070",
-      "title": "Benchmarking Qwen 3.8 27B on RTX 5090 and beyond — VRAM capacity alone can't overcome severe software and inference engine bottlenecks",
-      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/benchmarking-qwen-3-8-27b-on-rtx-5090-and-beyond-vram-capacity-alone-cant-overcome-severe-software-and-inference-engine-bottlenecks",
-      "source": "rss:tomshardware",
-      "published_at": "2026-09-08T13:30:02Z",
-      "raw_summary": "Following the release of Qwen 3.8 27B, we put our trusty hardware to the test to see which hardware might be best suited for running this open-weight AI model.",
-      "score": 7,
-      "angle": "engineering",
-      "source_traceable": true,
-      "why": "Qwen 3.8 27B在RTX 5090上的实测基准，包含具体推理速度和VRAM瓶颈分析，有工程参考价值。",
       "queued_at": "2026-09-08T15:21:15Z"
     }
   ],

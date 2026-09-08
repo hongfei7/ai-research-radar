@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-08T18:59:17Z",
-  "text": "截至 2026-09-09 02:59 HKT，本轮核心变化集中在OpenAI Navier-Stokes突破引发的连锁争议。OpenAI宣布其内部模型（性能显著超越GPT-6 Astra）以1万并发Agent运行88小时攻克千禧难题Navier-Stokes方程；数学家Buckmaster指控OpenAI知悉其与Anthropic研究员Alpöge的合作后施压撤换署名并以内部模型复现解法，OpenAI否认看到提示词但承认在获悉Anthropic突破后追加数百万美元算力；研究员Bubeck发推澄清从未要求撤换作者。学界对其方法论严谨性与可复现性提出质疑。其余新增动态：Anthropic遭扩大集体诉讼指控高端订阅定价误导；AWS发布SageMaker G7（Blackwell）推理基准；谷歌云联手埃森哲押注前置部署模式追赶企业AI落地；OpenAI发布ChatGPT Images 2.5，Codex私人聊天据称发生数据泄露事件，细节待明。",
-  "since": "2026-09-08T18:59:17Z",
-  "active_event_count": 27,
+  "generated_at": "2026-09-08T21:44:06Z",
+  "text": "当前共有 23 个活跃事件。要点包括: OpenAI researcher allegedly pressured mathematician to drop Anthropic co-author from math breakthrough paper; OpenAl Says It Has Cracked One of Math's “Millennium Problems” (Navier-Stokes) [N]; OpenAI says an internal model \"significantly more capable than GPT-6 Astra\" solved the Navier-Stokes problem using 10K concurrent agents working for 88 hours (Madison Mills/Axios); 头部晶圆厂同意采用ASML 4亿美元设备方案，效率有望提升40%; OpenAI fought dirty on career-making math problem, says NYU mathematician。",
+  "since": "2026-09-08T21:44:06Z",
+  "active_event_count": 23,
   "key_themes": [
     "model_capability",
     "ai_monetization",
     "compute_demand",
-    "chip_supply",
-    "policy_export"
+    "policy_export",
+    "chip_supply"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n两条来源对ASML-Huawei叙事存在显著分歧。The-Decoder（0296）将台积电/三星/Intel切换大尺寸光罩定性为ASML\"锁定客户\"的防守动作，并突出华为联合Yuliangsheng的反制主线；而Tom's Hardware（2808）与Hacker News（00190）则完全聚焦于High-NA EUV的产业升级红利，叙事偏正向，未提及地缘替代风险。隐含矛盾在于：技术领先叙事与国产替代叙事的权重在两条线索中被刻意此消彼长。\n\n【新兴趋势】\n\"超大规模云厂商定制推理芯片\"在两条独立来源（Techmeme 3356、SEC 8-K 1822）中形成强共振——",
+  "cross_analysis": "【核心矛盾】\nMeta Muse 的商业化前景存在解读温差：TechCrunch/Wired 侧重\"信任\"是核心障碍（中性偏负），而 Bloomberg/Techmeme 则强调\"免费 1 亿 token+20/100 美元订阅\"的混合变现模式（偏正），前者聚焦隐私与留存风险，后者押注 token 消耗驱动的算力变现。此外，ASML 4 亿美元设备调整方案被标为对 ASML 利好、台积电中性，隐含客户需承担产线配合成本、效率红利分配不均的潜在张力。\n\n【新兴趋势】\n消费级 AI Agent 三足鼎立格局隐现——Meta Muse、OpenAI Operator、Anthropic Computer Use 在同一周期内被密集对比，Agent 正从能力演示走向订阅/免费 tier 的真实商业化测试。同时，非 Transformer 架构（Pathway BDH 类脑方案在 AWS HyperPod 落地）开始作为对\"GPU 算力堆叠\"叙事的潜在替代信号反复出现。此外，多国 AI 主权政策向半导体延伸（加拿大战略报告），AI for Science 在量子计算等垂直领域渗透（OpenAI GPT-5.6 Sol），两条副线均值得跟踪扩散。\n\n【信息盲点】\n英伟达、AMD 在本轮无直接报道，但 Meta Muse 每周 1 亿 token 免费额度、戴尔 10-Q 即将披露、Cognition 480 亿美元估值三条线索均直接关联其数据中心 GPU 需求景气度，缺席略显反常。苹果在 AI Agent 竞赛中完全缺位，作为端侧 AI 重要玩家应被纳入对比。中国 AI 厂商（阿里、字节、DeepSeek 等）在本轮零覆盖，与全球叙事脱节。Cursor / GitHub Copilot 作为 Cognition 直接竞品也未被详细对标。\n\n【跨标的联动】\n上游-下游链：ASML 效率提升 40% → 先进",
   "trend_spotting": "【新兴趋势】OpenAI利用\"显著超越GPT-6 Astra\"的内部模型，以10,000个并发Agent连续运行88小时攻克Navier-Stokes方程，标志着AI驱动基础科学研究从\"人机协作\"迈入\"超大规模Agent集群自治\"范式，单次任务即消耗数百万美元算力，前沿实验室capex/opex通胀斜率被市场显著低估。\n\n【早期信号】1) Anthropic遭集体诉讼指控高端订阅定价误导，若判例成立将波及所有订阅制AI产品的定价合规边界；2) OpenAI承认在获悉Anthropic突破后\"临时追加数百万美元算力\"，说明frontier lab算力支出已从规划驱动转向事件驱动、军备竞赛化；3) Codex私人聊天数据泄露指控若坐实，将冲击企业级AI编程工具的信任基础。\n\n【市场盲点】\"GPT-6 Astra\"这一命名暗示OpenAI下一代模型已实质性运作且能力跃迁超预期，但官方尚未正式披露，叙事与产品之间存在数月的时间差窗口；云厂商竞争重心正从\"模型能力\"转向\"落地能力\"（Google-Accenture前置工程师模式），AWS/Azure的企业AI集成份额面临被结构性侵蚀的风险。\n\n【值得关注的拐点】10K Agent×88小时的科研方法论若可泛化，将把AI算力需求从训练侧拉向\"推理即科研\"的全新消耗场景，对英伟达/博通的推理芯片订单形成非线性增量；同时，AI实验室间成果归属与署名争议正从个案演变为行业治理问题，训练数据合规与学术伦理监管窗口正在打开。"
 }
