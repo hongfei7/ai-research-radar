@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-08T15:26:17Z",
-  "text": "当前共有 29 个活跃事件。要点包括: 三星台积电相继锁定ASML高NA EUV设备，光罩升级至12英寸; China says its AI compute capacity rose 177% YoY to 2,185 eflops by the end of June, and targets 9,800 eflops by 2030 via ~$532B in IT infrastructure spend (Howard Liu/South China Morning Post); ASML locks in TSMC, Samsung, and Intel while Huawei races to break its grip; Qualcomm signs a deal with Amazon to provide \"multiple generations of customized silicon\" to help build AWS' AI infrastructure for inference; QCOM jumps ~5% (Ari Levy/CNBC); 高通 (QCOM) 8-K: he Securities Exchange Act of 1934。",
-  "since": "2026-09-08T15:26:17Z",
-  "active_event_count": 29,
+  "generated_at": "2026-09-08T18:59:17Z",
+  "text": "截至 2026-09-09 02:59 HKT，本轮核心变化集中在OpenAI Navier-Stokes突破引发的连锁争议。OpenAI宣布其内部模型（性能显著超越GPT-6 Astra）以1万并发Agent运行88小时攻克千禧难题Navier-Stokes方程；数学家Buckmaster指控OpenAI知悉其与Anthropic研究员Alpöge的合作后施压撤换署名并以内部模型复现解法，OpenAI否认看到提示词但承认在获悉Anthropic突破后追加数百万美元算力；研究员Bubeck发推澄清从未要求撤换作者。学界对其方法论严谨性与可复现性提出质疑。其余新增动态：Anthropic遭扩大集体诉讼指控高端订阅定价误导；AWS发布SageMaker G7（Blackwell）推理基准；谷歌云联手埃森哲押注前置部署模式追赶企业AI落地；OpenAI发布ChatGPT Images 2.5，Codex私人聊天据称发生数据泄露事件，细节待明。",
+  "since": "2026-09-08T18:59:17Z",
+  "active_event_count": 27,
   "key_themes": [
-    "compute_demand",
     "model_capability",
-    "chip_supply",
     "ai_monetization",
-    "edge_ai"
+    "compute_demand",
+    "chip_supply",
+    "policy_export"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
   "cross_analysis": "【核心矛盾】\n两条来源对ASML-Huawei叙事存在显著分歧。The-Decoder（0296）将台积电/三星/Intel切换大尺寸光罩定性为ASML\"锁定客户\"的防守动作，并突出华为联合Yuliangsheng的反制主线；而Tom's Hardware（2808）与Hacker News（00190）则完全聚焦于High-NA EUV的产业升级红利，叙事偏正向，未提及地缘替代风险。隐含矛盾在于：技术领先叙事与国产替代叙事的权重在两条线索中被刻意此消彼长。\n\n【新兴趋势】\n\"超大规模云厂商定制推理芯片\"在两条独立来源（Techmeme 3356、SEC 8-K 1822）中形成强共振——",
-  "trend_spotting": "高通拿下AWS定制芯片合作并以2500万股认股权证（行权价$161.26）绑定采购里程碑，是高通向数据中心AI推理突破的关键信号，市场对其非手机业务重估仍不充分。ASML High-NA EUV在台积电（2030 A10/A11）、三星处落地节奏明确，叠加6×12英寸新一代光掩模2033年导入，将拉大先进制程代工差距，国产替代线面临更高技术封锁阈值。OpenAI与Anthropic谋求IPO前即获投资级评级，标志AI资本开支融资模式从股权向债权切换，若落地将压低算力采购资金成本、进一步抬升上游芯片与电力需求。DeepSeek V4.1 Flash原生多模态架构与Arm把NPU交由伙伴主导的策略，分别暗示国内模型迭代加速与端侧算力生态分工重构，是尚未充分定价的早期信号。Intel第三次CPU涨价10%叠加2027年3月新品周期，x86定价权出现回摆迹象值得跟踪。"
+  "trend_spotting": "【新兴趋势】OpenAI利用\"显著超越GPT-6 Astra\"的内部模型，以10,000个并发Agent连续运行88小时攻克Navier-Stokes方程，标志着AI驱动基础科学研究从\"人机协作\"迈入\"超大规模Agent集群自治\"范式，单次任务即消耗数百万美元算力，前沿实验室capex/opex通胀斜率被市场显著低估。\n\n【早期信号】1) Anthropic遭集体诉讼指控高端订阅定价误导，若判例成立将波及所有订阅制AI产品的定价合规边界；2) OpenAI承认在获悉Anthropic突破后\"临时追加数百万美元算力\"，说明frontier lab算力支出已从规划驱动转向事件驱动、军备竞赛化；3) Codex私人聊天数据泄露指控若坐实，将冲击企业级AI编程工具的信任基础。\n\n【市场盲点】\"GPT-6 Astra\"这一命名暗示OpenAI下一代模型已实质性运作且能力跃迁超预期，但官方尚未正式披露，叙事与产品之间存在数月的时间差窗口；云厂商竞争重心正从\"模型能力\"转向\"落地能力\"（Google-Accenture前置工程师模式），AWS/Azure的企业AI集成份额面临被结构性侵蚀的风险。\n\n【值得关注的拐点】10K Agent×88小时的科研方法论若可泛化，将把AI算力需求从训练侧拉向\"推理即科研\"的全新消耗场景，对英伟达/博通的推理芯片订单形成非线性增量；同时，AI实验室间成果归属与署名争议正从个案演变为行业治理问题，训练数据合规与学术伦理监管窗口正在打开。"
 }
