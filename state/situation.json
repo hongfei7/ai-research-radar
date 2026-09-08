@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-08T06:28:41Z",
-  "text": "当前共有 21 个活跃事件。要点包括: 阿斯麦与台积电推动高NA EUV光罩向12英寸升级，计划2031年建立试产线; 消息称三星将超半数4纳米产能投入HBM4基础裸片生产; Intel surpasses one million High-NA EUV wafers processed, outpaces the rest of the industry combined — company also trailblazing giant 6×12 photomasks to speed production and lower costs; Mistral raised a €3B Series D led by Samsung at a €21B valuation, up from €11.7B a year ago, as it expands into data centers beyond developing AI models (Adam Satariano/New York Times); Sources: Huawei is investing in Chinese lithography companies and helping them secure deals with leading fabs like SMIC to reduce reliance on foreign suppliers (Financial Times)。",
-  "since": "2026-09-08T06:28:41Z",
-  "active_event_count": 21,
+  "generated_at": "2026-09-08T11:45:22Z",
+  "text": "当前共有 30 个活跃事件。要点包括: 三星台积电相继锁定ASML高NA EUV设备，光罩升级至12英寸; China says its AI compute capacity rose 177% YoY to 2,185 eflops by the end of June, and targets 9,800 eflops by 2030 via ~$532B in IT infrastructure spend (Howard Liu/South China Morning Post); Intel surpasses one million High-NA EUV wafers processed, outpaces the rest of the industry combined — company also trailblazing giant 6×12 photomasks to speed production and lower costs; Mistral raised a €3B Series D led by Samsung at a €21B valuation, up from €11.7B a year ago, as it expands into data centers beyond developing AI models (Adam Satariano/New York Times); Sources: Huawei is investing in Chinese lithography companies and helping them secure deals with leading fabs like SMIC to reduce reliance on foreign suppliers (Financial Times)。",
+  "since": "2026-09-08T11:45:22Z",
+  "active_event_count": 30,
   "key_themes": [
     "chip_supply",
     "compute_demand",
-    "advanced_packaging",
-    "datacenter_power",
+    "model_capability",
+    "ai_monetization",
     "domestic_substitution"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n36kr称ASML与台积电主导12英寸High-NA光罩2031年试产，Tom's Hardware则报道Intel已累计处理超100万片High-NA晶圆（超全行业总和）并率先推进6×12光罩，两条路径（12英寸 vs 6×12）并行且Intel在量产经验上反超叙事；同时Intel 18A尚未证明客户吸引力，\"产能领先\"与\"制程领先\"是否等价存疑。另一矛盾：苹果-Kioxia长协\"不设价格上限\"暗示",
+  "cross_analysis": "【核心矛盾】\n中国AI算力capex叙事与全球企业级token成本管控形成张力：中国官方披露2025年6月算力达2,185 EFLOPS（同比+177%），目标2030年9,800 EFLOPS；而微软内部数据显示单人月度AI账单最高2.8万美元、CoreAI部门中位数975美元，已启动部门级token预算管控并切换至GPT-5.6默认模型。两者并非直接对立，但暗示需求侧\"军备扩张\"与\"效率约束\"可能同时加速，对纯算力链的边际拉动需打折扣。此外，泰国暂停49个数据中心建设与中国大规模扩产形成区域监管分化信号。\n\n【新兴趋势】\n端侧AI\"小时代\"是本轮最密集的反复主题：苹果Mac Studio 512GB统一内存跑千亿模型、联想×英伟达在IFA 2026推端侧千亿参数笔记本、英伟达DGX Spark/AMD Ryzen AI Max 300/小米玄戒AI Cube均指向统一内存与带宽成为新瓶颈；同步出现的消费级DDR5涨价（32GB套条$389）验证了\"AI挤占DRAM产能\"传导链。无屏/轻量化穿戴（录音笔+摄像头形态）与百度搭子全面接入小度硬件共同指向端侧AI入口的多点开花。\n\n【信息盲点】\n本轮对国产AI芯片标的（寒武纪/海光/燧原）无任何直接覆盖，尽管中国算力capex叙事强烈暗示国产替代受益；HBM及HBF供应链（除泛泛提及海力士/美光/三星外）缺少具体厂商进展；Google TPU、博通定制AI芯片业务完全缺席；光模块/电源/液冷等数据中心配套环节未被触及；此外，AI对电力需求的量化拆解（除泰国监管线索外）几乎空白。\n\n【跨标的联动】\n存储链是本轮最显著的联动轴：江波龙H股IPO（上半年净利同比+715倍）+ DDR5消费端涨价 + 学术论文中的HBF混合存储方案 → 三星/海力士/美光/江波龙形成周期共振，DRAM产能向HBM倾斜正在向消费端外溢。另一条联动链是\"端侧AI算力SoC\"：英伟",
   "trend_spotting": "Anthropic 11个月内锁定5170亿美元算力合同、逼近OpenAI 2030年7500亿美元路线图，意味着头部两家AI实验室累计算力承诺已向1.3万亿美元量级迁移——这不再是\"增长故事\"，而是接近准主权级别的资本动员。\n\n【新兴趋势】算力capex的复合增速正在脱离收入曲线，呈现\"先签合同、再找客户\"的类基建逻辑。Anthropic自家CEO年初刚警告\"鲁莽风险\"，转头就签下5170亿，说明竞争压力已压过风控本能。\n\n【早期信号】Sam Altman罕见公开批评新云厂商capex\"不可持续的愚蠢\"——同业龙头对同行的capex公开唱空极为罕见，这是一级市场对算力需求定价分歧的外化信号，可能预示未来12-18个月出现算力合同重估或延期。\n\n【市场盲点】市场仍在用\"AI软件公司\"框架给实验室估值，但合同结构显示其本质已偏向\"AI重资产基建运营商\"。同时，电力与电网审批周期（通常3-7年）才是真正的硬约束，而非芯片产能或资本——这点在二级市场讨论中严重缺位。\n\n【值得关注的拐点】当算力合同签约速度持续超过电力并网速度时，\"签了用不上\"的交付风险将集中暴露；下一个关键观察窗口是2027年前后首批大单的首次capex拨付节点。"
 }
