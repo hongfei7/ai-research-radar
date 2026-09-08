@@ -4,72 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "DeepSeek"
-      ],
-      "features": [
-        "deepseek",
-        "兆瓦",
-        "力现",
-        "千兆",
-        "心遭",
-        "现实",
-        "瓦雄",
-        "电力",
-        "遇电",
-        "遭遇",
-        "雄心"
-      ],
-      "sent_at": "2026-09-07T12:44:20Z"
-    },
-    {
-      "tickers": [
-        "OpenAI"
-      ],
-      "features": [
-        "astra",
-        "gpt-6",
-        "sol",
-        "不只",
-        "光速",
-        "内测",
-        "只内",
-        "度快",
-        "快倍",
-        "曝光",
-        "果曝",
-        "测结",
-        "结果",
-        "速度"
-      ],
-      "sent_at": "2026-09-07T12:44:42Z"
-    },
-    {
-      "tickers": [
-        "OpenAI",
-        "微软"
-      ],
-      "features": [
-        "agi",
-        "gpt-6",
-        "openai",
-        "又自",
-        "发布",
-        "后又",
-        "外星",
-        "布后",
-        "思维",
-        "星思",
-        "曝外",
-        "来了",
-        "的来",
-        "真的",
-        "维真",
-        "自曝"
-      ],
-      "sent_at": "2026-09-07T12:45:04Z"
-    },
-    {
-      "tickers": [
         "OpenAI"
       ],
       "features": [
@@ -358,6 +292,80 @@
         "端侧"
       ],
       "sent_at": "2026-09-08T11:46:34Z"
+    },
+    {
+      "tickers": [
+        "ASML",
+        "Intel",
+        "三星电子"
+      ],
+      "features": [
+        "and",
+        "asml",
+        "break",
+        "grip",
+        "huawei",
+        "in",
+        "intel",
+        "its",
+        "locks",
+        "races",
+        "samsung",
+        "to",
+        "tsmc",
+        "while"
+      ],
+      "sent_at": "2026-09-08T15:26:38Z"
+    },
+    {
+      "tickers": [
+        "亚马逊",
+        "高通"
+      ],
+      "features": [
+        "ai",
+        "amazon",
+        "ari",
+        "aws",
+        "build",
+        "cnbc",
+        "customized",
+        "deal",
+        "for",
+        "generations",
+        "help",
+        "inference",
+        "infrastructure",
+        "jumps",
+        "levy",
+        "multiple",
+        "of",
+        "provide",
+        "qcom",
+        "qualcomm",
+        "signs",
+        "silicon",
+        "to",
+        "with"
+      ],
+      "sent_at": "2026-09-08T15:26:56Z"
+    },
+    {
+      "tickers": [
+        "亚马逊",
+        "高通"
+      ],
+      "features": [
+        "8-k",
+        "act",
+        "exchange",
+        "he",
+        "of",
+        "qcom",
+        "securities",
+        "高通"
+      ],
+      "sent_at": "2026-09-08T15:27:13Z"
     }
   ],
   "last_report": {
