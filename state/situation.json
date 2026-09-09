@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-08T23:44:48Z",
-  "text": "当前共有 30 个活跃事件。要点包括: OpenAI researcher allegedly pressured mathematician to drop Anthropic co-author from math breakthrough paper; OpenAI宣布攻克纳维-斯托克斯千禧年难题; OpenAI says an internal model \"significantly more capable than GPT-6 Astra\" solved the Navier-Stokes problem using 10K concurrent agents working for 88 hours (Madison Mills/Axios); OpenAI：计划在今年年底前开始部署与博通开发的AI芯片Jalapeño; Take on your most ambitious work with GPT-6 Astra on Amazon Bedrock。",
-  "since": "2026-09-08T23:44:48Z",
-  "active_event_count": 30,
+  "generated_at": "2026-09-09T01:39:02Z",
+  "text": "截至 2026-09-09 09:38 HKT，本轮主要变化：中美AI博弈升级，NSA、CISA、FBI联合点名中国AI企业（含DeepSeek）开展\"工业规模\"模型蒸馏；OpenAI纳维-斯托克斯突破遭NYU教授指控抢先发表，争议发酵；算力基建景气延续，国内存储测试机市场2027年空间有望同比+223%至155亿元，全球燃机订单2026Q2创38GW新高；终端侧，苹果新CEO特努斯周三将发布折叠屏iPhone，三星与Mistral达成存储+AI合作，影目科技完成近10亿元C轮启动上市筹备。",
+  "since": "2026-09-09T01:39:02Z",
+  "active_event_count": 26,
   "key_themes": [
-    "model_capability",
-    "ai_monetization",
     "compute_demand",
+    "ai_monetization",
+    "model_capability",
     "chip_supply",
-    "policy_export"
+    "edge_ai"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nOpenAI同时推进两大战略：与博通联合开发自研ASIC芯片Jalapeño（减少对英伟达依赖），又通过AWS Bedrock大规模分发GPT-6 Astra（扩大多云分销）。两条路径并行不矛盾但存在张力——若自研芯片按计划落地，OpenAI对英伟达/AMD的采购增速将边际放缓，对现有GPU供应链构成结构性变量。另一处矛盾在OpenAI的Navier-Stokes数学突破，标题\"Drama swirls\"暗示学界对严谨性与可复现性存疑，需以公开论文为锚验证。此外，同日（9/8）两篇铜价报道数据存在偏差：一称LME盘中触14779美元/吨，另一称14624美元/吨，跟踪时需统一口径。\n\n【新兴趋势】\n1）非英伟达算力路径加速成型：博通（OpenAI ASIC）、高通（AWS光互联+SerDes）双双切入数据中心核心环节，ASIC/光互连/定制硅正从\"补充\"升级为\"主线\"。\n2）前沿模型多云分销：",
+  "cross_analysis": "【核心矛盾】\nReuters（经Techmeme）报道明确点名DeepSeek参与\"工业规模\"蒸馏，而HackerNews同议题PDF仅泛指\"中国AI公司\"未具名，二者在涉事主体界定上存在分歧；前者倾向政府定性叙事，后者侧重技术分析。在AI发展叙事上，OpenAI解纳维-斯托克斯方程（能力突破）vs. Anthropic研究员因担忧AI\"失控\"离职（安全风险），形成能力跃迁与治理焦虑的对立叙事；此外OpenAI被指抢先Buckmaster/Anthropic合作者近一年的成果，且可能接触其Codex会话，首发权与学术伦理存在争议。\n\n【",
   "trend_spotting": "OpenAI正加速全栈垂直整合：自研Jalapeño ASIC（博通代工）年底部署+GPT-6 Astra全量上线AWS Bedrock，意味着其算力供给不再受制于单一芯片商或云商，多云分发+自研芯片双线并行正在重塑产业链利益分配。高通与亚马逊联合攻关1.6T光互联，是传统移动芯片厂商切入AI数据中心基础设施的早期但关键信号，SerDes/光DSP赛道可能被重新定价。铜价年内涨幅超50%、LME突破14779美元/吨，AI算力建设对大宗金属的虹吸效应已从预期走向定价兑现，数据中心capex成本曲线面临结构性抬升，是被低估的二阶风险。Cognition AI四个月内ARR从4.92亿翻至近9亿美元，AI编程赛道商业化斜率超出市场预期，企业级Agent付费意愿获得顶级VC用真金白银背书（20亿美元E轮、480亿估值）。OpenAI在Navier-Stokes类问题上的数学突破若经学术验证，将是推理模型从\"工具\"走向\"科学发现主体\"的拐点信号，值得密切跟踪论文公开与可复现性。Meta Muse强调Confidential VM隐私架构，差异化路线能否破局C端入口是另一观察重点。"
 }

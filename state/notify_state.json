@@ -4,37 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "三星电子",
-        "海力士",
-        "美光"
-      ],
-      "features": [
-        "hbm4",
-        "三星",
-        "产能",
-        "入基",
-        "半数",
-        "基础",
-        "将超",
-        "息称",
-        "投入",
-        "数纳",
-        "星将",
-        "消息",
-        "片生",
-        "生产",
-        "础裸",
-        "称三",
-        "米产",
-        "纳米",
-        "能投",
-        "裸片",
-        "超半"
-      ],
-      "sent_at": "2026-09-08T01:28:43Z"
-    },
-    {
-      "tickers": [
         "ASML",
         "台积电"
       ],
@@ -435,6 +404,25 @@
         "your"
       ],
       "sent_at": "2026-09-08T23:45:28Z"
+    },
+    {
+      "tickers": [
+        "Anthropic",
+        "DeepSeek",
+        "OpenAI"
+      ],
+      "features": [
+        "against",
+        "ai",
+        "campaigns",
+        "chinese",
+        "companies",
+        "conducting",
+        "distillation",
+        "pdf",
+        "u.s"
+      ],
+      "sent_at": "2026-09-09T01:39:24Z"
     }
   ],
   "last_report": {
