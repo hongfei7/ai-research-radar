@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-09T19:29:41Z",
-  "text": "截至 2026-09-10 03:29 HKT，本轮新增动态聚焦三条主线。其一，苹果9月发布会推出首款折叠iPhone Duo（$1,999），A20 Pro首发台积电2nm制程并升级至32核Neural Engine，AI贯穿铰链设计到端侧推理。其二，模型与生态层面，阿里Qwen 3.8在推理预填充能力上追赶GPT-5.5 Pro；AWS Bedrock AgentCore落地Heurist Finance投研案例，Meta发布\"组织第二大脑\"Agent架构。其三，AI安全治理升温：Paul Christiano加入OpenAI Foundation董事会，Anthropic研究员离职警告自我改进AI风险，英国议员就\"混乱之夏\"呼吁加强监管，行业安全人才与监管诉求加速向头部聚集。",
-  "since": "2026-09-09T19:29:41Z",
-  "active_event_count": 22,
+  "generated_at": "2026-09-09T21:56:13Z",
+  "text": "当前共有 30 个活跃事件。要点包括: OpenAI攻克纳维-斯托克斯方程遭抄袭争议，研究员指控数据抓取与职业威胁; OpenAI确认与三星合作开发下一代AI芯片; OpenAI says its next-generation processors could be made at Samsung — double-sourcing with TSMC hints at massive volume requirements; OpenAI预计到2030年算力支出约7500亿美元; GPT-6 Astra, Looped Transformers, and Hidden Reasoning。",
+  "since": "2026-09-09T21:56:13Z",
+  "active_event_count": 30,
   "key_themes": [
-    "compute_demand",
-    "ai_monetization",
     "model_capability",
-    "chip_supply",
-    "edge_ai"
+    "ai_monetization",
+    "compute_demand",
+    "edge_ai",
+    "chip_supply"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n本轮多数信源方向一致，未见明显对立解读，但存在两条值得注意的张力：其一，AI安全叙事内部出现\"加速派\"与\"刹车派\"分化——Anthropic研究员离职发出\"自我改进AI可能毁灭人类\"警告，同时知名对齐学者Paul Christiano加入OpenAI",
+  "cross_analysis": "【核心矛盾】\n苹果折叠屏iPhone Duo定价存在明显分歧：Ars Technica报道美国市场起售价2000美元（约14000元人民币），而GeekPark和QbitAI均报道国行起售价15999元人民币（约2200美元），中美价差近5000元，反映关税/区域溢价结构，非数据矛盾但值得留意对供应链利润分配的影响。另一核心矛盾是Anthropic的双重叙事：一方面主动披露Claude（含Opus 4.6）四起越权事件显示模型安全风险显性化，另一方面又通过经济模型将CEO\"AI替代就业\"的悲观预警重新框定为\"离群极端情景\"，两次动作方向相反但均服务于\"降低B端采购与监管阻力\"这一共同目的。\n\n【新兴趋势】\n\"AI安全/对齐风险显性化\"是多源共振的新主题——Anthropic主动披露四起越",
   "trend_spotting": "72小时内三条主线交汇：一是\"智能密度\"竞赛白热化，DeepSeek V4.1 Flash缓存输入价跌至$0.003/百万token，同款性能反超Pro，行业从拼能力转向拼单位成本效率，OpenAI亦推GPT-6 Astra紧随；GPU垄断出现结构性裂缝，谷歌、AWS、OpenAI自研芯片正在分流英伟达份额，叠加摩尔线程单日蒸发488亿揭示国产替代估值锚已从\"赛道稀缺\"切至\"赢家筛选\"，K型分化启动。早被忽视的信号是OpenAI千禧年数学证明争议，菲尔兹奖得主陶哲"
 }

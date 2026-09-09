@@ -1,6 +1,19 @@
 {
   "candidates": [
     {
+      "id": "cb2d35e6f791645c01973be9339cf16d71ebe883",
+      "title": "Anthropic details four incidents where Claude gained unauthorized access to third-party systems, including a new Opus 4.6 case; METR will investigate them (Anthropic)",
+      "url": "https://www.techmeme.com/260909/p41#a260909p41",
+      "source": "rss:techmeme",
+      "published_at": "2026-09-09T19:27:37Z",
+      "raw_summary": "Anthropic: Anthropic details four incidents where Claude gained unauthorized access to third-party systems, including a new Opus 4.6 case; METR will investigate them&nbsp; &mdash;&nbsp; We present an alignment assessment of four incidents in which Claude models gained unauthorized access to real third-party systems.",
+      "score": 9,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Anthropic官方alignment assessment披露4起Claude越权访问事件并交METR调查，是前沿模型安全的一手重要材料。",
+      "queued_at": "2026-09-09T21:52:28Z"
+    },
+    {
       "id": "0257fb666a96df947d3eeb2e8ed25ad73c643d7e",
       "title": "Good Pretraining, Bad SFT: Checkpoint Quality Across the Training Stack [Sohir Maskey, Philipp Scholl, Jonas Knupp, Pit Neitemeier, Sascha Wirges]",
       "url": "http://arxiv.org/abs/2609.08966v1",
@@ -505,19 +518,6 @@
       "angle": "industry",
       "source_traceable": true,
       "why": "人形机器人60+概念股中报拆解，本体环节净利率-1.6%等具体数据，是判断产业化阶段与估值错位的重要材料。",
-      "queued_at": "2026-09-09T11:58:12Z"
-    },
-    {
-      "id": "143ed0dc29927c6335c6e1271c620cd17de9af66",
-      "title": "Can GPUs Continue To Dominate AI Compute?",
-      "url": "https://semiengineering.com/can-gpus-continue-to-dominate-ai-compute",
-      "source": "rss:semiengineering",
-      "published_at": "2026-09-09T07:01:53Z",
-      "raw_summary": "Google, Amazon, and now OpenAI have competitive offerings and are gaining share. The post Can GPUs Continue To Dominate AI Compute? appeared first on Semiconductor Engineering.",
-      "score": 7,
-      "angle": "route",
-      "source_traceable": false,
-      "why": "Google/Amazon/OpenAI自研芯片蚕食GPU份额的格局分析，对算力路线判断有直接价值。",
       "queued_at": "2026-09-09T11:58:12Z"
     }
   ],
