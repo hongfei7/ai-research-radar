@@ -4,116 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "ASML",
-        "台积电"
-      ],
-      "features": [
-        "euv",
-        "na",
-        "与台",
-        "产线",
-        "光罩",
-        "划年",
-        "动高",
-        "升级",
-        "台积",
-        "向英",
-        "寸升",
-        "年建",
-        "建立",
-        "推动",
-        "斯麦",
-        "电推",
-        "积电",
-        "立试",
-        "级计",
-        "罩向",
-        "英寸",
-        "计划",
-        "试产",
-        "阿斯",
-        "高光",
-        "麦与"
-      ],
-      "sent_at": "2026-09-08T06:29:03Z"
-    },
-    {
-      "tickers": [
-        "ASML",
-        "中芯国际"
-      ],
-      "features": [
-        "and",
-        "chinese",
-        "companies",
-        "deals",
-        "fabs",
-        "financial",
-        "foreign",
-        "helping",
-        "huawei",
-        "in",
-        "investing",
-        "is",
-        "leading",
-        "like",
-        "lithography",
-        "on",
-        "reduce",
-        "reliance",
-        "secure",
-        "smic",
-        "sources",
-        "suppliers",
-        "them",
-        "times",
-        "to",
-        "with"
-      ],
-      "sent_at": "2026-09-08T06:29:27Z"
-    },
-    {
-      "tickers": [
-        "Anthropic",
-        "OpenAI",
-        "三星电子"
-      ],
-      "features": [
-        "11.7b",
-        "21b",
-        "3b",
-        "adam",
-        "ago",
-        "ai",
-        "as",
-        "at",
-        "beyond",
-        "by",
-        "centers",
-        "data",
-        "developing",
-        "expands",
-        "from",
-        "into",
-        "it",
-        "led",
-        "mistral",
-        "models",
-        "new",
-        "raised",
-        "samsung",
-        "satariano",
-        "series",
-        "times",
-        "up",
-        "valuation",
-        "year",
-        "york"
-      ],
-      "sent_at": "2026-09-08T06:29:39Z"
-    },
-    {
-      "tickers": [
         "字节跳动",
         "百度",
         "腾讯"
@@ -423,6 +313,76 @@
         "u.s"
       ],
       "sent_at": "2026-09-09T01:39:24Z"
+    },
+    {
+      "tickers": [
+        "OpenAI",
+        "三星电子"
+      ],
+      "features": [
+        "openai",
+        "一代",
+        "三星",
+        "下一",
+        "与三",
+        "代芯",
+        "作开",
+        "化合",
+        "发下",
+        "合作",
+        "并深",
+        "开发",
+        "星合",
+        "正与",
+        "深化",
+        "片并",
+        "称正",
+        "芯片"
+      ],
+      "sent_at": "2026-09-09T06:50:01Z"
+    },
+    {
+      "tickers": [
+        "DeepSeek"
+      ],
+      "features": [
+        "deepseek",
+        "ipo",
+        "中信",
+        "信证",
+        "创板",
+        "券筹",
+        "场消",
+        "备科",
+        "委托",
+        "市场",
+        "息委",
+        "托中",
+        "消息",
+        "科创",
+        "筹备",
+        "证券"
+      ],
+      "sent_at": "2026-09-09T06:50:17Z"
+    },
+    {
+      "tickers": [
+        "OpenAI"
+      ],
+      "features": [
+        "astra",
+        "openai",
+        "前例",
+        "史无",
+        "客户",
+        "对的",
+        "户对",
+        "无前",
+        "求史",
+        "的需",
+        "需求"
+      ],
+      "sent_at": "2026-09-09T06:50:43Z"
     }
   ],
   "last_report": {
