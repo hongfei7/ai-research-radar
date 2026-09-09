@@ -92,6 +92,19 @@
       "queued_at": "2026-09-09T16:29:54Z"
     },
     {
+      "id": "e98fbec68260aa1045b50bcf07e4cccc80238ea8",
+      "title": "Procedural Graphs: Self-Evolving Execution Structures for LLM Agents",
+      "url": "https://academy.dair.ai/papers/procedural-graphs-self-evolving-execution-structures-for-llm-agents-2609.09153",
+      "source": "hackernews",
+      "published_at": "2026-09-09T17:13:52Z",
+      "raw_summary": "Procedural Graphs: Self-Evolving Execution Structures for LLM Agents",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "LLM Agent 自演化执行结构，有论文可循，若含实验对比则对 agent 架构设计有直接启发。",
+      "queued_at": "2026-09-09T19:26:09Z"
+    },
+    {
       "id": "74e8b994f9814a7933661b5d609bc95daf0f3933",
       "title": "TANGO: Humanoid Navigation in Cluttered Environments with a Whole-Body Vision-Language-Action Model [Anqi Li, Yuxin Chen, Zhaobo Li, Zhuo Cao, Junli Ren]",
       "url": "http://arxiv.org/abs/2609.09158v1",
@@ -505,19 +518,6 @@
       "angle": "route",
       "source_traceable": false,
       "why": "Google/Amazon/OpenAI自研芯片蚕食GPU份额的格局分析，对算力路线判断有直接价值。",
-      "queued_at": "2026-09-09T11:58:12Z"
-    },
-    {
-      "id": "b6f6a5365615092d38202eac9c58a02604980bff",
-      "title": "Token Costs Are Becoming The New EDA Budget Battle",
-      "url": "https://semiengineering.com/token-costs-are-becoming-the-new-eda-budget-battle",
-      "source": "rss:semiengineering",
-      "published_at": "2026-09-09T07:01:25Z",
-      "raw_summary": "Cost per token is causing EDA design budgets to balloon; what comes next isn't entirely clear yet. The post Token Costs Are Becoming The New EDA Budget Battle appeared first on Semiconductor Engineering.",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": false,
-      "why": "Token成本压垮EDA预算的视角新颖，揭示AI对半导体设计经济结构的实质影响。",
       "queued_at": "2026-09-09T11:58:12Z"
     }
   ],
