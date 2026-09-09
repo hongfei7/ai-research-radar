@@ -66,6 +66,32 @@
       "queued_at": "2026-09-09T11:58:12Z"
     },
     {
+      "id": "89bbdfee897665a8d3219237194e77f80fa5e342",
+      "title": "Introducing CUDA Rust: Two Tracks for Writing GPU Kernels",
+      "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels",
+      "source": "rss:lobsters",
+      "published_at": "2026-09-09T13:21:19Z",
+      "raw_summary": "Note that a PDF also exists: https://arxiv.org/pdf/2606.15991 Comments",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "CUDA Rust两条技术路径（kernel编写与runtime集成），附arXiv论文，可直接动手评估GPU编程新生态。",
+      "queued_at": "2026-09-09T16:29:54Z"
+    },
+    {
+      "id": "7ecc8cc0f804313f0b4cf54c767ad010a99d1cd0",
+      "title": "DeepSeek-V4-Flash-Vision-Exp (285B MoE) on 10-12x RTX 3090 — spec decoding, vision",
+      "url": "https://www.reddit.com/r/localllama/comments/1wbi5u1/deepseekv4flashvisionexp_285b_moe_on_1012x_rtx",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-09T10:50:10Z",
+      "raw_summary": "Running the full deepseek-ai/DeepSeek-V4-Flash-Vision-Exp on consumer Ampere — 10-12x RTX 3090, SM86-compatible vLLM build. 285B MoE, FP4 experts + FP8 attention, 157 GB weights. Highlights: - **60+ tok/s** decode, DSpark spec (k=3) on 10 GPUs (TP2xPP5), at a 240 W cap - **120+ tok/s** on 12 GPUs (TP4xPP3) - **Vision + spec + tool calls all working** - **1M context** (no offload) / **4M** (RAM offload) - ~3,500 tok/s long-context prefill Fully documented + reproducible: - Pre-built image: `docker pull ghcr.io/ciprianveg/3090-vllm:dsv4-flash-vision-sm86` - Repo: https://github.com/ciprianveg/3090-vllm (build guide, start scripts, runtime patches) The patches cover the DSpark propose-gate (spec + vision fix), scheduler mm x spec row-crossing, grammar-bitmask validation, vision ViT OOM fix, FlashInfer workspace-lane keying, and more. &#32; submitted by &#32; /u/ciprianveg [link] &#32; [comments]",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "DeepSeek V4 Flash Vision 285B MoE在10-12x RTX 3090上的完整复现方案，包含TP/PP配置、spec decoding、长上下文吞吐等具体工程参数，价值很高。",
+      "queued_at": "2026-09-09T16:29:54Z"
+    },
+    {
       "id": "74e8b994f9814a7933661b5d609bc95daf0f3933",
       "title": "TANGO: Humanoid Navigation in Cluttered Environments with a Whole-Body Vision-Language-Action Model [Anqi Li, Yuxin Chen, Zhaobo Li, Zhuo Cao, Junli Ren]",
       "url": "http://arxiv.org/abs/2609.09158v1",
@@ -492,32 +518,6 @@
       "angle": "industry",
       "source_traceable": false,
       "why": "Token成本压垮EDA预算的视角新颖，揭示AI对半导体设计经济结构的实质影响。",
-      "queued_at": "2026-09-09T11:58:12Z"
-    },
-    {
-      "id": "af4f922db583ae6703c6bf68e4a5b1088d82cb97",
-      "title": "When will average people feel AI’s impact?",
-      "url": "https://www.interconnects.ai/p/when-will-average-people-feel-ais",
-      "source": "rss:interconnects",
-      "published_at": "2026-09-09T11:01:23Z",
-      "raw_summary": "We&#8217;re <5 years into a compounding revolution which could take a century, and how the AI industry should manage this.",
-      "score": 7,
-      "angle": "route",
-      "source_traceable": false,
-      "why": "Nathan对AI落地时间尺度的反思，触及'指数-社会线性'的范式矛盾。",
-      "queued_at": "2026-09-09T11:58:12Z"
-    },
-    {
-      "id": "3bdd7280456cd61b12daffb314f4d7f5045cfee9",
-      "title": "A*-Thought-V2: Efficient Latent Reasoning via Geometric Dynamics of LLM",
-      "url": "https://arxiv.org/abs/2609.07821",
-      "source": "huggingface:papers",
-      "published_at": "2026-09-07T13:56:20Z",
-      "raw_summary": "A*-Thought-V2 models chain-of-thought reasoning as hidden-state trajectories to selectively retain explicit reasoning steps or compress them into continuous latent tokens, improving accuracy and efficiency.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "A*-Thought-V2将CoT建模为隐空间轨迹以压缩推理，latent reasoning路线具体可追溯。",
       "queued_at": "2026-09-09T11:58:12Z"
     }
   ],

@@ -4,80 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "ASML",
-        "Intel",
-        "三星电子"
-      ],
-      "features": [
-        "and",
-        "asml",
-        "break",
-        "grip",
-        "huawei",
-        "in",
-        "intel",
-        "its",
-        "locks",
-        "races",
-        "samsung",
-        "to",
-        "tsmc",
-        "while"
-      ],
-      "sent_at": "2026-09-08T15:26:38Z"
-    },
-    {
-      "tickers": [
-        "亚马逊",
-        "高通"
-      ],
-      "features": [
-        "ai",
-        "amazon",
-        "ari",
-        "aws",
-        "build",
-        "cnbc",
-        "customized",
-        "deal",
-        "for",
-        "generations",
-        "help",
-        "inference",
-        "infrastructure",
-        "jumps",
-        "levy",
-        "multiple",
-        "of",
-        "provide",
-        "qcom",
-        "qualcomm",
-        "signs",
-        "silicon",
-        "to",
-        "with"
-      ],
-      "sent_at": "2026-09-08T15:26:56Z"
-    },
-    {
-      "tickers": [
-        "亚马逊",
-        "高通"
-      ],
-      "features": [
-        "8-k",
-        "act",
-        "exchange",
-        "he",
-        "of",
-        "qcom",
-        "securities",
-        "高通"
-      ],
-      "sent_at": "2026-09-08T15:27:13Z"
-    },
-    {
-      "tickers": [
         "OpenAI"
       ],
       "features": [
@@ -378,6 +304,68 @@
         "years"
       ],
       "sent_at": "2026-09-09T12:06:41Z"
+    },
+    {
+      "tickers": [
+        "OpenAI",
+        "三星电子",
+        "台积电"
+      ],
+      "features": [
+        "at",
+        "be",
+        "could",
+        "double-sourcing",
+        "hints",
+        "its",
+        "made",
+        "massive",
+        "next-generation",
+        "openai",
+        "processors",
+        "requirements",
+        "samsung",
+        "says",
+        "tsmc",
+        "volume",
+        "with"
+      ],
+      "sent_at": "2026-09-09T16:36:10Z"
+    },
+    {
+      "tickers": [
+        "OpenAI"
+      ],
+      "features": [
+        "openai",
+        "亿美",
+        "出约",
+        "到年",
+        "力支",
+        "年算",
+        "支出",
+        "算力",
+        "约亿",
+        "美元",
+        "计到",
+        "预计"
+      ],
+      "sent_at": "2026-09-09T16:36:36Z"
+    },
+    {
+      "tickers": [
+        "OpenAI"
+      ],
+      "features": [
+        "and",
+        "astra",
+        "gpt-6",
+        "hidden",
+        "looped",
+        "reasoning",
+        "transformers"
+      ],
+      "sent_at": "2026-09-09T16:36:59Z"
     }
   ],
   "last_report": {
