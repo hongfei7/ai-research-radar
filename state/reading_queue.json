@@ -105,6 +105,45 @@
       "queued_at": "2026-09-10T17:01:51Z"
     },
     {
+      "id": "3afce59682d1f2d1acc833e46f4c00f4c79c9958",
+      "title": "X86S with IGZO BEOL EDRAM",
+      "url": "https://inavoyage.blogspot.com/2026/09/x86s-w-igzo-beol-edram.html",
+      "source": "hackernews",
+      "published_at": "2026-09-10T14:36:43Z",
+      "raw_summary": "X86S with IGZO BEOL EDRAM",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "x86S + IGZO BEOL eDRAM是CPU与新型存储/逻辑融合的架构级讨论，触及半导体路线之争，值得读。",
+      "queued_at": "2026-09-10T19:42:47Z"
+    },
+    {
+      "id": "0c85ef1ff20eb7271089880922581ddfc989b023",
+      "title": "Anthropic details distillation efforts by Chinese companies, like Moonshot and DeepSeek, sending user queries to Claude via \"transfer stations\" outside China (Wall Street Journal)",
+      "url": "https://www.techmeme.com/260910/p29#a260910p29",
+      "source": "rss:techmeme",
+      "published_at": "2026-09-10T17:36:03Z",
+      "raw_summary": "Wall Street Journal: Anthropic details distillation efforts by Chinese companies, like Moonshot and DeepSeek, sending user queries to Claude via &ldquo;transfer stations&rdquo; outside China&nbsp; &mdash;&nbsp; Anthropic says DeepSeek and Moonshot used thousands of fake accounts and millions of real user queries in &lsquo;distillation&rsquo; effort to clone its AI capabilities",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "Anthropic公开指控DeepSeek/Moonshot蒸馏Claude，涉及中美AI竞争与模型能力差距的一手证据，极具信息量。",
+      "queued_at": "2026-09-10T19:42:47Z"
+    },
+    {
+      "id": "8747b3444108bd18623c7b22389ee5ddde64a08d",
+      "title": "Anthropic publishes a threat intelligence report on how it disrupted efforts to misuse Claude for cyberattacks, influence operations, surveillance, and more (Anthropic)",
+      "url": "https://www.techmeme.com/260910/p27#a260910p27",
+      "source": "rss:techmeme",
+      "published_at": "2026-09-10T17:21:15Z",
+      "raw_summary": "Anthropic: Anthropic publishes a threat intelligence report on how it disrupted efforts to misuse Claude for cyberattacks, influence operations, surveillance, and more&nbsp; &mdash;&nbsp; Cyber operations Surveillance operations Influence operations Conventional weapons Biological misuse Scams and fraud Illicit distillation",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Anthropic 官方威胁情报报告原文值得读，能了解其对 cyber/influence/bio 等多类滥用的检测拦截机制与具体案例，属于可复现的安全工程实践。",
+      "queued_at": "2026-09-10T19:42:47Z"
+    },
+    {
       "id": "589d7c30400e531c40c23c1b15e6544593de064d",
       "title": "硬氪直击IFA——AI硬件不再只会回答问题",
       "url": "https://36kr.com/p/3975817977868549?f=rss",
@@ -479,45 +518,6 @@
       "angle": "route",
       "source_traceable": true,
       "why": "OpenAI首席科学家Pachocki关于spiky发展路径与递归自我改进的表态，涉及AGI路线之争。",
-      "queued_at": "2026-09-10T17:01:51Z"
-    },
-    {
-      "id": "74f1f6122ab89e844c509ea1b9a5c231694eb865",
-      "title": "Skild AI Taps NVIDIA Physical AI to Teach Robots New Tasks From a Single Video",
-      "url": "https://blogs.nvidia.com/blog/skild-ai-s1-physical-ai",
-      "source": "rss:nvidia-blog",
-      "published_at": "2026-09-10T16:30:35Z",
-      "raw_summary": "Manufacturing floors, warehouses and production lines rarely stay fixed — tasks change, layouts shift and new products arrive, and most robots can’t keep up without significant reprogramming. Skild AI’s new S1 robot foundation model helps address this, designed to learn previously unseen, long-horizon tasks from a single video demonstration. The model, launched last week, uses [&#8230;]",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "Skild AI的S1机器人基础模型支持单视频学长时任务，涉及具身智能与视频模仿学习路线。",
-      "queued_at": "2026-09-10T17:01:51Z"
-    },
-    {
-      "id": "2d34e692186681a0c83c60a2bbbd89853dc99db1",
-      "title": "Interview with mathematician Tristan Buckmaster on being drawn into the OpenAI-Anthropic fight; OpenAI says it made progress on another Millennium Prize problem (Kenneth Chang/New York Times)",
-      "url": "https://www.techmeme.com/260910/p25#a260910p25",
-      "source": "rss:techmeme",
-      "published_at": "2026-09-10T16:10:02Z",
-      "raw_summary": "Kenneth Chang / New York Times: Interview with mathematician Tristan Buckmaster on being drawn into the OpenAI-Anthropic fight; OpenAI says it made progress on another Millennium Prize problem&nbsp; &mdash;&nbsp; Tristan Buckmaster was on the path toward an important proof when one of the A.I. giants used its staggering resources to get there first.",
-      "score": 7,
-      "angle": "route",
-      "source_traceable": true,
-      "why": "数学家Buckmaster被OpenAI/Anthropic算力竞赛裹挟，揭示AI攻克千禧问题的资源与人才竞争范式。",
-      "queued_at": "2026-09-10T17:01:51Z"
-    },
-    {
-      "id": "dcba985e528f859a9b1bede1bd3bb35cab972e8d",
-      "title": "TAR, which builds off-grid power systems for data centers, raised a $120M Series A led by Spark Capital at a ~$1B valuation (Mark Chediak/Bloomberg)",
-      "url": "https://www.techmeme.com/260910/p22#a260910p22",
-      "source": "rss:techmeme",
-      "published_at": "2026-09-10T14:30:01Z",
-      "raw_summary": "Mark Chediak / Bloomberg: TAR, which builds off-grid power systems for data centers, raised a $120M Series A led by Spark Capital at a ~$1B valuation&nbsp; &mdash;&nbsp; A startup that builds off-grid power systems for data centers said it raised $120 million in a Series A funding round led by Spark Capital, an investor in artificial-intelligence developer Anthropic PBC.",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "TAR做离网电力系统供数据中心，$120M A轮/$1B估值，反映AI算力催生独立电力基础设施赛道。",
       "queued_at": "2026-09-10T17:01:51Z"
     }
   ],
