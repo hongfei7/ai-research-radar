@@ -4,76 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "OpenAI",
-        "三星电子"
-      ],
-      "features": [
-        "openai",
-        "一代",
-        "三星",
-        "下一",
-        "与三",
-        "代芯",
-        "作开",
-        "化合",
-        "发下",
-        "合作",
-        "并深",
-        "开发",
-        "星合",
-        "正与",
-        "深化",
-        "片并",
-        "称正",
-        "芯片"
-      ],
-      "sent_at": "2026-09-09T06:50:01Z"
-    },
-    {
-      "tickers": [
-        "DeepSeek"
-      ],
-      "features": [
-        "deepseek",
-        "ipo",
-        "中信",
-        "信证",
-        "创板",
-        "券筹",
-        "场消",
-        "备科",
-        "委托",
-        "市场",
-        "息委",
-        "托中",
-        "消息",
-        "科创",
-        "筹备",
-        "证券"
-      ],
-      "sent_at": "2026-09-09T06:50:17Z"
-    },
-    {
-      "tickers": [
-        "OpenAI"
-      ],
-      "features": [
-        "astra",
-        "openai",
-        "前例",
-        "史无",
-        "客户",
-        "对的",
-        "户对",
-        "无前",
-        "求史",
-        "的需",
-        "需求"
-      ],
-      "sent_at": "2026-09-09T06:50:43Z"
-    },
-    {
-      "tickers": [
         "DeepSeek"
       ],
       "features": [
@@ -280,6 +210,60 @@
         "york"
       ],
       "sent_at": "2026-09-10T03:50:14Z"
+    },
+    {
+      "tickers": [
+        "中芯国际",
+        "天数智芯",
+        "寒武纪"
+      ],
+      "features": [
+        "ai",
+        "and",
+        "by",
+        "cambricon",
+        "chinese",
+        "chipmakers",
+        "chips",
+        "corex",
+        "costs",
+        "current",
+        "due",
+        "for",
+        "have",
+        "hbm",
+        "huawei",
+        "iluvatar",
+        "metax",
+        "next-gen",
+        "prices",
+        "raised",
+        "reuters",
+        "rising",
+        "sources",
+        "to"
+      ],
+      "sent_at": "2026-09-10T08:31:36Z"
+    },
+    {
+      "tickers": [
+        "DeepSeek"
+      ],
+      "features": [
+        "deepseek",
+        "flash",
+        "v4.1"
+      ],
+      "sent_at": "2026-09-10T08:32:02Z"
+    },
+    {
+      "tickers": [
+        "DeepSeek"
+      ],
+      "features": [
+        "deepseek-v4.1-exp"
+      ],
+      "sent_at": "2026-09-10T08:32:20Z"
     }
   ],
   "last_report": {

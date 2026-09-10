@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-10T03:49:30Z",
-  "text": "当前共有 30 个活跃事件。要点包括: 苹果发布A20 Pro芯片，采用台积电2纳米制程; OpenAI’s sly mathematical breakthrough sends a chill through academia; 新模型上线在即，DeepSeek将快速、专家、识图模式进行合并; Sources: DOJ is investigating whether Nvidia tried to skirt antitrust scrutiny of its 2025 Groq deal, described by Groq as a \"nonexclusive licensing agreement\" (New York Times); 苹果发布首款折叠屏iPhone Duo，国行15999元起。",
-  "since": "2026-09-10T03:49:30Z",
-  "active_event_count": 30,
+  "generated_at": "2026-09-10T08:31:20Z",
+  "text": "当前共有 20 个活跃事件。要点包括: Sources: Chinese AI chipmakers Huawei, Cambricon, MetaX, and Iluvatar CoreX have raised prices for current and next-gen chips by 20%-50% due to rising HBM costs (Reuters); 新模型上线在即，DeepSeek将快速、专家、识图模式进行合并; Sources: DOJ is investigating whether Nvidia tried to skirt antitrust scrutiny of its 2025 Groq deal, described by Groq as a \"nonexclusive licensing agreement\" (New York Times); DeepSeek v4.1 Flash; DeepSeek-v4.1-Exp。",
+  "since": "2026-09-10T08:31:20Z",
+  "active_event_count": 20,
   "key_themes": [
-    "edge_ai",
-    "ai_monetization",
     "model_capability",
+    "ai_monetization",
     "chip_supply",
+    "edge_ai",
     "compute_demand"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n苹果折叠屏定价存在两种解读：钛媒体一篇强调\"内存涨价推高成本，迫使最高售价突破原定1999美元\"，另一篇则将涨价归因于产品力与高端定价权，方向判定也不同(一篇positive、一篇neutral)。两条同源报道对特努斯亮相的定性也存在张力——一篇称\"特努斯时代还没来\"指其仍以视频形式露面，另一篇则将其定位为\"主持2025秋季发布会\"的实质掌舵者。此外，Nvidia Groq交易被DOJ调查(可信度低)与全行业算力扩张叙事构成监管vs需求的隐性矛盾。\n\n【新兴趋势】\n三条暗线反复出现：**国产替代多线并进**——京东10万卡国产算力集群、小米连发玄戒O3/O100/D100三芯、长鑫LPDDR6首搭旗舰机、Kepler声称绕开EUV；**内存/存储涨价向终端定价传导**——苹果折叠屏及Pro系列全线涨价、小米18 Fold首售过万，反映HBM/LPDDR供需紧张正挤压消费电子毛利；**中国大模型从纯开源转向\"开源+商业授权\"双轨变现**，智谱、月之暗面、Minimax海外收费化，间接利好闭源模型商业空间。\n\n【信息盲点】\n海力士、三星、美光在本轮仅在\"Kepler替代叙事\"中被提及，但其作为苹果/小米/京东算",
+  "cross_analysis": "【核心矛盾】\nOpenAI同时出现两条相反信号：一方面主动支持美国联邦/加州强制AI安全立法（\"能力越强越需监管\"），另一方面禁止Adobe等竞品在ChatGPT内投放广告，反映其在\"合规姿态\"与\"商业护城河\"之间的策略性平衡。另一处张力在国产AI芯片端：华为、寒武纪、沐曦、天数智芯四家同步涨价20-50%归因于HBM成本，但国产HBM（长鑫/长江存储）供给进展在本轮报道中完全缺位，呈现\"涨价事实清晰、替代方案模糊\"的信息不对称。\n\n【新兴趋势】\n\"端侧大模型\"在多条报道中形成共振：IFA上极摩客EVO-X5 Pro用AMD Strix Halo实现300B参数级LLM本地运行，叠加千瓦级AI芯片对验证/散热/封装的挑战，标志AI算力重心正从\"云端堆卡\"向\"云-端协同\"再平衡。国内侧，百度擎舵3.0多Agent营销、腾讯WorkBuddy按Skill/Token计价，二者共同指向\"Agent化商业变现\"成为国内大厂共识路径。\n\n【信息盲点】\n英伟达在本轮仅作为\"千瓦级AI加速器\"的泛指出现，无具体产品/订单/财报信号；Anthropic、xAI等OpenAI直接竞品完全缺位；苹果、Meta在端侧AI与开源模型上的动作未被覆盖；台积电CoWoS与先进封装产能、ASML High-NA EUV出货等供应链硬数据未披露；长鑫存储HBM量产节点这一国产替代",
   "trend_spotting": "72小时内三条主线交汇：一是\"智能密度\"竞赛白热化，DeepSeek V4.1 Flash缓存输入价跌至$0.003/百万token，同款性能反超Pro，行业从拼能力转向拼单位成本效率，OpenAI亦推GPT-6 Astra紧随；GPU垄断出现结构性裂缝，谷歌、AWS、OpenAI自研芯片正在分流英伟达份额，叠加摩尔线程单日蒸发488亿揭示国产替代估值锚已从\"赛道稀缺\"切至\"赢家筛选\"，K型分化启动。早被忽视的信号是OpenAI千禧年数学证明争议，菲尔兹奖得主陶哲"
 }
