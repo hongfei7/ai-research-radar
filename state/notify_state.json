@@ -4,25 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "Anthropic",
-        "DeepSeek",
-        "OpenAI"
-      ],
-      "features": [
-        "against",
-        "ai",
-        "campaigns",
-        "chinese",
-        "companies",
-        "conducting",
-        "distillation",
-        "pdf",
-        "u.s"
-      ],
-      "sent_at": "2026-09-09T01:39:24Z"
-    },
-    {
-      "tickers": [
         "OpenAI",
         "三星电子"
       ],
@@ -239,6 +220,66 @@
         "transformers"
       ],
       "sent_at": "2026-09-09T16:36:59Z"
+    },
+    {
+      "tickers": [
+        "DeepSeek"
+      ],
+      "features": [
+        "deepseek",
+        "上线",
+        "专家",
+        "即将",
+        "合并",
+        "图模",
+        "在即",
+        "型上",
+        "家识",
+        "将快",
+        "式进",
+        "快速",
+        "新模",
+        "模型",
+        "模式",
+        "线在",
+        "行合",
+        "识图",
+        "进行",
+        "速专"
+      ],
+      "sent_at": "2026-09-10T03:49:52Z"
+    },
+    {
+      "tickers": [
+        "英伟达"
+      ],
+      "features": [
+        "agreement",
+        "antitrust",
+        "as",
+        "by",
+        "deal",
+        "described",
+        "doj",
+        "groq",
+        "investigating",
+        "is",
+        "its",
+        "licensing",
+        "new",
+        "nonexclusive",
+        "nvidia",
+        "of",
+        "scrutiny",
+        "skirt",
+        "sources",
+        "times",
+        "to",
+        "tried",
+        "whether",
+        "york"
+      ],
+      "sent_at": "2026-09-10T03:50:14Z"
     }
   ],
   "last_report": {
