@@ -4,68 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "OpenAI",
-        "三星电子",
-        "台积电"
-      ],
-      "features": [
-        "at",
-        "be",
-        "could",
-        "double-sourcing",
-        "hints",
-        "its",
-        "made",
-        "massive",
-        "next-generation",
-        "openai",
-        "processors",
-        "requirements",
-        "samsung",
-        "says",
-        "tsmc",
-        "volume",
-        "with"
-      ],
-      "sent_at": "2026-09-09T16:36:10Z"
-    },
-    {
-      "tickers": [
-        "OpenAI"
-      ],
-      "features": [
-        "openai",
-        "亿美",
-        "出约",
-        "到年",
-        "力支",
-        "年算",
-        "支出",
-        "算力",
-        "约亿",
-        "美元",
-        "计到",
-        "预计"
-      ],
-      "sent_at": "2026-09-09T16:36:36Z"
-    },
-    {
-      "tickers": [
-        "OpenAI"
-      ],
-      "features": [
-        "and",
-        "astra",
-        "gpt-6",
-        "hidden",
-        "looped",
-        "reasoning",
-        "transformers"
-      ],
-      "sent_at": "2026-09-09T16:36:59Z"
-    },
-    {
-      "tickers": [
         "DeepSeek"
       ],
       "features": [
@@ -233,6 +171,25 @@
         "problem"
       ],
       "sent_at": "2026-09-10T13:15:59Z"
+    },
+    {
+      "tickers": [
+        "OpenAI"
+      ],
+      "features": [
+        "and",
+        "astra",
+        "breather",
+        "by",
+        "design",
+        "gives",
+        "gpt-6",
+        "mathematicians",
+        "openai",
+        "says",
+        "that"
+      ],
+      "sent_at": "2026-09-10T17:07:30Z"
     }
   ],
   "last_report": {

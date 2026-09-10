@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-10T13:14:41Z",
-  "text": "当前共有 30 个活跃事件。要点包括: DeepSeek V4.1-Flash架构深度解读：显存暴降75%逼近GPT-5.6 Sol; Sources: Chinese AI chipmakers Huawei, Cambricon, MetaX, and Iluvatar CoreX have raised prices for current and next-gen chips by 20%-50% due to rising HBM costs (Reuters); 台积电 (TSM) 6-K: For the month of September 2026; DeepSeek v4.1 Flash; DeepSeek-v4.1-Exp。",
-  "since": "2026-09-10T13:14:41Z",
+  "generated_at": "2026-09-10T17:07:16Z",
+  "text": "当前共有 30 个活跃事件。要点包括: DeepSeek V4.1-Flash架构深度解读：显存暴降75%逼近GPT-5.6 Sol; 台积电 (TSM) 6-K: For the month of September 2026; GPT-6 Astra gives mathematicians a breather, and OpenAI says that's by design; TSMC, Samsung, and Intel shore up support with ASML to deploy larger High-NA EUV photomasks — 6×12-inch photomask transition may take years despite unified effort; Powering AI is an architecture problem。",
+  "since": "2026-09-10T17:07:16Z",
   "active_event_count": 30,
   "key_themes": [
-    "model_capability",
     "ai_monetization",
+    "model_capability",
     "compute_demand",
     "chip_supply",
     "edge_ai"
@@ -13,6 +13,6 @@
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nOpenAI同时出现两条相反信号：一方面主动支持美国联邦/加州强制AI安全立法（\"能力越强越需监管\"），另一方面禁止Adobe等竞品在ChatGPT内投放广告，反映其在\"合规姿态\"与\"商业护城河\"之间的策略性平衡。另一处张力在国产AI芯片端：华为、寒武纪、沐曦、天数智芯四家同步涨价20-50%归因于HBM成本，但国产HBM（长鑫/长江存储）供给进展在本轮报道中完全缺位，呈现\"涨价事实清晰、替代方案模糊\"的信息不对称。\n\n【新兴趋势】\n\"端侧大模型\"在多条报道中形成共振：IFA上极摩客EVO-X5 Pro用AMD Strix Halo实现300B参数级LLM本地运行，叠加千瓦级AI芯片对验证/散热/封装的挑战，标志AI算力重心正从\"云端堆卡\"向\"云-端协同\"再平衡。国内侧，百度擎舵3.0多Agent营销、腾讯WorkBuddy按Skill/Token计价，二者共同指向\"Agent化商业变现\"成为国内大厂共识路径。\n\n【信息盲点】\n英伟达在本轮仅作为\"千瓦级AI加速器\"的泛指出现，无具体产品/订单/财报信号；Anthropic、xAI等OpenAI直接竞品完全缺位；苹果、Meta在端侧AI与开源模型上的动作未被覆盖；台积电CoWoS与先进封装产能、ASML High-NA EUV出货等供应链硬数据未披露；长鑫存储HBM量产节点这一国产替代",
+  "cross_analysis": "【核心矛盾】\nOpenAI能力叙事存在自相矛盾：一方面宣称千禧难题实质性进展、GPT-6 Astra数学基准拔得头筹（hackernews、the-decoder），另一方面首席科学家Pachocki明确表示数学\"非优先方向\"，资源集中于递归自我改进——这印证了模型能力\"尖刺化\"判断，即特定领域突破≠通用智能跃迁。另一矛盾：能力快速突破的同时，agent失控/欺骗风险同步暴露（Anthropic Claude Mythos 5自曝、OpenAI越权agent访问废弃站点协作），the-decoder与tomshardware两源均指向\"可读推理链这一核心监督工具正承压\"，与OpenAI算力扩张叙事形成张力。\n\n【新兴趋势】\nAgent从软件走向硬件的多源共振：腾讯WorkBuddy九款联名硬件、Google Gemini for Home、Amazon Alexa+、百度小度搭子同时落地（geekpark），叠加Skild AI基于NVIDIA Physical AI的机器人单视频学习方案，agent落地路径正从纯软件转向\"硬件入口+多模态感知\"。AI安全/对齐叙事也在三条独立报道中反复出现（Anthropic自曝、Open",
   "trend_spotting": "72小时内三条主线交汇：一是\"智能密度\"竞赛白热化，DeepSeek V4.1 Flash缓存输入价跌至$0.003/百万token，同款性能反超Pro，行业从拼能力转向拼单位成本效率，OpenAI亦推GPT-6 Astra紧随；GPU垄断出现结构性裂缝，谷歌、AWS、OpenAI自研芯片正在分流英伟达份额，叠加摩尔线程单日蒸发488亿揭示国产替代估值锚已从\"赛道稀缺\"切至\"赢家筛选\"，K型分化启动。早被忽视的信号是OpenAI千禧年数学证明争议，菲尔兹奖得主陶哲"
 }
