@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-11T00:00:06Z",
-  "text": "截至 2026-09-11 07:59 HKT，英伟达Grace Blackwell出货量环比+27%，高端AI算力供需紧张延续；SpaceX调整数据中心建设策略，优先补强供电与冷却冗余；OpenAI推出Agents API公测版（免费）及金融业ChatGPT工具，搭载GPT-6 Astra；甲骨文Q1 IaaS营收73.9亿美元超预期；阿联酋拟在德投资460亿美元覆盖AI与能源。",
-  "since": "2026-09-11T00:00:06Z",
-  "active_event_count": 26,
+  "generated_at": "2026-09-11T04:10:07Z",
+  "text": "截至 2026-09-11 12:09 HKT，英特尔自2025年底连续涨价并计划停产低毛利小核，高通与三星2nm代工谈判因价格分歧破裂；Altman据报考虑放慢前沿AI开发并向国会问询反垄断合规，态度较此前转变明显；谷歌锁定核电站一半电力支撑数据中心；国内AI六小虎集中冲刺IPO，DeepSeek 4.1 Flash现身但细节待官方确认。",
+  "since": "2026-09-11T04:10:07Z",
+  "active_event_count": 25,
   "key_themes": [
-    "ai_monetization",
     "compute_demand",
+    "ai_monetization",
     "model_capability",
-    "datacenter_power",
-    "policy_export"
+    "chip_supply",
+    "datacenter_power"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n微软计划将数据中心算力扩至38GW（2032年），属\"超激进扩张\"信号；而SpaceX/xAI却在补强供电冷却冗余、延长建设周期，同一时点出现两种相反的capex节奏。来源均为36kr，但实质反映\"规模优先\"与\"可靠性优先\"两种路径分歧。另一隐含矛盾是OpenAI一边释放Agents API零费用与金融垂直产品的需求扩张信号，一边却在Wired报道中担忧行业需\"协同减速\"，供需叙事存在内部张力。\n\n【新兴趋势】\n电力/电网正成为AI算力扩张的核心约束，OpenAI与多家电力企业会面、微软38GW电力需求逼近纽约州峰值、xAI补强电力冗余、阿联酋460亿美元对德投资同时覆盖AI与能源——\"算力即电力\"在四条独立报道中反复出现，电力设备与电网安全供应链或为下阶段Alpha来源。另一趋势是推理侧优化与垂直化产品化并行：AWS SageMaker prefix-aware routing压低P50时延77%，OpenAI则同时推出Agents API和金融版ChatGPT。\n\n【信息盲点】\n本轮完全未覆盖的标的有：台积电/ASML/海力士/美光（HBM与CoWoS链条）、苹果、Meta、Arista/思科（网络交换）、GE Vernova/Schneider/Eaton（电力设备）、阿里/百度等中国AI算力方。其中",
+  "cross_analysis": "【核心矛盾】\nOpenAI内部表态出现明显撕裂：item 3显示Altman主动提议放慢前沿模型开发并希望同行效仿（与他此前公开反对AI暂停的态度180度反转），item 8进一步揭示其已向国会咨询\"协调全行业放缓\"是否触犯反垄断法；但item 9却显示OpenAI正以千禧年数学难题作为Benchmark测试模型能力上限——\"主动降速\"的治理姿态与\"逼近能力极限\"的工程动作形成直接矛盾，外部观察者难以判断其真实意图。\n\n【新兴趋势】\n1）AI算力扩张遭遇电力硬约束，Google锁定核电站半数发电量（item 5）标志着超大规模云厂从\"找芯片\"转向\"锁电力\"的新阶段；2）存储芯片成本正沿产业链向下游消费电子全面传导，华为、小米、苹果折叠旗舰集体涨价（item 11），AI驱动的存储景气可能挤压终端需求；3）AI安全治理从行业自律升级到国会立法层面（item 8），监管变量权重显著上升；4）x86阵营战略收缩（Intel停小核、加价聚焦服务器）",
   "trend_spotting": "72小时内三条主线交汇：一是\"智能密度\"竞赛白热化，DeepSeek V4.1 Flash缓存输入价跌至$0.003/百万token，同款性能反超Pro，行业从拼能力转向拼单位成本效率，OpenAI亦推GPT-6 Astra紧随；GPU垄断出现结构性裂缝，谷歌、AWS、OpenAI自研芯片正在分流英伟达份额，叠加摩尔线程单日蒸发488亿揭示国产替代估值锚已从\"赛道稀缺\"切至\"赢家筛选\"，K型分化启动。早被忽视的信号是OpenAI千禧年数学证明争议，菲尔兹奖得主陶哲"
 }
