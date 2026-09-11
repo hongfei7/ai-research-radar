@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-11T13:28:45Z",
-  "text": "当前共有 21 个活跃事件。要点包括: LG CNS将斥资3814亿韩元采购英伟达GPU及基础设施设备; Tencent-backed AI chipmaker Enflame's shares surged 188% in their Shanghai debut, giving Enflame a market cap of $26.3B, after raising ~$910M in an IPO (Ann Cao/South China Morning Post); OpenAI Agents API开放公测，对外共享Codex底层智能体基础设施; 传OpenAI转用Navier-Stokes模型攻克Riemann假设与P vs NP; Chip Industry Week in Review。",
-  "since": "2026-09-11T13:28:45Z",
-  "active_event_count": 21,
+  "generated_at": "2026-09-11T17:11:18Z",
+  "text": "当前共有 22 个活跃事件。要点包括: China-modified Nvidia RTX 5090 with massive 96GB of memory appears on Alibaba for less than $4,000 — 3x more VRAM at 65% the cost of the original; OpenAI Is Considering Slowing Down The Development Of Cutting-edge AI, Sam Altman Is Hoping Other AI Companies Will Do The Same; 传OpenAI转用Navier-Stokes模型攻克Riemann假设与P vs NP; DeepSeek V4.1 Flash上线，崔添翼加入“义父之战”; 和梁文锋师出同门，浙大00后做世界模型，将再融10亿元。",
+  "since": "2026-09-11T17:11:18Z",
+  "active_event_count": 22,
   "key_themes": [
     "compute_demand",
     "model_capability",
     "ai_monetization",
-    "chip_supply",
-    "policy_export"
+    "policy_export",
+    "domestic_substitution"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n算力需求方向出现显著分歧：看多方来自Moonshot ARR两月翻3倍至$1B、浪潮90亿定增加码AI基础设施、魔芯世界模型全栈跑通昇腾、JPR显示Q2独立显卡创四年新高且Nvidia独占90%份额；看空方则来自OpenAI主动向国会",
+  "cross_analysis": "【核心矛盾】\nOpenAI战略方向出现自相矛盾：Altman公开表示可能放缓前沿AI研发（条目c1e017b2），但同期GSA政府端却将1美元象征性试点升级为按量计费并开放GPT-6 Astra（条目e51b206d），Nscale还引入前OpenAI高管备战IPO（条目3e343d7d）——\"放缓研发\"与\"加速商业化+扩产能\"两套叙事并行。另据Tom's Hardware报道中科曙光因合规性被踢出IO500榜单（条目10259d7e），与Anthropic披露中国实验室大规模提取Claude训练数据（条目11bf04e0）相互印证，但前者削弱国产超算国际认可度，后者反衬国产模型对海外能力的依赖路径，矛盾指向同一脱钩现实。\n\n【新兴趋势】\n1）AI变现从象征性低价/试点全面转向按量计费与企业大客户绑定：GSA按量折扣、Anthropic 320万美元年薪抢Meta销售（条目d49d4b88）是同一信号。2）算力调度从云端向本地/边缘延伸：NV PAIR（条目890e9b5f）与阿里上96GB改装5090（条目10e8f0d7）共同显示\"大显存+本地推理\"成为新落点。3）头部AI实验室基础设施自研深化：OpenAI Habitat存储系统自研（条目c7d3c8ae）减少对外部供应商依赖。\n\n【信息盲点】\n本轮完全缺席的关键标的：HBM/存储链（SK海力士、三星、美光、兆易创新）、代工（TSMC、中芯国际）、AMD/博通、苹果端侧AI、国内AI芯片标的（寒武纪、海光、华为昇腾产业链）。具身智能/机器人环节（特斯拉Optimus",
   "trend_spotting": "AI算力主线出现三条新动向。一是企业级AI capex向下一代GPU锚定：LG CNS明确披露3814亿韩元采购英伟达Vera Rubin，这是韩国大客户对Rubin世代的首次公开背书，配合高通-AWS 600亿美元定制芯片协议，标志通用GPU与定制ASIC并行放量，而非替代关系。二是Agent基础设施进入\"水电化\"阶段：OpenAI将支撑Codex/ChatGPT的Agent栈以公开API形式对外开放，联合Cloudflare、Vercel、Oracle提供沙箱；阿里云同日升级Token Plan并按MCP标准接入12类Agent Harness。Agent层不再是单家模型公司的内部能力，而是跨云、跨工具的公共底座，token消耗与推理算力需求将出现非线性放大。\n\n早期信号值得跟踪：燧原科创板首日188%涨幅、市值263亿美元，为国产AI训练/推理芯片锚定新估值基准，将直接挤压寒武纪、海光等可比标的的定价空间；彩云科技在NanoGPT Speedrun将达标训练时间压至1分16秒，DCMHA/MUDD若被头部模型框架采纳，单位训练算力假设需下修；Arm CMO公开提出推理时代CPU:GPU将趋近1:1，叠加Ayar Labs光互联大规模订单，I/O与"
 }
