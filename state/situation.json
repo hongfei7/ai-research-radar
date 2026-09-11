@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-11T09:00:35Z",
-  "text": "当前共有 23 个活跃事件。要点包括: 消息称高通与三星电子的晶圆代工谈判因价格分歧陷入僵局; 英特尔挥刀：巨头的艰难取舍; Sources: Sam Altman told OpenAI employees that the company is considering slowing cutting-edge AI development, and he hopes other AI companies will do the same (Bloomberg); Google will buy half the electricity of a nuclear power plant; DeepSeek 4.1 Flash。",
-  "since": "2026-09-11T09:00:35Z",
-  "active_event_count": 23,
+  "generated_at": "2026-09-11T13:28:45Z",
+  "text": "当前共有 21 个活跃事件。要点包括: LG CNS将斥资3814亿韩元采购英伟达GPU及基础设施设备; Tencent-backed AI chipmaker Enflame's shares surged 188% in their Shanghai debut, giving Enflame a market cap of $26.3B, after raising ~$910M in an IPO (Ann Cao/South China Morning Post); OpenAI Agents API开放公测，对外共享Codex底层智能体基础设施; 传OpenAI转用Navier-Stokes模型攻克Riemann假设与P vs NP; Chip Industry Week in Review。",
+  "since": "2026-09-11T13:28:45Z",
+  "active_event_count": 21,
   "key_themes": [
     "compute_demand",
     "model_capability",
-    "chip_supply",
     "ai_monetization",
+    "chip_supply",
     "policy_export"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n算力架构主导权之争：Arm CMO主张Agent时代GPU:CPU配比将趋近1:1、CPU价值重估（来源：TMTPost），而LG CNS同期斥资3814亿韩元重金采购英伟达下一代Vera Rubin GPU继续以GPU为绝对中心（来源：36kr）。两源对\"AI算力增量由谁承载\"给出方向性不同的判断——前者强调推理阶段CPU补强，后者强化训练/数据中心GPU主线。此外，GPT-6多模态3D生成被指\"使用现成素材\"（来源：ifanr），显示大模型能力演示与真实落地之间存在落差，叙事兑现存疑。\n\n【新兴趋势】\nAI Agent生态化与MCP协议标准化形成最密集主线：OpenAI Agents API公开测试、阿里云Token Plan新增12类Agent Harness工具、Arm对Agent时代CPU角色的判断，三条独立报道同向聚焦。ASIC定制芯片加速兑现（高通-AWS 600亿美元协议）、国产AI芯片资本化破冰（燧原科创板首日+188%）、训练侧算法效率",
+  "cross_analysis": "【核心矛盾】\n算力需求方向出现显著分歧：看多方来自Moonshot ARR两月翻3倍至$1B、浪潮90亿定增加码AI基础设施、魔芯世界模型全栈跑通昇腾、JPR显示Q2独立显卡创四年新高且Nvidia独占90%份额；看空方则来自OpenAI主动向国会",
   "trend_spotting": "AI算力主线出现三条新动向。一是企业级AI capex向下一代GPU锚定：LG CNS明确披露3814亿韩元采购英伟达Vera Rubin，这是韩国大客户对Rubin世代的首次公开背书，配合高通-AWS 600亿美元定制芯片协议，标志通用GPU与定制ASIC并行放量，而非替代关系。二是Agent基础设施进入\"水电化\"阶段：OpenAI将支撑Codex/ChatGPT的Agent栈以公开API形式对外开放，联合Cloudflare、Vercel、Oracle提供沙箱；阿里云同日升级Token Plan并按MCP标准接入12类Agent Harness。Agent层不再是单家模型公司的内部能力，而是跨云、跨工具的公共底座，token消耗与推理算力需求将出现非线性放大。\n\n早期信号值得跟踪：燧原科创板首日188%涨幅、市值263亿美元，为国产AI训练/推理芯片锚定新估值基准，将直接挤压寒武纪、海光等可比标的的定价空间；彩云科技在NanoGPT Speedrun将达标训练时间压至1分16秒，DCMHA/MUDD若被头部模型框架采纳，单位训练算力假设需下修；Arm CMO公开提出推理时代CPU:GPU将趋近1:1，叠加Ayar Labs光互联大规模订单，I/O与"
 }
