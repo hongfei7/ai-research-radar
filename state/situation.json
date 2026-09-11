@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-11T17:11:18Z",
-  "text": "当前共有 22 个活跃事件。要点包括: China-modified Nvidia RTX 5090 with massive 96GB of memory appears on Alibaba for less than $4,000 — 3x more VRAM at 65% the cost of the original; OpenAI Is Considering Slowing Down The Development Of Cutting-edge AI, Sam Altman Is Hoping Other AI Companies Will Do The Same; 传OpenAI转用Navier-Stokes模型攻克Riemann假设与P vs NP; DeepSeek V4.1 Flash上线，崔添翼加入“义父之战”; 和梁文锋师出同门，浙大00后做世界模型，将再融10亿元。",
-  "since": "2026-09-11T17:11:18Z",
+  "generated_at": "2026-09-11T19:49:04Z",
+  "text": "当前共有 22 个活跃事件。要点包括: China-modified Nvidia RTX 5090 with massive 96GB of memory appears on Alibaba for less than $4,000 — 3x more VRAM at 65% the cost of the original; OpenAI Is Considering Slowing Down The Development Of Cutting-edge AI, Sam Altman Is Hoping Other AI Companies Will Do The Same; GPT-6 Astra does 3D camera tracking and VFX in Blender; The GSA says OpenAI is replacing its $1-per-year pilot for US agencies with a usage-based deal at a 50% discount from October 1, including access to GPT-6 Astra (Maggie Eastland/Bloomberg); 啊？Anthropic最高320万招销售，只为服务Meta。",
+  "since": "2026-09-11T19:49:04Z",
   "active_event_count": 22,
   "key_themes": [
-    "compute_demand",
     "model_capability",
     "ai_monetization",
+    "compute_demand",
     "policy_export",
-    "domestic_substitution"
+    "edge_ai"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nOpenAI战略方向出现自相矛盾：Altman公开表示可能放缓前沿AI研发（条目c1e017b2），但同期GSA政府端却将1美元象征性试点升级为按量计费并开放GPT-6 Astra（条目e51b206d），Nscale还引入前OpenAI高管备战IPO（条目3e343d7d）——\"放缓研发\"与\"加速商业化+扩产能\"两套叙事并行。另据Tom's Hardware报道中科曙光因合规性被踢出IO500榜单（条目10259d7e），与Anthropic披露中国实验室大规模提取Claude训练数据（条目11bf04e0）相互印证，但前者削弱国产超算国际认可度，后者反衬国产模型对海外能力的依赖路径，矛盾指向同一脱钩现实。\n\n【新兴趋势】\n1）AI变现从象征性低价/试点全面转向按量计费与企业大客户绑定：GSA按量折扣、Anthropic 320万美元年薪抢Meta销售（条目d49d4b88）是同一信号。2）算力调度从云端向本地/边缘延伸：NV PAIR（条目890e9b5f）与阿里上96GB改装5090（条目10e8f0d7）共同显示\"大显存+本地推理\"成为新落点。3）头部AI实验室基础设施自研深化：OpenAI Habitat存储系统自研（条目c7d3c8ae）减少对外部供应商依赖。\n\n【信息盲点】\n本轮完全缺席的关键标的：HBM/存储链（SK海力士、三星、美光、兆易创新）、代工（TSMC、中芯国际）、AMD/博通、苹果端侧AI、国内AI芯片标的（寒武纪、海光、华为昇腾产业链）。具身智能/机器人环节（特斯拉Optimus",
+  "cross_analysis": "【核心矛盾】\nAnthropic内部信号分裂：研究员联署\"超级智能末日\"警告（d8bb），同期工程师Boris Cherny却公开称Claude产出代码已达生产标准（44ae），同公司叙事一紧一松。Bengio呼吁训练前安全审查（5c6f）与特朗普\"继续超越中国\"主张直接对立。此外月之暗面目标20亿年化营收但K3 token量近月下滑（3d8e），增长叙事与使用量边际走弱存在背离。\n\n【新兴趋势】\n**AI Agent从演示走向生产部署**反复出现：AWS推出AgentCore+DevOps Agent双层监控（d10b），蚂蚁银行Agent覆盖4200万小微（00cf），GPT-6 Astra直接操作Blender做VFX（0478），Anthropic实现\"AI写→AI审\"闭环（44ae）。**算力需求的非LLM驱动**信号加强：开源世界模型参数每6月翻倍（7d56），推理侧token消耗高位（3d8e），Vinyals创办Discovery Loop攻关自我改进（6917）。**安全治理进入资本市场视野**：Anthropic IPO时点叠加doomer叙事（d8bb），Meta训练数据集体诉讼（890d），监管变量正从公共议题转为估值变量。\n\n【信息盲点】\nTSMC/ASML及HBM三巨头（SK海力士、三星、美光）在\"世界模型翻倍\"叙事中未被点名，但恰是边际受益方。Apple完全缺席——端侧AI/Apple Intelligence在本轮无信号。Oracle仅作为Stargate配角出现，其云业务（OCI）受益逻辑未被讨论。电力公用事业、电网设备、液冷供应商被Stargate能源争议（bd1e）侧面触及但未展开。特斯拉FSD/Optimus、英伟达Rubin/Blackwell出货节奏均无直接素材。\n\n【跨标的联动】\n**算力链**：月之暗面token消耗+世界模型翻倍→共同强化GPU/HBM/先进封装需求（英伟",
   "trend_spotting": "AI算力主线出现三条新动向。一是企业级AI capex向下一代GPU锚定：LG CNS明确披露3814亿韩元采购英伟达Vera Rubin，这是韩国大客户对Rubin世代的首次公开背书，配合高通-AWS 600亿美元定制芯片协议，标志通用GPU与定制ASIC并行放量，而非替代关系。二是Agent基础设施进入\"水电化\"阶段：OpenAI将支撑Codex/ChatGPT的Agent栈以公开API形式对外开放，联合Cloudflare、Vercel、Oracle提供沙箱；阿里云同日升级Token Plan并按MCP标准接入12类Agent Harness。Agent层不再是单家模型公司的内部能力，而是跨云、跨工具的公共底座，token消耗与推理算力需求将出现非线性放大。\n\n早期信号值得跟踪：燧原科创板首日188%涨幅、市值263亿美元，为国产AI训练/推理芯片锚定新估值基准，将直接挤压寒武纪、海光等可比标的的定价空间；彩云科技在NanoGPT Speedrun将达标训练时间压至1分16秒，DCMHA/MUDD若被头部模型框架采纳，单位训练算力假设需下修；Arm CMO公开提出推理时代CPU:GPU将趋近1:1，叠加Ayar Labs光互联大规模订单，I/O与"
 }
