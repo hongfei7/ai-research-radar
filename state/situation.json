@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-11T04:10:07Z",
-  "text": "截至 2026-09-11 12:09 HKT，英特尔自2025年底连续涨价并计划停产低毛利小核，高通与三星2nm代工谈判因价格分歧破裂；Altman据报考虑放慢前沿AI开发并向国会问询反垄断合规，态度较此前转变明显；谷歌锁定核电站一半电力支撑数据中心；国内AI六小虎集中冲刺IPO，DeepSeek 4.1 Flash现身但细节待官方确认。",
-  "since": "2026-09-11T04:10:07Z",
-  "active_event_count": 25,
+  "generated_at": "2026-09-11T09:00:35Z",
+  "text": "当前共有 23 个活跃事件。要点包括: 消息称高通与三星电子的晶圆代工谈判因价格分歧陷入僵局; 英特尔挥刀：巨头的艰难取舍; Sources: Sam Altman told OpenAI employees that the company is considering slowing cutting-edge AI development, and he hopes other AI companies will do the same (Bloomberg); Google will buy half the electricity of a nuclear power plant; DeepSeek 4.1 Flash。",
+  "since": "2026-09-11T09:00:35Z",
+  "active_event_count": 23,
   "key_themes": [
     "compute_demand",
-    "ai_monetization",
     "model_capability",
     "chip_supply",
-    "datacenter_power"
+    "ai_monetization",
+    "policy_export"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nOpenAI内部表态出现明显撕裂：item 3显示Altman主动提议放慢前沿模型开发并希望同行效仿（与他此前公开反对AI暂停的态度180度反转），item 8进一步揭示其已向国会咨询\"协调全行业放缓\"是否触犯反垄断法；但item 9却显示OpenAI正以千禧年数学难题作为Benchmark测试模型能力上限——\"主动降速\"的治理姿态与\"逼近能力极限\"的工程动作形成直接矛盾，外部观察者难以判断其真实意图。\n\n【新兴趋势】\n1）AI算力扩张遭遇电力硬约束，Google锁定核电站半数发电量（item 5）标志着超大规模云厂从\"找芯片\"转向\"锁电力\"的新阶段；2）存储芯片成本正沿产业链向下游消费电子全面传导，华为、小米、苹果折叠旗舰集体涨价（item 11），AI驱动的存储景气可能挤压终端需求；3）AI安全治理从行业自律升级到国会立法层面（item 8），监管变量权重显著上升；4）x86阵营战略收缩（Intel停小核、加价聚焦服务器）",
-  "trend_spotting": "72小时内三条主线交汇：一是\"智能密度\"竞赛白热化，DeepSeek V4.1 Flash缓存输入价跌至$0.003/百万token，同款性能反超Pro，行业从拼能力转向拼单位成本效率，OpenAI亦推GPT-6 Astra紧随；GPU垄断出现结构性裂缝，谷歌、AWS、OpenAI自研芯片正在分流英伟达份额，叠加摩尔线程单日蒸发488亿揭示国产替代估值锚已从\"赛道稀缺\"切至\"赢家筛选\"，K型分化启动。早被忽视的信号是OpenAI千禧年数学证明争议，菲尔兹奖得主陶哲"
+  "cross_analysis": "【核心矛盾】\n算力架构主导权之争：Arm CMO主张Agent时代GPU:CPU配比将趋近1:1、CPU价值重估（来源：TMTPost），而LG CNS同期斥资3814亿韩元重金采购英伟达下一代Vera Rubin GPU继续以GPU为绝对中心（来源：36kr）。两源对\"AI算力增量由谁承载\"给出方向性不同的判断——前者强调推理阶段CPU补强，后者强化训练/数据中心GPU主线。此外，GPT-6多模态3D生成被指\"使用现成素材\"（来源：ifanr），显示大模型能力演示与真实落地之间存在落差，叙事兑现存疑。\n\n【新兴趋势】\nAI Agent生态化与MCP协议标准化形成最密集主线：OpenAI Agents API公开测试、阿里云Token Plan新增12类Agent Harness工具、Arm对Agent时代CPU角色的判断，三条独立报道同向聚焦。ASIC定制芯片加速兑现（高通-AWS 600亿美元协议）、国产AI芯片资本化破冰（燧原科创板首日+188%）、训练侧算法效率",
+  "trend_spotting": "AI算力主线出现三条新动向。一是企业级AI capex向下一代GPU锚定：LG CNS明确披露3814亿韩元采购英伟达Vera Rubin，这是韩国大客户对Rubin世代的首次公开背书，配合高通-AWS 600亿美元定制芯片协议，标志通用GPU与定制ASIC并行放量，而非替代关系。二是Agent基础设施进入\"水电化\"阶段：OpenAI将支撑Codex/ChatGPT的Agent栈以公开API形式对外开放，联合Cloudflare、Vercel、Oracle提供沙箱；阿里云同日升级Token Plan并按MCP标准接入12类Agent Harness。Agent层不再是单家模型公司的内部能力，而是跨云、跨工具的公共底座，token消耗与推理算力需求将出现非线性放大。\n\n早期信号值得跟踪：燧原科创板首日188%涨幅、市值263亿美元，为国产AI训练/推理芯片锚定新估值基准，将直接挤压寒武纪、海光等可比标的的定价空间；彩云科技在NanoGPT Speedrun将达标训练时间压至1分16秒，DCMHA/MUDD若被头部模型框架采纳，单位训练算力假设需下修；Arm CMO公开提出推理时代CPU:GPU将趋近1:1，叠加Ayar Labs光互联大规模订单，I/O与"
 }

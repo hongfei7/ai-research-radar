@@ -1,4 +1,83 @@
 {
-  "candidates": [],
+  "candidates": [
+    {
+      "id": "719e321c272c5922800542be81c2e1f2a882c336",
+      "title": "We Replaced MMAP with Io_uring in Our Rust Query Engine. It Got Slower",
+      "url": "https://www.conviva.ai/resource/we-replaced-mmap-with-io_uring-in-our-rust-query-engine-it-got-slower",
+      "source": "hackernews",
+      "published_at": "2026-09-11T05:26:58Z",
+      "raw_summary": "We Replaced MMAP with Io_uring in Our Rust Query Engine. It Got Slower",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Rust查询引擎用io_uring替代mmap反而变慢的实测复盘，含基准数据与工程取舍，可借鉴的负面经验。",
+      "queued_at": "2026-09-11T08:56:30Z"
+    },
+    {
+      "id": "26557b8b9a5f32b60f1cf9ad507ff7780b62a695",
+      "title": "彩云科技：AI团队两次刷新大模型训练速度世界纪录，相关代码已并入官方开源仓库",
+      "url": "https://36kr.com/newsflashes/3978747325316104?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-09-11T08:31:04Z",
+      "raw_summary": "36氪获悉，近日，人工智能企业彩云科技宣布其基础模型算法团队，在全球开源AI技术竞速项目NanoGPT Speedrun中，连续两次刷新大模型训练速度世界纪录，将达标训练时间压缩至1分16秒。相关代码已正式并入官方开源仓库。据了解，两项纪录是彩云科技团队在模型架构上的两项原创性创新——DCMHA（可动态组合多头注意力）和MUDD（多路动态稠密连接），分别于2024年和2025年发表于国际机器学习顶级会议ICML，并均入选口头报告。",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "彩云科技在NanoGPT Speedrun两次刷纪录，DCMHA与MUDD架构有ICML论文可溯源，可了解其原创点。",
+      "queued_at": "2026-09-11T08:56:30Z"
+    },
+    {
+      "id": "7fec490cfc5f50ce4e58627e2d16d17693d0bdb7",
+      "title": "一台人形机器人，到底要工作多久才能回本？",
+      "url": "https://www.tmtpost.com/8136661.html",
+      "source": "rss:tmtpost",
+      "published_at": "2026-09-11T06:32:22Z",
+      "raw_summary": "机器人有了考勤表，还没有工资表。人形机器人公司开始公布价格、工时和任务量，但这些数字还没有在同一个真实项目里组成一张完整的经济账。",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": false,
+      "why": "人形机器人ROI问题的经济学讨论，指出工时/价格/任务量尚未在同一真实项目中成账，视角有价值。",
+      "queued_at": "2026-09-11T08:56:30Z"
+    },
+    {
+      "id": "88318ff4b6390b2529151647216e0d87414c83fd",
+      "title": "AI找到一种肺药，吃4周“年轻”3岁",
+      "url": "https://www.tmtpost.com/8136514.html",
+      "source": "rss:tmtpost",
+      "published_at": "2026-09-11T05:58:00Z",
+      "raw_summary": "文 | 字母AI一款原本用来治疗肺纤维化的药，患者吃了4周之后，&ldquo;年轻&rdquo;了3岁。而这颗药从一开始就和AI绑在一起：先由AI判断肺纤维化到底该打哪个靶点，再由生成式AI把对应的药物分子设计出来。故事离我们并不遥远。做出它的英矽智能（Insilico）在香港设有主要办公地点，负责新药发现和研发的重要团队则长期扎在上海浦东张江。几年前AI从海量疾病数据里挑中了一个叫TNIK的靶点，如今这个判断已经被做成一颗真正的药，走到了临床后半程。今年7月，英矽智能宣布，rentosertib正式进入III期临床，计划在47个中心招募约320名肺纤维化患者。就在这颗肺药继续往上市终点推进的时候，研究人员又从此前IIa期留下来的血样里，翻出了一个出乎意料的信号。42名患者，六套不同的&ldquo;衰老时钟&rdquo;，指向了同一个方向：他们的血液，看起来更年轻了。就这样，一颗AI参与找到的肺药，突然和&ldquo;抗衰老&rdquo;扯上了关系。AI几年前挑中的靶点，走到了III期一款药物在正式开始研究前，首先要找到一个值得干预的生物学对象。它可能是某个蛋白、受体，也可能是一条与疾病进程密切相关的信号通路。这个对象，就是药物的&ldquo;靶点&rdquo;。问题在于，人体里有成千上万个蛋白，疾病背后又牵扯大量基因、细胞和信号通路。过去寻找新靶点，要靠长期的基础研究，一层层积累证据，再慢慢判断哪个方向值得下注。所谓先画靶再射箭，要是对靶点的判断出了问题，后面的药物研发保准走偏。AI在找靶点这件事上，可以说是发挥了大作用。它可以同时读取基因组、转录组、蛋白组、疾病数据库、论文和生物网络，从远超人力能够逐条处理的信息里，寻找哪些蛋白和疾病之间存在值得进一步验证的联系。近年来，AI参与靶点发现已经成为AI制药的重要方向之一。药物研发领域的顶级综述期刊《自然评论：药物发现》（Nature Reviews Drug Discovery）今年甚至专门发表综述讨论AI参与靶点识别，认为它正在这一环节发挥越来越重要的作用，但也同时强调，一个靶点真正是否成立，最终仍要靠实验乃至临床验证。在这一领域，BenevolentAI和阿斯利康很早就在慢性肾病、肺纤维化等方向上，用知识图谱和机器学习从复杂疾病数据里筛选新靶点；Recursion也一直在用大规模表型数据和机器学习寻找新的疾病机制，像它的REC-4881，背后的关键发现就是其平台识别出&ldquo;抑制MEK1/2可能治疗家族性腺瘤性息肉病&rdquo;，目前已经推进到II期。AI帮人找到靶点不算新鲜，真正困难的是把研究推进下去。算法挑出的靶点，要先经过实验验证；验证成立之后，还得有人围绕它设计出真正可用的分子，再经过毒理、动物实验、I期、II期，一路证明它不只是&ldquo;理论上说得通&rdquo;。很多AI发现的靶点，都会在中间的某个环节卡住。I期主要看安全性，II期开始看疗效信号和剂量；到了III期，往往要招募数百甚至数千名患者，在更接近真实临床的条件下和安慰剂或标准治疗比较。到了这一关，前面那些在几十个人身上显得&ldquo;顺理成章&rdquo;的答案，往往要被重新验证。看似明显的疗效可能被更大的样本稀释，小样本里没暴露的不良反应也可能第一次浮出来。也正因为如此，III期通常也是药物上市前最关键、成本最高、失败代价最大的阶段之一。英矽智能此次最值得关注的地方，就在于它把rentosertib推到了III期临床。公司称这是首个&ldquo;AI发现新靶点+生成式AI设计新分子&rdquo;进入关键性",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "英矽智能rentosertib的TNIK靶点+IIa衰老时钟信号+III期临床进展，有具体数据和试验细节。",
+      "queued_at": "2026-09-11T08:56:30Z"
+    },
+    {
+      "id": "31122a26fee4c840c2c72346a2bafbaac8fcf31e",
+      "title": "Session Traces and Cost Controls Help Diagnose AI Agent Failures",
+      "url": "https://www.infoq.com/news/2026/09/observability-ai-agents",
+      "source": "rss:infoq",
+      "published_at": "2026-09-11T08:14:00Z",
+      "raw_summary": "Session traces and cost controls are emerging as key observability techniques for diagnosing AI agent failures, helping teams spot tool-call loops and runaway spend while preserving enough execution context for post-incident debugging. By Mark Silvester",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": false,
+      "why": "Session traces与成本控制作为Agent可观测性核心实践的总结，对工程落地有直接参考价值。",
+      "queued_at": "2026-09-11T08:56:30Z"
+    },
+    {
+      "id": "984b41bbfe38a713fa8d918f2831910f05872a85",
+      "title": "Chip Industry Week in Review",
+      "url": "https://semiengineering.com/chip-industry-week-in-review-155",
+      "source": "rss:semiengineering",
+      "published_at": "2026-09-11T07:01:29Z",
+      "raw_summary": "12-inch high-NA EUV masks; Arm's edge AI push; Amkor's expansion; 3D memory; FeRAM startup makes waves; Qualcomm-AWS $60B custom silicon deal; Ayar Labs' scale-up deal; new iPhone chip and format; rogue OpenAI agents in Germany; fab factory; fine-pitch RDL tech for advanced packaging. The post Chip Industry Week in Review appeared first on Semiconductor Engineering.",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "半导体行业周报：Qualcomm-AWS $60B定制芯片、Amkor扩产、FeRAM初创、3D memory等高密度行业动态。",
+      "queued_at": "2026-09-11T08:56:30Z"
+    }
+  ],
   "digest_last_date": "2026-09-11"
 }
