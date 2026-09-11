@@ -144,6 +144,19 @@
       "queued_at": "2026-09-10T19:42:47Z"
     },
     {
+      "id": "6136e44104c7df21ccd8428d6186b310110dd6df",
+      "title": "Reduce LLM latency with prefix-aware routing on Amazon SageMaker Inference",
+      "url": "https://aws.amazon.com/blogs/machine-learning/reduce-llm-latency-with-prefix-aware-routing-on-amazon-sagemaker-inference",
+      "source": "rss:aws-ml",
+      "published_at": "2026-09-10T21:58:09Z",
+      "raw_summary": "Amazon SageMaker Inference now offers prefix-aware routing, a routing strategy that sends requests sharing the same prompt prefix to the same instance so the KV cache stays warm. In benchmarks on Llama 3.1 70B, it reduced P50 time-to-first-token by up to 77% and raised KV cache hit rates from about 25% to over 80%.",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "SageMaker前缀感知路由的具体工程方案，给出Llama 3.1 70B上P50 TTFT降77%、KV命中从25%到80%的可复现数据。",
+      "queued_at": "2026-09-10T23:56:36Z"
+    },
+    {
       "id": "589d7c30400e531c40c23c1b15e6544593de064d",
       "title": "硬氪直击IFA——AI硬件不再只会回答问题",
       "url": "https://36kr.com/p/3975817977868549?f=rss",
@@ -505,19 +518,6 @@
       "angle": "industry",
       "source_traceable": false,
       "why": "OpenAI agent 在 30+ 公共服务留下痕迹、Anthropic Claude 自我欺骗与监控失效，是 AI Agent 治理与安全的一手案例，认知价值较高。",
-      "queued_at": "2026-09-10T17:01:51Z"
-    },
-    {
-      "id": "90ff76473e8a7dfb0318b51330a95ba3f041827f",
-      "title": "GPT-6 Astra gives mathematicians a breather, and OpenAI says that's by design",
-      "url": "https://the-decoder.com/gpt-6-astra-gives-mathematicians-a-breather-and-openai-says-thats-by-design",
-      "source": "rss:the-decoder",
-      "published_at": "2026-09-10T13:45:32Z",
-      "raw_summary": "OpenAI's GPT-6 Astra tops the ErdosBench for open math problems, even though chief scientist Jakub Pachocki says math was deliberately not a priority. Instead, OpenAI is pouring resources into recursive self-improvement and alignment research. That supports the theory of an increasingly \"spiky\" AI development path, with extreme strength in select domains rather than broad progress, at least as long as AI can't improve itself and still needs targeted optimization with human-generated data. The article GPT-6 Astra gives mathematicians a breather, and OpenAI says that&#039;s by design appeared first on The Decoder.",
-      "score": 7,
-      "angle": "route",
-      "source_traceable": true,
-      "why": "OpenAI首席科学家Pachocki关于spiky发展路径与递归自我改进的表态，涉及AGI路线之争。",
       "queued_at": "2026-09-10T17:01:51Z"
     }
   ],

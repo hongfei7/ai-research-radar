@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-10T21:59:50Z",
-  "text": "当前共有 23 个活跃事件。要点包括: GPT-6 Astra gives mathematicians a breather, and OpenAI says that's by design; OpenAI暂停Pro订阅：AI Agent产品Astra需求超预期; OpenAI Releases GPT-6 Astra for Coding and Computer Use; Sources: Microsoft plans to expand its data center capacity from 12 GW today to 38+ GW by 2032, with about a third of the 38 GW centered on AI-specific chips (Bloomberg); OpenAI shares they have made substantial progress on another Millennium problem。",
-  "since": "2026-09-10T21:59:50Z",
-  "active_event_count": 23,
+  "generated_at": "2026-09-11T00:00:06Z",
+  "text": "截至 2026-09-11 07:59 HKT，英伟达Grace Blackwell出货量环比+27%，高端AI算力供需紧张延续；SpaceX调整数据中心建设策略，优先补强供电与冷却冗余；OpenAI推出Agents API公测版（免费）及金融业ChatGPT工具，搭载GPT-6 Astra；甲骨文Q1 IaaS营收73.9亿美元超预期；阿联酋拟在德投资460亿美元覆盖AI与能源。",
+  "since": "2026-09-11T00:00:06Z",
+  "active_event_count": 26,
   "key_themes": [
     "ai_monetization",
-    "model_capability",
     "compute_demand",
-    "edge_ai",
+    "model_capability",
+    "datacenter_power",
     "policy_export"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nOpenAI Astra同时呈现两种叙事：techmeme低可信度来源称\"空前需求\"导致Pro订阅暂停，暗示算力瓶颈；infoq中可信度来源则强调GPT-6 Astra在编码与智能体任务上的能力跃升。前者指向供给侧约束，后者指向需求侧爆发，两者并不矛盾但折射出\"算力即增长上限\"的结构性张力。另一分歧在Spirit数据出售给Google的定性——同一篇arstechnica报道在两个feed中分别被标为\"neutral\"和\"negative\"，反映市场对\"破产+AI训练数据\"这一新型数据获取路径的监管前景判断尚不明朗。\n\n【新兴趋势】\n三条暗线反复出现：①智能体/Computer Use能力从概念走向产品化（Astra、Codex）；②企业级AI助手垂直化加速（OpenAI金融版、Amazon Quick），与微软Copilot形成正面对垒；③AI内容生产规模化拐点（Pocket FM 93%音频由AI生成，成本降80倍）。此外，数据合规与模型蒸馏争议已从个案演变为行业级摩擦信号。\n\n【信息盲点】\nAMD作为英伟达GPU替代选项、HBM/存储链、TSMC先进封装均未在条目中出现；苹果、Meta、特斯拉的AI进展完全缺席；Oracle在AI基础设施中的角色亦被遗漏；中国大陆方面仅DeepSeek被点名，阿里、字节、百度及车端国产替代标的未被覆盖。\n\n【跨标的联动】\nOpenAI算力紧张→英伟达/AMD及云厂capex的二阶传导信号明显；Amazon Quick企业上线与OpenAI金融版同时推进，隐含对微软Copilot企业份额的夹击；Anthropic指控中国厂商蒸馏，若升级为出口管制将进一步利好国产替代主线；英伟达Robotaxi叙事为车规AI芯片（Drive Thor）提供能见度，需关注百度Apollo、小马智行的国产对标进展。",
+  "cross_analysis": "【核心矛盾】\n微软计划将数据中心算力扩至38GW（2032年），属\"超激进扩张\"信号；而SpaceX/xAI却在补强供电冷却冗余、延长建设周期，同一时点出现两种相反的capex节奏。来源均为36kr，但实质反映\"规模优先\"与\"可靠性优先\"两种路径分歧。另一隐含矛盾是OpenAI一边释放Agents API零费用与金融垂直产品的需求扩张信号，一边却在Wired报道中担忧行业需\"协同减速\"，供需叙事存在内部张力。\n\n【新兴趋势】\n电力/电网正成为AI算力扩张的核心约束，OpenAI与多家电力企业会面、微软38GW电力需求逼近纽约州峰值、xAI补强电力冗余、阿联酋460亿美元对德投资同时覆盖AI与能源——\"算力即电力\"在四条独立报道中反复出现，电力设备与电网安全供应链或为下阶段Alpha来源。另一趋势是推理侧优化与垂直化产品化并行：AWS SageMaker prefix-aware routing压低P50时延77%，OpenAI则同时推出Agents API和金融版ChatGPT。\n\n【信息盲点】\n本轮完全未覆盖的标的有：台积电/ASML/海力士/美光（HBM与CoWoS链条）、苹果、Meta、Arista/思科（网络交换）、GE Vernova/Schneider/Eaton（电力设备）、阿里/百度等中国AI算力方。其中",
   "trend_spotting": "72小时内三条主线交汇：一是\"智能密度\"竞赛白热化，DeepSeek V4.1 Flash缓存输入价跌至$0.003/百万token，同款性能反超Pro，行业从拼能力转向拼单位成本效率，OpenAI亦推GPT-6 Astra紧随；GPU垄断出现结构性裂缝，谷歌、AWS、OpenAI自研芯片正在分流英伟达份额，叠加摩尔线程单日蒸发488亿揭示国产替代估值锚已从\"赛道稀缺\"切至\"赢家筛选\"，K型分化启动。早被忽视的信号是OpenAI千禧年数学证明争议，菲尔兹奖得主陶哲"
 }
