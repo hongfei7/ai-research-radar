@@ -4,68 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "英伟达"
-      ],
-      "features": [
-        "cns",
-        "gpu",
-        "lg",
-        "亿韩",
-        "伟达",
-        "元采",
-        "及基",
-        "基础",
-        "将斥",
-        "斥资",
-        "施设",
-        "础设",
-        "英伟",
-        "设备",
-        "设施",
-        "购英",
-        "资亿",
-        "达及",
-        "采购",
-        "韩元"
-      ],
-      "sent_at": "2026-09-11T09:00:44Z"
-    },
-    {
-      "tickers": [
-        "腾讯"
-      ],
-      "features": [
-        "26.3b",
-        "910m",
-        "after",
-        "ai",
-        "an",
-        "ann",
-        "cao",
-        "cap",
-        "china",
-        "chipmaker",
-        "debut",
-        "enflame",
-        "giving",
-        "in",
-        "ipo",
-        "market",
-        "morning",
-        "of",
-        "post",
-        "raising",
-        "shanghai",
-        "shares",
-        "south",
-        "surged",
-        "tencent-backed",
-        "their"
-      ],
-      "sent_at": "2026-09-11T09:01:08Z"
-    },
-    {
-      "tickers": [
         "OpenAI"
       ],
       "features": [
@@ -135,6 +73,90 @@
         "逼近"
       ],
       "sent_at": "2026-09-12T08:54:21Z"
+    },
+    {
+      "tickers": [
+        "Anthropic",
+        "英伟达"
+      ],
+      "features": [
+        "anthropic",
+        "in",
+        "invest",
+        "ipo",
+        "mega",
+        "nvidia",
+        "say",
+        "sources",
+        "talks",
+        "to"
+      ],
+      "sent_at": "2026-09-12T12:49:52Z"
+    },
+    {
+      "tickers": [
+        "OpenAI",
+        "微软",
+        "英伟达"
+      ],
+      "features": [
+        "ai",
+        "astra",
+        "frontiermath",
+        "gpt-6",
+        "tier",
+        "一道",
+        "了刷",
+        "刷穿",
+        "后一",
+        "塌了",
+        "墙塌",
+        "学的",
+        "数学",
+        "最后",
+        "的最",
+        "道高",
+        "高墙"
+      ],
+      "sent_at": "2026-09-12T12:50:15Z"
+    },
+    {
+      "tickers": [
+        "三星电子",
+        "海力士"
+      ],
+      "features": [
+        "as",
+        "broadened",
+        "chip",
+        "daniel",
+        "decades",
+        "effect",
+        "espionage",
+        "financial",
+        "first",
+        "for",
+        "foreign",
+        "in",
+        "increasingly",
+        "its",
+        "korea",
+        "laws",
+        "on",
+        "over",
+        "sector",
+        "sept",
+        "seven",
+        "south",
+        "spies",
+        "take",
+        "target",
+        "the",
+        "time",
+        "times",
+        "tudor"
+      ],
+      "sent_at": "2026-09-12T12:50:42Z"
     }
   ],
   "last_report": {
