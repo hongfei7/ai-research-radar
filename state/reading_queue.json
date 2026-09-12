@@ -220,6 +220,19 @@
       "source_traceable": true,
       "why": "中国AI研究者的第一手视角，讲述中国对放慢AI的真实态度，提供外部视角的稀缺信息。",
       "queued_at": "2026-09-12T20:38:00Z"
+    },
+    {
+      "id": "16316487dc98a6eb672f280e9af1615d740a843b",
+      "title": "Real-SWE: Benchmarking AI models on private, real-world, enterprise codebases",
+      "url": "https://withspecific.com/benchmarks/real-swe",
+      "source": "hackernews",
+      "published_at": "2026-09-12T20:25:48Z",
+      "raw_summary": "Real-SWE: Benchmarking AI models on private, real-world, enterprise codebases",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "基于真实企业私有代码库的SWE基准测试，比公开repo更能反映模型在工程场景下的真实能力差距，值得看方法论和结果。",
+      "queued_at": "2026-09-12T22:34:52Z"
     }
   ],
   "digest_last_date": "2026-09-12"
