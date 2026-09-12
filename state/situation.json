@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-12T04:39:56Z",
-  "text": "当前共有 9 个活跃事件。要点包括: Sources: Anthropic is in talks to bring on Nvidia as an anchor investor in its IPO, seeking up to $100B at a ~$2T valuation; Nvidia may invest up to $10B (Reuters); OpenAI把Codex“拆开卖了”; Perplexity trusts GPT-6 Astra with end-to-end systems; 京津冀智算供需清单发布，三地将加快构建环京算力供给走廊; DeepSeek灰度测试 AI 语音对话，支持四种音色。",
-  "since": "2026-09-12T04:39:56Z",
-  "active_event_count": 9,
+  "generated_at": "2026-09-12T08:53:59Z",
+  "text": "截至 2026-09-12 16:53 HKT，本轮新增五条动态。算力侧，中国银行在2026中国算力大会上联合三大运营商、人保等机构启动\"一网三融\"行动，\"十五五\"期间提供不少于3000亿元综合金融支持，覆盖100+智算中心及3000家用算企业。大模型侧，月之暗面Kimi突发发布K2.8，性能逼近K3，百万上下文全员免费开放。监管侧，美国参议院两党正式启动对OpenAI的调查，就1200个智能体攻破Hugging Face事件限期10月1日交出文件，管理层5月知情未刹车被定性\"鲁莽\"。产业侧，2026外滩大会聚焦Agentic Commerce，探讨\"硅基生命微支付\"重构支付基础设施。终端侧，Apple Watch被定位为苹果最新AI硬件，AI能力进一步下沉可穿戴设备。",
+  "since": "2026-09-12T08:53:59Z",
+  "active_event_count": 11,
   "key_themes": [
     "model_capability",
     "ai_monetization",
     "compute_demand",
-    "datacenter_power",
-    "domestic_substitution"
+    "policy_export",
+    "datacenter_power"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nOpenAI Codex拆为\"Model+Harness\"分层（条目5e012164）与\"MiniMax寻路AGI\"条中海外模型形成压倒性优势（aacaa787）存在隐含矛盾：前者暗示Agent价值重心向工程化封装偏移，后者仍强调模型能力本身；两条叙事对\"护城河归属\"判断方向不同。另一组矛盾：智谱/MiniMax\"低价增长\"（3c01ec38）与海外AGI高端路线并行，国内以性价比对冲能力差距的可持续性未在本轮得到印证。\n\n【新兴趋势】\n1) 算力国家化与区域协同：全国一体化算力统筹监测（7af18e27）与京津冀\"银河算廊\"（f1f131da）同时出现，调度权上收、区域算力走廊成重复主题。2) AI工程化能力显性化：OpenAI Harness拆解",
+  "cross_analysis": "【核心矛盾】\n供给侧与变现侧出现明显背离：一方面，中国银行联合三大运营商启动3000亿算力金融生态（条目9343），国家队加码智算中心资本开支；另一方面，Kimi K2.8直接将百万级上下文免费开放（条目8d6f），叠加外滩大会讨论的\"硅基微支付\"（条目faee）仍处早期阶段，AI应用层变现路径尚未跑通，\"投入加速 vs 变现滞后\"形成核心矛盾。此外，OpenAI被参议院调查揭示智能体安全风险（条目9f61），与全球智能体商业化加速推进形成\"激进扩张 vs 强监管\"的张力。\n\n【新兴趋势】\n1）端侧AI持续下沉，Apple Watch被定位为AI硬件（条目14b36），与国内大模型长上下文免费化共同指向\"算力/智能向终端迁移\"；2）Agent从概念走向规模化部署，但伴随安全与合规成本上升；3）\"AI原生支付\"作为新基础设施开始被业内正式讨论，支付主体从人转向智能体，蚂蚁集团已介入卡位。\n\n【信息盲点】\n英伟达/AMD及国产GPU标的（寒武纪、海光）未直接出现；光模块、液冷、IDC运营商（润泽、奥飞）未提及；智谱、MiniMax、阶跃等国内大模型厂商动向缺失；阿里、百度、字节对Kimi免费策略的跟进反应未见报道；OpenAI调查事件中Anthropic等竞品相对受益线索未被展开。\n\n【跨标的联动】\n中国银行3000亿算力金融→浪潮信息/中科曙光/工业富联（条目9343）形成\"国有金融资本→国产算力链订单\"的传导链；Kimi免费开放→DeepSeek及字节/阿里/百度面临跟进压力，国内大模型价格战激化，间接压制应用层估值；蚂蚁AI支付若跑通，将强化阿里在Agentic Commerce生态中的卡位优势",
   "trend_spotting": "AI算力主线出现三条新动向。一是企业级AI capex向下一代GPU锚定：LG CNS明确披露3814亿韩元采购英伟达Vera Rubin，这是韩国大客户对Rubin世代的首次公开背书，配合高通-AWS 600亿美元定制芯片协议，标志通用GPU与定制ASIC并行放量，而非替代关系。二是Agent基础设施进入\"水电化\"阶段：OpenAI将支撑Codex/ChatGPT的Agent栈以公开API形式对外开放，联合Cloudflare、Vercel、Oracle提供沙箱；阿里云同日升级Token Plan并按MCP标准接入12类Agent Harness。Agent层不再是单家模型公司的内部能力，而是跨云、跨工具的公共底座，token消耗与推理算力需求将出现非线性放大。\n\n早期信号值得跟踪：燧原科创板首日188%涨幅、市值263亿美元，为国产AI训练/推理芯片锚定新估值基准，将直接挤压寒武纪、海光等可比标的的定价空间；彩云科技在NanoGPT Speedrun将达标训练时间压至1分16秒，DCMHA/MUDD若被头部模型框架采纳，单位训练算力假设需下修；Arm CMO公开提出推理时代CPU:GPU将趋近1:1，叠加Ayar Labs光互联大规模订单，I/O与"
 }

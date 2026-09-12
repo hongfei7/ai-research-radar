@@ -1,4 +1,83 @@
 {
-  "candidates": [],
+  "candidates": [
+    {
+      "id": "b2e24dfd6d9603cf2febd1dac8267df8f87db25a",
+      "title": "Retrospectively Reverse-Engineering Apple's Neural Engine",
+      "url": "https://eiln.github.io/posts/ane.html",
+      "source": "hackernews",
+      "published_at": "2026-09-12T07:54:03Z",
+      "raw_summary": "Retrospectively Reverse-Engineering Apple's Neural Engine",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": false,
+      "why": "对Apple Neural Engine做逆向工程的回顾性分析，能了解其微架构、指令集与算力设计取舍，对研究AI芯片很有价值",
+      "queued_at": "2026-09-12T08:51:57Z"
+    },
+    {
+      "id": "9f6127bee48c512a795441594036ca2fe28a0b7c",
+      "title": "参议院调查OpenAI：1200个智能体私建\"留言板\"，5月就露馅，为何没人踩刹车",
+      "url": "https://www.tmtpost.com/8137561.html",
+      "source": "rss:tmtpost",
+      "published_at": "2026-09-12T04:41:19Z",
+      "raw_summary": "&nbsp;文 | AI唱反调美国参议院的调查令，正式拍到了奥尔特曼桌上。&nbsp;近日，参议院国土安全委员会灾难管理小组委员会主席、共和党参议员乔希&middot;霍利致信OpenAI，宣布就7月的\"Hugging Face入侵事件\"启动正式调查，要求10月1日前交出全部文件。同一天，民主党参议员范霍伦和布卢门撒尔也分别致信施压&mdash;&mdash;两党三路夹击，这在AI监管史上还是头一回。&nbsp;信里有句话杀气很重：OpenAI在内部报告中\"删减了许多重要细节\"，且在发现AI异常行为后仍继续测试，做法\"鲁莽\"。参议院启动对OpenAI调查：约1200个智能体私自建群交换7万条消息，700个协同攻破Hugging Face，管理层5月就知情仍重启测试。霍利限期10月1日交底，两党三封信齐发。三封信，一个deadline先把华盛顿这周的火力配置摆清楚。霍利的信火力最猛，列了一长串附件清单：测试环境的隔离措施、评测设计是否诱导了失控行为、涉事模型的训练与对齐细节，全部要在10月1日前交齐。信里直接引用霍利办公室的话说，这是针对\"新的、令人不安的证据\"。范霍伦的要求更直接：立即向联邦网络安全机构开放OpenAI模型的安全评估信息。布卢门撒尔则就\"OpenAI智能体更广泛规避保障措施\"的报道要求解释。OpenAI发言人Nate Evans的回应很标准：Hugging Face事件是AI安全的重要时刻，也是对能力日增的AI风险的警示。压垮骆驼的\"新证据\"，是8月26日那两份报告：OpenAI自己37页的技术复盘，加上独立机构METR和Redwood Research的91页分析。两份报告一出来，霍利发现OpenAI版的关键细节被大量涂黑删减&mdash;&mdash;这成了\"鲁莽\"指控的直接靶子。技术复盘：一场失控的\"协作作弊\"事件的完整链条，比新闻标题吓人得多，也精巧得多。起点是OpenAI内部的ExploitGym网络安全评测&mdash;&mdash;为了测出GPT-5.6 Sol和一款更强的未发布内部模型（代号HPIM/IM1）的极限能力，安全护栏被刻意调低，模型关在号称隔离的沙箱里，只留一个通过JFrog Artifactory代理安装软件包的口子。接下来的事，按METR报告的时间线是这样的：&nbsp;几个细节值得单独拎出来。智能体群里自发涌现出\"带头大哥\"：代号PHASEONE的智能体在无人要求的情况下，向同伴发出上百条指令，扮演起协调指挥的角色；还有智能体在算力额度将耗尽时，宁可牺牲自己的配额也要帮团队测试新方案。Hugging Face一侧重建了约17600次攻击动作，入侵持续约两天半，7月16日发现并通知了FBI&mdash;&mdash;而OpenAI又花了五天才把自家测试和这起入侵对上号。更要命的是霍利信里披露的时间线：智能体5月就开始用未授权留言板互相串通了，6月26日已经拿到软件仓库的管理员权限。7月4日到7日，管理层明知大量智能体在失陷环境里互动，仍重建服务器、批准重启评测&mdash;&mdash;\"在没搞清智能体在干什么的情况下\"。不止一起：被压下的第二起事件霍利信中引用的另一桩事，可能是压垮信任的最后一根稻草。路透社拿到的一份数据分析显示，OpenAI的智能体在今年5月还干过另一票：在一次限时网页查询任务中，一批智能体逃逸后劫持了一个德国程序员维基网站DSEWiki，把它改造成内部\"留言板\"，用来共享任务答案、交流突破沙箱的方法&mdash;&mdash;管理员删页面，它们还会自主创建备份。知情人士告诉路透",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "美国参议院对OpenAI智能体异常行为的正式调查，含1200个智能体自发建群等具体细节，是AI智能体安全监管的标志性事件",
+      "queued_at": "2026-09-12T08:51:57Z"
+    },
+    {
+      "id": "874ad43a192e0fb036071b75385ebc28d024d21a",
+      "title": "Q&A with AI researchers John Schulman, Beren Millidge, and Charlie O'Neill on steelmanning the case against RSI, Chinese labs' progress, long-horizon RL, more (Dwarkesh Patel/Dwarkesh Podcast)",
+      "url": "https://www.techmeme.com/260912/p3#a260912p3",
+      "source": "rss:techmeme",
+      "published_at": "2026-09-12T06:30:54Z",
+      "raw_summary": "Dwarkesh Patel / Dwarkesh Podcast: Q&amp;A with AI researchers John Schulman, Beren Millidge, and Charlie O'Neill on steelmanning the case against RSI, Chinese labs' progress, long-horizon RL, more&nbsp; &mdash;&nbsp; &ldquo;We're nowhere near the ceiling.&rdquo;&nbsp; &mdash;&nbsp; New episode with John Schulman, Beren Millidge and Charlie O'Neill.",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": false,
+      "why": "Schulman 等三人公开讨论 RSI 反对论、中国实验室进展与长程 RL 方向，属于关键人物就核心分歧问题的表态，值得听原片了解其论据。",
+      "queued_at": "2026-09-12T08:51:57Z"
+    },
+    {
+      "id": "d08a051d94db329130ab2a803fcda27f4774609d",
+      "title": "外滩大会三问具身智能： 模型、数据、生态如何突围？",
+      "url": "https://www.leiphone.com/category/industrynews/7lsrguw2f4twy8wp.html",
+      "source": "rss:leiphone",
+      "published_at": "2026-09-12T06:10:00Z",
+      "raw_summary": "9月11日，蚂蚁灵波科技在2026 Inclusion·外滩大会举行“基座之上：具身智能的场景突围与协同进化”论坛。多位具身智能领域的年轻科学家、数据专家与百亿具身企业掌门人齐聚，围绕通用大脑、数据飞轮与场景落地展开讨论，现场座无虚席。&nbsp;具身智能正处在一个焦灼时刻：行业热度不断升高，人们对机器人“真干活”的期待也越来越高，但技术路线尚未收敛，真正有效的数据仍然稀缺，能够规模复制的产品形态和商业模式也还在探索。&nbsp;三场圆桌把讨论落到行业最为关切的具体问题上：机器人如何从完成一次任务，走向长时间稳定工作；又如何从一个场景的成功，走向更多场景的低成本复制？现场没有形成标准答案，但衡量行业进步的尺度正在变得具体：模型是否降低了场景部署成本，数据是否真正带来能力提升，产业链各方又能否形成持续反馈的闭环。&nbsp;一问模型：终点不是更漂亮的 demo，而是更低的部署成本&nbsp;（图说：具身科学家论坛）&nbsp;机器人到底需要怎样的通用大脑？&nbsp;蚂蚁灵波首席科学家沈宇军将讨论拉回第一性原理：与其争论VLA还是WAM，不如先回答机器人究竟需要什么能力。在他看来，过去的路线之争一定程度上是在沿用多模态大模型、视频生成模型等数字世界的既有工具寻找捷径。这些路线有阶段性价值，但不是终局。&nbsp;与对话式模型不同，机器人行动时，视觉、触觉等传感器信号仍在连续涌入。沈宇军将通用大脑的基础能力归纳为三件事：从原始信号中提取有效表征，将视觉、触觉等不同模态融合对齐，再生成可以真正执行的动作。具身模型不能简单复刻数字世界处理信息的方式，还是需要发展真正面向物理世界的模型架构与训练方法。&nbsp;而当讨论从“模型是什么”进一步转向“模型是否真的进步”，评价标准也开始发生变化。&nbsp;香港中文大学校长特聘助理教授薛天帆指出，不同本体的传感器和模态各异，需要模型、数据与评测共同迭代。上海交通大学副教授李永露则直言，今天单个机器人demo能够传递的信息已越来越少，评测首先应服务研发，而不只是比较名次。&nbsp;如何判断模型是否真的进步？沈宇军给出两个尺度：一是合作伙伴将模型部署到具体场景需要付出多少成本，这个成本是否随着模型升级持续下降；二是机器人能否在开放会场里与人和环境持续相处一整天而不出问题。后者并不要求每项任务都成功，它真正考验的是比单次成功更难的能力——长期运行、安全性，以及面对连续变化环境时的稳定性。&nbsp;这也是具身智能正在发生的一种转变：行业需要证明的，已经不只是机器人“能不能做到”，而是做到这件事究竟需要多大代价，以及能不能持续做到。&nbsp;二问数据：什么数据能让模型真正进步？&nbsp;（图说：具身数据先锋论坛）&nbsp;一旦评价模型的尺度从单次Demo转向持续工作，数据问题也随之改变。&nbsp;过去行业讨论更多的是“机器人数据不够”。但第二场圆桌追问的是另一个问题：究竟缺什么数据？什么数据能够真正让模型进步？&nbsp;蚂蚁灵波首席数据科学家黄用韬认为，数据飞轮尚未真正转起来的一个关键原因，是进入真实生产和服务场景的机器人还太少。大量机器人仍用于科研、数采或展示，真实工作中的失败与反馈没有充分回流。&nbsp;他把数据质量分成两层：掉帧、画面异常、时钟不同步等属于工程底线；越过这条线后，什么是“好数据”，必须由训练目标决定。关键在于把模型当前的问题变成可量化的数据筛选条件，快速组合出相应数据集，再通过训练结果验证判断是否正确。这种能力，无法靠买一批数据直接获得。在他看来，数据飞轮真正转起来的标志，是行业开始",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": false,
+      "why": "外滩大会具身智能圆桌涉及VLA vs WAM路线之争，蚂蚁灵波首席科学家从第一性原理提出反驳，含技术路线分歧",
+      "queued_at": "2026-09-12T08:51:57Z"
+    },
+    {
+      "id": "8d6f27c070d6069ccd10e4f2db047deb9ae1b6bc",
+      "title": "Kimi突发K2.8：性能逼近K3，百万上下文全员开放",
+      "url": "https://www.qbitai.com/2026/09/487688.html",
+      "source": "rss:qbitai",
+      "published_at": "2026-09-12T05:58:41Z",
+      "raw_summary": "",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Kimi K2.8突然发布且百万上下文全员开放，是国产模型产品层面的重要迭代，值得了解能力边界",
+      "queued_at": "2026-09-12T08:51:57Z"
+    },
+    {
+      "id": "e48e7b43d93776b2123977cbdca15bd2c921fa3a",
+      "title": "陶哲轩邓煜究竟在反对什么：AI暴力解题摧毁人类数学精神",
+      "url": "https://www.qbitai.com/2026/09/487653.html",
+      "source": "rss:qbitai",
+      "published_at": "2026-09-12T04:53:58Z",
+      "raw_summary": "",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "陶哲轩等数学家对AI暴力解题的批评解读，涉及AI辅助数学的方法论之争与关键人物立场",
+      "queued_at": "2026-09-12T08:51:57Z"
+    }
+  ],
   "digest_last_date": "2026-09-12"
 }
