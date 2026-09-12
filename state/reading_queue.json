@@ -194,6 +194,32 @@
       "source_traceable": true,
       "why": "25 位菲尔兹奖得主联署声明，警示 AI 在数学中的严重错位，对 AI for math 方向研究者是重要的范式信号。",
       "queued_at": "2026-09-12T18:13:11Z"
+    },
+    {
+      "id": "e77698a9b51262ce30159c9e4cbdb212b3781e0b",
+      "title": "Dario Amodei demands and suggest a plan for unified slow-down",
+      "url": "https://www.reddit.com/r/singularity/comments/1wedp8j/dario_amodei_demands_and_suggest_a_plan_for",
+      "source": "reddit:singularity",
+      "published_at": "2026-09-12T14:12:18Z",
+      "raw_summary": "https://darioamodei.com/post/we-must-pace-the-frontier &#32; submitted by &#32; /u/TorturedPoet30 [link] &#32; [comments]",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "指向Dario Amodei的一手博文（darioamodei.com），关于放慢前沿AI的具体计划，是路线之争的关键人物表态。",
+      "queued_at": "2026-09-12T20:38:00Z"
+    },
+    {
+      "id": "1dec31ba5e1b303610434c651d33c33d31467532",
+      "title": "A Chinese researcher's opinions on a unified slowdown",
+      "url": "https://www.reddit.com/r/singularity/comments/1wel7o1/a_chinese_researchers_opinions_on_a_unified",
+      "source": "reddit:singularity",
+      "published_at": "2026-09-12T19:07:08Z",
+      "raw_summary": "I have seen that this subreddit is arguing over whether China will cooperate or be forced to slow down AI progress if the US wants to do so. As an AI researcher working in China, I think this problem is a bit more nuanced than how it is usually framed here. Will China voluntarily slow down? No, not as long as China is still playing catch-up. Researchers here do care about safety and the future of humanity, and the CPC is also concerned about an AI takeover. But this is not the first priority for most Chinese AI companies right now. Unlike what many people on this subreddit think, Chinese AI companies are mostly commercially driven rather than state-supported. There is intense competition among Chinese companies, just like in the US. For the sake of stock prices, they will not slow down. Will China be forced to slow down? It's possible, but not really likely. Chinese companies rely on distillation due to a lack of compute and the pressure to keep up. But in recent months, in-house chips have been expanding rapidly, which allows companies like Moonshot to train models with trillions of parameters. From what I have seen, it's quite naive to believe that embargoes can stop Chinese engineering. Will China cooperate to slow down? This is the most interesting part. At the company level, Chinese AI companies are definitely not going to cooperate with Anthropic, because everyone here absolutely hates and mistrusts Anthropic for dismissing and demonizing China. At the state level, I th",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "中国AI研究者的第一手视角，讲述中国对放慢AI的真实态度，提供外部视角的稀缺信息。",
+      "queued_at": "2026-09-12T20:38:00Z"
     }
   ],
   "digest_last_date": "2026-09-12"
