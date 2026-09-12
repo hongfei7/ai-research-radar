@@ -168,6 +168,32 @@
       "source_traceable": true,
       "why": "腾讯 Hunyuan 的 AuK-Flash 1.5B 语音基础模型，4 步生成 + 统一指令接口，论文与代码齐全，值得看架构细节。",
       "queued_at": "2026-09-12T15:52:29Z"
+    },
+    {
+      "id": "287de84e5bcc258a38acc5aacc0c8c01fb105a4d",
+      "title": "Microcode in Intel's 8087 floating-point chip: the scale instruction",
+      "url": "https://www.righto.com/2026/09/8087-microcode-reverse-engineering-fscale.html",
+      "source": "hackernews",
+      "published_at": "2026-09-12T15:49:52Z",
+      "raw_summary": "Microcode in Intel's 8087 floating-point chip: the scale instruction",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "深入剖析 Intel 8087 微代码的 scale 指令实现，对理解早期浮点硬件架构与微码设计思想有具体技术价值。",
+      "queued_at": "2026-09-12T18:13:11Z"
+    },
+    {
+      "id": "5abeb9b26406ba9d9a7355cd75d7962cbaca57fd",
+      "title": "A Severe Misalignment of AI in Mathematics (Declaration by 25 Fields Medalists) [D]",
+      "url": "https://www.reddit.com/r/machinelearning/comments/1wea1t7/a_severe_misalignment_of_ai_in_mathematics",
+      "source": "reddit:ml",
+      "published_at": "2026-09-12T11:23:51Z",
+      "raw_summary": "Note: this declaration was drafted by Mathematicians, and is mostly addressed to the mathematical community. It'd be interesting to discuss, among others, if what is written in the declaration may also apply to other communities---and, specifically, the AI/ML one. &#32; submitted by &#32; /u/hihey54 [link] &#32; [comments]",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "25 位菲尔兹奖得主联署声明，警示 AI 在数学中的严重错位，对 AI for math 方向研究者是重要的范式信号。",
+      "queued_at": "2026-09-12T18:13:11Z"
     }
   ],
   "digest_last_date": "2026-09-12"
