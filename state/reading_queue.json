@@ -155,6 +155,19 @@
       "source_traceable": true,
       "why": "知识图谱驱动的Agentic AI四种架构模式与工程harness实践，对构建生产级Agent有直接参考价值。",
       "queued_at": "2026-09-12T12:43:56Z"
+    },
+    {
+      "id": "0f19bbcc69792b9a005b28b6433eb3f8115cfcea",
+      "title": "tencent/AuK-Flash · Hugging Face",
+      "url": "https://www.reddit.com/r/localllama/comments/1wecf25/tencentaukflash_hugging_face",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-12T13:17:22Z",
+      "raw_summary": "AuK-Flash: Fast 4-Step Speech Generation and Editing arXiv : https://arxiv.org/abs/2609.08936 Full Paper : https://arxiv.org/pdf/2609.08936 GitHub : https://github.com/Tencent-Hunyuan/AuK Project : https://auk-project.github.io/ Introduction AuK is a 1.5B foundation model for speech generation and editing. Trained on millions of hours of diverse audio data, AuK supports zero-shot and instruction-based TTS, content and acoustic editing, paralinguistic editing, speech enhancement, and source separation through a unified natural-language instruction interface. AuK has two variants: Model Description Weight AuK Base model for high-quality generation 🤗 Hugging Face · 🤖 ModelScope AuK-Flash Distilled model for fast 4-step inference 🤗 Hugging Face · 🤖 ModelScope This repository contains the official weights for AuK-Flash, the distilled variant with fast 4-step inference. Supported Tasks AuK exposes every task through the same natural-language instruction interface. The table below groups the supported tasks by category, with a short description and a link to its section in the Cookbook, which provides instruction templates plus CLI and Python examples. Category Task Description Cookbook Speech Generation Zero-shot TTS Speak the target text in the voice of the reference audio. Zero-shot TTS Instruct TTS Generate speech from a voice description alone — no reference audio. Instruct TTS Content Editing Speech Content Editing Rewrite what is said — replace, insert, or remove text. Speech",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "腾讯 Hunyuan 的 AuK-Flash 1.5B 语音基础模型，4 步生成 + 统一指令接口，论文与代码齐全，值得看架构细节。",
+      "queued_at": "2026-09-12T15:52:29Z"
     }
   ],
   "digest_last_date": "2026-09-12"
