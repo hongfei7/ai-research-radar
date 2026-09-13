@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-13T10:25:23Z",
-  "text": "当前共有 18 个活跃事件。要点包括: “AGI Has Essentially Arrived, Just Not Publicly”: Reports Of “Existential Crises” at OpenAI and Anthropic; Feels like the big 3 (Elon, Dario, and Sam Altman) all know about a more serious AI incident than Hugging face and that is why they are calling for a slowdown. This is one of the only times all 3 have agreed in the last 2 years.; Dario自曝RSI已成真，奥特曼同日光速跟进; An OpenAI Researcher on the Gap Between Internal and External Perceptions of AI Progress; 奥特曼赞同对手Dario呼吁AI减速，承诺OpenAI年内不IPO并开放第三方评估。",
-  "since": "2026-09-13T10:25:23Z",
-  "active_event_count": 18,
+  "generated_at": "2026-09-13T14:40:25Z",
+  "text": "当前共有 14 个活跃事件。要点包括: GPT-6 Astra pilots a surveillance drone and runs a business on its own; 奥特曼赞同对手Dario呼吁AI减速，承诺OpenAI年内不IPO并开放第三方评估; Altman, Musk, and Hassabis back Amodei's call to add independent oversight; 大厂卷AI，打工人买单; Nvidia dismisses \"circular financing\", says every $1 it invests brings back $100。",
+  "since": "2026-09-13T14:40:25Z",
+  "active_event_count": 14,
   "key_themes": [
+    "ai_monetization",
     "model_capability",
     "compute_demand",
     "policy_export",
-    "ai_monetization",
-    "datacenter_power"
+    "domestic_substitution"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n两条TMTpost报道存在张力：中国大厂2026-2027年capex激进（字节最高700亿/千亿美元、阿里三年3800亿、腾讯Q2同比+176%），但同一时期美方AI领军人物罕见联名呼吁放缓前沿模型开发并推动独立监管。算力需求\"急加速\"与AI开发\"主动刹车\"在同一窗口出现，是本期最显著矛盾。另有微妙分歧：Hassabis作为DeepMind负责人支持Amodei的放缓呼吁，但其母公司谷歌本身是大模型竞速主要参与者，\"呼吁者\"与\"竞速者\"身份重叠。\n\n【新兴趋势】\n两条独立来源均指向同一方向：AI重心从聊天查询转向智能体（agentic AI），驱动单任务token消耗与电力需求阶跃式上升（Wired + 36Kr蔚山900MW扩容互为印证）。另一反复出现主题是AI安全治理主流化——四大掌门人立场趋同、OpenAI承诺向第三方开放员工级访问。多模型路由编排（HydraFusion）作为新范式浮现，可能结构性改变推理算力需求分布。中国侧\"Token KPI\"制度化则是独有的组织级现象。\n\n【信息盲点】\n电力/核电/液冷产业链是本期最显著盲点——Wired和36Kr都强调电力瓶颈，但无具体电力运营商、核电（SMR）、冷却方案标的被点名。AMD、Meta、Oracle、博通、台积电等算力链关键标的在本轮均为间接提及（仅SK合作\"可能涉及\"AMD等）。中国侧capex传导至上游芯片/封测（寒武纪、海光、中芯、长电、通富）的路径完全缺席。AI安全合规纯标的也无覆盖。\n\n【跨标的联动】\n最显著联动是亚马逊AWS↔SK海力士：蔚山900MW数据中心扩容直接锁定HBM需求，是\"云厂capex→存储链\"传导的最具体落子。其二，\"多模型路由\"若被微软Copilot规模化验证，可能削弱单一模型厂商对算力的独占需求，对NVDA/AVGO的纯推理排单结构形成压力，而OpenAI主动接受第三方评估、监管收紧等信号",
+  "cross_analysis": "【核心矛盾】\n同一周期内出现两重张力：其一，OpenAI一边在Agent能力（GPT-6 Astra无人机+商业经营测试）上加速突破，一边联合Anthropic等呼吁放慢Agent节奏、防范\"僵尸网络\"（来源：the-decoder、tmtpost），商业化冲刺与安全叙事并行，存在定位矛盾。其二，Meta在四巨头安全联署中单独缺席，立场与OpenAI/Anthropic分歧明显。其三，Anthropic一方面指责中国机构滥用Claude，另一方面其模型在Vending-Bench商业合规测试中表现逊于Astra，攻防叙事交织。\n\n【新兴趋势】\n\"Agent具身化\"在多条报道中反复出现：从对话→无人机实体操控→自主商业决策，能力外延快速扩展；\"国产算力订单兑现\"成为贯穿主线，智谱50亿美元融资、海光/寒武纪/中芯国际被同时点名，与\"国产AI芯片进入利润检验期\"形成需求—供给闭环；太空算力（明珠星座吉瓦级天基计算）首次进入主流报道，预示分布式算力供给新场景；AI安全治理正从道德议题升级为商业竞争差异化卖点（Anthropic合规表现 vs OpenAI能力领先）。\n\n【信息盲点】\n谷歌、微软在本轮报道中几乎缺位，但其Capex才是英伟达数据中心890亿美元收入的真正底盘；HBM/存储供应链、光模块（除中际旭创被间接提及）未被聚焦；苹果AI战略、AI应用层SaaS/垂直Agent",
   "trend_spotting": "Anthropic、OpenAI、xAI三家头部实验室CEO在72小时内罕见就\"放缓前沿+引入独立评估者\"形成公开共识，这是行业标志性拐点。Amodei提出\"pace the frontier\"框架，Musk与Altman双双跟进，OpenAI更承诺引入\"员工级权限\"的独立评估机制——这一具体可操作的安全治理标准若被Google、Meta等采纳，将成为事实上的行业规范。\n\n新兴信号在于：AI安全治理从\"原则性声明\"升级为\"权限+第三方审计\"的可执行机制。Anthropic向METR开放模型访问是关键先行案例，独立评估者的权责边界（如权重访问、训练数据审查）将成为下一个博弈焦点。\n\n市场盲点：当前讨论集中在叙事层面，但\"放缓节奏\"对算力采购的实质影响被低估——若前沿模型训练周期从当前节奏拉长，短期内将抑制H100/B200等高端芯片需求，同时利好推理侧算力和安全评估工具链。\n\n拐点判断：三家最大竞品同步表态，意味着行业竞争维度正从纯能力竞赛转向\"能力+可验证安全\"双轨制，这一转变若传导至政府采购和企业采购标准，将重塑AI供应商竞争格局。"
 }
