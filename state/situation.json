@@ -1,12 +1,14 @@
 {
-  "generated_at": "2026-09-13T00:25:57Z",
-  "text": "截至 2026-09-13 08:25 HKT，本轮新增：开发者 Simon Willison 实测 OpenAI 新版\"ChatGPT Work\"产品，调用 GPT-6 Astra（Max）模型完成 27 分钟端到端长任务，依据住址自动生成 5 公里/10 公里环形跑步路线，输出可视化地图及 GPX/GeoJSON 文件，体现智能体在多步工具调用与本地地理数据处理上的落地能力；但执行代码不向用户开放，透明度问题受作者诟病。",
-  "since": "2026-09-13T00:25:57Z",
-  "active_event_count": 2,
+  "generated_at": "2026-09-13T05:19:12Z",
+  "text": "当前共有 14 个活跃事件。要点包括: “AGI Has Essentially Arrived, Just Not Publicly”: Reports Of “Existential Crises” at OpenAI and Anthropic; Feels like the big 3 (Elon, Dario, and Sam Altman) all know about a more serious AI incident than Hugging face and that is why they are calling for a slowdown. This is one of the only times all 3 have agreed in the last 2 years.; Dario自曝RSI已成真，奥特曼同日光速跟进; An OpenAI Researcher on the Gap Between Internal and External Perceptions of AI Progress; Generating running routes with GPT-6 Astra and ChatGPT Work。",
+  "since": "2026-09-13T05:19:12Z",
+  "active_event_count": 14,
   "key_themes": [
-    "ai_monetization",
+    "model_capability",
     "policy_export",
-    "model_capability"
+    "compute_demand",
+    "ai_monetization",
+    "datacenter_power"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
