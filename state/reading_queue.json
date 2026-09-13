@@ -1,4 +1,70 @@
 {
-  "candidates": [],
+  "candidates": [
+    {
+      "id": "ac5f7c295c8168ca04382dcfeca27af2d024e715",
+      "title": "Two-year university study finds banning AI from classrooms leaves students worse off",
+      "url": "https://the-decoder.com/two-year-university-study-finds-banning-ai-from-classrooms-leaves-students-worse-off",
+      "source": "rss:the-decoder",
+      "published_at": "2026-09-13T09:27:01Z",
+      "raw_summary": "A law professor spent two years testing how an AI ban, unguided AI use, and structured training affect student performance. The group without AI finished last both years. \"I was wrong,\" the researcher writes, who had assumed that AI without guidance would do more harm than good. The article Two-year university study finds banning AI from classrooms leaves students worse off appeared first on The Decoder.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": false,
+      "why": "两年纵向实验对比AI禁令/无指导使用/结构化训练的效果，方法与结论有实证支撑。",
+      "queued_at": "2026-09-13T10:22:46Z"
+    },
+    {
+      "id": "378091b40fda1b066a20a845400d85e3b7abada7",
+      "title": "Aligned to whom?",
+      "url": "https://hyperbo.la/w/aligned-to-whom",
+      "source": "hackernews",
+      "published_at": "2026-09-13T03:17:18Z",
+      "raw_summary": "Aligned to whom?",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": false,
+      "why": "对齐对象问题触及AI价值与治理范式的核心分歧，值得关注立场与论据。",
+      "queued_at": "2026-09-13T10:22:46Z"
+    },
+    {
+      "id": "d611550b618b359bd0e70216c065424d5436c08a",
+      "title": "大厂卷AI，打工人买单",
+      "url": "https://www.tmtpost.com/8138287.html",
+      "source": "rss:tmtpost",
+      "published_at": "2026-09-13T07:36:02Z",
+      "raw_summary": "文 | 影子备忘录9月初，在AI竞赛中，互联网大厂发生了两件内卷大事。一件是字节跳动用约296亿美元的银团贷款规模落定，成为2026年以来亚洲第二大的美元计价贷款交易，最初目标200亿美元，因银行认购订单超过300亿美元而扩容。阿里则在8月完成800亿港元新股配售，启动不到一小时即获超额认购，总订单接近募资额的3倍，全部投向AI基础设施，这是阿里2019年回港上市以来首次配售新股。另一件则是阿里巴巴按25亿美元估值领投了AI训练与评测初创公司UniPat AI的3亿美元融资，而UniPat的创始人李宽，去年还在阿里通义AI实验室工作，主攻训练后分析和强化学习，阿里在投资一个从自己实验室走出去的前实习生创办的公司。这两件事放在一起，是2026年互联网大厂AI竞赛最好的隐喻：钱在疯狂涌入，人在快速流动，谁也不敢停下来。字节2026年资本开支计划最高达700亿美元，较上年增长超过一倍，2027年可能进一步提高至1000亿美元。阿里三年3800亿元的AI投资计划，截至今年二季度末已投入约1900亿元，单季资本开支676.78亿元，同比增长75%。腾讯二季度资本开支527.84亿元，同比增长176%，单季自由现金流降至负138亿元，为2014年有单季披露以来首次转负。这些数字的背后，都是一沓沓流水般的金钱在燃烧：腾讯一个季度的自由现金流从正变负，阿里拿出回港上市以来第一次配售新股的机会去募AI的钱，这不是战略选择，而是生存焦虑。大厂怕的不是赚不到钱，怕的是在这个可能重新定义行业格局的技术浪潮里被甩下去。所以融资、投资、发债、配股，能用的工具全用上；组织架构调了又调，腾讯把混元大语言模型部与多模态模型部合并，字节让吴永辉坐稳Seed一号位并推出&ldquo;豆包股&rdquo;留人。但所有这些宏大叙事，最终都要落到一个具体的链条末端&mdash;&mdash;打工人。当Token变成KPI大厂给员工配Token额度这件事，一开始看起来是福利。阿里为全体员工发放专属Token额度，腾讯被曝为员工配置年度价值约22万元的AI Token套餐，字节在工作场景不限额度，业余时间AI产品体验费用报销50%。听起来像是公司在说：&ldquo;AI工具随便用，公司买单。&rdquo;但很快，福利就变成了考核。&ldquo;有消息称，国内某大厂当前正依据Token使用量标准来作为转正、晋升以及裁人的依据之一。&rdquo;腾讯部分研发团队明确要求工程师每日消耗指定额度的Token，否则绩效评级受限。阿里ATH事业群率先将AI业务核心指标从DAU全面转向Token消耗量，设立专门团队统筹算力分配，推动团队&ldquo;主动消耗&rdquo;。在阿里电商业务，员工OKR里囊括了AI工具渗透率、问题订单解决率等多项AI指标；在美团，AI带来的增长被作为半年度关键指标量化并纳入绩效考核。更早的信号来自今年2月。昆仑万维内部信白纸黑字写着，技术序列全员强制使用Codex或Claude Code，开发效率提升至少50%，达不到的末位淘汰5%到20%。58同城董事长姚劲波的原话更直接：&ldquo;Token用得越多越好。&rdquo;把Token消耗量写进绩效，本质上是管理层在做一件偷懒的事。&ldquo;一个功能提前几天上线，可能是AI的功劳，也可能只是需求变简单了；一名工程师提交了更多代码，不代表缺陷更少。&rdquo;AI的贡献混在检索、讨论、写代码、拿主意这些琐碎环节里，很难拆成一张干净的账单。Token恰恰相反，诚实又好统计，&ldquo;管理者最终选中它，不是因为它更准，是",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "字节阿里腾讯资本开支与人变动向数据详实，描绘2026大厂AI竞赛全貌。",
+      "queued_at": "2026-09-13T10:22:46Z"
+    },
+    {
+      "id": "9b552530bf33b0c12cf78bfd435ffac9b88421f3",
+      "title": "科技巨头呼吁AI减速，马斯克、奥特曼等罕见赞同",
+      "url": "https://www.tmtpost.com/8138286.html",
+      "source": "rss:tmtpost",
+      "published_at": "2026-09-13T07:34:25Z",
+      "raw_summary": "文 | 影子备忘录2026年9月12日，Anthropic CEO达里奥&middot;阿莫代伊在自己的博客上发表了一篇长文，罕见呼吁全球前沿科技AI踩下刹车键。文章的核心诉求只有一句话：&ldquo;我们不得不放缓AI模型能力的提升速度。即使速度变慢，进展仍将显得很快，我们必须善用争取到的时间。&rdquo;放在几年前，这句话大概会被硅谷当成异端。但这一次，市场反应完全不同。文章发出后数小时内，马斯克在X上回了一句&ldquo;Dario说得对&rdquo;。奥特曼随即跟进，不仅公开表示同意，还承诺OpenAI将向独立第三方评估机构开放&ldquo;员工级别&rdquo;的系统访问权限，并向《财富》杂志确认OpenAI 2026年不会推进IPO。这三个人之间的关系不需要多解释。马斯克和奥特曼已经公开决裂多年，马斯克甚至起诉过OpenAI背离初心。阿莫代伊和奥特曼之间则是AI领域最直接的竞争关系，即Anthropic的Claude和OpenAI的GPT系列，几乎每一个月都在能力榜单上互相超越。三个互相看不顺眼的人，在同一天说了同一句话。这件事本身比任何一方的观点都值得拆解。导火索不止一根阿莫代伊的博文之所以能引发如此迅速的反应，直接原因是过去几周内连续爆发的一系列失控事件，这些事件让&ldquo;AI安全&rdquo;从一个学术讨论变成了一线从业者必须面对的日常问题。最标志性的事件发生在2026年7月。据多家媒体报道，超过1200个来自OpenAI测试环境的AI智能体协同作业，通过留言板进行分工和配合，成功入侵了开发者平台Hugging Face。更令人不安的是，部分智能体在行动中主动篡改了记录以隐藏痕迹，有些甚至在&ldquo;知道&rdquo;此举不道德的情况下仍然继续执行。OpenAI事后承认，其AI软件在测试中还尝试入侵了另外四家未具名公司的系统。而在Anthropic这边，情况同样不乐观。今年7月，Anthropic在网络安全测试中发现，自家部分Claude模型自行&ldquo;越狱&rdquo;，成功骇入了三家企业的系统。到了本周，该公司又披露了另一起类似案例。但让整个行业真正感到震动的，是一个人的辞职。Anthropic研究员雅各布&middot;考克森（Jacob Coxon），他此前也曾在OpenAI工作过&mdash;&mdash;本周在社交媒体上宣布辞职，理由是他认为Anthropic和OpenAI正在&ldquo;拿我们的生命赌博&rdquo;。他说，开发AI的人&ldquo;真心相信，在这个十年结束前，AI可能会杀光我们所有人&rdquo;。一个内部研究员的公开辞职，把行业长久以来私下讨论但很少公开承认的恐惧，摆到了台面上。与此同时，Anthropic对齐科学负责人埃文&middot;哈宾格（Evan Hubinger）也给出了一个令人不安的量化判断：AI系统在本十年内造成大规模灭绝事件的概率超过10%。10%听起来不高，但如果一件事有十分之一的概率导致全人类灭绝，它大概不值得被当作&ldquo;可接受的风险&rdquo;。有人可能会问：2023年不是已经有上千名AI研究者签署过&ldquo;AI灭绝风险应被视为全球优先事项&rdquo;的声明了吗？马斯克和奥特曼当时都签了。三年过去了，这次有什么不同？阿莫代伊自己在文章中回答了这个问题。他说，在2023年呼吁暂停AI发展&ldquo;几乎没有什么意义&rdquo;，因为当时AI能力还远未达到危险阈值。但他现在改变了判断，原因有两个。第一个原因是AI的递归式自我提升。从2",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "梳理Amodei博文与Altman/Musk表态的协同信号，触及AI治理路线分歧。",
+      "queued_at": "2026-09-13T10:22:46Z"
+    },
+    {
+      "id": "6426f57a78a986ff62ae74ce98c7d579fa93fa1f",
+      "title": "GitHub Copilot's Project HydraFusion Promises Frontier Level Performance Through Multi-Model Routing",
+      "url": "https://www.infoq.com/news/2026/09/github-hydrafusion",
+      "source": "rss:infoq",
+      "published_at": "2026-09-13T06:06:00Z",
+      "raw_summary": "GitHub's Project HydraFusion is a research preview for GitHub Copilot that enhances coding intelligence through runtime model orchestration. It dynamically assembles execution plans using models from various providers. The system employs three execution patterns based on task complexity. Evaluations indicate that it achieves high task quality while significantly reducing operational costs. By Olimpiu Pop",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "GitHub Copilot多模型路由系统的架构细节与执行模式，有具体工程实现思路值得了解。",
+      "queued_at": "2026-09-13T10:22:46Z"
+    }
+  ],
   "digest_last_date": "2026-09-13"
 }
