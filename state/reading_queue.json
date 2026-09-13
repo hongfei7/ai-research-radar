@@ -194,6 +194,45 @@
       "source_traceable": true,
       "why": "Anthropic披露胡塞武装用Claude开发导弹制导软件，AI滥用案例的一手报告，有产业安全认知价值。",
       "queued_at": "2026-09-13T17:42:44Z"
+    },
+    {
+      "id": "c11f1ae99654118a501ef11d8a777a18eb6334d6",
+      "title": "Dear 24G owners, try VLLM you might be able to run Qwen3.8 27B INT4, 144K FP8 KV on RTX 3090 with better speed. (TLDR VLLM AOT)",
+      "url": "https://www.reddit.com/r/localllama/comments/1wfdtm7/dear_24g_owners_try_vllm_you_might_be_able_to_run",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-13T17:25:05Z",
+      "raw_summary": "VLLM Benchmark: Prefill, Prompt processing - avg, 871.93 tok/s (3 hours constant running xhigh) - 10K prompt, 1000.26 tok/s (16 runs) - 90K prompt, 743,59 tok/s (16 runs) Decode, tok gen - avg, 38.39 tok/s (3 hours constant running xhigh) - 10K, 42.3 tok/s (16 runs) - 90K, 34 tok/s (16 runs) Preamble: I am on WSL2. Running the 27B Q5 UD GGUF through llama.cpp with 81,920 context plus MTP gives me around 25-30 tok/s. Then I found this GitHub repo: https://github.com/noonghunna/club-3090 It is basically a recipe and Docker configuration for running the model. So, 30 tok/s itself is fine, but I just got bored waiting for RunPod to open its GPUs. I finally brought my vLLM tuning back from the back burner, and here I am. I often forget that Inductor/Triton compilation and CUDA Graph capture require additional VRAM while testing the configuration and kernel calls. When JIT compilation failed because of an OOM, I never bothered trying AOT. FYI, AOT and JIT are compilation strategies. AOT means Ahead of Time, while JIT means Just in Time. If you OOM on the first startup, try it one more time. Inductor might have already compiled and cached part of the configuration before the OOM, allowing the next run to reuse it if the configuration has not changed. This is not guaranteed, but it worked for me. And yes, it was trial and error. It was kinda tedious and pain in the ass, starting from 32K, then 64K, 80K, 128K, and finally 144K. The practical ceiling for my conf at 154K, but I chose 14",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "VLLM AOT在RTX3090跑Qwen3.8 27B INT4的具体benchmark数据+Docker配置，工程复现性高。",
+      "queued_at": "2026-09-13T19:51:54Z"
+    },
+    {
+      "id": "1d573270b849f30ff9d0088b691c687d3695c05e",
+      "title": "3k$ 128GB VRAM + 256GB RAM DDR4 Server",
+      "url": "https://www.reddit.com/r/localllama/comments/1wfe9zt/3k_128gb_vram_256gb_ram_ddr4_server",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-13T17:42:07Z",
+      "raw_summary": "I finished my home inference server. First I tried Lenovo p620 workstation and while it’s a good value overall it pissed me off with a ton of proprietary Lenovo shit to deal with and I return it in the end. Components: 4xV620 - 1400$ 256GB DDR4 RDIMM 2666 - 610$ Huanandzhi D12D - 410$ EPYC 7452 - 170$ PSU ASRock 1600 - 220$ SSD Samsung 970EVO 1tb - Already had Case//Fans//Misc ~ 200$ Power consumption is no shit ofc on such machine: 700-900w prefill 500-600w decode on Qwen3.8-next-flash Autoround W4A16 What it can do - EDIT: Qwen3.8-next-flash Autoround W4A16 1.3k prefill and 70tg code/60tg prose on 128k+ context with MTP-2 on vllm fork. I was disappointed with this machine and qwen3.8-27b speeds at first. But since Qwen3.8 next running good on it - I’m satisfied. Hope in more optimizations in future. &#32; submitted by &#32; /u/Thin_Pollution8843 [link] &#32; [comments]",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "3K美元自建128GB VRAM推理服务器的完整BOM和实测功耗/token速度，工程复现价值高。",
+      "queued_at": "2026-09-13T19:51:54Z"
+    },
+    {
+      "id": "60ab7cf9d26a79345b598902ee48431f4f5afcb5",
+      "title": "Qwen 3.8 27B UD-IQ4_XS even faster on 16GB CUDA",
+      "url": "https://www.reddit.com/r/localllama/comments/1wfba8g/qwen_38_27b_udiq4_xs_even_faster_on_16gb_cuda",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-13T15:50:25Z",
+      "raw_summary": "This is an evolution on top of Raymond's KV cache streaming fork - all credits to what enabled this goes to him. The basic idea behind what he enabled was a pool of memory in VRAM that is used differently depending on the phase (prompt processing or decoding) and when total used context is larger than what fits in VRAM it's instead streamed from host RAM in time for when the current layer needs it. It enables _much_ higher TG tps than regular llama.cpp offloading to host RAM. I've used it to run Qwen 3.8 27B UD-IQ4_XS on my 5060Ti since release, but I've also had this idea that during the time the VRAM pool isn't fully utilized it should be possible to also do speculative decoding (MTP or DFlash2) - if it could be possible to eject the spec model and all the VRAM it uses, and then load it back when the context gets low enough again (compaction). I've got this working on my fork of Raymond's fork today. It's basically hot-swappable speculative decoding and while my focus is completely on making this work well on this specific model on 16GB, I would assume that part could also be useful for others with more VRAM. Repo here: https://github.com/troed/llama.cpp-adaptive-kv-streaming Regarding the images: Dark red = MTP ejected as soon as KV streaming starts. Light red = keeping it. The optimal setting is thus to eject it after a certain amount of pages (one page = 256 bytes) and then eject. Same for green (DFlash2) &#32; submitted by &#32; /u/tsangberg [link] &#32; [comments]",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "KV cache streaming fork的演进与5060Ti上跑27B模型的实测优化，有工程细节。",
+      "queued_at": "2026-09-13T19:51:54Z"
     }
   ],
   "digest_last_date": "2026-09-13"
