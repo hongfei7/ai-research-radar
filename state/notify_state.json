@@ -1,102 +1,7 @@
 {
-  "morning_last_date": "2026-09-13",
+  "morning_last_date": "2026-09-14",
   "weekly_last_slot": "2026-W37",
   "breaking_fingerprints": [
-    {
-      "tickers": [
-        "Anthropic",
-        "OpenAI"
-      ],
-      "features": [
-        "agi",
-        "and",
-        "anthropic",
-        "arrived",
-        "at",
-        "crises",
-        "essentially",
-        "existential",
-        "has",
-        "just",
-        "not",
-        "of",
-        "openai",
-        "publicly",
-        "reports"
-      ],
-      "sent_at": "2026-09-13T05:19:36Z"
-    },
-    {
-      "tickers": [
-        "Anthropic",
-        "DeepSeek",
-        "OpenAI"
-      ],
-      "features": [
-        "ai",
-        "an",
-        "and",
-        "between",
-        "external",
-        "gap",
-        "internal",
-        "of",
-        "on",
-        "openai",
-        "perceptions",
-        "progress",
-        "researcher",
-        "the"
-      ],
-      "sent_at": "2026-09-13T05:19:59Z"
-    },
-    {
-      "tickers": [
-        "Anthropic",
-        "OpenAI",
-        "xAI"
-      ],
-      "features": [
-        "about",
-        "agreed",
-        "ai",
-        "all",
-        "altman",
-        "and",
-        "are",
-        "big",
-        "calling",
-        "dario",
-        "elon",
-        "face",
-        "feels",
-        "for",
-        "have",
-        "hugging",
-        "in",
-        "incident",
-        "is",
-        "know",
-        "last",
-        "like",
-        "more",
-        "of",
-        "one",
-        "only",
-        "sam",
-        "serious",
-        "slowdown",
-        "than",
-        "that",
-        "the",
-        "they",
-        "this",
-        "times",
-        "why",
-        "years"
-      ],
-      "sent_at": "2026-09-13T05:20:23Z"
-    },
     {
       "tickers": [
         "Anthropic",
@@ -183,17 +88,112 @@
         "驱动"
       ],
       "sent_at": "2026-09-14T00:21:26Z"
+    },
+    {
+      "tickers": [
+        "Anthropic",
+        "戴尔",
+        "英伟达"
+      ],
+      "features": [
+        "13.7b",
+        "and",
+        "anthropic",
+        "center",
+        "compute",
+        "data",
+        "deal",
+        "from",
+        "georgia",
+        "group",
+        "hosts",
+        "information",
+        "lease",
+        "operates",
+        "rum",
+        "rumble",
+        "signed",
+        "six-year",
+        "social",
+        "source",
+        "the",
+        "to",
+        "truth",
+        "upcoming"
+      ],
+      "sent_at": "2026-09-14T05:26:13Z"
+    },
+    {
+      "tickers": [
+        "三星电子",
+        "海力士",
+        "美光"
+      ],
+      "features": [
+        "after",
+        "ai",
+        "ai-connected",
+        "and",
+        "asian",
+        "call",
+        "development",
+        "down",
+        "fell",
+        "for",
+        "gregor",
+        "hunter",
+        "hynix",
+        "kioxia",
+        "leaders",
+        "minimax",
+        "pacing",
+        "reuters",
+        "sharply",
+        "sk",
+        "softbank",
+        "stocks",
+        "stuart",
+        "tech",
+        "us",
+        "with",
+        "z.ai"
+      ],
+      "sent_at": "2026-09-14T05:26:26Z"
+    },
+    {
+      "tickers": [
+        "Anthropic"
+      ],
+      "features": [
+        "anthropic",
+        "中企",
+        "为安",
+        "企的",
+        "全踩",
+        "减硅",
+        "刹车",
+        "安全",
+        "断中",
+        "的路",
+        "的速",
+        "硅谷",
+        "谷的",
+        "踩刹",
+        "车减",
+        "速断"
+      ],
+      "sent_at": "2026-09-14T05:26:47Z"
     }
   ],
   "last_report": {
-    "date": "2026-09-13",
+    "date": "2026-09-14",
     "macro": {
-      "cycle": "扩张第三年向第四年过渡的窄通道中,头部四家云厂季度capex合计仍稳在900亿美元上方,微软单家从12GW拉至2032年38GW、韩国LG CNS以3814亿韩元明确采购Vera Rubin世代GPU,标志下一代产品需求在非美客户侧也已落单;但环比斜率首次转平,本期披露新capex上修的仅英伟达锚定Anthropic一家",
+      "cycle": "扩张第三年向第四年过渡的窄通道仍在,头部四家云厂季度capex合计稳在900亿美元上方,但本期新capex上修仅英伟达锚定Anthropic一家,环比斜率首次转平后未现二次抬头。Anthropic以六年期137亿美元锁定Rum Group佐治亚园区算力,单笔金额逼近头部云厂单季度上修量级,意味着算力订单的集中度在向非超大规模客户侧迁移,但总盘子的边际增量未明显扩张。",
       "trajectory": {
         "past": "晶圆制程产能",
         "now": "HBM与CoWoS良率位元密度",
         "next": "数据中心电力接入与机柜热密度",
-        "why_now": "单卡功耗从H100的700W升至GB200的2.3kW量级,Vera Rubin世代进一步上探,液冷从可选项变为必选,园区主变与燃机排期18至36个月与GPU供货周期形成数量级错位",
+        "why_now": "单卡功耗从H100的700W升至GB200的2.3kW量级,Vera Rubin世代进一步上探,液冷从可选项变为必选,而园区主变与燃机排期18至36个月与GPU供货周期形成数量级错位",
         "trigger": "若北美新建园区电力接入审批成为项目主要延迟项,或单机柜功率密度普遍突破130kW并批量化交付"
       },
       "shift": "三段轨迹维持,now段由HBM/CoWoS良率位元密度加电力热密度前置约束,调整为Agent长任务落地叠加CEO同框放缓前沿,推动训练侧周期与推理侧机柜密度的相对权重再分配",
@@ -201,32 +201,36 @@
     },
     "calls": [
       {
-        "claim": "下一代GPU需求已从北美云厂扩散至非美大客户,Vera Rubin世代的产能争夺将从台积电N3延伸至CoWoS-L与HBM4",
-        "falsifier": "若2026Q4海力士或三星财报披露HBM4 12层ASP环比下滑超5%,或台积电法说会下调2027年CoWoS-L capex指引,本判断失效",
-        "verify": "HBM4 12层ASP未环比下滑超5%"
+        "claim": "韩国电力预付被拒标志龙仁集群电力瓶颈从叙事升格为可计量事件,主约束轴提前切到园区主变与燃机排期",
+        "falsifier": "若2026Q4 KEPCO与三星或海力士重启预付谈判并签署修订方案,或韩国产业通商资源部公布龙仁集群主变排期前置至2027年中之前,本判断失效",
+        "verify": "KEPCO转向政府补贴而非重启预付谈判"
       },
       {
-        "claim": "Agent基础设施进入长任务水电化阶段,推理token消耗将出现非线性放大,机柜级热密度问题提前进入now段约束位",
-        "falsifier": "若DeepSeek V4.1-Flash上线后3个月内API日均Token消耗量低于V4 Pro同口径的1.2倍,或OpenAI在2026Q4恢复Pro订阅且不限量,本判断失效",
+        "claim": "Anthropic以连续两季盈利与137亿美元长租锁定AI公司估值锚与算力订单可见度,token变现已能覆盖训练摊销",
+        "falsifier": "若2026Q4 Anthropic或OpenAI任一公开训练集群capex上修超10%,或Anthropic递交给SEC的S-1披露其盈利口径大量依赖递延收入与一次性调整项,本判断失效",
         "verify": "推理token 3个月增1.5倍"
       },
       {
-        "claim": "前沿模型训练周期放缓将从叙事走向执行,高端训练芯片的滚动需求被定价,推理侧与安全评估工具链成为对冲位",
-        "falsifier": "若2026Q4 Anthropic或OpenAI任一公开训练集群capex上修超10%,或独立评估者仅获模型访问而无权重与训练数据审计权限,本判断失效",
-        "verify": "独立评估者员工级权限落地条款"
+        "claim": "Vera Rubin配合800VDC把机柜级电源价值量提升的主线从叙事推向订单,2027年量价齐升",
+        "falsifier": "若2026Q4台积电法说会下调2027年CoWoS-L capex指引,或GE Vernova与Schneider电力业务订单同比增速回落至20%以下,本判断失效",
+        "verify": "Rubin世代电源订单能见度延伸到2027"
       },
       {
-        "claim": "特朗普政府对AI监管放手叠加环境监管松绑,把美国AI算力集群从审批与电力两端同时解锁,北美园区建设节奏快于欧亚",
-        "falsifier": "若2026Q4 GE Vernova或Schneider财报披露电力业务订单同比增速回落至20%以下,或北美新建园区电力接入审批周期较2025年实际缩短,本判断失效",
-        "verify": "北美新建园区电力接入仍为主延迟项"
+        "claim": "CEO同框呼吁放缓前沿与Amodei承认中国不跟调的内在矛盾,实质上锁定了美国阵营的算力加速路径",
+        "falsifier": "若2026Q4 Anthropic或OpenAI任一公开训练集群capex下修超10%,或独立评估者仅获模型访问而无权重与训练数据审计权限,本判断失效",
+        "verify": "美国阵营未出现实质性capex下修"
       }
     ]
   },
-  "morning_fallback": {
-    "date": "2026-09-14",
-    "attempts": 1
-  },
+  "morning_fallback": null,
   "blindspot_ledger": [
+    {
+      "key": "ARM|ASML|Intel|Marvell|Meta|台积电|美光|苹果",
+      "text": "覆盖审计显示,苹果近30天有100条相关信息进入本库但无一条来自其自有披露,Meta有74条同样依赖二手转述,Intel有55条且一手披露通道空缺,ASML有34条、ARM有17条均无直连产出。苹果折叠机、Beats游戏手柄这类72小时级别的高拐点信号目前全部来自二手供应链传闻,缺乏库克或硬件工程团队口径的交叉验证;美光自有披露已19天空缺,Marvell已17天空缺,本判断对HBM4价格曲线、定制ASIC出货节奏的置信区间需相应收窄。台积电虽未单独列出,但凡涉及CoWoS-L产能与良率的判断,本库同样缺乏其自有披露作为锚点,均为外推。",
+      "first_seen": "2026-09-14",
+      "last_seen": "2026-09-14",
+      "times_seen": 1
+    },
     {
       "key": "ARM|ASML|Intel|Marvell|Meta|美光|苹果",
       "text": "结构级盲区集中在自有披露缺位的标的。苹果、Meta、Intel、ASML、ARM的expected_channels均已配置但n_items_30d分别只有102、80、59、35、17条,全部为二手转述,无一手披露进入本库;美光与Marvell已18天与16天未出自家披露,本期判断只能依赖同业外推。苹果仍是单条一手信息都没有,意味着对其终端AI摊销节奏与NPU出货的判断,在2026Q4财报前都将处于结构性黑箱状态",
@@ -302,13 +306,6 @@
       "text": "本库近30天覆盖台积电24源、256条, Meta 25源、138条, 苹果21源、114条, Intel 13源、95条, ASML 12源、93条, 但全部为二手转述, 上述五家近30天内无任何一手自有披露进入本库, 对其产能、订单与capex节奏的判断仍依赖同业财报外推与媒体转引; 算力链条核心标的英伟达、AMD、Marvell、Arista、台积电供应链本期素材完全缺席, 存储链条仅有HBM5预告(E14)与标题级提及, 缺少价格、库存、稼动率等关键运营数据, 电力与冷却侧无任何报道。",
       "first_seen": "2026-09-03",
       "last_seen": "2026-09-03",
-      "times_seen": 1
-    },
-    {
-      "key": "AMD|ARM|ASML|Intel|Meta|博通|台积电|微软|英伟达|苹果|高通",
-      "text": "台积电近30天有274条相关信息进入本库但全部为二手转述, Meta 144条、苹果117条、ASML 100条、Intel 96条、高通78条、ARM 59条同样零一手披露, 对其产能与产品节奏的判断只能依赖同业外推; 微软自披露已隔29天; AMD与博通作为英伟达算力替代与补充本期完全缺席, 对ASIC分流节奏与定制芯片订单可见度的判断缺乏原始信源支撑",
-      "first_seen": "2026-09-02",
-      "last_seen": "2026-09-02",
       "times_seen": 1
     }
   ]

@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-14T00:19:58Z",
-  "text": "当前共有 13 个活跃事件。要点包括: Anthropic将连续第二个季度实现盈利; Anthropic tells investors it will be profitable for second straight quarter; Amodei坦言\"放缓AI前沿\"最大难题：中国若不跟调如何应对; 中信建投：Vera Rubin与800VDC将驱动又一轮AIDC电源上升周期; Xi Jinping calls for a \"consensus-based global AI governance framework\" and says China will pioneer the establishment of a BRICS AI open-source community (Joanna Ossinger/CNBC)。",
-  "since": "2026-09-14T00:19:58Z",
-  "active_event_count": 13,
+  "generated_at": "2026-09-14T05:26:00Z",
+  "text": "当前共有 25 个活跃事件。要点包括: Anthropic将连续第二个季度实现盈利; Anthropic据称将连续两季盈利，毛利率超80%; 中信建投：Vera Rubin与800VDC将驱动又一轮AIDC电源上升周期; 三星、SK海力士拒绝向韩国电力预付25万亿韩元电费; AI-connected Asian stocks fell sharply after US tech leaders' call for pacing AI development, with SoftBank, Kioxia, SK Hynix, Minimax, and Z.AI down 5%+ (Gregor Stuart Hunter/Reuters)。",
+  "since": "2026-09-14T05:26:00Z",
+  "active_event_count": 25,
   "key_themes": [
-    "model_capability",
-    "policy_export",
-    "ai_monetization",
     "compute_demand",
-    "chip_supply"
+    "model_capability",
+    "ai_monetization",
+    "chip_supply",
+    "policy_export"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nAnthropic连续两季盈利事件存在信源与数据分歧：36kr（medium）称营收\"飙升至115亿美元以上\"并增速超OpenAI，数据明显偏激进；reddit（low）版本仅强调\"盈利连续性\"而未给具体营收数字。两条同源报道对盈利可持续性的态度亦有温差——36kr点出\"未来季度盈利不可保证\"，reddit则更乐观，构成投研判断的潜在锚偏差。此外，三星/海力士拒绝KEPCO 25万亿韩元电费预付与全球AIDC电源高景气形成隐性张力：本地电力基建若放缓将冲击HBM/DRAM扩产节奏。\n\n【新兴趋势】\n\"算力效率\"与\"供电架构升级\"作为共同底层变量反复出现：Anthropic盈利归因于算力效率提升、Vera Rubin周期由800VDC驱动价值量、智谱强调算子开发与推理优化，指向AI算力从\"堆量\"向\"提效\"切换。另一暗线是头部厂商alignment治理趋同（微软MAI行为准则 + Anthropic隐含的alignment投入），可能阶段性管理算力需求曲线预期。\n\n【信息盲点】\nAMD、博通、台积电、CoreWeave/Oracle等AI基建运营商直接标的缺席；光模块（中际旭创/新易盛）、CoWoS/先进封装产能未见独立报道；国内AIDC电源链（科华数据、麦格米特）仅在\"中国大陆企业\"模糊提及而未点名；推理侧token消耗爆量趋势与训练侧capex分化的讨论不足；特斯拉/xAI完全缺席。\n\n【跨标的联动】\nAnthropic盈利→NVDA/AVGO订单确定性增强，但算力效率叙事对其定价权中性偏负，形成\"量增利薄\"二阶矛盾。智",
+  "cross_analysis": "【核心矛盾】\nAltman呼吁前沿实验室自律并欢迎联邦框架（\"不需等待立法\"），同期Trump却公开淡化监管、强调不能在对华AI竞赛中让步——企业自律的\"减速\"诉求与政府高层的\"加速\"立场存在明显分歧，亚洲AI股5%+下跌正是对这一矛盾的恐慌定价。另一组矛盾：Anthropic一面\"为安全踩刹车\"、限缩对华技术与硅谷扩张节奏，一面却向投资人交出连续两季盈利、80%+毛利率的成绩单，\"减速\"与\"变现提速\"并行。\n\n【新兴趋势】\n\"词元（Token）经济\"在多条报道中",
   "trend_spotting": "纳斯达克在大型科技/AI IPO中的话语权正在质变：继SpaceX后Anthropic再次\"选边\"，意味着AI时代的资本定价权正从纽交所向纳斯达克迁移。Apple折叠iPhone\"iPhone Duo\"是72小时内最具拐点意义的新信号——凭借苹果的品牌力与渠道，复刻初代iPhone将折叠屏从尝鲜推向主流的概率远高于安卓厂商历次尝试，折叠屏供应链（SDC面板、UTG铰链、钛合金中框）将在2-3个季度内出现可见的产能挤压。三星显示和高通将是最大受益方，安卓折叠屏品牌反而面临\"苹果效应\"反噬。\n\n早期信号是Beats品牌下的iPhone游戏手柄——这暗示苹果正在搭建\"硬件+订阅+云游戏\"闭环，对标Xbox/PlayStation生态，长期看会冲击传统主机厂商。Obama的AI监管表态则是政策从\"跨党派共识\"滑向\"党争议题\"的关键预警，下届美国国会AI立法节奏将显著快于当前预期，云厂capex可能面临新增合规成本。Anthropic递交S-1时点将是检验AI公司估值锚与算力采购透明度的最重要拐点。"
 }
