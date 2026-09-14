@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-14T16:58:01Z",
-  "text": "当前共有 30 个活跃事件。要点包括: Anthropic连续两季盈利并谋求Nasdaq上市; How OpenAI Used Its Own LLMs to Design Its Jalapeño Chip; DeepSeek“推倒重来”; 京东建十万卡，字节“借”296亿，AI 算力进入「豪赌时刻」; 中国最有钱的几大公司，突然拼命借钱。",
-  "since": "2026-09-14T16:58:01Z",
-  "active_event_count": 30,
+  "generated_at": "2026-09-14T20:49:34Z",
+  "text": "当前共有 29 个活跃事件。要点包括: Anthropic连续两季盈利并谋求Nasdaq上市; How OpenAI Used Its Own LLMs to Design Its Jalapeño Chip; DeepSeek“推倒重来”; 英伟达推出RTX Pro 5500 Blackwell工作站卡，显存升至84GB; 中国电信研究院报告显示：未来2-3年我国算力需求年均增长近10倍。",
+  "since": "2026-09-14T20:49:34Z",
+  "active_event_count": 29,
   "key_themes": [
     "model_capability",
-    "compute_demand",
     "ai_monetization",
+    "compute_demand",
     "policy_export",
-    "chip_supply"
+    "edge_ai"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nAltman呼吁前沿实验室自律并欢迎联邦框架（\"不需等待立法\"），同期Trump却公开淡化监管、强调不能在对华AI竞赛中让步——企业自律的\"减速\"诉求与政府高层的\"加速\"立场存在明显分歧，亚洲AI股5%+下跌正是对这一矛盾的恐慌定价。另一组矛盾：Anthropic一面\"为安全踩刹车\"、限缩对华技术与硅谷扩张节奏，一面却向投资人交出连续两季盈利、80%+毛利率的成绩单，\"减速\"与\"变现提速\"并行。\n\n【新兴趋势】\n\"词元（Token）经济\"在多条报道中",
-  "trend_spotting": "纳斯达克在大型科技/AI IPO中的话语权正在质变：继SpaceX后Anthropic再次\"选边\"，意味着AI时代的资本定价权正从纽交所向纳斯达克迁移。Apple折叠iPhone\"iPhone Duo\"是72小时内最具拐点意义的新信号——凭借苹果的品牌力与渠道，复刻初代iPhone将折叠屏从尝鲜推向主流的概率远高于安卓厂商历次尝试，折叠屏供应链（SDC面板、UTG铰链、钛合金中框）将在2-3个季度内出现可见的产能挤压。三星显示和高通将是最大受益方，安卓折叠屏品牌反而面临\"苹果效应\"反噬。\n\n早期信号是Beats品牌下的iPhone游戏手柄——这暗示苹果正在搭建\"硬件+订阅+云游戏\"闭环，对标Xbox/PlayStation生态，长期看会冲击传统主机厂商。Obama的AI监管表态则是政策从\"跨党派共识\"滑向\"党争议题\"的关键预警，下届美国国会AI立法节奏将显著快于当前预期，云厂capex可能面临新增合规成本。Anthropic递交S-1时点将是检验AI公司估值锚与算力采购透明度的最重要拐点。"
+  "cross_analysis": "【核心矛盾】\nArs Technica 与 MIT Tech Review 对\"AI放缓论\"解读分歧明显：前者直指安全主张背后是头部厂商巩固护城河、挤压开源的战略工具；后者则将其定性为行业整体\"doomer turn\"的真实转向。同一时期，头部厂商行为却与\"放慢节奏\"形成尖锐反差——OpenAI 以3亿美元收购 Glass Imaging 卡位硬件，英伟达密集推出 RTX Pro 5500 并任由 RTX 5090 渠道价飙至 9,500 美元，AWS 持续完善 AgentCore 企业级能力。言行之间的张力是本轮最大矛盾。\n\n【新兴趋势】\n端侧AI落地节奏明显加速：iOS 27 Siri AI 升级 + Rosetta 终结（Apple Silicon 全面收官）+ OpenAI 收购计算摄影团队，三条线索共同指向\"AI 终端/硬件\"成下一战场。AI Agent 基础设施化也是新浮现主题——AWS AgentCore 推出 OAuth 同意门户，意味着 Agent 身份与权限管理正从概念进入企业级标准化阶段。Nvidia",
+  "trend_spotting": "72小时内三条新趋势值得注意：\n\n**新兴趋势**：英伟达产品线加速\"去游戏化\"，RTX Pro 5500以84GB GDDR7（5090的2.6倍）切AI工作站，消费级5090断货、第三方炒至9500美元，反映Blackwell产能与定价权正向AI负载迁移。OpenAI则以3亿美元收购Glass Imaging，首次明确向\"多模态+硬件\"延伸，剑指计算摄影与未来终端。\n\n**早期信号**：苹果Siri AI被用户体验为\"重新值得使用\"，iOS 27可能成为端侧AI驱动换机的首个真实验证节点；AWS Bedrock AgentCore推出Consent门户，AI Agent企业落地进入身份治理基础设施补全阶段；macOS终结Rosetta，x86在消费生态的最后一根钉子被拔除。\n\n**市场盲"
 }
