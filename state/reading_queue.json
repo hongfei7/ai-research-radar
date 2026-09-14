@@ -246,6 +246,45 @@
       "source_traceable": true,
       "why": "Anthropic/OpenAI/Google 自 7 月起讨论成立 AI 行业标准体的独家信源报道，对理解产业治理与竞争格局有价值。",
       "queued_at": "2026-09-13T22:13:56Z"
+    },
+    {
+      "id": "9e1a6799b2005fb374c69c6b9b241fec18085346",
+      "title": "智谱约50亿美元融资落定，加码下一代GLM基础模型、完全自训练及算力基建",
+      "url": "https://36kr.com/newsflashes/3982505295624967?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-09-14T00:13:52Z",
+      "raw_summary": "36氪获悉，9月13日，智谱宣布完成约50亿美元融资。公告称，此次融资将用于下一代GLM基础模型、完全自训练体系及相关算力基础设施。在公告中，智谱将完全自训练描述为下一代GLM在上一代GLM构建的环境中训练，形成递归式自我改进循环。具体投入包括自动化生成和筛选训练数据、构建任务环境、提升长程推理能力，以及国产芯片适配、算子开发和推理优化。",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "智谱官宣约50亿美元融资，'完全自训练'和'递归式自我改进'是其技术路线宣言，涉及国产芯片适配和训练范式选择。",
+      "queued_at": "2026-09-14T00:16:05Z"
+    },
+    {
+      "id": "3ad8567e3afe0c8359b6d84349da6f64e2a163b8",
+      "title": "中信建投：Vera Rubin与800VDC将驱动又一轮AIDC电源上升周期",
+      "url": "https://36kr.com/newsflashes/3982484833647616?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-09-14T00:02:59Z",
+      "raw_summary": "36氪获悉，中信建投最新研报指出，复盘23年以来海外AIDC电源公司股价与基本面变化，可以发现基本面的核心催化是英伟达芯片换代与供电架构升级。上一轮AIDC电源周期得益于Blackwell芯片主要以NVL72等整机柜形式出货，电源价值量大大提升，带动电源企业业绩于25年集中释放，并延续至26年。英伟达下一代Rubin芯片已进入量产爬坡，从英伟达和电源公司的Capex、存货、订单等指标来看，产业链已作好承接准备，景气强度更高。Vera Rubin放量将带动高功率PSU、HVDC Sidecar等新品放量，电源价值量进一步提升，27年有望成为新一轮AIDC电源周期起点，中国大陆企业有望提升份额并兑现业绩。",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": false,
+      "why": "中信建投研报把Rubin芯片换代、800VDC供电架构升级与AIDC电源周期挂钩，给出Capex/存货/订单等可验证指标。",
+      "queued_at": "2026-09-14T00:16:05Z"
+    },
+    {
+      "id": "235e10ef5ec9b6f70a631ca94abdbb8cfb1baef6",
+      "title": "Anthropic将连续第二个季度实现盈利",
+      "url": "https://36kr.com/newsflashes/3982461988994053?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-09-13T23:44:48Z",
+      "raw_summary": "Anthropic向投资者表示，预计将实现连续第二个季度盈利。这对于Claude大模型背后的这家AI初创企业而言，是一个重要里程碑。该公司二季度实现创立以来首个季度盈利，营收飙升至115亿美元以上。相关数据是该公司为筹备IPO向投资者推介材料的一部分。Anthropic增长速度超过竞争对手OpenAI，企业API产品与Claude代码开发工具需求旺盛。公司强调算力效率提升是利润率改善的核心驱动因素。这家AI企业同时警示，由于持续重金投入新一代前沿模型与算力基础设施，未来季度盈利无法保证。（新浪财经）",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": false,
+      "why": "Anthropic连续两季度盈利、营收超115亿美元、强调算力效率是利润率核心驱动，揭示头部大模型公司商业化拐点。",
+      "queued_at": "2026-09-14T00:16:05Z"
     }
   ],
   "digest_last_date": "2026-09-13"

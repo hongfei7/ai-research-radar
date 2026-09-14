@@ -5,67 +5,6 @@
     {
       "tickers": [
         "Anthropic",
-        "英伟达"
-      ],
-      "features": [
-        "anthropic",
-        "billion",
-        "into",
-        "ipo",
-        "nvidia",
-        "pour",
-        "record-breaking",
-        "to",
-        "up",
-        "wants"
-      ],
-      "sent_at": "2026-09-12T15:56:40Z"
-    },
-    {
-      "tickers": [
-        "Anthropic"
-      ],
-      "features": [
-        "ai",
-        "amodei",
-        "anthropic",
-        "before",
-        "ceo",
-        "control",
-        "human",
-        "limits",
-        "outpaces",
-        "self-improvement",
-        "speed",
-        "wants"
-      ],
-      "sent_at": "2026-09-12T15:57:04Z"
-    },
-    {
-      "tickers": [
-        "OpenAI"
-      ],
-      "features": [
-        "appears",
-        "astra",
-        "based",
-        "benchmarks",
-        "change",
-        "early",
-        "gpt-6",
-        "in",
-        "on",
-        "reasoning",
-        "show",
-        "spatial",
-        "step",
-        "to"
-      ],
-      "sent_at": "2026-09-12T15:57:17Z"
-    },
-    {
-      "tickers": [
-        "Anthropic",
         "OpenAI"
       ],
       "features": [
@@ -177,6 +116,73 @@
         "surveillance"
       ],
       "sent_at": "2026-09-13T14:40:55Z"
+    },
+    {
+      "tickers": [
+        "Anthropic"
+      ],
+      "features": [
+        "anthropic",
+        "个季",
+        "二个",
+        "季度",
+        "实现",
+        "将连",
+        "度实",
+        "现盈",
+        "盈利",
+        "第二",
+        "续第",
+        "连续"
+      ],
+      "sent_at": "2026-09-14T00:20:28Z"
+    },
+    {
+      "tickers": [
+        "Anthropic"
+      ],
+      "features": [
+        "anthropic",
+        "be",
+        "for",
+        "investors",
+        "it",
+        "profitable",
+        "quarter",
+        "second",
+        "straight",
+        "tells",
+        "will"
+      ],
+      "sent_at": "2026-09-14T00:20:58Z"
+    },
+    {
+      "tickers": [
+        "英伟达"
+      ],
+      "features": [
+        "800vdc",
+        "aidc",
+        "rubin",
+        "vera",
+        "一轮",
+        "上升",
+        "与将",
+        "中信",
+        "信建",
+        "动又",
+        "升周",
+        "又一",
+        "周期",
+        "将驱",
+        "建投",
+        "投与",
+        "源上",
+        "电源",
+        "轮电",
+        "驱动"
+      ],
+      "sent_at": "2026-09-14T00:21:26Z"
     }
   ],
   "last_report": {
@@ -216,7 +222,10 @@
       }
     ]
   },
-  "morning_fallback": null,
+  "morning_fallback": {
+    "date": "2026-09-14",
+    "attempts": 1
+  },
   "blindspot_ledger": [
     {
       "key": "ARM|ASML|Intel|Marvell|Meta|美光|苹果",
