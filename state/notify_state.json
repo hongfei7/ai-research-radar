@@ -309,6 +309,25 @@
         "需求"
       ],
       "sent_at": "2026-09-14T16:59:04Z"
+    },
+    {
+      "tickers": [
+        "DeepSeek",
+        "英伟达"
+      ],
+      "features": [
+        "burying",
+        "deepseek",
+        "engineer",
+        "my",
+        "on",
+        "relections",
+        "rsi",
+        "talent",
+        "to",
+        "yesterday"
+      ],
+      "sent_at": "2026-09-14T23:47:18Z"
     }
   ],
   "last_report": {
@@ -348,7 +367,10 @@
       }
     ]
   },
-  "morning_fallback": null,
+  "morning_fallback": {
+    "date": "2026-09-15",
+    "attempts": 1
+  },
   "blindspot_ledger": [
     {
       "key": "ARM|ASML|Intel|Marvell|Meta|台积电|美光|苹果",

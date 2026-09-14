@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-14T20:49:34Z",
-  "text": "当前共有 29 个活跃事件。要点包括: Anthropic连续两季盈利并谋求Nasdaq上市; How OpenAI Used Its Own LLMs to Design Its Jalapeño Chip; DeepSeek“推倒重来”; 英伟达推出RTX Pro 5500 Blackwell工作站卡，显存升至84GB; 中国电信研究院报告显示：未来2-3年我国算力需求年均增长近10倍。",
-  "since": "2026-09-14T20:49:34Z",
-  "active_event_count": 29,
+  "generated_at": "2026-09-14T23:47:05Z",
+  "text": "当前共有 23 个活跃事件。要点包括: 英伟达推出RTX PRO 5500 Blackwell工作站卡，搭载84GB GDDR7显存; 英伟达、Palantir等据报减少使用OpenAI和Anthropic最先进AI模型; DeepSeek engineer relections on RSI - burying my talent to yesterday; 苹果正式推出Siri人工智能，首日英语开放测试; 三星电机与高通据报合作开发有机桥技术。",
+  "since": "2026-09-14T23:47:05Z",
+  "active_event_count": 23,
   "key_themes": [
-    "model_capability",
     "ai_monetization",
+    "model_capability",
     "compute_demand",
     "policy_export",
     "edge_ai"
@@ -13,6 +13,6 @@
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nArs Technica 与 MIT Tech Review 对\"AI放缓论\"解读分歧明显：前者直指安全主张背后是头部厂商巩固护城河、挤压开源的战略工具；后者则将其定性为行业整体\"doomer turn\"的真实转向。同一时期，头部厂商行为却与\"放慢节奏\"形成尖锐反差——OpenAI 以3亿美元收购 Glass Imaging 卡位硬件，英伟达密集推出 RTX Pro 5500 并任由 RTX 5090 渠道价飙至 9,500 美元，AWS 持续完善 AgentCore 企业级能力。言行之间的张力是本轮最大矛盾。\n\n【新兴趋势】\n端侧AI落地节奏明显加速：iOS 27 Siri AI 升级 + Rosetta 终结（Apple Silicon 全面收官）+ OpenAI 收购计算摄影团队，三条线索共同指向\"AI 终端/硬件\"成下一战场。AI Agent 基础设施化也是新浮现主题——AWS AgentCore 推出 OAuth 同意门户，意味着 Agent 身份与权限管理正从概念进入企业级标准化阶段。Nvidia",
+  "cross_analysis": "【核心矛盾】\n本轮最显著的争议是\"AI减速论\"阵营的分裂：Anthropic Dario Amodei、Sam Altman、Musk 主张\"pace the frontier\"，微软同步发布2027年前模型行为准则，The Verge 更直接将其定性为\"安全协议还是行业卡特尔\"；而黄仁勋当面向特朗普表态\"不会让AI放缓发生\"，明确站在对立面。两条路线对算力链短期景气方向指向相反结论——若减速共识成型，NVDA/AVGO/台积电订单预期承压；若黄仁勋立场获政策端默许，则capex高景气延续。此外，企业端（Nvidia、Palantir）要求OpenAI/Anthropic提供更强数据安全保证并缩减前沿模型使用，与模型厂商",
   "trend_spotting": "72小时内三条新趋势值得注意：\n\n**新兴趋势**：英伟达产品线加速\"去游戏化\"，RTX Pro 5500以84GB GDDR7（5090的2.6倍）切AI工作站，消费级5090断货、第三方炒至9500美元，反映Blackwell产能与定价权正向AI负载迁移。OpenAI则以3亿美元收购Glass Imaging，首次明确向\"多模态+硬件\"延伸，剑指计算摄影与未来终端。\n\n**早期信号**：苹果Siri AI被用户体验为\"重新值得使用\"，iOS 27可能成为端侧AI驱动换机的首个真实验证节点；AWS Bedrock AgentCore推出Consent门户，AI Agent企业落地进入身份治理基础设施补全阶段；macOS终结Rosetta，x86在消费生态的最后一根钉子被拔除。\n\n**市场盲"
 }
