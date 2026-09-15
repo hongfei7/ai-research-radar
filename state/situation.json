@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-15T01:59:33Z",
-  "text": "当前共有 30 个活跃事件。要点包括: 英伟达推出RTX PRO 5500 Blackwell工作站卡，搭载84GB GDDR7显存; 台积电3nm、2nm先进制程与先进封装产能持续供不应求; Vera Rubin NVL72 inference tests show up to 7x better token throughput per MW vs. Blackwell on a 1.6T DeepSeek model, above Huang's 3x claim for 1T-3T LLMs (Bryan Shan/SemiAnalysis); 英伟达、Palantir等据报减少使用OpenAI和Anthropic最先进AI模型; DeepSeek engineer relections on RSI - burying my talent to yesterday。",
-  "since": "2026-09-15T01:59:33Z",
-  "active_event_count": 30,
+  "generated_at": "2026-09-15T07:33:12Z",
+  "text": "截至 2026-09-15 15:32 HKT，新增要闻：三星HBM4起基础芯片改用\"双轨制程\"，与SK海力士同步导入代工；Anthropic Opus 5.2疑似启动灰测；Anthropic、Google、腾讯、阿里、OpenAI近两月密集发布金融版模型/Agent，幻觉率压至2%以内；Arm发布136核AGI CPU及Neoverse CSS N4，300W对标x86 500W；字节整合豆包、飞书、火山引擎加码企业AI；国产GPU四小龙合计市值达6132亿。",
+  "since": "2026-09-15T07:33:12Z",
+  "active_event_count": 19,
   "key_themes": [
-    "ai_monetization",
     "compute_demand",
+    "ai_monetization",
     "model_capability",
-    "policy_export",
+    "domestic_substitution",
     "chip_supply"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n本轮最显著的争议是\"AI减速论\"阵营的分裂：Anthropic Dario Amodei、Sam Altman、Musk 主张\"pace the frontier\"，微软同步发布2027年前模型行为准则，The Verge 更直接将其定性为\"安全协议还是行业卡特尔\"；而黄仁勋当面向特朗普表态\"不会让AI放缓发生\"，明确站在对立面。两条路线对算力链短期景气方向指向相反结论——若减速共识成型，NVDA/AVGO/台积电订单预期承压；若黄仁勋立场获政策端默许，则capex高景气延续。此外，企业端（Nvidia、Palantir）要求OpenAI/Anthropic提供更强数据安全保证并缩减前沿模型使用，与模型厂商",
-  "trend_spotting": "1. **新兴趋势**：SemiAnalysis测得Vera Rubin NVL72在1.6T DeepSeek模型上每兆瓦token吞吐较Blackwell高7倍，超出黄仁勋3倍口径，暗示\"藏性能\"；若官方确认，将上修算力ROI与云厂capx预期。同时智谱在天猫将Token套餐标准化销售，2026H1云端API收入暴增2735.7%，AI服务正从\"项目"
+  "cross_analysis": "【核心矛盾】\nAmodei公开唱衰\"AI减速\"，但Anthropic内部Opus 5.2已进入灰度测试（条目2），自相矛盾。三星HBM4基础芯片从自研IDM转向台积电代工双轨制程（条目1），方向标\"neutral\"偏保守，但SK海力士已先行采用同模式，三星或是在追赶而非主动让渡，叙事分歧明显。\n\n【新兴趋势】\n\"B端AI Agent垂直化落地\"是多源共振主线：腾讯WorkBuddy/阿里千问/OpenAI金融版密集卡位金融机构（条目3），字节整合豆包+飞书+火山引擎攻企业市场（条目5），阿里千问跨场景复用至比亚迪座舱（条目6）。叠加Nvidia开源SoL-Pi降本（条目10），形成\"模型+Agent+算力\"三层商业化闭环。Arm Neoverse切入推理侧（条目9）则是另一条暗线，对x86服务器格局形成边际挤压。\n\n【信息盲点】\nAMD、Intel在本轮完全缺席，但Arm AGI CPU直接对标其服务器份额（条目9），应重点跟踪；台积电仅以HBM代工角色出现，其先进封装/CoWoS产能与HBM客户绑定未深入展开；Microm、HBM供应链下游英伟达/AMD的认证排期未提及；中国云厂商capex与推理算力传导（条目3、5均隐含）缺独立数据验证。\n\n【",
+  "trend_spotting": "三星HBM4基础芯片从DRAM工艺切换至台积电代工是结构性拐点：HBM供应商正把base die迁向先进逻辑制程，台积电从\"间接\"角色变成HBM生态的\"直接\"参与者，SK海力士已先行，三星的\"双轨\"实质是补位。叠加英伟达开源SoL-Pi将Agent Token消耗压降50%–64%，HBM需求与单位算力成本同时出现\"量增、价优\"的剪刀差。\n\n金融成为AI Agent第一个跑通的B端高门槛行业：幻觉率压至2%以内是关键阈值，腾讯已签约100+机构、OpenAI拉入摩根士丹利，IDC给出中国市场90.4%增速，医疗、政务复制路径已具备前提。\n\n字节把豆包+飞书+火山引擎整合是另一个拐点——大模型、协作、算力首次在中国市场以单一公司口径打包售卖，对阿里钉钉、腾讯企微构成直接压力测试。\n\n被低估的信号：Arm推出自研136核AGI CPU主打推理，300W对标x86 500W，直接与Intel/AMD服务器份额竞争；Opus 5.2灰测与Dario的\"减速\"言论形成预期差，需紧盯实际能力跃升幅度。"
 }
