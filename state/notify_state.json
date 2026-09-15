@@ -1,74 +1,7 @@
 {
-  "morning_last_date": "2026-09-14",
+  "morning_last_date": "2026-09-15",
   "weekly_last_slot": "2026-W37",
   "breaking_fingerprints": [
-    {
-      "tickers": [
-        "Anthropic"
-      ],
-      "features": [
-        "anthropic",
-        "个季",
-        "二个",
-        "季度",
-        "实现",
-        "将连",
-        "度实",
-        "现盈",
-        "盈利",
-        "第二",
-        "续第",
-        "连续"
-      ],
-      "sent_at": "2026-09-14T00:20:28Z"
-    },
-    {
-      "tickers": [
-        "Anthropic"
-      ],
-      "features": [
-        "anthropic",
-        "be",
-        "for",
-        "investors",
-        "it",
-        "profitable",
-        "quarter",
-        "second",
-        "straight",
-        "tells",
-        "will"
-      ],
-      "sent_at": "2026-09-14T00:20:58Z"
-    },
-    {
-      "tickers": [
-        "英伟达"
-      ],
-      "features": [
-        "800vdc",
-        "aidc",
-        "rubin",
-        "vera",
-        "一轮",
-        "上升",
-        "与将",
-        "中信",
-        "信建",
-        "动又",
-        "升周",
-        "又一",
-        "周期",
-        "将驱",
-        "建投",
-        "投与",
-        "源上",
-        "电源",
-        "轮电",
-        "驱动"
-      ],
-      "sent_at": "2026-09-14T00:21:26Z"
-    },
     {
       "tickers": [
         "Anthropic",
@@ -328,50 +261,143 @@
         "yesterday"
       ],
       "sent_at": "2026-09-14T23:47:18Z"
+    },
+    {
+      "tickers": [
+        "亚马逊",
+        "台积电",
+        "英伟达"
+      ],
+      "features": [
+        "2nm",
+        "3nm",
+        "不应",
+        "与先",
+        "产能",
+        "供不",
+        "先进",
+        "制程",
+        "台积",
+        "封装",
+        "应求",
+        "持续",
+        "电先",
+        "积电",
+        "程与",
+        "续供",
+        "能持",
+        "装产",
+        "进制",
+        "进封"
+      ],
+      "sent_at": "2026-09-15T01:59:51Z"
+    },
+    {
+      "tickers": [
+        "DeepSeek",
+        "英伟达"
+      ],
+      "features": [
+        "1.6t",
+        "1t-3t",
+        "3x",
+        "7x",
+        "above",
+        "better",
+        "blackwell",
+        "bryan",
+        "claim",
+        "deepseek",
+        "for",
+        "huang",
+        "inference",
+        "llms",
+        "model",
+        "mw",
+        "nvl72",
+        "on",
+        "per",
+        "rubin",
+        "semianalysis",
+        "shan",
+        "show",
+        "tests",
+        "throughput",
+        "to",
+        "token",
+        "up",
+        "vera",
+        "vs"
+      ],
+      "sent_at": "2026-09-15T02:00:10Z"
+    },
+    {
+      "tickers": [
+        "AMD",
+        "三星电子",
+        "海力士"
+      ],
+      "features": [
+        "dram",
+        "一个",
+        "下一",
+        "个十",
+        "十年",
+        "年要",
+        "的下",
+        "站起",
+        "要站",
+        "起来"
+      ],
+      "sent_at": "2026-09-15T02:00:25Z"
     }
   ],
   "last_report": {
-    "date": "2026-09-14",
+    "date": "2026-09-15",
     "macro": {
-      "cycle": "扩张第三年向第四年过渡的窄通道仍在,头部四家云厂季度capex合计稳在900亿美元上方,但本期新capex上修仅英伟达锚定Anthropic一家,环比斜率首次转平后未现二次抬头。Anthropic以六年期137亿美元锁定Rum Group佐治亚园区算力,单笔金额逼近头部云厂单季度上修量级,意味着算力订单的集中度在向非超大规模客户侧迁移,但总盘子的边际增量未明显扩张。",
+      "cycle": "扩张第三年向第四年过渡的窄通道仍在。头部四家云厂季度 capex 合计稳在 900 亿美元上方, 但本期新 capex 上修仅英伟达锚定 Anthropic 一家, 环比斜率自前次转平后未现二次抬头; Anthropic 以六年期 137 亿美元锁定 Rum Group 佐治亚园区, 单笔金额已逼近头部云厂单季上修量级, 意味着订单集中度正向非超大规模客户侧迁移, 总盘子的边际增量未明显扩张。",
       "trajectory": {
         "past": "晶圆制程产能",
         "now": "HBM与CoWoS良率位元密度",
         "next": "数据中心电力接入与机柜热密度",
-        "why_now": "单卡功耗从H100的700W升至GB200的2.3kW量级,Vera Rubin世代进一步上探,液冷从可选项变为必选,而园区主变与燃机排期18至36个月与GPU供货周期形成数量级错位",
-        "trigger": "若北美新建园区电力接入审批成为项目主要延迟项,或单机柜功率密度普遍突破130kW并批量化交付"
+        "why_now": "单卡功耗从 H100 的 700W 升至 GB200 的 2.3kW 量级, Vera Rubin 世代进一步上探, 液冷从可选项变为必选; 园区主变与燃机排期 18 至 36 个月与 GPU 供货周期形成数量级错位, 而 Rubin NVL72 推理每兆瓦 token 较 Blackwell 提升 7 倍, 凸显电力已取代芯片成为机柜级 PUE 的首要约束。",
+        "trigger": "若北美新建园区电力接入审批成为项目主要延迟项, 或单机柜功率密度普遍突破 130kW 并批量化交付"
       },
-      "shift": "三段轨迹维持,now段由HBM/CoWoS良率位元密度加电力热密度前置约束,调整为Agent长任务落地叠加CEO同框放缓前沿,推动训练侧周期与推理侧机柜密度的相对权重再分配",
+      "shift": "三段轨迹维持, now 段由 HBM/CoWoS 良率位元密度加电力热密度前置约束, 调整为 Agent 长任务落地叠加 CEO 同框放缓前沿, 推动训练侧周期与推理侧机柜密度的相对权重再分配",
       "shift_kind": "adjust"
     },
     "calls": [
       {
-        "claim": "韩国电力预付被拒标志龙仁集群电力瓶颈从叙事升格为可计量事件,主约束轴提前切到园区主变与燃机排期",
-        "falsifier": "若2026Q4 KEPCO与三星或海力士重启预付谈判并签署修订方案,或韩国产业通商资源部公布龙仁集群主变排期前置至2027年中之前,本判断失效",
-        "verify": "KEPCO转向政府补贴而非重启预付谈判"
+        "claim": "Vera Rubin 推理能效藏性能, 机柜级电源与液冷价值量上修",
+        "falsifier": "若 2026Q4 台积电法说会下调 2027 年 CoWoS-L capex 指引, 或 GE Vernova 与 Schneider 电力业务订单同比增速回落至 20% 以下, 本判断失效。",
+        "verify": "Rubin 世代电源订单能见度延伸到 2027"
       },
       {
-        "claim": "Anthropic以连续两季盈利与137亿美元长租锁定AI公司估值锚与算力订单可见度,token变现已能覆盖训练摊销",
-        "falsifier": "若2026Q4 Anthropic或OpenAI任一公开训练集群capex上修超10%,或Anthropic递交给SEC的S-1披露其盈利口径大量依赖递延收入与一次性调整项,本判断失效",
-        "verify": "推理token 3个月增1.5倍"
+        "claim": "CEO 同框呼吁放缓前沿, 反而锁定美国阵营算力加速路径",
+        "falsifier": "若 2026Q4 Anthropic 或 OpenAI 任一公开训练集群 capex 下修超 10%, 或独立评估者仅获模型访问而无权重与训练数据审计权限, 本判断失效。",
+        "verify": "美国阵营未出现实质性 capex 下修"
       },
       {
-        "claim": "Vera Rubin配合800VDC把机柜级电源价值量提升的主线从叙事推向订单,2027年量价齐升",
-        "falsifier": "若2026Q4台积电法说会下调2027年CoWoS-L capex指引,或GE Vernova与Schneider电力业务订单同比增速回落至20%以下,本判断失效",
-        "verify": "Rubin世代电源订单能见度延伸到2027"
+        "claim": "先进封装与 HBM 仍是 2026Q4 前最硬的供给侧约束",
+        "falsifier": "若 2026Q4 CoWoS 报价环比回落超 5%, 或 AMD 3D DRAM 流片良率连续两个季度低于 50%, 本判断失效。",
+        "verify": "CoWoS 报价 2026Q4 仍环比上行"
       },
       {
-        "claim": "CEO同框呼吁放缓前沿与Amodei承认中国不跟调的内在矛盾,实质上锁定了美国阵营的算力加速路径",
-        "falsifier": "若2026Q4 Anthropic或OpenAI任一公开训练集群capex下修超10%,或独立评估者仅获模型访问而无权重与训练数据审计权限,本判断失效",
-        "verify": "美国阵营未出现实质性capex下修"
+        "claim": "Token 变现开始覆盖训练摊销, 推理 capex 锚向非超大规模客户迁移",
+        "falsifier": "若 2026Q4 Anthropic 或 OpenAI 任一公开训练集群 capex 上修超 10%, 或 Anthropic 递交 SEC 的 S-1 披露其盈利口径大量依赖递延收入与一次性调整项, 本判断失效。",
+        "verify": "Anthropic S-1 不依赖递延收入"
       }
     ]
   },
-  "morning_fallback": {
-    "date": "2026-09-15",
-    "attempts": 1
-  },
+  "morning_fallback": null,
   "blindspot_ledger": [
+    {
+      "key": "AMD|ARM|ASML|Intel|Marvell|Meta|戴尔|美光|苹果",
+      "text": "本库对几大核心标的长期依赖二手转述: 苹果近 30 天有 109 条相关信息, 但全部来自 sec_edgar 以外, 无一手 IR; Meta 72 条、ASML 34 条、ARM 17 条同样结构性缺位; Intel 52 条覆盖但 days_since_own_disclosure 为空; AMD 124 条中最近自有披露已 14 天, Marvell 29 条中 18 天未更新, 美光 115 条中 20 天, 超微 23 条中 15 天。意味着对 Rubin 出货指引、CoWoS 实际报价、MI400 客户结构、SMCI 与戴尔 AI 服务器订单的最新判断, 全部处于二手外推区间, 财报窗口前的方向性下注风险高于表观。",
+      "first_seen": "2026-09-15",
+      "last_seen": "2026-09-15",
+      "times_seen": 1
+    },
     {
       "key": "ARM|ASML|Intel|Marvell|Meta|台积电|美光|苹果",
       "text": "覆盖审计显示,苹果近30天有100条相关信息进入本库但无一条来自其自有披露,Meta有74条同样依赖二手转述,Intel有55条且一手披露通道空缺,ASML有34条、ARM有17条均无直连产出。苹果折叠机、Beats游戏手柄这类72小时级别的高拐点信号目前全部来自二手供应链传闻,缺乏库克或硬件工程团队口径的交叉验证;美光自有披露已19天空缺,Marvell已17天空缺,本判断对HBM4价格曲线、定制ASIC出货节奏的置信区间需相应收窄。台积电虽未单独列出,但凡涉及CoWoS-L产能与良率的判断,本库同样缺乏其自有披露作为锚点,均为外推。",
@@ -447,13 +473,6 @@
       "text": "台积电近 30 天有 233 条相关信息进入本库, 全部为二手转述与同业外推, 自身 8-K 或法说会一手披露零产出; Meta 近 30 天 135 条、苹果 107 条、Intel 91 条同样无任何自有披露; ASML 89 条、Qualcomm 68 条、ARM 48 条均为同一状态。换言之, 对本轮周期最关键的几家供给侧标的, 我们的所有判断都建立在转载链上, 一旦原文出处失真, 自上而下的结论将整体下移一档可信度",
       "first_seen": "2026-09-04",
       "last_seen": "2026-09-04",
-      "times_seen": 1
-    },
-    {
-      "key": "AMD|ASML|Intel|Marvell|Meta|台积电|英伟达|苹果",
-      "text": "本库近30天覆盖台积电24源、256条, Meta 25源、138条, 苹果21源、114条, Intel 13源、95条, ASML 12源、93条, 但全部为二手转述, 上述五家近30天内无任何一手自有披露进入本库, 对其产能、订单与capex节奏的判断仍依赖同业财报外推与媒体转引; 算力链条核心标的英伟达、AMD、Marvell、Arista、台积电供应链本期素材完全缺席, 存储链条仅有HBM5预告(E14)与标题级提及, 缺少价格、库存、稼动率等关键运营数据, 电力与冷却侧无任何报道。",
-      "first_seen": "2026-09-03",
-      "last_seen": "2026-09-03",
       "times_seen": 1
     }
   ]

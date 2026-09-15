@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-14T23:47:05Z",
-  "text": "当前共有 23 个活跃事件。要点包括: 英伟达推出RTX PRO 5500 Blackwell工作站卡，搭载84GB GDDR7显存; 英伟达、Palantir等据报减少使用OpenAI和Anthropic最先进AI模型; DeepSeek engineer relections on RSI - burying my talent to yesterday; 苹果正式推出Siri人工智能，首日英语开放测试; 三星电机与高通据报合作开发有机桥技术。",
-  "since": "2026-09-14T23:47:05Z",
-  "active_event_count": 23,
+  "generated_at": "2026-09-15T01:59:33Z",
+  "text": "当前共有 30 个活跃事件。要点包括: 英伟达推出RTX PRO 5500 Blackwell工作站卡，搭载84GB GDDR7显存; 台积电3nm、2nm先进制程与先进封装产能持续供不应求; Vera Rubin NVL72 inference tests show up to 7x better token throughput per MW vs. Blackwell on a 1.6T DeepSeek model, above Huang's 3x claim for 1T-3T LLMs (Bryan Shan/SemiAnalysis); 英伟达、Palantir等据报减少使用OpenAI和Anthropic最先进AI模型; DeepSeek engineer relections on RSI - burying my talent to yesterday。",
+  "since": "2026-09-15T01:59:33Z",
+  "active_event_count": 30,
   "key_themes": [
     "ai_monetization",
-    "model_capability",
     "compute_demand",
+    "model_capability",
     "policy_export",
-    "edge_ai"
+    "chip_supply"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
   "cross_analysis": "【核心矛盾】\n本轮最显著的争议是\"AI减速论\"阵营的分裂：Anthropic Dario Amodei、Sam Altman、Musk 主张\"pace the frontier\"，微软同步发布2027年前模型行为准则，The Verge 更直接将其定性为\"安全协议还是行业卡特尔\"；而黄仁勋当面向特朗普表态\"不会让AI放缓发生\"，明确站在对立面。两条路线对算力链短期景气方向指向相反结论——若减速共识成型，NVDA/AVGO/台积电订单预期承压；若黄仁勋立场获政策端默许，则capex高景气延续。此外，企业端（Nvidia、Palantir）要求OpenAI/Anthropic提供更强数据安全保证并缩减前沿模型使用，与模型厂商",
-  "trend_spotting": "72小时内三条新趋势值得注意：\n\n**新兴趋势**：英伟达产品线加速\"去游戏化\"，RTX Pro 5500以84GB GDDR7（5090的2.6倍）切AI工作站，消费级5090断货、第三方炒至9500美元，反映Blackwell产能与定价权正向AI负载迁移。OpenAI则以3亿美元收购Glass Imaging，首次明确向\"多模态+硬件\"延伸，剑指计算摄影与未来终端。\n\n**早期信号**：苹果Siri AI被用户体验为\"重新值得使用\"，iOS 27可能成为端侧AI驱动换机的首个真实验证节点；AWS Bedrock AgentCore推出Consent门户，AI Agent企业落地进入身份治理基础设施补全阶段；macOS终结Rosetta，x86在消费生态的最后一根钉子被拔除。\n\n**市场盲"
+  "trend_spotting": "1. **新兴趋势**：SemiAnalysis测得Vera Rubin NVL72在1.6T DeepSeek模型上每兆瓦token吞吐较Blackwell高7倍，超出黄仁勋3倍口径，暗示\"藏性能\"；若官方确认，将上修算力ROI与云厂capx预期。同时智谱在天猫将Token套餐标准化销售，2026H1云端API收入暴增2735.7%，AI服务正从\"项目"
 }
