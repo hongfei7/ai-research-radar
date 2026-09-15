@@ -4,72 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "OpenAI",
-        "英伟达"
-      ],
-      "features": [
-        "chip",
-        "design",
-        "how",
-        "its",
-        "jalape",
-        "llms",
-        "openai",
-        "own",
-        "to",
-        "used"
-      ],
-      "sent_at": "2026-09-14T16:58:22Z"
-    },
-    {
-      "tickers": [
-        "DeepSeek"
-      ],
-      "features": [
-        "deepseek",
-        "倒重",
-        "推倒",
-        "重来"
-      ],
-      "sent_at": "2026-09-14T16:58:46Z"
-    },
-    {
-      "tickers": [
-        "中科曙光",
-        "工业富联",
-        "浪潮信息"
-      ],
-      "features": [
-        "中国",
-        "信研",
-        "力需",
-        "告显",
-        "国电",
-        "国算",
-        "均增",
-        "增长",
-        "年均",
-        "年我",
-        "我国",
-        "报告",
-        "显示",
-        "未来",
-        "来年",
-        "求年",
-        "电信",
-        "研究",
-        "示未",
-        "究院",
-        "算力",
-        "近倍",
-        "长近",
-        "院报",
-        "需求"
-      ],
-      "sent_at": "2026-09-14T16:59:04Z"
-    },
-    {
-      "tickers": [
         "DeepSeek",
         "英伟达"
       ],
@@ -294,6 +228,20 @@
         "to"
       ],
       "sent_at": "2026-09-15T13:02:07Z"
+    },
+    {
+      "tickers": [
+        "谷歌"
+      ],
+      "features": [
+        "and",
+        "extended",
+        "gemini",
+        "introducing",
+        "live",
+        "thinking"
+      ],
+      "sent_at": "2026-09-15T17:39:20Z"
     }
   ],
   "last_report": {

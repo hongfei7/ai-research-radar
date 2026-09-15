@@ -1,6 +1,19 @@
 {
   "candidates": [
     {
+      "id": "e4ffd802f21c237c7a37288765fe23c45105efa9",
+      "title": "TSMC revealing details about next gen A14 node",
+      "url": "https://iedm26.mapyourshow.com/8_0/sessions/session-details.cfm?scheduleid=331",
+      "source": "hackernews",
+      "published_at": "2026-09-15T15:31:55Z",
+      "raw_summary": "TSMC revealing details about next gen A14 node",
+      "score": 9,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "TSMC公开A14节点工艺细节，属于先进制程一手信息，对半导体路线判断高度相关。",
+      "queued_at": "2026-09-15T17:33:18Z"
+    },
+    {
       "id": "b96635b4fc7bc2c21323386d9b462f639b184b11",
       "title": "工作流可以自我进化了，英伟达开源 SoL-Pi，每小时省13.5刀！",
       "url": "https://www.leiphone.com/category/yanxishe/n5vgkp1vl7ghcjyr.html",
@@ -168,6 +181,58 @@
       "source_traceable": true,
       "why": "分析推测解码 Orthrus 在 BF16 下并非真正 lossless 但不影响 benchmark，触及 speculative decoding 数值精度这一被忽视的实际问题。",
       "queued_at": "2026-09-15T12:53:15Z"
+    },
+    {
+      "id": "3f22e7194fb577441b59f3ae911eb72ae282a9cd",
+      "title": "What we have learned at OpenShell applying formal methods to control AI agents",
+      "url": "https://nvidia.github.io/openshell-research/dev-notes/posts/2026-09-10-learning-formal-methods-agent-policy-prover",
+      "source": "hackernews",
+      "published_at": "2026-09-15T14:40:05Z",
+      "raw_summary": "What we have learned at OpenShell applying formal methods to control AI agents",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "用形式化方法约束AI agent控制流程的实战经验，对agent可靠性研究有直接参考价值。",
+      "queued_at": "2026-09-15T17:33:18Z"
+    },
+    {
+      "id": "8a9d2531694c5f3945358c1ad8665b9baa4e2675",
+      "title": "GRP-Obliteration: Unaligning LLMs with a Single Unlabeled Prompt",
+      "url": "https://arxiv.org/abs/2602.06258",
+      "source": "hackernews",
+      "published_at": "2026-09-15T14:31:23Z",
+      "raw_summary": "GRP-Obliteration: Unaligning LLMs with a Single Unlabeled Prompt",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "单条无标注prompt即可解除LLM对齐的研究，指向具体可复现的攻击方法，安全性方向重要信号。",
+      "queued_at": "2026-09-15T17:33:18Z"
+    },
+    {
+      "id": "2f92a8ca47fb31cce7ea14f80f46a6a31b87d29e",
+      "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
+      "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking",
+      "source": "rss:deepmind",
+      "published_at": "2026-09-15T17:05:57Z",
+      "raw_summary": "",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Gemini 3.8 Live及Extended Thinking的官方发布，多模态实时+扩展思考是关键能力升级。",
+      "queued_at": "2026-09-15T17:33:18Z"
+    },
+    {
+      "id": "b0aed8900cdcba12c2702304a95e37bbfde9b523",
+      "title": "10%+ performance improvement on MoE SSD-streaming with expert-lookahead",
+      "url": "https://www.reddit.com/r/localllama/comments/1wh3ek8/10_performance_improvement_on_moe_ssdstreaming",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-15T15:23:02Z",
+      "raw_summary": "I implemented expert lookahead, a trick that gets a 10%+ performance improvement on MoE models running on low-memory macs (Qwen 3.8 flash in this case) while using expert-offloading/ssd-streaming (using slotstream). This is 10% on top of several optimizations. I initially trained a small model to predict the experts N layers ahead so I could load them into memory in advance, but it turns out the model is its best predictor. After many experiments I ended up with N = 2, so while the current computation runs, slotstream runs qwen's router 2 layers ahead on the current hidden state to predict the next experts to load. Right now I'm training a small correction model on top, and it gives me an additional ~3-4% improvement. expert-lookahead for Qwen 3.8 flash: https://github.com/carloslfu/slotstream/blob/main/docs/EXPERT-LOOKAHEAD.md &#32; submitted by &#32; /u/carloslfu [link] &#32; [comments]",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "MoE expert-lookahead在SSD流式加载上获10%+增益，含具体方法（用模型自身作为预测器、N=2）和开源实现，工程价值高。",
+      "queued_at": "2026-09-15T17:33:18Z"
     },
     {
       "id": "5bd8289ee6266184d23d93ad35d61794afed1dad",
@@ -453,71 +518,6 @@
       "angle": "research",
       "source_traceable": true,
       "why": "用内部 attention/MLP 信号在解码阶段抑制早期事实错误雪球，机制可解释且对幻觉问题有具体抓手。",
-      "queued_at": "2026-09-15T12:53:15Z"
-    },
-    {
-      "id": "dcd8e6066165cc2f9c1640d450ceac205f93d212",
-      "title": "A Chosen Future Can Still Be Rewritten: Causal Writability in Video Models [Xingyun Wang, Haomin Zheng, Man Yuan, Leqian Yang, Ziming Liu]",
-      "url": "http://arxiv.org/abs/2609.15980v1",
-      "source": "arxiv:cs.LG",
-      "published_at": "2026-09-14T17:58:11Z",
-      "raw_summary": "When a video model generates physically incorrect motion, did it fail to learn the correct motion, or did it learn it but fail to use it? We show the latter: the correct motion remains available inside the model and can still be made to control the generated video. We train on videos where red masses oscillate slowly and blue masses oscillate quickly, then test a red mass with fast observed motion. Even when the model generates slow motion in this conflicting case, a low-dimensional edit predicted from simple physical variables restores the correct fast motion. We call this ability causal writability. At fixed strength, we find a sharp depth boundary: the same edit changes the video before the boundary but not after it. This closure marks commitment for that write. The motion signal nevertheless remains, and a stronger downstream write can restore physical motion, while excessive gain overshoots. Early causal writability predicts which errors training later corrects: those errors are writable at more network depths than errors that persist. We reproduce both causal writability and its sharp closure in a pretrained 1.3B video model, supporting generality across model scale and training regime.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "视频模型中'学到了但没用上'的因果可写性现象很有趣，对世界模型可控编辑有方法学价值。",
-      "queued_at": "2026-09-15T12:53:15Z"
-    },
-    {
-      "id": "e35d1aa8d24c8e99893e5b93d10275790d12a03e",
-      "title": "Safe Meta-Reinforcement Learning via Information Space Reachability [Zeyang Li, Sunbochen Tang, Navid Azizan]",
-      "url": "http://arxiv.org/abs/2609.15915v1",
-      "source": "arxiv:cs.LG",
-      "published_at": "2026-09-14T17:27:11Z",
-      "raw_summary": "Meta-reinforcement learning (meta-RL) enables agents to adapt to unseen tasks with limited experience. Despite its promise, the application of meta-RL in real-world tasks is hindered by safety requirements, which have been underexplored in prior work. In this paper, we propose a safe meta-RL framework that explicitly accounts for safety during adaptation. Our key insight is to reason about safety in the information space, which captures both the physical state and the agent's belief over the underlying task. Within this space, we introduce a safety value function that measures the probability of the agent avoiding unsafe regions indefinitely. We show that this function satisfies a self-consistency condition and a Bellman equation, which make it learnable via meta-RL. Based on this formulation, we develop a safe meta-RL algorithm that learns the safety value function and leverages it for safety filtering and constrained policy optimization. Experiments on meta-RL benchmarks demonstrate the effectiveness of the proposed method.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "在信息空间定义 safety value function 来做安全 meta-RL，把信念不确定性纳入安全判据，对安全 RL 工程有直接启发。",
-      "queued_at": "2026-09-15T12:53:15Z"
-    },
-    {
-      "id": "defa8768faf0b45c2c10d5e0aa6c647b698c93db",
-      "title": "Discrete Beckmann Transport Models for One-Step Language Modeling and Reasoning [Sophia Tang, Shiyi Wang]",
-      "url": "http://arxiv.org/abs/2609.15903v1",
-      "source": "arxiv:cs.LG",
-      "published_at": "2026-09-14T17:19:47Z",
-      "raw_summary": "Discrete diffusion and flow models are a promising alternative to autoregressive language models, but compressing many-step sampling into fewer steps typically requires distilling a pretrained teacher model. This caps the student at the teacher's quality and requires a costly two-stage training pipeline. We introduce Discrete Beckmann Transport Models (DBTM), built on a time-independent flow whose autonomous transport map provably carries any point in the ambient space to a fixed point on the vertices of the simplex in a single step. We show that this fixed-point property is characterized by a conservation equation whose residual can be minimized directly from data, removing the requirement for a teacher flow and time conditioning. Under this construction, a partially trained map corresponds to the flow truncated at finite time, so generation reduces to iterating one map until it reaches a fixed point. We further extend the map to a partial-context interpolant where additional function evaluations act as refinement steps rather than ODE integration steps. On language modeling and reasoning tasks, DBTM enables one- and few-step generation that improves quality and accuracy over discrete diffusion and continuous flow baselines.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "DBTM 用时无关 flow 在一步内把任意点映到 simplex 顶点，避开了离散扩散蒸馏的 teacher 瓶颈，理论命题清楚。",
-      "queued_at": "2026-09-15T12:53:15Z"
-    },
-    {
-      "id": "3c126044b676be125f93a3b08cadc87acf996d01",
-      "title": "Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost",
-      "url": "https://arstechnica.com/ai/2026/09/exclusive-open-chinese-models-close-gap-with-silicon-valleys-frontier-ai-models",
-      "source": "rss:arstechnica-ai",
-      "published_at": "2026-09-15T12:00:41Z",
-      "raw_summary": "Ars previewed Mozilla’s report on how cheap open models caught up on capability.",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "Mozilla关于开源模型追赶前沿的成本-时间曲线数据，'4个月/5倍成本'是关键定量结论。",
-      "queued_at": "2026-09-15T12:53:15Z"
-    },
-    {
-      "id": "84a059486c46d5e8e9fb536be89568e033386a1d",
-      "title": "企业案例分享：玉盘量智-离子阱量子计算芯片化集成工程实践",
-      "url": "https://36kr.com/p/3984525481786120?f=rss",
-      "source": "rss:36kr",
-      "published_at": "2026-09-15T10:33:51Z",
-      "raw_summary": "2026产业未来大会聚焦新周期机遇，共探产业未来与“中国之光”的诞生。玉盘量智执行总裁曾汝祺围绕离子阱量子计算的量智融合工程化落地主题，深度拆解了该技术路线从实验室走向规模化的核心挑战、技术路径与产业逻辑。当产业投资进入深水区，资本、技术与产业加速融合，量子计算如何完成从 “科学装置” 到 “计算机” 的跨越？玉盘量智给出了以半导体工业方法推进量智融合计算工程化的答案。 演讲者：玉盘量智执行总裁 曾汝祺 曾汝祺：各位嘉宾，各位同行，大家好！非常荣幸有此机会和大家做分享。 今天我想分享一个很具体的问题，如果离子阱技术要走出实验室，工程上有哪些挑战，我们正在做哪些工作，以及为什么我们把这件事放在亦庄来做？ 01 离子阱，从 “单个好比特” 到 “规模化计算机” 离子阱是目前工业界已得到工程验证、并被广泛认为具有通向大规模通用容错量子计算潜力的主流技术路线之一。 所谓离子量子比特，是一颗被电场悬浮在超高真空中的带电原子，通过选择原子的特定能级来编码量子信息。 它特殊的优势，来自一个朴素的事实——它的量子比特，本身就是天然原子。 在工程落地上，这个起点带来三方面价值： ▍&nbsp;量子比特天然一致。 自然界里任何一种原子，物理属性完全一致，即量子比特的一致性、可重复性由物理定律天然保证；因此，离子比特不存在固态器件里纳米级的制造误差，这意味着我们不用给每个比特单独做标定、做补偿。虽在真实系统中，仍然需要对局部磁场、驱动强度、电势、运动模式等系统参数进行校准，但显著降低了规模化后因器件离散性带来的工程复杂度。 ▍&nbsp;相干时间长。 离子天然具有优异的量子相干特性；公开文献中，特定实验条件下单离子的量子存储时间已经可以达到分钟甚至小时量级。相干时间越长，意味着留给量子逻辑操作、反馈控制和量子纠错的时间窗口越大，这也是离子阱非常适合发展高保真度计算和容错量子计算的重要原因。 ▍&nbsp;运行条件友好。 离子量子比特本身并不依赖接近绝对零度的稀释制冷环境，在室温条件下也可以运行；面向更低噪声、更高真空质量以及控制电子学集成，当前运行系统主要采用数K量级的低温真空平台环境，对应的真空、制冷设备供应链在国内已经非常成熟。 但是，离子阱真正的挑战并不在于\"一个量子比特好不好\"。 当系统从百个量子比特继续向更大规模扩展，真正困难的问题变成了：这么多性能优异的离子量子比特，怎样真正组成一台能够长期、稳定、高效运行的计算机？ 上年物理诺奖得主John Martinis 曾提出一个重要观点：量子计算同样需要经历属于自己的工业革命。本质上，就是要从实验室里的科学装置，逐步走向可以制造、复制和持续迭代的基于半导体工业实现的计算系统。 对离子阱技术而言，这意味着：关键已不是\"当下可以展示多少个量子比特\"，而是如何把过去分散在大型光学平台、电子仪器和真空系统中的量子物理计算系统，逐步进行芯片化和量智系统集成，解决规模扩大之后出现的布线爆炸、噪声、同步、时延和复杂控制等一系列工程问题。 ▍从\"单一舞台\"到\"流水线\"规模化扩展：QCCD 架构 要让离子量子比特大量协同工作，首先要回答\"怎么组织\"。离子阱规模化有一个非常重要的架构——QCCD（Quantum Charge-Coupled Device）。 它的核心思想可以简单理解为：不是让更多的离子全部挤在一条长链中完成所有计算，而是把物理计算系统拆成不同功能区域，例如存储区、量子逻辑操作区、读出区、装载区和离子输运通道等。计算时，通过电场控制，把相应的离子移动到指定区域完成特定操作。 做一个工程上的类比：相当于把一个越来越大的",
-      "score": 7,
-      "angle": "engineering",
-      "source_traceable": true,
-      "why": "离子阱量子计算芯片化工程挑战的一手拆解，涵盖比特一致性、真空、控制等具体技术路径。",
       "queued_at": "2026-09-15T12:53:15Z"
     }
   ],

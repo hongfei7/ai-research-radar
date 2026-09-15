@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-15T13:01:25Z",
-  "text": "当前共有 30 个活跃事件。要点包括: 阿莫迪口嗨AI减速，这边Opus 5.2疑似已灰测; 消息称三星电子调整定制HBM基础芯片供应链，或推行“双轨”战略; MediaTek unveils the Dimensity 9600 Pro, its first phone SoC on TSMC's 2nm node, and the 3nm 9600M, with boosted AI performance, as it competes with Qualcomm (Wen-Yee Lee/Reuters); Apple brings a fully revamped Siri built on Google's Gemini, but not to the EU; AI巨头，盯上“金融牛马”。",
-  "since": "2026-09-15T13:01:25Z",
+  "generated_at": "2026-09-15T17:38:58Z",
+  "text": "截至 2026-09-16 01:38 HKT，本轮新增主要变化：Google DeepMind 发布 Gemini 3.8 Live 及 Extended Thinking，主打实时多模态与增强推理；台积电披露 1.4nm 级 A14 节点细节，延续制程领先；Meta 宣布 2027 上半年部署第三代自研 AI 芯片 MTIA 450、年底推广 MTIA 500，云厂自研加速器持续推进。NVIDIA 在 AI Infra Summit 展示 Vera Rubin 与 DSX 平台，聚焦\"每瓦 Token 数\"能效；英伟达与 Emerald AI 合作展示 AI 工厂动态响应电网的能力。美国 EPA 拟取消发电厂气候法规，叠加 AI 数据中心需求，美国数据中枢 2035 年或跃升为全球第五大天然气消费体。AI 治理分歧升级：Anthropic 前举报人警告 2030 年生存级风险，OpenAI、Anthropic、xAI 联名呼吁外部治理，黄仁勋及特朗普斥为\"危言耸听\"。此外，Meta 推出 Meta One 订阅捆绑 AI，ChatGPT 内嵌广告模式跑通，DeepSeek 任命新 CFO，豆包手机今日开售。",
+  "since": "2026-09-15T17:38:58Z",
   "active_event_count": 30,
   "key_themes": [
     "ai_monetization",
-    "model_capability",
     "compute_demand",
-    "edge_ai",
-    "policy_export"
+    "model_capability",
+    "policy_export",
+    "chip_supply"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n三大阵营对AI监管/减速存在明显撕裂：OpenAI/Anthropic/Google以\"安全\"为由联合倡议减速（df8f3eb0），却被Cohere CEO Gomez斥为\"换了名字的卡特尔\"，白宫与特朗普公开反对（2ab1f1b0）。闭源护城河叙事内部也出现矛盾——Mozilla报告（3c126044）显示开源模型4个月即追平闭源前沿、5倍成本难以为继，但Salesforce+英伟达Koa（bad63929）却又用英伟达开源权重做垂直推理，证明\"开源≠低价\"，护城河争议远未收敛。果链AI联盟亦生变：苹果弃OpenAI转用Gemini重构Siri（e2755d53），与原合作伙伴关系出现松动。\n\n【新兴趋势】\n端侧AI/边缘推理在多条线索中密集出现，构成最强信号：联发科2nm（8634bd79）、Perplexity仅限24GB+ RTX本地智能体（3ba47b3e）、苹果Siri端云混合、腾讯云EdgeOne Booster（fad327d7）、豆包手机A2A协议（867d9250）、天数智芯对标英伟达ISP端侧路线（36e3",
+  "cross_analysis": "【核心矛盾】\nAI安全监管路线严重分裂：Anthropic前举报人联合OpenAI、xAI高管公开呼吁外部治理减速，Tom's Hardware报道称黄仁勋、中国监管及美国总统均将相关担忧定性为\"危言耸听\"（条目2）。另一处内在矛盾来自Bill Gates——同一条消息中他既警告90%训练数据为英语、小语种识别失败率60%，又宣布两年内投入10亿美元重仓AI（条目14）。此外，EPA拟取消电厂气候法规（条目17）与AI数据中心2035年将消耗150亿立方英尺/日天然气（条目11）形成政策与需求的方向背离。\n\n【新兴趋势】\n**电力/能效成为AI竞争主轴**，在多条报道中反复出现：NVIDIA Vera Rubin以\"每瓦Token数\"为核心指标（条目3）、Emerald AI灵活负载调度（条目5）、AI数据中心跻身全球第五大天然气消费体（条目11）、天玑9600 Pro功耗降37-61%（条目15）。**C端AI订阅/广告变现路径加速验证**：Meta One订阅（条目7、12）、ChatGPT内嵌广告跑通并引入Amazon Ads（条目19）。**终端Agent落地竞赛**：豆包手机（条目13）、",
   "trend_spotting": "72小时新变化集中在三个方向：联发科首发台积电2nm手机SoC（9600 Pro），标志2nm良率进入可承接外部客户阶段；苹果S"
 }
