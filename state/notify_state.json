@@ -4,86 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "字节跳动",
-        "工业富联",
-        "海光信息"
-      ],
-      "features": [
-        "ai",
-        "万卡",
-        "东建",
-        "京东",
-        "亿算",
-        "借亿",
-        "入豪",
-        "力进",
-        "十万",
-        "卡字",
-        "字节",
-        "建十",
-        "时刻",
-        "算力",
-        "节借",
-        "豪赌",
-        "赌时",
-        "进入"
-      ],
-      "sent_at": "2026-09-14T11:00:31Z"
-    },
-    {
-      "tickers": [
-        "英伟达"
-      ],
-      "features": [
-        "ai",
-        "伟达",
-        "先慌",
-        "刹车",
-        "厂踩",
-        "和白",
-        "大厂",
-        "宫先",
-        "慌了",
-        "白宫",
-        "硅谷",
-        "英伟",
-        "谷大",
-        "踩刹",
-        "车英",
-        "达和"
-      ],
-      "sent_at": "2026-09-14T11:00:52Z"
-    },
-    {
-      "tickers": [
-        "Anthropic",
-        "OpenAI",
-        "xAI"
-      ],
-      "features": [
-        "们该",
-        "何理",
-        "减速",
-        "响指",
-        "型减",
-        "大模",
-        "如何",
-        "我们",
-        "指我",
-        "模型",
-        "理解",
-        "的响",
-        "莫迪",
-        "解大",
-        "该如",
-        "迪的",
-        "速论",
-        "阿莫"
-      ],
-      "sent_at": "2026-09-14T11:01:12Z"
-    },
-    {
-      "tickers": [
         "OpenAI",
         "英伟达"
       ],
@@ -315,6 +235,65 @@
         "链或"
       ],
       "sent_at": "2026-09-15T07:34:02Z"
+    },
+    {
+      "tickers": [
+        "台积电",
+        "高通"
+      ],
+      "features": [
+        "2nm",
+        "3nm",
+        "9600m",
+        "ai",
+        "and",
+        "as",
+        "boosted",
+        "competes",
+        "dimensity",
+        "first",
+        "it",
+        "its",
+        "lee",
+        "mediatek",
+        "node",
+        "on",
+        "performance",
+        "phone",
+        "pro",
+        "qualcomm",
+        "reuters",
+        "soc",
+        "the",
+        "tsmc",
+        "unveils",
+        "wen-yee",
+        "with"
+      ],
+      "sent_at": "2026-09-15T13:01:48Z"
+    },
+    {
+      "tickers": [
+        "苹果",
+        "谷歌"
+      ],
+      "features": [
+        "apple",
+        "brings",
+        "built",
+        "but",
+        "eu",
+        "fully",
+        "gemini",
+        "google",
+        "not",
+        "on",
+        "revamped",
+        "siri",
+        "the",
+        "to"
+      ],
+      "sent_at": "2026-09-15T13:02:07Z"
     }
   ],
   "last_report": {
