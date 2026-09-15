@@ -235,6 +235,19 @@
       "queued_at": "2026-09-15T17:33:18Z"
     },
     {
+      "id": "7b4c6fdab96fc77d4f8734a37f7a690336895a66",
+      "title": "Learning to solve hard problems in RL for LLMs by never giving up",
+      "url": "https://mnoukhov.github.io/posts/ngu",
+      "source": "hackernews",
+      "published_at": "2026-09-15T19:07:38Z",
+      "raw_summary": "Learning to solve hard problems in RL for LLMs by never giving up. <a href=\"https:&#x2F;&#x2F;arxiv.org&#x2F;abs&#x2F;2609.13443\" rel=\"nofollow\">https:&#x2F;&#x2F;arxiv.org&#x2F;abs&#x2F;2609.13443</a>",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "指向arXiv论文，讨论RL for LLMs中'不放弃'的训练策略，直接关联LLM推理能力提升的一手研究。",
+      "queued_at": "2026-09-15T23:07:43Z"
+    },
+    {
       "id": "5bd8289ee6266184d23d93ad35d61794afed1dad",
       "title": "Dropping eBPF CPU Cost by About 90% With Memoization",
       "url": "https://nathannaveen.dev/posts/dropping-ebpf-cpu-cost-by-90",
@@ -505,19 +518,6 @@
       "angle": "research",
       "source_traceable": true,
       "why": "在 midtraining 引入新词把不安全行为圈定在特定上下文，对 post-training 安全泛化机制有新视角。",
-      "queued_at": "2026-09-15T12:53:15Z"
-    },
-    {
-      "id": "9e60aedcd78c045f946ec9f86e61f214144df281",
-      "title": "Look Before You Leap: Factual Decoding with Internal Attribution Signals [Hayeong Ryu, JungMin Yun, Byeonggeuk Lim, Sunhee Jo, YoungBin Kim]",
-      "url": "http://arxiv.org/abs/2609.15745v1",
-      "source": "arxiv:cs.CL",
-      "published_at": "2026-09-14T15:35:42Z",
-      "raw_summary": "Hallucination remains a critical challenge in large language models (LLMs), where early factual errors compound through autoregressive generation in a snowballing effect that neither post-hoc correction nor weight-level intervention can effectively preempt. We propose DescaPE (DEcoding Signal Control Against Path Error-snowballing), a decoding framework that leverages internal model signals to suppress hallucination-prone trajectories at inference time. Through sliding-window MLP ablation, we identify a factual-salient layer span within LLMs whose derived signal is selectively elevated for factual tokens and exhibits anomalous spikes at hallucination-prone steps. We train a lightweight probe to approximate this signal from a single forward pass and integrate it into candidate scoring to penalize high-risk continuations while rewarding factually grounded ones. Experiments across five factuality benchmarks on three LLMs demonstrate that DescaPE achieves factuality improvements over decoding-time baselines in multiple settings, while incurring only 1.10x latency overhead in our efficiency evaluation. Our code is available at https://github.com/hayeonggg/DESCAPE.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "用内部 attention/MLP 信号在解码阶段抑制早期事实错误雪球，机制可解释且对幻觉问题有具体抓手。",
       "queued_at": "2026-09-15T12:53:15Z"
     }
   ],

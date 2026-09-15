@@ -242,6 +242,38 @@
         "thinking"
       ],
       "sent_at": "2026-09-15T17:39:20Z"
+    },
+    {
+      "tickers": [
+        "Anthropic",
+        "OpenAI"
+      ],
+      "features": [
+        "1.2t",
+        "about",
+        "another",
+        "at",
+        "before",
+        "conversations",
+        "early",
+        "financial",
+        "funding",
+        "has",
+        "held",
+        "investors",
+        "ipo",
+        "its",
+        "openai",
+        "planned",
+        "private",
+        "raising",
+        "round",
+        "sources",
+        "times",
+        "valuation",
+        "with"
+      ],
+      "sent_at": "2026-09-15T23:09:45Z"
     }
   ],
   "last_report": {
@@ -281,7 +313,10 @@
       }
     ]
   },
-  "morning_fallback": null,
+  "morning_fallback": {
+    "date": "2026-09-16",
+    "attempts": 1
+  },
   "blindspot_ledger": [
     {
       "key": "AMD|ARM|ASML|Intel|Marvell|Meta|戴尔|美光|苹果",
