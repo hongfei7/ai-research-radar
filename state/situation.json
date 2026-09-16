@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-16T06:42:59Z",
-  "text": "当前共有 21 个活跃事件。要点包括: 谷歌发布Gemini 3.8 Live实时对话模型，已通过API开放; OpenAI拒绝投资人1.2万亿美元估值报价，坚持不低于1.5万亿美元; AI没有泡沫，只有割裂; Google发布Gemini 3.8 Live语音模型，API支持零依赖实时交互; OpenAI拟1.2万亿美元融资并将IPO推迟至2027年。",
-  "since": "2026-09-16T06:42:59Z",
-  "active_event_count": 21,
+  "generated_at": "2026-09-16T12:17:17Z",
+  "text": "当前共有 30 个活跃事件。要点包括: OpenAI拒绝投资人1.2万亿美元估值报价，坚持不低于1.5万亿美元; AI没有泡沫，只有割裂; Sources: SK Hynix is in talks with Intel to manufacture memory chips in the US but potential opposition from Seoul could be a major hurdle for the deal (Reuters); SK海力士据报与英特尔洽谈在美生产存储芯片; 内存价格飙涨五到七倍，英特尔CEO预警内存短缺还会继续恶化。",
+  "since": "2026-09-16T12:17:17Z",
+  "active_event_count": 30,
   "key_themes": [
-    "compute_demand",
     "ai_monetization",
+    "compute_demand",
     "model_capability",
     "chip_supply",
     "datacenter_power"
@@ -13,6 +13,6 @@
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n1）OpenAI融资与IPO节奏：36kr报道仅泛指\"新一轮融资可能推迟IPO\"且缺乏细节，而tmtpost明确给出1.2万亿美元融资规模、3520亿美元估值增量及2027年IPO时间表——两源对规模与确定性存在显著落差。2）数据中心政策影响判断分歧：SemiAnalysis测算全美仅约2.3GW产能因项目级政策直接延期，认定\"政策恐慌过度\"；但NYT/锡耶纳民调显示61%选民反对AI数据中心建设，舆论压力或转化为未来政策——实际影响有限 vs 潜在风险升温构成预期差。\n\n【新兴趋势】\n实时语音/多模态成为模型竞争新战场：谷歌Gemini 3.8 Live与OpenAI GPT-Live正面交锋，WebSocket+Web Audio API架构显著降低语音Agent开发门槛。AI基础设施供应链纵向延伸：硅电容在AI芯片垂直供电中的应用（森丸电子融资）从材料端切入算力链。亚太成头部模型厂商新增长极，Anthropic新加坡设点、谷歌Search Live全球推广同步推进。\n\n【信息盲点】\n本轮对TSMC、Apple、Oracle、Meta、CoreWeave及HBM三巨头（SK海力士/三星/美光）均无明确信号；AMD虽被提及为英伟达替代品但缺独立催化；中国AI链（阿里、字节、腾讯、百度）及国产算力标的在美方政策博弈背景下亦无更新，覆盖偏斜明显。\n\n【跨标的联动】\n谷歌Gemini Live直接对标OpenAI语音产品，份额竞争加剧；OpenAI 1.2万亿融资若落地将锁定英伟达/AMD算力长单，进一步强化算力链需求传导至PCB/CCL（工业富联）及ASIC载",
+  "cross_analysis": "【核心矛盾】\n1) **存储短缺 vs 产能扩张**：Intel CEO 预警内存价格已飙5-7倍且将恶化（36kr），同期 SK海力士却被报道与Intel洽谈租用俄亥俄厂在美产HBM（tomshardware）——同一周期内\"短缺预警\"与\"扩产落地\"叙事并存，分歧在于扩产能否对冲AI需求（HSBC/美光/三星是否被进一步挤压定价权）。\n2) **中国AI能力定位**：Mozilla 报告称中美开源差距缩至4个月、推理成本仅30%，但黄仁勋在tomshardware断言中国3-4年内必然突破先进光刻——前者是\"已收敛\"，后者是\"必将",
   "trend_spotting": "72小时新变化集中在三个方向：联发科首发台积电2nm手机SoC（9600 Pro），标志2nm良率进入可承接外部客户阶段；苹果S"
 }

@@ -4,66 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "Anthropic",
-        "OpenAI",
-        "英伟达"
-      ],
-      "features": [
-        "ai",
-        "opus",
-        "似已",
-        "减速",
-        "口嗨",
-        "嗨减",
-        "已灰",
-        "灰测",
-        "疑似",
-        "莫迪",
-        "边疑",
-        "这边",
-        "迪口",
-        "速这",
-        "阿莫"
-      ],
-      "sent_at": "2026-09-15T07:33:40Z"
-    },
-    {
-      "tickers": [
-        "三星电子",
-        "台积电",
-        "海力士"
-      ],
-      "features": [
-        "hbm",
-        "三星",
-        "供应",
-        "制基",
-        "双轨",
-        "基础",
-        "子调",
-        "定制",
-        "应链",
-        "息称",
-        "或推",
-        "战略",
-        "推行",
-        "整定",
-        "星电",
-        "消息",
-        "片供",
-        "电子",
-        "础芯",
-        "称三",
-        "芯片",
-        "行双",
-        "调整",
-        "轨战",
-        "链或"
-      ],
-      "sent_at": "2026-09-15T07:34:02Z"
-    },
-    {
-      "tickers": [
         "台积电",
         "高通"
       ],
@@ -277,6 +217,91 @@
         "谈在"
       ],
       "sent_at": "2026-09-16T06:44:05Z"
+    },
+    {
+      "tickers": [
+        "字节跳动"
+      ],
+      "features": [
+        "pro",
+        "入豆",
+        "包工",
+        "包模",
+        "型更",
+        "工作",
+        "已接",
+        "接入",
+        "新已",
+        "更新",
+        "模型",
+        "豆包"
+      ],
+      "sent_at": "2026-09-16T12:17:45Z"
+    },
+    {
+      "tickers": [
+        "Intel",
+        "海力士"
+      ],
+      "features": [
+        "ai",
+        "chip",
+        "discussing",
+        "forming",
+        "hynix",
+        "hyperscalers",
+        "include",
+        "intel",
+        "joint",
+        "leasing",
+        "manufacturing",
+        "memory",
+        "ohio",
+        "options",
+        "or",
+        "other",
+        "plant",
+        "reportedly",
+        "sk",
+        "us",
+        "venture",
+        "with"
+      ],
+      "sent_at": "2026-09-16T12:18:01Z"
+    },
+    {
+      "tickers": [
+        "Anthropic"
+      ],
+      "features": [
+        "2.16gw",
+        "anthropic",
+        "australian",
+        "brisbane",
+        "byron",
+        "campus",
+        "center",
+        "come",
+        "data",
+        "first",
+        "for",
+        "from",
+        "has",
+        "in",
+        "its",
+        "kaye",
+        "lease",
+        "located",
+        "miles",
+        "online",
+        "planned",
+        "reuters",
+        "set",
+        "signed",
+        "sources",
+        "to"
+      ],
+      "sent_at": "2026-09-16T12:18:23Z"
     }
   ],
   "last_report": {
