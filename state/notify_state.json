@@ -4,95 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "亚马逊",
-        "台积电",
-        "英伟达"
-      ],
-      "features": [
-        "2nm",
-        "3nm",
-        "不应",
-        "与先",
-        "产能",
-        "供不",
-        "先进",
-        "制程",
-        "台积",
-        "封装",
-        "应求",
-        "持续",
-        "电先",
-        "积电",
-        "程与",
-        "续供",
-        "能持",
-        "装产",
-        "进制",
-        "进封"
-      ],
-      "sent_at": "2026-09-15T01:59:51Z"
-    },
-    {
-      "tickers": [
-        "DeepSeek",
-        "英伟达"
-      ],
-      "features": [
-        "1.6t",
-        "1t-3t",
-        "3x",
-        "7x",
-        "above",
-        "better",
-        "blackwell",
-        "bryan",
-        "claim",
-        "deepseek",
-        "for",
-        "huang",
-        "inference",
-        "llms",
-        "model",
-        "mw",
-        "nvl72",
-        "on",
-        "per",
-        "rubin",
-        "semianalysis",
-        "shan",
-        "show",
-        "tests",
-        "throughput",
-        "to",
-        "token",
-        "up",
-        "vera",
-        "vs"
-      ],
-      "sent_at": "2026-09-15T02:00:10Z"
-    },
-    {
-      "tickers": [
-        "AMD",
-        "三星电子",
-        "海力士"
-      ],
-      "features": [
-        "dram",
-        "一个",
-        "下一",
-        "个十",
-        "十年",
-        "年要",
-        "的下",
-        "站起",
-        "要站",
-        "起来"
-      ],
-      "sent_at": "2026-09-15T02:00:25Z"
-    },
-    {
-      "tickers": [
         "Anthropic",
         "OpenAI",
         "英伟达"
@@ -284,6 +195,88 @@
         "首次"
       ],
       "sent_at": "2026-09-16T01:31:10Z"
+    },
+    {
+      "tickers": [
+        "AMD",
+        "三星电子",
+        "海力士"
+      ],
+      "features": [
+        "ai",
+        "割裂",
+        "只有",
+        "有割",
+        "有泡",
+        "没有",
+        "沫只",
+        "泡沫"
+      ],
+      "sent_at": "2026-09-16T06:43:26Z"
+    },
+    {
+      "tickers": [
+        "Intel",
+        "海力士"
+      ],
+      "features": [
+        "be",
+        "but",
+        "chips",
+        "could",
+        "deal",
+        "for",
+        "from",
+        "hurdle",
+        "hynix",
+        "in",
+        "intel",
+        "is",
+        "major",
+        "manufacture",
+        "memory",
+        "opposition",
+        "potential",
+        "reuters",
+        "seoul",
+        "sk",
+        "sources",
+        "talks",
+        "the",
+        "to",
+        "us",
+        "with"
+      ],
+      "sent_at": "2026-09-16T06:43:40Z"
+    },
+    {
+      "tickers": [
+        "Intel",
+        "三星电子",
+        "海力士"
+      ],
+      "features": [
+        "sk",
+        "与英",
+        "产存",
+        "储芯",
+        "力士",
+        "在美",
+        "士据",
+        "存储",
+        "尔洽",
+        "报与",
+        "据报",
+        "洽谈",
+        "海力",
+        "特尔",
+        "生产",
+        "美生",
+        "芯片",
+        "英特",
+        "谈在"
+      ],
+      "sent_at": "2026-09-16T06:44:05Z"
     }
   ],
   "last_report": {
