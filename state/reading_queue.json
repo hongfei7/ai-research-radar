@@ -1,6 +1,19 @@
 {
   "candidates": [
     {
+      "id": "6c3aabdc873f538feebec9ae77817cb181ffcf86",
+      "title": "Breaking the 1.58-bit Barrier for Ternary LLMs",
+      "url": "https://arxiv.org/abs/2609.16338",
+      "source": "hackernews",
+      "published_at": "2026-09-16T20:59:24Z",
+      "raw_summary": "Breaking the 1.58-bit Barrier for Ternary LLMs",
+      "score": 9,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "1.58-bit 三值 LLM 量化突破点直接关系到极低比特 LLM 推理可行性，标题暗示具体方法与结果，值得读原文看是否真有论文支撑。",
+      "queued_at": "2026-09-16T22:52:15Z"
+    },
+    {
       "id": "fe194d92e59ac6c1de53423f30743db750eaf96c",
       "title": "Agentic Societies Need a Social Harness [Tapan Chugh, Vidushi Singh, Krish Jain, Arvind Krishnamurthy, Ratul Mahajan]",
       "url": "http://arxiv.org/abs/2609.17527v1",
@@ -326,6 +339,45 @@
       "queued_at": "2026-09-16T19:59:57Z"
     },
     {
+      "id": "a4366a04a0846cb5e7eaf9586dead2fdbc755f85",
+      "title": "Training Text-to-Image Models 3.6× Faster",
+      "url": "https://www.linum.ai/field-notes/jit-ddt",
+      "source": "hackernews",
+      "published_at": "2026-09-16T16:58:13Z",
+      "raw_summary": "Training Text-to-Image Models 3.6× Faster",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "3.6× 加速训练文生图模型有具体数字，若附带方法细节对大规模训练工程取舍很有参考价值。",
+      "queued_at": "2026-09-16T22:52:15Z"
+    },
+    {
+      "id": "a27cd3b0b3e39dd9755e4eed9d414cce221bc5cc",
+      "title": "Sources: a group of 10 banks is providing a $22B loan to Blackstone and Alphabet's venture Crux AI, which provides compute for AI labs, to fund TPU purchases (Bloomberg)",
+      "url": "https://www.techmeme.com/260916/p47#a260916p47",
+      "source": "rss:techmeme",
+      "published_at": "2026-09-16T22:20:01Z",
+      "raw_summary": "Bloomberg: Sources: a group of 10 banks is providing a $22B loan to Blackstone and Alphabet's venture Crux AI, which provides compute for AI labs, to fund TPU purchases&nbsp; &mdash;&nbsp; A group of 10 banks is providing a $22 billion chip loan to support Blackstone Inc. and Alphabet Inc.'s new cloud venture Crux AI &hellip;",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "10 家银行 22 亿美元贷款给 Blackstone/Google 合资 Crux AI 购 TPU，是 AI 算力融资结构与 TPU 替代路径的关键信号。",
+      "queued_at": "2026-09-16T22:52:15Z"
+    },
+    {
+      "id": "5d39801a570928ce89b4762e60a304ddb9b46157",
+      "title": "GoBench: Evaluating LLMs on the game of Go [R]",
+      "url": "https://www.reddit.com/r/machinelearning/comments/1wi68jg/gobench_evaluating_llms_on_the_game_of_go_r",
+      "source": "reddit:ml",
+      "published_at": "2026-09-16T18:54:35Z",
+      "raw_summary": "GoBench evaluates LLMs on 9x9 Go games against a ladder of KataGo opponents, from random to superhuman. It measures general reasoning ability, strongly correlates with ARC-AGI 2 (r=0.83 correlation), and remains highly unsaturated. GPT-6 Astra max achieves 2500 Elo, much lower than the best KataGo, which achieves 4400 Elo. With coding tools and two hours of preparation before evaluation, Codex with Astra achieves 3560 Elo. I will keep the leaderboard updated as long as it is not saturated. leaderboard: https://rolandgao.com/blog/gobench/ code: https://github.com/RolandGao/gobench paper: https://github.com/RolandGao/gobench/blob/main/paper/gobench2.pdf x: https://x.com/Roland65821498/status/2100253388562723298?s=20 &#32; submitted by &#32; /u/Roland31415 [link] &#32; [comments]",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "GoBench 把 LLM 与 KataGo 阶梯对战，得出与 ARC-AGI 2 强相关且高度未饱和的结论，是推理评测一手数据。",
+      "queued_at": "2026-09-16T22:52:15Z"
+    },
+    {
       "id": "be2e4a57657a8156dc3e9633f1ee9441357150a5",
       "title": "ScienceBuddy: Recursive-in-Recursive Self-Improvement for Interactive Scientific Agents [Shuhan Xue, Jianyuan Zhong, Ziyuan Nan, Wenbin Li, Zhaochen Yu]",
       "url": "http://arxiv.org/abs/2609.17523v1",
@@ -466,58 +518,6 @@
       "angle": "research",
       "source_traceable": true,
       "why": "系统研究异质与同质异步优化的理论鸿沟，给出负向结果与下界，澄清该领域的可证伪边界。",
-      "queued_at": "2026-09-16T06:37:29Z"
-    },
-    {
-      "id": "7213b1234f2c711c902236ecd901f4db6d64371e",
-      "title": "Memorisation bias in medical AI [Moritz A. Knolle, Martin J. Menten, Laurin Lux, Mélanie Roschewitz, Emma A. M. Stanley]",
-      "url": "http://arxiv.org/abs/2609.17223v1",
-      "source": "arxiv:cs.LG",
-      "published_at": "2026-09-15T14:07:01Z",
-      "raw_summary": "Medical AI models hold immense potential to improve patient outcomes, but they are also known to unintentionally memorise individual records from their training datasets. While such memorisation has been linked to targeted privacy attacks, its consequences for clinical deployment, where patients may be assessed by a model that saw their historical data during training, remain poorly understood. Here we show that predictions on a patient's unseen future data can change significantly if a model observed that same patient's anonymised historical data during training, a phenomenon we term \"memorisation bias\". We demonstrate that this bias exists across diverse data modalities and model architectures, and over prolonged time spans: in some cases, memorisation bias persists on future records acquired decades after the historical records used for training. Moreover, in simulated prospective deployment, memorisation bias has asymmetric effects on the diagnostic accuracy of returning data contributors. When a patient returned with a de novo condition absent from their historical records in the training dataset, diagnostic sensitivity decreased significantly compared to an otherwise identical model not trained on their historical data. Conversely, when their health state was unchanged, both sensitivity and specificity were significantly inflated. Our findings reveal a previously uncharacterised risk in medical AI that arises when a model is deployed on patients who contributed to its t",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "定义医学AI中的\"记忆偏差\"现象——模型见过患者历史数据会改变对其未来预测，揭示临床部署中常被忽视的风险。",
-      "queued_at": "2026-09-16T06:37:29Z"
-    },
-    {
-      "id": "a802f5b3cd0cc69741034a79620bc4d26f8ef8db",
-      "title": "36氪首发 | 国内头部硅电容IDM企业融资亿元，切入AI芯片与高端光模块",
-      "url": "https://36kr.com/p/3985710325038080?f=rss",
-      "source": "rss:36kr",
-      "published_at": "2026-09-16T06:35:10Z",
-      "raw_summary": "硬氪获悉，晶圆级无源器件企业「森丸电子」近日完成亿元A轮融资。本轮由知名光模块产业方、耀途资本联合领投，顺融资本跟投。资金将主要用于硅电容及IPD平台技术开发、产能建设及全球市场拓展，加速硅电容在高端光模块及AI芯片垂直供电等应用场景的大规模商业化落地。 森丸电子成立于2021年，总部位于苏州，是国内领先的晶圆级无源器件IDM企业（即企业完成全流程的“设计+制造+测试”，而不是只负责其中一个环节）。公司以半导体工艺为底层技术基座，将电容、电感、电阻等无源器件从传统的分立贴装模式，推向硅基集成化的技术范式，面向AI算力网络中\"供电\"与\"互联\"两大核心瓶颈提供芯片级解决方案。 公司创始人宋义深耕通信与电子制造产业二十余年，兼具全球化视野与本土化落地能力， 积累了横跨供应链、产品线与商业化的全栈经验。团队核心成员在硅电容及IPD集成无源领域多年，覆盖从器件设计、工艺开发到晶圆制造的完整自主技术体系。 近年来，AI算力需求爆发正以前所未有的速度重构半导体产业链。从GPU到ASIC，AI加速芯片的功耗已从数百瓦向千瓦级攀升，单颗芯片的瞬态电流需求动辄数百安培。与此同时，800G乃至1.6T高速光模块作为AI训练与推理集群的核心互联节点，正朝着更高速率、更小尺寸、更低功耗的方向快速迭代。 传统芯片供电采用侧向供电架构，电源管理芯片与主芯片之间的供电路径较长，寄生电感和电阻在数百安培的瞬态负载下产生显著的电压波动与IR压降，直接制约芯片性能释放。尤其在GPU等大算力芯片中，去耦电容的数量与摆放空间已成为封装设计的刚性约束，\"电容放不下\"正成为与\"算力不够\"同等量级的工程难题。 与传统MLCC（多层陶瓷电容）相比，硅电容基于半导体晶圆工艺制造，在单位面积电容密度、高频去耦性能及ESL/ESR等核心指标上具备量级优势，且尺寸更薄、更小，天然适配高密度封装与垂直供电架构。 从技术逻辑看，硅电容与IPD集成基板的结合，本质上是将无源器件从\"板级组装\"推进到\"晶圆级集成\"。这一跃迁不仅是性能提升，更带来商业模式的结构性变化——当电容不再只是被动物料，而是成为芯片封装架构的重要组成部分，其产业位势将从传统被动元器件供应商，上升为系统级封装链路中的关键环节。 而在高端光模块领域，硅电容的价值同样不可替代。800G/1.6T光模块内部空间极为紧凑，传统分立电容在体积和性能上已难以满足高速信号完整性与电源完整性的双重要求。硅电容的超薄封装与高频特性，使其成为光模块电源管理网络的理想选择。 目前，硅电容主要由日本、欧洲少数厂商主导，国产化率较低。森丸电子是国内领先的晶圆级无源器件IDM企业，已形成覆盖全品类硅电容、硅电感及 IPD 无源集成芯片的产品布局，产品体系涵盖IPD器件、IPD集成基板、芯片电容、芯片电感和芯片电阻等多个方向。已经持续向头部客户交付硅电容，良率稳定在95%以上，产能达到3亿颗/月，核心性能指标达到国际一线厂商同等水平。 宋义告诉硬氪，公司在过去两年已经拿到了数个世界级大客户的订单，完成了供应链导入。“我们预计从2026年开始，接下来四年会是我们最大的机遇期和爆发期。” 以下是硬氪与森丸电子创始人宋义的访谈节选： 硬氪：在AI时代，为什么无源器件会变得越来越重要？ 宋义：我觉得可以从两个方面来看。首先，无源器件在所有电子系统里面，其实都是一个“服务”的角色。AI对高频、高带宽以及高速有比较高的要求，而传统元器件已经不能完全满足AI时代的这些需求，所以我们这一类新型元器件就显得更加突出，逐渐变成刚需。这是从技术迭代角度来看。 另外，主芯片包括GPU、CPU、存",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "国内硅电容IDM企业森丸电子融资细节，AI算力对供电/互联需求驱动硅集成无源器件，触及AI基础设施供应链实质变化。",
-      "queued_at": "2026-09-16T06:37:29Z"
-    },
-    {
-      "id": "c1e699e43eb30cfcad56d14475d5ce38851f1972",
-      "title": "SK海力士据报与英特尔洽谈在美生产存储芯片",
-      "url": "https://36kr.com/newsflashes/3985652130544386?f=rss",
-      "source": "rss:36kr",
-      "published_at": "2026-09-16T05:36:50Z",
-      "raw_summary": "据报道，韩国SK海力士正与英特尔洽谈在美国生产存储芯片，潜在方案包括租用英特尔俄亥俄州芯片厂部分产能，或与英特尔及大型云计算企业成立合资企业。相关谈判仍处于探索阶段，尚未作出决定。据报道，若涉及DRAM或高带宽内存（HBM）等先进内存技术，可能面临韩国政府审查。SK海力士表示，正在研究包括新增生产基地在内的多种方案，但目前尚未确定具体事项。英特尔则表示将继续投资俄亥俄州厂区建设。（界面）",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "SK海力士与英特尔就美生产存储/HBM的洽谈，涉及AI内存供应链关键变量，含潜在产能方案。",
-      "queued_at": "2026-09-16T06:37:29Z"
-    },
-    {
-      "id": "16876706efeb585e013ac6c307b4e9ce4c99c4e3",
-      "title": "被英伟达点名的杭州团队，补上了AI for Science的「最后一公里」",
-      "url": "https://www.qbitai.com/2026/09/490185.html",
-      "source": "rss:qbitai",
-      "published_at": "2026-09-16T03:40:35Z",
-      "raw_summary": "",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "AI for Science团队被英伟达点名，可能涉及具体科学计算工作，值得读原文看其方法与成果。",
       "queued_at": "2026-09-16T06:37:29Z"
     }
   ],
