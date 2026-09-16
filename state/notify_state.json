@@ -1,26 +1,7 @@
 {
-  "morning_last_date": "2026-09-15",
+  "morning_last_date": "2026-09-16",
   "weekly_last_slot": "2026-W37",
   "breaking_fingerprints": [
-    {
-      "tickers": [
-        "DeepSeek",
-        "英伟达"
-      ],
-      "features": [
-        "burying",
-        "deepseek",
-        "engineer",
-        "my",
-        "on",
-        "relections",
-        "rsi",
-        "talent",
-        "to",
-        "yesterday"
-      ],
-      "sent_at": "2026-09-14T23:47:18Z"
-    },
     {
       "tickers": [
         "亚马逊",
@@ -274,50 +255,83 @@
         "with"
       ],
       "sent_at": "2026-09-15T23:09:45Z"
+    },
+    {
+      "tickers": [
+        "OpenAI",
+        "微软"
+      ],
+      "features": [
+        "openai",
+        "万亿",
+        "亿美",
+        "元融",
+        "公开",
+        "募股",
+        "将首",
+        "开募",
+        "拟将",
+        "推迟",
+        "次公",
+        "美元",
+        "考虑",
+        "股推",
+        "至年",
+        "虑万",
+        "融资",
+        "资拟",
+        "迟至",
+        "首次"
+      ],
+      "sent_at": "2026-09-16T01:31:10Z"
     }
   ],
   "last_report": {
-    "date": "2026-09-15",
+    "date": "2026-09-16",
     "macro": {
-      "cycle": "扩张第三年向第四年过渡的窄通道仍在。头部四家云厂季度 capex 合计稳在 900 亿美元上方, 但本期新 capex 上修仅英伟达锚定 Anthropic 一家, 环比斜率自前次转平后未现二次抬头; Anthropic 以六年期 137 亿美元锁定 Rum Group 佐治亚园区, 单笔金额已逼近头部云厂单季上修量级, 意味着订单集中度正向非超大规模客户侧迁移, 总盘子的边际增量未明显扩张。",
+      "cycle": "扩张第三年向第四年过渡的窄通道延续，头部四家云厂季度capex合计稳在900亿美元上方，但本期边际增量来自Anthropic以六年期137亿美元锁定Rum Group佐治亚园区这类非超大规模客户，单笔金额已逼近头部云厂单季上修量级，订单集中度正从超大规模客户侧向非头部迁移，总盘子未明显扩张",
       "trajectory": {
         "past": "晶圆制程产能",
         "now": "HBM与CoWoS良率位元密度",
         "next": "数据中心电力接入与机柜热密度",
-        "why_now": "单卡功耗从 H100 的 700W 升至 GB200 的 2.3kW 量级, Vera Rubin 世代进一步上探, 液冷从可选项变为必选; 园区主变与燃机排期 18 至 36 个月与 GPU 供货周期形成数量级错位, 而 Rubin NVL72 推理每兆瓦 token 较 Blackwell 提升 7 倍, 凸显电力已取代芯片成为机柜级 PUE 的首要约束。",
-        "trigger": "若北美新建园区电力接入审批成为项目主要延迟项, 或单机柜功率密度普遍突破 130kW 并批量化交付"
+        "why_now": "联发科首发2nm手机SoC意味着制程端约束开始外溢到非头部客户，2nm良率与产能已具备承接多客户条件，但HBM4基础芯片双轨制程与Rubin NVL72每兆瓦token 7倍提升同时把封装与电力两段约束顶到新高度",
+        "trigger": "若北美新建园区电力接入审批成为项目主要延迟项，或单机柜功率密度普遍突破130kW并批量化交付"
       },
-      "shift": "三段轨迹维持, now 段由 HBM/CoWoS 良率位元密度加电力热密度前置约束, 调整为 Agent 长任务落地叠加 CEO 同框放缓前沿, 推动训练侧周期与推理侧机柜密度的相对权重再分配",
+      "shift": "三段轨迹维持，now段由HBM与CoWoS良率位元密度叠加电力热密度前置约束，调整为2nm外溢与HBM4双轨制程共同把先进封装价值量上修，叠加OpenAI融资落地将进一步锁定英伟达AMD多年期长单，推理侧订单向非超大规模客户迁移的结构变化进入第二阶段",
       "shift_kind": "adjust"
     },
     "calls": [
       {
-        "claim": "Vera Rubin 推理能效藏性能, 机柜级电源与液冷价值量上修",
-        "falsifier": "若 2026Q4 台积电法说会下调 2027 年 CoWoS-L capex 指引, 或 GE Vernova 与 Schneider 电力业务订单同比增速回落至 20% 以下, 本判断失效。",
-        "verify": "Rubin 世代电源订单能见度延伸到 2027"
+        "claim": "2nm外溢与HBM4双轨制程共振，先进封装与HBM仍是2026Q4前最硬供给侧约束",
+        "falsifier": "若2026Q4台积电法说会下调2027年CoWoS-L capex指引，或CoWoS报价环比回落超5%，本判断失效",
+        "verify": "Q4 CoWoS报价环比仍上行"
       },
       {
-        "claim": "CEO 同框呼吁放缓前沿, 反而锁定美国阵营算力加速路径",
-        "falsifier": "若 2026Q4 Anthropic 或 OpenAI 任一公开训练集群 capex 下修超 10%, 或独立评估者仅获模型访问而无权重与训练数据审计权限, 本判断失效。",
-        "verify": "美国阵营未出现实质性 capex 下修"
+        "claim": "Vera Rubin NVL72推理能效藏性能，机柜级电源与液冷价值量上修",
+        "falsifier": "若GE Vernova与Schneider电力业务订单同比增速回落至20%以下，或2026Q4台积电法说会下调2027年CoWoS-L capex指引，本判断失效",
+        "verify": "Rubin世代电源订单能见度延至2027"
       },
       {
-        "claim": "先进封装与 HBM 仍是 2026Q4 前最硬的供给侧约束",
-        "falsifier": "若 2026Q4 CoWoS 报价环比回落超 5%, 或 AMD 3D DRAM 流片良率连续两个季度低于 50%, 本判断失效。",
-        "verify": "CoWoS 报价 2026Q4 仍环比上行"
+        "claim": "OpenAI 1.2万亿融资若落地将锁定英伟达AMD多年期算力长单，训练侧capex再添刚性",
+        "falsifier": "若2026Q4 Anthropic或OpenAI任一公开训练集群capex下修超10%，或融资最终因监管或投资人分歧未落地，本判断失效",
+        "verify": "美国阵营训练集群capex未下修"
       },
       {
-        "claim": "Token 变现开始覆盖训练摊销, 推理 capex 锚向非超大规模客户迁移",
-        "falsifier": "若 2026Q4 Anthropic 或 OpenAI 任一公开训练集群 capex 上修超 10%, 或 Anthropic 递交 SEC 的 S-1 披露其盈利口径大量依赖递延收入与一次性调整项, 本判断失效。",
-        "verify": "Anthropic S-1 不依赖递延收入"
+        "claim": "硬件厂商自研前沿模型能力滞后，推理云市场结构再分配利好谷歌云",
+        "falsifier": "若苹果在2027年WWDC宣布自研前沿模型替代Gemini，或美DOJ反垄断判决强制谷歌剥离搜索默认协议导致苹果每年损失约200亿美元分成，叙事反转",
+        "verify": "Siri底层切至Gemini，欧盟区暂缺"
       }
     ]
   },
-  "morning_fallback": {
-    "date": "2026-09-16",
-    "attempts": 1
-  },
+  "morning_fallback": null,
   "blindspot_ledger": [
+    {
+      "key": "AMD|ARM|ASML|Anthropic|Intel|Marvell|Meta|台积电|微软|海力士|美光|苹果|超微电脑",
+      "text": "coverage_audit显示台积电近30天有大量条目进入本库，但level为structural、days_since_own_disclosure为null，意味着全部为二手转述，无一条来自其自有披露；苹果、Meta、Intel、ASML、ARM同为structural级别，本期所有对其产能与路线图的判断均依赖同业外推与媒体报道。微软、美光、Marvell、超微电脑level为thin，最后一次自有披露距今14至21天，本期亦无新信号。HBM三巨头SK海力士、三星、美光近30天分别有约18至115条提及，但本期除E12三星HBM4双轨制程外，海力士与美光均无独立催化；AMD虽在E13 3D DRAM中被反复提及，但同样缺独立一手披露。Anthropic近30天仅9条提及且无一手通道，E14新加坡设点信息来自二手转述。盲区集中在两个层面：训练侧capex的官方口径与HBM供给侧的真实位元出货量，目前都无法在本库一手核验",
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-16",
+      "times_seen": 1
+    },
     {
       "key": "AMD|ARM|ASML|Intel|Marvell|Meta|戴尔|美光|苹果",
       "text": "本库对几大核心标的长期依赖二手转述: 苹果近 30 天有 109 条相关信息, 但全部来自 sec_edgar 以外, 无一手 IR; Meta 72 条、ASML 34 条、ARM 17 条同样结构性缺位; Intel 52 条覆盖但 days_since_own_disclosure 为空; AMD 124 条中最近自有披露已 14 天, Marvell 29 条中 18 天未更新, 美光 115 条中 20 天, 超微 23 条中 15 天。意味着对 Rubin 出货指引、CoWoS 实际报价、MI400 客户结构、SMCI 与戴尔 AI 服务器订单的最新判断, 全部处于二手外推区间, 财报窗口前的方向性下注风险高于表观。",
@@ -393,13 +407,6 @@
       "text": "coverage_audit 显示台积电、Meta、苹果、Intel、ASML、高通、ARM 均为 structural 级别,即有 SEC EDGAR 直连通道但近 30 天无任何自有披露进入本库:台积电 212 条、Meta 130 条、苹果 106 条、Intel 89 条、ASML 83 条、高通 62 条、ARM 43 条均为二手转述与同业外推。本期对 Google Gemini/DeepMind 迭代、Meta 开源生态、苹果端侧 AI、Amazon-AWS 与 Anthropic 绑定深度均无独立报道,Anthropic IPO 一手招股书尚不可得;Groq、Cerebras 等推理芯片新势力与 TSMC 先进制程产能节奏同样缺位,意味着本期内参对算力侧的所有判断都建立在二手转述之上",
       "first_seen": "2026-09-05",
       "last_seen": "2026-09-05",
-      "times_seen": 1
-    },
-    {
-      "key": "ARM|ASML|Intel|Meta|台积电|苹果",
-      "text": "台积电近 30 天有 233 条相关信息进入本库, 全部为二手转述与同业外推, 自身 8-K 或法说会一手披露零产出; Meta 近 30 天 135 条、苹果 107 条、Intel 91 条同样无任何自有披露; ASML 89 条、Qualcomm 68 条、ARM 48 条均为同一状态。换言之, 对本轮周期最关键的几家供给侧标的, 我们的所有判断都建立在转载链上, 一旦原文出处失真, 自上而下的结论将整体下移一档可信度",
-      "first_seen": "2026-09-04",
-      "last_seen": "2026-09-04",
       "times_seen": 1
     }
   ]
