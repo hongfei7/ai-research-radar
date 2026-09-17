@@ -4,35 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "OpenAI",
-        "微软"
-      ],
-      "features": [
-        "openai",
-        "万亿",
-        "亿美",
-        "元融",
-        "公开",
-        "募股",
-        "将首",
-        "开募",
-        "拟将",
-        "推迟",
-        "次公",
-        "美元",
-        "考虑",
-        "股推",
-        "至年",
-        "虑万",
-        "融资",
-        "资拟",
-        "迟至",
-        "首次"
-      ],
-      "sent_at": "2026-09-16T01:31:10Z"
-    },
-    {
-      "tickers": [
         "AMD",
         "三星电子",
         "海力士"
@@ -231,6 +202,68 @@
         "which"
       ],
       "sent_at": "2026-09-16T22:54:26Z"
+    },
+    {
+      "tickers": [
+        "OpenAI",
+        "微软"
+      ],
+      "features": [
+        "as",
+        "astra",
+        "classifies",
+        "critical",
+        "cybersecurity",
+        "first",
+        "for",
+        "gpt-6",
+        "is",
+        "model",
+        "openai",
+        "the"
+      ],
+      "sent_at": "2026-09-17T06:19:14Z"
+    },
+    {
+      "tickers": [
+        "Anthropic",
+        "微软"
+      ],
+      "features": [
+        "anthropic",
+        "claude",
+        "一背",
+        "上下",
+        "下文",
+        "也想",
+        "二合",
+        "你的",
+        "合一",
+        "后也",
+        "想锁",
+        "死你",
+        "的上",
+        "背后",
+        "锁死"
+      ],
+      "sent_at": "2026-09-17T06:19:41Z"
+    },
+    {
+      "tickers": [
+        "DeepSeek"
+      ],
+      "features": [
+        "cache",
+        "compression",
+        "deepseek-v4.1",
+        "flash",
+        "kv",
+        "limits",
+        "of",
+        "pushing",
+        "the"
+      ],
+      "sent_at": "2026-09-17T06:20:07Z"
     }
   ],
   "last_report": {
