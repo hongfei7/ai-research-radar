@@ -1,39 +1,7 @@
 {
-  "morning_last_date": "2026-09-16",
+  "morning_last_date": "2026-09-17",
   "weekly_last_slot": "2026-W37",
   "breaking_fingerprints": [
-    {
-      "tickers": [
-        "Anthropic",
-        "OpenAI"
-      ],
-      "features": [
-        "1.2t",
-        "about",
-        "another",
-        "at",
-        "before",
-        "conversations",
-        "early",
-        "financial",
-        "funding",
-        "has",
-        "held",
-        "investors",
-        "ipo",
-        "its",
-        "openai",
-        "planned",
-        "private",
-        "raising",
-        "round",
-        "sources",
-        "times",
-        "valuation",
-        "with"
-      ],
-      "sent_at": "2026-09-15T23:09:45Z"
-    },
     {
       "tickers": [
         "OpenAI",
@@ -266,47 +234,51 @@
     }
   ],
   "last_report": {
-    "date": "2026-09-16",
+    "date": "2026-09-17",
     "macro": {
-      "cycle": "扩张第三年向第四年过渡的窄通道延续，头部四家云厂季度capex合计稳在900亿美元上方，但本期边际增量来自Anthropic以六年期137亿美元锁定Rum Group佐治亚园区这类非超大规模客户，单笔金额已逼近头部云厂单季上修量级，订单集中度正从超大规模客户侧向非头部迁移，总盘子未明显扩张",
+      "cycle": "扩张第三年向第四年过渡的窄通道延续，头部四家云厂季度capex合计稳在900亿美元上方，但本期边际增量已从超大规模客户侧外溢至非头部融资主体——黑石与谷歌合资的Crux AI以220亿美元银团贷款采购TPU，单笔金额已逼近头部云厂单季capex上修量级（E3），Anthropic落子澳大利亚2.16GW园区（E13），算力订单的集中度正向非超大规模客户和债权融资模式双向迁移，订单总盘子未明显扩张但融资工具箱被拉宽",
       "trajectory": {
         "past": "晶圆制程产能",
-        "now": "HBM与CoWoS良率位元密度",
+        "now": "HBM/CoWoS位元密度与内存供给曲线",
         "next": "数据中心电力接入与机柜热密度",
-        "why_now": "联发科首发2nm手机SoC意味着制程端约束开始外溢到非头部客户，2nm良率与产能已具备承接多客户条件，但HBM4基础芯片双轨制程与Rubin NVL72每兆瓦token 7倍提升同时把封装与电力两段约束顶到新高度",
-        "trigger": "若北美新建园区电力接入审批成为项目主要延迟项，或单机柜功率密度普遍突破130kW并批量化交付"
+        "why_now": "美光高管首次把\"有意义新增内存供给\"时点延至2028年（E9），叠加英特尔CEO陈立武公开预警内存价格已飙至原值的5至7倍（E11），存储环节的供给曲线被人为推后，与Rubin NVL72在MLPerf推理首秀验证机柜级集成度提升（E8）共同把约束从制程端切换到封装-存储-电力三段共振",
+        "trigger": "若单机柜功率密度普遍突破130kW并批量化交付，或北美新建园区电力接入审批成为项目主要延迟项"
       },
-      "shift": "三段轨迹维持，now段由HBM与CoWoS良率位元密度叠加电力热密度前置约束，调整为2nm外溢与HBM4双轨制程共同把先进封装价值量上修，叠加OpenAI融资落地将进一步锁定英伟达AMD多年期长单，推理侧订单向非超大规模客户迁移的结构变化进入第二阶段",
+      "shift": "维持上期三段轨迹框架，now段由HBM/CoWoS封装约束上调为HBM位元密度与内存供给曲线共同主导——美光把供给爬坡延至2028年（E9）、SK海力士与Intel洽谈在美生产存储（E5/E12）、英特尔CEO公开预警价格5至7倍飙涨（E11）三件事把存储从配套元件升级为与封装并行的硬约束段",
       "shift_kind": "adjust"
     },
     "calls": [
       {
-        "claim": "2nm外溢与HBM4双轨制程共振，先进封装与HBM仍是2026Q4前最硬供给侧约束",
-        "falsifier": "若2026Q4台积电法说会下调2027年CoWoS-L capex指引，或CoWoS报价环比回落超5%，本判断失效",
-        "verify": "Q4 CoWoS报价环比仍上行"
+        "claim": "内存紧缺周期被供给曲线与需求结构共同重写，存储寡头定价权延续至2028年",
+        "falsifier": "若2026Q4三星或海力士任一家宣布2027年内量产1γnm DRAM并给出明确位元产出指引，或DRAM现货价连续两个月环比回落超10%，本判断失效",
+        "verify": "2028年前新增供给不爬坡"
       },
       {
-        "claim": "Vera Rubin NVL72推理能效藏性能，机柜级电源与液冷价值量上修",
-        "falsifier": "若GE Vernova与Schneider电力业务订单同比增速回落至20%以下，或2026Q4台积电法说会下调2027年CoWoS-L capex指引，本判断失效",
-        "verify": "Rubin世代电源订单能见度延至2027"
+        "claim": "ASIC资产化路径被债务市场首次背书，定制芯片成为可融资资产类别",
+        "falsifier": "若Crux AI在2026Q4前出现重大交付延迟导致银团贷款触发契约条款，或博通季度法说会披露TPU相关设计服务收入环比下滑超10%，本判断失效",
+        "verify": "Crux AI银团贷款按期落地"
       },
       {
-        "claim": "OpenAI 1.2万亿融资若落地将锁定英伟达AMD多年期算力长单，训练侧capex再添刚性",
+        "claim": "Rubin NVL72推理首秀加固整机柜一体化壁垒，机柜级电源与液冷价值量上修",
+        "falsifier": "若2026Q4台积电法说会下调2027年CoWoS-L capex指引，或GE Vernova/Schneider电力业务订单同比增速回落至20%以下，本判断失效",
+        "verify": "Rubin量产时点未推迟"
+      },
+      {
+        "claim": "OpenAI 1.5万亿美元估值锚定若兑现，将锁定英伟达/AMD多年期算力长单",
         "falsifier": "若2026Q4 Anthropic或OpenAI任一公开训练集群capex下修超10%，或融资最终因监管或投资人分歧未落地，本判断失效",
-        "verify": "美国阵营训练集群capex未下修"
-      },
-      {
-        "claim": "硬件厂商自研前沿模型能力滞后，推理云市场结构再分配利好谷歌云",
-        "falsifier": "若苹果在2027年WWDC宣布自研前沿模型替代Gemini，或美DOJ反垄断判决强制谷歌剥离搜索默认协议导致苹果每年损失约200亿美元分成，叙事反转",
-        "verify": "Siri底层切至Gemini，欧盟区暂缺"
+        "verify": "OpenAI融资按1.5T落地"
       }
     ]
   },
-  "morning_fallback": {
-    "date": "2026-09-17",
-    "attempts": 1
-  },
+  "morning_fallback": null,
   "blindspot_ledger": [
+    {
+      "key": "AMD|Marvell|博通|台积电|英伟达|超微电脑",
+      "text": "本库近30天对台积电归档493条相关条目但无一条来自其自有披露，对CoWoS-L报价与capex的判断全部依赖二手转述与同业外推；英伟达、AMD、博通、Marvell近30天归档分别为117、117、39、29条但均已15至20天未拿到一手披露，今日Rubin NVL72 MLPerf成绩为英伟达博客口径（E8）而非独立第三方复测；超微电脑已17天无自有披露但今日仍是HBM/液冷链条的关键载体，本期对Rubin整机柜液冷价值量上修的判断仍缺一手毛利率交叉验证",
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-17",
+      "times_seen": 1
+    },
     {
       "key": "AMD|ARM|ASML|Anthropic|Intel|Marvell|Meta|台积电|微软|海力士|美光|苹果|超微电脑",
       "text": "coverage_audit显示台积电近30天有大量条目进入本库，但level为structural、days_since_own_disclosure为null，意味着全部为二手转述，无一条来自其自有披露；苹果、Meta、Intel、ASML、ARM同为structural级别，本期所有对其产能与路线图的判断均依赖同业外推与媒体报道。微软、美光、Marvell、超微电脑level为thin，最后一次自有披露距今14至21天，本期亦无新信号。HBM三巨头SK海力士、三星、美光近30天分别有约18至115条提及，但本期除E12三星HBM4双轨制程外，海力士与美光均无独立催化；AMD虽在E13 3D DRAM中被反复提及，但同样缺独立一手披露。Anthropic近30天仅9条提及且无一手通道，E14新加坡设点信息来自二手转述。盲区集中在两个层面：训练侧capex的官方口径与HBM供给侧的真实位元出货量，目前都无法在本库一手核验",
@@ -382,13 +354,6 @@
       "text": "本库近 30 天覆盖台积电 206 条、Meta 128 条、苹果 105 条、Intel 89 条、ASML 83 条、高通 60 条、ARM 42 条, 全部为二手转述与同业外推, 上述七家核心标的近一个月内均无任何一条来自自有披露渠道的原始信息进入本库, 本期所有关于其产能、价格与客户结构的判断都建立在二手转载之上, 真实边际信息的可见性低于市场普遍认知。",
       "first_seen": "2026-09-06",
       "last_seen": "2026-09-06",
-      "times_seen": 1
-    },
-    {
-      "key": "ARM|ASML|Anthropic|Intel|Meta|台积电|苹果|高通",
-      "text": "coverage_audit 显示台积电、Meta、苹果、Intel、ASML、高通、ARM 均为 structural 级别,即有 SEC EDGAR 直连通道但近 30 天无任何自有披露进入本库:台积电 212 条、Meta 130 条、苹果 106 条、Intel 89 条、ASML 83 条、高通 62 条、ARM 43 条均为二手转述与同业外推。本期对 Google Gemini/DeepMind 迭代、Meta 开源生态、苹果端侧 AI、Amazon-AWS 与 Anthropic 绑定深度均无独立报道,Anthropic IPO 一手招股书尚不可得;Groq、Cerebras 等推理芯片新势力与 TSMC 先进制程产能节奏同样缺位,意味着本期内参对算力侧的所有判断都建立在二手转述之上",
-      "first_seen": "2026-09-05",
-      "last_seen": "2026-09-05",
       "times_seen": 1
     }
   ]
