@@ -4,88 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "AMD",
-        "三星电子",
-        "海力士"
-      ],
-      "features": [
-        "ai",
-        "割裂",
-        "只有",
-        "有割",
-        "有泡",
-        "没有",
-        "沫只",
-        "泡沫"
-      ],
-      "sent_at": "2026-09-16T06:43:26Z"
-    },
-    {
-      "tickers": [
-        "Intel",
-        "海力士"
-      ],
-      "features": [
-        "be",
-        "but",
-        "chips",
-        "could",
-        "deal",
-        "for",
-        "from",
-        "hurdle",
-        "hynix",
-        "in",
-        "intel",
-        "is",
-        "major",
-        "manufacture",
-        "memory",
-        "opposition",
-        "potential",
-        "reuters",
-        "seoul",
-        "sk",
-        "sources",
-        "talks",
-        "the",
-        "to",
-        "us",
-        "with"
-      ],
-      "sent_at": "2026-09-16T06:43:40Z"
-    },
-    {
-      "tickers": [
-        "Intel",
-        "三星电子",
-        "海力士"
-      ],
-      "features": [
-        "sk",
-        "与英",
-        "产存",
-        "储芯",
-        "力士",
-        "在美",
-        "士据",
-        "存储",
-        "尔洽",
-        "报与",
-        "据报",
-        "洽谈",
-        "海力",
-        "特尔",
-        "生产",
-        "美生",
-        "芯片",
-        "英特",
-        "谈在"
-      ],
-      "sent_at": "2026-09-16T06:44:05Z"
-    },
-    {
-      "tickers": [
         "字节跳动"
       ],
       "features": [
@@ -264,6 +182,108 @@
         "the"
       ],
       "sent_at": "2026-09-17T06:20:07Z"
+    },
+    {
+      "tickers": [
+        "博通",
+        "英伟达",
+        "苹果"
+      ],
+      "features": [
+        "ai",
+        "apple",
+        "bitter",
+        "center",
+        "custom",
+        "data",
+        "eyes",
+        "for",
+        "historically",
+        "its",
+        "m8",
+        "new",
+        "nvidia",
+        "nvlink",
+        "power",
+        "push",
+        "reportedly",
+        "rivals",
+        "servers",
+        "team",
+        "to",
+        "ultra",
+        "up"
+      ],
+      "sent_at": "2026-09-17T11:52:56Z"
+    },
+    {
+      "tickers": [
+        "OpenAI",
+        "英伟达"
+      ],
+      "features": [
+        "added",
+        "additional",
+        "and",
+        "answer",
+        "are",
+        "astra",
+        "bind",
+        "chatbots",
+        "corporations",
+        "do",
+        "during",
+        "freed",
+        "from",
+        "governments",
+        "identities",
+        "instructions",
+        "its",
+        "model",
+        "not",
+        "openai",
+        "or",
+        "other",
+        "remit",
+        "rogue",
+        "roles",
+        "terrifying",
+        "testing",
+        "that",
+        "the",
+        "to",
+        "unreleased",
+        "you",
+        "yourself"
+      ],
+      "sent_at": "2026-09-17T11:53:14Z"
+    },
+    {
+      "tickers": [
+        "中芯国际",
+        "天数智芯",
+        "字节跳动"
+      ],
+      "features": [
+        "glm",
+        "rsi",
+        "万国",
+        "个成",
+        "产卡",
+        "刚刚",
+        "刚智",
+        "卡用",
+        "发布",
+        "国产",
+        "布万",
+        "成果",
+        "智谱",
+        "果发",
+        "用造",
+        "谱首",
+        "首个"
+      ],
+      "sent_at": "2026-09-17T11:53:33Z"
     }
   ],
   "last_report": {
