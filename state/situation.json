@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-18T20:39:29Z",
-  "text": "当前共有 20 个活跃事件。要点包括: Sources: Anthropic expects to generate $100B+ in annualized revenue this year, up from $65B as of July, as it moves ahead with its IPO amid the AI safety debate (New York Times); 长鑫存储据报在北京第二座晶圆厂规划3D NAND研发线; 弗吉尼亚州长签署第22号行政令，限制数据中心扩张并成立AI工作组; London-based AI infrastructure startup Nscale files for a US IPO, reports H1 2026 revenue up 1,252% YoY to $140.6M, with a net loss of $1.02B, up from $368.9M (Jordan Novet/CNBC); A new kind of AI model from a ChatGPT inventor is thrilling developers。",
-  "since": "2026-09-18T20:39:29Z",
-  "active_event_count": 20,
+  "generated_at": "2026-09-18T22:51:58Z",
+  "text": "当前共有 25 个活跃事件。要点包括: Sources: Anthropic expects to generate $100B+ in annualized revenue this year, up from $65B as of July, as it moves ahead with its IPO amid the AI safety debate (New York Times); 长鑫存储据报在北京第二座晶圆厂规划3D NAND研发线; 弗吉尼亚州长签署第22号行政令，限制数据中心扩张并成立AI工作组; Sources: Anthropic plans to stage its IPO in November, later than many investors expected; the decision was made before ex-Anthropic researcher Jacob Coxon left (Wall Street Journal); London-based AI infrastructure startup Nscale files for a US IPO, reports H1 2026 revenue up 1,252% YoY to $140.6M, with a net loss of $1.02B, up from $368.9M (Jordan Novet/CNBC)。",
+  "since": "2026-09-18T22:51:58Z",
+  "active_event_count": 25,
   "key_themes": [
     "ai_monetization",
     "compute_demand",
     "model_capability",
     "policy_export",
-    "datacenter_power"
+    "chip_supply"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
   "cross_analysis": "【核心矛盾】\n本轮报道对同一事件无明显方向性分歧。两条加州\"kill switch\"行政令报道（the-decoder与theverge-ai）互为补充，前者侧重云厂合规成本，后者侧重模型开发商直接受冲击。其余事件来源单一或互补，未出现多空对立解读。\n\n【新兴趋势】\n**AI Agent基础设施化**信号在三条AWS博客与Manus融资条目中反复出现，叠加多模型编排向Bedrock AgentCore迁移，反映Agent正从Demo走向生产级托管，AWS正卡位Agent运行时层。**存储瓶颈**亦成隐性主线：Seagate调研揭示62",
-  "trend_spotting": "Anthropic 5GW算力年底目标将\"前沿实验室\"capex基准拉至传统超算量级，叠加华为昇腾960PR提前数季度发布、英伟达/AMD的GPU及HBM供应链压力进一步显性化；2027年前DRAM紧缺将持续挤压消费电子毛利，存储原厂话语权强化。\n\nAI硬件入口正从手机正面迁移至MagSafe背面，Plaud两年ARR从100万跃至1亿美元、出货200万台，验证录音+Agent的独立硬件留存路径，手机厂商（苹果、小米"
+  "trend_spotting": "**【新兴趋势】** AI基础设施竞争重心正从GPU单点算力转向\"CPU+GPU协同+推理架构优化\"：AMD以256核Venice EPYC整体性能宣称超Nvidia Vera 2倍，从CPU侧切入AI服务器；AWS则在2026年已推出13次SageMaker推理更新，主打prefill/decode分离、分层KV缓存与容量感知实例池，系统性压低单token推理TCO。\n\n**【早期信号】** Anthropic将Accenture定为首个\"嵌入式评估方\"，暗示AI模型评估正从内部红队测试外溢为商业化中介服务，可能催生新的\"AI审计\"生态层。Intel High-NA EUV随Panther Lake进入量产，但电学拼接与更大尺寸光罩仍是工程瓶颈，这是ASML High-NA设备从\"能用\"走向\"规模化经济性\"的真正分水岭。\n\n**【市场盲点】** 推理侧架构优化（KV缓存、prefill/decode解耦）对GPU集群利用率的提升被低估，其二阶效应将延后推理侧GPU/HBM的边际采购节奏，弱化此前\"推理需求线性外推\"假设。Anthropic IPO从市场预期的10月延至11月，恰逢行业\"放缓节奏\"呼声，可能成为AI一级市场估值锚定转向的信号。\n\n**【值得关注的拐点】** 1）Intel电学拼接良率突破——先进制程竞争格局可能改写；2）AMD Venice被超微/戴尔等AI整机厂大规模采用——服务器CPU份额重新分配，挤压Intel；3）Anthropic招股书披露的算力采购结构——将校准云厂capex与GPU订单可见度。"
 }

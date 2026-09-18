@@ -300,6 +300,19 @@
       "queued_at": "2026-09-18T20:36:36Z"
     },
     {
+      "id": "064c5cbce582e5e44b598e84444bf75351a86ab9",
+      "title": "Intel Puts High-NA EUV into Production, but Stitching Still Has Something to Prove",
+      "url": "https://www.eetimes.com/intel-puts-high-na-euv-into-production-but-stitching-still-has-something-to-prove",
+      "source": "rss:eetimes",
+      "published_at": "2026-09-18T22:00:00Z",
+      "raw_summary": "Panther Lake validates High NA in manufacturing, while electrical stitching and larger masks remain the next hurdles. The post Intel Puts High-NA EUV into Production, but Stitching Still Has Something to Prove appeared first on EE Times.",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "High-NA EUV进入量产但stitching仍待验证，直接关系到先进制程良率与未来节点可行性的工程判断。",
+      "queued_at": "2026-09-18T22:50:06Z"
+    },
+    {
       "id": "f17ca6f739c3153ff667f9a9f9c98b5777924d42",
       "title": "Workspace Models: Lightweight Robotic Memory via Saliency-Driven Supervision [Nitish Dashora, Douglas Chen, Idan Shenfeld, John Marangola, Pulkit Agrawal]",
       "url": "http://arxiv.org/abs/2609.20820v1",
@@ -505,19 +518,6 @@
       "angle": "industry",
       "source_traceable": true,
       "why": "长鑫LPDDR6量产首发+科创板市值数据完整，对国产DRAM从替代到同步的判断有具体支撑。",
-      "queued_at": "2026-09-18T05:16:33Z"
-    },
-    {
-      "id": "d828d0163196d44f2c9e091f9a6a1f183de245e9",
-      "title": "An interview with OpenAI researcher Noam Brown about multi-agent systems, AI solving the Navier-Stokes problem, the internal/external model gap, and more (Dwarkesh Patel/Dwarkesh Podcast)",
-      "url": "https://www.techmeme.com/260917/p43#a260917p43",
-      "source": "rss:techmeme",
-      "published_at": "2026-09-18T01:30:02Z",
-      "raw_summary": "Dwarkesh Patel / Dwarkesh Podcast: An interview with OpenAI researcher Noam Brown about multi-agent systems, AI solving the Navier-Stokes problem, the internal/external model gap, and more&nbsp; &mdash;&nbsp; &ldquo;We never want to be in a situation again where we underestimate the AI.&rdquo;&nbsp; &mdash;&nbsp; New episode with Noam Brown.",
-      "score": 7,
-      "angle": "route",
-      "source_traceable": true,
-      "why": "Noam Brown谈多智能体+AI解Navier-Stokes+内外部模型差距，含一手研究员观点与前沿信号。",
       "queued_at": "2026-09-18T05:16:33Z"
     }
   ],
