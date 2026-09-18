@@ -274,6 +274,32 @@
       "queued_at": "2026-09-18T14:22:43Z"
     },
     {
+      "id": "6496bc27021917f76e1b5fcdcdd304d3b922c0ad",
+      "title": "Cache-to-Cache: Direct Semantic Communication Between Large Language Models",
+      "url": "https://arxiv.org/abs/2510.03215",
+      "source": "hackernews",
+      "published_at": "2026-09-18T18:55:35Z",
+      "raw_summary": "Cache-to-Cache: Direct Semantic Communication Between Large Language Models",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "LLM 之间直接通过 KV cache 进行语义通信的新论文，方向新颖值得读原文。",
+      "queued_at": "2026-09-18T20:36:36Z"
+    },
+    {
+      "id": "3ca0170f6d0f0c412072371b9b9efa6b69fd6692",
+      "title": "How did AMD Ryzen get 50% faster in two years?",
+      "url": "https://lemire.me/blog/2026/09/18/how-did-amd-ryzen-get-50-faster-in-two-years",
+      "source": "hackernews",
+      "published_at": "2026-09-18T19:01:03Z",
+      "raw_summary": "How did AMD Ryzen get 50% faster in two years?",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "深度拆解 AMD Ryzen 两年提升 50% 的微架构与工艺路线选择。",
+      "queued_at": "2026-09-18T20:36:36Z"
+    },
+    {
       "id": "f17ca6f739c3153ff667f9a9f9c98b5777924d42",
       "title": "Workspace Models: Lightweight Robotic Memory via Saliency-Driven Supervision [Nitish Dashora, Douglas Chen, Idan Shenfeld, John Marangola, Pulkit Agrawal]",
       "url": "http://arxiv.org/abs/2609.20820v1",
@@ -492,32 +518,6 @@
       "angle": "route",
       "source_traceable": true,
       "why": "Noam Brown谈多智能体+AI解Navier-Stokes+内外部模型差距，含一手研究员观点与前沿信号。",
-      "queued_at": "2026-09-18T05:16:33Z"
-    },
-    {
-      "id": "5956225af06373415785d0dbfd312f6c06858e9c",
-      "title": "RetireOPD: Self-Retiring On-Policy Distillation for Agentic Reinforcement Learning",
-      "url": "https://arxiv.org/abs/2609.20784",
-      "source": "huggingface:papers",
-      "published_at": "2026-09-16T20:00:00Z",
-      "raw_summary": "Multi-turn agents trained with reinforcement learning (RL) receive a single scalar reward per trajectory, which motivates self on-policy distillation (OPD) to supply dense token-level supervision from a self-teacher with privileged task skills, letting a skill-free student internalize them. This recipe, however, is undermined by two findings in agentic tasks: privileged information alone does not always make a teacher reliable, and the benefit of teacher supervision is stage-dependent. We therefore propose RetireOPD (Self-Retiring On-Policy Distillation), which first optimizes a decoupled, skill-conditioned teacher with environment rewards and then trains a skill-free student jointly with RL and OPD. Rather than following a predefined distillation schedule, RetireOPD adopts Adaptive Retirement: the student drops the teacher on its own once their discrepancy stops shrinking and it reaches a target fraction of the teacher's success rate, after which training proceeds with RL alone. Across Qwen2.5 models from 1.5B to 7B, RetireOPD improves ALFWorld success rate over RL baseline by 14.1% to 18.8% and WebShop accuracy by 11.8% to 19.0%, and surpasses its own skill-conditioned teacher in every setting.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "RetireOPD针对agentic RL中on-policy蒸馏的stage-dependency问题提出自退役方案，方法论清晰。",
-      "queued_at": "2026-09-18T05:16:33Z"
-    },
-    {
-      "id": "96f1da33c3deadcabfd500a7dea19a79327eb98b",
-      "title": "When2Think: Learning Difficulty-Aware Length Control for Efficient Hybrid Reasoning Models",
-      "url": "https://arxiv.org/abs/2609.19671",
-      "source": "huggingface:papers",
-      "published_at": "2026-09-16T20:00:00Z",
-      "raw_summary": "Large Reasoning Models (LRMs) achieve strong performance on complex tasks but exhibit systematic inefficiency: they often overthink easy problems and underthink hard ones. Existing approaches based on uniform length penalties or rigid routing incur an efficiency tax, trading reduced computation on easy instances for accuracy loss on hard instances. We formulate efficient reasoning as an instance-adaptive computation allocation problem and propose When2Think, a post-training framework for hybrid reasoning that dynamically allocates computation based on problem difficulty. Our method introduces Instance-level Difficulty-Aware Control (IDAC), a reward-shaping mechanism that leverages pre-computed reference statistics (accuracy and token usage) to regulate reasoning depth. Combined with verifier-based rewards and batch-wise standardized advantages, IDAC enables stable critic-free optimization without learned reward models or online reference-model queries. When2Think encourages direct answering on easy instances while preserving extended reasoning on hard instances, thereby learning when to use System 1 (NoThink) versus System 2 (Think). Experiments on mathematical benchmarks demonstrate improved accuracy-efficiency trade-offs: on AIME24, Pass@3 increases by 10.0% while token usage is reduced by 27.9% relative to the base model, and on AIME25, When2Think achieves 40.0% Pass@3, outperforming compression and routing-only baselines.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "When2Think难度感知长度控制解决LRM过度思考，post-training框架具体可复现。",
       "queued_at": "2026-09-18T05:16:33Z"
     }
   ],
