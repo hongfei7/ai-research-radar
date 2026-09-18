@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-18T14:30:55Z",
-  "text": "当前共有 30 个活跃事件。要点包括: Anthropic公司计划年底前建成5吉瓦算力; Anthropic与OpenAI寻求小型数据中心交易; Sources: Chinese DRAM leader CXMT is preparing to expand into NAND flash memory, competing with Samsung, SK Hynix, and domestic rival YMTC amid memory shortages (Reuters); 深度解读：智谱为什么要在 Infra 层搞 RSI？; 独家丨OpenAI的一款无屏硬件，正在深圳试制。",
-  "since": "2026-09-18T14:30:55Z",
+  "generated_at": "2026-09-18T17:52:08Z",
+  "text": "当前共有 30 个活跃事件。要点包括: Anthropic公司计划年底前建成5吉瓦算力; 长鑫存储据报在北京第二座晶圆厂规划3D NAND研发线; Sources: SK Hynix subsidiary Solidigm weighs building a NAND flash memory factory in the US; SK Hynix is also in talks with Intel for a separate project in Ohio (Reuters); Huawei details AI accelerator roadmap, pulls in next-generation Ascend NPUs by several quarters — FP4 performance of the Ascend 960PR doubles expectations; 罗福莉压力有多大？都给小米模型训练整上直播了。",
+  "since": "2026-09-18T17:52:08Z",
   "active_event_count": 30,
   "key_themes": [
+    "model_capability",
     "compute_demand",
     "ai_monetization",
-    "model_capability",
-    "chip_supply",
+    "policy_export",
     "datacenter_power"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n关于AI算力扩张对存储/消费电子的二阶效应存在方向性矛盾：ETimes报道\"AI需求将持续压制DRAM市场至2027年\"，对三星/海力士/美光是利好（供应紧张+涨价），但消费电子端（手机/PC）则面临成本挤压。国内MaaS赛道亦现矛盾——BAT云厂强推自研模型，但客户需求却涌向智谱、Seedance等第三方爆款（雷锋网报道），自研模型变现效率与底层算力capex形成内部张力。\n\n【新兴趋势】\n1）AI capex量级跃升：Anthropic 5GW、海力士CVC布局硅谷、汇丰用SRT对冲数据中心贷款风险，反映算力建设已从科技公司行为升级为系统性金融议题。2）AI硬件形态创新：手机背面（MagSafe）成为AI入口新战场，Plaud两年ARR从100万到1亿美元，硬件+订阅模式被验证。3）训练透明化叙事：罗福莉公开MiMo训练成本与故障记录",
+  "cross_analysis": "【核心矛盾】\n本轮报道对同一事件无明显方向性分歧。两条加州\"kill switch\"行政令报道（the-decoder与theverge-ai）互为补充，前者侧重云厂合规成本，后者侧重模型开发商直接受冲击。其余事件来源单一或互补，未出现多空对立解读。\n\n【新兴趋势】\n**AI Agent基础设施化**信号在三条AWS博客与Manus融资条目中反复出现，叠加多模型编排向Bedrock AgentCore迁移，反映Agent正从Demo走向生产级托管，AWS正卡位Agent运行时层。**存储瓶颈**亦成隐性主线：Seagate调研揭示62",
   "trend_spotting": "Anthropic 5GW算力年底目标将\"前沿实验室\"capex基准拉至传统超算量级，叠加华为昇腾960PR提前数季度发布、英伟达/AMD的GPU及HBM供应链压力进一步显性化；2027年前DRAM紧缺将持续挤压消费电子毛利，存储原厂话语权强化。\n\nAI硬件入口正从手机正面迁移至MagSafe背面，Plaud两年ARR从100万跃至1亿美元、出货200万台，验证录音+Agent的独立硬件留存路径，手机厂商（苹果、小米"
 }
