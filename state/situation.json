@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-17T22:24:57Z",
-  "text": "当前共有 22 个活跃事件。要点包括: 黄仁勋称英伟达明年芯片销量将达到今年两倍; Claude Code重构Projects推并行智能体云端工作流; GPT-6 Astra crushes Pokemon, Factorio, and Fallout 3 then spirals into Minecraft potato farming after one bad Creeper; 华为开创AI时代计算架构：让百万处理器成为一台计算机; Huawei plans Q1 2027 launch of new AI chip as it takes on Nvidia。",
-  "since": "2026-09-17T22:24:57Z",
-  "active_event_count": 22,
+  "generated_at": "2026-09-18T00:43:03Z",
+  "text": "当前共有 29 个活跃事件。要点包括: 黄仁勋称英伟达明年芯片销量将达到今年两倍; Claude Code重构Projects推并行智能体云端工作流; GPT-6 Astra crushes Pokemon, Factorio, and Fallout 3 then spirals into Minecraft potato farming after one bad Creeper; 华为开创AI时代计算架构：让百万处理器成为一台计算机; Huawei plans Q1 2027 launch of new AI chip as it takes on Nvidia。",
+  "since": "2026-09-18T00:43:03Z",
+  "active_event_count": 29,
   "key_themes": [
+    "ai_monetization",
     "model_capability",
     "policy_export",
-    "ai_monetization",
     "compute_demand",
     "chip_supply"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nDreamforce大会上OpenAI、Anthropic、Nvidia三CEO就AI发展节奏（安全监管 vs 商业化扩张）公开分歧；同期微软AI CEO Suleyman直接点名Anthropic\"加剧AI威胁\"，与Anthropic作为微软Azure核心算力客户的合作关系形成张力。两个事件指向同一深层矛盾：前沿模型阵营内部在安全/监管立场上已出现策略分裂，可能影响后续capex指引与算力需求曲线。\n\n【新兴趋势】\n（1）\"多智能体编排/长程自主\"在多条报道中反复出现——Claude Code Projects、GPT-6 Astra的游戏与规划能力均围绕agent协同展开，标志AI能力正从单轮对话向多线程自主任务迁移；（2）电力/电网成为算力扩张硬约束——Emerald AI联盟（Google/Nvidia/Anthropic共同寻找100GW并网容量）与纽约州$1M/MW社区投资框架同周出现，反映地方政府与电力侧正系统化介入；（3）AI失准/安全披露走向制度化——OpenAI建立misalignment事件报告框架、谷歌SynthID水印被发现削弱有害拒绝，监管与合规成本上升已成共识。\n\n【信息盲点】\nAMD、博通作为英伟达可验证竞争方在黄仁勋\"明年销量翻倍\"叙事中未被对照讨论；台积电CoWoS与HBM供给弹性在算力扩张主线中缺席；电力设备/冷却（GE Vernova、Eaton、Vertiv、液冷链）作为电力瓶颈的二阶受益方完全未覆盖；国内代工与算力链（中芯国际、寒武纪、海光）在华为昇腾960DT叙事中未被延伸；超大规模云",
+  "cross_analysis": "【核心矛盾】\nAnthropic一方面宣称Claude\"主导\"26%研发工作，另一方面强调\"在人类密切指导下承担大块任务\"，\"主导\"与\"密切指导\"之间口径模糊，且该来源可信度为low，存在夸大Agent自主性之嫌。此外，黄仁勋主张\"监管产品而非技术\"、DeepMind哈萨比斯等参会讨论AI治理，反映底层算力供应商与AI实验室在监管路径上立场尚未对齐。\n\n【新兴趋势】\n1）模块化\"AI工厂\"涌现（Crusoe 39亿美元融资），与超大规模数据中心路径分化；2）AI Agent在企业研发中的渗透率被头部实验室首次量化披露（Anthropic",
   "trend_spotting": "【新兴趋势】\n苹果自研数据中心芯片M8 Ultra据报道将引入英伟达NVLink互连，打破其一贯封闭架构，2029年节点意味着苹果正式承认\"互连生态\"是数据中心算力部署的关键瓶颈；智谱RSI在10万张国产卡上完成GLM全流程训练闭环，叠加50亿美元融资落地、ARR 16亿美元、API提价101%仍4倍调用量放量，国产模型+国产算力正走出\"能不能跑通\"的验证期。\n\n【早期信号】\nOpenAI Codex开发者公开质疑multi-agent架构存在\"协调税\"——1393个agent协作烧2万美元token不如单agent低成本完成，叠加OpenRouter周度token消耗25000倍增长但被指低效叙事，AI token消耗与真实需求的脱钩信号正在累积；Edge0框架让24GB显存机器跑35B MoE 20tok/s，预路由机制绕开传统SSD卸载限制，云端推理算力上限可能存在被压缩风险。\n\n【市场盲点】\n电力约束被"
 }

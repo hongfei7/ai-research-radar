@@ -4,40 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "Marvell",
-        "博通",
-        "英伟达"
-      ],
-      "features": [
-        "22b",
-        "ai",
-        "alphabet",
-        "and",
-        "banks",
-        "blackstone",
-        "bloomberg",
-        "compute",
-        "crux",
-        "for",
-        "fund",
-        "group",
-        "is",
-        "labs",
-        "loan",
-        "of",
-        "provides",
-        "providing",
-        "purchases",
-        "sources",
-        "to",
-        "tpu",
-        "venture",
-        "which"
-      ],
-      "sent_at": "2026-09-16T22:54:26Z"
-    },
-    {
-      "tickers": [
         "OpenAI",
         "微软"
       ],
@@ -226,6 +192,39 @@
         "黄仁"
       ],
       "sent_at": "2026-09-17T19:24:54Z"
+    },
+    {
+      "tickers": [
+        "Anthropic"
+      ],
+      "features": [
+        "ai",
+        "and",
+        "anthropic",
+        "bloomberg",
+        "chunks",
+        "claude",
+        "close",
+        "collaborates",
+        "direction",
+        "doing",
+        "from",
+        "ghaffary",
+        "human",
+        "in",
+        "its",
+        "large",
+        "leads",
+        "march",
+        "of",
+        "on",
+        "says",
+        "shirin",
+        "under",
+        "up",
+        "work"
+      ],
+      "sent_at": "2026-09-18T00:43:25Z"
     }
   ],
   "last_report": {
@@ -265,7 +264,10 @@
       }
     ]
   },
-  "morning_fallback": null,
+  "morning_fallback": {
+    "date": "2026-09-18",
+    "attempts": 1
+  },
   "blindspot_ledger": [
     {
       "key": "AMD|Marvell|博通|台积电|英伟达|超微电脑",
