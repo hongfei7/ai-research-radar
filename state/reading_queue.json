@@ -131,6 +131,58 @@
       "queued_at": "2026-09-18T05:16:33Z"
     },
     {
+      "id": "e8bc3b926262a7dd0bc2d1fdf3cabf827179e472",
+      "title": "Reflections on Trusting Trust, Revisited: Poisoning Self-Modifying AI Coding",
+      "url": "https://arxiv.org/abs/2609.17817",
+      "source": "hackernews",
+      "published_at": "2026-09-18T04:07:08Z",
+      "raw_summary": "Reflections on Trusting Trust, Revisited: Poisoning Self-Modifying AI Coding",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "把 Thompson 的 Trusting Trust 攻击延伸到自修改 AI 编码Agent的安全研究，可能给出可复现的投毒实验设置",
+      "queued_at": "2026-09-18T09:59:50Z"
+    },
+    {
+      "id": "4dc56cd07d55d7dc7d3fadfe143c60a63fdb8e7c",
+      "title": "深度解读：智谱为什么要在 Infra 层搞 RSI？",
+      "url": "https://www.leiphone.com/category/yanxishe/41rw4md2vjnpny2o.html",
+      "source": "rss:leiphone",
+      "published_at": "2026-09-18T06:48:00Z",
+      "raw_summary": "电话会揭秘智谱策略，以递归式优化跑赢300亿算力成本战。&nbsp; &nbsp; 作者丨高允毅&nbsp; &nbsp; 编辑丨岑 &nbsp; 峰&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;9月17日，唐杰罕见的发了一条长推，这次他聊的是最近最火的话题之一：RSI。智谱也在暗暗发力RSI，他们已经把RSI放到了Infra层面，做出一套由GLM-5.3驱动的推理基础设施。正是这套Infra系统，让 GLM-5.3-Flash，即前段时间火遍全球的匿名模型 Ox-Alpha，在发布一周内，就迅速成为了全网使用最广泛的模型之一，短短六天内处理了超过 62万亿个 Token。更具有里程碑意义的是，这一切，全是在十万张国产芯片上跑出来的。要知道，我们过去一直难以摆脱对英伟达的依赖，正在于国产芯片底层软件生态的薄弱，这中间有无数难以想象的算子兼容与通信难题。再加十万张芯片这个量级，难度是呈指数级上升的，在这样的集群里，每天都可能有几百张卡发生硬件故障、网络掉线或数据丢包。而唐杰透露，从第一次全量跑通到把全部的真实生产流量切过去，智谱居然只用了短短两周。这在以往，需要一支经验丰富的基础设施工程师团队花费数周甚至数月才能完成。面对硬件生态的不完美，智谱用软件给硬件“打补丁”并做到了极致优化。不仅让大模型顺利跑通，更使端到端吞吐量直接提升了&nbsp;3.2 倍。这背后体现了智谱的一个核心判断：在算力受到外部严格限制的情况下，中国 AGI 能否取得突破，关键除了拥有多少芯片，而在于能否通过软件更高效地调动和利用算力。智谱此举，实质上是希望借助 RSI 建立一种“底层解耦”的能力，使 AI 能够自主适配不同硬件生态，跨越硬件之间的兼容障碍。也就是说，智谱正试图把“国产算力不好用”这一行业难题，转变为“由 AI 自动挖掘硬件极限”的技术主动权。国产芯片集群、由 AI 深度参与的 Infra 系统、全球出圈模型，这三件事组合在一起，连唐杰忍不住感慨：我们距离RSI的终局还相差甚远，但那个 “模型优化系统、系统反哺模型” 的最小循环，已经真实地转动了起来。01十万张国产芯片集群：一场没有参考答案的部署硬仗唐杰表示要在十万张国产芯片，把一个大模型真正跑通、部署好，这并非易事。这个事至少有三个坎，每个都足以拖垮一支经验丰富的工程团队。首先，国产芯片的内存和数据传输速度天生就有限，不能直接照搬英伟达那套成熟经验。其次是软件栈极不成熟，很多底层组件缺失。这里缺乏现成的运维手册，很多关键算子没有现成实现，大量底层文档甚至常常只能靠“猜”去推测和验证。此外，还要考虑模型本身的负载极限。GLM-5.3-Flash 是全新架构，既要同时处理文字和图像，还要处理 100 万 token 的超长上下文。这意味着 KV ",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "智谱把RSI放至Infra层并以GLM-5.3驱动推理系统的策略解读，含唐杰长推与Ox-Alpha匿名模型背景，路线信息密度高",
+      "queued_at": "2026-09-18T09:59:50Z"
+    },
+    {
+      "id": "188e688d266e9d88447b4870f3838ea7645fca53",
+      "title": "英伟达开源 IMO 金牌配方：不仅是「人海战术」，1.5TB 显存做实 AI「 推恩令」？",
+      "url": "https://www.leiphone.com/category/ai/xpcc8xugypadwngt.html",
+      "source": "rss:leiphone",
+      "published_at": "2026-09-18T06:02:00Z",
+      "raw_summary": "用三套 checkpoint 完成多轮证明搜索，用过程透明平息学术怒火，用 1.5TB 显存门槛锁定算力霸权。名为代码平权，实则算力集权。&nbsp; &nbsp; 作者丨郑佳美&nbsp; &nbsp; 编辑丨岑 &nbsp; 峰&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;9 月 9 日，NVIDIA 公布了 Nemotron 3 Ultra 在 2026 年 IMO 上使用的整套数学推理系统。这套系统最终拿到 30/42 分，超过当届 29 分的金牌线。整个比赛过程中，模型只用自然语言写证明，没有调用 Lean 等形式化证明器，也没有借助外部工具或联网检索。但这次发布的重点不只是成绩。NVIDIA 还把支撑这 30 分的两个数学专家 checkpoint、SFT 与 RL 训练数据、推理代码、训练配方、比赛提交证明，以及 200 道新的 Nemotron-IMO-Bench 一起开放了出来。换句话说，这次公开的是一整套从训练到比赛推理的系统，而不是单独放出一个更强的数学模型。Nemotron 3 Ultra 只是底座，后面两个专家模型、大规模证明搜索、模型验证和多轮改写，共同组成了把成绩推到 IMO 金牌线的完整链路。两天后的 9 月 11 日，陶哲轩、Peter Scholze、Maryna Viazovska 等 25 位菲尔兹奖得主联合发声，批评 AI 数学成果发布越来越快，而证明检查、方法梳理和复现往往没有足够时间展开。放在这样的背景里，NVIDIA 这次开源比较少见的一点，是把一个 IMO 金牌级结果背后的模型、数据、推理流程和计算成本都留了下来。而这套系统的技术起点，是 NVIDIA 没有继续对同一个 Nemotron 3 Ultra 反复采样，而是先训练了两个行为明显不同的数学专家。01两个专家 checkpointNemotron 里面一个比较核心的设计，是让后训练直接服务于后面的搜索。SFT 数据里除了完整证明，还加入了大量证明修改、验证和再次验证的轨迹。这样训练出来的模型，学到的不只是从题目生成证明，还包括拿到一份已经写了一半、甚至局部存在错误的证明以后，怎样判断哪里出了问题，再沿着原来的路线继续修。放进搜索系统以后，这种能力会直接影响计算资源的利用方式。高难数学题很少只有会做和不会做两种状态，大量候选其实处在中间区域，主体结构已经接近可用，只在某个引理、边界条件或者推导闭环上出了问题。一个只会重新作答的模型，每次失败后都要重新进入整个证明空间；接受过修改训练的模型，则可以把已有证明当成中间状态继续推进，相当于保留前一次计算里已经找到的有效结构。RL 专家处理的是另一层问题：怎样改变这些证明路线被抽中的概率。IMO 级题目的证明空间非常稀疏。模型可能已经",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "详解 NVIDIA Nemotron 3 Ultra 在 IMO 2026 拿下 30/42 分背后的多 checkpoint 证明搜索系统、1.5TB 显存门槛与自然语言证明策略，技术细节充实。",
+      "queued_at": "2026-09-18T09:59:50Z"
+    },
+    {
+      "id": "77b87d26ec4eb4e26072be0ca51012c23aacdb2d",
+      "title": "When EOS Tokens Disagree: Understanding Length Inflation in On-Policy Distillation",
+      "url": "https://arxiv.org/abs/2609.20511",
+      "source": "huggingface:papers",
+      "published_at": "2026-09-16T20:00:00Z",
+      "raw_summary": "We study length inflation in on-policy distillation (OPD), where student responses can become excessively long and even exhaust the generation budget. We identify termination-token mismatch between base students and post-trained teachers as an important source of this behavior. Across Qwen3, Llama, and Gemma, the two models can place their stopping probability on different EOS tokens, even when their declared stopping sets are identical. This mismatch can suppress the student's preferred termination action without reliably transferring the teacher-preferred alternative. We show that aligning the decoding stopping set alone is insufficient, while treating functionally equivalent EOS tokens as a shared semantic stopping action substantially mitigates mismatch-induced length inflation across all three model families. To further understand how termination behavior evolves over training, we study OPD across different K2-Horizon training stages. This stage-wise analysis shows that termination preferences can shift substantially during training, while also revealing a distinct length inflation late in the OPD run that persists beyond termination alignment. Together, these results identify termination mismatch as an important, but not exhaustive, source of OPD length dynamics. We release an implementation incorporating the proposed termination-handling corrections.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "定位 on-policy 蒸馏中长度膨胀的根因为 EOS token 错配，并在 Qwen3/Llama/Gemma 上验证，对 RLHF/蒸馏工程有直接指导。",
+      "queued_at": "2026-09-18T09:59:50Z"
+    },
+    {
       "id": "f17ca6f739c3153ff667f9a9f9c98b5777924d42",
       "title": "Workspace Models: Lightweight Robotic Memory via Saliency-Driven Supervision [Nitish Dashora, Douglas Chen, Idan Shenfeld, John Marangola, Pulkit Agrawal]",
       "url": "http://arxiv.org/abs/2609.20820v1",
@@ -428,6 +480,45 @@
       "source_traceable": true,
       "why": "在 harness 层做 RSI 式的递归自改进，给出 token efficiency、可迁移性等具体指标和扩展环境数量的方法，对 coding agent 工程实践有直接参考价值。",
       "queued_at": "2026-09-18T05:16:33Z"
+    },
+    {
+      "id": "f99a194b3b25c5736dd0371ba2f1fcb3ada07203",
+      "title": "Not In My Git Yard: Catching Backdoors at Commit and Release Time",
+      "url": "https://arxiv.org/abs/2607.26719",
+      "source": "rss:lobsters",
+      "published_at": "2026-09-18T08:14:44Z",
+      "raw_summary": "",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "面向commit/release阶段的后门检测研究，名字直指具体安全攻防问题，值得看方法与威胁模型",
+      "queued_at": "2026-09-18T09:59:50Z"
+    },
+    {
+      "id": "9d93e4a4c4ecc3a1797900c48a2c07406e66bd40",
+      "title": "理想开始卖技术：马赫芯片、碳化硅、增程器要外供",
+      "url": "https://36kr.com/p/3988488062630661?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-09-18T06:31:55Z",
+      "raw_summary": "文&nbsp;|&nbsp;徐蔡钰&nbsp; 编辑&nbsp;|&nbsp;李勤 杨轩 理想汽车，开始开放多项自研技术的对外合作，寻求更多收入来源。 36氪从多位产业人士处获悉后梳理，今年以来，理想汽车已经开启了多项核心技术的对外供应计划，而伴随业务拆分，部分业务也有引入外部资金的计划。 典型启动外供的业务有自研马赫芯片、碳化硅模组公司斯科半导体及增程器等。目前，马赫芯片、碳化硅模组等都已经成立独立的公司实体，寻求更多外部客户，斯科半导体也准备引入更多外部资金。 而其他的动力技术，如增程系统也向外释放出接纳外部客户的信息。但自研电池尚无计划，行业人士表示，“电池的定制化程度很高，外供难度太大。” 自研马赫芯片的业务独立和外供，已经有诸多信号。今年7月，理想为芯片业务注册了一家全资控股的新公司：芯创智核（上海）科技有限公司。 据36氪了解，理想高层也已经决议批准芯片业务分拆，与此同时，业务拓展等动作也在同步进行。消息人士透露，已经有具身智能公司与理想高层洽谈过，“后者明确推销了马赫芯片”，最终这些具身公司是否使用马赫芯片，可能取决于算法迁移难度。 马赫M100是理想第一颗量产的辅助驾驶芯片，单颗算力为1280TOPS，内存带宽达到273GB/s。理想曾公开表示，马赫M100的实际可用算力是英伟达Thor-U的3倍。 今年二季度以来，马赫M100芯片已跟随新款L9、L8、MEGA及新车型i9搭载上车。有理想人士透露，作为第一颗自研芯片，马赫的量产相当顺利，公司在芯片厂包了很多产线。 而相比马赫芯片外供更早的是，理想的碳化硅公司斯科半导体于年初开始独立运营，自负盈亏，公司也在多方寻求外部客源。 将自研技术拆分外供，在汽车行业里并不罕见。这是常用的降低资金投入压力，同时寻求更多市场空间和发展机会的做法。 只是这一次发生在了财务策略更加谨慎的理想汽车身上。 毛利率承压，理想也需要找活钱 理想并不缺账面现金，截至2026年二季度末，现金储备依然有875亿元，稳居新势力第一。但钱多，不等于没压力。理想同时扛着三件吞金的事：销量在等待回暖、毛利率正在修复，研发还在大幅增长下注。 2026年，理想汽车1–8月累计交付26.16万辆，同比微降0.6%。直到8月后，L6、新款MEGA和i8、i9的接连上市，销量才开始逐步回温。 2023年起，理想一直是最能赚钱的新势力品牌。但2026上半年，产品进入换代期，公司净亏损39.94亿元，而去年同期还盈利17.43亿元。毛利率也从19.4%跌到9.4%，离李想说过“15%–20%才健康”的线，还有一定差距。 在销量和利润双双承压的现在，理想为了确保长远竞争力，投入端还在加大。2026年二季度，理想已连续6个季度投入30亿量级的研发费用，而理想的季度经营现金流刚刚恢复单季转正。这大概就是理想开始转向对外找钱的直接动力。 蔚来其实走过相同的路。 2024年蔚来净亏损224亿元，创下历史峰值。同年，蔚来换电网络开始向第三方车企和能源公司开放。2025年，蔚来又把自研芯片业务拆成独立子公司安徽神玑技术，李斌公开表态“愿意向行业开放”。随后神玑频繁接触车企与机器人公司，并和爱芯元智成立合资公司。到2026年2月完成首轮22.57亿元融资，投后估值冲到百亿元上下。 不仅蔚来芯片分拆进展顺利，据36氪了解，曾经走到经营低谷的芯片公司辉羲智能也在具身智能热潮中接连斩获融资，估值快速拉升。 而理想的马赫芯片采用更贴合AI需求的数据流架构，自然也想在火热的具身智能大潮中，寻求新机会。 理想卖技术，有市场吗？ 增程器，是理想较早投入自研的核心零",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "理想自研马赫芯片/碳化硅/增程器外供的拆分细节，含芯创智核实体、M100算力1280TOPS等具体参数，对国产车规芯片格局有判断价值",
+      "queued_at": "2026-09-18T09:59:50Z"
+    },
+    {
+      "id": "8cceafc0fb13b10a8f2c3bb707452d66907c8121",
+      "title": "在 AI「囤粮潮」里，拆解智谱 50 亿美元的「技术账本」",
+      "url": "https://www.leiphone.com/category/industrynews/u0od1seykipa98ci.html",
+      "source": "rss:leiphone",
+      "published_at": "2026-09-18T06:28:00Z",
+      "raw_summary": "&nbsp;AI下半场，谁能用钱换来“技术代差”？&nbsp; &nbsp; 作者丨徐晓飞&nbsp; &nbsp; 编辑丨刘 &nbsp; 伟&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;眼下，AI行业的竞争重心，已经从“能不能做出来”变成“能不能持续迭代、不断摸高”。前者可能是一次灵感迸发，但后者更多取决于组织、产品、资金、战略等一系列综合实力的沉淀。尤其资金，是支撑其他生产力要素的“弹药与粮仓”。这也是今年以来，智谱、字节、阿里、腾讯等头部厂商相继融资的核心原因。9月13日晚间，智谱发布公告，完成约 50 亿美元融资，包含约20亿美元股份配售及约30亿美元可转债发行，所得款项主要投向模型研发与算力基础设施这条主线。公告发布后，一些追问开始在资本市场和AI圈里发酵：智谱为何要融这笔钱，这笔钱会重点用到哪些地方，将为智谱“换回什么”？01两月一次的迭代，是方向也是门槛目前，AI这场长跑的胜负手已经变了。在上半场，模型能力常被归到算法突破上，但到了下半场，真正拉开差距的，是把一次突破稳定复现、再复现的能力。这背后比拼的是一整套复杂的工程系统：实验怎么排期，数据与算力怎么配比，Infra底层集群怎么调度……这些细节不出现在跑分榜上，却是决定模型迭代能不能持续跑下去的关键。尽管“持续迭代”已是大模型行业当下公认的方向，但能把它长期稳定跑出来的厂商却不多，也正因如此，节奏本身就成了实力的一部分。今年 5 月，谷歌在 I/O 大会上预告说旗舰模型 Gemini 3.5 Pro 会在几周内上线，但不料随后一再推迟。据多家海外媒体爆料，延期的原因与编程与 Agent 能力短板有关。模型迭代节奏没有跟上，让谷歌一度成为今年下半年AI行业里，受到争议的对象。反观国内不少AI厂商，节奏更加稳定。以智谱为例，从今年 2 月到 8 月，GLM-5、GLM-5.1、GLM-5.2、GLM-5.3 接连落地，平均两个月就有一次重要升级。再往前看，GLM-4.6、GLM-4.7 也维持在这一节奏里。据第三方机构 Artificial Analysis显示，如果把最近 11 个月连起来看，智谱旗舰模型在综合智能指数上的得分，已经从 32 攀升到了 60，一举进入了全球前沿模型的能力区间。而业内也早已注意到了这一现象。多位AI行业研究员都曾告诉过AI科技评论，智谱最近一年的迭代速度和能力攀升曲线，在行业里也并不多见。在他们看来，单点跑分高，有时候来自于一次漂亮的调参，但能做到连续多代模型都有抬升，背后离不开研发能力、组织效率、工程系统等一系列支撑。“眼下，大模型迭代的难点很少落在‘想不想得到’，多数卡在‘能不能按计划把想法变成可复现的结果’。”其中一位研究员对AI科技评论说，“智谱能连续几代按计划交出来，说明排",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "智谱50亿美元融资背后的算力与技术账本分析，对头部大模型公司资金-算力-迭代逻辑有结构化判断",
+      "queued_at": "2026-09-18T09:59:50Z"
     }
   ],
   "digest_last_date": "2026-09-18"

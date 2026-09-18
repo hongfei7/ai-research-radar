@@ -4,68 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "OpenAI",
-        "微软"
-      ],
-      "features": [
-        "as",
-        "astra",
-        "classifies",
-        "critical",
-        "cybersecurity",
-        "first",
-        "for",
-        "gpt-6",
-        "is",
-        "model",
-        "openai",
-        "the"
-      ],
-      "sent_at": "2026-09-17T06:19:14Z"
-    },
-    {
-      "tickers": [
-        "Anthropic",
-        "微软"
-      ],
-      "features": [
-        "anthropic",
-        "claude",
-        "一背",
-        "上下",
-        "下文",
-        "也想",
-        "二合",
-        "你的",
-        "合一",
-        "后也",
-        "想锁",
-        "死你",
-        "的上",
-        "背后",
-        "锁死"
-      ],
-      "sent_at": "2026-09-17T06:19:41Z"
-    },
-    {
-      "tickers": [
-        "DeepSeek"
-      ],
-      "features": [
-        "cache",
-        "compression",
-        "deepseek-v4.1",
-        "flash",
-        "kv",
-        "limits",
-        "of",
-        "pushing",
-        "the"
-      ],
-      "sent_at": "2026-09-17T06:20:07Z"
-    },
-    {
-      "tickers": [
         "博通",
         "英伟达",
         "苹果"
@@ -273,6 +211,76 @@
         "速倡"
       ],
       "sent_at": "2026-09-18T05:22:28Z"
+    },
+    {
+      "tickers": [
+        "OpenAI",
+        "工业富联"
+      ],
+      "features": [
+        "openai",
+        "一款",
+        "丨的",
+        "件正",
+        "在深",
+        "圳试",
+        "家丨",
+        "屏硬",
+        "无屏",
+        "款无",
+        "正在",
+        "深圳",
+        "独家",
+        "的一",
+        "硬件",
+        "试制"
+      ],
+      "sent_at": "2026-09-18T10:04:58Z"
+    },
+    {
+      "tickers": [
+        "中芯国际",
+        "商汤",
+        "寒武纪"
+      ],
+      "features": [
+        "infra",
+        "rsi",
+        "为什",
+        "么要",
+        "什么",
+        "在层",
+        "层搞",
+        "度解",
+        "智谱",
+        "深度",
+        "要在",
+        "解读",
+        "读智",
+        "谱为"
+      ],
+      "sent_at": "2026-09-18T10:05:20Z"
+    },
+    {
+      "tickers": [
+        "Anthropic",
+        "OpenAI"
+      ],
+      "features": [
+        "anthropic",
+        "openai",
+        "与寻",
+        "中心",
+        "交易",
+        "型数",
+        "寻求",
+        "小型",
+        "心交",
+        "据中",
+        "数据",
+        "求小"
+      ],
+      "sent_at": "2026-09-18T10:05:45Z"
     }
   ],
   "last_report": {
