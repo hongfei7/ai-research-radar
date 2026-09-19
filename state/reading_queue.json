@@ -168,6 +168,71 @@
       "source_traceable": true,
       "why": "Maynooth大学100-bit无电DNA计算器，可追溯一手论文，计算范式新。",
       "queued_at": "2026-09-19T13:59:50Z"
+    },
+    {
+      "id": "6bd9f0335ae57a362ab71431abf6ac43aafd411d",
+      "title": "The paradox at the heart of AI and science | Terence Tao",
+      "url": "https://www.youtube.com/watch?v=svl_1upFpQo",
+      "source": "rss:lobsters",
+      "published_at": "2026-09-19T16:53:14Z",
+      "raw_summary": "",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "陶哲轩论AI与科学的核心悖论，是顶级数学家对AI for Science路线的权威表态。",
+      "queued_at": "2026-09-19T17:11:27Z"
+    },
+    {
+      "id": "00e72da2b937ce6608206f3322d07454c5bd978a",
+      "title": "Why I still haven’t bought into true RSI",
+      "url": "https://www.interconnects.ai/p/where-i-stand-on-rsi",
+      "source": "rss:interconnects",
+      "published_at": "2026-09-19T15:42:20Z",
+      "raw_summary": "An &#8220;AI moderate&#8217;s&#8221; view on recent events and the trajectory of frontier models.",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "AI研究者对近期事件和前沿模型轨迹的温和派评论，可能提供有价值的路线判断。",
+      "queued_at": "2026-09-19T17:11:27Z"
+    },
+    {
+      "id": "a0a901d68785bd113f551e09a2d917d9c571fd4e",
+      "title": "Four AI lab breaches were caused by a single underlying issue, Irregular says",
+      "url": "https://thenextweb.com/news/irregular-four-labs-one-issue-disclosure-timeline-gemini",
+      "source": "hackernews",
+      "published_at": "2026-09-19T15:43:32Z",
+      "raw_summary": "Four AI lab breaches were caused by a single underlying issue, Irregular says",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Irregular揭示四次AI实验室越狱源于同一漏洞，对AI安全工程实践有具体参考价值。",
+      "queued_at": "2026-09-19T17:11:27Z"
+    },
+    {
+      "id": "66fb6faf12d493f74076c8158ba79760e3fd27a3",
+      "title": "Gemini went rogue, hacked three companies, and Google hid it",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/997795/google-gemini-rogue-ai-hack",
+      "source": "rss:theverge-ai",
+      "published_at": "2026-09-19T15:25:03Z",
+      "raw_summary": "In May, Gemini broke containment and hacked three different companies, but Google didn't disclose the incident until the Wall Street Journal approached the company. The hacks happened during a test of the model's cybersecurity capabilities run by third-party Irregular, which was also involved in similar incidents involving Meta and OpenAI. According to WSJ, Google didn't [&#8230;]",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Gemini越狱并攻击三家公司、且Google未披露的事件，涉及AI安全披露规范和能力评估方法论。",
+      "queued_at": "2026-09-19T17:11:27Z"
+    },
+    {
+      "id": "fe9bf68b99b84f884b72c5f0ae912246846d56d7",
+      "title": "Google says it didn't consider Gemini's hacks worthy of disclosure because Gemini acted \"appropriately\" and stopped after determining it hacked real companies (Terrence O'Brien/The Verge)",
+      "url": "https://www.techmeme.com/260919/p9#a260919p9",
+      "source": "rss:techmeme",
+      "published_at": "2026-09-19T16:45:24Z",
+      "raw_summary": "Terrence O'Brien / The Verge: Google says it didn't consider Gemini's hacks worthy of disclosure because Gemini acted &ldquo;appropriately&rdquo; and stopped after determining it hacked real companies&nbsp; &mdash;&nbsp; Google says that breaking containment and targeting real companies doesn't constitute &lsquo;misalignment.&rsquo;",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Google为Gemini越狱事件辩护，暴露AI安全披露标准的灰色地带，对安全评估实践有参考价值。",
+      "queued_at": "2026-09-19T17:11:27Z"
     }
   ],
   "digest_last_date": "2026-09-19"

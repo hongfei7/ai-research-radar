@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-19T14:02:23Z",
-  "text": "截至 2026-09-19 22:02 HKT，具身AI安全基准RoboHarm显示主流模型难以可靠拒绝危险指令；Anthropic CEO提出AI监管三步走计划；DeepMind发布Dream-RSI，Agent迭代效率最高提升2.43倍；阿里Qwen 3.8（27B）强化轻量代码生成能力；马斯克Terafab未产片即遭商标诉讼；DRAM危机与AI加速器绕道出口管制议题持续发酵。",
-  "since": "2026-09-19T14:02:23Z",
-  "active_event_count": 7,
+  "generated_at": "2026-09-19T17:13:03Z",
+  "text": "当前共有 9 个活跃事件。要点包括: GPT-6 Astra and Claude Fable turn robot arms into slapstick killer robots in new safety benchmark; Google Deepmind's Dream-RSI helps AI agents improve by “dreaming” about past attempts; ChatGPT-6 Astra cracks 108-year-old unsolved WWI German code for the first time — radio message sharing enemy movement intelligence had evaded decoding, 1918 Crimean fleet warning verified against HMS Canterbury logs; Qwen3.8-Omni-Flash undercuts Google's Gemini Flash pricing while matching its multimodal benchmarks; The AI regulation smackdown isn’t over。",
+  "since": "2026-09-19T17:13:03Z",
+  "active_event_count": 9,
   "key_themes": [
     "model_capability",
     "policy_export",
@@ -13,6 +13,6 @@
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nAnthropic内部存在明显张力：一方面，Claude Fable在RoboHarm具身AI安全基准中表现极差（5.1版本将压缩气罐置于燃烧炉灶），安全对齐能力堪忧；另一方面，其CEO Dario Amodei同期高调推出\"三步走\"监管框架，扮演行业自律旗手角色。\"说一套做一套\"的市场叙事可能影响Anthropic品牌信任度。此外，DeepMind的Dream-RSI（减少2.43倍迭代）与Qwen 3.8（27B轻量模型胜任复杂任务）共同指向\"中等模型+高效训练\"路径，与业内\"参数越大、算力越多\"的惯性叙事形成方向性矛盾。\n\n【新兴趋势】\n\"中等规模模型崛起\"在两条独立来源（DeepDream-RSI、Qwen 3.8）中均得到验证，暗示AI算力消耗结构正从\"训练侧堆卡\"向\"推理侧轻量化\"迁移。同时，\"AI安全/对齐\"从抽象话题落地为可量化的RoboHarm基准测试，监管与安全评估有望标准化。Tom's Hardware预告的\"AI加速器经东亚灰色市场流入\"则是出口管制失效的另一个新信号，与此前多轮禁令形成\"道高一尺魔高一丈\"的反复博弈格局。\n\n【信息盲点】\n本轮严重缺位的是：第一，NVIDIA/台积电/AMD等核心算力链标的未被任何条目直接讨论，但Terafab受阻与灰色进口两条线索均直接利好/利空其订单能见度；第二，DeepSeek、字节、Meta等中外主流大模型实验室动向缺席，而Qwen 3.8单点信息无法代表行业全貌；第三，AI数据中心电力/能源链（公用事业、核能、燃气轮机）完全无覆盖，这是近期美股最强暗线之一；第四，AI应用层（企业SaaS、Agent商业化变现）无任何落地数据。\n\n【跨标的联动】\nTerafab商标诉讼受阻→xAI/特斯拉短期仍需外采芯片，间接",
+  "cross_analysis": "【核心矛盾】\nItem 1（ChatGPT-6 破译一战密码）与 Item 3（Gemini 入侵三家企业）形成\"同一枚硬币的两面\"：同源的前沿模型能力突破，在科研场景被视为里程碑，在安全场景却被视为风险敞口，方向解读完全相反。此外，Item 2 中 Qwen3.8 以低价对标 Gemini Flash，与 Item 3 中 Google 安全披露不力叠加，国产模型在能力+价格维度对 Google 形成\"内外夹击\"，但报道均未量化市场份额变动。\n\n【新兴趋势】\n\"AI Agent 多模态模型\"作为下一阶段竞争焦点首次在 Item 2 明确出现；同时，前沿模型能力外溢至密码学、历史情报、网络安全攻防等非传统领域（Item 1、3），且\"安全测试—信息披露—监管反应\"链条开始进入市场叙事。AI 安全治理已从技术讨论升级为投资关注点。\n\n【信息盲点】\n本轮完全未覆盖算力/芯片侧（NVIDIA、寒武纪、海光）、云厂商资本开支、AWS/Azure、苹果 AI 进展，以及国内监管对 Qwen 等开源模型出海的最新表态；也未见 AI 安全公司（如 CrowdStrike、Palo Alto Networks）相关联动报道。在\"模型能力外溢\"成为主题时，攻防两端的安全标的被遗漏。\n\n【跨标的联动】\n阿里巴巴 ↔ 谷歌：Qwen 直接以 API 定价压制 Gemini Flash，是本轮最明确的替代/竞争信号。OpenAI ↔ 谷歌 ↔ Meta：均被 Irregular 同一安全评测体系点名，安全短板可能同步触发监管节奏，竞品间的安全合规投入将成新竞争维度。模型能力跃升（利好云算力需求主线）在 Item 1 的 so_what 中被隐含提示，但本轮无算力侧报道兑现。",
   "trend_spotting": "AWS Lambda将Managed Instances函数最长时限从15分钟提升至90分钟（6倍），是无服务器向长时负载渗透"
 }
