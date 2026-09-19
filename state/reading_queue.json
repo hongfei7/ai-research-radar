@@ -311,6 +311,45 @@
       "source_traceable": true,
       "why": "Heidelberg 用统一互连网络扩展 BrainScaleS 神经形态系统，方案具体可读。",
       "queued_at": "2026-09-19T19:20:10Z"
+    },
+    {
+      "id": "87c46080bbda1b7e7d5b08e90a680cc699e9433b",
+      "title": "Agentic AI Automates Design-Rule Repair While Preserving Layout Equivalence (Purdue University)",
+      "url": "https://semiengineering.com/agentic-ai-automates-design-rule-repair-while-preserving-layout-equivalence",
+      "source": "rss:semiengineering",
+      "published_at": "2026-09-19T20:01:40Z",
+      "raw_summary": "Researchers at Purdue University published a technical paper titled “DRC-Aid: Design-Rule Correction via Agentic Framework utilizing Inference-Time Large Language Models.” Abstract Excerpt: “We present DRC-Aid, a closed-loop agentic framework that automates local DRC repair by formulating it as verification-in-the-loop search. To constrain the combinatorial geometric repair space, a deterministic Rule Engine converts physical verification tool-reported... &#187; read more The post Agentic AI Automates Design-Rule Repair While Preserving Layout Equivalence (Purdue University) appeared first on Semiconductor Engineering.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Purdue用LLM agent做DRC自动修复的论文，把agentic AI落地到EDA设计规则修复，含verification-in-the-loop搜索与Rule Engine约束，有方法可借鉴。",
+      "queued_at": "2026-09-19T21:37:42Z"
+    },
+    {
+      "id": "7d901592c8112589d565e429f2a4e6d3671af6bf",
+      "title": "Predicting Thermal Conductivity in Advanced BEOL Interconnect Stacks (Peking University)",
+      "url": "https://semiengineering.com/predicting-thermal-conductivity-in-advanced-beol-interconnect-stacks-peking-university",
+      "source": "rss:semiengineering",
+      "published_at": "2026-09-19T20:05:04Z",
+      "raw_summary": "Researchers at Peking University published a technical paper titled “Predictive Structure to Thermal Conductivity Modeling Framework for BEOL Interconnect Stacks in Advanced Technology Nodes Enabled by Extensive Layer Resolved Thermal Measurements.” Abstract Excerpt: “The increasing structural complexity of BEOL interconnect stacks in advanced integrated circuits demands a structure-aware thermal conductivity (κ) modeling framework. However, generalizable... &#187; read more The post Predicting Thermal Conductivity in Advanced BEOL Interconnect Stacks (Peking University) appeared first on Semiconductor Engineering.",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "北大关于先进节点BEOL互连栈热导率建模的论文解读，有具体测量+建模方法，对先进封装/热设计有参考价值。",
+      "queued_at": "2026-09-19T21:37:42Z"
+    },
+    {
+      "id": "2aded86e541d2f3bb81ac71d8e64b59089b7005c",
+      "title": "Spanish Multiverse Computing used a quantum computer (156-qubit IBM Heron) to create their latest Quasar 1.1 438B model",
+      "url": "https://www.reddit.com/r/singularity/comments/1wkxlqp/spanish_multiverse_computing_used_a_quantum",
+      "source": "reddit:singularity",
+      "published_at": "2026-09-19T21:05:15Z",
+      "raw_summary": "&#32; submitted by &#32; /u/The_Wonderful_Pie [link] &#32; [comments]",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": false,
+      "why": "量子-经典混合训练438B模型的报道，若属实是hybrid quantum LLM的实质性进展，值得看原文确认。",
+      "queued_at": "2026-09-19T21:37:42Z"
     }
   ],
   "digest_last_date": "2026-09-19"
