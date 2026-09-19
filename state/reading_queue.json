@@ -1,4 +1,44 @@
 {
-  "candidates": [],
+  "candidates": [
+    {
+      "id": "87c74f1ab470656aac8d7fd0b748a8382e74909b",
+      "title": "NASA-IBM Lunar Foundation open-Source Geospatial AI Model",
+      "url": "https://newsroom.usra.edu/usra-contributes-planetary-science-expertise-to-nasa-ibm-lunar-foundation-model",
+      "source": "hackernews",
+      "published_at": "2026-09-19T04:44:35Z",
+      "raw_summary": "NASA-IBM Lunar Foundation open-Source Geospatial AI Model",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "NASA-IBM开源地理空间基础模型，涉及基础模型在遥感/科学计算的应用，值得了解模型细节和能力边界",
+      "queued_at": "2026-09-19T05:55:08Z"
+    },
+    {
+      "id": "7bd8bf6bf5696e29808fc63aab6196eb53dab599",
+      "title": "北京：推动模型与芯片适配调优，支持推理专用芯片、模型轻量化、边缘端部署等技术攻关",
+      "url": "https://36kr.com/newsflashes/3989638453066501?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-09-19T01:10:06Z",
+      "raw_summary": "北京市经济和信息化局、北京市发展和改革委员会发布关于印发《北京市加快词元经济发展的行动方案（2026—2028年）》的通知。其中提到，推动关键核心技术攻关。加快基础模型技术迭代，提升模型智能上限水平。推动模型与芯片适配调优，支持推理专用芯片、模型轻量化、边缘端部署等技术攻关，高水平建设、调用智算资源，全面提升词元生产能力。",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "北京'词元经济'政策明确把模型-芯片适配调优、推理专用芯片、模型轻量化、边缘部署列为核心技术攻关方向，透露中国推理算力路线选择",
+      "queued_at": "2026-09-19T05:55:08Z"
+    },
+    {
+      "id": "fa779e436bda5f02bc551c0965a62b143c80b911",
+      "title": "Gemini 4 Pro疑似泄露，“AI减速”又成空话",
+      "url": "https://www.tmtpost.com/8145550.html",
+      "source": "rss:tmtpost",
+      "published_at": "2026-09-19T02:54:24Z",
+      "raw_summary": "文 | 字母AI前几个月，OpenAI和Anthropic轮番把旗舰模型往前推，谷歌却显得异常安静。Flash几乎3周一更，3.6、3.7、3.8连续往前，但代表最高能力上限的Pro迟迟没有动静。直到这两天，大模型盲测竞技场Arena里，突然冒出一个挂着gemini-3.8-flash名字的模型。开发者一上手就发现了不对劲，真正的Gemini 3.8 Flash已经发布了，它该是什么水平，大家心里有数。可这个&ldquo;3.8 Flash&rdquo;，写代码、做SVG、跑Agent，表现明显又往上跳了一截。几轮实测之后，一个猜测迅速扩散开来：这个模型很有可能是谷歌藏在标签后面的下一代旗舰&mdash;&mdash;Gemini 4 Pro。紧接着，一张更夸张的benchmark对比图开始疯传。编码、Agent、推理，多项成绩都把GPT-6 Astra和Claude Fable压在下面。就在几天前，几家最重要的AI公司还在公开讨论，是不是该慢一点。现在，减速的声音还没落地，新一轮竞赛已经开始狂飙。而这个疑似Gemini 4 Pro的&ldquo;神级模型&rdquo;背后，还有一个更危险的关键词：RSI。Gemini 4 Pro疑似泄露9月2日，Google刚刚正式发布Gemini 3.8 Flash。官方称，这是Gemini 3系列最新一代Flash，在软件工程、Agent任务和复杂多步推理上都有明显提升；从3.7 Flash到3.8 Flash，中间只隔了三周。所以，当Arena里又出现一个同样挂着gemini-3.8-flash名字的模型时，开发者很快就察觉到了异常。真正的3.8 Flash已经摆在那里，大家有现成的参照物。而这个模型看起来明显更强，分明是Pro模型才会有的实力。最早引发传播的一批实测，集中在SVG、网页和3D场景上。开发者Harshith让它用SVG画一只侧面的家猫，并把结果与GPT-6 Astra Max和正式版Gemini 3.8 Flash放在一起。Arena里的这个版本，无论轮廓、比例还是细节完整度，都和正式3.8 Flash拉开了肉眼可见的差距。从左到右依次为&ldquo;4 Pro&rdquo;、Astra、3.8 FlashX网友@thtbee_从多个角度连续测试了这个疑似Gemini 4 Pro的模型。一个Voxel风格宝塔，模型跑了8分钟，直接生成了一整套可交互3D场景。一架空客H145直升机，它只花大约10分钟就搭出了完整的3D展示页面，细节非常丰富。不过，这位网友表示，页面底部的UI元素&ldquo;看起来有点糟&rdquo;。在网页设计上，模型花了大约14分钟就做出了一套单色主题网站，整体非常干净、完整。过去Gemini经常被吐槽的设计品味问题，这次似乎终于被补上了。另一位网友@Mr_Salio直接拿这个疑似Gemini 4 Pro的模型去做游戏。成品画面足够流畅，世界生成和游戏设计的完成度也很高。更关键的一条线索来自开发者Qwinah。他声称自己成功&ldquo;幽灵路由&rdquo;到了Gemini 4 Pro的后端，并贴出了一张疑似内部终端信息的截图。根据他的说法，这个模型的内部标识里直接出现了G4P-ARGON和VIA_3.8_FLASH，最大输出达到256K，上下文窗口超过1000万token，还带有跨会话永久记忆、无需API即可联网、后端自动编译运行脚本，甚至物理机器人控制等能力。如果这些信息属实，那它显然已经不是一次普通的Flash升级。与此同时，一张Gemini 4 Pro的ben",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "Gemini 4 Pro疑似泄露+RSI(Recurrent Self-Improvement)概念，与OpenAI/Anthropic减速争论形成对照，揭示前沿模型能力跃升与治理路线的冲突",
+      "queued_at": "2026-09-19T05:55:08Z"
+    }
+  ],
   "digest_last_date": "2026-09-19"
 }
