@@ -4,73 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "OpenAI"
-      ],
-      "features": [
-        "278b",
-        "350b",
-        "36b",
-        "and",
-        "cash",
-        "expects",
-        "financial",
-        "flow",
-        "free",
-        "from",
-        "grow",
-        "in",
-        "its",
-        "leaked",
-        "negative",
-        "of",
-        "openai",
-        "presentation",
-        "projects",
-        "revenue",
-        "this",
-        "times",
-        "to",
-        "will",
-        "year"
-      ],
-      "sent_at": "2026-09-19T01:04:29Z"
-    },
-    {
-      "tickers": [
-        "Anthropic",
-        "OpenAI"
-      ],
-      "features": [
-        "after",
-        "ahead",
-        "ai",
-        "amodei",
-        "an",
-        "and",
-        "anthropic",
-        "astra",
-        "call",
-        "considers",
-        "counter",
-        "for",
-        "ipo",
-        "launch",
-        "model",
-        "momentum",
-        "new",
-        "of",
-        "openai",
-        "releasing",
-        "reuters",
-        "since",
-        "slowdown",
-        "sources",
-        "to"
-      ],
-      "sent_at": "2026-09-19T01:04:48Z"
-    },
-    {
-      "tickers": [
         "Anthropic",
         "OpenAI",
         "谷歌"
@@ -90,6 +23,21 @@
         "露减"
       ],
       "sent_at": "2026-09-19T05:59:12Z"
+    },
+    {
+      "tickers": [
+        "Anthropic",
+        "DeepSeek",
+        "OpenAI"
+      ],
+      "features": [
+        "bench",
+        "gemini",
+        "goes",
+        "up",
+        "with"
+      ],
+      "sent_at": "2026-09-20T01:43:57Z"
     }
   ],
   "last_report": {
@@ -131,7 +79,7 @@
   },
   "morning_fallback": {
     "date": "2026-09-20",
-    "attempts": 1
+    "attempts": 2
   },
   "blindspot_ledger": [
     {
