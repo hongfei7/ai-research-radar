@@ -1,6 +1,6 @@
 {
   "morning_last_date": "2026-09-20",
-  "weekly_last_slot": "2026-W37",
+  "weekly_last_slot": "2026-W38",
   "breaking_fingerprints": [
     {
       "tickers": [
@@ -87,6 +87,86 @@
         "the"
       ],
       "sent_at": "2026-09-20T07:10:18Z"
+    },
+    {
+      "tickers": [
+        "Anthropic",
+        "OpenAI",
+        "xAI"
+      ],
+      "features": [
+        "gemini",
+        "opus",
+        "pro",
+        "上线",
+        "与未",
+        "前沿",
+        "压缩",
+        "发布",
+        "在被",
+        "型的",
+        "官宣",
+        "宣已",
+        "已上",
+        "布流",
+        "未经",
+        "模型",
+        "正在",
+        "沿模",
+        "流程",
+        "的发",
+        "程正",
+        "线前",
+        "经官",
+        "被压"
+      ],
+      "sent_at": "2026-09-20T12:28:44Z"
+    },
+    {
+      "tickers": [
+        "AMD",
+        "微软",
+        "英伟达"
+      ],
+      "features": [
+        "ai",
+        "an",
+        "and",
+        "announces",
+        "as",
+        "czar",
+        "for",
+        "force",
+        "growth",
+        "he",
+        "plans",
+        "pushes",
+        "trump",
+        "unchecked"
+      ],
+      "sent_at": "2026-09-20T12:28:58Z"
+    },
+    {
+      "tickers": [
+        "OpenAI"
+      ],
+      "features": [
+        "openai",
+        "亿美",
+        "元现",
+        "到年",
+        "将消",
+        "年底",
+        "底将",
+        "消耗",
+        "现金",
+        "美元",
+        "耗近",
+        "计到",
+        "近亿",
+        "预计"
+      ],
+      "sent_at": "2026-09-20T12:30:25Z"
     }
   ],
   "last_report": {

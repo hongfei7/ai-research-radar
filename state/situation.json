@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-20T07:09:11Z",
-  "text": "当前共有 16 个活跃事件。要点包括: Anthropic据悉考虑在IPO前发布新AI模型; 瑞银：全球AI领域资本支出2027年升至1.4万亿美元，九成增量来自内存涨价; With Gemini 4, bench goes up.; Step 5 Preview: Advancing the Pareto Frontier; Chinese DRAM chipmaker CXMT says its new fifth-gen technology platform enters mass production and unveils two 24Gb LPDDR5X phone memory products built on it (Reuters)。",
-  "since": "2026-09-20T07:09:11Z",
-  "active_event_count": 16,
+  "generated_at": "2026-09-20T12:28:26Z",
+  "text": "当前共有 25 个活跃事件。要点包括: Anthropic据悉考虑在IPO前发布新AI模型; 瑞银：全球AI领域资本支出2027年升至1.4万亿美元，九成增量来自内存涨价; Opus 5.2 与 Gemini 4 Pro 未经官宣已上线，前沿模型的发布流程正在被压缩; Step 5 Preview: Advancing the Pareto Frontier; Trump announces \"AI Force\" and plans for an \"AI czar\" as he pushes unchecked AI growth。",
+  "since": "2026-09-20T12:28:26Z",
+  "active_event_count": 25,
   "key_themes": [
     "model_capability",
-    "compute_demand",
     "ai_monetization",
-    "chip_supply",
-    "edge_ai"
+    "compute_demand",
+    "edge_ai",
+    "datacenter_power"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n瑞银预测2027年AI capex 1.4万亿美元中内存贡献9230亿美元、超过全部净增量，而非内存成本从6310亿",
+  "cross_analysis": "【核心矛盾】\nTMTPost两篇报道形成微妙张力：一边是Opus 5.2与Gemini 4 Pro\"跳过发布直接上线\"暗示迭代加速，另一边\"AI巨头集体踩刹车\"讨论自进化放缓，二者指向不同维度（产品供给 vs 内部R&D），但若叠加解读，意味着行业正从\"重资本长期R&D\"切换为\"高频标准化供给\"。政策面同样分裂：Wired揭示MAGA基本盘对数据中心的反对（电力/环境/土地），而The Decoder报道特朗普将此类批评定性为\"左翼攻击\"并力推AI Force，凸显联邦加速派与草根",
   "trend_spotting": "特朗普提出\"AI Force\"概念，本质是将AI议题从经济/科技竞争框架进一步推向国防战略框架，类比2019年Space Force的命名逻辑，这是72小时内出现的新政治叙事方向。\n\n早期信号值得关注：他将\"抵制AI\"定性为政治骗局，暗示后续AI政策可能从\"安全监管\"叙事转向\"国家竞争力\"叙事。若白宫效仿Space Force模式设立AI Force独立建制，可能催生专项国防AI预算与采购通道，这对Palantir、Anduril等国防AI公司及AI算力供应商是潜在需求增量入口。\n\n市场盲点在于：多数人聚焦AI出口管制与芯片禁令，却忽视了\"AI品牌重塑\"作为政治工具的实际效力。重新命名可降低公众对AI替代就业、隐私风险的敏感度，为后续松绑监管积累舆论基础，监管节奏可能比预期更早出现拐点。\n\n关键拐点：白宫是否在60天内推出AI Force相关的行政令或国防预算调整。若落地，将标志美国AI产业政策从\"防御性遏制\"转向\"进攻性扩张\"，地缘AI竞争格局随之重塑。短期对算力链基本面无传导，但中长期需密切跟踪国防AI订单流。"
 }
