@@ -1,4 +1,83 @@
 {
-  "candidates": [],
+  "candidates": [
+    {
+      "id": "74637cbc6f7c203280efa310fe542cb1e42ecb6a",
+      "title": "瑞银：全球AI领域资本支出2027年升至1.4万亿美元，九成增量来自内存涨价",
+      "url": "https://36kr.com/newsflashes/3991342974204929?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-09-20T06:16:23Z",
+      "raw_summary": "瑞银目前预计，2026年人工智能资本开支将接近1万亿美元，2027年进一步攀升至约1.4万亿美元，而这一增长背后的最主要原因是内存成本大幅上涨。瑞银估算，内存相关开支将从2025年的710亿美元飙升至今年的3670亿美元，2027年达到9230亿美元。其余AI相关成本预计在2026年为6310亿美元，2027年回落至5250亿美元。这意味着，今年内存成本上涨贡献了约60%的AI资本开支增量；而到2027年，随着其他零部件支出下滑，内存成本增幅甚至将超过AI资本开支的全部净增量。（新浪财经）",
+      "score": 9,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "瑞银2027全球AI capex 1.4万亿美元、内存占九成增量，给出具体拆解数字，对算力/供应链判断极具认知增量。",
+      "queued_at": "2026-09-20T07:04:39Z"
+    },
+    {
+      "id": "d3c12174a26ba63865ef5a27b130270b2630c0b9",
+      "title": "The quest for open PDKs (silicon foundry Process Development Kits) [video]",
+      "url": "https://www.youtube.com/watch?v=-7indiyU9nU",
+      "source": "hackernews",
+      "published_at": "2026-09-20T04:56:09Z",
+      "raw_summary": "The quest for open PDKs (silicon foundry Process Development Kits) [video]",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "开源PDK直接关系到开源芯片生态和fab可及性，对半导体研究者判断制造端开放路线有实质参考价值。",
+      "queued_at": "2026-09-20T07:04:39Z"
+    },
+    {
+      "id": "e5eb54b0e88bb4d688cb7ce8d62c982facc4ee70",
+      "title": "Alibaba's Damo Academy open sources RADAR, a medical vision-language model it says can read CT scans and identify ~150 abdominal conditions, including cancers (Ann Cao/South China Morning Post)",
+      "url": "https://www.techmeme.com/260920/p4#a260920p4",
+      "source": "rss:techmeme",
+      "published_at": "2026-09-20T05:30:59Z",
+      "raw_summary": "Ann Cao / South China Morning Post: Alibaba's Damo Academy open sources RADAR, a medical vision-language model it says can read CT scans and identify ~150 abdominal conditions, including cancers&nbsp; &mdash;&nbsp; Tested on nearly 40,000 real-world exams, the model outperformed most radiologists, according to a new study published in Science",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "阿里达摩院RADAR开源+Science论文，4万例真实CT测试，可了解医疗VLM前沿水平。",
+      "queued_at": "2026-09-20T07:04:39Z"
+    },
+    {
+      "id": "ff04fbd03848659168d8a76f743374a00d7a4b1e",
+      "title": "Chinese DRAM chipmaker CXMT says its new fifth-gen technology platform enters mass production and unveils two 24Gb LPDDR5X phone memory products built on it (Reuters)",
+      "url": "https://www.techmeme.com/260920/p3#a260920p3",
+      "source": "rss:techmeme",
+      "published_at": "2026-09-20T05:20:02Z",
+      "raw_summary": "Reuters: Chinese DRAM chipmaker CXMT says its new fifth-gen technology platform enters mass production and unveils two 24Gb LPDDR5X phone memory products built on it&nbsp; &mdash;&nbsp; Chinese DRAM chipmaker CXMT (688825.SS) said on Sunday its fifth-generation technology platform had entered mass production &hellip;",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "长鑫存储第五代DRAM平台量产+24Gb LPDDR5X产品，对国产DRAM追赶节点有重要信号意义。",
+      "queued_at": "2026-09-20T07:04:39Z"
+    },
+    {
+      "id": "fec7034643f4ad97dc4624942de89cb1dae173e5",
+      "title": "Step 5 Preview: Advancing the Pareto Frontier",
+      "url": "https://www.stepfun.com/step-5-preview",
+      "source": "hackernews",
+      "published_at": "2026-09-20T04:35:59Z",
+      "raw_summary": "Step 5 Preview: Advancing the Pareto Frontier",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Step 5若指新一代LLM，Pareto Frontier暗示在推理/成本权衡上有具体数据，读完能更新对前沿模型性价比曲线的判断。",
+      "queued_at": "2026-09-20T07:04:39Z"
+    },
+    {
+      "id": "1d87193a375259c636ccca44d065346aad87e0d7",
+      "title": "对话阿里云王朝阳：中国不缺电，AI卡在电与算力的协同",
+      "url": "https://www.tmtpost.com/8146043.html",
+      "source": "rss:tmtpost",
+      "published_at": "2026-09-20T03:10:03Z",
+      "raw_summary": "围绕总量、柔性、成本、协同四本账拆解中国AI的能源约束，并提出\"能源在沉淀\"判断：单位算力的能源账单长期只会越来越重。文末给出三个可核查的跟踪信号。",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "阿里云王朝阳谈AI电力协同约束，给出可核查跟踪信号，对算力-能源联动判断有价值。",
+      "queued_at": "2026-09-20T07:04:39Z"
+    }
+  ],
   "digest_last_date": "2026-09-20"
 }
