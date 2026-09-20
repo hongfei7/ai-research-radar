@@ -246,6 +246,32 @@
       "source_traceable": true,
       "why": "用Jev（非生成式分类模型）替代LLM选回复的实战案例，给出18个并行问题+400候选的具体架构，有工程参考价值。",
       "queued_at": "2026-09-20T16:23:49Z"
+    },
+    {
+      "id": "9f6571fb0b0ceb386741c410cd9066bd30794b70",
+      "title": "Bun Rewrites 535K Lines of Zig into Rust in Four Months, Eliminates Numerous Memory Leaks",
+      "url": "https://www.infoq.com/news/2026/09/bun-ai-rewrite-zig-rust-4-months",
+      "source": "rss:infoq",
+      "published_at": "2026-09-20T19:51:00Z",
+      "raw_summary": "Bun creator Jarred Sumner recently announced that Bun, the JavaScript/TypeScript runtime, bundler and package manager has been rewritten from Zig to Rust. The rewrite seeks to eliminate recurrent memory safety vulnerabilities via Rust’s borrow checker. The AI-assisted rewrite was released after 4 months of work instead of the estimated one year. By Bruno Couriol",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Bun将53.5万行Zig代码用AI辅助重写为Rust，4个月完成且消除内存泄漏，是AI辅助大规模代码迁移的工程案例。",
+      "queued_at": "2026-09-20T21:25:58Z"
+    },
+    {
+      "id": "e5a38489d8ea8c30a1ac4758223547286c563f02",
+      "title": "Adversarial examples for fast hash functions",
+      "url": "https://thomasahle.com/blog/adversarial-examples-for-hashes",
+      "source": "rss:lobsters",
+      "published_at": "2026-09-20T19:14:36Z",
+      "raw_summary": "",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "快速哈希函数的对抗样本研究，涉及安全与ML交叉领域，值得查原文。",
+      "queued_at": "2026-09-20T21:25:58Z"
     }
   ],
   "digest_last_date": "2026-09-20"
