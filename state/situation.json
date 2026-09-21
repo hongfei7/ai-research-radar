@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-21T06:57:58Z",
-  "text": "当前共有 21 个活跃事件。要点包括: 中信证券：华为官宣昇腾960超节点，持续看好国产NPO投资机遇; Sources: SoftBank is looking to issue $10B and €1B in debt for its OpenAI investment, in what would be one of the biggest junk bond sales ever (Bloomberg); Scott Bessent says the US proposed an AI incident notification mechanism to China, and both sides agreed to set up an AI dialogue ahead of the Trump-Xi summit (Demetri Sevastopulo/Financial Times); 成熟制程需求爆发，联电、力积电等晶圆代工厂酝酿涨价; 韩国本月前20天出口创历史新高，芯片出口飙升近260%。",
-  "since": "2026-09-21T06:57:58Z",
-  "active_event_count": 21,
+  "generated_at": "2026-09-21T13:54:27Z",
+  "text": "当前共有 30 个活跃事件。要点包括: OpenAI projections point to a massive $278 billion cash burn through 2030 that exceeds the national budgets of Indonesia and Norway — $856 billion compute tab outpaces tenfold revenue surge; US and China agree on AI dialogue with security mechanism ahead of Trump-Xi summit; Googlebook笔记本硬件细节曝光：搭载Panther Lake与骁龙X芯片; 英伟达重仓赛道跑出“量产派”选手，OCS整机商「芯信光」完成数千万元Pre-A轮融资; 美国45个数据中心项目因社区抵制遭搁置，总值680亿美元。",
+  "since": "2026-09-21T13:54:27Z",
+  "active_event_count": 30,
   "key_themes": [
     "compute_demand",
+    "policy_export",
     "ai_monetization",
-    "domestic_substitution",
-    "model_capability",
-    "chip_supply"
+    "chip_supply",
+    "edge_ai"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n本轮最显著的矛盾来自\"AI资本投入\"与\"基建落地阻力\"之间的背离：一方面，软银拟发逾110亿美元垃圾债加码OpenAI、VC上半年5100亿美元资金集中涌入OpenAI/Anthropic（条目7、3），算力采购需求被强化；另一方面，2026Q2美国约680亿美元、45个数据中心项目因社区反对被叫停/推迟（条目2），物理落地存在硬约束。同时条目10揭示Token售价（1元）尚不足以覆盖算力成本（1.24元），与\"头部模型公司吸走四成风投\"的乐观叙事形成张力。此外，条目4明确区分海力士（AI直接需求红利）与兆易创新（供给侧间接红利），与市场将\"存储\"一概视作AI受益的简化叙事存在分歧。\n\n【新兴趋势】\n\"中国大模型以分成模式出海\"是首次出现的新范式（条目1，Kimi接入AWS Bedrock），未来是否被智谱、DeepSeek等复制值得跟踪。\"Agentic AI算力需求10倍于传统LLM\"在商汤报告与中科曙光FN Neo升级中被反复印证（条目8、11），形成算力需求结构性放量的共识。此外，\"美中AI事件通报/对话机制\"（条目9）作为政策面新信号，若落地将边际缓解出口管制升级预期。决策类\"快思考\"模型（条目13，Jev）则代表模型层细分化趋势开始显化。\n\n【信息盲点】\n本轮对Meta、Apple、Oracle、博通、台积",
+  "cross_analysis": "【核心矛盾】\nOpenAI巨额烧钱路径与\"轻量判断型\"模型分流算力需求存在显著分歧：Tom's Hardware报道OpenAI 2026-2030年累计烧钱2780亿、capex 8560亿，而GeekPark报道的Jev模型单次推理成本仅0.000015美元、可能将判断类任务从千亿参数模型分流，结构性冲击推理GPU ARPU。另一矛盾点在于存储供需判断：Acer CEO称存储厂\"炒作2030短缺\"以保毛利、PC价格2027年底下行；与之对立的是芯展速对话钛媒体的\"内存墙\"论调及CXMT进军NAND的供给端放量信号。同时特朗普\"AI Force\"弱化安全监管与联合国报告呼吁立即加强AI安全、Robocurve 97%有害执行率测试形成政策方向上的根本对立。\n\n【新兴趋势】\n端侧AI / AI PC赛道在多条报道中反复出现：Googlebook（Intel Panther Lake/高通骁龙X/联发科天玑CX C10 Max三芯混战）、Apple M5 Ultra本地推理超越DGX Spark、M6 Mac Mini与Mac Studio双线推进，标志ARM+端侧NPU架构向x86+独立GPU",
   "trend_spotting": "【新兴趋势】世界模型赛道出现\"保密军备竞赛\"，头部企业（谷歌、OpenAI、xAI、Anthropic）及其数据供应商同步收紧信息披露，透明度降至历史低点，与同期大模型开源化趋势形成尖锐反差。\n\n【早期信号】数据供应商同样讳莫如深，说明训练数据本身正成为核心护城河而非模型架构；这预示世界模型竞争将向\"数据闭环\"倾斜，纯算法优势的窗口期正在收窄。\n\n【市场盲点】市场普遍以融资规模与媒体热度为锚估值，却忽视技术细节完全不可验证；缺乏公开benchmark的领域，估值锚定的是叙事而非真实能力，泡沫风险被系统性低估。\n\n【拐点预警】首个标准化benchmark或产品Demo的公开将是行业临界点——若大厂率先定义评估体系，中小玩家将丧失叙事主动权，赛道格局可能在数月内骤变，保密红利随之终结。"
 }
