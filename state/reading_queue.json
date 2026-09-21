@@ -1,4 +1,96 @@
 {
-  "candidates": [],
+  "candidates": [
+    {
+      "id": "037d576e218cfcbbb47724f399f0e7ce59860068",
+      "title": "Figure AI 宣称找到了机器人版 scaling law，同行却说它其实根本不会泛化",
+      "url": "http://www.geekpark.net/news/370607",
+      "source": "rss:geekpark",
+      "published_at": "2026-09-21T03:57:07Z",
+      "raw_summary": "作者｜Li Yuan 390 亿美元的 Figure AI 已经把机器人送进 30 个陌生家庭，同行却说失败一半还谈不上会干活 「这是 Figure AI 成立以来最重要的项目。」 在 Helix 2.5 的发布视频里，Figure AI 创始人 Brett Adcock 把话说得很满。 Figure AI 目前估值达到 390 亿美元，是全球最贵的未上市人形机器人公司，致力于以人形完成人类的日常任务。 过去几代 Helix 的发布都留下了颇有记忆点的画面：两台机器人合作拉平被子，或者在腾不出手时用屁股顶上洗碗机。不过，此前的 Helix 虽然已经能够自主工作，收获的最大诟病之一就是，每次的 demo，总在一个光线良好的样板间工作。 Helix 2.5 此次想跨过这一步。Figure AI 在旧金山湾区租下 30 套住宅，将机器人直接运到现场，让它整理客厅、铺床和折叠毛巾。 不得不说，看完视频，笔者感觉这仍然很像 30 个光线良好的样板间。 但仍然是一个很厉害的进步，Figure AI 称，没有针对这些住宅和物品进行任何训练或适配，30 套住宅里都出现了成功案例。 「Helix 2.5 要在一套从未进入过的房子里，折叠它从未见过的毛巾。」Brett 表示。 在 Figure AI 的讲述里，机器人领域长期追逐的泛化能力终于开始出现了：机器人不再只会重复某个实验室里学过的动作，而是能把此前积累的经验带到一个陌生地方。 随后，Figure AI 在 Helix 2.5 的技术博客里公布了完整测试数据。420 次测试，成功 237 次。完整任务成功率为 56%。 不过，有趣的是，一种过往在机器人行业相当少见的情况出现了：同行没有像往常一样留下一句「了不起的工作」，再回自己的实验室暗暗较劲。 Sunday Robotics 联合创始人 Tony Zhao 直接指出，237 次成功也意味着机器人接近一半时间会失败。Stealth CEO Nikolai Ensslen 的说法更加尖锐：这组数据恰恰证明，Figure AI 使用的模仿学习系统不能泛化。 Figure AI 觉得自己摸到了机器人版 scaling law，两位同行看到的却是一条可能根本走不通的路线。 向 zero-shot 的圣杯迈了一步 Figure AI 新发布的 Helix 2.5，首先改变了 Helix 学习任务的方式。 此前的 Helix 02 从一个已经完成预训练的视觉语言模型出发，再使用机器人数据学习动作。它虽然可以连续完成洗碗、物流分拣等长时程任务，但训练数据来自机器人最终工作的环境。机器人学会的是在这个厨房里洗碗、在这条产线上搬运；换一个地方，往往还要重新采集数据。 Helix 2.5 则从随机初始化开始，先在 Figure AI 的人类行为数据集 Index 上完成预训练，再使用任务数据分别适配整理玩具、折叠毛巾和铺床三种行为。 完成训练后，Figure AI 把机器人运进旧金山湾区 30 套住宅。团队此前没有进入这些住宅采集机器人数据，也没有针对里面的床、枕头、毛巾和玩具进行微调。每种行为都使用同一个固定版本完成测试，中途不会根据具体住宅重新训练。 这就是 Figure AI 此次所说的 zero-shot：它不是只听到一句自然语言指令，便自己想出了铺床的方法。Figure AI 仍然为三项任务提供了专门的训练数据。Helix 2.5 没见过的是测试住宅、房间布局以及其中使用的具体物品。 这个边界并不影响实验的意义。家庭很难像工厂一样被改造成完全一致的环境。床的高度、毛巾",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": false,
+      "why": "围绕 Figure AI Helix 2.5 的 30 个陌生家庭泛化测试，对比 Figure 与同行对其是否真正泛化的根本分歧，是路线之争的范本",
+      "queued_at": "2026-09-21T06:52:58Z"
+    },
+    {
+      "id": "18e064bd034f2f376a4cb91feb8ad125057e6c69",
+      "title": "亚马逊官宣接入Kimi K3，Kimi与海外云厂商分成模式正式落地",
+      "url": "https://36kr.com/newsflashes/3992769217428488?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-09-21T06:14:53Z",
+      "raw_summary": "36氪获悉，亚马逊云科技（AWS）旗下大模型服务平台Amazon Bedrock日前宣布接入开源大模型Kimi K3，全球企业开发者可通过Bedrock直接调用，此前传闻的Kimi与海外云厂商收入分成合作正式落地。据了解，月之暗面正与多家海外云厂商推进收入分成合作，云厂商在其平台上架Kimi模型，并基于模型调用量与月之暗面进行分成，这是中国大模型公司首次以分成模式向全球三大云厂商输出模型能力。",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Kimi K3接入AWS Bedrock并采用收入分成模式，中国大模型出海商业模式有标志性意义。",
+      "queued_at": "2026-09-21T06:52:58Z"
+    },
+    {
+      "id": "3d49fd423d72d6f43543aa3a574bd64e3ab51882",
+      "title": "对话桥介数物：机器人运动的下一步是让任何机器人半小时内学会跳特定的舞",
+      "url": "http://www.geekpark.net/news/370717",
+      "source": "rss:geekpark",
+      "published_at": "2026-09-21T04:01:49Z",
+      "raw_summary": "具身智能现在太吵了。行业里的人各自笃定，声音大的先被听见。最响的那些声音，往往离真实的进展最远。真正在往前推的人，看的是谁在践行非共识，什么在真的往前走，以及谁心里有一张完整的图，而不是走一步看一步。这些东西不会上热搜，但它们决定这个行业的下一步。我们一直探寻这些。如果你也是——欢迎来到极客公园 In The Loop。👇作者｜Li Yuan8 月，具身智能圈最热闹的一件事是宇树机器人上市。对大多数人来说，宇树的形象非常鲜明：春晚上跳舞的机器人，以及那些流畅得不像机器的动作。人形机器人的价值感，很大程度上正是由这些动作建立起来的。那么，让机器人动得这么好，究竟有多难？机器人首先得有一副足够好的身体硬件。构型是否接近人，电机的摩擦和转子惯量是否足够小，量产一致性是否稳定，都会影响动作最终呈现出来的效果。这也是宇树最难被绕开的优势。而在算法这一侧，整个行业的能力正在快速变好。去年，行业里基本还是一个动作训练一个策略，换一支舞就要重新训练，能做好拟人行走已经算不错。今年，运动基座模型开始出现。一个模型看过足够多的人类动作后，即使没有专门练过，也能跟上新动作。上传一段视频，几分钟内提取动作，在仿真里看一遍，再部署到实机，整套流程半小时就能走完。宇树自己也在做这类模型。这带来最直接的变化，可能是会跳舞的机器人越来越多。大家都能更快学会一套新动作，只是受硬件差异影响，不会跳得一样好。而再往前一步，或者还对机器人的未来形态产生影响。今天，大多数做操作的机器人还坐在桌前，只动两只手。但真正的通用人形需要上下半身一起工作。Figure 机器人的做法是把全身运动控制和操作都放在自己公司里，一路打通。而如果全身运动控制可以从外部拿到，一家只做双臂操作的公司，理论上可以直接接上另一家公司的全身模型，让机器人从桌前站起来。通用基座运动模型到底意味着什么？我们最近和桥介数物聊了聊。这家公司正在做的，就是一个通用的全身运动控制模型——让不同品牌、不同构型的机器人都能调用同一套运动能力。成立三年，它已经服务近 40 家企业、在 50 多款机型上装过「小脑」。它不造机器人，但是是这个普遍亏损的行业里，少数第一年就实现盈利的公司之一。现在，桥介数物正把做了三年的项目制生意换一种做法：把全身运动控制模型做成平台——RoboCraft AI，谁拿到机器人都能调用；收费方式也从一次性项目款，改为按机器人台数收取订阅费和 License 费。最近它也刚刚完成了新一轮亿元级融资，由中国移动链长基金领投。这门生意眼下最现实的客户，是展演和租赁公司。同一套动作可以快速迁移到不同机器人上，拿到一台新机器，也能在更短时间内让它跳起来。过去，一种机器人一支舞可以跳一年，从一个展会跳到另一个展会；往后，机器人恐怕也会更卷了。而桥介数物最终希望的，是成为机器人操作系统那样的基础设施：往后每一台出厂的人形机器人里都装着他们的系统，开发者在上面做应用，每卖出一台、每分发一次，他们都能收到钱。这是他们憧憬的终局，也是这轮融资的理由。以下是我们与桥介数物创始人尚阳星的对话，经编辑整理。01去年一个动作训一个策略，今年不用了问：先讲讲你们今年的技术进展。尚阳星：主要是两件事。一件是模型，我们做了全身运动控制的基座模型；另一件是产品，把这套能力做成了一个平台。模型这边，去年行业里更多是单动作、单策略，一个动作对应一个策略，年初的时候一个动作一个策略都还很难，包括拟人行走。今年最主要的变化是运动基座模型出现了，一个模型看过足够多的人类动作之后，没专门练过的新动作它也能跟上。平台这边，我们过去三年是给一家一家客户做项目，",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": false,
+      "why": "梳理了人形机器人运动基座模型（半小时让机器人学新舞蹈）的工程范式与硬件门槛判断，含具身智能从业者视角",
+      "queued_at": "2026-09-21T06:52:58Z"
+    },
+    {
+      "id": "83fc20ed558157787dad21d0fc8a87d1e60d54be",
+      "title": "物理 AI 的最后一公里：场景方开清单，技术方交进度｜2026 ITValue Summit数字价值年会",
+      "url": "https://www.tmtpost.com/8147121.html",
+      "source": "rss:tmtpost",
+      "published_at": "2026-09-21T05:40:45Z",
+      "raw_summary": "机器人走进产业场景这件事，买单的人已经先算过一笔账。越秀在一个住宅项目的地下车库里，让一台市场上最成熟的清洁机器人跑了一遍：需要清洁的面积两万一千多方，它实际干到的不足一半&mdash;&mdash;机械车位它上不去，因为倾斜角只有四度；环形车道也上不去，作业只能收缩在负二层的一部分区域里。9月17日上午，2026 ITValue Summit数字价值年会的六场平行闭门会在三亚举行，其中一场名为《物理AI走进现实：让真需求遇见前沿技术》，由钛媒体与智源研究院联合策划。这场会把产业方和技术方请到了一起：一端是越秀地产数智发展中心总经理杨辉、原云南白药集团数字战略科学家、云白数科总经理兼CIO李少春这样的场景方，代表为技术最后买单的人；另一端是智源研究院具身模型研究中心负责人王鹏伟、星源智创始人兼 CEO刘东这样的技术供给方，带着世界模型与端侧算力的行业最新进展。这场会的开场白是一道验证题。钛媒体联合创始人、ITvalue发起理事万宁在主持中提到，全国四万多家酒店里，每天都有小车往房间里送快递或者外卖；如家的老总告诉他，送餐机器人已经是经济型连锁酒店的标配。万宁起初觉得这话夸张，直到问过女儿才确认：她确实要点外卖，而且不愿意让酒店服务人员来敲门。行业的真实需求就长这样：每天在发生，有人愿意为它买单。买单的人先算账8月，世界机器人大会。创业者和投资人热议上市与估值。作为&ldquo;为技术买单的人&rdquo;，越秀地产数智发展中心总经理杨辉看到的是另一个问题：机器能否走进生活，取决于产业方有没有场景、能不能长出业务。在她看来，规模化落地卡在四道瓶颈：数据攒不齐，一项技能要几千小时；泛化不过关，真实场景打半折，一换就崩；环境不复用，每栋楼都不同，换场地就重来；成本算不过账，三四台才抵一人，回本太慢。结果就是交付不稳、复制不了、账算不过来，单点技术再好也难规模化。答案从越秀的实践里长出来。越秀曾把一台市面最成熟的清洁机器人放进自家住宅地下车库：两层、两万一千多方作业面，机械车位上不去，环形车道进不了，实际作业面积不到一半，只干得了车道平面清洁，实际效率仅为理论值的35%。迭代到最新一代，通过重构排班、改造梯控、优化路径、打通故障工单等工程化改造，八成作业可独立完成，现场才减掉一个人。这不是&ldquo;换一台更好的机器&rdquo;能解的，而是场景、本体、算法与运营的系统重构，人机协同标准、作业空间和动线都要重新设计。把&ldquo;越秀建场景、算法练模型、机器人执行、越秀做验收&rdquo;跑成闭环，在ROI与利用率双达标后跨车库&ldquo;1&rarr;N&rdquo;复制。而把这些一条条解决，恰恰需要&ldquo;懂行业的人&rdquo;：有人开放场景、做空间适改、定作业标准、验安全边界；有人把散落的作业数据沉淀成可复用标准；有人把一次试点的成功，复制成一百个场景的交付。工程化能力，是技术走向产业交付的转换器。越秀做了十六年数字化：让空间从不可读变得可计算，一百多个项目沉淀出六千多个模型主库。&ldquo;空间就是场景，城市运营就是入口。&rdquo;这些可计算的空间，就是越秀给机器人备好的场地。账单摊开了，接下来轮到技术方。他们带来的，是一份有边界感的进度表。技术方交出进度与边界智源研究院具身模型研究中心负责人王鹏伟带来的，是这条路线图最前沿的一段。他先把行业坐标说清楚：AI在数字世界已经发展得不错，从符号主义、机器学习、深度学习、大语言模型一路走到多模态大模型，接下来要迎接的是从数字到物理世界的转变&mdash;&mdash;世界模型要解决的",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": false,
+      "why": "具身智能落地的具体场景成本账（清洁机器人实际覆盖率不足一半）与厂商对接实录，含一手现场数据",
+      "queued_at": "2026-09-21T06:52:58Z"
+    },
+    {
+      "id": "4e56a9091eba1542019ac09122e6155a8c472262",
+      "title": "A detailed recap of the White House's 19-day standoff with Anthropic, where a jailbreak dispute led officials to bluntly order Dario Amodei to take Fable down (Politico)",
+      "url": "https://www.techmeme.com/260921/p4#a260921p4",
+      "source": "rss:techmeme",
+      "published_at": "2026-09-21T05:20:32Z",
+      "raw_summary": "Politico: A detailed recap of the White House's 19-day standoff with Anthropic, where a jailbreak dispute led officials to bluntly order Dario Amodei to take Fable down&nbsp; &mdash;&nbsp; On the evening of April 6, an unusual request began making its way from Washington to some of Wall Street's most powerful executives.",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "白宫与 Anthropic 19 天对峙的详细复盘，涉及 jailbreak 监管与 AI 红队的方法论分歧，有一手信息价值",
+      "queued_at": "2026-09-21T06:52:58Z"
+    },
+    {
+      "id": "498e716001c1c021e3aca215b23ebf95472e1067",
+      "title": "Scott Bessent says the US proposed an AI incident notification mechanism to China, and both sides agreed to set up an AI dialogue ahead of the Trump-Xi summit (Demetri Sevastopulo/Financial Times)",
+      "url": "https://www.techmeme.com/260920/p17#a260920p17",
+      "source": "rss:techmeme",
+      "published_at": "2026-09-21T01:45:02Z",
+      "raw_summary": "Demetri Sevastopulo / Financial Times: Scott Bessent says the US proposed an AI incident notification mechanism to China, and both sides agreed to set up an AI dialogue ahead of the Trump-Xi summit&nbsp; &mdash;&nbsp; Treasury secretary says sides working towards &lsquo;shared vision&rsquo; after talks with Chinese counterpart",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "美中 AI 对话与事件通报机制提议，具地缘+AI 治理双重信号，值得关注顶层规则走向",
+      "queued_at": "2026-09-21T06:52:58Z"
+    },
+    {
+      "id": "416a69b7311e8a566149f6a461a7fb82f318280e",
+      "title": "convaiinnovations/laya (multilingual, non-autoregressive System 1 decision model)",
+      "url": "https://www.reddit.com/r/localllama/comments/1wm0cn0/convaiinnovationslaya_multilingual",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-21T02:33:01Z",
+      "raw_summary": "Laya is an open-weight (Apache 2.0) &quot;System 1&quot; decision model from Convai Innovations, built by Nandakishor M as an open alternative to TypeSafe's closed Jev API. Instead of generating text, it takes a state (text, an email, a ticket, or JSON) plus typed questions (choice to pick a label, score to place something on an ordinal rubric, and noul for a yes/no probability) and answers all of them in one forward pass in about 33–40 ms on a GPU, so there's no output to parse and nothing to hallucinate. It comes in three checkpoints: a 421M-parameter English model on ModernBERT-large, a faster 322M multilingual model on mmBERT-base covering 100+ languages, and a variant fine-tuned for typed-decisions workflows. A built-in Router detects the input's script and sends it to the right checkpoint. It's trained with RLCD, a reinforcement learning method whose reward uses strictly proper scoring rules, so the model maximizes reward only by reporting honest probabilities; it also has an act-vs-escalate head for deciding when to hand off to a human. The author reports strong results, including beating Jev on AG News, emotion classification, and the typed-decisions benchmark while running roughly 6–8× faster, though the Jev figures are third-party numbers rather than head-to-head runs. The model card is also candid about its limits: the base checkpoints are near chance on typed-decisions without fine-tuning, accuracy drops sharply with 50+ options (Banking77: 0.425 vs. Jev's 0.870),",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "介绍了一个 Apache 2.0 的非自回归决策模型 Laya，给出参数规模（421M，基于 ModernBERT-large）、推理延迟（33-40ms）和多任务统一前向传递的设计思路，工程上可直接试用以替代分类器+LLM 串行方案。",
+      "queued_at": "2026-09-21T06:52:58Z"
+    }
+  ],
   "digest_last_date": "2026-09-21"
 }
