@@ -4,112 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "OpenAI"
-      ],
-      "features": [
-        "and",
-        "billion",
-        "budgets",
-        "burn",
-        "cash",
-        "compute",
-        "exceeds",
-        "indonesia",
-        "massive",
-        "national",
-        "norway",
-        "of",
-        "openai",
-        "outpaces",
-        "point",
-        "projections",
-        "revenue",
-        "surge",
-        "tab",
-        "tenfold",
-        "that",
-        "the",
-        "through",
-        "to"
-      ],
-      "sent_at": "2026-09-21T13:54:51Z"
-    },
-    {
-      "tickers": [
-        "英伟达",
-        "谷歌"
-      ],
-      "features": [
-        "ocs",
-        "pre-a",
-        "万元",
-        "产派",
-        "仓赛",
-        "伟达",
-        "信光",
-        "元轮",
-        "光完",
-        "出量",
-        "千万",
-        "商芯",
-        "完成",
-        "成数",
-        "手整",
-        "数千",
-        "整机",
-        "机商",
-        "派选",
-        "芯信",
-        "英伟",
-        "融资",
-        "赛道",
-        "跑出",
-        "轮融",
-        "达重",
-        "选手",
-        "道跑",
-        "重仓",
-        "量产"
-      ],
-      "sent_at": "2026-09-21T13:55:10Z"
-    },
-    {
-      "tickers": [
-        "Intel",
-        "戴尔",
-        "谷歌"
-      ],
-      "features": [
-        "9to5google",
-        "abner",
-        "acer",
-        "ai",
-        "and",
-        "android",
-        "asus",
-        "at",
-        "built",
-        "by",
-        "deep",
-        "dell",
-        "devices",
-        "flagship",
-        "google",
-        "googlebook",
-        "hardware",
-        "hp",
-        "integration",
-        "lenovo",
-        "li",
-        "offering",
-        "starting",
-        "unveils",
-        "with"
-      ],
-      "sent_at": "2026-09-21T13:55:24Z"
-    },
-    {
-      "tickers": [
         "AMD",
         "ARM",
         "Intel"
@@ -354,6 +248,58 @@
         "us"
       ],
       "sent_at": "2026-09-22T12:06:17Z"
+    },
+    {
+      "tickers": [
+        "AMD",
+        "Anthropic",
+        "OpenAI"
+      ],
+      "features": [
+        "and",
+        "at",
+        "claude",
+        "claudish",
+        "cost",
+        "fable",
+        "less",
+        "lower",
+        "matches",
+        "opus",
+        "performance",
+        "promises",
+        "writing"
+      ],
+      "sent_at": "2026-09-22T16:55:24Z"
+    },
+    {
+      "tickers": [
+        "Anthropic",
+        "亚马逊",
+        "微软"
+      ],
+      "features": [
+        "and",
+        "claude",
+        "costs",
+        "delivers",
+        "fable",
+        "less",
+        "opus",
+        "performance"
+      ],
+      "sent_at": "2026-09-22T16:55:48Z"
+    },
+    {
+      "tickers": [
+        "Anthropic",
+        "OpenAI"
+      ],
+      "features": [
+        "claude",
+        "opus"
+      ],
+      "sent_at": "2026-09-22T16:56:12Z"
     }
   ],
   "last_report": {

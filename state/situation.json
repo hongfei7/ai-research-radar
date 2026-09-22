@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-09-22T12:05:06Z",
-  "text": "当前共有 30 个活跃事件。要点包括: 摩根大通CEO：超大规模云服务商的AI支出明年可能达到1万亿美元; 阿里CEO宣布训练5-10万亿参数AI大模型; Alibaba's T-Head unveils the Zhenwu V900 AI accelerator, which it says triples its predecessor's performance and can scale to clusters of up to 500,000 units (Bloomberg); 吴泳铭云栖大会定调机器智能时代：未来机器思考量将达人类千倍; 机构：二季度全球半导体营收突破4250亿美元，再创历史新高。",
-  "since": "2026-09-22T12:05:06Z",
+  "generated_at": "2026-09-22T16:55:05Z",
+  "text": "截至 2026-09-23 00:54 HKT，本轮最显著变化集中于模型迭代与基础设施进展。Anthropic正式发布Claude Opus 5.5，运行成本较Opus 5下降约40%，API定价输入4美元、输出20美元/百万token，官方称多数任务对标前代并优于GPT-6 Astra，Sonnet/Haiku 5.5预计数周内推出。阿里云栖大会发布千问\"企业上下文\"及Agent硬件QwenNote A2，押注Agent企业落地的上下文瓶颈。OpenAI呼吁建立AI递归自我改进国际标准并建议美方主导规则制定。GUC推出TSMC 2nm 16Gbps HBM4E IP，HBM4E生态提前成熟。算力侧，Nscale拟IPO检验华尔街对集中度AI标的承接意愿；芬兰Verda计划2027年融资至100亿美元；《AGI市场观察》显示DeepSeek V4 Flash等四款国产轻量模型周用量破10万亿tokens，DeepSeek与混元合计份额约66%。",
+  "since": "2026-09-22T16:55:05Z",
   "active_event_count": 30,
   "key_themes": [
-    "compute_demand",
     "model_capability",
     "ai_monetization",
-    "chip_supply",
+    "compute_demand",
+    "policy_export",
     "datacenter_power"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
