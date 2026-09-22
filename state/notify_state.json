@@ -1,5 +1,5 @@
 {
-  "morning_last_date": "2026-09-22",
+  "morning_last_date": "2026-09-23",
   "weekly_last_slot": "2026-W38",
   "breaking_fingerprints": [
     {
@@ -283,42 +283,134 @@
         "sol"
       ],
       "sent_at": "2026-09-22T20:07:58Z"
+    },
+    {
+      "tickers": [
+        "台积电",
+        "高通"
+      ],
+      "features": [
+        "2nm",
+        "4ghz",
+        "5ghz",
+        "and",
+        "axel",
+        "both",
+        "cores",
+        "elite",
+        "extreme",
+        "gen",
+        "metz",
+        "on",
+        "performance",
+        "prime",
+        "process",
+        "qualcomm",
+        "six",
+        "snapdragon",
+        "techradar",
+        "the",
+        "tsmc",
+        "two",
+        "unveils",
+        "with"
+      ],
+      "sent_at": "2026-09-22T23:00:44Z"
+    },
+    {
+      "tickers": [
+        "Anthropic",
+        "OpenAI"
+      ],
+      "features": [
+        "anthropic",
+        "for",
+        "less",
+        "little",
+        "lot",
+        "make",
+        "models",
+        "money",
+        "more",
+        "new",
+        "openai",
+        "promise",
+        "same"
+      ],
+      "sent_at": "2026-09-22T23:01:08Z"
+    },
+    {
+      "tickers": [
+        "Anthropic",
+        "OpenAI"
+      ],
+      "features": [
+        "and",
+        "barely",
+        "but",
+        "cut",
+        "gpt-6",
+        "half",
+        "in",
+        "luna",
+        "move",
+        "needle",
+        "on",
+        "openai",
+        "performance",
+        "prices",
+        "sol",
+        "the"
+      ],
+      "sent_at": "2026-09-22T23:01:31Z"
     }
   ],
   "last_report": {
-    "date": "2026-09-22",
+    "date": "2026-09-23",
     "macro": {
-      "cycle": "扩张第三年向第四年过渡, 2026 年全球 AI capex 逼近 1 万亿美元, 内存单项 2027 年达 9230 亿美元, 贡献全部净增量; 本期 OpenAI 披露 2026-2030 年累计现金消耗 2780 亿美元、算力 capex 8560 亿美元 (E3), 软银以 110 亿美元高收益债继续接盘 (E12), 端侧因 Muse 6 天 90.2 万次下载与 Googlebook $899 起售 (E5, E10) 被市场重新定价, 但数据中心侧的物理瓶颈位元密度与电力接入未变。",
+      "cycle": "扩张第三年向第四年过渡,2026年超大规模云厂AI相关capex被摩根大通口径上修至明年1万亿美元,较今年7000亿美元再增逾40%;同期OpenAI披露2026-2030年累计现金消耗2780亿、算力capex 8560亿美元(E3),与阿里宣布5-10万亿参数训练叠加(E11),需求侧叙事未见退坡。但端侧因骁龙8 Elite Gen 6/Extreme据称可本地跑300亿参数MoE(E14,未在events列表中,以下省略ref),数据中心侧的物理约束——HBM位元密度与机柜热密度——并未松动,单卡HBM容量正取代晶体管数,成为单token推理TCO的首要变量。",
       "trajectory": {
         "past": "晶圆制程产能",
-        "now": "HBM 位元密度与内存供给曲线",
+        "now": "HBM位元密度与内存供给曲线",
         "next": "数据中心电力接入与机柜热密度",
-        "why_now": "三大原厂 HBM4/4E 扩产被 TSV 与 CoWoS 双重锁定 18-24 个月, 单卡 HBM 容量而非晶体管数首次成为单 token 推理 TCO 的首要变量, 定价权从 GPU 厂商转移至存储原厂。",
-        "trigger": "若单机柜功率密度普遍突破 130kW 批量化交付, 或北美新建园区电力接入审批成为项目主要延迟项"
+        "why_now": "三大原厂HBM4/4E扩产被TSV与CoWoS双重锁定18-24个月,推理经济性的下一道闸门不在算力侧定价,而在每张卡能装下多少bit的权重与KV cache。",
+        "trigger": "若单机柜功率密度普遍突破130kW批量化交付,或北美新建园区电力接入审批成为项目主要延迟项"
       },
-      "shift": "维持三段框架, 加州七法与华为转供国内强化 now→next 迁移证据权重, BOOST 论文为反向信号但尚不构成调整依据",
+      "shift": "维持三段框架;now段权重因两家头部同日确认推理降本而进一步加固,next段权重因戴蒙上修1万亿口径而边际增强,trajectory三段不作迁移",
       "shift_kind": "hold"
     },
     "calls": [
       {
-        "claim": "端侧 AI 进入 iPhone 时刻预演, CPU 三巨头估值重估尚未结束",
-        "falsifier": "若 2026Q4 全球 AI PC 出货量环比增速低于 10%, 或 Muse 30 天留存率低于 ChatGPT 同期一半, 本判断的端侧放量假设失效。",
-        "verify": "Q4 AI PC 出货环比维持双位数"
+        "claim": "推理经济性拐点已由单家实验变为行业共识,杰文斯悖论将驱动token消耗增速跑赢单价降幅",
+        "falsifier": "若2026Q4全球API token消耗同比增速低于30%,或OpenAI/Anthropic任一家在2027Q1将GPT-6 Luna或Opus 5.5再次降价超过30%而未伴随显著调用量增长,本判断的杰文斯悖论假设失效。",
+        "verify": "Q4 token消耗同比维持50%以上"
       },
       {
-        "claim": "电力约束从供应链噪音升级为算力扩张的硬约束, 加州七法是政治加速器",
-        "falsifier": "若 2026Q4 北美新建园区电力审批未成为项目主要延迟项, 或 Emerald AI 联盟未能在 12 个月内锁定 10GW 以上并网协议, 本判断紧迫性假设需下调。",
-        "verify": "北美园区电力审批成为主要延迟项"
+        "claim": "GPT-6 Sol/Luna与Opus 5.5构成「降本vs升级」分化,Anthropic在agent/coding高价值工作流的份额扩张更值得定价",
+        "falsifier": "若Anthropic在2026Q4的token消耗份额相对OpenAI继续下滑,或Opus 5.5在SWE-bench Verified类agent基准上被GPT-6 Sol反超,本判断的高价值工作流份额扩张假设需下调。",
+        "verify": "Anthropic 2026Q4 ARR增速跑赢OpenAI"
       },
       {
-        "claim": "世界模型赛道进入保密军备竞赛, 数据闭环取代算法成为护城河",
-        "falsifier": "若 2026Q4 前有任何头部厂商公开发布世界模型 benchmark 或可独立验证的 Demo, 或数据供应商在 6 个月内恢复部分信息披露, 本判断的保密红利假设需下调。",
-        "verify": "首个标准化 benchmark 或产品 Demo 公开"
+        "claim": "中国侧阿里「模型+芯片+IDC」三件套同时上量,真武V900进入50万卡集群叙事,国产替代首次具备可量化的产能锚点",
+        "falsifier": "若V900在2026Q4前未公开任何独立benchmark或客户案例(非阿里内部),或5-10万亿参数训练计划在2027年中前未启动预训练,本判断的国产替代加速假设失效。",
+        "verify": "V900在阿里内部推理流量中跑通≥10%负载"
+      },
+      {
+        "claim": "世界模型赛道进入保密军备竞赛,数据闭环取代算法成为护城河,首个公开benchmark将是行业格局临界点",
+        "falsifier": "若2026Q4前有任何头部厂商公开发布世界模型benchmark或可独立验证的Demo,或数据供应商在6个月内恢复部分信息披露,本判断的保密红利假设需下调。",
+        "verify": "Q4前出现任一头部公开benchmark"
       }
     ]
   },
   "morning_fallback": null,
   "blindspot_ledger": [
+    {
+      "key": "AMD|ASML|Anthropic|Intel|Marvell|Meta|OpenAI|博通|台积电|微软|美光|苹果|超微电脑|高通",
+      "text": "coverage_audit显示,微软(20天无自有披露)、AMD(22天)、美光(27天)、高通(14天)、博通(20天)、Marvell(25天)、超微电脑(22天)均已落入thin档,其中美光与Marvell已超25天未拿到一手披露;台积电、ASML、Intel、苹果、Meta在structural档但近30天条目数分别仅35-123条,与事件密度相比,算力供应链真正能定性的判断几乎全部依赖二手转述与同业外推——这意味着本期对HBM供给曲线与CoWoS产能的判断,实质上是在用OpenAI/Anthropic的定价信号反推上游,链条极长且缺乏一手校准。",
+      "first_seen": "2026-09-23",
+      "last_seen": "2026-09-23",
+      "times_seen": 1
+    },
     {
       "key": "AMD|ASML|Intel|Marvell|Meta|博通|微软|美光|苹果|超微电脑|高通",
       "text": "苹果、Meta、Intel、ASML 四家核心标的近 30 天分别有 123/87/59/35 条相关信息进入本库, 但全部依赖二手转载, 没有任何一条来自其自有披露通道, 结构性判断完全建立在二手叙事与同业外推之上; 微软、AMD、美光、高通、博通、Marvell、超微电脑近 30 天虽各有 19-171 条, 但 days_since_own_disclosure 均在 14-27 天之间, 距最近一次一手披露已过两周, 当前时点处于披露空窗, 财报前的预期博弈难以校准。",
@@ -394,13 +486,6 @@
       "text": "本库近30天有493条提及台积电、38条提及ASML的条目,但level全部标记为structural、days_since_own_disclosure为null,意味着对其产能与良率的判断完全依赖二手转述与同业外推,无任何一手披露支撑;AMD、Marvell、AWS/Azure同样在coverage_audit中处于thin或structural状态,英伟达-Anthropic资本闭环对云厂竞争格局的二阶影响无法验证;A股国产AI芯片在燧原首日188%涨幅(E7)后,寒武纪、海光等可比标的的定价空间挤压是推断而非可观测事实。",
       "first_seen": "2026-09-12",
       "last_seen": "2026-09-12",
-      "times_seen": 1
-    },
-    {
-      "key": "ARM|ASML|Intel|Meta|百度|美光|苹果",
-      "text": "coverage_audit显示苹果（114条/30天）、Meta（100条/30天）、Intel（76条/30天）、ASML（57条/30天）、ARM（28条/30天）全部为structural级别却长期无自有披露，对其产能与定价的判断全部依赖二手转述与同业外推；美光（140条/30天，thin）已16天无自有披露，HBM链关键定价信号处于窗口外；cross_analysis另指出Arista/思科网络交换、GE Vernova/Schneider/Eaton电力设备、阿里/百度/字节算力侧同样缺席本期，而电力恰恰是本期新主约束。",
-      "first_seen": "2026-09-11",
-      "last_seen": "2026-09-11",
       "times_seen": 1
     }
   ]

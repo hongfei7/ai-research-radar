@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-22T20:06:51Z",
-  "text": "截至 2026-09-23 04:06 HKT，本轮最显著变化集中于新一代大模型密集落地。OpenAI 发布 GPT-6 Sol 与 Luna，Sol 错误率较 GPT-5.6 降低约一半，Luna 以约 1% 成本达同档性能；API 定价 Sol 为 $2/$10、Luna 为 $0.10/$0.50 每百万 token，均较前代便宜约 50%，两款模型同步登陆 AWS Bedrock。Anthropic Claude Opus 5.5 亦上线 Bedrock，主打智能体编码与长任务处理，并强化网络安全防护。前 Anthropic 研究人员创立的 Mirendil 正洽谈 Kleiner Perkins 领投约 10 亿美元，估值约 50 亿美元，押注自改进 AI 方向。AWS 发布 Strands Evals 与 Bedrock AgentCore 评测框架，填补 Agent 过程性指标空白。a16z 推出\"Academy\"人才项目，联合 Anthropic、OpenAI、英伟达等 10 家头部 AI 企业。特朗普在联大演讲中明确反对\"全球化控制 AI\"方案，重申对华领先优势。",
-  "since": "2026-09-22T20:06:51Z",
-  "active_event_count": 30,
+  "generated_at": "2026-09-22T23:00:24Z",
+  "text": "截至 2026-09-23 07:00 HKT，本轮新增变化集中于三方面：一是独立分析对 GPT-6 Sol/Luna 给出\"换皮降价、性能几无提升\"的负面评价，指其意在价格竞争而非能力跃升，与同期 Anthropic Opus 5.5 形成\"降本 vs 升级\"分化；二是算力侧两条线进展——微软向 DARPA 开放含 Majorana 2 的马里兰州量子研究中心，高通发布台积电 2nm 骁龙 8 Elite Gen 6/Extreme 系列，旗舰芯片据称可本地运行 300 亿参数 MoE 模型，端侧 AI 推理门槛继续抬高；三是融资面，AI 训练数据平台 Snorkel AI 完成 3.5 亿美元 E 轮，估值三倍跃升至 35 亿美元，上游数据环节资本热度延续。此外，OpenAI 披露 GPT-6 显式 prompt 缓存断点机制，结构性压低单 token 推理成本。",
+  "since": "2026-09-22T23:00:24Z",
+  "active_event_count": 20,
   "key_themes": [
     "model_capability",
     "ai_monetization",
