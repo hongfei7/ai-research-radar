@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-22T01:15:37Z",
-  "text": "当前共有 12 个活跃事件。要点包括: 加州签署七项法案强化数据中心电力水资源监管; Sensor Tower: Muse was downloaded 902K+ times in the six days after its launch on Sept. 8, vs. Meta AI's 773K in the same post-launch period; META jumps 12%+ (Bloomberg); 华为搁置全球AI芯片推广计划 优先供应国内; OpenAI forms math advisory group as its AI resolves more than 100 open problems; Meta’s Muse is outpacing ChatGPT’s early mobile launch。",
-  "since": "2026-09-22T01:15:37Z",
-  "active_event_count": 12,
+  "generated_at": "2026-09-22T06:25:39Z",
+  "text": "当前共有 24 个活跃事件。要点包括: 摩根大通CEO：超大规模云服务商的AI支出明年可能达到1万亿美元; 阿里CEO宣布训练5-10万亿参数AI大模型; Alibaba's T-Head unveils the Zhenwu V900 AI accelerator, which it says triples its predecessor's performance and can scale to clusters of up to 500,000 units (Bloomberg); 吴泳铭云栖大会定调机器智能时代：未来机器思考量将达人类千倍; 机构：二季度全球半导体营收突破4250亿美元，再创历史新高。",
+  "since": "2026-09-22T06:25:39Z",
+  "active_event_count": 24,
   "key_themes": [
-    "ai_monetization",
-    "model_capability",
-    "edge_ai",
     "compute_demand",
-    "policy_export"
+    "model_capability",
+    "ai_monetization",
+    "chip_supply",
+    "domestic_substitution"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n两条线索形成明显张力：一方面，Georgia Tech/英伟达/斯坦福联合发布的BOOST论文提出HBM与主机内存并发访问的推理优化方案，可能削弱\"推理必堆HBM\"的供给紧张逻辑（利空海力士/美光/三星HBM需求预期）；另一方面，盖茨基金会联合60家机构推动30亿人母语/语音AI覆盖，则隐含推理算力需求将大幅扩张（利好算力链）。此外，华为搁置全球AI芯片推广虽缓解英伟达/AMD海外竞争压力，但同时也证明中国本土AI算力供需缺口进一步扩大——同一信号对不同标的含义相反。\n\n【新兴趋势】\n**端侧AI全面铺开**在多条报道中反复出现：Googlebook捆绑12个月Gemini Advanced+5TB云存储+10年系统更新，骁龙X Elite NPU提供算力；vivo X500 Pro Max搭载自研V3+/",
+  "cross_analysis": "【核心矛盾】\n两条核心叙事存在张力：①黄仁勋一方面被披露税务性减持（标记F，非主动卖出），同时Anthropic/OpenAI等讨论\"放慢AI发展\"；另一方面他又高调预期明年芯片销量翻倍，且最新季度营收同比+106%，管理层信号与产业需求判断出现微妙背离。②摩根大通描绘1万亿美元capex与\"机器思考千倍\"叙事下，浪潮信息却提出\"不靠堆卡、靠系统效率\"路径——若效率提升被验证，将直接压制英伟达等GPU单卡需求强度叙事，与海光/寒武纪国产替代逻辑形成同向共振。③多国领导人呼吁加强前沿AI治理与全球capex激进加码形成监管vs产业博弈。\n\n【新兴趋势】\n①国内云厂全栈AI军备竞赛全面爆发：阿里（Qwen4/5-10T参数/V900/20GW IDC/50万卡集群）+腾讯混元图像3.5+小米MiMo追平Grok 4.7，国产模型首次在开源权重上与第一梯队闭源模型持平。②算力叙事从\"堆卡\"向\"系统效率+推理优化\"切换，浪潮信息与DeepSeek-V4树形推测解码（中并发场景+18.5%吞吐）提供双验证。③AI Agent冲击传统平台变现，Amazon封锁Meta Muse预示流量入口博弈升级，或反向加速平台自有AI助手布局。\n\n【信息盲点】\n①电力/电力设备环节在20GW数据中心叙事下完全缺席（变压器、燃气轮机",
   "trend_spotting": "【新兴趋势】世界模型赛道出现\"保密军备竞赛\"，头部企业（谷歌、OpenAI、xAI、Anthropic）及其数据供应商同步收紧信息披露，透明度降至历史低点，与同期大模型开源化趋势形成尖锐反差。\n\n【早期信号】数据供应商同样讳莫如深，说明训练数据本身正成为核心护城河而非模型架构；这预示世界模型竞争将向\"数据闭环\"倾斜，纯算法优势的窗口期正在收窄。\n\n【市场盲点】市场普遍以融资规模与媒体热度为锚估值，却忽视技术细节完全不可验证；缺乏公开benchmark的领域，估值锚定的是叙事而非真实能力，泡沫风险被系统性低估。\n\n【拐点预警】首个标准化benchmark或产品Demo的公开将是行业临界点——若大厂率先定义评估体系，中小玩家将丧失叙事主动权，赛道格局可能在数月内骤变，保密红利随之终结。"
 }
