@@ -1,6 +1,19 @@
 {
   "candidates": [
     {
+      "id": "168248f9d1c248a40e963fed24f24e4dfb2965e4",
+      "title": "Wafer-Scale Sub-5nm Channel Monolayer MoS2 Transistors (CMU, UF, MIT et al.)",
+      "url": "https://semiengineering.com/wafer-scale-sub-5nm-channel-monolayer-mos2-transistors-cmu-uf-mit-et-al",
+      "source": "rss:semiengineering",
+      "published_at": "2026-09-22T17:51:42Z",
+      "raw_summary": "Researchers at Carnegie Mellon University, University of Florida, MIT, Texas A&#38;M University et al. published a technical paper titled “Wafer-scale 2D MoS₂ transistors with sub-5 nm channel length and subthreshold performance beyond the silicon limit.” Abstract Excerpt “Here, we report monolayer MoS₂ transistors with physical channel lengths below 5 nm, achieving a subthreshold swing of 88 mV/dec... &#187; read more The post Wafer-Scale Sub-5nm Channel Monolayer MoS2 Transistors (CMU, UF, MIT et al.) appeared first on Semiconductor Engineering.",
+      "score": 9,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "CMU等校2D MoS₂晶体管亚5nm沟道+超越硅极限的亚阈摆幅，是先进制程替代路径的一手突破性论文。",
+      "queued_at": "2026-09-22T20:02:45Z"
+    },
+    {
       "id": "41a9464c53e6f10c36b1401162bd07bea749cc5f",
       "title": "OSWorld-Pro: Process-based Evaluation for Computer Use Agents [Zhilin Wang, Shaokun Zhang, Yifan Zhang, Hao Zhang, Jin Xu]",
       "url": "http://arxiv.org/abs/2609.24890v1",
@@ -505,19 +518,6 @@
       "angle": "route",
       "source_traceable": true,
       "why": "5-10T参数+20GW数据中心的2032规划，国内最大规模AI基础设施路线图，值得细读。",
-      "queued_at": "2026-09-22T06:19:38Z"
-    },
-    {
-      "id": "fcaca5093c9b0c373f5e2a7047afb614b3ca83ae",
-      "title": "Alibaba CEO Eddie Wu says the company plans to train a 5T- to 10T-parameter AI model, as it lays out a sweeping push across AI models, chips, and data centers (Reuters)",
-      "url": "https://www.techmeme.com/260921/p59#a260921p59",
-      "source": "rss:techmeme",
-      "published_at": "2026-09-22T03:30:01Z",
-      "raw_summary": "Reuters: Alibaba CEO Eddie Wu says the company plans to train a 5T- to 10T-parameter AI model, as it lays out a sweeping push across AI models, chips, and data centers&nbsp; &mdash;&nbsp; Alibaba Group (9988.HK) plans to train a new artificial intelligence model with 5 trillion to 10 trillion parameters &hellip;",
-      "score": 7,
-      "angle": "route",
-      "source_traceable": true,
-      "why": "路透报道阿里5-10T参数模型计划，一手来源，对国内大模型规模路线有重要参考价值。",
       "queued_at": "2026-09-22T06:19:38Z"
     }
   ],
