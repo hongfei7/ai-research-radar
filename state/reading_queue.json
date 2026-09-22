@@ -92,6 +92,58 @@
       "queued_at": "2026-09-22T06:19:38Z"
     },
     {
+      "id": "580f9d0abb7ed978c406cc2763dbec1072e767f9",
+      "title": "Xiaomi's affordable flagship AI leads the open models, and Anthropic says Claude helped get it there",
+      "url": "https://the-decoder.com/xiaomis-affordable-flagship-ai-leads-the-open-models-and-anthropic-says-claude-helped-get-it-there",
+      "source": "rss:the-decoder",
+      "published_at": "2026-09-22T11:42:11Z",
+      "raw_summary": "With MiMo-V2.6-Pro, Xiaomi moves to the top of the openly available AI models and drastically undercuts the competition on price. What makes that possible is massive reinforcement learning that cost $2.62 million. But the success comes with a catch: Anthropic accuses the company of siphoning off training data from Claude. The article Xiaomi&#039;s affordable flagship AI leads the open models, and Anthropic says Claude helped get it there appeared first on The Decoder.",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "小米MiMo用$2.6M RL登顶开源榜单+Anthropic指控蒸馏Claude，开源模型的成本/数据/合规路线争议都集中在这一篇。",
+      "queued_at": "2026-09-22T11:59:04Z"
+    },
+    {
+      "id": "bce7110a4c235ef0a06d61e725bf0a48bf022de2",
+      "title": "对话 COBRA-Skills 一作卢平琛：仅用 50 个样本，重构 Agent 技能降本路线",
+      "url": "https://www.leiphone.com/category/private/aaugndfg84ayckbe.html",
+      "source": "rss:leiphone",
+      "published_at": "2026-09-22T07:55:00Z",
+      "raw_summary": "当经典算法遇到 LLM，用概率预判代替盲目试错，或许才是架构演进的真正解法。&nbsp; &nbsp; 作者丨张 &nbsp; 璐&nbsp; &nbsp; 编辑丨马晓宁&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;过去，智能体的技能（Skill）大多依赖人类专家手动撰写，不仅耗时费力，更难以覆盖海量复杂的真实场景。为此，借助大模型“自动化生成与优化技能”，成了让 Agent 迈向自主进化的新范式。然而，摆脱了人工编写的束缚，却撞上了高昂的 Token 账单。要验证一个自动生成的技能到底管不管用，必须让智能体带入真实任务中落地执行。每一次试错，都是实打实的 Token 消耗与多轮交互的时间成本。更棘手的是，许多候选技能在刚生成时就自带缺陷。但在现有框架下，我们缺乏“事前筛选”的能力，只能任由大量预算被这些低质候选无意义地吃掉。同时，后续的精炼流程也在频繁调用高阶 LLM，哪怕缺乏有效的新证据，这种“反思—重写”的流水线依然在机械重复。评估贵，精炼也贵，两笔账算下来，技能优化的效率就成了绕不开的瓶颈。针对这一痛点，来自香港中文大学（深圳）、天津大学、香港科技大学（广州）和新加坡国立大学的研究团队，在论文《COBRA-SKILLS: Contextual Bandit-Guided Evolution for Agent Skill Optimization》中提出了一种全新的破解思路。论文链接：https://arxiv.org/abs/2609.11682COBRA-Skills 摒弃了盲目堆叠 Token 的演化路线，巧妙地将技能优化转化为一个带预算控制的情境多臂老虎机（Contextual Bandit）问题。它在真实评估前增加了一道“收益预判”机制，确保只有最具潜力或探索价值的候选技能才会进入实际演练，并结合精细化算子迭代种群。凭借这套高效的筛选策略，COBRA-Skills 仅用 50 个优化样本，就将优化成本降低了 55%～58%，并在 6 个跨领域 Benchmark 上实现了对现有主流方法的全面超越。雷峰网AI 科技评论近日独家对话了论文第一作者卢平琛。在交谈中，他向我们还原了团队如何将“情境多臂老虎机”引入 Agent 技能演化，以及这套低成本范式背后的真实踩坑经历与工程抉择。01双轮闭环：经典算法“筛选” + 进化算子“重构”COBRA-Skills 的设计可以概括成：老虎机负责“选”，进化负责“改”，两者形成一个持续运转的闭环。具体而言，系统维护着一个固定规模的技能种群。在日常迭代中，流程分为三步：1.筛选评估。由老虎机算法为种群中的每个技能打分，挑选出得分最高者；2.实战检验。目标智能体搭载该技能在优化集上执行任务，并返回对应的奖励与执行轨迹；3.反馈更新。",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "COBRA-Skills一作访谈，50样本重构Agent技能降路，直接指向论文与算法思路。",
+      "queued_at": "2026-09-22T11:59:04Z"
+    },
+    {
+      "id": "dbe6cadef6cc6f8ecc2922ad05e0f8dc8549bd9b",
+      "title": "China's CXMT hits 12nm-class DRAM milestone — new 5th-gen DRAM tech uses quadruple-patterning to boost die capacity by 50%",
+      "url": "https://www.tomshardware.com/pc-components/dram/chinas-cxmt-hits-12nm-class-dram-milestone-new-5th-gen-dram-tech-uses-quadruple-patterning-to-boost-die-capacity-by-50-percent",
+      "source": "rss:tomshardware",
+      "published_at": "2026-09-22T10:00:00Z",
+      "raw_summary": "China's DRAM champion CXMT has begun mass production using its 5th Geb DRAM process technology",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "CXMT 5代DRAM用四重图形化实现12nm级量产、die容量提升50%，中国DRAM里程碑事件。",
+      "queued_at": "2026-09-22T11:59:04Z"
+    },
+    {
+      "id": "bc02b9b34b44ecac42bcbd30c15efe91737a05c6",
+      "title": "[R] Complex KDA: Understanding and Enhancing the Expressivity of Kimi Delta Attention",
+      "url": "https://www.reddit.com/r/localllama/comments/1wn1t6a/r_complex_kda_understanding_and_enhancing_the",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-22T06:34:34Z",
+      "raw_summary": "Github: https://github.com/OpenEuroLLM/ComplexKDA HuggingFace: https://huggingface.co/collections/openeurollm/complexkda Arxiv: https://arxiv.org/abs/2609.24797 Authors: Julien Siems*, Riccardo Grazzi*, Korbinian Pöppel*, Jaisidh Singh, Arber Zela, Timur Carstensen, Jenia Jitsev, Frank Hutter, Volkan Cevher, Antonio Orvieto, Aaron Klein (* equal contribution) Abstract: Linear RNNs based on the delta-rule enable efficient sequence modeling, but their linear updates with a low-rank correction constrain their expressivity. Prior work has shown that composing two delta-rule transitions in a single recurrent update can model a 2D rotation, but this increases the rank and the cost of the updates compared to a single transition. We show that Kimi Delta Attention (KDA) can realize 2D rotations by combining a single delta-rule transformation with a second reflection supplied by its channel-wise gate. This requires extending the parameter ranges of KDA by combining two existing range extensions: allowing gates in [−1,1] and the delta-rule coefficient β in [0,2]. We call the resulting model Complex KDA (CKDA). It preserves KDA's stability and efficiency, with transitions that remain diagonal-plus-rank-one and non-expansive, while reaching the state-tracking expressivity of DeltaProduct2. We characterize the expressivity of CKDA and prove that every orthogonal diagonal-plus-rank-one matrix is exactly a CKDA transition matrix. A single CKDA layer can track every finite group isomorphic to",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "直接指向 arXiv 论文，分析 Kimi Delta Attention 的表达性瓶颈并提出 Complex KDA，附带代码与模型权重，属一手架构改进工作。",
+      "queued_at": "2026-09-22T11:59:04Z"
+    },
+    {
       "id": "8112a4c6896248656b97eeab3c67784ea04d64e2",
       "title": "WorldCrafter: Consistent Video World Model with Implicit 3D-aware Memory [Wangbo Yu, Kunhao Liu, Wenbo Hu, Shenghai Yuan, Chaoran Feng]",
       "url": "http://arxiv.org/abs/2609.24984v1",
