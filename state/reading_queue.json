@@ -248,6 +248,19 @@
       "queued_at": "2026-09-23T16:48:35Z"
     },
     {
+      "id": "c693d168bc46d6f2ff3e69706011f5efc2af62d1",
+      "title": "Anthropic says Claude autonomously discovered a new enzyme system in the DNA of bacteriophages, somewhat similar to CRISPR, the first result from its new biolab (Robert Hart/The Verge)",
+      "url": "https://www.techmeme.com/260923/p34#a260923p34",
+      "source": "rss:techmeme",
+      "published_at": "2026-09-23T18:40:43Z",
+      "raw_summary": "Robert Hart / The Verge: Anthropic says Claude autonomously discovered a new enzyme system in the DNA of bacteriophages, somewhat similar to CRISPR, the first result from its new biolab&nbsp; &mdash;&nbsp; It took nearly 1,000 Claude agents 21 hours and 210 million tokens to uncover the &lsquo;novel enzyme system.&rsquo;",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Verge 报道 Anthropic 用 1000 个 Claude agent 在 21 小时/210M tokens 内自主发现噬菌体类 CRISPR 酶系统，含具体规模数据，是 agent-for-science 范式的重要案例。",
+      "queued_at": "2026-09-23T20:01:31Z"
+    },
+    {
       "id": "e6dcad31415257cdbd8b48d5ff1d1392088b61c3",
       "title": "SWE-Serve: Benchmarking Agentic Engineering For Production Inference Serving [Jennifer Williams, Dave Farris, Jeff Farris, Jiantao Jiao]",
       "url": "http://arxiv.org/abs/2609.26777v1",
@@ -506,19 +519,6 @@
       "source_traceable": true,
       "why": "StableVQ 直指 VQ tokenizer 训练不稳定的根因（编解码器与 codebook 纠缠），给出实用指南。",
       "queued_at": "2026-09-23T06:28:04Z"
-    },
-    {
-      "id": "f3b257887c94e262544aa2ffdb23cb9c3973e155",
-      "title": "做一个能自迭代的后训练平台，Mind Lab要让更多企业拥有自己的模型",
-      "url": "https://36kr.com/p/3995795643142020?f=rss",
-      "source": "rss:36kr",
-      "published_at": "2026-09-23T09:39:56Z",
-      "raw_summary": "文｜王欣逸 编辑｜张雨忻 如果你近期有和投资人闲聊两句，会得出这样一个结论：AI圈的关注点再一次回到了模型和AI Infra（基础设施）。模型，对应着时下应用遇冷，热度向上游转移；而AI Infra的关注点之一，是后训练平台和推理平台。&nbsp; 昨天，Mind Lab发布了他们的最新成果：推出面向行业的模型后训练与推理平台Mint Recursive，以及基于这一平台做后训练的模型Macaron-V1.1。&nbsp; Macaron-V1.1是一个基于GLM-5.3做后训练、参数为752B的模型。 7月，Mind Lab创始人陈锴杰告诉我们，从基于GLM-5.1后训练的Macaron-V1-Preview到基于GLM-5.2的Macaron-V1，中间只隔了不到一个月。而迭代还在加速，据了解， Macaron-V1.1从上一代迭代而来仅用了不到两周。 Macaron-V1.1由744B的基座模型和四个2B的LoRA专家模块组成，其中四个LoRA分别负责Chat、Agent、Coding和Generative UI（生成式UI）。&nbsp; 从V1的1B LoRA变成了现在的2B LoRA，他们也正在摸索更为理想的专家参数规模。从Benchmark结果来看，相比V1，V1.1在6个Agent榜单上全面提升，在SWE-Marathon（超长程AI编程能力）表现尤为出色。。&nbsp; △Macaron-V1.1 benchmark表现，来源：企业 更值得注意的是，Macaron V1.1完全基于Mint Recursive完成训练。&nbsp; Mint Recursive是一个后训练与推理平台，其工作流程包括测评、数据、后训练与部署推理，用户通过API和Python SDK即可调用平台的训练和部署能力；还能接入生产环境中的反馈，让模型在真实任务中持续改进。而这套流程，Mint Recursive 在Macaron V1.1模型的迭代上已经跑通。&nbsp; 就在这一节点，Mind Lab集中发布了一系列成果，把过去一段时间在持续学习与Infra领域积累的Know-how，沉淀为一套可对外提供的服务。&nbsp; 做后训练的Infra Mind Lab一边做模型、一边做Infra，这并不让人意外。&nbsp; 在今年1月，他们就率先推出了Mint Recursive的早期形态——一个关于LoRA训推的基础设施平台，为客户提供大模型后训练全流程解决方案。&nbsp; 与此同时，在Infra层面下功夫，正慢慢成为一个行业共识。&nbsp; 几天前，智谱创始人、首席科学家唐杰在X上发了一篇长文，阐述了他们用AI改进AI的最新进展，他们让GLM-5.3驱动的Infra Agent，自动优化GLM-5.3自己的推理引擎，让一个超10万张国产芯片组成的集群，在不到两周的时间里，将端到端吞吐提升至初始基线的3倍。&nbsp; 智谱正在做的就是让AI去自我改进推理层Infra。同样是模型参与优化自己，大家想解决的问题不同——Mind Lab要做一个后训练平台，想优化的是从整个后训练到部署推理的流程，囊括数据、评测、部署、反馈收集等步骤。&nbsp; Mint Recursive平台由三大模块组成：Train&amp;Deploy（训练与部署）、Env Hub（环境中心）、Data&amp;Experience（数据与经验）。这一平台支持模型、SFT（监督微调）、RL（强化学习）、DPO（偏好训练）、全参微调等算法，兼容GLM、Qwen、DeepSeek、Ki",
-      "score": 7,
-      "angle": "engineering",
-      "source_traceable": true,
-      "why": "Mind Lab的后训练平台与752B基座+2B LoRA专家的MoE式后训练架构，包含具体迭代节奏与benchmark结果，对后训练工程实践有参考价值。",
-      "queued_at": "2026-09-23T12:02:27Z"
     }
   ],
   "digest_last_date": "2026-09-23"
