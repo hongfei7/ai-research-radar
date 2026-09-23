@@ -4,29 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "AMD",
-        "Anthropic",
-        "OpenAI"
-      ],
-      "features": [
-        "and",
-        "at",
-        "claude",
-        "claudish",
-        "cost",
-        "fable",
-        "less",
-        "lower",
-        "matches",
-        "opus",
-        "performance",
-        "promises",
-        "writing"
-      ],
-      "sent_at": "2026-09-22T16:55:24Z"
-    },
-    {
-      "tickers": [
         "Anthropic",
         "亚马逊",
         "微软"
@@ -304,6 +281,72 @@
         "锋署"
       ],
       "sent_at": "2026-09-23T12:07:33Z"
+    },
+    {
+      "tickers": [
+        "Anthropic",
+        "DeepSeek",
+        "OpenAI"
+      ],
+      "features": [
+        "gpt-6",
+        "sol",
+        "terra",
+        "一场",
+        "价的",
+        "场模",
+        "型梯",
+        "失的",
+        "密消",
+        "平移",
+        "梯队",
+        "模型",
+        "消失",
+        "的一",
+        "的秘",
+        "秘密",
+        "队平",
+        "降价"
+      ],
+      "sent_at": "2026-09-23T16:56:05Z"
+    },
+    {
+      "tickers": [
+        "字节跳动",
+        "英伟达"
+      ],
+      "features": [
+        "biggest",
+        "bytedance",
+        "customer",
+        "filing",
+        "ipo",
+        "its",
+        "keeps",
+        "nscale",
+        "nvidia-backed",
+        "of",
+        "out"
+      ],
+      "sent_at": "2026-09-23T16:56:24Z"
+    },
+    {
+      "tickers": [
+        "小米",
+        "高通"
+      ],
+      "features": [
+        "pro",
+        "元起",
+        "列发",
+        "发布",
+        "小米",
+        "布元",
+        "米系",
+        "系列",
+        "起售"
+      ],
+      "sent_at": "2026-09-23T16:56:39Z"
     }
   ],
   "last_report": {

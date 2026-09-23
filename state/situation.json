@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-23T12:07:10Z",
-  "text": "截至 2026-09-23 20:07 HKT，本轮新增要点：DeepSeek发布Agent训练新论文，梁文锋署名，国产前沿研究持续输出；OpenAI挖角Patreon联合创始人Sam Yam组建创作者产品部门（DevDay前奏），Altman将赴联合国安理会倡议AI安全标准；AMD在Linux驱动中加入GDDR7支持，被视为RDNA 5前置信号；阿里Qwen业务负责人落定刘大一恒，云栖期间密集发布Qwen Book智能体电脑、斑马AutoOmni 2.0端侧大模型及千问平台升级；印度SEMICON INDIA 2026宣布5座封装厂投运，ISM 2.0投入135亿美元；异构混推与企业长上下文/RAG方向获关注。",
-  "since": "2026-09-23T12:07:10Z",
+  "generated_at": "2026-09-23T16:55:39Z",
+  "text": "当前共有 30 个活跃事件。要点包括: DeepSeek新论文公开Agent训练！梁文锋署名; GPT-6 Sol 降价 50% 的秘密：消失的 Terra，一场模型梯队平移; 阿里平头哥发布真武V900 AI芯片，称目前中国最强; 字节跳动通过挪威数据中心获取超2000颗英伟达B200芯片; Nvidia-backed Nscale keeps its biggest customer, Bytedance, out of its IPO filing。",
+  "since": "2026-09-23T16:55:39Z",
   "active_event_count": 30,
   "key_themes": [
     "model_capability",
     "ai_monetization",
     "compute_demand",
-    "edge_ai",
-    "policy_export"
+    "policy_export",
+    "chip_supply"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
   "cross_analysis": "【核心矛盾】\n微软Copilot出现方向判断分歧：来源1将其30-50%折扣+按用量计费超级应用视为抢占企业AI入口的中性事件，来源3则将同行业云厂及SaaS被迫以折扣挽留客户判定为对亚马逊、微软的负向信号，分歧核心在于\"主动定价权\"还是\"被动应对客户流失\"。此外来源2内部存在张力：GPT-6 Luna/Luna近乎对半降价抢占开发者心智，但同时披露GPT-5.6将于11月再涨25%，降价与提价并行反映OpenAI分层定价策略而非全线降。\n\n【新兴趋势】\n\"AI计费模式从订阅制切换为按用量/按任务\"在来源1、2、3中反复出现，是本轮最强信号，并伴随\"企业AI预算挤占其他IT开支\"（来源3）、\"C端对话产品收缩\"（来源4，豆包团队砍半）两条佐证线索，共同指向AI",
-  "trend_spotting": "【新兴趋势】世界模型赛道出现\"保密军备竞赛\"，头部企业（谷歌、OpenAI、xAI、Anthropic）及其数据供应商同步收紧信息披露，透明度降至历史低点，与同期大模型开源化趋势形成尖锐反差。\n\n【早期信号】数据供应商同样讳莫如深，说明训练数据本身正成为核心护城河而非模型架构；这预示世界模型竞争将向\"数据闭环\"倾斜，纯算法优势的窗口期正在收窄。\n\n【市场盲点】市场普遍以融资规模与媒体热度为锚估值，却忽视技术细节完全不可验证；缺乏公开benchmark的领域，估值锚定的是叙事而非真实能力，泡沫风险被系统性低估。\n\n【拐点预警】首个标准化benchmark或产品Demo的公开将是行业临界点——若大厂率先定义评估体系，中小玩家将丧失叙事主动权，赛道格局可能在数月内骤变，保密红利随之终结。"
+  "trend_spotting": "【新兴趋势】模型价格战从\"叙事型降价\"分化，Anthropic Claude Opus 5.5成本真降40%、缓存读取降60%，阿里Qwen Audio 3.1 API最高降价95%，推理侧Token消耗放量正驱动算力链二阶传导。Agent从单点演示进入规模化阶段：荣耀Magic9搭载系统级Agent Harness，MagicOS 11单步操作3.6秒/100+步闭环；鲁班智能体日均Token调用超350亿；Agensh"
 }
