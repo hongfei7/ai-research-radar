@@ -14,6 +14,19 @@
       "queued_at": "2026-09-23T06:28:04Z"
     },
     {
+      "id": "c70ac6470871792cf6af4f66ffde3fbeb62af24b",
+      "title": "Claude discovered a novel enzyme system with properties reminiscent of CRISPR",
+      "url": "https://www.reddit.com/r/singularity/comments/1woe138/claude_discovered_a_novel_enzyme_system_with",
+      "source": "reddit:singularity",
+      "published_at": "2026-09-23T18:27:22Z",
+      "raw_summary": "Claude has discovered a previously unknown enzyme system hidden in the DNA of bacteriophages. Beside the enzyme’s gene sits a long array of repeating DNA—a structure that looks somewhat similar to CRISPR. We don’t yet understand what this system does, but only a handful of known systems share its features, and all of them are able to cut, copy, and paste DNA. Historically, the discovery of such programmable systems has helped revolutionize medicine. CRISPR, for instance, is now the foundation of genetic medicines. But it will take much more work to learn what this system does, and whether it can be put to similar use. - Anthropic via X https://x.com/AnthropicAI/status/2102824959827742916 &#32; submitted by &#32; /u/TorturedPoet30 [link] &#32; [comments]",
+      "score": 9,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Claude 自主发现新型类 CRISPR 酶系统，是 AI 驱动科学发现的一手案例，值得读原文理解其方法与边界。",
+      "queued_at": "2026-09-23T22:57:51Z"
+    },
+    {
       "id": "d1add861cd4bce59c7c53fc733737edb7a5306dc",
       "title": "CliffCompaction: Cost-Efficient Compaction for Long-Horizon Coding Agents [Trang Nguyen, Eulrang Cho, Bingqing Chen, Tim Dettmers]",
       "url": "http://arxiv.org/abs/2609.26779v1",
@@ -261,6 +274,19 @@
       "queued_at": "2026-09-23T20:01:31Z"
     },
     {
+      "id": "e731dd6490f845a4e54fe4e9f55df60f821ab4e8",
+      "title": "Anthropic CEO Dario Amodei: AI Biology Will Go From Weak To Superhuman Within A Few Years",
+      "url": "https://www.reddit.com/r/singularity/comments/1wog3z8/anthropic_ceo_dario_amodei_ai_biology_will_go",
+      "source": "reddit:singularity",
+      "published_at": "2026-09-23T19:43:50Z",
+      "raw_summary": "Today we announced the Claude-led discovery of a molecular machine that we suspect could represent a new gene editing mechanism. Its precise function, biotechnological utility (if any), or level of significance is not yet clear, but at minimum it is work I would have been proud to do as a PhD student. The work was done mostly, though not entirely, by Claude: our life sciences team suggested a broad area of research, Claude read through the literature and a bunch of genome data and discovered something interesting, then Claude proposed experiments to verify the discovery and our team carried them out. It’s easy to dismiss this as a one-off or curiosity, but we’ve repeatedly seen a pattern where AI performance in new intellectual domains goes from weak to superhuman in a matter of a few years. In 2023 models struggled to do math at the level of an average high-school student. In 2024 they started to do well on math competitions for the best high-schoolers in the country, in 2025 they started to solve minor open problems, in early 2026 more significant open problems, and in late 2026 they are beginning to solve the top few open problems in all of mathematics. We believe AI for biology is on a similar exponential trend. As we’ve demonstrated today, humans can collaborate with AI to perform the experiments, validate key results in a few weeks and, if necessary, work with the AI to iterate on what they find. Improving our understanding of biology and sharpening biologists’ tools ca",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "Dario Amodei 本人对 AI 驱动生物学的判断与时间表，属于关键人物的一手表态，值得读其原话。",
+      "queued_at": "2026-09-23T22:57:51Z"
+    },
+    {
       "id": "e6dcad31415257cdbd8b48d5ff1d1392088b61c3",
       "title": "SWE-Serve: Benchmarking Agentic Engineering For Production Inference Serving [Jennifer Williams, Dave Farris, Jeff Farris, Jiantao Jiao]",
       "url": "http://arxiv.org/abs/2609.26777v1",
@@ -492,32 +518,6 @@
       "angle": "industry",
       "source_traceable": true,
       "why": "国资委排查 Broadcom 交换机是一手政策信号，反映国产 AI 基础设施替代节奏。",
-      "queued_at": "2026-09-23T06:28:04Z"
-    },
-    {
-      "id": "11cf155c3621f746bc49729101f82f9c67ff9c0c",
-      "title": "Sources and Nscale's US SEC filings: ByteDance accounted for nearly 75% of Nscale's sales in 2025 and used Nscale's facility in Norway to access Nvidia AI chips (Financial Times)",
-      "url": "https://www.techmeme.com/260923/p1#a260923p1",
-      "source": "rss:techmeme",
-      "published_at": "2026-09-23T05:05:01Z",
-      "raw_summary": "Financial Times: Sources and Nscale's US SEC filings: ByteDance accounted for nearly 75% of Nscale's sales in 2025 and used Nscale's facility in Norway to access Nvidia AI chips&nbsp; &mdash;&nbsp; Chinese tech giant was AI cloud provider's largest customer last year but is not prominently named in pitch to stock market investors",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "字节跳动占 Nscale 75% 营收并绕道挪威用 Nvidia 芯片，揭示中国厂商海外算力获取的关键路径。",
-      "queued_at": "2026-09-23T06:28:04Z"
-    },
-    {
-      "id": "2390d571e8e9897c4c67e85517b8e8d7acba8b46",
-      "title": "StableVQ: Practical Guidelines for Stable Vector-Quantized Tokenizer Training",
-      "url": "https://arxiv.org/abs/2609.26774",
-      "source": "huggingface:papers",
-      "published_at": "2026-09-21T20:00:00Z",
-      "raw_summary": "Vector Quantization (VQ) is fundamental to discrete visual tokenizers that power modern autoregressive and masked image generation models. While recent shared-projection codebook methods have substantially advanced codebook utilization, training stability remains a critical and underexplored challenge. We argue that the root cause lies in the entanglement of the Encoder--Decoder and Codebook training: because neither module can reliably fulfill its own responsibility in isolation, the system can only function when the two subsystems happen to cooperate---a fragile condition that breaks down precisely when training is most stressed. We propose StableVQ, which revisits the proper learning objective of each module and resolves the problems that arise when each is trained to fulfill its own role independently. Concretely, (1) Dynamic STE corrects the instability in the Encoder's learning objective, enabling it to robustly optimize the reconstruction space under discrete regularization even when codebook utilization is low. (2) Region VQ Loss reconceives the Codebook's learning objective so that it can independently guarantee full tracking of the encoder output distribution, without relying on encoder oscillations to drive activation. (3) Decoupled Schedule recognizes that the distinct responsibilities of the Encoder--Decoder and the Codebook demand distinct optimization dynamics, and assigns each an independent learning rate schedule to ensure robust system-level behavior. Built ",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "StableVQ 直指 VQ tokenizer 训练不稳定的根因（编解码器与 codebook 纠缠），给出实用指南。",
       "queued_at": "2026-09-23T06:28:04Z"
     }
   ],

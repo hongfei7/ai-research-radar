@@ -1,113 +1,7 @@
 {
-  "morning_last_date": "2026-09-23",
+  "morning_last_date": "2026-09-24",
   "weekly_last_slot": "2026-W38",
   "breaking_fingerprints": [
-    {
-      "tickers": [
-        "Anthropic",
-        "亚马逊",
-        "微软"
-      ],
-      "features": [
-        "and",
-        "claude",
-        "costs",
-        "delivers",
-        "fable",
-        "less",
-        "opus",
-        "performance"
-      ],
-      "sent_at": "2026-09-22T16:55:48Z"
-    },
-    {
-      "tickers": [
-        "Anthropic",
-        "OpenAI"
-      ],
-      "features": [
-        "claude",
-        "opus"
-      ],
-      "sent_at": "2026-09-22T16:56:12Z"
-    },
-    {
-      "tickers": [
-        "OpenAI"
-      ],
-      "features": [
-        "and",
-        "boasting",
-        "cost",
-        "fewer",
-        "gpt-6",
-        "launches",
-        "lower",
-        "luna",
-        "mistakes",
-        "openai",
-        "sol"
-      ],
-      "sent_at": "2026-09-22T20:07:17Z"
-    },
-    {
-      "tickers": [
-        "OpenAI"
-      ],
-      "features": [
-        "and",
-        "gpt-6",
-        "introducing",
-        "luna",
-        "sol"
-      ],
-      "sent_at": "2026-09-22T20:07:35Z"
-    },
-    {
-      "tickers": [
-        "OpenAI"
-      ],
-      "features": [
-        "and",
-        "gpt-6",
-        "luna",
-        "sol"
-      ],
-      "sent_at": "2026-09-22T20:07:58Z"
-    },
-    {
-      "tickers": [
-        "台积电",
-        "高通"
-      ],
-      "features": [
-        "2nm",
-        "4ghz",
-        "5ghz",
-        "and",
-        "axel",
-        "both",
-        "cores",
-        "elite",
-        "extreme",
-        "gen",
-        "metz",
-        "on",
-        "performance",
-        "prime",
-        "process",
-        "qualcomm",
-        "six",
-        "snapdragon",
-        "techradar",
-        "the",
-        "tsmc",
-        "two",
-        "unveils",
-        "with"
-      ],
-      "sent_at": "2026-09-22T23:00:44Z"
-    },
     {
       "tickers": [
         "Anthropic",
@@ -347,47 +241,72 @@
         "起售"
       ],
       "sent_at": "2026-09-23T16:56:39Z"
+    },
+    {
+      "tickers": [
+        "Anthropic"
+      ],
+      "features": [
+        "ai",
+        "amodei",
+        "anthropic",
+        "biology",
+        "ceo",
+        "dario",
+        "few",
+        "from",
+        "go",
+        "superhuman",
+        "to",
+        "weak",
+        "will",
+        "within",
+        "years"
+      ],
+      "sent_at": "2026-09-23T23:01:11Z"
     }
   ],
   "last_report": {
-    "date": "2026-09-23",
+    "date": "2026-09-24",
     "macro": {
-      "cycle": "扩张第三年向第四年过渡,2026年超大规模云厂AI相关capex被摩根大通口径上修至明年1万亿美元,较今年7000亿美元再增逾40%;同期OpenAI披露2026-2030年累计现金消耗2780亿、算力capex 8560亿美元(E3),与阿里宣布5-10万亿参数训练叠加(E11),需求侧叙事未见退坡。但端侧因骁龙8 Elite Gen 6/Extreme据称可本地跑300亿参数MoE(E14,未在events列表中,以下省略ref),数据中心侧的物理约束——HBM位元密度与机柜热密度——并未松动,单卡HBM容量正取代晶体管数,成为单token推理TCO的首要变量。",
+      "cycle": "扩张第三年向第四年过渡,头部云厂AI相关季度capex被摩根大通口径上修至年化1万亿美元、较今年的7000亿再增逾40%,但本轮欧洲本土无任何光刻机订单落地,与欧盟430亿欧元芯片自主预算形成显著落差,产业现实落后政策意愿至少一个完整制程节点",
       "trajectory": {
         "past": "晶圆制程产能",
-        "now": "HBM位元密度与内存供给曲线",
+        "now": "HBM位元密度与先进封装",
         "next": "数据中心电力接入与机柜热密度",
-        "why_now": "三大原厂HBM4/4E扩产被TSV与CoWoS双重锁定18-24个月,推理经济性的下一道闸门不在算力侧定价,而在每张卡能装下多少bit的权重与KV cache。",
+        "why_now": "三大原厂HBM4/4E扩产被TSV与CoWoS双重锁定18到24个月,单卡HBM容量正取代晶体管数成为单token推理TCO的首要变量",
         "trigger": "若单机柜功率密度普遍突破130kW批量化交付,或北美新建园区电力接入审批成为项目主要延迟项"
       },
-      "shift": "维持三段框架;now段权重因两家头部同日确认推理降本而进一步加固,next段权重因戴蒙上修1万亿口径而边际增强,trajectory三段不作迁移",
+      "shift": "维持三段框架不变;now段因Opus 5.5真降与GPT-6 Sol梯队平移得到进一步加固,next段因欧洲订单缺位与美国电力约束叙事而边际增强,trajectory不作迁移",
       "shift_kind": "hold"
     },
     "calls": [
       {
         "claim": "推理经济性拐点已由单家实验变为行业共识,杰文斯悖论将驱动token消耗增速跑赢单价降幅",
-        "falsifier": "若2026Q4全球API token消耗同比增速低于30%,或OpenAI/Anthropic任一家在2027Q1将GPT-6 Luna或Opus 5.5再次降价超过30%而未伴随显著调用量增长,本判断的杰文斯悖论假设失效。",
+        "falsifier": "若2026Q4全球API token消耗同比增速低于30%,或OpenAI/Anthropic任一家在2027Q1将GPT-6 Luna或Opus 5.5再次降价超过30%而未伴随显著调用量增长,本判断的杰文斯悖论假设失效",
         "verify": "Q4 token消耗同比维持50%以上"
       },
       {
-        "claim": "GPT-6 Sol/Luna与Opus 5.5构成「降本vs升级」分化,Anthropic在agent/coding高价值工作流的份额扩张更值得定价",
-        "falsifier": "若Anthropic在2026Q4的token消耗份额相对OpenAI继续下滑,或Opus 5.5在SWE-bench Verified类agent基准上被GPT-6 Sol反超,本判断的高价值工作流份额扩张假设需下调。",
+        "claim": "Anthropic以Opus 5.5的真降价与agent/coding垂直能力,在高价值工作流上对OpenAI形成份额压力,溢价定价权来自能力而非品牌",
+        "falsifier": "若Anthropic在2026Q4的token消耗份额相对OpenAI继续下滑,或Opus 5.5在SWE-bench Verified类agent基准上被GPT-6 Sol反超,本判断的高价值工作流份额扩张假设需下调",
         "verify": "Anthropic 2026Q4 ARR增速跑赢OpenAI"
       },
       {
-        "claim": "中国侧阿里「模型+芯片+IDC」三件套同时上量,真武V900进入50万卡集群叙事,国产替代首次具备可量化的产能锚点",
-        "falsifier": "若V900在2026Q4前未公开任何独立benchmark或客户案例(非阿里内部),或5-10万亿参数训练计划在2027年中前未启动预训练,本判断的国产替代加速假设失效。",
+        "claim": "国产替代首次具备可量化的产能与采购双锚点,V900进入50万卡集群叙事与国资委摸底博通同步推进",
+        "falsifier": "若V900在2026Q4前未公开任何独立benchmark或客户案例(非阿里内部),或5-10万亿参数训练计划在2027年中前未启动预训练,本判断的国产替代加速假设失效",
         "verify": "V900在阿里内部推理流量中跑通≥10%负载"
-      },
-      {
-        "claim": "世界模型赛道进入保密军备竞赛,数据闭环取代算法成为护城河,首个公开benchmark将是行业格局临界点",
-        "falsifier": "若2026Q4前有任何头部厂商公开发布世界模型benchmark或可独立验证的Demo,或数据供应商在6个月内恢复部分信息披露,本判断的保密红利假设需下调。",
-        "verify": "Q4前出现任一头部公开benchmark"
       }
     ]
   },
   "morning_fallback": null,
   "blindspot_ledger": [
+    {
+      "key": "AMD|Intel|博通|台积电|英伟达",
+      "text": "算力核心链在本期是结构性盲区。英伟达近30天有93条相关条目进入本库,但全部为二手转述,无一手披露;台积电虽未被本库单独列项,但所有产能与制程判断均依赖二阶外推;博通在30天窗口仅有38条信息,触发的却是国资委级别的政策调查(E11),即低频信号却携带高政策权重。Apple Intelligence、端侧AI的整链节奏、Intel/AMD对x86 PC份额流失的应对、以及CoreWeave、Nebius等算力租赁标的在本期均无一手锚点。",
+      "first_seen": "2026-09-24",
+      "last_seen": "2026-09-24",
+      "times_seen": 1
+    },
     {
       "key": "AMD|ASML|Anthropic|Intel|Marvell|Meta|OpenAI|博通|台积电|微软|美光|苹果|超微电脑|高通",
       "text": "coverage_audit显示,微软(20天无自有披露)、AMD(22天)、美光(27天)、高通(14天)、博通(20天)、Marvell(25天)、超微电脑(22天)均已落入thin档,其中美光与Marvell已超25天未拿到一手披露;台积电、ASML、Intel、苹果、Meta在structural档但近30天条目数分别仅35-123条,与事件密度相比,算力供应链真正能定性的判断几乎全部依赖二手转述与同业外推——这意味着本期对HBM供给曲线与CoWoS产能的判断,实质上是在用OpenAI/Anthropic的定价信号反推上游,链条极长且缺乏一手校准。",
@@ -463,13 +382,6 @@
       "text": "结构级盲区集中在自有披露缺位的标的。苹果、Meta、Intel、ASML、ARM的expected_channels均已配置但n_items_30d分别只有102、80、59、35、17条,全部为二手转述,无一手披露进入本库;美光与Marvell已18天与16天未出自家披露,本期判断只能依赖同业外推。苹果仍是单条一手信息都没有,意味着对其终端AI摊销节奏与NPU出货的判断,在2026Q4财报前都将处于结构性黑箱状态",
       "first_seen": "2026-09-13",
       "last_seen": "2026-09-13",
-      "times_seen": 1
-    },
-    {
-      "key": "AMD|ASML|Anthropic|Marvell|台积电|寒武纪|英伟达",
-      "text": "本库近30天有493条提及台积电、38条提及ASML的条目,但level全部标记为structural、days_since_own_disclosure为null,意味着对其产能与良率的判断完全依赖二手转述与同业外推,无任何一手披露支撑;AMD、Marvell、AWS/Azure同样在coverage_audit中处于thin或structural状态,英伟达-Anthropic资本闭环对云厂竞争格局的二阶影响无法验证;A股国产AI芯片在燧原首日188%涨幅(E7)后,寒武纪、海光等可比标的的定价空间挤压是推断而非可观测事实。",
-      "first_seen": "2026-09-12",
-      "last_seen": "2026-09-12",
       "times_seen": 1
     }
   ]
