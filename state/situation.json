@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-24T06:41:53Z",
-  "text": "当前共有 29 个活跃事件。要点包括: DeepSeek完成75亿美元融资，年化营收突破10亿美元; Meta自研AI助手Manus登顶App Store，股价单日暴涨11%; DeepSeek新论文公开AI智能体训练新方法，有望减少智能体异常行为; Analysis: total net profit at ~190 chipmakers listed in mainland China rose 620% YoY in H1 2026, driven by the AI boom and China's self-sufficiency campaign (Tomoko Wakasugi/Nikkei Asia); Google DeepMind SVP Koray Kavukcuoglu says Gemini 4 is in the early phase of post-training and hopes it will be released \"much earlier\" than the end of the year (Laura Bratton/The Information)。",
-  "since": "2026-09-24T06:41:53Z",
-  "active_event_count": 29,
+  "generated_at": "2026-09-24T12:23:15Z",
+  "text": "当前共有 30 个活跃事件。要点包括: DeepSeek年化营收破10亿美元，拟10月底前完成75亿美元融资; 吴泳铭首先要给20GW“找工作”; OpenAI、Anthropic同日模型大战，“是兄弟就砍一刀”; Meta自研AI助手Manus登顶App Store，股价单日暴涨11%; Analysis: total net profit at ~190 chipmakers listed in mainland China rose 620% YoY in H1 2026, driven by the AI boom and China's self-sufficiency campaign (Tomoko Wakasugi/Nikkei Asia)。",
+  "since": "2026-09-24T12:23:15Z",
+  "active_event_count": 30,
   "key_themes": [
     "ai_monetization",
-    "edge_ai",
-    "model_capability",
     "compute_demand",
-    "chip_supply"
+    "chip_supply",
+    "model_capability",
+    "edge_ai"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nDeepSeek API 提价 2.3–4.5 倍且无客户流失，与字节豆包一个月内两次送 30 天免费订阅形成鲜明反差，前者验证推理需求弹性，后者暴露 C 端付费转化仍弱。同时，BAT 集体因\"脏数据\"推倒重来预训练（腾讯混元典型），与 DeepSeek 商业化突破、Hunyuan-A13B 高效 MoE 开源形成\"训练端收缩 vs 推理端扩张\"的方向性分歧；而黄仁勋主张反对监管豁免、Meta 却在 Connect 上被迫去掉智能眼镜摄像头，折射出 AI 监管议题上英伟达（算力供应方）与 Meta（终端应用方）立场差异。\n\n【新兴趋势】\n\"大厂 AI Agent 入口收口\"是本月最显著信号——腾讯 QClaw 关停并入 WorkBuddy、阿里千问办公/字节豆包工作/百度搭子同步整合，C 端 AI 入口赛马期收尾。叠加 Meta 集中发布 Muse Agent、Muse Charm 独立硬件、Muse 接入智能眼镜三步动作，端侧 AI",
-  "trend_spotting": "近72小时最值得关注的结构性变化是国产AI商业化验证与算力链景气共振。DeepSeek年化营收破10亿美元、API价格上调2.3-4.5倍未流失客户，证明推理需求价格弹性充足；同期A股190家芯片厂H1净利同比+620%，国产替代叙事获得盈利端确认。这两条信号叠加，意味着国内大模型厂商已从\"烧钱阶段\"过渡到\"定价权阶段\"。\n\n早期信号方面，BAT集体返工预训练的\"脏数据\"问题被严重低估——这不只是数据工程问题，而是大模型能力跃迁的隐性瓶颈，可能延长训练周期，短期内对国产算力订单构成节奏性扰动。腾讯混元A13B开源MoE（130亿激活参数）若推理"
+  "cross_analysis": "【核心矛盾】\n阿里20GW算力扩张与\"3年回本\"承诺之间的张力明显——单季capex同比+75%但自由现金流转负、6年需投1.6万亿（来源：tmtpost）；同时Brookings预测美国AI支出8年累计10.3万亿美元、平均占GDP 3.6%的高景气，与五大云厂4.2万亿美元capex中发债占比攀升形成需求旺盛但融资脆弱的悖论（来源：36kr）。DeepSeek\"低成本开源\"叙事与其ARR翻倍至10亿美元、并寻求75亿美元融资并存的商业化路径（来源：techmeme）亦存在定性张力。\n\n【新兴趋势】\nAI Agent变现加速成为跨多条报道的共同信号：阿里MaaS ARR 160亿、\"Headcount转AgentCount\"、Meta Muse接入多家零售商、Accio B2B场景A2A、OpenAI重启创作者业务，模型层竞争正传导至应用层商业化兑现。端侧AI同步升温——高通跨终端矩阵、百度×英特尔端云协同、斑马车端80-90%云端能力，构成与云端算力扩张并行的第二条AI落地主线。\n\n【信息盲点】\nHBM/CoWoS等关键供给瓶颈（SK海力士、三星、美光、长电科技）及AMD相对英伟达的竞争位置在本轮未单独成条；Broadcom定制ASIC与网络交换在$4.2T capex叙事中缺位；中芯国际、寒武纪等国产算力链标的仅在\"二阶效应",
+  "trend_spotting": "阿里云栖大会释放强信号：2032年20GW算力目标意味着六年四倍扩张、约1.6万亿IT capex，单季同比+75%但自由现金流转负，\"算力即增长\"押注进入关键验证期；同日OpenAI与Anthropic正面"
 }
