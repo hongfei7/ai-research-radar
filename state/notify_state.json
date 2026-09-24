@@ -4,112 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "Anthropic",
-        "OpenAI",
-        "xAI"
-      ],
-      "features": [
-        "and",
-        "claude",
-        "gpt-6",
-        "luna",
-        "new",
-        "opus",
-        "price",
-        "sol",
-        "war"
-      ],
-      "sent_at": "2026-09-23T01:28:01Z"
-    },
-    {
-      "tickers": [
-        "博通"
-      ],
-      "features": [
-        "ai",
-        "amid",
-        "broadcom",
-        "centers",
-        "china",
-        "companies",
-        "data",
-        "domestic",
-        "drive",
-        "financial",
-        "in",
-        "is",
-        "number",
-        "of",
-        "oversees",
-        "sasac",
-        "sources",
-        "state-backed",
-        "state-owned",
-        "surveying",
-        "switches",
-        "the",
-        "times",
-        "which"
-      ],
-      "sent_at": "2026-09-23T06:38:09Z"
-    },
-    {
-      "tickers": [
-        "Anthropic"
-      ],
-      "features": [
-        "api",
-        "claude",
-        "opus",
-        "一天",
-        "万行",
-        "代码",
-        "价格",
-        "天迁",
-        "完价",
-        "打折",
-        "格打",
-        "码一",
-        "突袭",
-        "行代",
-        "袭万",
-        "迁完"
-      ],
-      "sent_at": "2026-09-23T06:38:36Z"
-    },
-    {
-      "tickers": [
-        "中科曙光",
-        "中芯国际",
-        "寒武纪"
-      ],
-      "features": [
-        "ai",
-        "v900",
-        "互联",
-        "从单",
-        "到千",
-        "力变",
-        "千卡",
-        "单卡",
-        "卡互",
-        "卡到",
-        "变局",
-        "后的",
-        "哥真",
-        "头哥",
-        "平头",
-        "武背",
-        "的算",
-        "真武",
-        "算力",
-        "联平",
-        "背后"
-      ],
-      "sent_at": "2026-09-23T06:39:05Z"
-    },
-    {
-      "tickers": [
         "DeepSeek"
       ],
       "features": [
@@ -248,6 +142,99 @@
         "论文"
       ],
       "sent_at": "2026-09-24T01:22:19Z"
+    },
+    {
+      "tickers": [
+        "DeepSeek"
+      ],
+      "features": [
+        "deepseek",
+        "亿美",
+        "元融",
+        "化营",
+        "完成",
+        "年化",
+        "成亿",
+        "收突",
+        "破亿",
+        "突破",
+        "美元",
+        "营收",
+        "融资",
+        "资年"
+      ],
+      "sent_at": "2026-09-24T06:42:19Z"
+    },
+    {
+      "tickers": [
+        "谷歌"
+      ],
+      "features": [
+        "and",
+        "be",
+        "bratton",
+        "deepmind",
+        "earlier",
+        "early",
+        "end",
+        "gemini",
+        "google",
+        "hopes",
+        "in",
+        "information",
+        "is",
+        "it",
+        "kavukcuoglu",
+        "koray",
+        "laura",
+        "much",
+        "of",
+        "phase",
+        "post-training",
+        "released",
+        "says",
+        "svp",
+        "than",
+        "the",
+        "will",
+        "year"
+      ],
+      "sent_at": "2026-09-24T06:42:47Z"
+    },
+    {
+      "tickers": [
+        "中芯国际",
+        "寒武纪",
+        "海光信息"
+      ],
+      "features": [
+        "ai",
+        "analysis",
+        "and",
+        "asia",
+        "at",
+        "boom",
+        "by",
+        "campaign",
+        "china",
+        "chipmakers",
+        "driven",
+        "h1",
+        "in",
+        "listed",
+        "mainland",
+        "net",
+        "nikkei",
+        "profit",
+        "rose",
+        "self-sufficiency",
+        "the",
+        "tomoko",
+        "total",
+        "wakasugi",
+        "yoy"
+      ],
+      "sent_at": "2026-09-24T06:43:12Z"
     }
   ],
   "last_report": {

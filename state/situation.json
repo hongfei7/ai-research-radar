@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-24T01:21:58Z",
-  "text": "当前共有 28 个活跃事件。要点包括: ChatGPT Voice升级：接入GPT-6多模型及邮件日历Slack插件; Anthropic CEO Dario Amodei: AI Biology Will Go From Weak To Superhuman Within A Few Years; DeepSeek新论文公开AI智能体训练新方法，有望减少智能体异常行为; 谷歌发布Flash TTS模型，支持文本描述设计AI音色; Anthropic生物实验室披露重要发现，强调Human-in-the-loop模式。",
-  "since": "2026-09-24T01:21:58Z",
-  "active_event_count": 28,
+  "generated_at": "2026-09-24T06:41:53Z",
+  "text": "当前共有 29 个活跃事件。要点包括: DeepSeek完成75亿美元融资，年化营收突破10亿美元; Meta自研AI助手Manus登顶App Store，股价单日暴涨11%; DeepSeek新论文公开AI智能体训练新方法，有望减少智能体异常行为; Analysis: total net profit at ~190 chipmakers listed in mainland China rose 620% YoY in H1 2026, driven by the AI boom and China's self-sufficiency campaign (Tomoko Wakasugi/Nikkei Asia); Google DeepMind SVP Koray Kavukcuoglu says Gemini 4 is in the early phase of post-training and hopes it will be released \"much earlier\" than the end of the year (Laura Bratton/The Information)。",
+  "since": "2026-09-24T06:41:53Z",
+  "active_event_count": 29,
   "key_themes": [
     "ai_monetization",
-    "compute_demand",
-    "model_capability",
     "edge_ai",
+    "model_capability",
+    "compute_demand",
     "chip_supply"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nASML高管披露\"欧洲零订单\"与欧盟雄心勃勃的芯片自主目标存在显著落差，凸显政策意愿与产业现实之间的脱节。Anthropic官方表述仍坚持\"human-in-the-loop\"（AI仅辅助）框架，但同期CEO发言与社区叙事高调渲染\"AI Agent自主发现CRISPR类机制\"，公司在克制公关与能力叙事之间存在张力。此外，专家警告\"AI竞赛\"零和框架将削弱中美AI安全合作，与美国持续加码出口管制的政策方向形成背离。\n\n【新兴趋势】\n多条报道反复指向三个交叉主题：①Arm-on-Windows加速向入门价位段下沉，Surface起售价破千美元是标志性信号；②AI Agent在科学发现（生命科学/数学）中的应用成为高频叙事，Anthropic数日内三条相关报道相互印证；③超大规模云厂商在欧亚政策\"安全区\"的中东capex布局提速，微软$10B+是最新锚点。\n\n【信息盲点】\n本轮未直接覆盖的标的值得关注：算力核心链（NVDA、AVGO、TSM）仅在二阶效应中被提及但无一手信号；Apple Intelligence/端侧AI未出现；AMZN、ORCL等云厂中东布局未披露；Intel/AMD对x86 PC份额流失的应对策略缺位；戴尔、HP、Lenovo等OEM的Arm平台跟进节奏未涉及。\n\n【跨标的联动】\nArm PC链条信号最强：微软Surface全线拥抱高通骁龙X2 Plus，将直接挤压Intel/AMD在入门PC份额并利好高通。Anthrop",
-  "trend_spotting": "【新兴趋势】模型价格战从\"叙事型降价\"分化，Anthropic Claude Opus 5.5成本真降40%、缓存读取降60%，阿里Qwen Audio 3.1 API最高降价95%，推理侧Token消耗放量正驱动算力链二阶传导。Agent从单点演示进入规模化阶段：荣耀Magic9搭载系统级Agent Harness，MagicOS 11单步操作3.6秒/100+步闭环；鲁班智能体日均Token调用超350亿；Agensh"
+  "cross_analysis": "【核心矛盾】\nDeepSeek API 提价 2.3–4.5 倍且无客户流失，与字节豆包一个月内两次送 30 天免费订阅形成鲜明反差，前者验证推理需求弹性，后者暴露 C 端付费转化仍弱。同时，BAT 集体因\"脏数据\"推倒重来预训练（腾讯混元典型），与 DeepSeek 商业化突破、Hunyuan-A13B 高效 MoE 开源形成\"训练端收缩 vs 推理端扩张\"的方向性分歧；而黄仁勋主张反对监管豁免、Meta 却在 Connect 上被迫去掉智能眼镜摄像头，折射出 AI 监管议题上英伟达（算力供应方）与 Meta（终端应用方）立场差异。\n\n【新兴趋势】\n\"大厂 AI Agent 入口收口\"是本月最显著信号——腾讯 QClaw 关停并入 WorkBuddy、阿里千问办公/字节豆包工作/百度搭子同步整合，C 端 AI 入口赛马期收尾。叠加 Meta 集中发布 Muse Agent、Muse Charm 独立硬件、Muse 接入智能眼镜三步动作，端侧 AI",
+  "trend_spotting": "近72小时最值得关注的结构性变化是国产AI商业化验证与算力链景气共振。DeepSeek年化营收破10亿美元、API价格上调2.3-4.5倍未流失客户，证明推理需求价格弹性充足；同期A股190家芯片厂H1净利同比+620%，国产替代叙事获得盈利端确认。这两条信号叠加，意味着国内大模型厂商已从\"烧钱阶段\"过渡到\"定价权阶段\"。\n\n早期信号方面，BAT集体返工预训练的\"脏数据\"问题被严重低估——这不只是数据工程问题，而是大模型能力跃迁的隐性瓶颈，可能延长训练周期，短期内对国产算力订单构成节奏性扰动。腾讯混元A13B开源MoE（130亿激活参数）若推理"
 }
