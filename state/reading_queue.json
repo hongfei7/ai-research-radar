@@ -209,6 +209,32 @@
       "queued_at": "2026-09-24T17:19:29Z"
     },
     {
+      "id": "1737c526c28c57c1330b020a8fda6393b8d77056",
+      "title": "A Million Agents Is a Distributed System Problem",
+      "url": "https://www.instacloud.com/blogs/a-million-agents-is-a-distributed-systems-problem",
+      "source": "hackernews",
+      "published_at": "2026-09-24T17:26:23Z",
+      "raw_summary": "A Million Agents Is a Distributed System Problem",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": false,
+      "why": "百万级 Agent 的分布式系统挑战直指当前 agent infra 的核心瓶颈，主题与 agentic AI 基础设施高度相关。",
+      "queued_at": "2026-09-24T20:40:48Z"
+    },
+    {
+      "id": "f6045776625c8b6000466d96bc54c14438e95f9e",
+      "title": "Top AI experts badly underestimated how fast the field is moving, study finds",
+      "url": "https://the-decoder.com/top-ai-experts-badly-underestimated-how-fast-the-field-is-moving-study-finds",
+      "source": "rss:the-decoder",
+      "published_at": "2026-09-24T19:18:33Z",
+      "raw_summary": "Leading AI experts have consistently underestimated how fast AI is advancing, according to the Forecasting Research Institute. AI reached gold-medal level at the International Mathematical Olympiad five years ahead of the median expert forecast, and Anthropic's annualized revenue is about five times what experts predicted. But forecasts for real-world uses like self-driving cars paint a more mixed picture. The article Top AI experts badly underestimated how fast the field is moving, study finds appeared first on The Decoder.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Forecasting Research Institute 实证显示顶级 AI 专家系统性低估 AI 进展速度，附具体数据（IMO 提前 5 年、Anthropic 营收 5 倍），是关于预测能力偏差的硬研究。",
+      "queued_at": "2026-09-24T20:40:48Z"
+    },
+    {
       "id": "4a99bb4e57e38af01c11b26604bce7856882dc03",
       "title": "StudentBench: AI and human tutoring yield equivalent GRE learning gains [Curtis Northcutt, Inaara Hasmani, Kevin Feng, Trevor Khangi, Andreas Plesner]",
       "url": "http://arxiv.org/abs/2609.28470v1",
@@ -493,32 +519,6 @@
       "source_traceable": true,
       "why": "自回归视频生成受上下文窗口限制，记忆模块设计是关键瓶颈，此文给出方向",
       "queued_at": "2026-09-24T06:35:33Z"
-    },
-    {
-      "id": "4260c244130cf5323fa64b0b786b4c68bfe96f65",
-      "title": "vectorize-io /hindsight",
-      "url": "https://github.com/vectorize-io/hindsight",
-      "source": "github_trending",
-      "published_at": "2026-09-24T12:14:31Z",
-      "raw_summary": "GitHub Trending: vectorize-io /hindsight. Hindsight: Agent Memory That Learns. Language: Python. Star",
-      "score": 7,
-      "angle": "engineering",
-      "source_traceable": true,
-      "why": "Hindsight 是 agent memory 学习框架的 GitHub 项目，可直接读源码了解 agent 记忆架构。",
-      "queued_at": "2026-09-24T12:15:46Z"
-    },
-    {
-      "id": "7230613e317e42f31588069e61034170d3fa593e",
-      "title": "OpenAI agents hacked an Australian government website in search for data",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/999874/openai-agents-hacked-an-australian-government-website-in-search-for-data",
-      "source": "rss:theverge-ai",
-      "published_at": "2026-09-24T11:52:32Z",
-      "raw_summary": "OpenAI's artificial intelligence agents hacked an Australian government website and attempted to breach numerous other government and university websites. The attack appears to be the first confirmed instance of a rogue AI agent breaching a government website, adding fuel to rapidly intensifying concerns about the safety of advanced AI systems and the responsibility of the [&#8230;]",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "首例 rogue AI agent 入侵政府网站的实证案例，对 agent 安全/治理有具体一手事件可分析。",
-      "queued_at": "2026-09-24T12:15:46Z"
     }
   ],
   "digest_last_date": "2026-09-24"

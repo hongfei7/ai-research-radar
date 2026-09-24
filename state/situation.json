@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-24T17:27:45Z",
-  "text": "当前共有 30 个活跃事件。要点包括: DeepSeek年化营收破10亿美元，拟10月底前完成75亿美元融资; 吴泳铭首先要给20GW“找工作”; OpenAI、Anthropic同日模型大战，“是兄弟就砍一刀”; ASML says it sold 'absolutely nothing' in Europe in 2026; 高通与苹果续签全球专利许可协议，2027年4月起生效。",
-  "since": "2026-09-24T17:27:45Z",
-  "active_event_count": 30,
+  "generated_at": "2026-09-24T20:43:48Z",
+  "text": "当前共有 24 个活跃事件。要点包括: Introducing Gemini 3.8 Live with Live Avatar; PCIe显卡被低估了！内核补齐+通信重构，DeepSeek推理吞吐翻近7倍; Deepmind was built to chase AGI, but its new chief just wants Gemini 4 out the door; Leading semiconductor analyst says AMD should be investigated for 'treason' over availability of restricted chips in China, AMD blames diversion of export-controlled RFSoC; Gemini 3.8 Live with Live Avatar gives Google&#8217;s AI a face。",
+  "since": "2026-09-24T20:43:48Z",
+  "active_event_count": 24,
   "key_themes": [
     "compute_demand",
     "ai_monetization",
     "model_capability",
-    "chip_supply",
-    "datacenter_power"
+    "datacenter_power",
+    "edge_ai"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nOracle新墨西哥数据中心\"不可抗力\"事件存在多源解读差异：Bloomberg/36kr侧重于与Blue Owl的2.45GW Project Jupiter付款延期及2028年投运时间表风险，而hackernews则将其归因于选址、环境或社区争议。同类矛盾也出现在Meta Muse上——一方面被视为对标OpenClaw的消费级Agent突破（The Verge/Decoder），另一方面却连续曝出系统提示注入致完整文件系统泄露的安全丑闻，以及被批\"险恶\"的情感操控设计。三条线索对Meta AI叙事的方向判断存在张力。\n\n【新兴趋势】\n\"AI Agent\"从概念进入大规模落地与争议并行阶段：谷歌Gemini代打电话、Meta Muse Charm多设备互交、OpenAI自主抓取政府网站、Black Forest Labs开源机器人Agent，多源反复印证Agent正成为下一战场。第二个反复信号是**数据中心电力/建设瓶颈显性化**——Oracle不可抗力、谷歌被迫将算力送入轨道（Suncatcher）、台积电以AI设计",
+  "cross_analysis": "【核心矛盾】\n1. **Suncatcher太空算力叙事分裂**：The Decoder明确引用贝索斯判断\"轨道数据中心击败地面设施需20年\"，而HackerNews来源仅以中性正面框架呈现，缺乏对成本曲线的质疑——同一事件乐观/悲观解读并存。\n2. **AI算力需求\"长多短空\"悖论**：专家系统性低估AI进步（FRI研究）支撑长期capex叙事，但Oracle Stargate因不可抗力触发2028年延期、及NJ数据中心因电网容量不足被迫用燃气发电机，又显示**短期供给侧存在物理瓶颈**。长期需求乐观与短期交付延迟形成张力。\n3. **监管力度vs.资本体量**：NJ对数据中心110万美元罚款被原文评价为\"对亿万富翁业主威慑力有限\"——暴露了AI算力扩张中监管工具与资本规模不匹配的矛盾。\n\n【新兴趋势】\n1. **电力/能源成为AI基建最大单点瓶颈**，在本轮三条独立报道中反复出现（Stargate延期、NJ燃气发电机违规、Google Suncatcher以太阳能破局），信号高度集中。\n2. **端侧/设备端AI向新形态扩展**：PrismML登陆高通智能眼镜、Meta移动端AI游戏工具，标志edge_ai从手机/PC向**可穿戴与AR/VR形态**渗透。\n3. **AI模型跨境流动政治化**：白宫干预美→英AISI共享，可能成为出口管制向\"模型权重层\"延伸的先例信号。\n4. **AI企业级商业化路径分化**：Gemini",
   "trend_spotting": "阿里云栖大会释放强信号：2032年20GW算力目标意味着六年四倍扩张、约1.6万亿IT capex，单季同比+75%但自由现金流转负，\"算力即增长\"押注进入关键验证期；同日OpenAI与Anthropic正面"
 }
