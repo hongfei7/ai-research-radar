@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-24T12:23:15Z",
-  "text": "当前共有 30 个活跃事件。要点包括: DeepSeek年化营收破10亿美元，拟10月底前完成75亿美元融资; 吴泳铭首先要给20GW“找工作”; OpenAI、Anthropic同日模型大战，“是兄弟就砍一刀”; Meta自研AI助手Manus登顶App Store，股价单日暴涨11%; Analysis: total net profit at ~190 chipmakers listed in mainland China rose 620% YoY in H1 2026, driven by the AI boom and China's self-sufficiency campaign (Tomoko Wakasugi/Nikkei Asia)。",
-  "since": "2026-09-24T12:23:15Z",
+  "generated_at": "2026-09-24T17:27:45Z",
+  "text": "当前共有 30 个活跃事件。要点包括: DeepSeek年化营收破10亿美元，拟10月底前完成75亿美元融资; 吴泳铭首先要给20GW“找工作”; OpenAI、Anthropic同日模型大战，“是兄弟就砍一刀”; ASML says it sold 'absolutely nothing' in Europe in 2026; 高通与苹果续签全球专利许可协议，2027年4月起生效。",
+  "since": "2026-09-24T17:27:45Z",
   "active_event_count": 30,
   "key_themes": [
-    "ai_monetization",
     "compute_demand",
-    "chip_supply",
+    "ai_monetization",
     "model_capability",
-    "edge_ai"
+    "chip_supply",
+    "datacenter_power"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n阿里20GW算力扩张与\"3年回本\"承诺之间的张力明显——单季capex同比+75%但自由现金流转负、6年需投1.6万亿（来源：tmtpost）；同时Brookings预测美国AI支出8年累计10.3万亿美元、平均占GDP 3.6%的高景气，与五大云厂4.2万亿美元capex中发债占比攀升形成需求旺盛但融资脆弱的悖论（来源：36kr）。DeepSeek\"低成本开源\"叙事与其ARR翻倍至10亿美元、并寻求75亿美元融资并存的商业化路径（来源：techmeme）亦存在定性张力。\n\n【新兴趋势】\nAI Agent变现加速成为跨多条报道的共同信号：阿里MaaS ARR 160亿、\"Headcount转AgentCount\"、Meta Muse接入多家零售商、Accio B2B场景A2A、OpenAI重启创作者业务，模型层竞争正传导至应用层商业化兑现。端侧AI同步升温——高通跨终端矩阵、百度×英特尔端云协同、斑马车端80-90%云端能力，构成与云端算力扩张并行的第二条AI落地主线。\n\n【信息盲点】\nHBM/CoWoS等关键供给瓶颈（SK海力士、三星、美光、长电科技）及AMD相对英伟达的竞争位置在本轮未单独成条；Broadcom定制ASIC与网络交换在$4.2T capex叙事中缺位；中芯国际、寒武纪等国产算力链标的仅在\"二阶效应",
+  "cross_analysis": "【核心矛盾】\nOracle新墨西哥数据中心\"不可抗力\"事件存在多源解读差异：Bloomberg/36kr侧重于与Blue Owl的2.45GW Project Jupiter付款延期及2028年投运时间表风险，而hackernews则将其归因于选址、环境或社区争议。同类矛盾也出现在Meta Muse上——一方面被视为对标OpenClaw的消费级Agent突破（The Verge/Decoder），另一方面却连续曝出系统提示注入致完整文件系统泄露的安全丑闻，以及被批\"险恶\"的情感操控设计。三条线索对Meta AI叙事的方向判断存在张力。\n\n【新兴趋势】\n\"AI Agent\"从概念进入大规模落地与争议并行阶段：谷歌Gemini代打电话、Meta Muse Charm多设备互交、OpenAI自主抓取政府网站、Black Forest Labs开源机器人Agent，多源反复印证Agent正成为下一战场。第二个反复信号是**数据中心电力/建设瓶颈显性化**——Oracle不可抗力、谷歌被迫将算力送入轨道（Suncatcher）、台积电以AI设计",
   "trend_spotting": "阿里云栖大会释放强信号：2032年20GW算力目标意味着六年四倍扩张、约1.6万亿IT capex，单季同比+75%但自由现金流转负，\"算力即增长\"押注进入关键验证期；同日OpenAI与Anthropic正面"
 }
