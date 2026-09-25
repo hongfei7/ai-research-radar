@@ -131,6 +131,45 @@
       "queued_at": "2026-09-25T12:53:33Z"
     },
     {
+      "id": "54c4f73a4c2664f07c0d51f9a8444430f5ce7782",
+      "title": "灵巧手不是等AGI才用：一份被误读的物理AI落地地图",
+      "url": "https://www.tmtpost.com/8152613.html",
+      "source": "rss:tmtpost",
+      "published_at": "2026-09-25T13:02:57Z",
+      "raw_summary": "宇树Dex5-S把22个主动自由度压进3.99万元，市场欢呼“人形机器人进家倒计时”。但把出货量当干活量、把自由度当灵巧、把家庭当最大市场，是三个系统性误读。灵巧手的真实逻辑是按“脑子的水位”分层变现——硬件决定能力上限，数据决定当下能做什么：工业可枚举场景不需要通用AGI，家庭复杂长尾任务才高度依赖它。",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "具身智能灵巧手产业的反共识分析，指出自由度≠灵巧等三个系统性误读，论点鲜明。",
+      "queued_at": "2026-09-25T17:49:55Z"
+    },
+    {
+      "id": "d4af778e3f7831d3bf78ac3bcf961be962cf779b",
+      "title": "Huawei’s Tau Law Takes Commercial Form",
+      "url": "https://www.eetimes.com/huaweis-tau-law-takes-commercial-form",
+      "source": "rss:eetimes",
+      "published_at": "2026-09-25T14:18:57Z",
+      "raw_summary": "Kirin 9050 Pro rests on the Tau (τ) Scaling Law, marking a major change in chip architecture designed to bypass EUV lithography limits. The post Huawei’s Tau Law Takes Commercial Form appeared first on EE Times.",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "华为Kirin 9050 Pro基于Tau Scaling Law的架构变革，声称绕过EUV光刻限制，是非EVL路线的关键进展，值得深入了解其技术主张与证据。",
+      "queued_at": "2026-09-25T17:49:55Z"
+    },
+    {
+      "id": "9a388535df5dbdcedf5d1f29442a2c98e41df995",
+      "title": "Your Transformer Can Hold Two Thoughts at Once: Evidence of Linear Superposition in LLMs",
+      "url": "https://arxiv.org/abs/2609.29845",
+      "source": "huggingface:papers",
+      "published_at": "2026-09-23T20:00:00Z",
+      "raw_summary": "While Large Language Models (LLMs) rely on highly non-linear components, in this work we demonstrate that they exhibit fundamental linearity: when inputs from distinct text streams are linearly combined, the model outputs a superposition of the individual next-token distributions. We term this the Superposition Linearity Hypothesis. We provide evidence that superposition is an intrinsic property of the Transformer architecture rather than an emergent consequence of training; in fact, we observe that it tends to diminish as pretraining progresses. However, we demonstrate that linearity can be substantially restored through lightweight fine-tuning, significantly reducing the divergence between the predicted next-token distribution and the average of the individual next-token distributions. Finally, we introduce a guided decoding procedure that disentangles superposed outputs, enabling the simultaneous generation of two coherent continuations from a single forward pass.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "LLM的线性叠加假设——不同文本流的输出可线性组合，并证明这是Transformer架构固有而非训练涌现的，对理解模型内部表征有重要含义。",
+      "queued_at": "2026-09-25T17:49:55Z"
+    },
+    {
       "id": "7c5d0683902b300ace21fcf78d3d4c737b64cec8",
       "title": "AD-WM: Action-Discriminative World Models for Counterfactual Model Predictive Control [Jiabin Qiu, Zixuan Chen, Hongye Cao, Jieqi Shi, Jing Huo]",
       "url": "http://arxiv.org/abs/2609.30264v1",
@@ -479,45 +518,6 @@
       "angle": "research",
       "source_traceable": true,
       "why": "达摩院DAMO EAGLE模型在《自然·医学》发表，给出了具体敏感性与特异性数据，是医疗AI从实验室走向临床的明确案例。",
-      "queued_at": "2026-09-25T12:53:33Z"
-    },
-    {
-      "id": "118f5e68183a00770dc2b73c06081b7ea9a5234e",
-      "title": "Google's orbital AI data center test packs four TPUs and 1,000W of solar power",
-      "url": "https://www.tomshardware.com/tech-industry/data-centers/google-is-blasting-an-experimental-ai-data-center-into-orbit-first-satellite-will-feature-just-four-tensor-processing-units",
-      "source": "rss:tomshardware",
-      "published_at": "2026-09-25T10:00:00Z",
-      "raw_summary": "Google will launch an experimental satellite into orbit on October 1, taking four tensor processing units with it.",
-      "score": 7,
-      "angle": "engineering",
-      "source_traceable": true,
-      "why": "Google将四颗TPU送入轨道进行太空数据中心实验，介绍了具体配置与太阳能供电方案，是非常规AI基础设施的工程探索。",
-      "queued_at": "2026-09-25T12:53:33Z"
-    },
-    {
-      "id": "8ecc1c6d7b6b3a49f8097fa1d7d6718f2fba3dad",
-      "title": "Article: The Agent Harness: What It Is and Two Ways to Build One",
-      "url": "https://www.infoq.com/articles/agent-harness-build-one",
-      "source": "rss:infoq",
-      "published_at": "2026-09-25T09:00:00Z",
-      "raw_summary": "This article explains the development and operational layers of an agent harness through two implementations of a finance assistant: AWS AgentCore Harness and LangChain with Envoy AI Gateway. It compares how each handles tools, memory, model access, cost control, and observability, and examines the trade-offs in operational ownership, portability, and engineering effort. By Trista Pan",
-      "score": 7,
-      "angle": "engineering",
-      "source_traceable": true,
-      "why": "对比AWS AgentCore Harness与LangChain+Envoy AI Gateway两种Agent工程实现，涉及工具调用、记忆、成本控制等具体工程取舍。",
-      "queued_at": "2026-09-25T12:53:33Z"
-    },
-    {
-      "id": "c4475ad6a6dc102bdd9c5c4b8846ca0bf956d361",
-      "title": "Parts-of-Speech as Emergent Categories in SAE Latent Space",
-      "url": "https://arxiv.org/abs/2609.29362",
-      "source": "huggingface:papers",
-      "published_at": "2026-09-23T20:00:00Z",
-      "raw_summary": "Sparse AutoEncoders (SAEs) offer a promising way to inspect language model representations, but it is still unclear what kind of linguistic structure their latents expose. We use part-of-speech (PoS) categories as a controlled test case to study whether morpho-syntactic information is encoded by individual latents or by structured groups of features. We find that PoS distinctions are highly recoverable from SAE activations, but do not align with one-to-one latent / category mappings. This recoverability is not reducible to lexical memorisation, and Open and Closed PoS classes differ substantially. Categories are supported by compact groups of sparse latents, with substantial variation across tags. These groups remain stable on held-out data, while also showing overlap between related categories. Our results show that SAEs localise morpho-syntactic information in a distributed and category-dependent form rather than through atomic grammatical features.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "用 PoS 类别系统测试 SAE 潜空间的语言结构表征，发现词性可被恢复但不是一一对应，开放/封闭词类行为不同，对 interpretability 研究有具体可检验的结论。",
       "queued_at": "2026-09-25T12:53:33Z"
     }
   ],

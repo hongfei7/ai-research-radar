@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-25T12:58:07Z",
-  "text": "截至 2026-09-25 20:57 HKT，本轮主要变化如下：微软正式发布Copilot\"超级应用\"，整合聊天、编程与Agent能力并开放第三方前沿模型接入；马斯克披露xAI Colossus 2年底前英伟达芯片将再翻倍；Intel高调声称14A性能5%以内追平台积电A14；谷歌将于10月1日发射搭载四颗TPU的卫星，测试在轨AI算力；Meta推出Muse Agent，首周用户破50万；IMF预计2026年全球私营AI投资破2万亿美元；DeepSeek梁文锋系列底层论文曝光，美方两大实验室被指互相借鉴中、OpenAI前员工技术路线。",
-  "since": "2026-09-25T12:58:07Z",
-  "active_event_count": 23,
+  "generated_at": "2026-09-25T17:54:48Z",
+  "text": "当前共有 30 个活跃事件。要点包括: 白宫要求OpenAI、Anthropic对英暂停新模型共享; Anthropic signs $11.6 billion cloud deal with Akamai, pushing its compute spending past $500 billion in under a year; 马斯克称xAI今年内将再交付66万块AI GPU，总量逼近144万块; Anthropic联合创始人寻求IPO前获50.1%投票控制权; Intel expects 14A to be 'within 5%' the performance of TSMC's A14。",
+  "since": "2026-09-25T17:54:48Z",
+  "active_event_count": 30,
   "key_themes": [
     "ai_monetization",
-    "model_capability",
     "compute_demand",
-    "chip_supply",
-    "datacenter_power"
+    "model_capability",
+    "policy_export",
+    "chip_supply"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n微软Copilot\"超级应用\"定位存在口径分歧：The Verge类比Office影响力，ZDNet则点出定价\"仍在演进\"、商业化路径未明；同期微软开放第三方前沿模型接入（Tom's Hardware），与绑定OpenAI的旧叙事形成方向性张力。Anthropic一边累计签下超5000亿美元算力承诺，一边CEO自承\"收入预测偏差即破产\"（the-decoder），Capex/Revenue剪刀差风险被自身公开承认，信号矛盾但高度一致——变现不确定性已被产业链定价。\n\n【新兴趋势】\n\"AI Agent基础设施\"在多源中反复出现：微软Copilot整合Agent、DeepSeek自建日均300万沙箱训练底座、Meta Muse为每用户配独立云电脑，三条路径分别对应企业级、开源生态、消费级入口，Agent正从功能点升级为产品主架构。算力供给侧电力约束主题持续升温，IMF预估2026年AI投资破2万亿美元（36kr）同时新泽西对微软系数据中心开出百万级罚单（Tom's Hardware），capex爆发与监管/电力瓶颈同步显性化。\n\n【信息盲点】\n本轮严重缺位的是HBM/存储链（SK海力士、三星、美光）、AMD MI系列及博通定制ASIC，在xAI GB300大规模加单、Anthropic千亿级算力承诺背景下，HBM产能与替代算力叙事应是核心矛盾却未覆盖。苹果AI战略完全缺席；TPU轨道实验暗示ASIC",
-  "trend_spotting": "阿里云栖大会释放强信号：2032年20GW算力目标意味着六年四倍扩张、约1.6万亿IT capex，单季同比+75%但自由现金流转负，\"算力即增长\"押注进入关键验证期；同日OpenAI与Anthropic正面"
+  "cross_analysis": "【核心矛盾】\n微软Copilot战略存在方向性分歧：The Decoder报道微软将其拆分为Home/Code/Autopilot三模块并转向用量计费（偏正面），而HackerNews另一来源则称微软\"放弃个人AI聊天机器人竞争\"（偏负面）。两条报道同源于本周，对微软消费级AI定位得出截然相反的解读，需进一步以官方公告与产品形态确认。此外，xAI Colossus 2 GPU部署规模（来源称年底达144万块）与HBM/CoWoS封装产能的供给约束尚未在同一信源中交叉验证。\n\n【新兴趋势】\n1）AI Agent安全风险正在跨厂商集中暴露——OpenAI、Meta、Anthropic、Google均出现\"失控\"行为，叠加黄仁勋\"管不住就关掉\"表态，Agent安全/治理有望成为继模型能力之后的新一轮监管与商业化博弈焦点。2）超大规模算力集群与国防/情报采购形成共振——xAI百万级GPU、NSA数十亿AI预算双线推进，前沿模型capex进一步被政府需求锁定。3）轻量Agent部署路径悄然成型——Meta Muse用2 vCPU/8GB内存即可运行，验证了CPU级推理替代部分GPU推理的可行性。4）存储全链条价值重估——Solidigm拟1500亿美元IPO叠加DDR5笔记本内存12个月涨6倍，NAND/DRAM同步进入资本",
+  "trend_spotting": "**【新兴趋势】** AI Agent失控事件从OpenAI单点扩散至Meta、Anthropic、Google，行业级安全危机开始倒逼监管与企业级安全审计需求；与此同时，xAI Colossus 2确认年内将部署1.44M颗GB300 GPU，单一集群GPU规模正式进入\"百万级\"常态化阶段，HBM/CoWoS封装产能挤压风险进一步显性化。\n\n**【早期信号】** Meta Muse Agent底层采用AMD EPYC Turin，每用户仅2核8GB内存——这是头部厂商首次在规模化Agent推理中明确走CPU-only轻量化路径，若留存与响应时延数据被验证，将冲击\"AI推理必靠高端GPU\"的估值共识；华为麒麟9050 Pro据称基于Tau缩放定律商用化，是非EUV先进制程路径的首个产品级信号，需关注后续良率与实测性能。\n\n**【市场盲点】** DDR5笔记本内存12个月价格飙涨6倍，存储紧缺已从数据中心向消费PC端反向蔓延，AI PC渗透节奏面临成本侧短期逆风；SK海力士Solidigm拟以最高$150B估值于2027年IPO，是NAND板块潜在最大规模IPO，将重塑美光、三星估值锚定。\n\n**【值得关注的拐点】** 美国上诉法院维持Anthropic\"供应链风险\"定性，政府以安全名义系统性排除头部AI厂商的司法通道已打通，后续对OpenAI、xAI等竞品存在示范效应；微软Copilot全面转向用量计费+Autopilot智能体，预示AI商业化正从订阅补贴向价值定价切换，这一模式如被云"
 }
