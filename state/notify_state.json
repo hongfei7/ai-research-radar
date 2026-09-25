@@ -4,79 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "Anthropic",
-        "OpenAI"
-      ],
-      "features": [
-        "anthropic",
-        "openai",
-        "一刀",
-        "兄弟",
-        "同日",
-        "型大",
-        "大战",
-        "就砍",
-        "弟就",
-        "战是",
-        "日模",
-        "是兄",
-        "模型",
-        "砍一"
-      ],
-      "sent_at": "2026-09-24T12:23:41Z"
-    },
-    {
-      "tickers": [
-        "AMD",
-        "台积电",
-        "英伟达"
-      ],
-      "features": [
-        "20gw",
-        "先要",
-        "吴泳",
-        "工作",
-        "找工",
-        "泳铭",
-        "给找",
-        "要给",
-        "铭首",
-        "首先"
-      ],
-      "sent_at": "2026-09-24T12:24:05Z"
-    },
-    {
-      "tickers": [],
-      "features": [
-        "10.3t",
-        "ai",
-        "and",
-        "as",
-        "averaging",
-        "between",
-        "brookings",
-        "build-out",
-        "gdp",
-        "journal",
-        "largest",
-        "of",
-        "per",
-        "projects",
-        "share",
-        "single-industry",
-        "spending",
-        "street",
-        "the",
-        "to",
-        "total",
-        "us",
-        "wall",
-        "year"
-      ],
-      "sent_at": "2026-09-24T12:24:28Z"
-    },
-    {
-      "tickers": [
         "Anthropic"
       ],
       "features": [
@@ -212,6 +139,82 @@
         "进入"
       ],
       "sent_at": "2026-09-25T07:24:02Z"
+    },
+    {
+      "tickers": [
+        "xAI",
+        "英伟达"
+      ],
+      "features": [
+        "colossus",
+        "一倍",
+        "伟达",
+        "克计",
+        "划在",
+        "前将",
+        "加一",
+        "在年",
+        "增加",
+        "将的",
+        "年底",
+        "底前",
+        "数量",
+        "斯克",
+        "片数",
+        "的英",
+        "芯片",
+        "英伟",
+        "计划",
+        "达芯",
+        "量增",
+        "马斯"
+      ],
+      "sent_at": "2026-09-25T12:58:29Z"
+    },
+    {
+      "tickers": [
+        "Anthropic",
+        "亚马逊",
+        "微软"
+      ],
+      "features": [
+        "akamai",
+        "anthropic",
+        "billion",
+        "cloud",
+        "compute",
+        "deal",
+        "in",
+        "its",
+        "past",
+        "pushing",
+        "signs",
+        "spending",
+        "under",
+        "with",
+        "year"
+      ],
+      "sent_at": "2026-09-25T12:58:41Z"
+    },
+    {
+      "tickers": [
+        "Intel",
+        "台积电"
+      ],
+      "features": [
+        "14a",
+        "a14",
+        "be",
+        "expects",
+        "intel",
+        "of",
+        "performance",
+        "the",
+        "to",
+        "tsmc",
+        "within"
+      ],
+      "sent_at": "2026-09-25T12:59:03Z"
     }
   ],
   "last_report": {
