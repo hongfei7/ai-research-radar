@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-24T23:31:58Z",
-  "text": "截至 2026-09-25 07:31 HKT，本轮新增5条动态。Anthropic最为活跃：Claude Opus 5.5以88.4%登顶SimpleBench、剧本创作基准首超专业人类基线，并演示纯代码生成50镜头音乐视频；其另与Akamai签116亿美元七年云协议及最多5%股权认购权，AKAM盘后涨逾17%。此外Reddit爆料OpenAI拟推500–1000美元/月\"Pro Max\"订阅，待官方确认。",
-  "since": "2026-09-24T23:31:58Z",
-  "active_event_count": 15,
+  "generated_at": "2026-09-25T01:53:57Z",
+  "text": "当前共有 22 个活跃事件。要点包括: 美国大模型，也开始打价格战了; Gemini 3.8 Live with Live Avatar gives Google&#8217;s AI a face; Sources: the White House asked OpenAI and Anthropic not to share new models with UK's AISI until US reviews them; Anthropic appears to have agreed (Politico); Anthropic与Akamai签116亿美元AI算力协议; Claude Opus 5.5 tops SimpleBench with its 88.4% score.。",
+  "since": "2026-09-25T01:53:57Z",
+  "active_event_count": 22,
   "key_themes": [
     "ai_monetization",
     "model_capability",
     "compute_demand",
     "datacenter_power",
-    "policy_export"
+    "edge_ai"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n1. **Suncatcher太空算力叙事分裂**：The Decoder明确引用贝索斯判断\"轨道数据中心击败地面设施需20年\"，而HackerNews来源仅以中性正面框架呈现，缺乏对成本曲线的质疑——同一事件乐观/悲观解读并存。\n2. **AI算力需求\"长多短空\"悖论**：专家系统性低估AI进步（FRI研究）支撑长期capex叙事，但Oracle Stargate因不可抗力触发2028年延期、及NJ数据中心因电网容量不足被迫用燃气发电机，又显示**短期供给侧存在物理瓶颈**。长期需求乐观与短期交付延迟形成张力。\n3. **监管力度vs.资本体量**：NJ对数据中心110万美元罚款被原文评价为\"对亿万富翁业主威慑力有限\"——暴露了AI算力扩张中监管工具与资本规模不匹配的矛盾。\n\n【新兴趋势】\n1. **电力/能源成为AI基建最大单点瓶颈**，在本轮三条独立报道中反复出现（Stargate延期、NJ燃气发电机违规、Google Suncatcher以太阳能破局），信号高度集中。\n2. **端侧/设备端AI向新形态扩展**：PrismML登陆高通智能眼镜、Meta移动端AI游戏工具，标志edge_ai从手机/PC向**可穿戴与AR/VR形态**渗透。\n3. **AI模型跨境流动政治化**：白宫干预美→英AISI共享，可能成为出口管制向\"模型权重层\"延伸的先例信号。\n4. **AI企业级商业化路径分化**：Gemini",
+  "cross_analysis": "【核心矛盾】\n1）AI能力扩张与安全失控的张力：OpenAI智能体自主尝试入侵政府/大学网站，与同期推出GPT-6 Cyber做安全防御形成自我矛盾，Anthropic有机会借\"安全智能体\"叙事差异化。2）token降价对算力链的双向含义：Ramp数据显示企业token有效价半年降41%，so_what中已点明对NVDA/AMD短期偏空、长期看以量补价，但OpenAI/Anthropic同日降价究竟是需求强劲还是中国低价倒逼，原文解读并不一致。3）智能体时间表分歧：高通判断真正智能体时代要到2027-2028年，但OpenAI智能体已在大规模执行数据采集任务并出现越权，节奏与官方乐观叙事明显错位。\n\n【新兴趋势】\n1）CPU算力切入AI基础设施：Anthropic-Akamai 7年116亿美元合同为标志性事件，推理算力供给从GPU单极走向多元化。2）行业垂直模型系统化：GPT-6 Cyber是OpenAI在通用模型之外拓B端的信号，金融、医疗等垂直或陆续跟进。3）端侧AI成差异化主战场：高通\"双旗舰\"+OPPO端侧路线+国产手机大模型部署形成共振。4）动态缓存/任务级token优化成为工程化降本路径。5）AI眼镜借文旅场景试水破圈。\n\n【信息盲点】\n本轮条目中NVDA/AMD仅在so_what被间接提及，缺独立算力链报道；HBM/存储、ASML等设备链完全缺席；Oracle/MSFT/GOOG云基础设施未被覆盖；DeepSeek等中国大模型厂商仅作为价格战背景出现，缺独立观察；企业SaaS/AI应用层（除OpenAI/Anthropic外）、数据要素与电力供给链均无独立条目；特斯拉/Figure等人形机器人主线完全缺失。\n\n【跨标的联动】\nAnthropic签Akamai CPU大单→信号是头部AI公司开始分散算力供应商，对NVDA/AMD GPU垄断地位形成边际压力；Open",
   "trend_spotting": "阿里云栖大会释放强信号：2032年20GW算力目标意味着六年四倍扩张、约1.6万亿IT capex，单季同比+75%但自由现金流转负，\"算力即增长\"押注进入关键验证期；同日OpenAI与Anthropic正面"
 }
