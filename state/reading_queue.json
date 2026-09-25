@@ -170,6 +170,32 @@
       "queued_at": "2026-09-25T17:49:55Z"
     },
     {
+      "id": "308b78688af2e8ac1c87d64aecafb70e6fe5cb8b",
+      "title": "Another Google Deepmind researcher quits, says building superintelligent AI soon is \"inherently irresponsible\"",
+      "url": "https://the-decoder.com/another-google-deepmind-researcher-quits-says-building-superintelligent-ai-soon-is-inherently-irresponsible",
+      "source": "rss:the-decoder",
+      "published_at": "2026-09-25T17:55:51Z",
+      "raw_summary": "Google Deepmind researcher Robert O'Callahan has quit, saying AI's \"current rate of change is far too high.\" He worked on chip design tools that helped make AI cheaper and faster, a contribution he can no longer justify. Many colleagues share his concerns but rarely speak out, he says. The article Another Google Deepmind researcher quits, says building superintelligent AI soon is &quot;inherently irresponsible&quot; appeared first on The Decoder.",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "DeepMind 资深研究人员因 AGI 节奏辞职，且涉及芯片设计工具贡献，可一手的路线分歧信号。",
+      "queued_at": "2026-09-25T21:15:44Z"
+    },
+    {
+      "id": "16601d8d6797502767790e0c93284fb27eef3bf4",
+      "title": "Anthropic to pay Akamai $11.6 billion over seven years in cloud deal",
+      "url": "https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal",
+      "source": "rss:techcrunch-ai",
+      "published_at": "2026-09-25T19:13:38Z",
+      "raw_summary": "Anthropic has committed $11.6 billion over seven years to Akamai's cloud infrastructure, a bet on CPUs that could grow to about $20 billion, and in an unusual arrangement, Akamai is giving Anthropic a potential stake of up to 5% of its stock that grows as Anthropic spends more.",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "Anthropic 与 Akamai 116 亿美元 CPU 云协议+股权对赌，是 CPU 推理路线与算力供应链的重大押注。",
+      "queued_at": "2026-09-25T21:15:44Z"
+    },
+    {
       "id": "7c5d0683902b300ace21fcf78d3d4c737b64cec8",
       "title": "AD-WM: Action-Discriminative World Models for Counterfactual Model Predictive Control [Jiabin Qiu, Zixuan Chen, Hongye Cao, Jieqi Shi, Jing Huo]",
       "url": "http://arxiv.org/abs/2609.30264v1",
@@ -492,32 +518,6 @@
       "angle": "industry",
       "source_traceable": true,
       "why": "NSA/医院/保险业AI部署成本数据扎实，可对照推断算力需求与商业化困境。",
-      "queued_at": "2026-09-25T12:53:33Z"
-    },
-    {
-      "id": "22f20da3cbc8e1fd4f1a3fb3897f08e21b434779",
-      "title": "马斯克计划在年底前将Colossus 2的英伟达芯片数量增加一倍",
-      "url": "https://36kr.com/newsflashes/3998521879810183?f=rss",
-      "source": "rss:36kr",
-      "published_at": "2026-09-25T08:28:38Z",
-      "raw_summary": "马斯克表示，其旗下xAI公司打造的AI算力集群Colossus 2，到年底时英伟达芯片的数量可能会比目前增加一倍以上。这位亿万富翁为孟菲斯地区该集群的扩建计划提供了迄今为止最详细的时间表，他正竞相扩大AI算力规模。马斯克在X平台上发帖称，Colossus 2目前拥有11万块英伟达GB200芯片和44万块GB300芯片。他表示，下周将有另外22万块GB300芯片投入运行，11月份预计还将有22万块芯片上线。他补充道，如果“运气够好”，12月下旬可能还会再有22万块芯片上线。（新浪财经）",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "马斯克披露Colossus 2的具体芯片数量与上线时间表，是关于xAI算力规模的一手信息，对理解当前AI算力军备竞赛有直接价值。",
-      "queued_at": "2026-09-25T12:53:33Z"
-    },
-    {
-      "id": "34ca2fe3e7cb36d25a8ed4360141efdf9fd13f1f",
-      "title": "CT无创筛查食管癌，达摩院AI站上临床前夜",
-      "url": "https://www.tmtpost.com/8152326.html",
-      "source": "rss:tmtpost",
-      "published_at": "2026-09-25T09:31:41Z",
-      "raw_summary": "文 | 全球财说，作者｜章悦，编辑｜于清近日，阿里达摩院联合四川省肿瘤医院、中山大学肿瘤防治中心等机构，推出食管癌筛查AI模型DAMO EAGLE。它不需要插管，也不需要注射造影剂，凭借常规胸部CT影像，就能识别食管癌甚至癌前病变风险。该模型已在3个国家、8万多例病例中得到验证，成果刊发于国际医学期刊《自然&middot;医学》上。这件事的分量不在于&ldquo;又一篇顶刊&rdquo;，而在于：国内医疗影像AI，正持续从实验室走向诊室。CT阅片，无创筛早癌食管癌在国内极具代表性，高发、晚期确诊占比高，胃镜筛查劝退大量人群。传统确诊依靠内镜，侵入式检查带来的不适感，让很多人选择拖延；等到出现咳血、吞咽困难等症状就诊，往往已是中晚期。达摩院这一模型的巧劲在于&ldquo;复用现有影像&rdquo;，即胸部CT本就是体检常规项目，扫描范围天然覆盖食管。DAMO EAGLE无需新增检查、不增加患者负担，从已有影像中开展机会性筛查，DAMO EAGLE模型对食管癌的敏感性（不漏报的能力）达到90%，针对信号十分微弱的癌前病变，敏感性也有52.5%。模型在真实场景中的特异性（不误报的能力）高达99.2%。通俗来说，它并非替代医生出具诊断结论，而是优先筛选出需要进一步接受胃镜检查的高危人群。这并非单次阶段性突破。达摩院先后推出胰腺癌、胃癌、肠癌、食管癌、主动脉夹层检测模型，累计产出5篇《自然&middot;医学》论文。9月18日，达摩院联合浙江大学医学院附属第一医院等机构，研发的通用医疗影像模型DAMO RADAR开源，成果登上《科学》。该模型可解读腹部增强CT，识别146种病症，涉及18个器官。在近4万次真实世界检查中AUC达0.913，达到影像科专家水平。专科模型聚焦肿瘤与急症，通用模型拓宽疾病覆盖范围，整套技术路线已经得到系列研究验证。技术底座，卡在临门一脚达摩院不属于医疗器械企业，不对外发布财报，本质是阿里体系内医疗AI的研发后台。中航证券相关研报指出，当前国内医疗AI产业的核心约束已经从早期的模型算法能力，转向临床证据积累、监管资质获取、支付体系接入、医疗数据授权和医院系统承接能力。9月18日，工信部等十部门印发《医药工业发展&ldquo;十五五&rdquo;规划》，提出支持有条件的医疗机构建设精准诊断中心、推动诊疗数据互通、共享共用。9月23日，浙江挂牌14家三甲医院牵头的医学AI临床验证中心，浙江省人民医院、浙江省肿瘤医院、浙江大学医学院附属第一医院均在列。监管机构与头部医院正在搭建临床验证&ldquo;考场&rdquo;，但能够进入验证通道和最终拿到合规资质、投入临床使用，是两件完全不同的事。达摩院的布局逻辑清晰：肿瘤与急症专科模型+多疾病通用模型+多中心临床数据+头部医院合作网络。后续商业化可选择技术授权、云诊断、设备绑定、伴随诊断等路径，阿里健康、阿里云均可承接落地。RADAR开源也并非单纯公益，使用者越多，积累的真实世界数据越丰富，技术壁垒也更难被复制。赛道很热，落地很慢市场空间是真实可观的。Fortune Business Insights预测，2026年全球AI医疗健康市场规模将达560亿美元（约3913亿元），2026至2034年年复合增速为43.96%。弗若斯特沙利文对国内市场测算：从2023年至2033年，中国AI医疗市场规模将从88亿元飙升至3157亿元，年复合增速达43.1%。肿瘤早筛属于刚性需求赛道，食管癌患病基数大、内镜资源紧张，AI做初筛分流，相比&ldquo;取代医生&rdquo;的叙事更容易打通付费环节。不过，不",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "达摩院DAMO EAGLE模型在《自然·医学》发表，给出了具体敏感性与特异性数据，是医疗AI从实验室走向临床的明确案例。",
       "queued_at": "2026-09-25T12:53:33Z"
     }
   ],
