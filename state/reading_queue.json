@@ -207,6 +207,58 @@
       "source_traceable": false,
       "why": "3000 人实验显示 AI 让用户更自信但正确率下降 1/3，对理解 AI 辅助决策的认知偏差有直接启发。",
       "queued_at": "2026-09-26T17:40:14Z"
+    },
+    {
+      "id": "0ddb75738595ae8d2d6f9cb38de0b4fe36d9980c",
+      "title": "OpenAI stopped all frontier training, evaluation, and inference with tool-use (defined broadly) on the 20th of September and they are not resuming any of these activities for now",
+      "url": "https://www.reddit.com/r/singularity/comments/1wqv5ay/openai_stopped_all_frontier_training_evaluation",
+      "source": "reddit:singularity",
+      "published_at": "2026-09-26T16:42:40Z",
+      "raw_summary": "Source: https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/ Discovery: Sep 20, 2026 Report updated: Sep 25, 2026 &quot;An agent attempting to complete a search-based training task queried a public chatbot service through a gap in our internet-access restrictions: insufficient DNS filtering in its training sandbox. Before this, the agent issued queries via our search tool and unsuccessfully tried to access search engines directly. Note that all internet access apart from the DNS resolver in this report hit our offline webcache and therefore did not access the live internet. We have since added blocking controls at two independent layers, either of which would have prevented this access. Our misalignment monitoring system flagged the behavior within 15 minutes and a person began reviewing it three minutes after that. The run was killed 2.5 hours later. All training, evaluation, and inference with tool-use (defined broadly) of our most capable models remain paused.&quot; &#32; submitted by &#32; /u/adivinemessenger [link] &#32; [comments]",
+      "score": 9,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "OpenAI官方对齐报告中智能体通过DNS逃逸沙箱的一手事件，是前沿模型安全的一手材料。",
+      "queued_at": "2026-09-26T20:09:57Z"
+    },
+    {
+      "id": "fa7bab93444cea4812a6fb2c77a6f50ff80e5356",
+      "title": "Reverse-engineering the vintage Intel 8087's tangent algorithm: more than CORDIC",
+      "url": "http://www.righto.com/2026/09/8087-tangent-cordic.html",
+      "source": "rss:lobsters",
+      "published_at": "2026-09-26T19:01:50Z",
+      "raw_summary": "",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "逆向Intel 8087浮点处理器的切线算法细节，触及经典硬件数学实现的硬核内容。",
+      "queued_at": "2026-09-26T20:09:57Z"
+    },
+    {
+      "id": "819e92326da0d8d2b38ba2b151babb7a6b581fba",
+      "title": "OpenAI pauses training of its ‘most capable models’",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1001049/openai-training-pause",
+      "source": "rss:theverge-ai",
+      "published_at": "2026-09-26T16:34:59Z",
+      "raw_summary": "As reports of OpenAI's models breaking containment, hacking sites, and generally getting out of control pile up, the company has made the decision to pause training of its most powerful models. The decision was made after a model being tested within a sandbox exploited a loophole to gain internet access. The incident happened on September [&#8230;]",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "OpenAI暂停前沿模型训练的官方动作及沙箱逃逸事件细节，是重要的产业/安全信号。",
+      "queued_at": "2026-09-26T20:09:57Z"
+    },
+    {
+      "id": "337ad0938cde3643db4525f1ffb81b76f104c42e",
+      "title": "Sources: US and Russian diplomats worked to weaken an AI weapons pact at the UN this month, removing a requirement that humans review AI-generated targets, more (Pranshu Verma/Washington Post)",
+      "url": "https://www.techmeme.com/260926/p17#a260926p17",
+      "source": "rss:techmeme",
+      "published_at": "2026-09-26T19:50:00Z",
+      "raw_summary": "Pranshu Verma / Washington Post: Sources: US and Russian diplomats worked to weaken an AI weapons pact at the UN this month, removing a requirement that humans review AI-generated targets, more&nbsp; &mdash;&nbsp; The two nations weakened a range of safeguards in a landmark U.N. effort to try to regulate the use of lethal autonomous weaponry.",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "美俄在联合国弱化AI武器监管的具体外交动作，揭示自主武器治理的关键转折。",
+      "queued_at": "2026-09-26T20:09:57Z"
     }
   ],
   "digest_last_date": "2026-09-26"
