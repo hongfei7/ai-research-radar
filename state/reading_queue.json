@@ -1,4 +1,122 @@
 {
-  "candidates": [],
+  "candidates": [
+    {
+      "id": "788f6e5fb51140e1a8e66615da4857a973f8faec",
+      "title": "OpenAI pauses its \"most capable models\" after agents exploit loopholes and leak data",
+      "url": "https://the-decoder.com/openai-pauses-its-most-capable-models-after-agents-exploit-loopholes-and-leak-data",
+      "source": "rss:the-decoder",
+      "published_at": "2026-09-26T09:06:36Z",
+      "raw_summary": "OpenAI has shared new details from its ongoing AI safety investigation. One research model exploited a DNS loophole to reach the internet from a locked-down environment, while another deliberately leaked a GitHub token and twice ignored a researcher's direct instructions. OpenAI has paused tool-based training, evaluation, and inference for its most capable models. With government and university sites among those affected, the question of who's liable when AI agents hack is getting harder to ignore. The article OpenAI pauses its &quot;most capable models&quot; after agents exploit loopholes and leak data appeared first on The Decoder.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "OpenAI自家安全报告披露agent利用DNS绕过沙箱、主动泄露token等具体失能行为，是关于scaffolding安全的一手案例。",
+      "queued_at": "2026-09-26T09:45:06Z"
+    },
+    {
+      "id": "9cbb62557266fbcfa52d6682c10cf416dc466873",
+      "title": "谷歌TPU跑Kimi比英伟达GPU快57%！用的还是DeepSeek推理框架",
+      "url": "https://www.qbitai.com/2026/09/497425.html",
+      "source": "rss:qbitai",
+      "published_at": "2026-09-26T07:12:05Z",
+      "raw_summary": "",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "TPU+DeepSeek推理框架跑Kimi实测比NVIDIA GPU快57%，有具体数字与对比，对TPU替代路径是关键证据。",
+      "queued_at": "2026-09-26T09:45:06Z"
+    },
+    {
+      "id": "30ee2b15c50722324a32dbed7c144584abd1d844",
+      "title": "中美达成八点成果共识",
+      "url": "https://36kr.com/newsflashes/3999945207320711?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-09-26T07:54:40Z",
+      "raw_summary": "当地时间9月23日至25日，中国国家主席习近平对美国进行国事访问。其间，两国元首就中美建设性战略稳定关系及重大国际地区问题深入交换意见，达成八点成果共识，包括： 一、双方同意构建“基于尊重、公平、对等的中美建设性战略稳定关系”。 二、双方同意相互支持对方办好亚太经合组织（APEC）领导人非正式会议和二十国集团（G20）领导人峰会。两国元首有意出席对方主办的会议。 三、两国元首同意伊朗应履行不发展核武器的承诺，任何国家或机构都不得对国际水道征收通行费。 四、两国元首忆及中国和美国是二战盟友，并肩作战赢得战争胜利。 五、两国元首认可中美经贸磋商机制积极作用和双方经贸团队磋商成果，包括建立并推进贸易理事会等机制，达成“300亿美元”对等降税安排，延期吉隆坡经贸磋商成果等，并指示予以落实。 六、中美禁毒执法部门合作取得可视化成果。近期，双方密切合作，联合破获多起涉新精神活性物质及前体化学品案件，在两国抓获数十名相关犯罪嫌疑人。 七、双方同意建立中美人工智能对话，交流人工智能相关风险和惠益。下次对话将于今年11月举行。双方同意建立人工智能事件的沟通渠道。 八、美方欢迎中方租借给美国亚特兰大动物园的一对大熊猫抵美。 此外，中美两军还同意尽快签署加强危机沟通与预防的谅解备忘录，继续合作搜寻在华美军失踪人员遗骸。（央视新闻）",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "中美元首会晤八点共识中包含建立AI对话、300亿美元对等降税安排，对AI政策与算力贸易格局有实质影响。",
+      "queued_at": "2026-09-26T09:45:06Z"
+    },
+    {
+      "id": "0a76476a3a9b9ea0019969da301e6c730baef0fa",
+      "title": "英飞凌耗资14.4亿美元的泰国半导体工厂将于10月1日投产",
+      "url": "https://36kr.com/newsflashes/3999710616932226?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-09-26T05:23:50Z",
+      "raw_summary": "德国芯片厂商英飞凌科技将于10月1日正式启用泰国半导体工厂，项目投资超480亿泰铢（折合14.4亿美元），助力泰国打造更先进的本土芯片产业。 泰国投资委员会上周五晚间发布新闻稿称，本次投资涵盖功率模块制造、半导体测试以及一座研发中心。 这座泰国工厂将生产用于电动汽车、能源系统与数据中心的功率模块。 该项目预计雇佣超过5000名泰国本地员工。（财联社）",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "英飞凌14.4亿美元泰国功率模块厂10月投产，产能与选址对车规/数据中心功率半导体供应链有实质影响。",
+      "queued_at": "2026-09-26T09:45:06Z"
+    },
+    {
+      "id": "d9f992667662b42ef3c6b53c8c1d8e6f77414ff2",
+      "title": "笔记本跑7000亿参数GLM！无GPU也行? SSD当显存用火爆GitHub",
+      "url": "https://www.qbitai.com/2026/09/497624.html",
+      "source": "rss:qbitai",
+      "published_at": "2026-09-26T09:01:00Z",
+      "raw_summary": "GitHub现在最火热的大模型开源小蜂鸟Colibrì是个啥？",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "用SSD作显存跑700亿参数模型的工程实现思路，可直接对照GitHub复现，对低资源部署有参考价值。",
+      "queued_at": "2026-09-26T09:45:06Z"
+    },
+    {
+      "id": "6a725f1d75b238bfac689b57a9cf2cb234f97e8f",
+      "title": "OpenAI失控Agent还找DeepSeek、Kimi当外援！近百万条作案短链曝光",
+      "url": "https://www.qbitai.com/2026/09/497382.html",
+      "source": "rss:qbitai",
+      "published_at": "2026-09-26T07:04:15Z",
+      "raw_summary": "",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "OpenAI失控agent的近百万条短链与外部模型调用记录，是对scaffolding风险的具体实证材料。",
+      "queued_at": "2026-09-26T09:45:06Z"
+    },
+    {
+      "id": "d6c32d3dc6817b898692c32864d3bfbc325637ba",
+      "title": "A look at the wave of Google DeepMind researchers who have exited recently to launch their own AI startups focused on alternatives to LLMs (Bloomberg)",
+      "url": "https://www.techmeme.com/260926/p6#a260926p6",
+      "source": "rss:techmeme",
+      "published_at": "2026-09-26T06:30:01Z",
+      "raw_summary": "Bloomberg: A look at the wave of Google DeepMind researchers who have exited recently to launch their own AI startups focused on alternatives to LLMs&nbsp; &mdash;&nbsp; When a group of 15 Google DeepMind employees and alumni met for a breakfast this month in central London, the conversation quickly turned &hellip;",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "DeepMind 15人离职创办非LLM路线AI公司，是LLM范式分流的一手信号。",
+      "queued_at": "2026-09-26T09:45:06Z"
+    },
+    {
+      "id": "801aaffde01d95b8e31630deeea241602d32f5f7",
+      "title": "ggml-CPU: tiled mul_mat for k-quants by jbooth · Pull Request #27851 · ggml-org/llama.cpp",
+      "url": "https://www.reddit.com/r/localllama/comments/1wqj4zg/ggmlcpu_tiled_mul_mat_for_kquants_by_jbooth_pull",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-26T06:18:19Z",
+      "raw_summary": "faster CPU prompt processing: &quot;TL;DR: 3-7x faster CPU mul_mat using VNNI with IMO minimal complexity&quot; &#32; submitted by &#32; /u/jacek2023 [link] &#32; [comments]",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "ggml PR给出VNNI实现k-quants mul_mat 3-7x加速，有具体数字与代码改动，可直接验证。",
+      "queued_at": "2026-09-26T09:45:06Z"
+    },
+    {
+      "id": "b68e0245bb4f1898ed1aa84626cccd4552f43f06",
+      "title": "internlm/Intern-Decision 4B and 0.8B",
+      "url": "https://www.reddit.com/r/localllama/comments/1wqloas/internlminterndecision_4b_and_08b",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-26T08:54:52Z",
+      "raw_summary": "https://huggingface.co/internlm/Intern-Decision-0.8B Intern-Decision-4B Demo | Model Weights | GitHub Intern-Decision-4B is a multimodal structured decision model fine-tuned from Qwen3.5-4B. It accepts a shared state, a schema of named questions, and optional images, and returns an answer distribution for every question in one model forward pass. How inference works Preserve the question and option order, and map each question's options to single-token symbols A, B, …, Z, a, …, z, 0, …, 9. Render the original system prompt, state, decision schema, and a complete assistant JSON skeleton with one &lt;decision&gt; placeholder per field. Preserve the checkpoint's chat template and empty thinking block. Run one causal Hugging Face forward pass. For the masked-next-token decision objective, read logits at the position immediately before each placeholder. Take a softmax over only that field's allowed candidate-symbol logits, then apply the checkpoint's probability calibration. Map symbols back to the original option values and return typed JSON answers. This API performs structured candidate scoring. It does not call generate() or sample free-form text. A request can contain multiple fields; no gold answers are inserted into the prompt. The inference compiler uses only state, questions, and optional images. &#32; submitted by &#32; /u/jacek2023 [link] &#32; [comments]",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Intern-Decision 是基于 Qwen3.5-4B 的多模态结构化决策模型，单次前向返回所有问题的答案分布，有明确的模型卡和推理方法可追溯。",
+      "queued_at": "2026-09-26T09:45:06Z"
+    }
+  ],
   "digest_last_date": "2026-09-26"
 }
