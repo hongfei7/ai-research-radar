@@ -1,5 +1,5 @@
 {
-  "morning_last_date": "2026-09-26",
+  "morning_last_date": "2026-09-27",
   "weekly_last_slot": "2026-W38",
   "breaking_fingerprints": [
     {
@@ -261,44 +261,51 @@
     }
   ],
   "last_report": {
-    "date": "2026-09-26",
+    "date": "2026-09-27",
     "macro": {
-      "cycle": "扩张第三年向第四年过渡,头部AI实验室自建+长协算力规模继续向上突破,xAI Colossus 2年内GPU将扩至1.44M颗(E3),Anthropic 11个月内累计算力承诺超500亿美元(E2),推理需求侧仍未见顶;但阿里单季自由现金流转负、Oracle Stargate延期至2028年(E2),资金使用效率与物理交付节奏的裂口同步扩大,扩张斜率与可持续性首次同步进入定价视野。",
+      "cycle": "扩张第三年向第四年过渡,头部实验室长协算力继续向上突破,Anthropic与Apollo洽谈最高1GW数据中心容量(E8),叠加Anthropic 11个月内累计算力承诺超500亿美元、xAI Colossus 2两年内GPU将扩至1.44M颗(E3),推理需求侧仍未见顶;但阿里单季自由现金流转负、Oracle Stargate延期至2028年,资金使用效率与物理交付节奏的裂口同步扩大,扩张斜率与可持续性同步进入定价视野",
       "trajectory": {
         "past": "晶圆制程产能",
         "now": "HBM位元密度与先进封装",
         "next": "数据中心电力接入与机柜热密度",
-        "why_now": "xAI一次性锁定1.44M颗GB300(E3)将HBM3e/12e与CoWoS-L产能挤压显性化,Colossus 2单机柜功率密度逼近GB300液冷极限,电力接入审批与散热路径正取代GPU本身成为新增量交付的硬约束。",
-        "trigger": "若单机柜功率密度规模化突破130kW并实现批量交付,或北美新建园区电网接入排队成为主要延迟项,即视为下一阶段主约束被验证。"
+        "why_now": "xAI一次性锁定1.44M颗GB300(E3)将HBM3e/12e与CoWoS-L产能挤压显性化,Colossus 2单机柜功率密度逼近GB300液冷极限,电力接入审批与散热路径正取代GPU本身成为新增量交付的硬约束",
+        "trigger": "若单机柜功率密度规模化突破130kW并实现批量交付,或北美新建园区电网接入排队成为主要延迟项,即视为下一阶段主约束被验证"
       },
-      "shift": "宏观框架维持三段轨迹不变,now段因xAI百万级GB300与Anthropic 500亿算力承诺的双重锚定得到进一步加固,next段因阿里自由现金流转负与Stargate延期被边际强化,趋势观察中AI Agent安全审计需求被新增为下一期跟踪变量。",
+      "shift": "now段因Anthropic 1GW洽谈与xAI百万级GB300的双重锚定得到进一步加固,next段因阿里自由现金流转负与Stargate延期被边际强化,趋势观察中AI Agent安全审计需求被新增为下一期跟踪变量",
       "shift_kind": "adjust"
     },
     "calls": [
       {
-        "claim": "Anthropic正在系统性去集中化算力采购,Akamai拿下116亿美元长协对三大云厂定价权构成结构性侵蚀",
-        "falsifier": "若2026Q4 Akamai的Anthropic相关收入低于全年线性进度,或Anthropic在2027Q1与三大云任一家签署超过50亿美元的增量GPU长协,本判断的去集中化假设失效。",
+        "claim": "HBM与先进封装仍是本轮交付的物理硬约束,瓶颈正从CoWoS-S向CoWoS-L与HBM3e/12e迁移",
+        "falsifier": "若2026Q4台积电CoWoS-L月产能环比扩张超过25%且报价回落超过5%,或SK海力士12-Hi HBM3e TSV良率突破80%且HBM3e现货价回落超过10%,本判断的封装瓶颈假设失效",
+        "verify": "CoWoS报价与HBM3e 12-Hi产能"
+      },
+      {
+        "claim": "Anthropic系统性去集中化算力采购,Akamai 116亿美元长协对三大云厂定价权构成结构性侵蚀",
+        "falsifier": "若2026Q4 Akamai的Anthropic相关收入低于全年线性进度,或Anthropic在2027Q1与三大云任一家签署超过50亿美元的增量GPU长协,本判断的去集中化假设失效",
         "verify": "Akamai交付节奏跑赢合约进度"
       },
       {
         "claim": "电力与电力接入正取代电力设备本身,成为本轮AI基建最大单点物理瓶颈",
-        "falsifier": "若2026Q4前北美新增数据中心园区平均电网接入排队周期回落至18个月以内,或单机柜功率密度规模化交付被推迟至2027年下半年以后(说明密度上限低于当前路线图),本判断的电力瓶颈叙事失效。",
+        "falsifier": "若2026Q4前北美新增数据中心园区平均电网接入排队周期回落至18个月以内,或单机柜功率密度规模化交付被推迟至2027年下半年以后,本判断的电力瓶颈叙事失效",
         "verify": "Stargate延期与北美电网审批排队"
       },
       {
-        "claim": "司法通道打通后,Anthropic供应链风险定性对OpenAI与xAI存在示范效应,头部模型公司的地缘敞口定价重估",
-        "falsifier": "若2026Q4前OpenAI或xAI在类似诉讼中获得有利裁决,或Anthropic在2027Q1前获得新的对美军方合约,本判断的示范效应假设失效。",
-        "verify": "OpenAI/xAI同类型案例出现"
-      },
-      {
         "claim": "Meta Muse验证端侧CPU推理路径,头部厂商首次在规模化Agent上明确走非GPU路线",
-        "falsifier": "若2026Q4 Muse在独立第三方留存与响应时延测试中显著落后于ChatGPT/Anthropic方案,或Meta在2027Q1前撤回CPU-only架构转回GPU推理,本判断的端侧CPU路径假设失效。",
+        "falsifier": "若2026Q4 Muse在独立第三方留存与响应时延测试中显著落后于ChatGPT/Anthropic方案,或Meta在2027Q1前撤回CPU-only架构转回GPU推理,本判断的端侧CPU路径假设失效",
         "verify": "Muse留存与时延数据被独立验证"
       }
     ]
   },
   "morning_fallback": null,
   "blindspot_ledger": [
+    {
+      "key": "AMD|ASML|Anthropic|Intel|Marvell|Meta|博通|美光|苹果|超微电脑",
+      "text": "coverage_audit显示结构性覆盖存在显著缺口:AMD自有披露已26天空窗、近30天114条相关信息几乎全部来自二手转述,博通24天空窗、36条相关信息无一手披露,Marvell 29天空窗、16条信息无一手,超微电脑26天空窗、仅12条信息且无一手。Meta、苹果、美光、Intel、ASML虽标为structural,但美光自有披露已31天空窗、苹果与Intel回看期内从未拿到自有披露(其capacity、iPhone SoC路线图、Intel 18A/14A节点进度全部依赖二手)。本期多家公司的真实产能指引与库存信号实际上处于黑箱状态,DSec对国产芯片适配情况(E4)以及Anthropic 1GW落地的电力构成(E8)同样缺乏直接披露。",
+      "first_seen": "2026-09-27",
+      "last_seen": "2026-09-27",
+      "times_seen": 1
+    },
     {
       "key": "AMD|ASML|Marvell|博通|台积电",
       "text": "结构性覆盖的盲区集中在算力供给端两侧。台积电与ASML近30天分别有35条信息进入本库,但全部为二手转述,无一条来自其自有披露,对其制程与封装产能的判断只能依赖客户外推与供应链侧消息;Marvell近30天仅16条提及且同样缺乏一手披露,其在定制ASIC与光互连环节的真实订单可见度低于本报告所暗示的精度;博通、AMD自有披露已分别陈旧23天与25天,关于GB300/Rubin Ultra配套的定制硅片放量节奏需在下次业绩窗口前以二手数据外推,这一段不确定性显著高于卖方共识。",
@@ -374,13 +381,6 @@
       "text": "coverage_audit显示台积电近30天有大量条目进入本库，但level为structural、days_since_own_disclosure为null，意味着全部为二手转述，无一条来自其自有披露；苹果、Meta、Intel、ASML、ARM同为structural级别，本期所有对其产能与路线图的判断均依赖同业外推与媒体报道。微软、美光、Marvell、超微电脑level为thin，最后一次自有披露距今14至21天，本期亦无新信号。HBM三巨头SK海力士、三星、美光近30天分别有约18至115条提及，但本期除E12三星HBM4双轨制程外，海力士与美光均无独立催化；AMD虽在E13 3D DRAM中被反复提及，但同样缺独立一手披露。Anthropic近30天仅9条提及且无一手通道，E14新加坡设点信息来自二手转述。盲区集中在两个层面：训练侧capex的官方口径与HBM供给侧的真实位元出货量，目前都无法在本库一手核验",
       "first_seen": "2026-09-16",
       "last_seen": "2026-09-16",
-      "times_seen": 1
-    },
-    {
-      "key": "AMD|ARM|ASML|Intel|Marvell|Meta|戴尔|美光|苹果",
-      "text": "本库对几大核心标的长期依赖二手转述: 苹果近 30 天有 109 条相关信息, 但全部来自 sec_edgar 以外, 无一手 IR; Meta 72 条、ASML 34 条、ARM 17 条同样结构性缺位; Intel 52 条覆盖但 days_since_own_disclosure 为空; AMD 124 条中最近自有披露已 14 天, Marvell 29 条中 18 天未更新, 美光 115 条中 20 天, 超微 23 条中 15 天。意味着对 Rubin 出货指引、CoWoS 实际报价、MI400 客户结构、SMCI 与戴尔 AI 服务器订单的最新判断, 全部处于二手外推区间, 财报窗口前的方向性下注风险高于表观。",
-      "first_seen": "2026-09-15",
-      "last_seen": "2026-09-15",
       "times_seen": 1
     }
   ]
