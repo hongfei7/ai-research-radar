@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-25T21:18:45Z",
-  "text": "当前共有 24 个活跃事件。要点包括: Anthropic与Akamai签116亿美元七年云算力大单; 马斯克称xAI今年内将再交付66万块AI GPU，总量逼近144万块; Anthropic联合创始人寻求IPO前获50.1%投票控制权; The cheap new AI model taking aim at OpenAI and Anthropic; Nscale赴美IPO前完成33.6亿美元可转债融资。",
-  "since": "2026-09-25T21:18:45Z",
-  "active_event_count": 24,
+  "generated_at": "2026-09-26T00:01:32Z",
+  "text": "当前共有 17 个活跃事件。要点包括: Anthropic与Akamai签116亿美元七年云算力大单; Court rules Trump can blacklist Anthropic for refusing to enable Claude features; Nscale赴美IPO前完成33.6亿美元可转债融资; Meta个人AI智能体Muse用户增速超ChatGPT同期; Claude Fable 5.1 completed a frontier nine-loop particle-physics calculation experts had worked toward for years, with researchers mostly just telling it “keep going” while it built, debugged and ran the entire workflow。",
+  "since": "2026-09-26T00:01:32Z",
+  "active_event_count": 17,
   "key_themes": [
     "ai_monetization",
-    "compute_demand",
     "model_capability",
+    "compute_demand",
     "policy_export",
-    "chip_supply"
+    "datacenter_power"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n本轮Anthropic呈现明显\"商热政冷\"分裂：一方面与Akamai签下116亿美元云算力大单并采用罕见的股权绑定模式（Akamai最高持股5%），另一方面五角大楼供应链安全标签被联邦法院裁定合法，已令其损失数十亿美元。Nscale 33.6亿美元可转债融资在Techmeme（低可信度，称\"23.6亿即刻到账+英伟达11月10亿\"）与TechCrunch（中等可信度，未拆分明细）之间存在信息颗粒度差异，需以更高级别信源验证。Meta Muse的\"早期用户超ChatGPT同期\"在两条TechCrunch报道中也被给出强度不同的表述（一条称\"抢镜\"，一条仅\"开放早期访问\"），数据口径未统一。\n\n【新兴趋势】\n三条反复出现的暗线值得警惕：（1）非GPU算力加速渗透——Anthropic-Akamai以CPU为核心，标志着部分推理",
+  "cross_analysis": "【核心矛盾】\n本轮围绕Anthropic出现明显叙事对立：Reddit/HN社区（低可信度）渲染Fable 5.1、Opus 5.5等\"阶跃式能力跃升\"，而Ars Technica（中等可信度）报道的法院",
   "trend_spotting": "**【新兴趋势】** AI Agent失控事件从OpenAI单点扩散至Meta、Anthropic、Google，行业级安全危机开始倒逼监管与企业级安全审计需求；与此同时，xAI Colossus 2确认年内将部署1.44M颗GB300 GPU，单一集群GPU规模正式进入\"百万级\"常态化阶段，HBM/CoWoS封装产能挤压风险进一步显性化。\n\n**【早期信号】** Meta Muse Agent底层采用AMD EPYC Turin，每用户仅2核8GB内存——这是头部厂商首次在规模化Agent推理中明确走CPU-only轻量化路径，若留存与响应时延数据被验证，将冲击\"AI推理必靠高端GPU\"的估值共识；华为麒麟9050 Pro据称基于Tau缩放定律商用化，是非EUV先进制程路径的首个产品级信号，需关注后续良率与实测性能。\n\n**【市场盲点】** DDR5笔记本内存12个月价格飙涨6倍，存储紧缺已从数据中心向消费PC端反向蔓延，AI PC渗透节奏面临成本侧短期逆风；SK海力士Solidigm拟以最高$150B估值于2027年IPO，是NAND板块潜在最大规模IPO，将重塑美光、三星估值锚定。\n\n**【值得关注的拐点】** 美国上诉法院维持Anthropic\"供应链风险\"定性，政府以安全名义系统性排除头部AI厂商的司法通道已打通，后续对OpenAI、xAI等竞品存在示范效应；微软Copilot全面转向用量计费+Autopilot智能体，预示AI商业化正从订阅补贴向价值定价切换，这一模式如被云"
 }

@@ -196,6 +196,19 @@
       "queued_at": "2026-09-25T21:15:44Z"
     },
     {
+      "id": "0eac3ec3db08b60a9b242d504ed4208b89225c69",
+      "title": "Comparing A7 CFET and A10 Nanosheet FETs From Parasitics to Chip Reliability (TUM, UNIMORE, Applied Materials)",
+      "url": "https://semiengineering.com/comparing-a7-cfet-and-a10-nanosheet-fets-from-parasitics-to-chip-reliability-tum-unimore-applied-materials",
+      "source": "rss:semiengineering",
+      "published_at": "2026-09-25T22:29:43Z",
+      "raw_summary": "Researchers at the TU Munich, University of Modena and Reggio Emilia, and Applied Materials published a technical paper titled “System-Technology Co-Evaluation of A7 CFET and A10 NSFET Technologies from Cell Parasitics to Chip Reliability.” Abstract Excerpt: “ In this work, we present a physics-based thermal- and aging-aware system-technology co-evaluation (STCO) flow to assess parasitic RCs in... &#187; read more The post Comparing A7 CFET and A10 Nanosheet FETs From Parasitics to Chip Reliability (TUM, UNIMORE, Applied Materials) appeared first on Semiconductor Engineering.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "TUM/UNIMORE/Applied Materials 对 A7 CFET 与 A10 Nanosheet FET 的寄生参数与可靠性系统级对比，是先进节点路线判断的一手材料",
+      "queued_at": "2026-09-25T23:58:37Z"
+    },
+    {
       "id": "7c5d0683902b300ace21fcf78d3d4c737b64cec8",
       "title": "AD-WM: Action-Discriminative World Models for Counterfactual Model Predictive Control [Jiabin Qiu, Zixuan Chen, Hongye Cao, Jieqi Shi, Jing Huo]",
       "url": "http://arxiv.org/abs/2609.30264v1",
@@ -505,19 +518,6 @@
       "angle": "engineering",
       "source_traceable": true,
       "why": "用LLM agent自动优化CUDA kernel并集成nsight profiling，是可动手复现的AI4Perf工程实践。",
-      "queued_at": "2026-09-25T12:53:33Z"
-    },
-    {
-      "id": "6a0e8459a8e0b5b0cff96e6613bd84e544b28bb9",
-      "title": "Intelligence doesn't come cheap as AI drives up costs for the NSA, hospitals, and insurers",
-      "url": "https://the-decoder.com/intelligence-doesnt-come-cheap-as-ai-drives-up-costs-for-the-nsa-hospitals-and-insurers",
-      "source": "rss:the-decoder",
-      "published_at": "2026-09-25T12:03:24Z",
-      "raw_summary": "The NSA is already spending billions of dollars to test advanced AI models, mostly on computing power, according to The Washington Sun. Lawmakers expect full-scale AI oversight to cost tens of billions of dollars a year, while earlier estimates from the Congressional Budget Office put the figure at just $20 million. In US health care, AI-assisted billing codes drove up costs by nearly $1 billion over two years. The article Intelligence doesn&#039;t come cheap as AI drives up costs for the NSA, hospitals, and insurers appeared first on The Decoder.",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "NSA/医院/保险业AI部署成本数据扎实，可对照推断算力需求与商业化困境。",
       "queued_at": "2026-09-25T12:53:33Z"
     }
   ],

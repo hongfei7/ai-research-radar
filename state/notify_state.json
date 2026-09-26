@@ -1,58 +1,7 @@
 {
-  "morning_last_date": "2026-09-25",
+  "morning_last_date": "2026-09-26",
   "weekly_last_slot": "2026-W38",
   "breaking_fingerprints": [
-    {
-      "tickers": [
-        "Anthropic"
-      ],
-      "features": [
-        "11.6b",
-        "after",
-        "akam",
-        "akamai",
-        "an",
-        "and",
-        "anthropic",
-        "cloud",
-        "commits",
-        "harshita",
-        "hours",
-        "jumps",
-        "mary",
-        "of",
-        "on",
-        "option",
-        "over",
-        "reuters",
-        "secures",
-        "services",
-        "seven",
-        "spending",
-        "stake",
-        "take",
-        "to",
-        "up",
-        "varghese",
-        "years"
-      ],
-      "sent_at": "2026-09-24T23:32:18Z"
-    },
-    {
-      "tickers": [
-        "Anthropic"
-      ],
-      "features": [
-        "claude",
-        "its",
-        "opus",
-        "score",
-        "simplebench",
-        "tops",
-        "with"
-      ],
-      "sent_at": "2026-09-24T23:32:30Z"
-    },
     {
       "tickers": [
         "Anthropic",
@@ -215,47 +164,139 @@
         "within"
       ],
       "sent_at": "2026-09-25T12:59:03Z"
+    },
+    {
+      "tickers": [
+        "Anthropic"
+      ],
+      "features": [
+        "anthropic",
+        "blacklist",
+        "can",
+        "claude",
+        "court",
+        "enable",
+        "features",
+        "for",
+        "refusing",
+        "rules",
+        "to",
+        "trump"
+      ],
+      "sent_at": "2026-09-26T00:01:55Z"
+    },
+    {
+      "tickers": [
+        "OpenAI"
+      ],
+      "features": [
+        "26.1k",
+        "able",
+        "ago",
+        "arc-agi-3",
+        "asked",
+        "at",
+        "back",
+        "but",
+        "comment",
+        "commenter",
+        "cost",
+        "could",
+        "even",
+        "finally",
+        "follow",
+        "fun",
+        "get",
+        "getting",
+        "got",
+        "gpt-6-astra-max",
+        "harness",
+        "high",
+        "if",
+        "is",
+        "march",
+        "model",
+        "months",
+        "no",
+        "of",
+        "on",
+        "remindme",
+        "see",
+        "six",
+        "still",
+        "the",
+        "this",
+        "to",
+        "up",
+        "was",
+        "we",
+        "well",
+        "year"
+      ],
+      "sent_at": "2026-09-26T00:02:12Z"
+    },
+    {
+      "tickers": [
+        "Anthropic"
+      ],
+      "features": [
+        "another",
+        "ask",
+        "change",
+        "hn",
+        "is",
+        "opus",
+        "step"
+      ],
+      "sent_at": "2026-09-26T00:02:37Z"
     }
   ],
   "last_report": {
-    "date": "2026-09-25",
+    "date": "2026-09-26",
     "macro": {
-      "cycle": "扩张第三年向第四年过渡,头部五家超大规模云厂截至2029年累计资本开支预计4.2万亿美元、年化1万亿美元量级,较上期口径再上一台阶(E14);但同周Oracle Stargate项目因不可抗力延期至2028年、阿里单季自由现金流转负(E2),说明绝对投入仍在创新高的同时,资金使用效率与物理交付节奏已出现可观测的裂口。",
+      "cycle": "扩张第三年向第四年过渡,头部AI实验室自建+长协算力规模继续向上突破,xAI Colossus 2年内GPU将扩至1.44M颗(E3),Anthropic 11个月内累计算力承诺超500亿美元(E2),推理需求侧仍未见顶;但阿里单季自由现金流转负、Oracle Stargate延期至2028年(E2),资金使用效率与物理交付节奏的裂口同步扩大,扩张斜率与可持续性首次同步进入定价视野。",
       "trajectory": {
         "past": "晶圆制程产能",
         "now": "HBM位元密度与先进封装",
         "next": "数据中心电力接入与机柜热密度",
-        "why_now": "三大原厂HBM4/4E扩产被TSV与CoWoS双重锁定18到24个月,单卡HBM容量正取代晶体管数成为单token推理TCO的首要变量(E14算力支出强度为这一变量提供下游验证)。",
-        "trigger": "若单机柜功率密度普遍突破130kW实现批量化交付,或北美新建园区电力接入审批成为项目主要延迟项(E2与E14均把电力/资金转化为交付瓶颈)。"
+        "why_now": "xAI一次性锁定1.44M颗GB300(E3)将HBM3e/12e与CoWoS-L产能挤压显性化,Colossus 2单机柜功率密度逼近GB300液冷极限,电力接入审批与散热路径正取代GPU本身成为新增量交付的硬约束。",
+        "trigger": "若单机柜功率密度规模化突破130kW并实现批量交付,或北美新建园区电网接入排队成为主要延迟项,即视为下一阶段主约束被验证。"
       },
-      "shift": "维持三段框架不变;now段因阿里六年四倍算力与五巨头4.2万亿capex的叠加得到进一步加固,next段因自由现金流转负与发债融资占比上升而边际增强,trajectory整体不作迁移。",
-      "shift_kind": "hold"
+      "shift": "宏观框架维持三段轨迹不变,now段因xAI百万级GB300与Anthropic 500亿算力承诺的双重锚定得到进一步加固,next段因阿里自由现金流转负与Stargate延期被边际强化,趋势观察中AI Agent安全审计需求被新增为下一期跟踪变量。",
+      "shift_kind": "adjust"
     },
     "calls": [
       {
-        "claim": "推理经济性的杰文斯拐点已由单家实验扩散为行业共识,token消耗增速将持续跑赢单价降幅",
-        "falsifier": "若2026Q4全球API token消耗同比增速低于30%,或OpenAI/Anthropic任一家在2027Q1将主力模型再次降价超过30%而未伴随显著调用量增长,杰文斯假设失效;反之若Q4 token消耗同比维持50%以上且Opus 5.5在SWE-bench类agent基准上未被GPT-6 Sol反超,本判断进入已验证区间。",
-        "verify": "Q4 token消耗同比维持50%以上"
+        "claim": "Anthropic正在系统性去集中化算力采购,Akamai拿下116亿美元长协对三大云厂定价权构成结构性侵蚀",
+        "falsifier": "若2026Q4 Akamai的Anthropic相关收入低于全年线性进度,或Anthropic在2027Q1与三大云任一家签署超过50亿美元的增量GPU长协,本判断的去集中化假设失效。",
+        "verify": "Akamai交付节奏跑赢合约进度"
       },
       {
         "claim": "电力与电力接入正取代电力设备本身,成为本轮AI基建最大单点物理瓶颈",
-        "falsifier": "若2026Q4前北美新增数据中心园区平均电网接入排队周期回落至18个月以内,或单机柜功率密度规模化交付被推迟至2027年下半年以后(说明密度上限低于当前路线图),电力瓶颈叙事失效;反之若2027Q1前再有头部项目因电力原因延期,则本判断进入已验证区间。",
-        "verify": "Stargate延期与NJ燃气发电罚款触发监管收紧"
+        "falsifier": "若2026Q4前北美新增数据中心园区平均电网接入排队周期回落至18个月以内,或单机柜功率密度规模化交付被推迟至2027年下半年以后(说明密度上限低于当前路线图),本判断的电力瓶颈叙事失效。",
+        "verify": "Stargate延期与北美电网审批排队"
       },
       {
-        "claim": "Anthropic以Opus 5.5的真降价与agent/coding垂直能力,在高价值工作流上对OpenAI形成份额压力,溢价定价权来自能力而非品牌",
-        "falsifier": "若Anthropic在2026Q4的token消耗份额相对OpenAI继续下滑,或Opus 5.5在SWE-bench Verified类agent基准上被GPT-6 Sol反超,本判断的高价值工作流份额扩张假设需下调;反之若ARR增速跑赢且5%股权认购权被行权,本判断进入已验证区间。",
-        "verify": "Anthropic 2026Q4 ARR增速跑赢OpenAI"
+        "claim": "司法通道打通后,Anthropic供应链风险定性对OpenAI与xAI存在示范效应,头部模型公司的地缘敞口定价重估",
+        "falsifier": "若2026Q4前OpenAI或xAI在类似诉讼中获得有利裁决,或Anthropic在2027Q1前获得新的对美军方合约,本判断的示范效应假设失效。",
+        "verify": "OpenAI/xAI同类型案例出现"
       },
       {
-        "claim": "国产替代首次具备可量化的产能与采购双锚点,平头哥V900与Qwen扩参构成自循环闭环",
-        "falsifier": "若V900在2026Q4前未公开任何独立benchmark或非阿里内部客户案例,或5至10万亿参数训练计划在2027年中前未启动预训练,本判断的国产替代加速假设失效;反之若V900在阿里内部推理流量中跑通≥10%负载且Qwen 5万亿版本开启预训练,本判断进入已验证区间。",
-        "verify": "V900在阿里内部推理流量中跑通≥10%负载"
+        "claim": "Meta Muse验证端侧CPU推理路径,头部厂商首次在规模化Agent上明确走非GPU路线",
+        "falsifier": "若2026Q4 Muse在独立第三方留存与响应时延测试中显著落后于ChatGPT/Anthropic方案,或Meta在2027Q1前撤回CPU-only架构转回GPU推理,本判断的端侧CPU路径假设失效。",
+        "verify": "Muse留存与时延数据被独立验证"
       }
     ]
   },
   "morning_fallback": null,
   "blindspot_ledger": [
+    {
+      "key": "AMD|ASML|Marvell|博通|台积电",
+      "text": "结构性覆盖的盲区集中在算力供给端两侧。台积电与ASML近30天分别有35条信息进入本库,但全部为二手转述,无一条来自其自有披露,对其制程与封装产能的判断只能依赖客户外推与供应链侧消息;Marvell近30天仅16条提及且同样缺乏一手披露,其在定制ASIC与光互连环节的真实订单可见度低于本报告所暗示的精度;博通、AMD自有披露已分别陈旧23天与25天,关于GB300/Rubin Ultra配套的定制硅片放量节奏需在下次业绩窗口前以二手数据外推,这一段不确定性显著高于卖方共识。",
+      "first_seen": "2026-09-26",
+      "last_seen": "2026-09-26",
+      "times_seen": 1
+    },
     {
       "key": "ASML|台积电|美光",
       "text": "覆盖盲区集中在半导体设备与代工链。台积电近30天有35条相关信息进入本库,几乎全部为二手转述与同业外推,无一条来自其自有披露;ASML同期35条,自有披露同样缺位(E12属高管口径,非财报披露),本库对其2026年欧洲零销售的判断完全依赖单一新闻来源;美光30天有92条提及但已29天未见自有披露,对其HBM4/4E产能与定价节奏的判断只能借助二线来源外推。结构上,本周模型层与算力需求侧的素材密度极高,设备与封测侧反而是被二手叙事定义的环节,任何一手的coWoS产能或HBM位元出货数据出现,都可能在边际上重写now段的紧缺度判断。",
@@ -331,13 +372,6 @@
       "text": "本库对几大核心标的长期依赖二手转述: 苹果近 30 天有 109 条相关信息, 但全部来自 sec_edgar 以外, 无一手 IR; Meta 72 条、ASML 34 条、ARM 17 条同样结构性缺位; Intel 52 条覆盖但 days_since_own_disclosure 为空; AMD 124 条中最近自有披露已 14 天, Marvell 29 条中 18 天未更新, 美光 115 条中 20 天, 超微 23 条中 15 天。意味着对 Rubin 出货指引、CoWoS 实际报价、MI400 客户结构、SMCI 与戴尔 AI 服务器订单的最新判断, 全部处于二手外推区间, 财报窗口前的方向性下注风险高于表观。",
       "first_seen": "2026-09-15",
       "last_seen": "2026-09-15",
-      "times_seen": 1
-    },
-    {
-      "key": "ARM|ASML|Intel|Marvell|Meta|台积电|美光|苹果",
-      "text": "覆盖审计显示,苹果近30天有100条相关信息进入本库但无一条来自其自有披露,Meta有74条同样依赖二手转述,Intel有55条且一手披露通道空缺,ASML有34条、ARM有17条均无直连产出。苹果折叠机、Beats游戏手柄这类72小时级别的高拐点信号目前全部来自二手供应链传闻,缺乏库克或硬件工程团队口径的交叉验证;美光自有披露已19天空缺,Marvell已17天空缺,本判断对HBM4价格曲线、定制ASIC出货节奏的置信区间需相应收窄。台积电虽未单独列出,但凡涉及CoWoS-L产能与良率的判断,本库同样缺乏其自有披露作为锚点,均为外推。",
-      "first_seen": "2026-09-14",
-      "last_seen": "2026-09-14",
       "times_seen": 1
     }
   ]
