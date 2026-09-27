@@ -155,6 +155,45 @@
       "source_traceable": true,
       "why": "中国政府对阿里/字节采购Nvidia RTX Pro 5500的审批动向，一手信源明确，对中国AI算力供应链判断有价值。",
       "queued_at": "2026-09-27T17:14:24Z"
+    },
+    {
+      "id": "aed7dd076da1bf0eaad9b19989734710a5dcec4d",
+      "title": "Qwen3.8-Flash-Next 177B NVFP4(119GiB): SSD streaming at 9-10 tok/s on one 16 GB RTX 5060 Ti + 32 GB RAM",
+      "url": "https://www.reddit.com/r/localllama/comments/1wrxap8/qwen38flashnext_177b_nvfp4119gib_ssd_streaming_at",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-27T22:13:42Z",
+      "raw_summary": "We built an inference engine for MoE models that don't fit in VRAM + RAM. Most of the model stays on the SSD, and experts are read as tokens need them. This started as a proof of concept, and poc worked, we are getting 9-10 tok/s decode on Qwen3.8-Flash-Next NVFP4 (9.06 on the benchmark turn, 10.4 on the best turn). This is just the start. With better SSD streaming, we expect v2 to reach ~14-15 tok/s decode. Model: Qwen3.8-Flash-Next, 176.9B params, NVFP4 GGUF (119 GiB): https://huggingface.co/CompiledThoughts/Qwen3.8-Flash-Next-NVFP4-Q8_0 Machine: RTX 5060 Ti 16 GB, Ryzen 7 9700X, 32 GB DDR5, Gen5 NVMe SSD 1Tb, Windows 11 Where the 119 GiB lives part of the file size where dense weights (attention, shared experts, LM head) 4.4 GiB VRAM token embedding table 0.6 GiB RAM, one row read per token hottest routed experts 8.8 GiB VRAM next-hottest routed experts 6.0 GiB pinned RAM remaining routed experts 48.5 GiB SSD, streamed on demand n-gram table 50.7 GiB SSD, 16 rows read per token So 20 GiB is in memory and 99 GiB stays on the SSD: 48.5 GiB of routed experts, streamed as the router picks them, and the 50.7 GiB hashed n-gram table (looking forward to qwen4 ngram). Speed Decode: 9.06 tok/s on the benchmark turn, 10.4 on the best turn at xhigh effort Prefill: 49.2 tok/s on a 5.5k-token prompt llama.cpp on the same machine: 4.9 tok/s average decode How it works VRAM holds the dense weights and the hottest experts (GCLOCK eviction), pinned RAM the next tier (read over PCIe), and t",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "自研推理引擎在16GB VRAM+SSD流式加载177B MoE模型达9-10 tok/s，对消费级硬件跑大模型有显著工程参考价值。",
+      "queued_at": "2026-09-27T23:06:11Z"
+    },
+    {
+      "id": "61b300717b9c6b80f5e29fec47130f185e2edfb5",
+      "title": "Qwen3.8-Flash-Next (125B) at 12-15 tok/s on a 2021 32GB M1 Max",
+      "url": "https://www.reddit.com/r/localllama/comments/1wrqql8/qwen38flashnext_125b_at_1215_toks_on_a_2021_32gb",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-27T17:53:08Z",
+      "raw_summary": "Hi! I'm the author of MoEspresso, which is my way of putting my own ideas about inference engines to the test. A lot of the fun has been trying different design choices, measuring what happens, and finding that several of them work well together. MoEspresso 3 runs Qwen3.8-Flash-Next on a 2021 M1 Max with 32 GB of unified memory at 12-15 decode tokens per second - provided there are no other memory hungry applications running in the background (such as browsers). During decode, experts which are already resident in memory receive a bias, but the two strongest experts according to the model are always chosen (with the default settings). I wrote about this here https://github.com/steadfastgaze/MoEspresso/blob/main/docs/cache_prior.md - I first started thinking about this after reading about Apple's AFM 3 and the instruction-following pruning work behind it (https://arxiv.org/html/2501.02086v3#abstract), but then I found this other paper (https://arxiv.org/html/2412.00099v2) which spoke about Cache-Prior. Prefill is unbiased. Even with this bias enabled by default, Qwen 3.8 Next scored ahead of Opus 4.8 xhigh and many other strong hosted solutions. Reproducible 48-question setup -&gt; https://github.com/steadfastgaze/MoEspresso/tree/main/docs/benchmark_reproduction. Overall scores (%) across six categories, including coding, data analysis and math: Model Score Qwen3.8 Flash (hosted), medium 89.7 GPT-6 Sol, medium 89.2 Claude Opus 5.5, medium 86.4 GPT-6 Sol, low 85.0 Qwen3.8 Flash",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "MoEspresso引擎在M1 Max 32GB上跑Qwen3.8-Flash-Next 125B达12-15 tok/s，自研专家偏置缓存策略，有架构创新。",
+      "queued_at": "2026-09-27T23:06:11Z"
+    },
+    {
+      "id": "0099b4eb9b00147f9915477e77dc6c4b2c4b2475",
+      "title": "Adding logit penalty for \"wait\", \"maybe\" and \"perhaps\" to Qwen models improves their accuracy",
+      "url": "https://www.reddit.com/r/localllama/comments/1wromzr/adding_logit_penalty_for_wait_maybe_and_perhaps",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-27T16:29:34Z",
+      "raw_summary": "Meta came out with a banger paper https://arxiv.org/pdf/2606.00206, but it did not look at various quantizations supported in llama.cpp. So I did a run on 50 random MATH-500 questions (https://huggingface.co/datasets/HuggingFaceH4/MATH-500) and ran it on various quantizations of https://huggingface.co/bartowski/Qwen_Qwen3.5-4B-GGUF and tried --logit-bias 466-2 --logit-bias 694-2 --logit-bias 1362-2 \\ --logit-bias 1412-2 --logit-bias 1921-2 --logit-bias 1990-2 \\ --logit-bias 2086-2 --logit-bias 2361-2 --logit-bias 2441-2 \\ --logit-bias 2493-2 --logit-bias 2892-2 --logit-bias 3222-2 \\ --logit-bias 3315-2 --logit-bias 3384-2 --logit-bias 3404-2 \\ --logit-bias 3482-2 --logit-bias 3655-2 --logit-bias 4213-2 \\ --logit-bias 4370-2 --logit-bias 4598-2 --logit-bias 4611-2 \\ --logit-bias 4808-2 --logit-bias 5752-2 --logit-bias 6970-2 \\ --logit-bias 7014-2 --logit-bias 7643-2 --logit-bias 8106-2 \\ --logit-bias 10179-2 --logit-bias 10451-2 --logit-bias 11746-2 \\ --logit-bias 13264-2 --logit-bias 13428-2 --logit-bias 14673-2 \\ --logit-bias 15029-2 --logit-bias 16036-2 --logit-bias 21143-2 \\ --logit-bias 21979-2 --logit-bias 33955-2 --logit-bias 35999-2 \\ --logit-bias 36563-2 --logit-bias 37201-2 --logit-bias 37781-2 \\ --logit-bias 41484-2 --logit-bias 62586-2 --logit-bias 66073-2 \\ --logit-bias 73071-2 --logit-bias 84485-2 --logit-bias 85152-2 \\ --logit-bias 95500-2 these correspond to the paper's overthinking markers: [ &quot; perhaps&quot;, &quot; maybe&quot;, &quot; wait&quot;, &quot; ",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "在Qwen模型上对犹豫词加logit偏置提升MATH-500准确率的可复现实验，有具体token id和量化对比，工程价值高。",
+      "queued_at": "2026-09-27T23:06:11Z"
     }
   ],
   "digest_last_date": "2026-09-27"
