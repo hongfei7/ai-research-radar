@@ -1,36 +1,7 @@
 {
   "morning_last_date": "2026-09-27",
-  "weekly_last_slot": "2026-W38",
+  "weekly_last_slot": "2026-W39",
   "breaking_fingerprints": [
-    {
-      "tickers": [
-        "DeepSeek",
-        "英伟达",
-        "谷歌"
-      ],
-      "features": [
-        "deepseek",
-        "gpu",
-        "kimi",
-        "tpu",
-        "伟达",
-        "快用",
-        "推理",
-        "是推",
-        "框架",
-        "歌跑",
-        "比英",
-        "理框",
-        "用的",
-        "的还",
-        "英伟",
-        "谷歌",
-        "跑比",
-        "达快",
-        "还是"
-      ],
-      "sent_at": "2026-09-26T09:48:02Z"
-    },
     {
       "tickers": [
         "OpenAI"
@@ -109,6 +80,53 @@
         "起相"
       ],
       "sent_at": "2026-09-27T06:41:43Z"
+    },
+    {
+      "tickers": [
+        "Meta",
+        "亚马逊",
+        "微软"
+      ],
+      "features": [
+        "ai",
+        "big",
+        "by",
+        "dwarfing",
+        "estimates",
+        "expects",
+        "goldman",
+        "infrastructure",
+        "on",
+        "sachs",
+        "spend",
+        "street",
+        "tech",
+        "to",
+        "trillion",
+        "wall"
+      ],
+      "sent_at": "2026-09-27T12:35:43Z"
+    },
+    {
+      "tickers": [
+        "英伟达"
+      ],
+      "features": [
+        "schmid",
+        "伟达",
+        "国布",
+        "基板",
+        "局玻",
+        "布局",
+        "德国",
+        "手德",
+        "携手",
+        "玻璃",
+        "璃基",
+        "英伟",
+        "达携"
+      ],
+      "sent_at": "2026-09-27T12:36:03Z"
     }
   ],
   "last_report": {
