@@ -116,6 +116,45 @@
       "source_traceable": true,
       "why": "高盛$1.2T AI基建投资预测，有具体数字和电力/劳动力/内存瓶颈分析，对理解算力供需曲线有用。",
       "queued_at": "2026-09-27T12:30:11Z"
+    },
+    {
+      "id": "26b4356d7150af44048423943d5b9696c3ca6e9d",
+      "title": "AI agents do more of the work in model development, but humans still make the decisions",
+      "url": "https://the-decoder.com/ai-agents-do-more-of-the-work-in-model-development-but-humans-still-make-the-decisions",
+      "source": "rss:the-decoder",
+      "published_at": "2026-09-27T15:18:39Z",
+      "raw_summary": "A research team analyzed 769 task logs from building its own AI model. AI agents supplied up to 55 percent of method proposals, but humans made more than 85 percent of final decisions. A third of the tasks wouldn't have been attempted without AI. The authors warn that more agent activity doesn't mean more autonomy. The article AI agents do more of the work in model development, but humans still make the decisions appeared first on The Decoder.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "对769条模型开发任务日志的实证研究，量化了AI agent参与度(55%)与人类决策权(85%)的边界，对agent自主性讨论有第一手数据支撑。",
+      "queued_at": "2026-09-27T17:14:24Z"
+    },
+    {
+      "id": "4576f3b45ecfc49d7a9c51fa7fa66bfdabba0db6",
+      "title": "Google Rewrites Critical C Dependencies to Rust Using AI and Differential Fuzzing",
+      "url": "https://www.infoq.com/news/2026/09/c-rust-rewrite",
+      "source": "rss:infoq",
+      "published_at": "2026-09-27T14:14:00Z",
+      "raw_summary": "Google's security team developed a method to replace legacy C code in the giflib image-processing library with Rust, targeting inherent memory vulnerabilities. They utilised an automated migration process, ensuring compatibility and zero-day vulnerability mitigation. The project successfully maintained runtime performance while demonstrating that AI translations require ongoing human oversight. By Olimpiu Pop",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "Google用AI+differential fuzzing把C库(giflib)自动迁移到Rust，含具体方法论与对AI翻译局限的反思，对AI辅助代码迁移工程有参考价值。",
+      "queued_at": "2026-09-27T17:14:24Z"
+    },
+    {
+      "id": "e883a0154fe359e7a4c607f7f07c50f268aae1b0",
+      "title": "Sources: China's government asked Alibaba, ByteDance, and others to report on their plans to buy Nvidia RTX Pro 5500, saying it intends to approve the purchases (Qianer Liu/The Information)",
+      "url": "https://www.techmeme.com/260927/p8#a260927p8",
+      "source": "rss:techmeme",
+      "published_at": "2026-09-27T16:20:00Z",
+      "raw_summary": "Qianer Liu / The Information: Sources: China's government asked Alibaba, ByteDance, and others to report on their plans to buy Nvidia RTX Pro 5500, saying it intends to approve the purchases&nbsp; &mdash;&nbsp; China's government has signaled it could allow some domestic companies to buy a new Nvidia chip built for high-end professional computers &hellip;",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "中国政府对阿里/字节采购Nvidia RTX Pro 5500的审批动向，一手信源明确，对中国AI算力供应链判断有价值。",
+      "queued_at": "2026-09-27T17:14:24Z"
     }
   ],
   "digest_last_date": "2026-09-27"
