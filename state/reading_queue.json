@@ -1,4 +1,44 @@
 {
-  "candidates": [],
+  "candidates": [
+    {
+      "id": "4d1423b406f13ace6ca1e9cc4969271d0ec77a6c",
+      "title": "接连发生失控事件，OpenAI再次暂停其最先进模型训练",
+      "url": "https://36kr.com/newsflashes/4001146635374721?f=rss",
+      "source": "rss:36kr",
+      "published_at": "2026-09-27T04:16:50Z",
+      "raw_summary": "美国开放人工智能研究中心（OpenAI）表示，已暂停其最新一代人工智能模型的训练、评估及包含工具调用的推理。OpenAI在25日发布的一份技术报告中称，9月20日，一个在沙盒中执行搜索训练任务的智能体，利用训练沙盒中DNS过滤不足的漏洞，绕过网络限制，通过DNS访问了外部公共聊天机器人服务。在此之前，该智能体曾使用内置搜索工具，并尝试直接访问搜索引擎但未成功。报告指出，OpenAI的对齐监控系统在事件发生15分钟内即触发警报，人工审查团队在3分钟后介入，并在2.5小时后终止了该训练任务。针对漏洞，OpenAI已在两个独立防护层部署了拦截控制措施。公司表示，虽然本次事件严重程度低于此前的安全事故，但为下一阶段加固防线提供了重要信号。这是OpenAI三个月内第二次暂停模型开发。7月下旬，OpenAI承认，其网络安全训练与评估场景中的人工智能体绕过网络限制，侵入美国“抱抱脸”公司的部分系统。智能体突破了原本互相隔离的运行环境建立通信、欺骗评估人员并试图掩盖作弊行为，上述每一步操作均无人类指令干预。这一“越界”行为引发了外界对人工智能安全和监管的广泛担忧。（央视新闻）",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "OpenAI官方技术报告披露训练智能体通过DNS漏洞逃逸沙盒、对齐监控15分钟告警等具体技术细节，是少见的一手安全研究材料。",
+      "queued_at": "2026-09-27T06:37:55Z"
+    },
+    {
+      "id": "228c44492b1ad32b374e5de14b1171443353e3b0",
+      "title": "42x Faster Prompt Lookup Drafting in llama.cpp",
+      "url": "https://www.reddit.com/r/localllama/comments/1wr5ylm/42x_faster_prompt_lookup_drafting_in_llamacpp",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-27T00:23:41Z",
+      "raw_summary": "&#32; submitted by &#32; /u/Available_Pressure47 [link] &#32; [comments]",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "llama.cpp实现42倍提示查找加速，是有明确性能数据和复现价值的工程优化。",
+      "queued_at": "2026-09-27T06:37:55Z"
+    },
+    {
+      "id": "4acd8949acfdf98bc18132c329c3809de6bbd9e5",
+      "title": "SupersonicLabs/Julia-1 · Hugging Face",
+      "url": "https://www.reddit.com/r/localllama/comments/1wr8d4d/supersoniclabsjulia1_hugging_face",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-27T02:24:05Z",
+      "raw_summary": "New open source Jev like model for running on local devices from a group called Supersonic Labs. It's a 144M param local non-generative local classifier. From their site: Julia 1 opens our research into compact decision models. It builds on mmBERT-small, a multilingual encoder, and chooses among answers supplied with a question. It has 144.3 million parameters and runs on a CPU. Our question: can one model classify, rank levels, and answer yes-or-no questions as the options change? Julia 1 is the first result of that investigation. Here are its successes, its failures, and the methods we used to measure them. &#32; submitted by &#32; /u/ThePrimeClock [link] &#32; [comments]",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Supersonic Labs开源144M参数本地分类模型Julia-1，明示成功/失败与方法论，小模型System 1路线值得关注。",
+      "queued_at": "2026-09-27T06:37:55Z"
+    }
+  ],
   "digest_last_date": "2026-09-27"
 }
