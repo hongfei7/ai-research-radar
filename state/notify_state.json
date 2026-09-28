@@ -4,42 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "字节跳动",
-        "英伟达",
-        "阿里巴巴"
-      ],
-      "features": [
-        "alibaba",
-        "and",
-        "approve",
-        "asked",
-        "buy",
-        "bytedance",
-        "china",
-        "government",
-        "information",
-        "intends",
-        "it",
-        "liu",
-        "nvidia",
-        "on",
-        "others",
-        "plans",
-        "pro",
-        "purchases",
-        "qianer",
-        "report",
-        "rtx",
-        "saying",
-        "sources",
-        "the",
-        "their",
-        "to"
-      ],
-      "sent_at": "2026-09-27T17:17:03Z"
-    },
-    {
-      "tickers": [
         "海力士"
       ],
       "features": [
@@ -149,6 +113,82 @@
         "速迭"
       ],
       "sent_at": "2026-09-28T16:15:57Z"
+    },
+    {
+      "tickers": [
+        "AMD"
+      ],
+      "features": [
+        "acquire",
+        "advance",
+        "ai",
+        "amd",
+        "compute",
+        "future",
+        "labs",
+        "of",
+        "the",
+        "to",
+        "world"
+      ],
+      "sent_at": "2026-09-28T22:12:05Z"
+    },
+    {
+      "tickers": [
+        "AMD",
+        "英伟达"
+      ],
+      "features": [
+        "8.2b",
+        "acquire",
+        "agrees",
+        "all-stock",
+        "amd",
+        "an",
+        "and",
+        "as",
+        "bloomberg",
+        "by",
+        "chief",
+        "close",
+        "deal",
+        "edward",
+        "evp",
+        "expected",
+        "fei-fei",
+        "for",
+        "in",
+        "join",
+        "labs",
+        "li",
+        "ludlow",
+        "scientist",
+        "to",
+        "will",
+        "world",
+        "year-end"
+      ],
+      "sent_at": "2026-09-28T22:12:25Z"
+    },
+    {
+      "tickers": [
+        "Anthropic",
+        "OpenAI"
+      ],
+      "features": [
+        "anthropic",
+        "calls",
+        "cheaper",
+        "faster",
+        "it",
+        "partner",
+        "releases",
+        "significantly",
+        "sonnet",
+        "which",
+        "work"
+      ],
+      "sent_at": "2026-09-28T22:12:55Z"
     }
   ],
   "last_report": {
