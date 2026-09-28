@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-28T07:47:23Z",
-  "text": "当前共有 9 个活跃事件。要点包括: Solidigm拟上市，SK海力士估值面临重构; 海光1000系列发布，端侧市场为何需要另一颗CPU？; 三星电子将拓展个性化AI订阅服务; Muse 登顶、Meta 股价涨 11%，国内大模型却挤在办公内卷里; 千问App与夸克网盘打通。",
-  "since": "2026-09-28T07:47:23Z",
-  "active_event_count": 9,
+  "generated_at": "2026-09-28T16:13:54Z",
+  "text": "当前共有 24 个活跃事件。要点包括: AI research leaders at OpenAI, Anthropic, Microsoft, and Meta warn of an impending \"intelligence explosion\" and call for oversight into automated AI research (Maxwell Zeff/Wall Street Journal); Tom's Hardware发布OpenAI自研Jalapeño推理芯片访谈实录; Nvidia wants to keep AI agents on a short leash with a watchdog built into its chips; 英伟达开源AI智能体安全平台，定位智能体围栏基础设施; 中训练、后训练持续升温，模型快速迭代，成为 AI for AI 最佳试炼场。",
+  "since": "2026-09-28T16:13:54Z",
+  "active_event_count": 24,
   "key_themes": [
     "ai_monetization",
+    "compute_demand",
     "model_capability",
-    "edge_ai",
-    "domestic_substitution",
-    "compute_demand"
+    "policy_export",
+    "chip_supply"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n端侧与云端算力的叙事拉锯：条目8明确\"Token单价下降≠成本下降\"，端侧在弱网/隐私/成本场景具不可替代性，Intel、高通受益于端侧放量；但条目7中阿里、百度却同步押注云端全栈，阿里更规划2032年20GW数据中心，反映出产业对算力路径尚未形成共识。此外，同一Meta Muse产品出现明显割裂——条目5强调其登顶榜单驱动股价单日涨约11%，条目6却披露其Agent在物理世界代理执行中闹出\"谎称用户已到\"的低级错误，技术能力与产品可靠性之间存在显著落差。\n\n【新兴趋势】\nAI订阅化/服务化变现路径在多地多公司同步浮现：三星Blue Pass两年剔除移动后销售额近1万亿韩元并新增套餐、阿里千问App与夸克网盘打通以扩C端AI助手边界，反映硬件/云厂不约而同从一次性销售转向订阅+生态联动。叠加条目1中Solidigm拟2027年美股IPO（约150亿美元），AI相关资本运作与估值重构成为另一条暗线。条目7揭示中国AI云\"全栈化\"转向（芯-云-模-体）已成共识但飞轮起点不同，国产算力链或迎capex共振。\n\n【信息盲点】\n本轮缺失多条应被覆盖的主线：（1）国产GPU/AI ASIC链（寒武纪、摩尔线程、沐曦等）完全缺位；（",
+  "cross_analysis": "【核心矛盾】\n关于英伟达\"AI Agent安全\"方案，多家来源描述存在明显分歧：HackerNews版（低可信度）描述为\"在每个Agent旁配独立watchdog芯片\"的硬件构想，而The Decoder与Wired（中等可信度）则报道为OpenShell软件+Sentry硬件整合或纯开源安全工具，且功能边界（毫秒级隔离 vs 仅防护失控不防护欺骗）不一致。关于OpenAI暂停训练最强模型，HackerNews（低可信度）与Wired（中等可信度）口径相近但细节差异明显，事件真实规模仍存疑。\n\n【新兴趋势】\n\"AI for AI\"自进化研发模式在多条新闻中反复出现（OpenAI RSI团队、Anthropic 3万Agent协作、Google AlphaEvolve），形成对算力需求的长周期支撑；AI Agent安全从研究议题升级为基础设施刚需，硬件级（Sentry）和软件级（开源工具）方案并行落地；超大规模云厂/AI实验室集体切入企业AI服务（Meta Enterprise Platform、Muse商业化），开始挤压传统SaaS与竞品云AI业务空间。\n\n【信息盲点】\nHBM/存储链（SK海力士、三星、美光）完全缺席，但在AI推理与Agent规模化背景下HBM需求弹性显著；电力公用事业（数据中心用电瓶颈主题）虽被提及但无具体标的下沉；台积电、苹果、Oracle、CoreWeave等AI算力链关键标的本轮无直接信号；国内昇腾/寒武纪/海光等国产替代链仅华为HC一条线索，覆盖严重不足。\n\n【跨标的联动】\nOpenAI自研Jalapeno ASIC对英伟达推理端构成中长期替代压力，并直接波及博通/Marvell等ASIC合作伙伴；Meta Enterprise Platform上线当日MongoDB暴跌20%+，标志超大规模云厂自建企业服务对传统SaaS形成定价权冲击；阿里Qwen语音降价95%与字节火山引擎Token消耗放量（火山引擎未被独立覆盖，仅经智灵新境侧证）形成国内云AI算力价格战主线；数据中心社区补偿事件（微软教会团体、$1万/户方案）对QTS及",
   "trend_spotting": "南向资金连续5周净流入231亿港元，互联网龙头吸金明显：腾讯单周16.95亿港元、阿里12.4亿港元，资金对AI应用商业化主线的押注持续加码。但真正值得高度关注的是天数智芯持股量环比暴增217.19%，这一异常跃升在港股通标的中位列第一，暗示南向资金正从\"AI应用层\"向\"国产算力底座\"做快速轮动，且力度远超市场讨论热度。\n\n市场普遍聚焦腾讯、阿里的资金流入，但忽视了结构分化信号：建滔积层板单周遭净卖出16.18亿港元，与AI芯片加仓形成镜像，揭示资金并非\"普涨式\"看好科技，而是从传统硬件供应链向真正受益于AI算力需求的国产替代标的做主动切换。腾讯成交额286.9亿港元登顶，说明流动性溢价仍在，但增量已偏向\"国产AI芯片\"这一更前沿、更稀缺的资产类别。\n\n当前拐点在于：南向资金对国产GPU的持仓增速出现非线性跳升，天数智芯217%的环比增幅属于\"先行建仓\"特征而非趋势跟随。若该标的或同类国产AI芯片公司后续出现业绩验证（如流片、客户落地），则可能触发南向与北向资金共振，国产算力链将从\"主题炒作\"进入\"基本面兑现\"阶段。需密切跟踪持股量增幅前十标的是否从AI芯片扩散至CPO、液冷等配套环节。"
 }
