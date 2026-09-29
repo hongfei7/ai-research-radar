@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-29T20:05:03Z",
-  "text": "当前共有 30 个活跃事件。要点包括: AMD约550亿元收购李飞飞World Labs，跨界切入世界模型; Anthropic招股书披露高速增长、巨额亏损及AI灭绝风险警示; Sources: OpenAI's ARR is nearing $70B, growing 70%+ since the beginning of Q3, with B2B revenue up 100%+; it added more consumer revenue in Q3 than all of 2025 (Madison Mills/Axios); IPO prospectus: Anthropic expects to spend $518B+ over 10 years with six partners on AI infrastructure; ~80% is non-cancelable or payable regardless of usage (Reuters); AMD 82亿美元全股票收购World Labs，李飞飞出任AMD首席科学家。",
-  "since": "2026-09-29T20:05:03Z",
-  "active_event_count": 30,
+  "generated_at": "2026-09-29T23:38:17Z",
+  "text": "截至 2026-09-30 07:38 HKT，本轮新增：OpenAI拟融资300亿美元、估值冲1.4万亿美元，CEO确认2026年不上市；DevDay推出GPT-6.1 Sol（成本仅Astra 1/5）与全天候智能体Dots；AMD 82亿美元收购World Labs；Anthropic招股书披露47%营收经AWS/Google分销、返点3.51亿美元；特朗普签署行政令将AI改称\"Super Intelligence\"；A股存储芯片板块企稳回升，机构看好HBM/DDR5景气。",
+  "since": "2026-09-29T23:38:17Z",
+  "active_event_count": 27,
   "key_themes": [
     "ai_monetization",
     "compute_demand",
@@ -13,6 +13,6 @@
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n多源报道对GPT-6.1 Sol的\"接近Astra\"性能叙事存在安全侧的反向印证：The Decoder与TechCrunch强调其在智能体编程/专业工作上逼近旗舰，但UK AISI独立测试显示其上代Astra关闭安全过滤后未授权攻击率从前代6.3%骤升至29.2%。同时，OpenAI以1.4万亿估值融资的乐观信号（TechCrunch、Techmeme、Bloomberg），与\"$6T年营收方能覆盖数据中心热潮\"（HackerNews）形成估值-回报率分歧。OpenAI推出类Office套件正面冲击微软，但同时通过Pro 500/Codex Ultrafast深化对Azure的算力依赖，竞合关系在同一周期内同步强化。\n\n【新兴趋势】\n\"常驻型Agent\"作为新一轮产品竞争焦点反复出现——Dots（OpenAI）对标Meta的Muse，多源（The Verge、Wired、Bloomberg、The Decoder、Techmeme）密集报道，并延伸至Codex可复用云环境、Decisions API。同步出现的还有推理端价格分层下探：GPT-6.1 Sol以Astra五分之一价格、同价于Claude Sonnet 5.5切入，叠加Pro 500档500美元/月+8倍提速，企业ARPU化与单位token降本并行。ChatGPT向OS化演进（Space/Pages/Slides、32家伙伴市场）也在多条报道中被反复强调。\n\n【信息盲点】\n本轮覆盖完全缺失苹果（无论端侧AI还是Apple Intelligence进展）、Anthropic除营收对标外的独立产品发布、xAI/Grok动态，以及英伟达除Kumo Tabular外的硬件/财报信息。台积电、博通、海力士、ASML等算力链关键标的仅在so_what中被间接提及，无独立事件驱动；中国AI标的（阿里、字节、DeepSeek）完全缺席。\n\n【跨标的联动】\nOpenAI-Meta在Agent赛道正面交锋（Dots vs Muse），竞争节奏或同步推高双方算力消耗；OpenAI-Microsoft关系进入\"应用层竞争+算力层深度绑定\"的双向加深阶段，Pro 500与企业版Token增长直接传导至Azure capex；AMD以82亿美元收购World Labs（李飞飞加盟）首次在物理世界模型层面向英伟达CUDA护城河发起软件栈挑战，叠加AWS Bedrock上线GPT-6.1 Sol、Azure托管OpenAI全栈，云厂间模型分发与推理capex竞争同步升级。",
+  "cross_analysis": "【核心矛盾】\nAMD收购World Labs（82亿美元）一事的方向判断存在来源分歧：arstechnica源将英伟达标为\"negative\"，认为AMD正面对标；arstechnica-ai源则标\"neutral\"，强调需观察整合细节及市占提升路径，提示市场对其对抗英伟达的实际效果尚未形成共识。此外，OpenAI出现\"估值1.4万亿但CEO主动推迟IPO至2026年后\"的反差信号——融资估值持续攀升与上市意愿降低并存，两者间的逻辑张力值得跟踪。\n\n【新兴趋势】\n多条报道指向AI Agent/智能体商业化加速：OpenAI的Dots全天候自主智能体、ChatGPT向\"应用分发平台\"演进的战略、GPT-6.1 Sol定价仅为竞品1/5——共同勾勒出\"Agent入口+token价格战\"主线。同时Anthropic招股书披露向AWS/Google支付3.51亿美元分销返点、云厂在AI收入分发中的关键地位被首次量化；Astera Labs Leo控制器则代表CXL/内存池化作为第三方厂商突破NVLink/Infinity Fabric生态的新路径。\n\n【信息盲点】\n本轮几乎未涉及苹果（与OpenAI app store替代直接竞争）、台积电CoWoS先进封装排产、xAI/DeepSeek融资进展，以及微软作为OpenAI核心合作方的具体受益数据；中国大模型厂商（智谱等）在红队报告中被提及但未在主条目中深入展开。HBM供需虽被存储芯片条目间接覆盖，但缺乏HBM3e/HBM4量价数据的独立信源。\n\n【跨标的联动】\nOpenAI高估值+ARR加速→英伟达/AMD/博通算力链→HBM（美光/海力士/三星）→台积电CoWoS→Astera Labs互联芯片，形成\"估值-算力-存储-封装-互联\"完整传导链。Anthropic通过AWS/Google分销47",
   "trend_spotting": "【新兴趋势】OpenAI DevDay将AI竞争主轴从\"模型智能\"切换至\"Agent常驻+OS化\"——Dots常驻代理配独立云端算力、Pro 500档500美元/月叠加Ultrafast 8倍速，订阅体系正式按\"AI员工工作量\"计价；GPT-6.1 Sol以Astra 1/5价格（$2/$10 per 1M tokens）发布，与Claude Sonnet 5.5同价，标志推理端价格分层收敛。OpenAI ARR冲"
 }

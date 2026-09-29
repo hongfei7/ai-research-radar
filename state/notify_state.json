@@ -4,82 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "AMD"
-      ],
-      "features": [
-        "acquire",
-        "advance",
-        "ai",
-        "amd",
-        "compute",
-        "future",
-        "labs",
-        "of",
-        "the",
-        "to",
-        "world"
-      ],
-      "sent_at": "2026-09-28T22:12:05Z"
-    },
-    {
-      "tickers": [
-        "AMD",
-        "英伟达"
-      ],
-      "features": [
-        "8.2b",
-        "acquire",
-        "agrees",
-        "all-stock",
-        "amd",
-        "an",
-        "and",
-        "as",
-        "bloomberg",
-        "by",
-        "chief",
-        "close",
-        "deal",
-        "edward",
-        "evp",
-        "expected",
-        "fei-fei",
-        "for",
-        "in",
-        "join",
-        "labs",
-        "li",
-        "ludlow",
-        "scientist",
-        "to",
-        "will",
-        "world",
-        "year-end"
-      ],
-      "sent_at": "2026-09-28T22:12:25Z"
-    },
-    {
-      "tickers": [
-        "Anthropic",
-        "OpenAI"
-      ],
-      "features": [
-        "anthropic",
-        "calls",
-        "cheaper",
-        "faster",
-        "it",
-        "partner",
-        "releases",
-        "significantly",
-        "sonnet",
-        "which",
-        "work"
-      ],
-      "sent_at": "2026-09-28T22:12:55Z"
-    },
-    {
-      "tickers": [
         "Anthropic"
       ],
       "features": [
@@ -369,6 +293,31 @@
         "with"
       ],
       "sent_at": "2026-09-29T20:06:02Z"
+    },
+    {
+      "tickers": [
+        "AMD",
+        "OpenAI",
+        "英伟达"
+      ],
+      "features": [
+        "dots",
+        "gpt-6.1",
+        "openai",
+        "sol",
+        "主智",
+        "体模",
+        "候自",
+        "全天",
+        "出全",
+        "天候",
+        "推出",
+        "智能",
+        "模型",
+        "能体",
+        "自主"
+      ],
+      "sent_at": "2026-09-29T23:38:39Z"
     }
   ],
   "last_report": {
@@ -408,7 +357,10 @@
       }
     ]
   },
-  "morning_fallback": null,
+  "morning_fallback": {
+    "date": "2026-09-30",
+    "attempts": 1
+  },
   "blindspot_ledger": [
     {
       "key": "ASML|Anthropic|Intel|Marvell|Meta|博通|戴尔|美光|高通",

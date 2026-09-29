@@ -222,6 +222,45 @@
       "queued_at": "2026-09-29T19:57:04Z"
     },
     {
+      "id": "4737e80c5a08025e9c1fd0b38088bf87c9913370",
+      "title": "TIRx Harness: An Open Compiler Harness for Agentic GPU Programming",
+      "url": "https://blog.mlc.ai/2026/09/29/tirx-harness-an-open-compiler-harness-for-agentic-gpu-programming",
+      "source": "hackernews",
+      "published_at": "2026-09-29T19:17:32Z",
+      "raw_summary": "TIRx Harness: An Open Compiler Harness for Agentic GPU Programming",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "面向Agentic GPU编程的开源编译harness，对AI编译栈与GPU编程自动化方向有明确工程参考价值。",
+      "queued_at": "2026-09-29T23:35:13Z"
+    },
+    {
+      "id": "340bf078aed596fb2eea4ce3e405175c3cc09900",
+      "title": "Anthropic says GLM-5.3 can autonomously build end-to-end cyber exploits, like Claude Mythos Preview, but was released without robust safeguards against misuse (Anthropic)",
+      "url": "https://www.techmeme.com/260929/p51#a260929p51",
+      "source": "rss:techmeme",
+      "published_at": "2026-09-29T22:35:00Z",
+      "raw_summary": "Anthropic: Anthropic says GLM-5.3 can autonomously build end-to-end cyber exploits, like Claude Mythos Preview, but was released without robust safeguards against misuse&nbsp; &mdash;&nbsp; GLM-5.3 can develop working exploits end to end&nbsp; &mdash;&nbsp; Five months ago, we announced Claude Mythos Preview, the first AI model &hellip;",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Anthropic红队对GLM-5.3的端到端漏洞利用能力做基准测试，给出具体数字(4%成功率)，是AI安全/能力前沿的一手评估。",
+      "queued_at": "2026-09-29T23:35:13Z"
+    },
+    {
+      "id": "80c782c7ebec37e0bca4b8063d86c86c35be61df",
+      "title": "Quoting Anthropic Frontier Red Team",
+      "url": "https://simonwillison.net/2026/sep/29/anthropic-frontier-red-team",
+      "source": "rss:simonwillison",
+      "published_at": "2026-09-29T22:20:28Z",
+      "raw_summary": "We evaluate several models on 100 tasks from the [internal Binary Exploitation benchmark] (selected at random), and find that GLM-5.3 develops full control flow hijacks in 4% of the trials; Claude Mythos Preview did so in 6%. Although GLM-5.3 performs below Claude Mythos Preview here, a meaningful threshold has clearly been crossed: earlier models, like Claude Opus 4.6 and GLM-5.2, do not succeed in any of them. &mdash; Anthropic Frontier Red Team, GLM-5.3 and the spread of advanced cyber capabilities Tags: anthropic, generative-ai, ai-security-research, glm, ai, ai-in-china, llms",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Anthropic红队原话：GLM-5.3在100任务中4%实现完整控制流劫持，跨过能力阈值并附具体对比基线。",
+      "queued_at": "2026-09-29T23:35:13Z"
+    },
+    {
       "id": "64980f24a4834377d6401dda423d7feae9ccc8b6",
       "title": "Learning Native Reflection in Unified Models with Interleaved Reinforcement Learning [Yijia Fan, Ziqi Huang, Zhongang Cai, Yan Li, Zimo Wen]",
       "url": "http://arxiv.org/abs/2609.35767v1",
@@ -480,45 +519,6 @@
       "source_traceable": true,
       "why": "TSMC OIP论坛把2030半导体市场预测上调到$1T，TSMC一手口径，产业格局判断值得读。",
       "queued_at": "2026-09-29T08:21:20Z"
-    },
-    {
-      "id": "dd7ecc626b4b4c4b177178a3584298f238fe79a8",
-      "title": "ColNanoVDR: Document-Free Query Distillation for Multi-Vector Visual Document Retrieval via Optimal Transport",
-      "url": "https://arxiv.org/abs/2609.34899",
-      "source": "huggingface:papers",
-      "published_at": "2026-09-27T20:00:00Z",
-      "raw_summary": "Multi-vector retrievers built on vision-language models lead visual document retrieval (VDR), but they run a multi-billion-parameter query encoder on every search. Distilling this encoder into a small student that queries the teacher's existing index would remove the bottleneck. The standard recipe, however, matches the teacher's MaxSim scores and so requires encoding and caching every training page, which can reach terabytes of page tokens. NanoVDR avoids pages entirely by training on the teacher's query embeddings alone, but only for single-vector retrievers. We present ColNanoVDR, to our knowledge the first framework to bring this document-free distillation to multi-vector VDR. Its objective, OTW (Optimal Transport with Learned Weights), aligns the student's query tokens with the teacher's by entropic optimal transport, with a learned weight for each student token, and needs no correspondence between the two tokenizations. We prove that the resulting alignment cost bounds the MaxSim score difference on every page. Distilled from five state-of-the-art teachers, the 149M text-only students retain about 95% of their teachers' NDCG@5 on ViDoRe v1-v3 while encoding queries up to 26x faster. Under identical training, OTW matches score distillation while encoding no page and reading 12.6x less cached teacher data.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "用最优传输做无文档查询蒸馏，把多向量检索的查询端压缩到学生模型，工程取舍明确(避免TB级page token缓存)。",
-      "queued_at": "2026-09-29T08:21:20Z"
-    },
-    {
-      "id": "16b7ac116aefe17d874a92d7d867c29c710925c8",
-      "title": "When Do Model Internals Help? Exploring the Role of Representation Engineering in LLM Safety",
-      "url": "https://arxiv.org/abs/2609.34771",
-      "source": "huggingface:papers",
-      "published_at": "2026-09-27T20:00:00Z",
-      "raw_summary": "Reliable AI safeguards require both control mechanisms that reduce unsafe behavior and monitoring mechanisms that detect safety risks during model interactions. Established behavioral safeguards include alignment methods that optimize model outputs and text monitors that assess interaction text. Representation engineering instead reads or modifies internal model states, but the relative strengths of these approaches remain unclear because they are often evaluated under different settings. We present a matched evaluation across two tracks. For safety control, we compare DPO, a behavioral alignment method, with three representation steering methods across robustness, practicality, and granularity. DPO provides the strongest overall control and generally improves with increasing training data, although its safety can degrade after subsequent benign fine-tuning. Representation steering remains competitive primarily in low-data settings, particularly with high-quality contrastive data. For safety monitoring, we compare representation probes with fine-tuned and open-weight text monitors across full-response detection, early detection, and computational cost. Specialized text monitors achieve the strongest overall detection accuracy, while representation probes remain competitive at substantially lower marginal cost. Finally, monitor-guided interventions recover much of the safety lost by DPO after benign fine-tuning, with little additional over-refusal. Overall, representation engi",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "在matched setting下比较Representation Engineering与DPO/文本监控在LLM安全上的相对优劣，实验设计是关键贡献。",
-      "queued_at": "2026-09-29T08:21:20Z"
-    },
-    {
-      "id": "31a2fbf94abebee1f0eab0d5527d741ff73cd45b",
-      "title": "AI companies leak data to advertisers [pdf]",
-      "url": "https://jorgegarciaherrero.com/wp-content/interactivos/20260916-prompt-like-a-butterfly-sting-like-a-tracker-(clean).pdf",
-      "source": "hackernews",
-      "published_at": "2026-09-29T09:03:41Z",
-      "raw_summary": "AI companies leak data to advertisers [pdf]",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "AI产品在广告追踪链路中泄露数据，有PDF原文可溯源，对隐私/工程实践有参考价值。",
-      "queued_at": "2026-09-29T15:01:00Z"
     }
   ],
   "digest_last_date": "2026-09-29"
