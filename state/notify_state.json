@@ -189,6 +189,69 @@
         "work"
       ],
       "sent_at": "2026-09-28T22:12:55Z"
+    },
+    {
+      "tickers": [
+        "Anthropic"
+      ],
+      "features": [
+        "ai",
+        "anthropic",
+        "costs",
+        "ipo",
+        "prospectus",
+        "shows",
+        "surging",
+        "vision"
+      ],
+      "sent_at": "2026-09-29T02:07:09Z"
+    },
+    {
+      "tickers": [
+        "Anthropic",
+        "OpenAI"
+      ],
+      "features": [
+        "astra",
+        "gpt-6",
+        "sonnet",
+        "减速",
+        "发布",
+        "好的",
+        "布智",
+        "平超",
+        "智能",
+        "水平",
+        "的减",
+        "能水",
+        "说好",
+        "超越",
+        "越说",
+        "速呢"
+      ],
+      "sent_at": "2026-09-29T02:07:38Z"
+    },
+    {
+      "tickers": [
+        "英伟达"
+      ],
+      "features": [
+        "亿美",
+        "伟达",
+        "元股",
+        "创纪",
+        "加创",
+        "回购",
+        "录亿",
+        "票回",
+        "纪录",
+        "美元",
+        "股票",
+        "英伟",
+        "达追",
+        "追加"
+      ],
+      "sent_at": "2026-09-29T02:08:06Z"
     }
   ],
   "last_report": {
@@ -228,7 +291,10 @@
       }
     ]
   },
-  "morning_fallback": null,
+  "morning_fallback": {
+    "date": "2026-09-29",
+    "attempts": 1
+  },
   "blindspot_ledger": [
     {
       "key": "AMD|ASML|Marvell|中芯国际|博通|台积电|天数智芯|寒武纪|高通",
