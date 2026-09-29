@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-29T15:10:27Z",
+  "generated_at": "2026-09-29T20:05:03Z",
   "text": "当前共有 30 个活跃事件。要点包括: AMD约550亿元收购李飞飞World Labs，跨界切入世界模型; Anthropic招股书披露高速增长、巨额亏损及AI灭绝风险警示; Sources: OpenAI's ARR is nearing $70B, growing 70%+ since the beginning of Q3, with B2B revenue up 100%+; it added more consumer revenue in Q3 than all of 2025 (Madison Mills/Axios); IPO prospectus: Anthropic expects to spend $518B+ over 10 years with six partners on AI infrastructure; ~80% is non-cancelable or payable regardless of usage (Reuters); AMD 82亿美元全股票收购World Labs，李飞飞出任AMD首席科学家。",
-  "since": "2026-09-29T15:10:27Z",
+  "since": "2026-09-29T20:05:03Z",
   "active_event_count": 30,
   "key_themes": [
     "ai_monetization",
-    "model_capability",
     "compute_demand",
+    "model_capability",
     "policy_export",
     "chip_supply"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nOpenAI出现\"模型过强叫停\"与\"Pro订阅额度削减50%\"两则信号并存，前者指向能力溢出、后者指向算力供给紧张，对商业化节奏的解读存在张力。AMD-李飞飞交易标题550亿与正文82亿美元口径明显打架，且TSMC上修TAM（低估7000亿）与Anthropic招股书披露\"AI可能灭绝人类\"形成需求爆发与生存性风险披露的同步矛盾。豆包AI手机与腾讯《王者荣耀》风控直接冲突，揭示端侧Agent能力与既有平台规则的结构性对抗。\n\n【新兴趋势】\n\"算力军备竞赛+巨额亏损并存\"成最显性叙事：Anthropic 7年116亿Akamai长单、2027年5000亿支出预期、TSMC上修行业TAM，三条独立信源相互印证。HBM/先进封装链被反复提及（SK海力士合作伙伴预付、CoWoS、LLM推理HBM并发访问论文），说明供给瓶颈仍是核心矛盾。AI安全与监管叙事同步升温（OpenAI叫停、Anthropic招股书风险披露、十五五科技部攻关），从单点事件演变为跨厂商系统性议题。\n\n【信息盲点】\n光模块/连接（旭创、Lumentum）完全缺位，与算力capex叙事脱节；电力公用事业（核电",
-  "trend_spotting": "近期72小时最显著的趋势是\"算力+融资+能力\"三线加速共振：Anthropic递交2万亿美元IPO、2025年净亏420亿美元、2027年支出指引高达5000亿美元，同时与Akamai签下7年116亿美元长单（较5月披露的18亿翻6倍）。头部AI公司正以\"亏损换算力\"的方式锁定HBM、CoWoS、电力等基础设施供给，SK海力士甚至以预付50%研发费绑定100家合作伙伴，整机柜/超节点的稳定交付正取代单纯算力规模成为新瓶颈。台积电OIP论坛上修行业TAM，承认2030年万亿美元预测低估约7000亿，AI需求结构性外溢进一步确认。\n\n值得关注的早期信号有两个：①OpenAI首次因\"模型过强\"主动叫停发布，与既往延期不同，这是能力突破开始反向倒逼安全/监管的拐点信号；②Anthropic招股书首次将\"AI灭绝风险\"写入正式文件，可能被OpenAI、xAI效仿，推高全球AI监管披露口径。\n\n市场盲点在于推理侧供给紧张——OpenAI 200美元Pro套餐被削额度约50%，若属实，反映推理算力供需已转紧而非仅训练侧紧缺；同时Claude Sonnet 5.5以49分钟、177美元成本一次性生成3D游戏，能力曲线加速将放大token消耗，对算力链是双刃剑：需求增、单价降。\n\n潜在拐点：AI手机设备级能力与超级App风控的天然冲突"
+  "cross_analysis": "【核心矛盾】\n多源报道对GPT-6.1 Sol的\"接近Astra\"性能叙事存在安全侧的反向印证：The Decoder与TechCrunch强调其在智能体编程/专业工作上逼近旗舰，但UK AISI独立测试显示其上代Astra关闭安全过滤后未授权攻击率从前代6.3%骤升至29.2%。同时，OpenAI以1.4万亿估值融资的乐观信号（TechCrunch、Techmeme、Bloomberg），与\"$6T年营收方能覆盖数据中心热潮\"（HackerNews）形成估值-回报率分歧。OpenAI推出类Office套件正面冲击微软，但同时通过Pro 500/Codex Ultrafast深化对Azure的算力依赖，竞合关系在同一周期内同步强化。\n\n【新兴趋势】\n\"常驻型Agent\"作为新一轮产品竞争焦点反复出现——Dots（OpenAI）对标Meta的Muse，多源（The Verge、Wired、Bloomberg、The Decoder、Techmeme）密集报道，并延伸至Codex可复用云环境、Decisions API。同步出现的还有推理端价格分层下探：GPT-6.1 Sol以Astra五分之一价格、同价于Claude Sonnet 5.5切入，叠加Pro 500档500美元/月+8倍提速，企业ARPU化与单位token降本并行。ChatGPT向OS化演进（Space/Pages/Slides、32家伙伴市场）也在多条报道中被反复强调。\n\n【信息盲点】\n本轮覆盖完全缺失苹果（无论端侧AI还是Apple Intelligence进展）、Anthropic除营收对标外的独立产品发布、xAI/Grok动态，以及英伟达除Kumo Tabular外的硬件/财报信息。台积电、博通、海力士、ASML等算力链关键标的仅在so_what中被间接提及，无独立事件驱动；中国AI标的（阿里、字节、DeepSeek）完全缺席。\n\n【跨标的联动】\nOpenAI-Meta在Agent赛道正面交锋（Dots vs Muse），竞争节奏或同步推高双方算力消耗；OpenAI-Microsoft关系进入\"应用层竞争+算力层深度绑定\"的双向加深阶段，Pro 500与企业版Token增长直接传导至Azure capex；AMD以82亿美元收购World Labs（李飞飞加盟）首次在物理世界模型层面向英伟达CUDA护城河发起软件栈挑战，叠加AWS Bedrock上线GPT-6.1 Sol、Azure托管OpenAI全栈，云厂间模型分发与推理capex竞争同步升级。",
+  "trend_spotting": "【新兴趋势】OpenAI DevDay将AI竞争主轴从\"模型智能\"切换至\"Agent常驻+OS化\"——Dots常驻代理配独立云端算力、Pro 500档500美元/月叠加Ultrafast 8倍速，订阅体系正式按\"AI员工工作量\"计价；GPT-6.1 Sol以Astra 1/5价格（$2/$10 per 1M tokens）发布，与Claude Sonnet 5.5同价，标志推理端价格分层收敛。OpenAI ARR冲"
 }

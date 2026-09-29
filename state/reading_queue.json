@@ -196,6 +196,32 @@
       "queued_at": "2026-09-29T15:01:00Z"
     },
     {
+      "id": "72001d22fa40b2b849e9e3b89e4e30ec83238a3d",
+      "title": "UK AI Security Institute finds GPT-6 Astra's rogue attack rate jumped fivefold over its predecessor",
+      "url": "https://the-decoder.com/uk-ai-security-institute-finds-gpt-6-astras-rogue-attack-rate-jumped-fivefold-over-its-predecessor",
+      "source": "rss:the-decoder",
+      "published_at": "2026-09-29T19:24:12Z",
+      "raw_summary": "GPT-6 Astra carried out unauthorized supply-chain attacks in 29.2 percent of simulations run by the British AI Security Institute with safety filters disabled. The model used fake identities and malicious code, while its predecessor, GPT-5.6 Sol, completed attacks in 6.3 percent of runs. Explicit restrictions reduced attacks but didn't stop them entirely. The article UK AI Security Institute finds GPT-6 Astra&#039;s rogue attack rate jumped fivefold over its predecessor appeared first on The Decoder.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "UK AISI对GPT-6 Astra的越权攻击率量化评估（29.2% vs 6.3%），是少有的一手安全实验数据。",
+      "queued_at": "2026-09-29T19:57:04Z"
+    },
+    {
+      "id": "d0ec27090b03e2c5f6ce707054f1225942563dd2",
+      "title": "除了更贵的订阅和砍半的额度，OpenAI 想做的还是「微信」",
+      "url": "http://www.geekpark.net/news/372003",
+      "source": "rss:geekpark",
+      "published_at": "2026-09-29T18:59:48Z",
+      "raw_summary": "模型越来越便宜，付费给的用量却砍了半 作者｜Alan 北京时间 9 月 30 日凌晨，OpenAI 开完了它口中「迄今规模最大的一届」开发者大会。官方汇总页上一共列了 25 项发布，从新模型、新 API，一路排到给企业买软件用的应用市场。 现场最安静的一刻，出现在 Sam Altman 讲到 ChatGPT Pro 会员调整的时候。台下没有一个人鼓掌。 调整本身不复杂：每月 200 美元的 Pro 200 价格不变，新订阅的用量缩水；另外新增一档 Pro 500，每月 500 美元，用量是 Plus 的 25 倍，外加一个个人套餐里只有它能用的提速档 Astra Ultrafast。 那一阵沉默，比 25 项发布里的任何一项都更能说明今天的本质主题：这场大会真正改掉的，是 ChatGPT 收钱的方式：它不再按一个聊天软件收费，开始按一个「员工」收费，干多少活、干多快，都明码标价。 月费和用量，都是 Plus 的 25 倍｜图片来源：OpenAI 01 AI 开始领工资 和之前预热的一样，毫不意外今天 OpenAI 这次把最大的篇幅留给了 dots，官方中文页面也保留了这个英文名。 按官方说法，每个「dot」都由 GPT-6 Astra 驱动，有一台自己的云端电脑和浏览器，能连接 4,000 多个应用，全天候运行。 用法其实也很像派活。你给它一个目标，划定哪些操作它可以自己做主，它就会主动开工。它可以待在 ChatGPT、Slack 和 Teams 里，OpenAI 产品负责人 Tibo（Thibault Sottiaux）在现场发推说，它干活的时候，你还能直接给它打电话。 OpenAI 描述它的原话，是「能够持续承担职责的智能体」，还设想未来多个 dot 组成团队，协同为你工作。 「承担职责」这四个字挑得很准。过去的 AI 助手是你问一句、它答一句；dot 的设定是你不在的时候，它也在干活。这更像招聘启事里的写法，而不是软件说明书。 dots 先只给每月 100 美元起的 Pro｜图片来源：OpenAI dot 的门槛不低。个人用户里只有 Pro 套餐能用，Tibo 特别说明包括每月 100 美元的 Pro 100，企业这边是 Business Premium。 官方说第一个 dot 随套餐附赠，不额外收费，和它聊天也不计入用量。但让它去「ChatGPT 工作」和 Codex 里干活，照样扣额度。 问题是，这台云端电脑里装着什么。Tibo 对云端很有信心，他在现场发推说，新的 Codex 云端环境配好之后，你就不可能再回到笔记本上开发了。 在极客公园在硅谷组织了直播观看中，一位做数学相关工作的参会者表示，他的代码要调用一个有商业许可证的数学优化求解器，本地的 Codex 能调用、能运行、能测试，可一旦迁到云端，这些工具和许可证未必跟得过去。让 AI 干脆重写一个？他的判断是，眼下还到不了成熟工具的水平。 他平时用 AI 做的是具体的研究，不是订票、订球场。观看会上也有人觉得，各家的个人助手看起来越来越像。就在前一天，Manus 发布的 2.0 主打的也是个人 AI 助手和云电脑。对这类专业用户来说，dot 缺的不是再多几千个应用连接，而是他们自己那套本地环境。 除了 dot 之外，会员分档，是这次改得最狠、也是骂声最多的地方。Tibo 在大会开始前约两个小时发推，其实已经把新倍数讲得很直白：Plus 算 1 倍，Pro 100 是 5 倍，Pro 200 是 10 倍。而旧的 Pro 200，是 20 倍。 为了增加一点惊喜，Tibo 甚至在现场",
+      "score": 8,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "对OpenAI DevDay 25项发布的深度梳理与商业逻辑解读，尤其对定价策略从订阅转向按\"员工\"计费的判断有产业路线价值。",
+      "queued_at": "2026-09-29T19:57:04Z"
+    },
+    {
       "id": "64980f24a4834377d6401dda423d7feae9ccc8b6",
       "title": "Learning Native Reflection in Unified Models with Interleaved Reinforcement Learning [Yijia Fan, Ziqi Huang, Zhongang Cai, Yan Li, Zimo Wen]",
       "url": "http://arxiv.org/abs/2609.35767v1",
@@ -492,32 +518,6 @@
       "angle": "research",
       "source_traceable": true,
       "why": "AI产品在广告追踪链路中泄露数据，有PDF原文可溯源，对隐私/工程实践有参考价值。",
-      "queued_at": "2026-09-29T15:01:00Z"
-    },
-    {
-      "id": "fcbb9e0934c98b5835b46b8ddea5eb7702d824d7",
-      "title": "Show HN: Jevstiller – Distill Jev into a local model, with a disagreement bound",
-      "url": "https://jevstiller.pages.dev/posts/the-guarantee",
-      "source": "hackernews",
-      "published_at": "2026-09-29T12:05:07Z",
-      "raw_summary": "Show HN: Jevstiller – Distill Jev into a local model, with a disagreement bound",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "把Jev蒸馏到本地模型并给出disagreement bound，是有方法论亮点的可复现工程。",
-      "queued_at": "2026-09-29T15:01:00Z"
-    },
-    {
-      "id": "1fb7884eec5b2c25475ec463941ea404ea75587a",
-      "title": "VectifyAI /PageIndex",
-      "url": "https://github.com/vectifyai/pageindex",
-      "source": "github_trending",
-      "published_at": "2026-09-29T14:59:18Z",
-      "raw_summary": "GitHub Trending: VectifyAI /PageIndex. 📑 PageIndex: Document Index for Vectorless, Reasoning-based RAG. Language: Python. Star",
-      "score": 7,
-      "angle": "engineering",
-      "source_traceable": true,
-      "why": "无向量、基于推理的RAG索引方案，是近期RAG路线分支，值得读源码/文档。",
       "queued_at": "2026-09-29T15:01:00Z"
     }
   ],
