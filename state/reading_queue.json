@@ -209,6 +209,19 @@
       "queued_at": "2026-09-30T15:46:27Z"
     },
     {
+      "id": "a264c5818f2ce093cb5da8bc2dbfabf25aef003e",
+      "title": "Google DeepMind today announced SynthID Bio to watermark and detect AI-designed proteins",
+      "url": "https://www.reddit.com/r/singularity/comments/1wu8ghb/google_deepmind_today_announced_synthid_bio_to",
+      "source": "reddit:singularity",
+      "published_at": "2026-09-30T15:48:46Z",
+      "raw_summary": "Technical paper in nature: https://www.nature.com/articles/s41586-026-10965-y https://x.com/pushmeet/status/2105314763148321102 This project was initiated by Pushmeet Kohli, he also published this article on X today. Essentially, DeepMind’s new tool SynthID Bio adds a detectable signature to proteins designed by AI. That signature can be checked even after the protein has been physically made in a lab. Why? Tracing where a design came from so it could help companies that manufacture DNA recognize designs from trusted AI tools and decide which orders need closer inspection!! Keeping research data reliable so it could help scientists distinguish AI-generated protein structures from experimentally measured ones So looks like two main goals are biosecurity and scientific integrity. In lab tests, the watermarked proteins worked as well as versions without watermarks. It’s still early research. The watermark doesn’t prove a protein is safe and making it harder to deliberately remove is one of the remaining challenges. &#32; submitted by &#32; /u/TorturedPoet30 [link] &#32; [comments]",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "DeepMind 在 Nature 上发表的 AI 蛋白质水印技术论文原文可溯源，涉及生成式生物学的可追溯性这一新范式。",
+      "queued_at": "2026-09-30T20:20:34Z"
+    },
+    {
       "id": "a710914c00b698633ba7014057f70e8dcb5999eb",
       "title": "Thinking Before Thinking: Scaling Agentic Inference Through Meta-Reasoning [Paras Dahal, Anton Bakhtin, Taco Cohen, Zhengxing Chen, Carole-Jean Wu]",
       "url": "http://arxiv.org/abs/2609.38147v1",
@@ -505,19 +518,6 @@
       "angle": "engineering",
       "source_traceable": true,
       "why": "Platformer一手评测OpenAI Dots交互体验，描述对话流、安全设计等具体产品设计取舍。",
-      "queued_at": "2026-09-30T08:55:31Z"
-    },
-    {
-      "id": "059eb54e8aecc1777a132778cf862c7633162126",
-      "title": "DeepSeek says it has partnered with Huawei to develop programming tools for Huawei's Ascend chips, including TileLang, an open-source CUDA alternative (Reuters)",
-      "url": "https://www.techmeme.com/260930/p2#a260930p2",
-      "source": "rss:techmeme",
-      "published_at": "2026-09-30T05:00:48Z",
-      "raw_summary": "Reuters: DeepSeek says it has partnered with Huawei to develop programming tools for Huawei's Ascend chips, including TileLang, an open-source CUDA alternative&nbsp; &mdash;&nbsp; Chinese AI firm DeepSeek said on Wednesday it has partnered with Huawei Technologies to develop programming tools for Huawei's Ascend chips &hellip;",
-      "score": 7,
-      "angle": "industry",
-      "source_traceable": true,
-      "why": "DeepSeek与华为合作开发Ascend编程工具栈，关系到CUDA替代生态的中国自主路线，值得跟进细节。",
       "queued_at": "2026-09-30T08:55:31Z"
     }
   ],

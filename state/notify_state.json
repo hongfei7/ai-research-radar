@@ -4,73 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "Anthropic",
-        "OpenAI"
-      ],
-      "features": [
-        "70b",
-        "annual",
-        "nears",
-        "openai",
-        "recurring",
-        "revenue"
-      ],
-      "sent_at": "2026-09-29T20:05:26Z"
-    },
-    {
-      "tickers": [
-        "Meta",
-        "OpenAI"
-      ],
-      "features": [
-        "and",
-        "announcements",
-        "biggest",
-        "devday",
-        "news",
-        "openai",
-        "the"
-      ],
-      "sent_at": "2026-09-29T20:05:42Z"
-    },
-    {
-      "tickers": [
-        "Meta",
-        "OpenAI",
-        "微软"
-      ],
-      "features": [
-        "agents",
-        "always-on",
-        "and",
-        "astra",
-        "bloomberg",
-        "business",
-        "by",
-        "chatgpt",
-        "cloud",
-        "computer",
-        "dots",
-        "enterprise",
-        "for",
-        "gpt-6",
-        "in",
-        "launches",
-        "metz",
-        "openai",
-        "own",
-        "powered",
-        "premium",
-        "pro",
-        "rachel",
-        "their",
-        "users",
-        "with"
-      ],
-      "sent_at": "2026-09-29T20:06:02Z"
-    },
-    {
-      "tickers": [
         "AMD",
         "OpenAI",
         "英伟达"
@@ -286,6 +219,68 @@
         "车狂"
       ],
       "sent_at": "2026-09-30T15:58:29Z"
+    },
+    {
+      "tickers": [
+        "OpenAI",
+        "谷歌"
+      ],
+      "features": [
+        "and",
+        "argon",
+        "astra",
+        "axios",
+        "benchmarks",
+        "certain",
+        "coding",
+        "cybersecurity",
+        "gemini",
+        "google",
+        "gpt-6",
+        "group",
+        "it",
+        "knowledge",
+        "madison",
+        "mills",
+        "of",
+        "on",
+        "out",
+        "outperforms",
+        "partners",
+        "rolls",
+        "says",
+        "small",
+        "to",
+        "work"
+      ],
+      "sent_at": "2026-09-30T20:28:39Z"
+    },
+    {
+      "tickers": [
+        "美光"
+      ],
+      "features": [
+        "8-k",
+        "fiscal",
+        "inc",
+        "micron",
+        "mu",
+        "record",
+        "reports",
+        "technology",
+        "美光"
+      ],
+      "sent_at": "2026-09-30T20:28:57Z"
+    },
+    {
+      "tickers": [
+        "谷歌"
+      ],
+      "features": [
+        "argon",
+        "gemini"
+      ],
+      "sent_at": "2026-09-30T20:29:17Z"
     }
   ],
   "last_report": {

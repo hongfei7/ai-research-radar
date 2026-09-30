@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-30T15:57:06Z",
-  "text": "当前共有 28 个活跃事件。要点包括: DeepSeek开源昇腾编程工具TileLang，剑指CUDA替代; AMD82亿美元收购李飞飞World Labs，算力与模型闭环再加码; An interview with OpenAI Chief Research Officer Mark Chen on the Hugging Face incident, slowing AI development, shifting 5%-10% of compute to safety, and more (Will Douglas Heaven/MIT Technology Review); OpenAI delays IPO over AI safety concerns; OpenAI刹车，Meta狂飙。",
-  "since": "2026-09-30T15:57:06Z",
-  "active_event_count": 28,
+  "generated_at": "2026-09-30T20:28:18Z",
+  "text": "截至 2026-10-01 04:28 HKT，本轮关键增量有三：Google Gemini 4 Argon密集曝光，Reddit泄露称其在18项基准中12项领先Fable 5.1、Opus 5.5及GPT-6 Astra；OpenAI联手新思科技开发芯片设计AI，并首度公开指控月之暗面发起模型蒸馏；FTC对OpenAI、Anthropic等头部AI实验室启动全面消费者保护调查，监管力度升级。",
+  "since": "2026-09-30T20:28:18Z",
+  "active_event_count": 30,
   "key_themes": [
-    "ai_monetization",
     "model_capability",
+    "ai_monetization",
     "compute_demand",
     "policy_export",
-    "edge_ai"
+    "chip_supply"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nAMD-World Labs收购（82亿美元，估值7个月涨60%）与World Labs\"无规模收入、技术路线未收敛\"形成估值争议；同一周期内对Meta Muse出现两极解读——tmtpost一篇称Muse下载超越ChatGPT、推动Meta两日涨19%，另一篇则以铁路狂热类比质疑Personal Agent商业闭环。算力侧同样存在张力：高盛统计2026年AI融资达5000亿美元，但Sonnet 5.5、SoL-Refiner、CLM等多条线索指向单任务算",
+  "cross_analysis": "【核心矛盾】\nGoogle Gemini 4 Argon的定位存在明显矛盾：Axios称其已对网络安全合作伙伴小范围开放并跑赢GPT-6 Astra，Ars Technica则指其尚未对用户开放，DeepMind官方仅公布标题无实质细节，Reddit泄露帖（18项benchmark赢12项、法律自主工作19.6% vs 5.4%）来源可信度极低。同期OpenAI GPT-6.1 Sol（MathArena第一、$0.94 vs $2.26、20 tokens/秒）亦同样依赖低可信度Reddit/HackerNews源，两条模型竞赛叙事在可靠性上存在系统性偏差。\n\n【新兴趋势】\n三大厂商在Agent-ready提示词格式上出现标准化趋同（Google Skills采用Anthropic开放标准、OpenAI推出Decisions API管理swarming agents），叠加推理成本下行（GPT-6.1 Sol $0.94 vs Astra $2.26）与推理速度跃升（20 t/s），共同指向\"廉价快速智能\"作为下一阶段商业化主轴。同期FTC对OpenAI/Anthropic启动具法律约束力的调查、Trump推动自律承诺，反映美方监管呈现\"硬合规+软立法\"的并行松紧组合。\n\n【信息盲点】\n中概AI标的（除Moonshot被点名外）几乎完全缺席；Apple、Microsoft作为超大规模云厂无独立信号；Anthropic缺乏产品/收入/客户进展报道；博通、台积电除间接传导外无直接条目；寒武纪仅出现治理出清，缺乏产品迭代与商业化验证。OpenAI自研芯片路线图细节缺失，难以量化对英",
   "trend_spotting": "1. 【新兴趋势】Agent Runtime正取代纯模型参数成为新一轮差异化主战场：Anthropic Sonnet 5.5工具调用减1/3、DeepSeek公开DSec弹性计算框架、OpenAI Dots与GPT-6 Astra分层API路线、阿里CLM把上下文管理内化为模型行为，四条路径共同指向\"单位任务算力消耗下降\""
 }
