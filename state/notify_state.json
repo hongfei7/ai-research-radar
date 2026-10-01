@@ -4,84 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "Anthropic"
-      ],
-      "features": [
-        "agent",
-        "opus",
-        "runtime",
-        "sonnet",
-        "价只",
-        "化核",
-        "半价",
-        "变化",
-        "只是",
-        "度拆",
-        "才是",
-        "拆解",
-        "是变",
-        "是表",
-        "核心",
-        "深度",
-        "表象",
-        "解半",
-        "象才"
-      ],
-      "sent_at": "2026-09-30T09:03:02Z"
-    },
-    {
-      "tickers": [
-        "DeepSeek"
-      ],
-      "features": [
-        "agent",
-        "deepseek",
-        "dsec",
-        "v4.1",
-        "乎独",
-        "公开",
-        "发文",
-        "大本",
-        "家发",
-        "开训",
-        "文首",
-        "本营",
-        "次公",
-        "独家",
-        "知乎",
-        "练大",
-        "训练",
-        "首次"
-      ],
-      "sent_at": "2026-09-30T09:03:28Z"
-    },
-    {
-      "tickers": [
-        "Meta",
-        "OpenAI"
-      ],
-      "features": [
-        "dots",
-        "openai",
-        "上场",
-        "在门",
-        "场这",
-        "型拦",
-        "天把",
-        "家最",
-        "强模",
-        "把自",
-        "拦在",
-        "最强",
-        "模型",
-        "自家",
-        "这天",
-        "门外"
-      ],
-      "sent_at": "2026-09-30T09:03:51Z"
-    },
-    {
-      "tickers": [
         "AMD"
       ],
       "features": [
@@ -387,6 +309,82 @@
         "with"
       ],
       "sent_at": "2026-10-01T06:05:16Z"
+    },
+    {
+      "tickers": [
+        "美光"
+      ],
+      "features": [
+        "as",
+        "generates",
+        "it",
+        "micron",
+        "profit",
+        "projects",
+        "ram",
+        "record",
+        "shortages",
+        "through",
+        "tightening"
+      ],
+      "sent_at": "2026-10-01T13:04:36Z"
+    },
+    {
+      "tickers": [
+        "谷歌"
+      ],
+      "features": [
+        "argon",
+        "gemini",
+        "个做",
+        "了个",
+        "但干",
+        "做题",
+        "出了",
+        "家屠",
+        "屠榜",
+        "差点",
+        "干活",
+        "意思",
+        "推出",
+        "榜但",
+        "歌推",
+        "活差",
+        "点意",
+        "谷歌",
+        "题家"
+      ],
+      "sent_at": "2026-10-01T13:05:03Z"
+    },
+    {
+      "tickers": [
+        "Anthropic"
+      ],
+      "features": [
+        "agentic",
+        "ai",
+        "anthropic",
+        "business",
+        "came",
+        "clients",
+        "comes",
+        "estimates",
+        "financial",
+        "from",
+        "in",
+        "its",
+        "just",
+        "nearly",
+        "of",
+        "revenue",
+        "say",
+        "semianalysis",
+        "sources",
+        "times",
+        "two",
+        "while"
+      ],
+      "sent_at": "2026-10-01T13:05:30Z"
     }
   ],
   "last_report": {

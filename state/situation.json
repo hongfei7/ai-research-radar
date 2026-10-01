@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-10-01T06:04:14Z",
-  "text": "当前共有 23 个活跃事件。要点包括: Google Gemini 4 Argon closes the gap with OpenAI and Anthropic but doesn't take a clear lead; Micron reports Q4 revenue up 379% YoY to $54.23B, vs. $51.07B est., net income up 1,078% to $37.7B, and forecasts Q1 revenue above estimates (CNBC); Micron CEO Sanjay Mehrotra says RAM shortages will persist into 2028 and perhaps beyond, and customers will pay \"much higher prices\" than they did this year (Simon Sharwood/The Register); Sources: Tencent signed a ~$7B, five-year deal with Oracle this year for access to ~100K advanced AI chips unavailable in China via Southeast Asian data centers (Zijing Wu/Financial Times); 谷歌正式发布Gemini 4前沿大模型，主打写作能力。",
-  "since": "2026-10-01T06:04:14Z",
-  "active_event_count": 23,
+  "generated_at": "2026-10-01T13:04:11Z",
+  "text": "当前共有 15 个活跃事件。要点包括: Micron projects tightening RAM shortages through 2028 as it generates record profit; 谷歌推出了个“做题家”：Gemini 4 Argon屠榜，但干活差点意思; SemiAnalysis estimates ~90% of Anthropic's business comes from agentic AI, while sources say nearly 25% of its revenue in 2025 came from just two clients (Financial Times); Dell, Jera, and UK-based Rhaelm partner to build a $15B, 400MW off-grid AI data center and gas power plant near Tokyo, set to begin operations around 2028 (Financial Times); OpenAI says it stopped a campaign to steal its models' reasoning, but the trick still worked on Azure。",
+  "since": "2026-10-01T13:04:11Z",
+  "active_event_count": 15,
   "key_themes": [
+    "model_capability",
     "compute_demand",
     "ai_monetization",
-    "model_capability",
-    "chip_supply",
-    "advanced_packaging"
+    "policy_export",
+    "datacenter_power"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n美光CEO与韩国9月芯片出口数据同向印证存储超级周期，但美光CFO财报口径的FY27Q1收入疑似615亿/61.5亿美元录入异常，数字可信度存疑，与韩国603亿美元单月出口量级匹配性需交叉验证。另一显著矛盾在模型层：Artificial Analysis称Gemini 4 Argon在Intelligence Index追平GPT-6 Astra且幻觉率仅15%对51%，但OpenAI同期推出Dots智能体与ChatGPT Space，体现\"能力被追平\"与\"产品形态创新\"两条路径分化——谷歌走性价比与可靠性，OpenAI押注Agent代际跃迁。\n\n【新兴趋势】\n\"智能体2.0\"是本轮最强复现主题，OpenAI Dots、Meta Muse、Manus、阿里云云栖大会\"芯云模一体\"四源同框，从指令响应转向自主拆解目标与异步执行，叠加Agent负载是传统云10-100倍判断，token消耗二次爆发几乎成共识。电力瓶颈作为第二主线反复出现：Amazon-Constellation 20年核电长协、8200个数据中心卡在并网排队5年以上、PJM容量拍卖连续顶格出清，电网接入已替代芯片成为AI基建最刚性约束。\n\n【信息盲点】\n台积电作为所有HBM/逻辑芯片产能的咽喉在本轮完全缺席；博通/Arista/Marvell等网络互联标的未出现，而推理侧Token百倍级增长直接放大互联带宽需求；A股国产AI芯片（寒武纪、海光）及电力设备/公用事业类标的未被",
+  "cross_analysis": "【核心矛盾】\nOpenAI指控月之暗面窃取模型推理能力一事，The Decoder侧重指出同一攻击手法在微软Azure上仍持续有效，矛头指向微软转售渠道的防护盲区；Tom's Hardware版本则聚焦中美AI安全博弈及中方背景行为者，对Azure漏洞只字未提，两条线索对责任主体（OpenAI vs 微软）解读存在分歧。此外，Anthropic被披露25%收入来自两家客户（高集中度风险），与同期Claude for Government GA的渠道扩张",
   "trend_spotting": "1. 【新兴趋势】Agent Runtime正取代纯模型参数成为新一轮差异化主战场：Anthropic Sonnet 5.5工具调用减1/3、DeepSeek公开DSec弹性计算框架、OpenAI Dots与GPT-6 Astra分层API路线、阿里CLM把上下文管理内化为模型行为，四条路径共同指向\"单位任务算力消耗下降\""
 }
