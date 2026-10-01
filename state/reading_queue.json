@@ -157,6 +157,45 @@
       "queued_at": "2026-10-01T18:47:18Z"
     },
     {
+      "id": "3dcf1591427c966018a56afa07ecd1fec89ba384",
+      "title": "Memory executives expect RAM shortage to continue through 2028",
+      "url": "https://arstechnica.com/information-technology/2026/10/memory-supplies-are-only-getting-tighter-micron-ceo-says",
+      "source": "rss:arstechnica",
+      "published_at": "2026-10-01T17:49:56Z",
+      "raw_summary": "Prices for memory sold for 2027 \"are much higher than 2026 prices.\"",
+      "score": 8,
+      "angle": "industry",
+      "source_traceable": false,
+      "why": "存储厂商预期RAM短缺持续到2028，含价格趋势数字，直接影响算力硬件成本判断。",
+      "queued_at": "2026-10-01T23:02:58Z"
+    },
+    {
+      "id": "f546fd8c804333b2827ee6d5b30cb92d81a857ff",
+      "title": "AMA about K2 Horizon, Meet our team from IFM",
+      "url": "https://www.reddit.com/r/localllama/comments/1wv8zww/ama_about_k2_horizon_meet_our_team_from_ifm",
+      "source": "reddit:localllama",
+      "published_at": "2026-10-01T19:34:20Z",
+      "raw_summary": "Hi r/LocalLLaMA! We’re researchers at the Institute of Foundation Models (IFM), an AI research lab dedicated to open and independent development of frontier-class foundation models. We recently released K2 Horizon a connected fleet of six fully open models with size ranging from 0.9B to 375B. In addition to weights, we also open-sourced training data and recipes, training code, intermediate checkpoints, fine-grained training logs and evals. Ask us anything about pre-training and data mixes, post-training, small models on-device, MoVA and sparse attention, deployment, what’s out now, and what’s coming next. Participating in the AMA: Hector Liu u/hunterhector Alexander Moreno u/IFMAlex Mikhail Yurochkin u/my-moonfolk Rupesh Srivastava u/k2pt Junlin Chen u/Junlin_Chen110 Haonan Li u/East-Career9147 We'll be live Mon, Oct 5, 8–10 PM PT. Questions are open now, so drop yours anytime! https://preview.redd.it/awu0r6fbowsh1.png?width=3240&amp;format=png&amp;auto=webp&amp;s=860018e2d8aeb7575a1ddd11ed2c2f735948938d &#32; submitted by &#32; /u/aya-ifm [link] &#32; [comments]",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "IFM团队公开K2 Horizon六个全开源模型(0.9B-375B)的训练细节、数据配方、MoVA/稀疏注意力设计，是少见的完整开源复现材料。",
+      "queued_at": "2026-10-01T23:02:58Z"
+    },
+    {
+      "id": "b9fbd217ffbabd0d3a7a0d7ff0862bb893205799",
+      "title": "Running 95.5 GiB Qwen3.8-Flash-Next at 41–52 tok/s on a 64GB Mac (1.76x faster than llama.cpp): Slipstream release, 130k context scaling, + Swift variant",
+      "url": "https://www.reddit.com/r/localllama/comments/1wva7l2/running_955_gib_qwen38flashnext_at_4152_toks_on_a",
+      "source": "reddit:localllama",
+      "published_at": "2026-10-01T20:21:42Z",
+      "raw_summary": "I've been working on getting the 95.5 GiB Qwen3.8-Flash-Next model to run fast on a single 64GB Mac. In my earlier posts, I shared a custom expert-streaming fork of llama.cpp . It worked, but decode capped out around ~23–27 tok/s and slowed down as context grew. Today I'm releasing Slipstream: a compiled C++ Metal inference engine with native SSD expert streaming and speculative drafting for Apple Silicon. The main result: If you already downloaded my original V3 model (34k+ downloads), you don't need to re-download anything. You can run that exact checkpoint on Slipstream for a 1.76x speedup: 41–52 tok/s (up from 23.1 tok/s in llama.cpp) on the same 64GB Mac. Even better: decode speed doesn't collapse at long context. Across 3,086 live requests in real coding sessions, it stays flat at 33–44 tok/s all the way out to 130,000 tokens. Previous posts for context: Qwen3.8-Flash-Next in llama.cpp on r/Qwen_AI Splash Engine native 8-bit on r/LocalLLaMA Open source resources: Slipstream Engine on GitHub Original V3 Model on Hugging Face Optional Swift KV-Sparse Model on Hugging Face 1. How to run your existing V3 model on Slipstream If you have the model from the last post (~/models/qwen38-flash-next-v3), you can point Slipstream directly at it. Step 1: Clone &amp; build (under 1 minute) git clone https://github.com/npanj/slipstream.git cd slipstream make -j4 Step 2: Download the model (if you don't already have it) # Downloads the 3 GGUF shards + MTP draft head (~95.5 GiB total) hu",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "自研C++/Metal推理引擎Slipstream在Apple Silicon上对Qwen3.8-Flash-Next实现1.76x加速，SSD expert streaming+投机解码思路有复用价值。",
+      "queued_at": "2026-10-01T23:02:58Z"
+    },
+    {
       "id": "eeaf3aba6e2bbb7e65a231c6d80aee762cf8dfc6",
       "title": "An AI “mind-reading” tool can reconstruct what you’re looking at based on a brain scan",
       "url": "https://www.technologyreview.com/2026/10/01/1145588/ai-mind-reading-reconstructs-what-youre-looking-at",
@@ -479,45 +518,6 @@
       "angle": "research",
       "source_traceable": true,
       "why": "Stratego AI的突破——通过第二个神经网络猜测隐藏棋子身份是不完全信息博弈的关键思路，可追踪到CMU/NYU等团队的具体工作。",
-      "queued_at": "2026-10-01T18:47:18Z"
-    },
-    {
-      "id": "a427f4802da0d2b4b8baf78eaf0b63ec5b3ee85c",
-      "title": "AI beats Stratego's greatest player, ending one of the last human strongholds in board games",
-      "url": "https://the-decoder.com/ai-beats-strategos-greatest-player-ending-one-of-the-last-human-strongholds-in-board-games",
-      "source": "rss:the-decoder",
-      "published_at": "2026-10-01T12:58:02Z",
-      "raw_summary": "The AI system Ataraxos has decisively beaten the best Stratego player of all time. The board game is a tough test for AI because both sides set up their pieces face down. Google Deepmind fell short in 2023 despite a multimillion-dollar budget. Researchers from Carnegie Mellon, NYU, Stanford, and MIT built Ataraxos for less than $8,000. The article AI beats Stratego&#039;s greatest player, ending one of the last human strongholds in board games appeared first on The Decoder.",
-      "score": 7,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "Ataraxos以$8000成本击败Stratego最强人类玩家，可与DeepMind 2023年的失败对比，是不完全信息博弈的里程碑。",
-      "queued_at": "2026-10-01T18:47:18Z"
-    },
-    {
-      "id": "6574e2cbcd905fece3a76d602857f942ff429e5c",
-      "title": "Volantis, which aims to use vertical-cavity surface-emitting lasers, like those used by the iPhone's Face ID, to connect AI chips and memory chips, raised $88M (Stephen Nellis/Reuters)",
-      "url": "https://www.techmeme.com/261001/p25#a261001p25",
-      "source": "rss:techmeme",
-      "published_at": "2026-10-01T15:45:03Z",
-      "raw_summary": "Stephen Nellis / Reuters: Volantis, which aims to use vertical-cavity surface-emitting lasers, like those used by the iPhone's Face ID, to connect AI chips and memory chips, raised $88M&nbsp; &mdash;&nbsp; San Francisco-based semiconductor startup Volantis on Thursday said it has raised $88 million in venture capital in an effort &hellip;",
-      "score": 7,
-      "angle": "route",
-      "source_traceable": true,
-      "why": "Volantis用VCSEL光互连连接AI芯片与存储，代表chiplet/光通信替代电气互连的路线之争，$88M融资值得追踪。",
-      "queued_at": "2026-10-01T18:47:18Z"
-    },
-    {
-      "id": "f8eed541986179b0601fe016110cbd765b467b87",
-      "title": "DeepSeek and Huawei release open-source Ascend AI programming tools to reduce reliance on Nvidia ecosystem",
-      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/deepseek-and-huawei-release-open-source-ascend-ai-programming-tools-to-reduce-reliance-on-nvidia-ecosystem-tools-include-compute-and-communication-libraries-as-well-as-ascend-support-for-tilelang",
-      "source": "rss:tomshardware",
-      "published_at": "2026-10-01T14:00:00Z",
-      "raw_summary": "DeepSeek and Huawei have released open-source programming tools for Ascend 950 AI chips, including compute and communication libraries, aimed at making Huawei hardware easier to program and optimize.",
-      "score": 7,
-      "angle": "engineering",
-      "source_traceable": true,
-      "why": "DeepSeek+华为开源Ascend 950算子与通信库，对去Nvidia化栈有可动手的工程参考价值。",
       "queued_at": "2026-10-01T18:47:18Z"
     }
   ],

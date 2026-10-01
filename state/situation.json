@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-10-01T18:55:01Z",
-  "text": "当前共有 30 个活跃事件。要点包括: Micron projects tightening RAM shortages through 2028 as it generates record profit; 谷歌推出了个“做题家”：Gemini 4 Argon屠榜，但干活差点意思; SemiAnalysis estimates ~90% of Anthropic's business comes from agentic AI, while sources say nearly 25% of its revenue in 2025 came from just two clients (Financial Times); Sources: Anthropic could start formal marketing for its IPO as soon as the week of November 9, putting it in line to begin trading before Thanksgiving (Bailey Lipschultz/Bloomberg); 谷歌Gemini 4突然发布！RSI加持，GPT和Opus都让让。",
-  "since": "2026-10-01T18:55:01Z",
-  "active_event_count": 30,
+  "generated_at": "2026-10-01T23:06:44Z",
+  "text": "截至 2026-10-02 07:06 HKT，本轮新增聚焦资金、产品与监管三线。资金端，SoftBank与Nvidia分别完成对OpenAI的100亿美元最终投资，产业资本绑定加深。产品端，微软发布MAI-Transcribe-2-Streaming流式转录与MAI-Voice-2.1语音模型，补齐多模态矩阵；OpenAI ChatGPT上线虚拟试衣功能，谷歌Gemini Live推出Guided Vision端侧视觉交互。监管端，法院驳回Chegg与Penske对谷歌AI搜索的反垄断诉讼，法律风险短期缓解；存储高管再度警示RAM短缺将延续至2028年；高端GPU对华出口黑市报道凸显管制有效性争议。",
+  "since": "2026-10-01T23:06:44Z",
+  "active_event_count": 23,
   "key_themes": [
-    "model_capability",
     "ai_monetization",
     "compute_demand",
+    "model_capability",
     "chip_supply",
-    "policy_export"
+    "edge_ai"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nOpenAI指控月之暗面窃取模型推理能力一事，The Decoder侧重指出同一攻击手法在微软Azure上仍持续有效，矛头指向微软转售渠道的防护盲区；Tom's Hardware版本则聚焦中美AI安全博弈及中方背景行为者，对Azure漏洞只字未提，两条线索对责任主体（OpenAI vs 微软）解读存在分歧。此外，Anthropic被披露25%收入来自两家客户（高集中度风险），与同期Claude for Government GA的渠道扩张",
+  "cross_analysis": "【核心矛盾】\nGPU黑市报道（HN）显示出口管制实际失效，与美国加码管制的政策意图形成张力；法官驳回Chegg/Penske反垄断诉讼但承认AI搜索确实损害出版商流量，法律结果与实际损害之间存在分歧。谷歌自身判断太空数据中心需Starship发射1800次才具经济性，与其同步推进芯片上轨形成\"长期押注vs短期不经济\"的内部矛盾。\n\n【新兴趋势】\n\"算力瓶颈\"以多形态反复出现：RAM短缺持续至2028（Ars）、太空数据中心概念落地（Google）、GPU黑市分流（HN）——三者从供给侧、空间侧、灰色市场侧共同折射地面算力已逼近极限。AI变现路径呈C端化与多模态化双线：OpenAI虚拟试穿、Microsoft语音模型矩阵、Google Guided Vision，标志大模型竞争从\"参数\"转向\"场景落地\"。\n\n【信息盲点】\n苹果、Meta、AMD（除黑市外）在本轮完全缺位；台积电、博通、Marvell等AI芯片设计/定制链条未被提及；电力链标的（GEV、Vistra、Constellation）与冷却技术（液冷）供应商在算力瓶颈叙事下应被重点关注但缺席；中国大模型厂商及国产GPU替代标的未覆盖。\n\n【跨标的联动】\nSoftBank/Nvidia完成对OpenAI共400亿美元注资（The Information），锁定\"资本—芯片—模型\"三角绑定，加剧算力军备竞赛。RAM短缺—HBM挤占—三星/海力士/美光优先高毛利—下游OEM（戴尔/超微）BOM承压的传导链明确。微软自研语音模型与Azure算力采购结构变化存在二阶联动，值得跟踪。",
   "trend_spotting": "1. 【新兴趋势】Agent Runtime正取代纯模型参数成为新一轮差异化主战场：Anthropic Sonnet 5.5工具调用减1/3、DeepSeek公开DSec弹性计算框架、OpenAI Dots与GPT-6 Astra分层API路线、阿里CLM把上下文管理内化为模型行为，四条路径共同指向\"单位任务算力消耗下降\""
 }
