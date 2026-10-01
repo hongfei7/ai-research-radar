@@ -1,32 +1,7 @@
 {
-  "morning_last_date": "2026-09-30",
+  "morning_last_date": "2026-10-01",
   "weekly_last_slot": "2026-W39",
   "breaking_fingerprints": [
-    {
-      "tickers": [
-        "AMD",
-        "OpenAI",
-        "英伟达"
-      ],
-      "features": [
-        "dots",
-        "gpt-6.1",
-        "openai",
-        "sol",
-        "主智",
-        "体模",
-        "候自",
-        "全天",
-        "出全",
-        "天候",
-        "推出",
-        "智能",
-        "模型",
-        "能体",
-        "自主"
-      ],
-      "sent_at": "2026-09-29T23:38:39Z"
-    },
     {
       "tickers": [
         "OpenAI"
@@ -281,47 +256,125 @@
         "gemini"
       ],
       "sent_at": "2026-09-30T20:29:17Z"
+    },
+    {
+      "tickers": [
+        "Anthropic",
+        "OpenAI",
+        "谷歌"
+      ],
+      "features": [
+        "and",
+        "anthropic",
+        "argon",
+        "but",
+        "clear",
+        "closes",
+        "doesn",
+        "gap",
+        "gemini",
+        "google",
+        "lead",
+        "openai",
+        "take",
+        "the",
+        "with"
+      ],
+      "sent_at": "2026-10-01T00:09:07Z"
+    },
+    {
+      "tickers": [
+        "美光"
+      ],
+      "features": [
+        "37.7b",
+        "51.07b",
+        "54.23b",
+        "above",
+        "and",
+        "cnbc",
+        "est",
+        "estimates",
+        "forecasts",
+        "income",
+        "micron",
+        "net",
+        "q1",
+        "q4",
+        "reports",
+        "revenue",
+        "to",
+        "up",
+        "vs",
+        "yoy"
+      ],
+      "sent_at": "2026-10-01T00:09:29Z"
+    },
+    {
+      "tickers": [
+        "谷歌"
+      ],
+      "features": [
+        "argon",
+        "called",
+        "gemini",
+        "google",
+        "its",
+        "model",
+        "most",
+        "powerful",
+        "releases",
+        "yet"
+      ],
+      "sent_at": "2026-10-01T00:09:45Z"
     }
   ],
   "last_report": {
-    "date": "2026-09-30",
+    "date": "2026-10-01",
     "macro": {
-      "cycle": "扩张第三年向第四年过渡,头部五家云厂2027年AI基建支出指引已升至1.2万亿美元,较当前水平再上50%以上;Anthropic招股书披露2025年净亏420亿美元、2027年支出指引高达5000亿美元(E4),同时以2万亿估值递表,头部AI公司亏损融资转长单的行为模式正把需求侧长协可见度钉死在2027年。",
+      "cycle": "扩张第三年向第四年过渡,美光FQ4单季营收542.3亿美元、同比+379%,净利同比+1078%,单季净利率近70%,标志存储环节从高景气升格为超级周期(E4、E7);头部五家云厂2027年AI基建指引已升至1.2万亿美元,Anthropic 5000亿支出指引与2万亿估值递表把需求侧长协可见度钉死在2027年,景气仍未见顶但环比斜率首次转平",
       "trajectory": {
         "past": "晶圆制程产能",
         "now": "HBM位元密度与先进封装",
         "next": "数据中心电力接入与机柜热密度",
-        "why_now": "GPT-6.1 Sol以Astra 1/5价格发布(E8、E12)、OpenAI ARR逼近700亿且Q3新增70%(E6、E11),推理端单价下行×调用量放大的乘数效应,把HBM3e/12e与CoWoS-L的产能挤压从训练侧传导到推理侧。",
-        "trigger": "若单机柜功率密度规模化突破130kW并实现批量交付,或北美新建园区电网接入排队成为主要延迟项,即视为下一阶段主约束被验证。"
+        "why_now": "美光Q4业绩以量价齐升确认HBM3e/12e位元仍是硬约束,E4把推理侧HBM并发访问的紧张从拐点观察升级为主矛盾",
+        "trigger": "若单机柜功率密度规模化突破130kW并实现批量交付,或北美新建园区电网接入排队成为主要延迟项,即视为下一阶段主约束被验证"
       },
-      "shift": "维持轨迹主轴不变,Anthropic Akamai长单与5000亿支出指引把now段硬约束进一步坐实;推理侧供给紧张从上一期的拐点观察上调为本期主矛盾之一。",
+      "shift": "维持轨迹主轴不变,Anthropic Akamai长单与5000亿支出指引把now段硬约束进一步坐实;推理侧供给紧张从上一期的拐点观察上调为本期主矛盾之一",
       "shift_kind": "adjust"
     },
     "calls": [
       {
         "claim": "HBM与CoWoS-L的供需缺口在2027年前无法靠扩产填平,头部AI公司正以亏损融资转长协的方式预占产能",
-        "falsifier": "若2026Q4 SK海力士HBM3e 12-Hi报价环比回落超过5%,或台积电CoWoS-L月产能突破2.5万片且良率稳定在90%以上,本判断的供需缺口假设失效。",
+        "falsifier": "若2026Q4 SK海力士HBM3e 12-Hi报价环比回落超过5%,或台积电CoWoS-L月产能突破2.5万片且良率稳定在90%以上,本判断的供需缺口假设失效",
         "verify": "Q4 HBM3e报价不回落、CoWoS-L月产能不破2万片"
       },
       {
         "claim": "推理侧HBM并发访问的供给紧张已先于训练侧显性化,Sonnet 5.5以降本30%放大调用量,推理芯片与HBM的乘数效应被低估",
-        "falsifier": "若2026Q4 Sonnet 5.5企业ARR环比增速低于20%,或主流云厂公开HBM库存周转天数回升至45天以上,推理侧供给紧张的判断失效。",
+        "falsifier": "若2026Q4 Sonnet 5.5企业ARR环比增速低于20%,或主流云厂公开HBM库存周转天数回升至45天以上,推理侧供给紧张的判断失效",
         "verify": "Q4 Sonnet 5.5企业ARR增速、推理侧HBM库存周转"
       },
       {
-        "claim": "AMD以82亿美元全股票收购World Labs,是用不到两个月自由现金流换一张模型层入场券,对标英伟达生态护城河的战略意义大于财务贡献",
-        "falsifier": "若2026Q4 World Labs核心团队(李飞飞及创始团队)流失率超过30%,或AMD ROCm在MLPerf Inference基准上对CUDA的差距未收窄至15%以内,本判断的生态护城河假设失效。",
-        "verify": "World Labs团队留存率、AMD ROCm收入占比"
+        "claim": "Google Gemini 4 Argon并未取得实质领先,token效率劣势抵消单token价格优势,前沿模型竞争从'能力军备'转向'单位任务成本'",
+        "falsifier": "若2026Q4 Argon在独立盲测中稳定进入Claude Opus 5.5能力区间,或Google Cloud AI业务季度营收增速回升至50%以上,本判断的'能力追平'假设失效",
+        "verify": "Argon在第三方盲测中是否进入Opus 5.5区间"
       },
       {
-        "claim": "OpenAI首次因模型过强主动叫停Astra发布,能力溢出开始反向倒逼安全与监管披露,这是能力曲线而非算力曲线的拐点信号",
-        "falsifier": "若2026Q4 OpenAI在不显著降级的前提下恢复Astra 6.1发布,或xAI、Meta在自有披露中拒绝效仿AI灭绝风险条款,本判断的监管披露升级假设失效。",
-        "verify": "Q4 OpenAI是否恢复Astra 6.1发布、招股书AI风险披露是否被xAI/OpenAI效仿"
+        "claim": "AMD以82亿美元全股票收购World Labs,是用不到两个月自由现金流换一张模型层入场券,对标英伟达生态护城河的战略意义大于财务贡献",
+        "falsifier": "若2026Q4 World Labs核心团队(李飞飞及创始团队)流失率超过30%,或AMD ROCm在MLPerf Inference基准上对CUDA的差距未收窄至15%以内,本判断的生态护城河假设失效",
+        "verify": "World Labs团队留存率、AMD ROCm在MLPerf Inference上对CUDA差距"
       }
     ]
   },
   "morning_fallback": null,
   "blindspot_ledger": [
+    {
+      "key": "AMD|Anthropic|OpenAI|台积电|海力士|美光",
+      "text": "台积电与SK海力士在coverage_audit中未单列,但cross_analysis明确指出本轮报道未直接覆盖SK海力士、三星(美光HBM竞争对手/同向受益方)及TSMC CoWoS先进封装产能瓶颈;AMD虽在事件层面密集出现(E2、E8),但作为结构性覆盖标的其自有披露通道sec_edgar近30天仅6条来源、15条提及,判断高度依赖二手转述;Anthropic与OpenAI作为独立投资标的的商业化进展同样缺一手披露,本期内对模型层定价权的判断存在结构性盲区",
+      "first_seen": "2026-10-01",
+      "last_seen": "2026-10-01",
+      "times_seen": 1
+    },
     {
       "key": "ASML|Marvell|Meta|博通|戴尔|美光",
       "text": "本库近30天覆盖度结构性失衡:Meta有140条信息、Apple 106条、ASML 33条、Marvell 16条,但level=structural下全部回看窗口内零自有披露,对其判断完全依赖二手转述与同业外推;美光(79条)35天未发披露,博通38条27天未发,戴尔19条15天未发,意味着HBM3e/12e供需、ASIC定制节奏、整机柜出货的真实口径比任何二手报道都滞后一拍;本框架对now段的判断,本质是在信息黑箱上的工程外推。",
@@ -397,13 +450,6 @@
       "text": "英伟达、台积电、三星电子在近 30 天分别有 121、57、若干条相关信息进入本库, 但全部为二手转述, 无一条来自其自有披露通道, 对 HBM 实际配比、CoWoS 月度产出与机柜热设计的判断只能依赖博通、海力士、美光的同向背书与外推。超微电脑近 30 天仅 20 条且 20 天未更新自有披露, 在单机柜功率密度突破 130kW 的关键观察窗口里, 机柜级集成商的一手数据几乎是断的, 这正是 next 段最该被跟踪的物理信号。",
       "first_seen": "2026-09-20",
       "last_seen": "2026-09-20",
-      "times_seen": 1
-    },
-    {
-      "key": "AMD|Anthropic|Marvell|Meta|博通|微软|美光|英伟达|苹果|超微电脑",
-      "text": "覆盖审计显示核心标的长期依赖二手转述。苹果近30天有125条相关信息进入本库但无一手披露，Meta 81条同样全部二手，英伟达更甚；微软、AMD、美光、博通、超微电脑均属自有披露陈旧(16至23天未更新)，Marvell已21天无自有披露。对这些标的当前判断全部依赖二手转载与同业外推，财报季前后预期管理空间被显著低估。Anthropic招股书披露的算力采购结构(E3)是少数能校准云厂capex与GPU订单可见度的一手窗口，但其向第三方机构开放评估(趋势段提及)尚未形成机制。",
-      "first_seen": "2026-09-19",
-      "last_seen": "2026-09-19",
       "times_seen": 1
     }
   ]

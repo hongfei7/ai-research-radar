@@ -222,6 +222,32 @@
       "queued_at": "2026-09-30T20:20:34Z"
     },
     {
+      "id": "4aba897202c07177ce8a4bfce4ee0560911fafc4",
+      "title": "Gemini 4 Argon (High): Intelligence, Performance and Price Analysis",
+      "url": "https://artificialanalysis.ai/models/gemini-4-argon",
+      "source": "hackernews",
+      "published_at": "2026-09-30T20:50:28Z",
+      "raw_summary": "Gemini 4 Argon (High): Intelligence, Performance and Price Analysis. See also: <i>Gemini 4 Argon</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49913571\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=49913571</a>",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Gemini 4 Argon的智能力、速度与价格独立分析，含benchmark对比和token效率数据。",
+      "queued_at": "2026-10-01T00:05:38Z"
+    },
+    {
+      "id": "5d52e6c7c3b9392486fece73cdaf1df2a5ce6e1d",
+      "title": "Two open-weights releases: Victoria (Qwen3.8-Flash-Next with 44% of experts cut, 70% Terminal-Bench 2.1, GGUF included) and Maple (a Canada-first fine-tune)",
+      "url": "https://www.reddit.com/r/localllama/comments/1wujph3/two_openweights_releases_victoria_qwen38flashnext",
+      "source": "reddit:localllama",
+      "published_at": "2026-09-30T23:10:03Z",
+      "raw_summary": "We had a Dell B300 in the lab for a few weeks and used it to create two fine tunes of Qwen Flash Next. Victoria (coding and agents) Qwen3.8-Flash-Next cut down by 44% using a paper / technique called REAP: 512 down to 288 per layer. Retrained at 4-bit (NVFP4) afterwards, so it's trained for the format it ships in rather than just quantized after the fact. Terminal-Bench 2.1: 70.0%, averaged over 3 runs with an 8h per-task timeout. Our previous NVFP4 build scored 62.5%. HumanEval: 159/164. 48.0 GiB of weights, including the draft head. The 95.4 GiB n-gram table is separate and not counted in that number. 280 tok/s single stream on one B300 with the draft head, versus 135 without it. GGUF Q4_K_M is 49.17 GiB. It scored 75.3% on Terminal-Bench (a single run, so treat it as noisy) and 93.2% on HumanEval (averaged over 5 runs). Uses 35% fewer output tokens than our previous build. Maple (Canadian questions) Most models answer questions about taxes, benefits and regulations as if you live in the US. Maple is fine-tuned to default to Canada. On 600 held-out questions, with search: Cites an official Canadian source: 6.0% before fine-tuning, 62.9% after. Fully correct answers: 6.6% before, 21.8% after. &quot;No answer&quot; responses: 47.2% before, 23.7% after. It pushes Canada onto people who said they live somewhere else less often: 2.9% before, 1.0% after. Coding holds up: 157/164 on HumanEval. Grading was done by an AI judge panel; human review hasn't happened yet. Links: https://",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "基于 REAP 论文对 Qwen Flash Next 砍掉 44% 专家并做 4-bit 训练后微调，Terminal-Bench 70%、HumanEval 159/164，给出可复现的剪枝+NVFP4 训练方案。",
+      "queued_at": "2026-10-01T00:05:38Z"
+    },
+    {
       "id": "a710914c00b698633ba7014057f70e8dcb5999eb",
       "title": "Thinking Before Thinking: Scaling Agentic Inference Through Meta-Reasoning [Paras Dahal, Anton Bakhtin, Taco Cohen, Zhengxing Chen, Carole-Jean Wu]",
       "url": "http://arxiv.org/abs/2609.38147v1",
@@ -492,32 +518,6 @@
       "angle": "industry",
       "source_traceable": true,
       "why": "中国机器人IPO监管收紧与宇树上市后波动的一手分析，含三类标的分层框架。",
-      "queued_at": "2026-09-30T08:55:31Z"
-    },
-    {
-      "id": "bfdf3c309e956ceb83a9f713463297e4cc5195ae",
-      "title": "A book excerpt details the Sam Altman-Dario Amodei feud, and Greg Brockman and Ilya Sutskever's 2017 plan to auction rights to OpenAI's future AGI to countries (Kevin Roose/The Atlantic)",
-      "url": "https://www.techmeme.com/260930/p11#a260930p11",
-      "source": "rss:techmeme",
-      "published_at": "2026-09-30T08:30:02Z",
-      "raw_summary": "Kevin Roose / The Atlantic: A book excerpt details the Sam Altman-Dario Amodei feud, and Greg Brockman and Ilya Sutskever's 2017 plan to auction rights to OpenAI's future AGI to countries&nbsp; &mdash;&nbsp; A new world has arrived.&nbsp; Dario Amodei and Sam Altman cannot stop fighting over it.&nbsp; &mdash;&nbsp; Being in San Francisco &hellip;",
-      "score": 7,
-      "angle": "route",
-      "source_traceable": true,
-      "why": "新书节选披露Altman-Amodei分歧及2017年Brockman-Sutskever拍卖AGI权利计划，一手内幕价值高。",
-      "queued_at": "2026-09-30T08:55:31Z"
-    },
-    {
-      "id": "756e0b04ca676f576673a33bd8f28be5ad643f5e",
-      "title": "Hands-on with Dots, OpenAI's work-focused agentic product: highly capable and intuitive, with natural-feeling conversations represented as a chat inside ChatGPT (Casey Newton/Platformer)",
-      "url": "https://www.techmeme.com/260930/p6#a260930p6",
-      "source": "rss:techmeme",
-      "published_at": "2026-09-30T06:05:00Z",
-      "raw_summary": "Casey Newton / Platformer: Hands-on with Dots, OpenAI's work-focused agentic product: highly capable and intuitive, with natural-feeling conversations represented as a chat inside ChatGPT&nbsp; &mdash;&nbsp; With safety questions still swirling, the company introduces a more business-focused take on agents",
-      "score": 7,
-      "angle": "engineering",
-      "source_traceable": true,
-      "why": "Platformer一手评测OpenAI Dots交互体验，描述对话流、安全设计等具体产品设计取舍。",
       "queued_at": "2026-09-30T08:55:31Z"
     }
   ],
