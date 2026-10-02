@@ -4,77 +4,6 @@
   "breaking_fingerprints": [
     {
       "tickers": [
-        "Anthropic",
-        "OpenAI",
-        "谷歌"
-      ],
-      "features": [
-        "and",
-        "anthropic",
-        "argon",
-        "but",
-        "clear",
-        "closes",
-        "doesn",
-        "gap",
-        "gemini",
-        "google",
-        "lead",
-        "openai",
-        "take",
-        "the",
-        "with"
-      ],
-      "sent_at": "2026-10-01T00:09:07Z"
-    },
-    {
-      "tickers": [
-        "美光"
-      ],
-      "features": [
-        "37.7b",
-        "51.07b",
-        "54.23b",
-        "above",
-        "and",
-        "cnbc",
-        "est",
-        "estimates",
-        "forecasts",
-        "income",
-        "micron",
-        "net",
-        "q1",
-        "q4",
-        "reports",
-        "revenue",
-        "to",
-        "up",
-        "vs",
-        "yoy"
-      ],
-      "sent_at": "2026-10-01T00:09:29Z"
-    },
-    {
-      "tickers": [
-        "谷歌"
-      ],
-      "features": [
-        "argon",
-        "called",
-        "gemini",
-        "google",
-        "its",
-        "model",
-        "most",
-        "powerful",
-        "releases",
-        "yet"
-      ],
-      "sent_at": "2026-10-01T00:09:45Z"
-    },
-    {
-      "tickers": [
         "字节跳动",
         "腾讯",
         "英伟达"
@@ -390,6 +319,76 @@
         "to"
       ],
       "sent_at": "2026-10-01T23:07:22Z"
+    },
+    {
+      "tickers": [
+        "OpenAI",
+        "英伟达"
+      ],
+      "features": [
+        "accelerate",
+        "astra",
+        "gpt-6",
+        "gpus",
+        "help",
+        "how",
+        "nvidia",
+        "openai",
+        "ultrafast"
+      ],
+      "sent_at": "2026-10-02T02:22:01Z"
+    },
+    {
+      "tickers": [
+        "Anthropic",
+        "OpenAI",
+        "谷歌"
+      ],
+      "features": [
+        "argon",
+        "前沿",
+        "助谷",
+        "后能",
+        "否助",
+        "回前",
+        "导层",
+        "层洗",
+        "歌重",
+        "洗牌",
+        "牌后",
+        "能否",
+        "谷歌",
+        "重回",
+        "领导"
+      ],
+      "sent_at": "2026-10-02T02:22:32Z"
+    },
+    {
+      "tickers": [
+        "AMD",
+        "Anthropic",
+        "微软"
+      ],
+      "features": [
+        "anthropic",
+        "ipo",
+        "假期",
+        "划在",
+        "前进",
+        "在感",
+        "大规",
+        "恩节",
+        "悉计",
+        "感恩",
+        "据悉",
+        "期前",
+        "节假",
+        "行大",
+        "规模",
+        "计划",
+        "进行"
+      ],
+      "sent_at": "2026-10-02T02:22:58Z"
     }
   ],
   "last_report": {

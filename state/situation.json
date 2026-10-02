@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-10-01T23:06:44Z",
-  "text": "截至 2026-10-02 07:06 HKT，本轮新增聚焦资金、产品与监管三线。资金端，SoftBank与Nvidia分别完成对OpenAI的100亿美元最终投资，产业资本绑定加深。产品端，微软发布MAI-Transcribe-2-Streaming流式转录与MAI-Voice-2.1语音模型，补齐多模态矩阵；OpenAI ChatGPT上线虚拟试衣功能，谷歌Gemini Live推出Guided Vision端侧视觉交互。监管端，法院驳回Chegg与Penske对谷歌AI搜索的反垄断诉讼，法律风险短期缓解；存储高管再度警示RAM短缺将延续至2028年；高端GPU对华出口黑市报道凸显管制有效性争议。",
-  "since": "2026-10-01T23:06:44Z",
-  "active_event_count": 23,
+  "generated_at": "2026-10-02T02:21:10Z",
+  "text": "当前共有 14 个活跃事件。要点包括: Memory executives expect RAM shortage to continue through 2028; DeepSeek梁文锋披露运营2万块H芯片，开源昇腾工具替代CUDA; SoftBank made the final $10B investment in its $30B pledge to OpenAI's last funding round; source: Nvidia also made its final $10B investment in the round (The Information); 领导层洗牌后，Argon能否助谷歌重回前沿？; Anthropic据悉计划在感恩节假期前进行大规模IPO。",
+  "since": "2026-10-02T02:21:10Z",
+  "active_event_count": 14,
   "key_themes": [
     "ai_monetization",
     "compute_demand",
     "model_capability",
     "chip_supply",
-    "edge_ai"
+    "datacenter_power"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nGPU黑市报道（HN）显示出口管制实际失效，与美国加码管制的政策意图形成张力；法官驳回Chegg/Penske反垄断诉讼但承认AI搜索确实损害出版商流量，法律结果与实际损害之间存在分歧。谷歌自身判断太空数据中心需Starship发射1800次才具经济性，与其同步推进芯片上轨形成\"长期押注vs短期不经济\"的内部矛盾。\n\n【新兴趋势】\n\"算力瓶颈\"以多形态反复出现：RAM短缺持续至2028（Ars）、太空数据中心概念落地（Google）、GPU黑市分流（HN）——三者从供给侧、空间侧、灰色市场侧共同折射地面算力已逼近极限。AI变现路径呈C端化与多模态化双线：OpenAI虚拟试穿、Microsoft语音模型矩阵、Google Guided Vision，标志大模型竞争从\"参数\"转向\"场景落地\"。\n\n【信息盲点】\n苹果、Meta、AMD（除黑市外）在本轮完全缺位；台积电、博通、Marvell等AI芯片设计/定制链条未被提及；电力链标的（GEV、Vistra、Constellation）与冷却技术（液冷）供应商在算力瓶颈叙事下应被重点关注但缺席；中国大模型厂商及国产GPU替代标的未覆盖。\n\n【跨标的联动】\nSoftBank/Nvidia完成对OpenAI共400亿美元注资（The Information），锁定\"资本—芯片—模型\"三角绑定，加剧算力军备竞赛。RAM短缺—HBM挤占—三星/海力士/美光优先高毛利—下游OEM（戴尔/超微）BOM承压的传导链明确。微软自研语音模型与Azure算力采购结构变化存在二阶联动，值得跟踪。",
+  "cross_analysis": "【核心矛盾】\n同一条NVIDIA主线出现显著分裂：中国侧DeepSeek-华为昇腾深度绑定（16万颗昇腾950DT订单），明确指向\"去英伟达化\"；但英伟达在美侧同时受益——OpenAI GPT-6 Astra Ultrafast依托Blackwell实现8倍加速，参投的Firmus以300亿美元估值赴澳IPO。区域分化矛盾明显。此外，谷歌Argon宣称在DeepSWE超越Claude Opus 5.5与GPT-6 Astra，而英伟达官博仍在高调推广Astra UltraFast——两家对\"前沿模型\"定义存在叙事竞合。\n\n【新兴趋势】\n本轮反复出现的隐线是\"AI基础设施资本化\"：Anthropic拟11月IPO、Firmus 10月澳交所IPO，加上此前OpenAI/xAI估值飙升，标志AI一级市场退出窗口集中打开。第二条隐线是\"推理端经济性\"：Gemini 4将输出token上限从6.4万跃至100万、GPT-6做8倍推理加速、DeepSeek TileLang榨干昇腾性能上限——三者共同指向\"以工程优化摊薄算力成本\"，长尾推升HBM与推理芯片需求。第三条是\"超大规模厂商自研去OpenAI化\"：微软MAI语音三件套是又一例证。\n\n【信息盲点】\nAMD、博通、台积电、HBM三巨头（SK海力士/美光/三星）在本轮均无直接素材，但它们是推理需求与国产替代主题的直接受益/承压方；中芯国际、寒武纪、海光等国产算力标的仅在DeepSeek条目的so_what中提及，无独立新闻验证；Oracle、Meta、AWS的capex节奏缺位；Firmus 1GW数据中心背后的电力/冷却供应链标的也未覆盖。\n\n【跨标的联动】\n\"国产替代\"链条信号强化：",
   "trend_spotting": "1. 【新兴趋势】Agent Runtime正取代纯模型参数成为新一轮差异化主战场：Anthropic Sonnet 5.5工具调用减1/3、DeepSeek公开DSec弹性计算框架、OpenAI Dots与GPT-6 Astra分层API路线、阿里CLM把上下文管理内化为模型行为，四条路径共同指向\"单位任务算力消耗下降\""
 }
