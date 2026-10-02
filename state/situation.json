@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-10-02T02:21:10Z",
-  "text": "当前共有 14 个活跃事件。要点包括: Memory executives expect RAM shortage to continue through 2028; DeepSeek梁文锋披露运营2万块H芯片，开源昇腾工具替代CUDA; SoftBank made the final $10B investment in its $30B pledge to OpenAI's last funding round; source: Nvidia also made its final $10B investment in the round (The Information); 领导层洗牌后，Argon能否助谷歌重回前沿？; Anthropic据悉计划在感恩节假期前进行大规模IPO。",
-  "since": "2026-10-02T02:21:10Z",
-  "active_event_count": 14,
+  "generated_at": "2026-10-02T08:57:41Z",
+  "text": "当前共有 8 个活跃事件。要点包括: 博通据悉筹措600亿美元，为Anthropic芯片项目提供资金; 亚马逊计划向投资者出售80亿美元英伟达芯片; Sources: Amazon has held talks with investors about a deal to spin off $8B of Grace Blackwell chips into an SPV, then lease them back for its US data centers (Financial Times); Experts say mounting cases of Nvidia chips reaching Chinese AI companies despite US export controls are increasingly pointing to gaps in Nvidia's due diligence (Mackenzie Hawkins/Bloomberg); While Claude and GPT are still the two best choices, Gemini seems to be catching up on coding agent index with agy-cli。",
+  "since": "2026-10-02T08:57:41Z",
+  "active_event_count": 8,
   "key_themes": [
     "ai_monetization",
     "compute_demand",
     "model_capability",
     "chip_supply",
-    "datacenter_power"
+    "advanced_packaging"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n同一条NVIDIA主线出现显著分裂：中国侧DeepSeek-华为昇腾深度绑定（16万颗昇腾950DT订单），明确指向\"去英伟达化\"；但英伟达在美侧同时受益——OpenAI GPT-6 Astra Ultrafast依托Blackwell实现8倍加速，参投的Firmus以300亿美元估值赴澳IPO。区域分化矛盾明显。此外，谷歌Argon宣称在DeepSWE超越Claude Opus 5.5与GPT-6 Astra，而英伟达官博仍在高调推广Astra UltraFast——两家对\"前沿模型\"定义存在叙事竞合。\n\n【新兴趋势】\n本轮反复出现的隐线是\"AI基础设施资本化\"：Anthropic拟11月IPO、Firmus 10月澳交所IPO，加上此前OpenAI/xAI估值飙升，标志AI一级市场退出窗口集中打开。第二条隐线是\"推理端经济性\"：Gemini 4将输出token上限从6.4万跃至100万、GPT-6做8倍推理加速、DeepSeek TileLang榨干昇腾性能上限——三者共同指向\"以工程优化摊薄算力成本\"，长尾推升HBM与推理芯片需求。第三条是\"超大规模厂商自研去OpenAI化\"：微软MAI语音三件套是又一例证。\n\n【信息盲点】\nAMD、博通、台积电、HBM三巨头（SK海力士/美光/三星）在本轮均无直接素材，但它们是推理需求与国产替代主题的直接受益/承压方；中芯国际、寒武纪、海光等国产算力标的仅在DeepSeek条目的so_what中提及，无独立新闻验证；Oracle、Meta、AWS的capex节奏缺位；Firmus 1GW数据中心背后的电力/冷却供应链标的也未覆盖。\n\n【跨标的联动】\n\"国产替代\"链条信号强化：",
+  "cross_analysis": "【核心矛盾】\n亚马逊80亿美元Nvidia芯片处置交易存在结构性分歧：36kr报道为\"出售给投资者\"（方向中性），FT/techmeme则描述为\"置入SPV后租回\"（对Nvidia方向偏正）。前者接近表内剥离，后者本质为表外融资——同一交易的不同叙事直接影响对Nvidia订单实质与AWS算力承诺的判断。此外，Amazon SPV若落地，对Nvidia到底是利好（订单不变）还是利空（变相金融化定价）需进一步厘清。\n\n【新兴趋势】\n**AI算力资产的金融化**在多源报道中反复出现：博通为Anthropic ASIC项目筹600亿美元银团贷款、亚马逊80亿美元Nvidia芯片SPV/出售，均显示超大规模客户正通过创新融资工具支撑AI capex。**ASIC对GPU的替代分流**信号增强——博通-Anthropic定制芯片项目与Nvidia主战场直接重叠。**前沿模型能力趋同下的成本/效率竞赛**同样横跨多条线索：Gemini以1/2.5成本逼近Claude、GPT-6 Astra通过token压缩提升49%效率。\n\n【信息盲点】\n本轮严重缺失：AMD（GPU替代叙事的关键对照标的，在出口管制合规与Trainium替代逻辑下均应被讨论）、HBM/存储三巨头（SK海力士/三星/Micron，AI芯片瓶颈环节）、TSMC CoWoS先进封装（博通ASIC与Nvidia Blackwell均依赖，封测产能才是真正的供给约束）。此外，Oracle、CoreWeave、Microsoft等超",
   "trend_spotting": "1. 【新兴趋势】Agent Runtime正取代纯模型参数成为新一轮差异化主战场：Anthropic Sonnet 5.5工具调用减1/3、DeepSeek公开DSec弹性计算框架、OpenAI Dots与GPT-6 Astra分层API路线、阿里CLM把上下文管理内化为模型行为，四条路径共同指向\"单位任务算力消耗下降\""
 }
