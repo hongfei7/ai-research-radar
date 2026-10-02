@@ -66,6 +66,71 @@
       "queued_at": "2026-10-02T08:52:29Z"
     },
     {
+      "id": "6e034264ebae91f2db32ce88d6cb8f6a46ad02ce",
+      "title": "Where-OPD: Spatially Guided On-Policy Self-Distillation of MLLMs with Synthetic Scenes",
+      "url": "https://arxiv.org/abs/2610.02117",
+      "source": "huggingface:papers",
+      "published_at": "2026-09-30T20:00:00Z",
+      "raw_summary": "On-policy self-distillation has recently emerged as an effective approach for improving language-model reasoning by supervising students with a frozen or EMA version of themselves that receives privileged information. Its application to multimodal large language models (MLLMs), however, remains largely unexplored. Recent approaches use privileged visual information, such as image crops corresponding to a question, to improve fine-grained perception, but their gains are confined to tasks that benefit from such visual zooming and require either human-annotated grounding data or external teacher models. We introduce a different form of on-policy self-distillation for MLLMs that provides the teacher with textual, spatially grounded guidance identifying the visual elements relevant to a query. We use procedurally generated scenes with automatically available object identities and spatial coordinates, enabling scalable and annotation-free post-training. The teacher uses this spatial guidance to locate and integrate evidence from multiple relevant image regions, while the student learns to reproduce the resulting behavior from the image and question alone. Our approach consistently improves performance on counting, document and chart understanding benchmarks across multiple models. Importantly, although post-training uses only synthetic scenes, the resulting improvements transfer to real-world perception benchmarks, yielding a 3.23-point gain in average performance across CVBench, V",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "将on-policy self-distillation扩展到MLLM，用synthetic scenes替代人工标注的grounding数据，给出了可复现的训练范式。",
+      "queued_at": "2026-10-02T15:32:37Z"
+    },
+    {
+      "id": "daf55725dc66a6df486115fa6750341b1a579fff",
+      "title": "Decoding Looped Transformers Better for (Almost) Free",
+      "url": "https://arxiv.org/abs/2610.02185",
+      "source": "huggingface:papers",
+      "published_at": "2026-09-30T20:00:00Z",
+      "raw_summary": "Looped Transformers achieve parameter efficiency by repeatedly executing a shared block across recurrent loops. Each loop yields an intermediate representation decodable for the same next token, yet standard decoding discards earlier states. Because earlier loops embody less computation, recurrence inherently supplies aligned weak-and-strong prediction pairs without auxiliary models or external training. We introduce LoopCD, a training-free contrastive decoding framework that guides token selection by contrasting the final prediction with an earlier recurrent pass, operating either in logit space with one extra output pass (LoopCD-Logits) or in hidden-state space with zero output overhead (LoopCD-Hidden). Across four looped Transformer families, LoopCD delivers substantial, consistent gains at full recurrent depth: LoopCD-Logits raises Ouro-2.6B-Thinking's AIME 2024 pass@1 from 61.88% to 73.33%, while LoopCD-Hidden lifts Huginn's HumanEval pass@1 from 22.56% to 31.71%. Crucially, these performance gains enable halving the number of recurrent loops while still matching or exceeding full-depth unguided baselines, reducing forward FLOPs by 22.5% to 48.2%. By transforming intermediate recurrent states into effective guidance signals, LoopCD achieves superior decoding quality while substantially reducing inference compute.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "LoopCD利用Looped Transformer天然的多层递归状态做training-free对比解码，思路巧妙且零额外成本，值得读原文看实验边界。",
+      "queued_at": "2026-10-02T15:32:37Z"
+    },
+    {
+      "id": "1ecfcf3f15a9f6b258b5853fd02903bf5d470ae2",
+      "title": "Formal Automotive Security Analysis Of CAN XL (Georgia Tech, QCRI, Purdue)",
+      "url": "https://semiengineering.com/formal-analysis-uncovers-security-flaws-in-can-xl-georgia-tech-qcri-purdue",
+      "source": "rss:semiengineering",
+      "published_at": "2026-10-02T19:05:52Z",
+      "raw_summary": "Researchers at Georgia Institute of Technology, Qatar Computing Research Institute, and Purdue University published a technical paper titled “A Formal Security Analysis of CAN XL.” Abstract: &#8220;For decades, the Controller Area Network (CAN) has been the backbone of in-vehicle communication. As modern vehicles integrate cameras, LiDARs, and AI components, classic CAN (CAN CC) faces growing... &#187; read more The post Formal Automotive Security Analysis Of CAN XL (Georgia Tech, QCRI, Purdue) appeared first on Semiconductor Engineering.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "Georgia Tech等对CAN XL协议的正式安全分析，伴随AI/LiDAR上车，车载通信安全的前沿研究。",
+      "queued_at": "2026-10-02T20:09:18Z"
+    },
+    {
+      "id": "c0f356d31179884dc55b249820a2b951098a402e",
+      "title": "Topological Out-of-Domain Generalization in Dynamical Systems Reconstruction [R]",
+      "url": "https://www.reddit.com/r/machinelearning/comments/1wvwodf/topological_outofdomain_generalization_in",
+      "source": "reddit:ml",
+      "published_at": "2026-10-02T15:25:22Z",
+      "raw_summary": "In our #NeurIPS2026 paper “Topological Out-of-Domain Generalization in Dynamical Systems Reconstruction” (preprint: https://arxiv.org/abs/2606.22969) we try to address a fundamental issue in dynamical systems reconstruction (DSR) and time series forecasting (TSF): Many recent SOTA DSR &amp; TSF models can generalize to new initial conditions or time series with changing statistical properties. But the really hard problem in DSR and TSF is topological out-of-domain generalization (OODG) (https://proceedings.mlr.press/v235/goring24a.html) where the dynamical regime changes, for instance from cyclic to chaotic behavior. This can happen when a system crosses a tipping point due to a slowly varying control parameter which drives it across bifurcations, such as in climate systems, when the brain tips from normal into epileptic activity, or when a patient develops blood poisoning (sepsis). Such problems are beyond the realm of current TSF models which rely on extracting temporal patterns and statistical regularities. Yet the ability to predict previously unseen, novel dynamical regimes as a system parameter changes is something we would expect from any good scientific theory. Often these control parameters that drive regime changes are not exactly known either. Hence, a data-driven DSR model for achieving topological OODG would need to infer the dynamical system generating the TS jointly with the control parameters. In our paper, we mathematically identify key failure modes in previ",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "NeurIPS 2026论文，提出动力系统重建中的拓扑OOD泛化问题，有具体arxiv链接和方法论，学术增量明确。",
+      "queued_at": "2026-10-02T20:09:18Z"
+    },
+    {
+      "id": "bccf2091c2161a58834d5e6ba4c8356fa097d561",
+      "title": "HBF for High-Throughput LLM Serving (UC Berkeley, FuriosaAI)",
+      "url": "https://semiengineering.com/hbf-for-high-throughput-llm-serving-uc-berkeley-furiosaai",
+      "source": "rss:semiengineering",
+      "published_at": "2026-10-02T20:15:40Z",
+      "raw_summary": "Researchers at the UC Berkeley and FuriosaAI published a technical paper titled “Characterizing High Bandwidth Flash for LLM Serving.” Abstract “Large language model (LLM) serving requires substantial memory to store model weights and KV caches. As models grow larger and contexts become longer, memory capacity and bandwidth increasingly become bottlenecks for serving performance. Agentic workloads... &#187; read more The post HBF for High-Throughput LLM Serving (UC Berkeley, FuriosaAI) appeared first on Semiconductor Engineering.",
+      "score": 8,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "UC Berkeley与FuriosaAI用高带宽Flash替代HBM做LLM serving的表征研究，对推理硬件选型有直接参考。",
+      "queued_at": "2026-10-02T23:48:15Z"
+    },
+    {
       "id": "24d0d34070e517addacd7c966862b74e85b18d9f",
       "title": "AutoCompact: Learning When to Compact Context in Long-Horizon Coding Agents [Xuan Zhang, Longtao Zheng, Cunxiao Du, Bo An, Xin Dong]",
       "url": "http://arxiv.org/abs/2610.02163v1",
@@ -287,32 +352,6 @@
       "queued_at": "2026-10-02T08:52:29Z"
     },
     {
-      "id": "6e034264ebae91f2db32ce88d6cb8f6a46ad02ce",
-      "title": "Where-OPD: Spatially Guided On-Policy Self-Distillation of MLLMs with Synthetic Scenes",
-      "url": "https://arxiv.org/abs/2610.02117",
-      "source": "huggingface:papers",
-      "published_at": "2026-09-30T20:00:00Z",
-      "raw_summary": "On-policy self-distillation has recently emerged as an effective approach for improving language-model reasoning by supervising students with a frozen or EMA version of themselves that receives privileged information. Its application to multimodal large language models (MLLMs), however, remains largely unexplored. Recent approaches use privileged visual information, such as image crops corresponding to a question, to improve fine-grained perception, but their gains are confined to tasks that benefit from such visual zooming and require either human-annotated grounding data or external teacher models. We introduce a different form of on-policy self-distillation for MLLMs that provides the teacher with textual, spatially grounded guidance identifying the visual elements relevant to a query. We use procedurally generated scenes with automatically available object identities and spatial coordinates, enabling scalable and annotation-free post-training. The teacher uses this spatial guidance to locate and integrate evidence from multiple relevant image regions, while the student learns to reproduce the resulting behavior from the image and question alone. Our approach consistently improves performance on counting, document and chart understanding benchmarks across multiple models. Importantly, although post-training uses only synthetic scenes, the resulting improvements transfer to real-world perception benchmarks, yielding a 3.23-point gain in average performance across CVBench, V",
-      "score": 8,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "将on-policy self-distillation扩展到MLLM，用synthetic scenes替代人工标注的grounding数据，给出了可复现的训练范式。",
-      "queued_at": "2026-10-02T15:32:37Z"
-    },
-    {
-      "id": "daf55725dc66a6df486115fa6750341b1a579fff",
-      "title": "Decoding Looped Transformers Better for (Almost) Free",
-      "url": "https://arxiv.org/abs/2610.02185",
-      "source": "huggingface:papers",
-      "published_at": "2026-09-30T20:00:00Z",
-      "raw_summary": "Looped Transformers achieve parameter efficiency by repeatedly executing a shared block across recurrent loops. Each loop yields an intermediate representation decodable for the same next token, yet standard decoding discards earlier states. Because earlier loops embody less computation, recurrence inherently supplies aligned weak-and-strong prediction pairs without auxiliary models or external training. We introduce LoopCD, a training-free contrastive decoding framework that guides token selection by contrasting the final prediction with an earlier recurrent pass, operating either in logit space with one extra output pass (LoopCD-Logits) or in hidden-state space with zero output overhead (LoopCD-Hidden). Across four looped Transformer families, LoopCD delivers substantial, consistent gains at full recurrent depth: LoopCD-Logits raises Ouro-2.6B-Thinking's AIME 2024 pass@1 from 61.88% to 73.33%, while LoopCD-Hidden lifts Huginn's HumanEval pass@1 from 22.56% to 31.71%. Crucially, these performance gains enable halving the number of recurrent loops while still matching or exceeding full-depth unguided baselines, reducing forward FLOPs by 22.5% to 48.2%. By transforming intermediate recurrent states into effective guidance signals, LoopCD achieves superior decoding quality while substantially reducing inference compute.",
-      "score": 8,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "LoopCD利用Looped Transformer天然的多层递归状态做training-free对比解码，思路巧妙且零额外成本，值得读原文看实验边界。",
-      "queued_at": "2026-10-02T15:32:37Z"
-    },
-    {
       "id": "331ba2a08d46d14b3acad11811a8aeea7dcf4f18",
       "title": "Amazon seeks to offload $8B of Nvidia chips to investors",
       "url": "https://www.reuters.com/business/retail-consumer/amazon-seeks-offload-8-billion-nvidia-chips-investors-ft-reports-2026-10-02",
@@ -430,32 +469,6 @@
       "queued_at": "2026-10-02T15:32:37Z"
     },
     {
-      "id": "1ecfcf3f15a9f6b258b5853fd02903bf5d470ae2",
-      "title": "Formal Automotive Security Analysis Of CAN XL (Georgia Tech, QCRI, Purdue)",
-      "url": "https://semiengineering.com/formal-analysis-uncovers-security-flaws-in-can-xl-georgia-tech-qcri-purdue",
-      "source": "rss:semiengineering",
-      "published_at": "2026-10-02T19:05:52Z",
-      "raw_summary": "Researchers at Georgia Institute of Technology, Qatar Computing Research Institute, and Purdue University published a technical paper titled “A Formal Security Analysis of CAN XL.” Abstract: &#8220;For decades, the Controller Area Network (CAN) has been the backbone of in-vehicle communication. As modern vehicles integrate cameras, LiDARs, and AI components, classic CAN (CAN CC) faces growing... &#187; read more The post Formal Automotive Security Analysis Of CAN XL (Georgia Tech, QCRI, Purdue) appeared first on Semiconductor Engineering.",
-      "score": 8,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "Georgia Tech等对CAN XL协议的正式安全分析，伴随AI/LiDAR上车，车载通信安全的前沿研究。",
-      "queued_at": "2026-10-02T20:09:18Z"
-    },
-    {
-      "id": "c0f356d31179884dc55b249820a2b951098a402e",
-      "title": "Topological Out-of-Domain Generalization in Dynamical Systems Reconstruction [R]",
-      "url": "https://www.reddit.com/r/machinelearning/comments/1wvwodf/topological_outofdomain_generalization_in",
-      "source": "reddit:ml",
-      "published_at": "2026-10-02T15:25:22Z",
-      "raw_summary": "In our #NeurIPS2026 paper “Topological Out-of-Domain Generalization in Dynamical Systems Reconstruction” (preprint: https://arxiv.org/abs/2606.22969) we try to address a fundamental issue in dynamical systems reconstruction (DSR) and time series forecasting (TSF): Many recent SOTA DSR &amp; TSF models can generalize to new initial conditions or time series with changing statistical properties. But the really hard problem in DSR and TSF is topological out-of-domain generalization (OODG) (https://proceedings.mlr.press/v235/goring24a.html) where the dynamical regime changes, for instance from cyclic to chaotic behavior. This can happen when a system crosses a tipping point due to a slowly varying control parameter which drives it across bifurcations, such as in climate systems, when the brain tips from normal into epileptic activity, or when a patient develops blood poisoning (sepsis). Such problems are beyond the realm of current TSF models which rely on extracting temporal patterns and statistical regularities. Yet the ability to predict previously unseen, novel dynamical regimes as a system parameter changes is something we would expect from any good scientific theory. Often these control parameters that drive regime changes are not exactly known either. Hence, a data-driven DSR model for achieving topological OODG would need to infer the dynamical system generating the TS jointly with the control parameters. In our paper, we mathematically identify key failure modes in previ",
-      "score": 8,
-      "angle": "research",
-      "source_traceable": true,
-      "why": "NeurIPS 2026论文，提出动力系统重建中的拓扑OOD泛化问题，有具体arxiv链接和方法论，学术增量明确。",
-      "queued_at": "2026-10-02T20:09:18Z"
-    },
-    {
       "id": "741801a3992f5cedd019f7e9fdd2102871010334",
       "title": "What if we stopped using GPUs? [video]",
       "url": "https://www.youtube.com/watch?v=xc2FTBGRSJo",
@@ -505,19 +518,6 @@
       "angle": "industry",
       "source_traceable": true,
       "why": "Cloudflare Clef 模型挑战 Jev、39ms 分类速度、基于 Qwen 的结构化决策，对 agent 决策层竞争格局有判断价值。",
-      "queued_at": "2026-10-02T20:09:18Z"
-    },
-    {
-      "id": "b2e4fa38c6bc804e339c982f0273f143fedf67e4",
-      "title": "Leaked Intel Nova Lake product list has three 'BFC' chips with up to 144MB of game-boosting L3 cache",
-      "url": "https://www.tomshardware.com/pc-components/cpus/rumored-intel-nova-lake-table-lists-three-bfc-chips-with-up-to-144mb-of-l3-next-gen-cpu-lineup-takes-shape-with-up-to-28-cores-in-core-ultra-9-4970k-bfc",
-      "source": "rss:tomshardware",
-      "published_at": "2026-10-02T15:34:13Z",
-      "raw_summary": "A table rumored to hold Intel's upcoming models for Nova Lake processors as surfaced, now referring to the heavily-rumored bLLC as \"BFC.\"",
-      "score": 7,
-      "angle": "engineering",
-      "source_traceable": false,
-      "why": "Intel Nova Lake泄露规格含144MB L3缓存（BFC），对理解未来客户端CPU架构和缓存策略有参考价值。",
       "queued_at": "2026-10-02T20:09:18Z"
     }
   ],
