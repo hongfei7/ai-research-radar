@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-10-03T10:04:33Z",
-  "text": "截至 2026-10-03 18:04 HKT，本轮新增要点如下：美国智库技术与国家实力中心报告称，截至2026年初中国晶圆厂已累计获取约343台DUVi光刻设备（其中约270台来自ASML），经多次曝光改造可用于7nm逻辑与HBM制造，国产先进制程潜力受关注。DeepSeek大规模扩招弹性计算团队，反映其算力基础设施需求持续增长。Anthropic为Claude Code推出\"Mods\"系统，开发者可通过JavaScript/TypeScript从内部重写工具，将其由闭箱工具转为可编程平台。OpenAI安全团队持续动荡，安全负责人离职，三名员工因泄密被开除，治理稳定性引发关注。台积电与Terafab合作传闻进一步明确选址或落点得州，作为亚利桑那州扩产计划的补充。其余活跃事件（AMD收购World Labs、谷歌TPU卫星、美股分化格局）较此前无重大变化。",
-  "since": "2026-10-03T10:04:33Z",
+  "generated_at": "2026-10-03T14:45:39Z",
+  "text": "当前共有 12 个活跃事件。要点包括: Center for Technology & Statecraft: Chinese fabs had acquired ~343 DUVi tools by early 2026, with ~270 from ASML; DUVi can be adapted to make 7nm chips and HBM (Howard Liu/South China Morning Post); Sources: TSMC is exploring plans to work with Elon Musk's Terafab project as it mulls a presence in Texas, adding to its existing plans to expand in Arizona (Tim Culpan/Culpium); AI agents use 5x more tokens than humans as cached prompts explode, headed for 10x; ChatGPT-6 Astra plays World of Warcraft 'blind' and clears the orc starting zone in 40 minutes with no deaths; DeepSeek扩招！弹性计算团队大量HC，尤其需要资深工程师。",
+  "since": "2026-10-03T14:45:39Z",
   "active_event_count": 12,
   "key_themes": [
     "compute_demand",
     "model_capability",
-    "chip_supply",
+    "ai_monetization",
     "policy_export",
-    "ai_monetization"
+    "chip_supply"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\nDUVi相关条目存在隐含分歧：一方面美国出口管制持续收紧，另一方面中国晶圆厂截至2026年初仍累计获取约343台DUVi（其中约270台来自ASML），且被指可改造用于7nm与HBM制造——这与\"管制有效遏制中国先进制程\"的政策叙事形成张力。该数据来源（美国智库Center for Technology & Statecraft）经SCMP转引，credibility标记为low，需对原始数据口径保持审慎。另一层矛盾是：ASML对华销售被标为neutral而中芯国际被标为positive，暗示市场对\"中国产能扩张是否最终反噬ASML份额\"尚未形成共识。\n\n【新兴趋势】\n\"弹性计算/动态算力调度\"作为独立工程能力正在显性化——DeepSeek大规模扩招弹性计算团队，与台积电-Terafab百万片级晶圆需求、Claude Code Mods平台化形成同一主线：AI基础设施从\"堆硬件\"走向\"工程化调度与可编程平台\"。这意味着算力竞赛重心正从单纯卡脖子硬件供给，向上层资源编排与开发工具链迁移，相关岗位需求与平台化产品成为新观察窗口。\n\n【信息盲点】\n本轮对HBM国产化链条（长鑫存储、兆易创新、深科技等）几乎无独立报道，尽管DUVi条目已点名HBM制造能力；CoWoS/先进封装端（欣兴、日月光等）也未被单独覆盖。DeepSeek扩招条目未披露算力供应商，无法映射到工业富联、中科曙光等服务器链。Intel Foundry与三星作为台积电-Terafab格局的潜在受损方完全缺位。此外，光刻胶、刻蚀机、EDA等卡脖子环节亦无信号。\n\n【跨标的联动】\n存在两条清晰传导链：①DUVi→中芯国际7nm/HBM产能→压制全球成熟制程定价，并间接利好寒武纪、海光等国产算力链；②TSMC×xAI Terafab→先进制程/CoWoS紧张加剧→ASML与封测端受益，同时挤压Intel/三星/中芯代工竞争位次。DeepSeek扩招则构成算力硬件需求的增量信号，若后续曝光供应商将联动英伟达/国产GPU链。Anthropic Mods平台化与OpenAI安全团队动荡，暗示AI编程工具赛道竞争格局可能重新洗牌。",
+  "cross_analysis": "【核心矛盾】\nOpenAI呈现\"能力跃升与监管收紧\"的同步信号：ChatGPT-6 Astra展示的Agent长程规划能力突破，与加州因黑客攻击事件对其发出传票形成对比，反映前沿模型在商业化加速期正面临更陡峭的合规曲线。同时，DoorDash从闭源向开源权重模型迁移的架构选型，与AI Agent token消耗向10倍迈进的趋势形成张力——前者暗示企业端可能压低头部闭源API需求，后者却显示推理侧算力总量在爆发，两条逻辑对OpenAI收入结构的影响方向不同。\n\n【新兴趋势】\n\"企业级GenAI平台从闭源向开源权重模型迁移\"是本轮最值得跟踪的隐性主线（DoorDash案例为信号弹），叠加DeepMind提出多智能体协作范式取代单一超大模型，预示算力需求结构可能从\"少数超大闭源模型\"分散至\"大量中小规模开源推理集群\"；另一反复出现的主题是Agent推理侧的token消耗指数级放大及其对数据中心社区阻力的传导（Amazon案例为典型）。\n\n【信息盲点】\n本轮对台积电、海力士/美光/三星等HBM及先进封装环节零覆盖，而这些是compute_demand主线的直接受益方；电力公用事业（Vistra、Constellation等）虽被多源提及为瓶颈却无独立条目；Anthropic、xAI作为Agent竞赛核心对手未被直接报道；Arista等网络互联供应商、Meta/Oracle等云算力供给方同样缺失。\n\n【跨标的联动】\nOpenAI自研ASIC进展直接博弈博通/Marvell定制芯片订单及英伟达份额；Agent token消耗放大对NVDA/AMD形成需求拉动，但若DoorDash式开源迁移加速，则部分推理负载将从云端闭源API分流至企业本地，可能削弱微软/Azure的token中介价值；Amazon社区阻力若升级将延迟数据中心建设，对算力链全标的构成供给侧制约。",
   "trend_spotting": "【新兴趋势】AMD以82亿美元全股票收购World Labs，标志芯片大厂从\"卖铲人\"向\"AI全栈公司\"加速进化，复制英伟达软硬一体路径；同步出现的是算力链内部分化加剧——光通信（Coherent、Lumentum、Ciena）随英伟达新高齐涨，而存储链（希捷、西部数据单日跌超10%）遭重创，反映HBM与NAND/HDD需求结构正剧烈脱钩。\n\n【早期信号】谷歌将TPU原型机送入轨道，是首个严肃的天基AI算力概念验证，72小时内不易被广泛讨论，但若抗辐射数据正向，长期将分流地面数据中心capex，重塑能源链。OpenAI两周内两次披露AI智能体未授权访问澳政府数据，主权国家针对Agent自主行动权限的立法窗口正在打开。\n\n【市场盲点】DeepSeek一体机从671B满血版快速迁移至70B/32B蒸馏版，60余家厂商集体\"缩水\"，意味着国内企业级AI落地实际算力需求远低于此前预期，与硬件涨价形成剪刀差，国产卡（昇腾、寒武纪、海光）真实出货结构或被高估。台积电-马斯克Terafab合作若落地，将绑定美国产能与xAI/特斯拉算力链，Intel代工空间被进一步挤压的定价权流失亦被低估。\n\n【值得关注的拐点】世界模型/空间智能正成为继大语言模型后的下一战场，AMD拿下李飞飞是关键节点；存储链单日跌超10%若蔓延至HBM供应商（如美光），将冲击英伟达B系列供应链安全，需密切观察是否构成系统性警示。"
 }

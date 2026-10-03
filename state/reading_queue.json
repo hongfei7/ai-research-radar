@@ -64,6 +64,45 @@
       "source_traceable": true,
       "why": "详细的llama.cpp专家流式部署benchmark,含具体I/O优化和PCIe通道调优经验,工程复现价值高。",
       "queued_at": "2026-10-03T10:00:57Z"
+    },
+    {
+      "id": "159669c8bc03527666eec69575f6eef97e5cc2bf",
+      "title": "Presentation: Building GenAI Platform at DoorDash",
+      "url": "https://www.infoq.com/presentations/doordash-genai-platform-architecture",
+      "source": "rss:infoq",
+      "published_at": "2026-10-03T11:00:00Z",
+      "raw_summary": "Swaroop Chitlur and Sidd Kodwani share DoorDash’s journey building an internal GenAI platform. They discuss core architectural bets, transitioning from vendor-first setups to open-weights models, navigating LLM and agent gateways, and balancing accuracy, latency, and cost for over 5,000 internal users. By Siddharth Kodwani, Swaroop Chitlur",
+      "score": 8,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "DoorDash内部GenAI平台从vendor-first转向开源模型、LLM/agent网关与延迟成本权衡的真实工程经验，对企业级AI部署有直接参考价值。",
+      "queued_at": "2026-10-03T14:41:30Z"
+    },
+    {
+      "id": "35bd0af103521cc694531efb90e86471f997fa18",
+      "title": "Deepmind researchers propose \"Artificial Symbiotic Intelligence\" as an alternative to the singularity",
+      "url": "https://the-decoder.com/deepmind-researchers-propose-artificial-symbiotic-intelligence-as-an-alternative-to-the-singularity",
+      "source": "rss:the-decoder",
+      "published_at": "2026-10-03T10:21:23Z",
+      "raw_summary": "According to researchers at the Deepmind Institute, general AI won't emerge as a single supermodel but as a network of cooperating agents and humans. What will matter most, they argue, is not model size but the rules and institutions that govern how they all work together. The article Deepmind researchers propose &quot;Artificial Symbiotic Intelligence&quot; as an alternative to the singularity appeared first on The Decoder.",
+      "score": 7,
+      "angle": "route",
+      "source_traceable": true,
+      "why": "Deepmind提出'人工共生智能'作为对'奇点'叙事的替代路线，涉及范式之争和治理框架，值得看论文原文。",
+      "queued_at": "2026-10-03T14:41:30Z"
+    },
+    {
+      "id": "15756fbbb401657fbab44ed09f2e6b067dd4fa6e",
+      "title": "AI agents use 5x more tokens than humans as cached prompts explode, headed for 10x",
+      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/futurum-ceo-says-agents-use-ai-5x-more-than-humans-number-will-eventually-hit-10x-but-agents-are-mostly-rereading-what-theyve-already-seen",
+      "source": "rss:tomshardware",
+      "published_at": "2026-10-03T13:10:00Z",
+      "raw_summary": "Daniel Newman’s number comes from OpenRouter data, where agents passed humans in February and grew 14x by August.",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "给出OpenRouter上agent token消耗是人工5x且将达10x的硬数据，对agent算力成本和缓存优化路径有直接参考价值。",
+      "queued_at": "2026-10-03T14:41:30Z"
     }
   ],
   "digest_last_date": "2026-10-03"
