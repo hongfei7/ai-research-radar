@@ -1,4 +1,70 @@
 {
-  "candidates": [],
+  "candidates": [
+    {
+      "id": "479d96aa77d120417b32cab3c5e93ed0a715da74",
+      "title": "Center for Technology & Statecraft: Chinese fabs had acquired ~343 DUVi tools by early 2026, with ~270 from ASML; DUVi can be adapted to make 7nm chips and HBM (Howard Liu/South China Morning Post)",
+      "url": "https://www.techmeme.com/261003/p7#a261003p7",
+      "source": "rss:techmeme",
+      "published_at": "2026-10-03T09:41:06Z",
+      "raw_summary": "Howard Liu / South China Morning Post: Center for Technology &amp; Statecraft: Chinese fabs had acquired ~343 DUVi tools by early 2026, with ~270 from ASML; DUVi can be adapted to make 7nm chips and HBM&nbsp; &mdash;&nbsp; DUV tools, though not as advanced as EUV, can be adapted to manufacture 7-nm logic chips and advanced memory for AI processors, report says.",
+      "score": 9,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "中国fab累计DUVi设备~343台(其中~270台ASML)且DUVi可做7nm/HBM——这是判断国产先进制程产能与HBM供给的关键数据,直接影响AI算力供给判断",
+      "queued_at": "2026-10-03T10:00:57Z"
+    },
+    {
+      "id": "9644cc15b3ea15590454a57185b9e429fbbffcc3",
+      "title": "Open-source \"BootLoops\" harness supports AI models in performing precise scientific calculations",
+      "url": "https://the-decoder.com/open-source-bootloops-harness-supports-ai-models-in-performing-precise-scientific-calculations",
+      "source": "rss:the-decoder",
+      "published_at": "2026-10-03T09:19:23Z",
+      "raw_summary": "Harvard physicist Matthew Schwartz used the open-source tool BootLoops and Claude to produce 36 manuscripts across 18 fields in three months, from particle physics to linguistics. But the results often only became scientifically valuable once human experts stepped in. \"Look at everything yourself,\" Schwartz says. The article Open-source &quot;BootLoops&quot; harness supports AI models in performing precise scientific calculations appeared first on The Decoder.",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "BootLoops工具+Claude用于科学计算的实战复盘,Schwartz本人的反思(人机协作边界)对AI辅助科研的方法论有参考价值",
+      "queued_at": "2026-10-03T10:00:57Z"
+    },
+    {
+      "id": "de87b8e18c754db9bc5d9ef1e9cceea34adaf127",
+      "title": "AI agents build 3D scenes from photos but have no idea if they got it right",
+      "url": "https://the-decoder.com/ai-agents-build-3d-scenes-from-photos-but-have-no-idea-if-they-got-it-right",
+      "source": "rss:the-decoder",
+      "published_at": "2026-10-03T08:31:04Z",
+      "raw_summary": "A new approach called LEGO-Anything turns single photos into editable Blender code for 3D scenes. GPT-6 Astra leads the accompanying benchmark with up to 53 percent reconstruction accuracy. The biggest weakness across all tested agents is that they can't judge their own geometric accuracy any better than a coin flip. The article AI agents build 3D scenes from photos but have no idea if they got it right appeared first on The Decoder.",
+      "score": 7,
+      "angle": "research",
+      "source_traceable": true,
+      "why": "LEGO-Anything方法+新基准+具体数字(53%准确率、几何自检≈随机)给出可检验结论,对3D生成/agent自评估能力边界有认知增量",
+      "queued_at": "2026-10-03T10:00:57Z"
+    },
+    {
+      "id": "6210e87e9eee36791f4d27d6265736a151af2671",
+      "title": "Sources: TSMC is exploring plans to work with Elon Musk's Terafab project as it mulls a presence in Texas, adding to its existing plans to expand in Arizona (Tim Culpan/Culpium)",
+      "url": "https://www.techmeme.com/261003/p3#a261003p3",
+      "source": "rss:techmeme",
+      "published_at": "2026-10-03T05:30:02Z",
+      "raw_summary": "Tim Culpan / Culpium: Sources: TSMC is exploring plans to work with Elon Musk's Terafab project as it mulls a presence in Texas, adding to its existing plans to expand in Arizona&nbsp; &mdash;&nbsp; [Exclusive] Taiwanese foundry giant may use Terafab as anchor client for a future Texas semiconductor factory.",
+      "score": 7,
+      "angle": "industry",
+      "source_traceable": true,
+      "why": "TSMC可能为Musk Terafab在德州建厂,直接影响先进产能区域分布与Tesla/Elon系算力自建路径判断",
+      "queued_at": "2026-10-03T10:00:57Z"
+    },
+    {
+      "id": "6e082687ca5800fb5e8fff1588c8336d16ab8b19",
+      "title": "Qwen3.8-Flash-Next 177B running at 11–15 tok/s on a single RTX 5070 12GB + 32GB RAM DDR4",
+      "url": "https://www.reddit.com/r/localllama/comments/1wwggwt/qwen38flashnext_177b_running_at_1115_toks_on_a",
+      "source": "reddit:localllama",
+      "published_at": "2026-10-03T06:49:25Z",
+      "raw_summary": "Benchmarking an LLM here with a NVIDIA RTX 5070 12 GB VRAM here I had been working on a llama.cpp based expert streaming setup for Qwen3.8-Flash-Next 177B (UD-IQ3_XXS) on Windows. Benchmark is about 11.5 tok/s, up from roughly 7 tok/s on the inherited setup. In normal conversations I’ve seen 14–15 tok/s, and a long coding prompt generated 4,892 tokens at 10.15 tok/s and produced a working single-file Snake game. Hardware: RTX 5070 12GB 32GB DDR4-2400 Ryzen 5 5600GT PCIe Gen3 Windows The main gains came from fixing Windows I/O queue-depth issues, using one file handle per worker, and building a page-locked hot-expert tier so the GPU can pull hot expert weights more efficiently. (In the video its around 16 minutes for 10k tokens and 10.41 tok/s Output is quality gated against the control model and the published benchmark uses a heat file built from a separate prompt set. Demos: https://www.youtube.com/watch?v=cOPumMlyj_4 https://www.youtube.com/watch?v=rc-uTjVpXM8 In the GitHub I have things I've tried that didn't work and benchmark scripts, and methodology. If you guys have suggestions especially for streaming please let me know &#32; submitted by &#32; /u/ayobluestarr [link] &#32; [comments]",
+      "score": 7,
+      "angle": "engineering",
+      "source_traceable": true,
+      "why": "详细的llama.cpp专家流式部署benchmark,含具体I/O优化和PCIe通道调优经验,工程复现价值高。",
+      "queued_at": "2026-10-03T10:00:57Z"
+    }
+  ],
   "digest_last_date": "2026-10-03"
 }
