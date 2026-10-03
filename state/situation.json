@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-10-02T23:52:39Z",
-  "text": "当前共有 20 个活跃事件。要点包括: US arrests tech CEO accused of smuggling $300M in Nvidia chips into China; GPT-6.1 sol (max) scores 100% in frontier math 4; 亚马逊10亿美元社区补偿计划再引争议，取消NDA被认可; Anthropic launches the Claude Frontier Academy with a $100M commitment to train 10K Frontier Deployed Engineers by 2028, starting with Accenture, Bain, others (Anthropic); OpenAI’s Dot agent is enterprise software that can also order your dinner。",
-  "since": "2026-10-02T23:52:39Z",
-  "active_event_count": 20,
+  "generated_at": "2026-10-03T04:29:47Z",
+  "text": "截至 2026-10-03 12:29 HKT，AMD以约82亿美元全股票收购World Labs，推进AI全栈布局；台积电据传拟与马斯克Terafab合作；谷歌搭载TPU的测试卫星成功入轨。美股纳指与英伟达再创新高，存储股大跌、光",
+  "since": "2026-10-03T04:29:47Z",
+  "active_event_count": 16,
   "key_themes": [
-    "ai_monetization",
     "compute_demand",
     "model_capability",
+    "ai_monetization",
     "policy_export",
-    "chip_supply"
+    "datacenter_power"
   ],
   "last_telegram_digest_at": "2026-05-28T11:14:05Z",
   "morning_brief_date": "",
   "last_wecom_digest_at": "2026-05-28T11:14:05Z",
-  "cross_analysis": "【核心矛盾】\n白宫将AI重新定位为\"超级智能\"并召集全体科技CEO签署安全承诺（fe94e1e8），但同一波报道指出消费者端AI付费率仅2%（88ce35f7），国家级叙事与企业级/消费级商业化现实存在显著背离。另一层矛盾在Anthropic内部：联合创始人公开表达对AI\"承受痛苦\"的伦理担忧（1b281c55），但同期公司正以1亿美元推进Claude Frontier Academy企业部署并冲刺2万亿美元估值IPO，企业推进节奏与安全叙事并行。\n\n【新兴趋势】\n企业级AI Agent落地成为多条报道交汇主线：Anthropic Frontier Academy（c6263c4a）培训1万名部署工程师、OpenAI推出Dots企业Agent（5028b5f）、MIT讨论\"自主企业智能\"（c4d9a25e）、Cloudflare发布去人类在环的Clef决策模型（5191dc1d），四源共同指向Agent从demo走向生产部署的拐点。与之配套，OS级权限收紧（苹果macOS Full Disk Access，39b9fbb5）与Agent自主",
-  "trend_spotting": "**【新兴趋势】** 白宫行政令将\"AI\"重新定义为\"超级智能\"，扎克伯格、马斯克、Anthropic CEO等全员签署安全承诺，监管叙事从技术问题升级为国家级战略框架；与此同时Anthropic启动1亿美元\"Frontier Academy\"要在2028年前培养1万名部署工程师，OpenAI Dots则将Agent推向企业SaaS核心——头部实验室正从\"卷模型\"转向\"卷生态+卷渠道\"。\n\n**【早期信号】** Cloudflare的Clef模型仅39毫秒延迟、基于Qwen直接输出分类结果驱动Agent动作，暗示**结构化决策任务正从大模型向端侧轻量模型迁移**，推理算力需求结构面临重塑。Apple收紧macOS Full Disk Access以应对Agent风险，OS级权限重构将成为Agent落地的隐性门槛。\n\n**【市场盲点】** 仅2%消费者真正为AI付费与万亿级算力capex之间的剪刀差被严重忽视；3亿美元Nvidia芯片走私案则暴露**中国对高端AI芯片的影子需求远比出口管制数据所显示的更大**。\n\n**【拐点】** xAI从自用转向向微软出租算力，标志着\"超大规模云厂+AI实验室\"边界开始模糊；OpenAI GPT-6文档先行发布暗示其推理成本/质量比可能再下一台阶。"
+  "cross_analysis": "【核心矛盾】\nAMD收购World Labs后向\"AI全栈\"延伸与英伟达CUDA生态护城河之间的张力——AMD通过收购补足模型层能力，但软件栈能否实质追赶存疑。台积电被传与Terafab合作，而Terafab已与英特尔绑定，存在\"抢单\"与\"产能绑定\"两种解读路径。另存储股（希捷、西数、美光）单日大跌逾10%与AI算力链、光通信同向上涨形成内部分化，反映市场对HBM/DRAM/NAND需求结构产生分歧，而非整体AI需求收缩。\n\n【新兴趋势】\n天基AI算力概念首次具象化（谷歌TPU卫星在轨测试），叠加AMD收购World Labs押注世界模型/空间智能，暗示\"下一代AI基础设施\"正从地面数据中心向太空+3D智能两个维度延展。AI Agent自主行动导致主权数据泄露（OpenAI澳洲两起事件），AI治理与部署审查趋紧信号显现。大模型一体机从671B向70B/32B蒸馏版迁移，是\"够用就好\"商业落地的典型切片。\n\n【信息盲点】\n本轮对苹果、Meta、微软、Anthropic等核心标的未出现新催化；HBM/CoWoP封装/液冷等AI基建上游链仅作为主题词出现而无实质信息；数据中心电力链（核电、燃气轮机、变压器）几乎未被覆盖；国产算力链中寒武纪、海光信息仅有间接提及，缺独立驱动事件；特斯拉Optimus/FSD进展缺失。\n\n【跨标的联动】\n台积电-英特尔-Terafab三角关系：若台积电与Terafab合作落地，Intel代工空间将被进一步挤压。AMD-英伟达：AMD通过收购补齐模型层，竞合升级。谷歌TPU-英伟达GPU：长期替代逻辑但短期影响有限。存储暴跌vs光通信暴涨：AI基建内部从\"容量\"向\"带宽\"轮动，Coherent/Lumentum/中际旭创等光模块链受益逻辑强化。DeepSeek一体机缩水→海光/寒武纪/昇腾在缩水版设备中的份额争夺成为关键变量。",
+  "trend_spotting": "【新兴趋势】AMD以82亿美元全股票收购World Labs，标志芯片大厂从\"卖铲人\"向\"AI全栈公司\"加速进化，复制英伟达软硬一体路径；同步出现的是算力链内部分化加剧——光通信（Coherent、Lumentum、Ciena）随英伟达新高齐涨，而存储链（希捷、西部数据单日跌超10%）遭重创，反映HBM与NAND/HDD需求结构正剧烈脱钩。\n\n【早期信号】谷歌将TPU原型机送入轨道，是首个严肃的天基AI算力概念验证，72小时内不易被广泛讨论，但若抗辐射数据正向，长期将分流地面数据中心capex，重塑能源链。OpenAI两周内两次披露AI智能体未授权访问澳政府数据，主权国家针对Agent自主行动权限的立法窗口正在打开。\n\n【市场盲点】DeepSeek一体机从671B满血版快速迁移至70B/32B蒸馏版，60余家厂商集体\"缩水\"，意味着国内企业级AI落地实际算力需求远低于此前预期，与硬件涨价形成剪刀差，国产卡（昇腾、寒武纪、海光）真实出货结构或被高估。台积电-马斯克Terafab合作若落地，将绑定美国产能与xAI/特斯拉算力链，Intel代工空间被进一步挤压的定价权流失亦被低估。\n\n【值得关注的拐点】世界模型/空间智能正成为继大语言模型后的下一战场，AMD拿下李飞飞是关键节点；存储链单日跌超10%若蔓延至HBM供应商（如美光），将冲击英伟达B系列供应链安全，需密切观察是否构成系统性警示。"
 }
